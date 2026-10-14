@@ -1,0 +1,80 @@
+{
+  "formed_at": "2026-10-14T17:44:32.166097+00:00",
+  "status": "READ_ONLY_SUPPLEMENT_ARCHITECTURE_AUDIT",
+  "source_hashes": {
+    "leader_role_engine.py": "1599329d38ba4704ee5a18df08775a70067a16feebc3a540510805727b8232d7",
+    "leader_role_review.py": "765db98b9cb52683f08589ecdebb0f39073dc25f8f346eeb3bc4961c96216046",
+    "stock_forum_preread.py": "a0fd34180f287c0ef17bba86a87145573da208ec2227f5d3d9335abaf185515e",
+    "stock_catalyst_context.py": "b216fabab824c43c3c956fd6fcbb956739b94eb0e462c7c54d53e8cffb5c3c21",
+    "stock_narrative_review.py": "82f7d479f9f6047599f5060e5b73493333c0580f40c45391cc983015cdb38287",
+    "stock_short_term_context.py": "dcde3e69ddf160ca31b1c9b3882b54f124e33be893df97637989c7576315e324",
+    "tests/test_leader_roles.py": "78b57307c21bdfde929bd3957856b7ccdf8761eaf2389f086b697417f2fd9c81",
+    "tests/test_leader_role_review_draft.py": "036d48c815a5b6e67eb4b054bec6f873bed8d0f073e413f9b5dfed0692181930",
+    "tests/test_stock_forum_preread.py": "7a0dd230dd682bf7f11fa44a2a6c8ed88dc91b0fba6548ce11e99a50deced866"
+  },
+  "checks": {
+    "same_specific_theme_dependency_accepted": true,
+    "cross_industry_dependency_rejected": true,
+    "missing_specific_theme_dependency_rejected": true,
+    "single_anchor_required": true,
+    "formal_supplement_required_groups": [
+      "theme",
+      "dependency"
+    ],
+    "preread_not_imported_by_role_review": true,
+    "preread_not_called_by_prepare": true
+  },
+  "prepare_calls": [
+    "Path",
+    "catalyst.prepare",
+    "e.from_archive",
+    "e.augment",
+    "e.analyse",
+    "e.write_new",
+    "short_term.build",
+    "narrative.build",
+    "e.write_new",
+    "e.write_new",
+    "dict",
+    "str",
+    "e.sha",
+    "str",
+    "e.sha",
+    "str",
+    "e.sha",
+    "e.bind",
+    "e.now",
+    "e.write_new",
+    "create_draft",
+    "research.masked_packet",
+    "research.label_template",
+    "(out / 'role_dataset.json').resolve",
+    "short_context_path.resolve",
+    "narrative_path.resolve",
+    "e.bind",
+    "e.bind",
+    "e.bind",
+    "e.bind",
+    "e.bind"
+  ],
+  "tests": {
+    "command": [
+      "D:\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_stock_forum_preread",
+      "tests.test_leader_role_review_draft",
+      "tests.test_leader_roles.RolesTest.test_supplement_divergence_can_precede_anchor_break_and_future_break_is_rejected",
+      "tests.test_leader_roles.RolesTest.test_promotion_miss_cannot_be_rewritten_as_role_false_negative",
+      "tests.test_leader_roles.RolesTest.test_role_diagnosis_preserves_multirole_abstention_and_missing_inputs"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "....................\n----------------------------------------------------------------------\nRan 20 tests in 0.031s\n\nOK\n"
+  },
+  "fitting": 0,
+  "new_sources": 0,
+  "shared_files_edited": false,
+  "architecture_checks_are_not_prediction_improvement": true
+}

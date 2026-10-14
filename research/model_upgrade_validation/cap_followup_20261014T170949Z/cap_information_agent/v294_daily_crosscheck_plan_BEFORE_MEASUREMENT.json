@@ -1,0 +1,22 @@
+{
+  "formed_at": "2026-10-14T17:25:19.022685+00:00",
+  "scope": "Exact old V294 roster and complete original9245; input measurement comparison only; no outcomes/fits.",
+  "tolerances": [
+    1e-06,
+    0.0001,
+    0.001,
+    0.01,
+    0.05
+  ],
+  "primary_difference": "absolute((old_close_over_interval_vwap_minus1)-(direct_daily_close_over_vwap_minus1))",
+  "secondary_difference": "abs((old_ratio+1)/(daily_ratio+1)-1)",
+  "September_policy": "existing direct amount/(volume*100) under explicitly inferred100-share-lot hypothesis, flags must pass; no independent unit certification asserted",
+  "unknown_policy": "preserve all2888 old rows plus complete9245 reverse-scope ledger; unknowns and unmatched rows explicit",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\data\\v294\\long_path_features_20261002_v1\\features_NO_NEXT_SESSION_LABELS.csv": "374f705f5b848ed53d5298a910ce30970600ec5ec2eb38412414cdd43622e90f",
+    "D:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\research\\model_upgrade_validation\\cap_followup_20261014T170949Z\\cap_source_agent\\full9245_cap_source_binding_NO_TARGETS.csv": "ca3df2cfd070f4a08e37ccbf1a735ededffec0ca7797df6a46d3700f557bec34",
+    "D:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\research\\model_upgrade_validation\\cap_followup_20261014T170949Z\\cap_source_agent\\September182_direct_vwap_UNIT_HYPOTHESES_NO_TARGETS.csv": "7b2de592068fe4eb1bdceefc085fdc3c8866474a6cc609d84491c5197c7702e5"
+  },
+  "new_fits": 0,
+  "labels_loaded": false
+}

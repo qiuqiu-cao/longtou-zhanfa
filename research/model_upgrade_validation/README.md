@@ -1,5 +1,28 @@
 # 固定市场与个股模型研究入口
 
+## 当前统一复盘入口（2026-10-14）
+
+按用户“不足都解决／继续”完成[本轮整改与验收](remediation_20261014/不足整改与验收.md)。下面的统一入口适用于下一次合格新日期，旧历史入口和旧待修说明保留为当时状态。原CLI丢失历史/叙事参数的问题在新入口已修；原受保护源码及冻结哈希未改。
+
+```powershell
+python relay_review_workbench.py prepare --features <原归档> --theme-report <完整题材> --mainline-report <独立主线> --compatibility <原兼容政策> --bank <已核原文bank> --calendar <官方日历> --pool <完整遮分候选> --relation-bank <父锚关系bank> --output-dir <新目录> --history-dataset <历史1> --mainline-history <历史主线1> --narrative-reviews <叙事审阅> --model-exposure MODEL_NOT_REVIEWED_SELF_ATTESTED
+python relay_review_workbench.py compact --facts <完整事实> --draft <作者稿> --output <共享新稿>
+python relay_review_workbench.py expand --compact <作者完成共享稿> --output <完整新稿>
+python relay_review_workbench.py freeze --facts <完整事实> --judgements <完整新稿> --output <新事前登记>
+python relay_review_workbench.py compare --record <原登记> --baseline <原同池BASE> --outcome-archive <原目标来源> --output <新比较>
+python relay_review_workbench.py execution --facts <完整事实> --review <作者完成稿> --original-predictions <同日完整条件判断rows> --calendar <官方日历> --asof <真实带时区截止时间> --output-dir <新执行报告> --evidence <可选已绑定真实或纸面来源bank>
+python relay_review_workbench.py validation-status --output-dir <新状态报告>
+python relay_review_workbench.py qualify-information --output-dir <新本地资料资格报告>
+```
+
+history-dataset/mainline-history可重复；没有材料时不传，未知保持。未看模型必须据实声明，上述MODEL_NOT_REVIEWED_SELF_ATTESTED不自动认证盲测；默认已看模型。旧已见日期仅attach/review-context附页，不能用compact自动改成新预测。共享理由展开继续原完整校验，freeze仍运行原角色、价量竞争、催化、预期计划、时点和登记门。
+
+compare自动生成观点结果反馈，保存原比较后反馈失败仍保留比较及具体失败收据。execution复用原执行/账户模块，开盘观察不算成交、纸面不算实际；缺成交/费用/退出不报收益或空仓。新增两个只读状态命令不拟合、抓取、登记新影子或切换模型，保持原120日验收门。
+
+当前源码的完整15只回放、9245历史资格、75源与正式/独立账本重验在[final_delivery](remediation_20261014/final_delivery/verification.json)，111相关测试通过。正式原3日39/38/28正确与独立两批29/28/11正确分别统计；独立已判断Accuracy50%、同池BASE78.57%。新预测/成熟/拟合/下单均0，非一字漏判、盘口历史覆盖和盈利能力未通过效果验收，不能报全部预测问题已解决或概率已校准。
+
+额外根交叉审查加强了采集字段与同一股票行/返回日期的绑定、真实收件与执行时钟、纸面来源不能挪用为实际成交以及卖出不能借其他计划入场。当前采集scaffold全15字段仍UNKNOWN；通过结构不是训练授权。初版、v2、delivery_final等原输出及源码前像保留，最终当前实跑以`remediation_20261014/final_delivery/`为准。说明见[统一入口](remediation_20261014/workbench/工程入口与共享理由交付.md)、[数据资格](remediation_20261014/data_prediction/数据覆盖修复与预测资格结论.md)、[执行收益](remediation_20261014/execution/执行收益闭环交付.md)。
+
 2026-10-12完成[实际重训与九阳、时代经验结算](jiuyang_shidai_20261012T072934Z/重训与九阳时代经验结算.md)。入口`relay_proxy_ablation_research.py`的freeze已在拟合前完成，compare已实际执行三个固定段各一次；P1_DROP_PROXY淘汰，不能再次运行compare或改参数。它只去掉旧低换手代理`signal_one_word`，不添加今天取得的催化/论坛字段，原训练成员与剩余28字段/算法/阈值不变。完整结果、分层、输入绑定与独立重算在该目录retrain下；失败挑战没有保存部署权重，未开启新120日窗口。
 
 原完整11只10月9→12独立观察已结算：独立Accuracy50%（5/10已判断）、Recall25%、预测覆盖90.91%；BASE72.73%（8/11）、Recall50%、覆盖100%。11只新成熟独立观察不混入原正式2日21只。后续用下列催化扩展入口生成新日期卡片时，竞争分析同时保留共同晋级、共同失败、相互卡位路径；逐日核对真实一字/代理，区分核心延续与后排失败，区分行业/实际叙事以及晋级/承接/可买性。3篇原帖及正反经验存`jiuyang_shidai_20261012T072934Z/forum_sources`，今日取得不倒填旧预测或训练。新日期这些检查仍须完整同池前向结算，不能从案例直接追加数值分数。
@@ -482,3 +505,84 @@ D:/python/python.exe -X utf8 stock_forum_preread.py --pool <完整当期候选JS
 ```
 
 已看模型时传MODEL_OUTPUT_ALREADY_SEEN，不认证盲测；同一bank继续供leader_role_review.prepare及typed narrative审阅，不替代原freeze/正式来源/11类/OOF门。本批完整15实际调用与6相关核验通过，2篇旧正文/评论形成4背景/11未覆盖、当日正文0，失败/初版摘录及源码前像保留。原预测/分数/登记不变，拟合0/正式新成熟0。
+
+
+## 2026-10-14：信号日曲率试验与客观审查
+
+[曲率试验与项目客观审查](signal_curvature_20261014T164603Z/曲率试验与项目客观审查.md)记录唯一SIGNAL_TURNOVER_AMPLITUDE_CURVATURE。relay_curvature_research.py prepare/compare以原固定训练资料追加两个平方项；现有协议及一次锁已经尝试，禁止再次比较或换目录重跑。实际挑战拟合2，BASE0；第一段Accuracy+0.19pp且Precision下降，第二段已存预测只读恢复Accuracy+0.05pp，配对区间均跨0，整体淘汰。
+
+原NaN目标日期比较失败/预登记/源码精确前像保留；工程修复没有重拟合或继续9月。独立audit_saved_results.py核两段原保存预测及完整3707/7414行，9月182挑战保留NOT_FITTED_UNKNOWN；它是只读收尾，不是新盲测、9月效果或生产验收。新成熟0，原分数/登记/定时不改。源覆盖审查和同池全断板基准、全部74方向改变及完整指标在同目录。
+
+
+## 2026-10-14：市值与真实封板来源、日VWAP覆盖修复
+
+[本轮研究结论](cap_followup_20261014T170949Z/继续研究：市值与封板证据结论.md)包含全9245市值冗余与来源核对、V275217及其26竞价邻近秒值的资格区别，原始全池和所有未知保留。新增只读命令：
+
+```powershell
+python relay_source_clock_context.py --archive data/v275/reported_seal_archive_20261002_v2/reported_seal_rows.csv --output <新的只读附层目录>
+```
+
+输出结构时间与旧契约接受状态分栏，不变更旧归档、实际一字、训练或分数。已实际应用全1046行及4针对核验。
+
+随后依据旧V294共同1913数值一致而新增973覆盖的独立证据，relay_vwap_source_repair_research.py在固定vwap_source_repair_20261014T172716Z根一次冻结并完成3fit：Accuracy差−0.19/−0.42/−0.75pp，9月真实非一字Recall15%不变，全3707/7414及67未知保留；方案淘汰、一次锁已消费，compare不得重跑。源使用政策显式为当前知识截止事后诊断、九月×100单位推断，非原严格来源通过或新盲测。独立复核脚本和全部20方向改变见新数值目录，3预处理核验非预测提升；源审查0fit/数值3/BASE0/真实新增0，无生产改动。
+
+## 2026-10-14：跨日补涨关系与实际审阅入口
+
+[实际完整15只及边界](supplement_recognition_20261014T174129Z/补涨识别接入与预测改进结论.md)。原leader_role_review.prepare没有调用预读；新日期使用新的加法式入口，原代码/冻结兼容保留：
+
+```powershell
+python supplement_role_review.py prepare --features <合格原特征归档目录> --theme-report <完整题材事实> --mainline-report <独立主线> --compatibility <原兼容策略> --pool <同日期完整遮分连板池> --bank <原格式已核催化论坛bank> --relation-bank <同日期父锚关系bank> --calendar <官方calendar.json> --output-dir <新的目录> --model-exposure MODEL_NOT_REVIEWED_SELF_ATTESTED
+python supplement_role_review.py freeze --facts <facts_with_supplement.json> --judgements <实际完成的author_draft.json> --output <新登记文件>
+python supplement_role_review.py compare --record <该登记文件> --baseline <原同池模型输出> --outcome-archive <原兼容结果归档> --output <新结算文件>
+```
+
+真实已看模型必须传MODEL_OUTPUT_ALREADY_SEEN。prepare顺序为完整池→stock_forum_preread→supplement_relation_review→原leader_role_review；模板不填晋级方向或角色。每股新增forum_preread_assessment及supplement_assessment；全部同位、同父锚候选、每条relation_id及ACCEPT/REJECT/PENDING理由必须审阅，采纳还要写反证/取消条件。缺资料不自动看空或转正。新freeze随后执行原11角色、题材、催化、独立登记和时点门，不将跨行业假设当正式SUPPLEMENT标签。
+
+关系bank规范为supplement-relation-bank-1：sources/claims精确正文偏移与SHA、真实取得/复核时间及作者/评论归属；anchors与预测池分开且有代码名称来源；edges支持多个父锚或父锚未知；temporal_facts的OHLC/板位来源分开，原不复权raw必须一致；显式STREAK_BREAK/PRIOR_FIRST_OBSERVED_BOARD事件及官方calendar、完整source_bindings。无当前父锚或不同时序的替代锚保持未知，NAME_MATCH_ONLY不能升为支持候选。多个父锚周期未限定来源范围则不任选有利节点。既存实例qualified_relation_bank_v2.json可供结构参考，不能用于其他日期。
+
+已见旧日期、正式特征来源尚不合格时可实际补诊断：
+
+```powershell
+python supplement_role_review.py context --pool <完整遮分池> --bank <原催化bank> --relation-bank <同日期关系bank> --calendar <官方calendar.json> --output-dir <新诊断目录> --model-exposure MODEL_OUTPUT_ALREADY_SEEN
+python supplement_role_review.py review-context --facts <facts_with_supplement.json> --judgements <逐股完成的诊断稿> --output <只读完成审阅文件>
+```
+
+context明确forecast_registration_allowed=false，review-context拒绝新增晋级方向，不能冻结或重写旧预测。本次actual_full15_release实跑15只、6关系并全部完成审阅；原两帖预读4背景，关系层另有阳光9月30日背景，总5股/10未知；当日关系正文0。22新增+原17相关测试通过非预测提升。full_pool_conflict_audit_release.json保持原10只成熟结算与15只新观察的全部分母、旧分数/方向及弃判。原SUPPLEMENT/C2真值门未过；prediction_validation_protocol.json唯一直接观察时序挑战尚未拟合，先完整历史输入资格，不按例手调分。原来源失败、v2/v3/first-final输出与源码精确前像保留。
+
+## 2026-10-14：逐观点股吧推理进入独立预测
+
+用户进一步要求每次给预测与预期时，对股吧讨论个股的具体内容做独立分析。旧预读只有摘录与“已读”标记，补涨逐关系门未覆盖一般个股论证。新增forum_reasoning_review.py，不改旧核心或模型权重；新日期改用以下入口：
+
+```powershell
+python forum_reasoning_review.py prepare --features <合格原特征归档目录> --theme-report <完整题材事实> --mainline-report <独立主线> --compatibility <原兼容策略> --pool <完整遮分连板池> --bank <原已核催化论坛bank> --relation-bank <同日期父锚关系bank> --calendar <官方calendar.json> --output-dir <新的目录> --model-exposure MODEL_NOT_REVIEWED_SELF_ATTESTED
+python forum_reasoning_review.py freeze --facts <reasoning/facts_with_forum_reasoning.json> --judgements <实际完成的作者稿> --output <新独立登记>
+python forum_reasoning_review.py compare --record <该登记> --baseline <原同池模型输出> --outcome-archive <原兼容目标结果> --output <新结算>
+```
+
+prepare先运行原supplement完整准备，再从同一事实卡预读及关系层取已核正文/评论，按source_id/section/offset/excerpt生成稳定opinion_id并去重。author_draft_PENDING.json新增forum_reasoning_assessment：每股reviewed/synthesis/agreement+reason；每观点作者命题、推理、可检验预期、作者实际call与原目标日、verification状态/范围/源引用、ACCEPT/REJECT/PENDING、反证、独立影响及取消条件。promotion_judgement仍由作者依完整市场和竞争独立填写，不自动赋值。UNKNOWN假设可明确采纳，不需等监督角色标签；PENDING观点不能自动提供确定方向，但不会禁止该股凭其他证据形成预测。
+
+freeze拒绝只填“已读”、漏观点/股票、把问句改成明确预测、旧明天移成当前日期、无来源认证事实、用行情认证公司业务或资金因果；随后继续原supplement/角色/催化/登记门。正文、评论时间与来源最晚available时刻保留，真实已看模型必须MODEL_OUTPUT_ALREADY_SEEN。compare沿原完整同池成熟结果结算，独立结论先于新日期模型展示；不强迫先看BASE再填推理。
+
+已见旧日期附层：
+
+```powershell
+python forum_reasoning_review.py attach --facts <原facts_with_supplement.json> --draft <原逐股诊断完成稿> --output-dir <新附层>
+python forum_reasoning_review.py review-context --facts <facts_with_forum_reasoning.json> --judgements <逐观点完成稿> --output <完成审阅>
+```
+
+本次forum_reasoning_20261014/actual_full15已实际附层完整15只、10去重观点并全部完成，10未覆盖股票保留，当日正文0、已见模型不称盲审、原方向不改。 [实际逐观点推理](forum_reasoning_20261014/股吧逐观点推理与独立预期.md)及[执行边界](forum_reasoning_20261014/执行边界.md)说明百洋相对表现、慈文换手后确认、醋化行业谨慎等如何分别影响独立预期；14新增针对测试通过非预测改善。新方向0/fit0/正式新成熟0，原监督角色/C2门仅约束相应训练，不禁止直接独立判断。新日期完整预测/确认/结算持续检验哪些作者推理被正确采纳、哪些导致误判，不靠后验改口提高准确率。
+
+## 2026-10-14：项目不足与逐观点结果附页
+
+[本次客观审查](project_audit_20261014/项目不足与优先改进.md)：非一字漏判、少日期前向、盘口/题材历史覆盖、收益与成交验收仍是主要不足。新入口CLI未完整暴露原history-dataset/mainline-history/narrative-reviews；Python API仍可传history_datasets/mainline_history/narrative_reviews，本轮参数缺口未修，调用时不得把缺传当无历史。审阅层多而重复，统一入口/共享证据和条件引用是后续工程重点，旧冻结源码保护不应删除。
+
+新增只读反馈：
+
+```powershell
+python forum_reasoning_outcome_context.py project --record <原正式登记的独立论坛判断> --comparison <原同池compare输出> --output-dir <新反馈目录>
+python forum_reasoning_outcome_context.py pending --facts <诊断facts_with_forum_reasoning.json> --review <完成的观点审阅> --output-dir <新待结算目录>
+```
+
+project核原登记、exact事实/日期/完整池，读取原比较绑定的唯一BASE和目标来源归档，经原兼容build_outcomes只读重建真值，核方向、指标和分层后显示每观点方向兼容与误报/漏判/弃判。角色或中性观点不以晋级认证；没有独立同刻确认的条件与取消效果均UNKNOWN。原结果/预测不改、不请求数据、不拟合；原comparison未重复列出的BASE source_hashes在本页另验证并追加，不删除旧校验。
+
+实际project_audit_20261014/pending_full15已跑15股/10观点；新方向、标签、指标仍待核，误差NOT_EVALUATED而非15只弃判。15项合成契约测试通过非预测增益，真实project新到期结算尚未执行；0fit/0新正式成熟，完整旧分数/来源保持。不用旧10结果配新15观点，不把方向兼容当论坛论点真值或因果收益。

@@ -1,0 +1,64 @@
+import tempfile
+import unittest
+from pathlib import Path
+
+import numpy as np
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+
+from relay_curvature_research import CurvatureAppend, ensure_unattempted, definition, paired_signature
+
+
+class CurvatureIntegrityTests(unittest.TestCase):
+    def test_transform_cannot_relearn_from_evaluation_extremes(self):
+        train = np.arange(38 * 5, dtype=float).reshape(5, 38) / 100
+        transform = CurvatureAppend().fit(train)
+        expected = transform.transform(train[:1])
+        actual = transform.transform(np.vstack([train[:1], np.full((1, 38), 1e7)]))[:1]
+        np.testing.assert_array_equal(actual, expected)
+
+    def test_original_imputation_and_indicators_preserved_with_missing_turnover(self):
+        raw = np.arange(29 * 6, dtype=float).reshape(6, 29)
+        raw[0, 18] = np.nan
+        imputer = SimpleImputer(strategy="median", add_indicator=True, keep_empty_features=True)
+        original = StandardScaler().fit_transform(imputer.fit_transform(raw))
+        added = CurvatureAppend().fit_transform(original)
+        np.testing.assert_array_equal(added[:, :original.shape[1]], original)
+        self.assertEqual(added.shape[1], original.shape[1] + 2)
+        self.assertTrue(np.isfinite(added).all())
+
+    def test_missing_input_dimension_or_nonfinite_refused(self):
+        x = np.ones((3, 38))
+        t = CurvatureAppend().fit(x)
+        with self.assertRaises(ValueError):
+            t.transform(np.ones((2, 39)))
+        x[0, 18] = np.nan
+        with self.assertRaises(ValueError):
+            t.transform(x)
+
+    def test_repeat_attempt_is_refused_before_fit(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ensure_unattempted(directory)
+            Path(directory, "attempt_STARTED.json").write_text("{}")
+            with self.assertRaises(ValueError):
+                ensure_unattempted(directory)
+
+    def test_definition_excludes_target_and_retuning(self):
+        p = definition()
+        self.assertEqual(p["curve_fields"], ["turnover", "amplitude"])
+        self.assertEqual(p["maximum_predictive_fits"], 3)
+        self.assertEqual(p["BASE_refits"], 0)
+        self.assertNotIn("target", p["original_fields"])
+
+    def test_missing_target_dates_equal_but_real_mismatches_and_duplicates_preserved(self):
+        a = [{"signal_date": "2026-01-01", "code": "000001", "target_date": float("nan"), "truth": None}]
+        b = [{"signal_date": "2026-01-01", "code": "000001", "target_date": None, "truth": None}]
+        self.assertEqual(paired_signature(a), paired_signature(b))
+        b[0]["target_date"] = "2026-01-02"
+        self.assertNotEqual(paired_signature(a), paired_signature(b))
+        with self.assertRaises(ValueError):
+            paired_signature(a + a)
+
+
+if __name__ == "__main__":
+    unittest.main()

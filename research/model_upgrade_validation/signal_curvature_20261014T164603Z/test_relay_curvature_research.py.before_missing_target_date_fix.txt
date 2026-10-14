@@ -1,0 +1,55 @@
+import tempfile
+import unittest
+from pathlib import Path
+
+import numpy as np
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+
+from relay_curvature_research import CurvatureAppend, ensure_unattempted, definition
+
+
+class CurvatureIntegrityTests(unittest.TestCase):
+    def test_transform_cannot_relearn_from_evaluation_extremes(self):
+        train = np.arange(38 * 5, dtype=float).reshape(5, 38) / 100
+        transform = CurvatureAppend().fit(train)
+        expected = transform.transform(train[:1])
+        actual = transform.transform(np.vstack([train[:1], np.full((1, 38), 1e7)]))[:1]
+        np.testing.assert_array_equal(actual, expected)
+
+    def test_original_imputation_and_indicators_preserved_with_missing_turnover(self):
+        raw = np.arange(29 * 6, dtype=float).reshape(6, 29)
+        raw[0, 18] = np.nan
+        imputer = SimpleImputer(strategy="median", add_indicator=True, keep_empty_features=True)
+        original = StandardScaler().fit_transform(imputer.fit_transform(raw))
+        added = CurvatureAppend().fit_transform(original)
+        np.testing.assert_array_equal(added[:, :original.shape[1]], original)
+        self.assertEqual(added.shape[1], original.shape[1] + 2)
+        self.assertTrue(np.isfinite(added).all())
+
+    def test_missing_input_dimension_or_nonfinite_refused(self):
+        x = np.ones((3, 38))
+        t = CurvatureAppend().fit(x)
+        with self.assertRaises(ValueError):
+            t.transform(np.ones((2, 39)))
+        x[0, 18] = np.nan
+        with self.assertRaises(ValueError):
+            t.transform(x)
+
+    def test_repeat_attempt_is_refused_before_fit(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ensure_unattempted(directory)
+            Path(directory, "attempt_STARTED.json").write_text("{}")
+            with self.assertRaises(ValueError):
+                ensure_unattempted(directory)
+
+    def test_definition_excludes_target_and_retuning(self):
+        p = definition()
+        self.assertEqual(p["curve_fields"], ["turnover", "amplitude"])
+        self.assertEqual(p["maximum_predictive_fits"], 3)
+        self.assertEqual(p["BASE_refits"], 0)
+        self.assertNotIn("target", p["original_fields"])
+
+
+if __name__ == "__main__":
+    unittest.main()

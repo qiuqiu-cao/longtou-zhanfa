@@ -1,0 +1,609 @@
+{
+  "version": "supplement-relation-bank-fixture-1",
+  "signal_date": "2026-10-14",
+  "target_date": "2026-10-15",
+  "formed_at": "2026-10-14T17:49:30.771774+00:00",
+  "full_pool_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\supplement_recognition_20261014T174129Z\\evidence_agent\\full15_score_free_pool.json",
+  "anchors_are_forecast_candidates": false,
+  "anchors": [
+    {
+      "code": "002242",
+      "name": "九阳股份",
+      "scope": "HISTORICAL_HIGH_EMOTION_ANCHOR_HYPOTHESIS",
+      "temporal_facts_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\supplement_recognition_20261014T174129Z\\evidence_agent\\temporal_facts.json"
+    },
+    {
+      "code": "605388",
+      "name": "均瑶健康",
+      "scope": "ALTERNATIVE_BACKGROUND_ANCHOR",
+      "market_timing": "UNKNOWN_IN_THIS_BOUNDED_FIXTURE",
+      "name_code_binding": {
+        "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v293\\daily_lifecycle_20261002_v1\\2026-09-30_2c74dc406eef7dcf.md",
+        "sha256": "59a8f6b58f923555710b7e2fe1358d451a170d7b3924f765b2c332bba6c186f6",
+        "line": 65,
+        "used_fields_only": [
+          "code",
+          "name"
+        ],
+        "existing_role_opinion_or_prediction_not_used_as_truth": true
+      }
+    },
+    {
+      "code": null,
+      "name": "三羊",
+      "scope": "NAME_CHAIN_ALTERNATIVE_CODE_AND_TIMING_UNKNOWN"
+    },
+    {
+      "code": null,
+      "name": "圣阳",
+      "scope": "NAME_CHAIN_ALTERNATIVE_CODE_AND_TIMING_UNKNOWN"
+    }
+  ],
+  "edges": [
+    {
+      "capital_migration_confirmed": false,
+      "unique_parent_confirmed": false,
+      "confirmed_catchup_dragon": false,
+      "promotion_direction": null,
+      "training_role_label": null,
+      "fit_authorized": false,
+      "original_prediction_backfill_allowed": false,
+      "edge_id": "baiyang_jiuyang",
+      "child_code": "002696",
+      "anchor_code": "002242",
+      "relation_type": "CROSS_INDUSTRY_NAME_EMOTIONAL_CATCHUP_HYPOTHESIS",
+      "evidence_grade": "EXPLICIT_NAME_CHAIN_AND_DISTINCT_COMMENT_WITH_COMPATIBLE_RETROSPECTIVE_TIMING",
+      "claim_ids": [
+        "checked_bank_1",
+        "xueqiu_1012_author_y_question",
+        "checked_bank_6"
+      ],
+      "independent_catalyst_claim_ids": [
+        "checked_bank_2"
+      ],
+      "known_timing": {
+        "child_start_date": "2026-10-09",
+        "anchor_boards_at_child_start": 5,
+        "anchor_first_streak_broken_date": "2026-10-13",
+        "child_boards_at_anchor_break": 3,
+        "child_boards_signal_close": 4
+      },
+      "alternative_anchors_or_explanations": [
+        "三羊/圣阳同链背景，但无已核父子时序",
+        "农业避险/魚粉等独立叙事",
+        "新华全局情绪周期，不能自动等同直接父龙"
+      ],
+      "cancel_or_weaken_conditions": [
+        "完整名称关联池持续弱反馈，候选失去相对连续性",
+        "消费/名字线缺扩散而独立行业解释更充分",
+        "开盘实际承接或可成交未核"
+      ],
+      "child": {
+        "code": "002696",
+        "name": "百洋股份"
+      },
+      "parent": {
+        "code": "002242",
+        "name": "九阳股份"
+      },
+      "relation_types": [
+        "NAME_EMOTION"
+      ],
+      "connection_strength": "EXPLICIT_CO_MENTION",
+      "source_citations": [
+        {
+          "claim_id": "checked_bank_1",
+          "source_id": "guba_name",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\guba_name_tool_text.txt",
+          "text_sha256": "8a0f815c72a91b065296deb7a22498a7b893872a1fb6a0f670be98538c6c7661",
+          "offset_encoding": "TEXT_UNICODE_CHARACTERS",
+          "offset": 1625,
+          "excerpt": "三羊——九阳——百洋——圣阳，三九百圣，越来越离谱了",
+          "published_at": "2026-10-12T17:28:51+08:00",
+          "available_at": "2026-10-14T12:19:01.705127+00:00",
+          "is_role_truth": false
+        },
+        {
+          "claim_id": "xueqiu_1012_author_y_question",
+          "source_id": "xueqiu_1012",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\xueqiu_1012_tool_text.txt",
+          "text_sha256": "bdbfbc75a7d1fa48f5bdbf362c82e2435e235d9829c07efccb40137c765b9d5e",
+          "offset_encoding": "TEXT_UNICODE_CHARACTERS",
+          "offset": 3063,
+          "excerpt": "1时代和九阳是装糖还是真糖？细节是什么？它们7板意义大吗？二板非传媒里远程百洋都是Y？有没有独立走出来的可能性？",
+          "published_at": "2026-10-12T16:23:00+08:00",
+          "available_at": "2026-10-14T12:19:01.705127+00:00",
+          "is_role_truth": false
+        },
+        {
+          "claim_id": "checked_bank_6",
+          "source_id": "xueqiu_1012",
+          "source_section": "COMMENT",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\xueqiu_1012_tool_text.txt",
+          "text_sha256": "bdbfbc75a7d1fa48f5bdbf362c82e2435e235d9829c07efccb40137c765b9d5e",
+          "offset_encoding": "TEXT_UNICODE_CHARACTERS",
+          "offset": 3501,
+          "excerpt": "1，时代和九阳是主力装糖，接的人可能就不知道了，感觉今天是让你看的，不是让你买的，它俩的分时对抗那是写在明面上的。它们7板意义感觉不大，但无奈，新华抗伤抗的非常漂亮。二板非传媒里远程百洋都是Y，Y又像羊，太抽象了只能说，九阳布的好局啊。",
+          "published_at": "2026-10-12T21:09:00+08:00",
+          "available_at": "2026-10-14T12:19:01.705127+00:00",
+          "is_role_truth": false
+        }
+      ]
+    },
+    {
+      "capital_migration_confirmed": false,
+      "unique_parent_confirmed": false,
+      "confirmed_catchup_dragon": false,
+      "promotion_direction": null,
+      "training_role_label": null,
+      "fit_authorized": false,
+      "original_prediction_backfill_allowed": false,
+      "edge_id": "sunshine_jiuyang",
+      "child_code": "001318",
+      "anchor_code": "002242",
+      "relation_type": "CONSUMPTION_NAME_LINE_OLD_FOLLOWER_RESTART_CATCHUP_HYPOTHESIS",
+      "evidence_grade": "EXPLICIT_GROUP_PARAGRAPH_BACKGROUND_NOT_DIRECT_CURRENT_DAY_PAIR_BODY",
+      "claim_ids": [
+        "tgb_0930_consumption",
+        "tgb_0930_y_context",
+        "tgb_0930_anchor_alternatives"
+      ],
+      "known_timing": {
+        "prior_first_board_date": "2026-09-30",
+        "restart_first_board_date": "2026-10-13",
+        "anchor_first_streak_broken_date": "2026-10-13",
+        "child_boards_signal_close": 2
+      },
+      "alternative_anchors_or_explanations": [
+        "均瑶健康消费/Y背景锚",
+        "百洋4板名称线领先候选，并非已经证实阳光的新父龙",
+        "乳品/消费独立修复，尚未绑定全部上涨原因"
+      ],
+      "cancel_or_weaken_conditions": [
+        "补涨关系当日正文和资金因果仍未核",
+        "次日相对二板全池弱化且消费无扩散",
+        "盘口回封稳定性与成交条件未核"
+      ],
+      "child": {
+        "code": "001318",
+        "name": "阳光乳业"
+      },
+      "parent": {
+        "code": "002242",
+        "name": "九阳股份"
+      },
+      "relation_types": [
+        "CONSUMER",
+        "NAME_EMOTION"
+      ],
+      "connection_strength": "GROUP_ASSOCIATION",
+      "source_citations": [
+        {
+          "claim_id": "tgb_0930_consumption",
+          "source_id": "tgb_0930_background",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\web_selected_sources_tool_response.json",
+          "text_sha256": "dee30c3ddb229d63bf566314b6029a0e7dd4f0612956ace9e06e7d6cc8d73cb5",
+          "offset_encoding": "DECODED_JSON_STRING_UNICODE_CHARACTERS",
+          "offset": 3933,
+          "excerpt": "L51: 消费\nL52: cite18†古越龙山 ，cite19†恒丰纸业 ，cite20†天虹股份 ，cite21†阳光乳业 L53: cite22†金徽酒 L54: 首封时间\nL55: 1cite23†房地产 配酒，挺合理的。但是房地产连贯性不敢恭维，消费自然同理可得结果。\nL56: 2九阳均瑶发酵做身位优势。\nL57: 3日内认可度其实也一般，尤其九阳均瑶目前处于缩量过多状态，实际承接还不明，后排没理由冒险，只能当气氛组看待。\n",
+          "published_at": "2026-09-30T16:39:00+08:00",
+          "available_at": "2026-10-14T15:34:22.933405+00:00",
+          "is_role_truth": false
+        },
+        {
+          "claim_id": "tgb_0930_y_context",
+          "source_id": "tgb_0930_background",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\web_selected_sources_tool_response.json",
+          "text_sha256": "dee30c3ddb229d63bf566314b6029a0e7dd4f0612956ace9e06e7d6cc8d73cb5",
+          "offset_encoding": "DECODED_JSON_STRING_UNICODE_CHARACTERS",
+          "offset": 4178,
+          "excerpt": "L59: 化工\nL60: cite24†新亚制程 ，cite25†建业股份 ，cite26†兴业股份 L61: 首封时间\nL62: 1亚Y，业Y，是共同点。地域角度也是。\nL63: 2第二个字是Y，同理可得九阳均瑶发酵拼音暗线。\nL64: 3先当气氛组，脱离后再确认让不让。\n",
+          "published_at": "2026-09-30T16:39:00+08:00",
+          "available_at": "2026-10-14T15:34:22.933405+00:00",
+          "is_role_truth": false
+        },
+        {
+          "claim_id": "tgb_0930_anchor_alternatives",
+          "source_id": "tgb_0930_background",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\web_selected_sources_tool_response.json",
+          "text_sha256": "dee30c3ddb229d63bf566314b6029a0e7dd4f0612956ace9e06e7d6cc8d73cb5",
+          "offset_encoding": "DECODED_JSON_STRING_UNICODE_CHARACTERS",
+          "offset": 5546,
+          "excerpt": "L109: 二板晋级\nL110: 紫竹高科、有发酵，不多。而且大家对它的期望是固态，而不是汽配上海啥的边缘属性。\nL111: cite62†传艺科技 、固态陪跑。\nL112: cite63†亚邦股份 、Y局配套，但是主板补善水，不太明智的选择。\nL113: cite64†上海洗霸 、固态陪跑。\nL114: cite65†园林股份 、Y重组。\nL115: cite66†均瑶健康 ，Y局配套，有发酵有想法，但是九阳不让你也没办法。\nL116: ——\nL117: 三板晋级\nL118: cite67†深物业A 、抽象派分时，体现节点强大。实际套Y。\nL119: cite68†九阳股份 、改股性加单，套Y身位。因为昨天cite69†新华传媒 放量了，而园林是新的套利对象。\nL120: cite70†善水科技 、S弹性。\nL121: cite71†时代万恒 ，S主升。首板发酵跟不上了，容易被卡位，看板块效应和对手态度吧。\nL122: ——\nL123: 四板晋级\nL124: cite72†襄阳轴承 ，因为新华放量，园林新增，凸显Y的意义而活下来。其实意义和九阳差不多或许就是帮九阳，但是故意深水坑雪龙让位，这种做法有点cite73†泰慕士 逼华贸跳水的感觉，理论上算扯平了。\nL125: ——\nL126: 七板晋级\nL127: 新华传媒，不给捡漏就是顶到死了。\nL128: ——\nL129: 观察计划\nL130: 1观察一字板助攻方向。\nL131: 2观察新华是否被监管升级，看园林封单大小套利。\nL132: 3观察Y字明牌后的主升选择，234均有。\nL133: ——\nL134: 高标情绪\nL135: 1襄阳坑雪龙（竞价)，九阳获利加速，符合短线逻辑。\nL136: 2物业坑时代（发酵)，九阳获利加速，符合短线逻辑。\nL137: ——\nL138: 竞价最优解\nL139: 1橡胶独立高开非一字板溢价第一，主动性。\nL140: 2均瑶Jy一字板助攻Jy，各自排板开板做捡漏。\nL141: ——\nL142: 气质股\nL143: 1Y主升，\nL144: 襄阳坑自家兄弟，忠义角度直接跳过。\nL145: 九阳开板换手，家电主业未发酵，60分。\nL146: 均瑶发酵饮料，符合一字板续强，65分。\n",
+          "published_at": "2026-09-30T16:39:00+08:00",
+          "available_at": "2026-10-14T15:34:22.933405+00:00",
+          "is_role_truth": false
+        }
+      ]
+    },
+    {
+      "capital_migration_confirmed": false,
+      "unique_parent_confirmed": false,
+      "confirmed_catchup_dragon": false,
+      "promotion_direction": null,
+      "training_role_label": null,
+      "fit_authorized": false,
+      "original_prediction_backfill_allowed": false,
+      "edge_id": "sunshine_junyao_alternative",
+      "child_code": "001318",
+      "anchor_code": "605388",
+      "relation_type": "ALTERNATIVE_CONSUMPTION_NAME_LINE_ANCHOR",
+      "evidence_grade": "SEPT30_GROUP_BACKGROUND_TIMELINE_UNKNOWN",
+      "claim_ids": [
+        "tgb_0930_consumption",
+        "tgb_0930_anchor_alternatives"
+      ],
+      "anchor_market_chronology_available": false,
+      "cancel_or_weaken_conditions": [
+        "需同口径父锚日线与节点验证，未核前不得排除或定为唯一父龙"
+      ],
+      "child": {
+        "code": "001318",
+        "name": "阳光乳业"
+      },
+      "parent": {
+        "code": "605388",
+        "name": "均瑶健康"
+      },
+      "relation_types": [
+        "CONSUMER",
+        "NAME_EMOTION"
+      ],
+      "connection_strength": "GROUP_ASSOCIATION",
+      "source_citations": [
+        {
+          "claim_id": "tgb_0930_consumption",
+          "source_id": "tgb_0930_background",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\web_selected_sources_tool_response.json",
+          "text_sha256": "dee30c3ddb229d63bf566314b6029a0e7dd4f0612956ace9e06e7d6cc8d73cb5",
+          "offset_encoding": "DECODED_JSON_STRING_UNICODE_CHARACTERS",
+          "offset": 3933,
+          "excerpt": "L51: 消费\nL52: cite18†古越龙山 ，cite19†恒丰纸业 ，cite20†天虹股份 ，cite21†阳光乳业 L53: cite22†金徽酒 L54: 首封时间\nL55: 1cite23†房地产 配酒，挺合理的。但是房地产连贯性不敢恭维，消费自然同理可得结果。\nL56: 2九阳均瑶发酵做身位优势。\nL57: 3日内认可度其实也一般，尤其九阳均瑶目前处于缩量过多状态，实际承接还不明，后排没理由冒险，只能当气氛组看待。\n",
+          "published_at": "2026-09-30T16:39:00+08:00",
+          "available_at": "2026-10-14T15:34:22.933405+00:00",
+          "is_role_truth": false
+        },
+        {
+          "claim_id": "tgb_0930_anchor_alternatives",
+          "source_id": "tgb_0930_background",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\web_selected_sources_tool_response.json",
+          "text_sha256": "dee30c3ddb229d63bf566314b6029a0e7dd4f0612956ace9e06e7d6cc8d73cb5",
+          "offset_encoding": "DECODED_JSON_STRING_UNICODE_CHARACTERS",
+          "offset": 5546,
+          "excerpt": "L109: 二板晋级\nL110: 紫竹高科、有发酵，不多。而且大家对它的期望是固态，而不是汽配上海啥的边缘属性。\nL111: cite62†传艺科技 、固态陪跑。\nL112: cite63†亚邦股份 、Y局配套，但是主板补善水，不太明智的选择。\nL113: cite64†上海洗霸 、固态陪跑。\nL114: cite65†园林股份 、Y重组。\nL115: cite66†均瑶健康 ，Y局配套，有发酵有想法，但是九阳不让你也没办法。\nL116: ——\nL117: 三板晋级\nL118: cite67†深物业A 、抽象派分时，体现节点强大。实际套Y。\nL119: cite68†九阳股份 、改股性加单，套Y身位。因为昨天cite69†新华传媒 放量了，而园林是新的套利对象。\nL120: cite70†善水科技 、S弹性。\nL121: cite71†时代万恒 ，S主升。首板发酵跟不上了，容易被卡位，看板块效应和对手态度吧。\nL122: ——\nL123: 四板晋级\nL124: cite72†襄阳轴承 ，因为新华放量，园林新增，凸显Y的意义而活下来。其实意义和九阳差不多或许就是帮九阳，但是故意深水坑雪龙让位，这种做法有点cite73†泰慕士 逼华贸跳水的感觉，理论上算扯平了。\nL125: ——\nL126: 七板晋级\nL127: 新华传媒，不给捡漏就是顶到死了。\nL128: ——\nL129: 观察计划\nL130: 1观察一字板助攻方向。\nL131: 2观察新华是否被监管升级，看园林封单大小套利。\nL132: 3观察Y字明牌后的主升选择，234均有。\nL133: ——\nL134: 高标情绪\nL135: 1襄阳坑雪龙（竞价)，九阳获利加速，符合短线逻辑。\nL136: 2物业坑时代（发酵)，九阳获利加速，符合短线逻辑。\nL137: ——\nL138: 竞价最优解\nL139: 1橡胶独立高开非一字板溢价第一，主动性。\nL140: 2均瑶Jy一字板助攻Jy，各自排板开板做捡漏。\nL141: ——\nL142: 气质股\nL143: 1Y主升，\nL144: 襄阳坑自家兄弟，忠义角度直接跳过。\nL145: 九阳开板换手，家电主业未发酵，60分。\nL146: 均瑶发酵饮料，符合一字板续强，65分。\n",
+          "published_at": "2026-09-30T16:39:00+08:00",
+          "available_at": "2026-10-14T15:34:22.933405+00:00",
+          "is_role_truth": false
+        }
+      ]
+    },
+    {
+      "capital_migration_confirmed": false,
+      "unique_parent_confirmed": false,
+      "confirmed_catchup_dragon": false,
+      "promotion_direction": null,
+      "training_role_label": null,
+      "fit_authorized": false,
+      "original_prediction_backfill_allowed": false,
+      "edge_id": "xinjingdian_sector_role",
+      "child_code": "603096",
+      "anchor_code": null,
+      "relation_type": "MEDIA_CATCHUP_AUTHOR_HYPOTHESIS_PARENT_UNKNOWN",
+      "evidence_grade": "EXPLICIT_ROLE_OPINION_NO_DIRECT_PARENT_OR_CAUSAL_PROOF",
+      "claim_ids": [
+        "checked_bank_4"
+      ],
+      "alternative_anchors_or_explanations": [
+        "新华传媒为原文全局传媒锚但缺逐股父子绑定",
+        "同期慈文、龙版等互相竞争和共同晋级路径"
+      ],
+      "child": {
+        "code": "603096",
+        "name": "新经典"
+      },
+      "parent": {
+        "code": null,
+        "name": null
+      },
+      "relation_types": [
+        "THEME",
+        "BACKGROUND"
+      ],
+      "connection_strength": "SECTOR_CONTEXT_PARENT_UNKNOWN",
+      "source_citations": [
+        {
+          "claim_id": "checked_bank_4",
+          "source_id": "xueqiu_1012",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\xueqiu_1012_tool_text.txt",
+          "text_sha256": "bdbfbc75a7d1fa48f5bdbf362c82e2435e235d9829c07efccb40137c765b9d5e",
+          "offset_encoding": "TEXT_UNICODE_CHARACTERS",
+          "offset": 2246,
+          "excerpt": "新经典、传媒新补涨龙，起码今天硬度表达让人理解是这样。",
+          "published_at": "2026-10-12T16:23:00+08:00",
+          "available_at": "2026-10-14T12:19:01.705127+00:00",
+          "is_role_truth": false
+        }
+      ]
+    },
+    {
+      "capital_migration_confirmed": false,
+      "unique_parent_confirmed": false,
+      "confirmed_catchup_dragon": false,
+      "promotion_direction": null,
+      "training_role_label": null,
+      "fit_authorized": false,
+      "original_prediction_backfill_allowed": false,
+      "edge_id": "ciwen_sector_role",
+      "child_code": "002343",
+      "anchor_code": null,
+      "relation_type": "MEDIA_FOLLOWING_AUTHOR_HYPOTHESIS_PARENT_UNKNOWN",
+      "evidence_grade": "EXPLICIT_FOLLOWING_OPINION_NOT_CATCHUP_DRAGON_LABEL",
+      "claim_ids": [
+        "checked_bank_3"
+      ],
+      "alternative_anchors_or_explanations": [
+        "新华传媒全局锚背景；具体父子连接未知",
+        "传媒自身轮动/相对承接，不能排除"
+      ],
+      "child": {
+        "code": "002343",
+        "name": "慈文传媒"
+      },
+      "parent": {
+        "code": null,
+        "name": null
+      },
+      "relation_types": [
+        "THEME",
+        "BACKGROUND"
+      ],
+      "connection_strength": "SECTOR_CONTEXT_PARENT_UNKNOWN",
+      "source_citations": [
+        {
+          "claim_id": "checked_bank_3",
+          "source_id": "xueqiu_1012",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\xueqiu_1012_tool_text.txt",
+          "text_sha256": "bdbfbc75a7d1fa48f5bdbf362c82e2435e235d9829c07efccb40137c765b9d5e",
+          "offset_encoding": "TEXT_UNICODE_CHARACTERS",
+          "offset": 1929,
+          "excerpt": "cite36†慈文传媒†xueqiu.com 、传媒伴飞，封单有一定强度，需要爆量检验后弱转强确认。",
+          "published_at": "2026-10-12T16:23:00+08:00",
+          "available_at": "2026-10-14T12:19:01.705127+00:00",
+          "is_role_truth": false
+        }
+      ]
+    },
+    {
+      "capital_migration_confirmed": false,
+      "unique_parent_confirmed": false,
+      "confirmed_catchup_dragon": false,
+      "promotion_direction": null,
+      "training_role_label": null,
+      "fit_authorized": false,
+      "original_prediction_backfill_allowed": false,
+      "edge_id": "cuhua_sector_context",
+      "child_code": "603968",
+      "anchor_code": null,
+      "relation_type": "CHEMICAL_SECTOR_PARAGRAPH_CONTEXT_NOT_STOCK_PAIR",
+      "evidence_grade": "STOCK_NAMED_BUT_SHANSHUI_XINHUA_RELATION_NOT_TRANSFERABLE_TO_CUHUA",
+      "claim_ids": [
+        "checked_bank_5"
+      ],
+      "alternative_anchors_or_explanations": [
+        "善水—新华是正文直接指称主体；不能偷换为醋化—新华",
+        "独立化工/乙腈叙事需逐股公告核验"
+      ],
+      "child": {
+        "code": "603968",
+        "name": "醋化股份"
+      },
+      "parent": {
+        "code": null,
+        "name": null
+      },
+      "relation_types": [
+        "THEME",
+        "BACKGROUND"
+      ],
+      "connection_strength": "SECTOR_CONTEXT_PARENT_UNKNOWN",
+      "source_citations": [
+        {
+          "claim_id": "checked_bank_5",
+          "source_id": "xueqiu_1012",
+          "source_section": "AUTHOR_BODY",
+          "text_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\xueqiu_1012_tool_text.txt",
+          "text_sha256": "bdbfbc75a7d1fa48f5bdbf362c82e2435e235d9829c07efccb40137c765b9d5e",
+          "offset_encoding": "TEXT_UNICODE_CHARACTERS",
+          "offset": 1127,
+          "excerpt": "化工\n\ncite23†金丹科技†xueqiu.com ，cite24†醋化股份†xueqiu.com L71: \n首封时间\n1cite25†善水科技†xueqiu.com 跟随cite9†新华传媒†xueqiu.com 超预期。\n\n2善水从未脱离过cite9†新华传媒†xueqiu.com ，无法证实独立性。所以目前化工路线，我觉得先按兵不动也行，反正化工主板时经常输。\n\n——",
+          "published_at": "2026-10-12T16:23:00+08:00",
+          "available_at": "2026-10-14T12:19:01.705127+00:00",
+          "is_role_truth": false
+        }
+      ]
+    }
+  ],
+  "temporal_facts_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\supplement_recognition_20261014T174129Z\\evidence_agent\\temporal_facts.json",
+  "explicit_pair_chronology_binding": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\deep_review_20261014T115540Z\\jiuyang_baiyang_relation_correction_20261014T121615Z\\relation_review.json",
+    "sha256": "87e02fdb83adece755d34d81d8cdbadef31842abeb45f3cda558d79abae2fd43",
+    "json_pointer": "/timeline",
+    "scope": "CURRENT_REVIEW_REUSED_NOT_OLD_PREDICTION"
+  },
+  "restart_vs_original_start": [
+    {
+      "code": "002696",
+      "original_start_date": "2026-10-09",
+      "restart_date": null,
+      "source": {
+        "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\deep_review_20261014T115540Z\\jiuyang_baiyang_relation_correction_20261014T121615Z\\relation_review.json",
+        "sha256": "87e02fdb83adece755d34d81d8cdbadef31842abeb45f3cda558d79abae2fd43"
+      }
+    },
+    {
+      "code": "001318",
+      "original_first_observed_board_date": "2026-09-30",
+      "restart_date": "2026-10-13",
+      "source": {
+        "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\阳光九阳补涨关系与候选比较.md",
+        "sha256": "0ebf0e69b84db876edb980e40961264d05ad89719b69674afc4ad17ea7abd5f4"
+      },
+      "not_all_lifetime_first_start": true
+    }
+  ],
+  "unqualified_source_leads": [
+    {
+      "url": "https://www.jiuyangongshe.com/a/jyhq33x41k",
+      "author": "寻牛者",
+      "page_published_at": "2026-10-14 11:16:27",
+      "page_modified_at": "2026-10-14 11:26:45",
+      "timestamp_timezone_confirmed": false,
+      "status": "METADATA_AND_COMMENTS_VISIBLE_AUTHOR_BODY_UNAVAILABLE",
+      "search_relation_lead": "阳光套利九阳；只能当搜索线索",
+      "not_accepted_as_author_body": true,
+      "is_relation_confirmation": false
+    },
+    {
+      "url": "https://xueqiu.com/5176071593/412268555",
+      "status": "SEARCH_LEAD_ONLY_BODY_UNAVAILABLE_HTTP200_WAF_NOT_ARTICLE",
+      "comment_attribution_certified": false,
+      "lead": "阳光与冰山胜负的名称联想，原文/评论归属未核，不当定律。",
+      "is_relation_confirmation": false
+    }
+  ],
+  "unknown_or_uncovered_pool_codes": [
+    "000530",
+    "000668",
+    "000823",
+    "002813",
+    "002860",
+    "002917",
+    "600202",
+    "600391",
+    "600847",
+    "601188"
+  ],
+  "confirmed_catchup_dragon_count": 0,
+  "new_fits": 0,
+  "training_role_labels_available": false,
+  "not_prior_blind_review": true,
+  "source_bindings": [
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\checked_forum_bank_qualified.json",
+      "sha256": "2d55555493760658955043c7c34a8f3d702cb16255184e37e724558d9ab13088"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\15日完整15只角色补充输出.json",
+      "sha256": "2aa7fa2c2a2ae50cb266446a7020d3640d12295b6add95ee2346cbe0e54fdb77"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\normalized_daily.json",
+      "sha256": "af14c22d0b426ef2798aa1c676ada099e90301113f4b8db7048e3b296e3bd84a"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\deep_review_20261014T115540Z\\jiuyang_baiyang_relation_correction_20261014T121615Z\\relation_review.json",
+      "sha256": "87e02fdb83adece755d34d81d8cdbadef31842abeb45f3cda558d79abae2fd43"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\source_qualification.json",
+      "sha256": "d1d4ebb667156dcf67a56c4379d15d596f4495da1c8e544c47cce639c9db85cd"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\web_selected_sources_tool_response.json",
+      "sha256": "dee30c3ddb229d63bf566314b6029a0e7dd4f0612956ace9e06e7d6cc8d73cb5"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\completion_receipt.json",
+      "sha256": "0af53070d6215cdbfe175e6c98fb61a396d1bdbb92404b8dba43149ce94cfc96"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v293\\daily_lifecycle_20261002_v1\\2026-09-30_2c74dc406eef7dcf.md",
+      "sha256": "59a8f6b58f923555710b7e2fe1358d451a170d7b3924f765b2c332bba6c186f6"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\guba_name_tool_text.txt",
+      "sha256": "8a0f815c72a91b065296deb7a22498a7b893872a1fb6a0f670be98538c6c7661"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\original_capture_adapter_receipt.json",
+      "sha256": "80e979af0ef89ad5301f8eea948c6764cf4133a207a9251568a25c9ca7124945"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\forum_preread_workflow_20261014T122229Z\\xueqiu_1012_tool_text.txt",
+      "sha256": "bdbfbc75a7d1fa48f5bdbf362c82e2435e235d9829c07efccb40137c765b9d5e"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\000530_daily.json",
+      "sha256": "0fdb23c97e4972662598b31a7d5f03ae3586e04258148c7eea384c19fd947aff"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\000668_daily.json",
+      "sha256": "97b32f21dbe90719f4569cb6de3b5695e0170742887b903ac5afbf29fa513255"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\000823_daily.json",
+      "sha256": "6a1f6fd8fd14e24724eee2af61ee5f8dfb8df8a9d46c2c722f4a434ad2130a44"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\001318_daily.json",
+      "sha256": "e5e6c81b38766e49796867b22ff31cb6582b2b974a76241065d3d5f5a05d9887"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\002242_daily.json",
+      "sha256": "0a90fe6de6252ea9978726e7af28bc66798ced99149dc8e5119222d281e98f88"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\outcome_review_20261014T1116Z\\raw\\002343_daily.json",
+      "sha256": "cf99f18cc1b22036eb98e888b1e9008c14e605056dbf688ebbcd5eee7aaf6b37"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\outcome_review_20261014T1116Z\\raw\\002696_daily.json",
+      "sha256": "443649630fae262b6642e4ed2ab9db3f0333f51ce3da4d77c67b8d76f9d318f4"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\002813_daily.json",
+      "sha256": "65d6766795340691e66f3051a651ada20e4184b939eea5ba113fb22c98a1a722"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\002860_daily.json",
+      "sha256": "c154af97fa386fdc2889f7536f9e9cd9a1a2091599ebe9df3a2cd733a6bf14a6"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\002917_daily.json",
+      "sha256": "7cb01ad1822bc21c1ad2f009aec3276bb618c4e20db0a6fc5a5d79b51cd2546e"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\600202_daily.json",
+      "sha256": "47ee304552df65f7c7b5714efce8fe1e23c5348b0f9c1419c6c4b096a2320523"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\600391_daily.json",
+      "sha256": "ff4e35d52f1e412ab43f7021a4b24ae8733bb061861563ce9e11769d9a7f3863"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\600847_daily.json",
+      "sha256": "9bd88795ef5012eecdba61f2a66c6f4bf516cbc81a9b2cb797a379f7fd74cdb6"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\focused_daily\\601188_daily.json",
+      "sha256": "110a9c4bce1b09f1231f5f13976169db39bec2839c54e50297efb480efad0f9d"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\outcome_review_20261014T1116Z\\raw\\603096_daily.json",
+      "sha256": "3fb20b54b1d2ba9fb1d11b8ac40351bba8ea139da9a5389f7f719857355ad639"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\outcome_review_20261014T1116Z\\raw\\603968_daily.json",
+      "sha256": "6c8e717c82c34fcbd68d035dc2807b82786bce344e62f93c0e32d5ca4d7ac678"
+    }
+  ]
+}

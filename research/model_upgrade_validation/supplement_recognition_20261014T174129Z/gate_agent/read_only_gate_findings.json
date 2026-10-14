@@ -1,0 +1,302 @@
+{
+  "formed_at": "2026-10-14T17:45:10.738836+00:00",
+  "purpose": "READ_ONLY_EVALUATION_AND_PREDICTION_GATE_FOR_PARENT_CHILD_RECOGNIZER",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_historical_review_20261012T142646Z\\actual_independent_label_counts.json": "0441e0c8a9dab65df183c2a6763759d565e2c466f2d7b708f10aea463b0aef74",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_training_truth_20261013T054938Z\\actual_training_truth\\original_promotion_training_truth.json": "909f3940adc6d59a46c752f48ca1e06d012114a71d0e5cdd1132e43e9f6f666e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\deep_review_20261014T115540Z\\原10只判断与反例.csv": "ecd2c20bfd8923f413acb9cca4743b1d697abd5664234d0f15ca080a4155b8eb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\deep_review_20261014T115540Z\\jiuyang_baiyang_relation_correction_20261014T121615Z\\relation_review.json": "87e02fdb83adece755d34d81d8cdbadef31842abeb45f3cda558d79abae2fd43",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\阳光九阳补涨关系与候选比较.md": "0ebf0e69b84db876edb980e40961264d05ad89719b69674afc4ad17ea7abd5f4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\sunshine_jiuyang_relation_20261014T152814Z\\15日完整15只角色补充输出.json": "2aa7fa2c2a2ae50cb266446a7020d3640d12295b6add95ee2346cbe0e54fdb77",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\name_character_context_original_rules.json": "ffa1cfced1cb99ca03f7f64da5c4b4f761fe645a2ec6c700cc4108e56dc6b1ed",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_role_engine.py": "1599329d38ba4704ee5a18df08775a70067a16feebc3a540510805727b8232d7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_role_research.py": "bb600adc2db14754132fe898a44c0a154307e8e691350788f8d0a275005b6d4c"
+  },
+  "role_truth_counts": {
+    "HEIGHT": {
+      "POSITIVE": 995,
+      "NEGATIVE": 8250
+    },
+    "THEME": {
+      "UNKNOWN": 9245
+    },
+    "TURNOVER": {
+      "UNKNOWN": 9245
+    },
+    "CAPACITY": {
+      "UNKNOWN": 9245
+    },
+    "TREND": {
+      "UNKNOWN": 9245
+    },
+    "POSITION": {
+      "UNKNOWN": 9245
+    },
+    "SUPPLEMENT": {
+      "UNKNOWN": 9245
+    },
+    "NODE": {
+      "UNKNOWN": 9245
+    },
+    "CYCLE": {
+      "UNKNOWN": 9245
+    },
+    "CROSS_CYCLE": {
+      "UNKNOWN": 9245
+    },
+    "EMOTION": {
+      "UNKNOWN": 9245
+    }
+  },
+  "usable_supervised_supplement_pair_truth": 0,
+  "promotion_metrics_original13to14_supplemental10": {
+    "BASE": {
+      "TP": 2,
+      "TN": 6,
+      "FP": 0,
+      "FN": 2,
+      "POSITIVE_ABSTENTION": 0,
+      "NEGATIVE_ABSTENTION": 0,
+      "pool": 10,
+      "judged": 10,
+      "Accuracy": 0.8,
+      "correct_over_all_pool": 0.8,
+      "Recall_complete": 0.5,
+      "Precision": 1.0,
+      "F1_complete": 0.6666666666666666,
+      "prediction_coverage": 1.0
+    },
+    "independent": {
+      "TP": 3,
+      "TN": 2,
+      "FP": 3,
+      "FN": 0,
+      "POSITIVE_ABSTENTION": 1,
+      "NEGATIVE_ABSTENTION": 1,
+      "pool": 10,
+      "judged": 8,
+      "Accuracy": 0.625,
+      "correct_over_all_pool": 0.5,
+      "Recall_complete": 0.75,
+      "Precision": 0.5,
+      "F1_complete": 0.6,
+      "prediction_coverage": 0.8
+    }
+  },
+  "non_one_price_signal_metrics": {
+    "BASE": {
+      "TP": 0,
+      "TN": 6,
+      "FP": 0,
+      "FN": 2,
+      "POSITIVE_ABSTENTION": 0,
+      "NEGATIVE_ABSTENTION": 0,
+      "pool": 8,
+      "judged": 8,
+      "Accuracy": 0.75,
+      "correct_over_all_pool": 0.75,
+      "Recall_complete": 0.0,
+      "Precision": null,
+      "F1_complete": 0.0,
+      "prediction_coverage": 1.0
+    },
+    "independent": {
+      "TP": 1,
+      "TN": 2,
+      "FP": 3,
+      "FN": 0,
+      "POSITIVE_ABSTENTION": 1,
+      "NEGATIVE_ABSTENTION": 1,
+      "pool": 8,
+      "judged": 6,
+      "Accuracy": 0.5,
+      "correct_over_all_pool": 0.375,
+      "Recall_complete": 0.5,
+      "Precision": 0.25,
+      "F1_complete": 0.3333333333333333,
+      "prediction_coverage": 0.75
+    }
+  },
+  "mature_BASE_false_negatives": [
+    {
+      "code": "002696",
+      "name": "百洋股份",
+      "original_display_score": "45.6",
+      "original_independent_call": "PROMOTE",
+      "signal_actual_one_word": "0.0",
+      "supplemental_promoted": "True"
+    },
+    {
+      "code": "603968",
+      "name": "醋化股份",
+      "original_display_score": "36.3",
+      "original_independent_call": "UNKNOWN",
+      "signal_actual_one_word": "0.0",
+      "supplemental_promoted": "True"
+    }
+  ],
+  "current15_unmatured": [
+    {
+      "code": "002696",
+      "name": "百洋股份",
+      "score": 78.8,
+      "model_positive": true,
+      "independent": "PROMOTE",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "002860",
+      "name": "星帅尔",
+      "score": 63.6,
+      "model_positive": true,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "000668",
+      "name": "荣丰控股",
+      "score": 62.5,
+      "model_positive": true,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "000530",
+      "name": "冰山冷热",
+      "score": 44.7,
+      "model_positive": false,
+      "independent": "PROMOTE",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "002343",
+      "name": "慈文传媒",
+      "score": 43.0,
+      "model_positive": false,
+      "independent": "PROMOTE",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "002917",
+      "name": "金奥博",
+      "score": 32.7,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "603096",
+      "name": "新经典",
+      "score": 30.4,
+      "model_positive": false,
+      "independent": "PROMOTE",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "600202",
+      "name": "哈空调",
+      "score": 30.3,
+      "model_positive": false,
+      "independent": "FAIL",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "603968",
+      "name": "醋化股份",
+      "score": 29.7,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "600847",
+      "name": "万里股份",
+      "score": 27.8,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "000823",
+      "name": "超声电子",
+      "score": 26.4,
+      "model_positive": false,
+      "independent": "PROMOTE",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "001318",
+      "name": "阳光乳业",
+      "score": 24.9,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "002813",
+      "name": "路畅科技",
+      "score": 22.9,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "601188",
+      "name": "龙江交通",
+      "score": 20.2,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    },
+    {
+      "code": "600391",
+      "name": "航发科技",
+      "score": 19.0,
+      "model_positive": false,
+      "independent": "UNKNOWN",
+      "next_day_opening_status": "PENDING"
+    }
+  ],
+  "structural_diagnosis": {
+    "legacy_dependency_requires_same_specific_theme": true,
+    "legacy_SUPPLEMENT_requires_theme_and_dependency": true,
+    "name_cluster_requires_min_members": 4,
+    "name_cluster_actual_count": 0,
+    "scope_limitation": "Current closing/failed pool does not retain a broken older anchor as an explicit temporal parent.",
+    "do_not_forge_same_specific_theme_for_name_relation": true
+  },
+  "evaluation_contract": {
+    "unit": "signal_date + scope_id + anchor_code + child_code + relation_type + source_knowledge_cutoff",
+    "candidate_discovery": "Preserve complete declared child pool, explicit archived prior-anchor scope, every generated edge, no-edge/unknown stocks, excluded branches and all alternatives.",
+    "evidence_targets": [
+      "PUBLIC_NARRATIVE_LINK_EXISTS_IN_BOUND_BODY",
+      "ANCHOR_PRECEDES_CHILD_START_IN_VERIFIED_SESSION_TIMELINE",
+      "CHILD_CONTINUES_AFTER_OBSERVED_ANCHOR_BREAK",
+      "WITHIN_CHAIN_CURRENT_RELATIVE_LEADERSHIP"
+    ],
+    "identity_targets_separate": [
+      "SUPPLEMENT_CANDIDATE",
+      "SUPPLEMENT_CORE_OR_LEADER"
+    ],
+    "unknown_is_not_negative": true,
+    "pair_truth_source": "Independent actual bounded evidence review; current audited records are hypotheses, not supervised identity truth.",
+    "factual_edge_recall": "Only against a separately audited complete edge set within explicitly fixed source and pool scope; searched-but-not-mentioned is not ground-truth negative.",
+    "identity_metrics": [
+      "full known-scope Accuracy",
+      "complete-positive Recall",
+      "Precision",
+      "F1",
+      "abstention and evidence coverage",
+      "complete-chain Top1/Top3 with ties and missing edges retained"
+    ],
+    "predictive_metrics": "Exact original date/code/label full cohort vs frozen BASE; Accuracy, complete Recall, Precision, F1, coverage, board/actual one-price/role-evidence strata; no calibrated Brier claim.",
+    "settlement": "D+1 exact-session promotion truth separate from D+3/D+5 identity persistence; observed break/reacquisition is not exact intraday time; leave absent identity labels unknown.",
+    "historical_status": "Already-seen historical source and outcomes: diagnostic replay only. Late-acquired relation cannot retroactively change forecast knowledge cutoff.",
+    "deployment_gate": "Existing original fixed effect and 120-session gates remain. No deployment from 2 case demonstrations or increased test counts.",
+    "numerical_fit_now": "Not justified for SUPPLEMENT supervised head or existing all11 C2. Promotion factual-feature challenger is not universally prohibited, but complete comparable pre-cutoff pair-feature coverage is absent, so this batch should not fit it."
+  },
+  "new_fits": 0,
+  "new_labels_created": 0,
+  "production_modified": false,
+  "new_formal_forward_samples": 0
+}

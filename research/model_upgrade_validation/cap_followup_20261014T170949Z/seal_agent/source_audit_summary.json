@@ -1,0 +1,151 @@
+{
+  "formed_at": "2026-10-14T17:13:52.391166+00:00",
+  "scope": "Existing bounded V275,V287,V49 recovery and saved qualifications only; no new sources/fits/outcome-based field selection",
+  "rows": 1046,
+  "dates": 18,
+  "relay_rows": 217,
+  "valid_all_clock_rows": 1012,
+  "valid_relay_clock_rows": 191,
+  "known_relay_labels": 168,
+  "unknown_relay_labels": 49,
+  "relay_nonmissing_fields": {
+    "first_seal": 217,
+    "last_seal": 217,
+    "bomb_count": 217,
+    "sealed_fund": 217,
+    "float_cap": 217,
+    "amount": 217
+  },
+  "relay_sealed_fund_zero": 0,
+  "relay_sealed_fund_negative": 0,
+  "relay_bomb_zero": 102,
+  "relay_bomb_positive": 115,
+  "relay_first_last_equal": 83,
+  "relay_auction_clock_proxy": 32,
+  "relay_original_manifest_hash_rows": 27,
+  "relay_naive_capture_rows": 190,
+  "original_29_training_overlap": [
+    {
+      "fold": "2025H2",
+      "training_rows": 4062,
+      "training_dates": 252,
+      "key_overlap": 0,
+      "fraction": 0.0
+    },
+    {
+      "fold": "2026JanAug",
+      "training_rows": 3243,
+      "training_dates": 252,
+      "key_overlap": 0,
+      "fraction": 0.0
+    },
+    {
+      "fold": "2026Sep",
+      "training_rows": 3059,
+      "training_dates": 252,
+      "key_overlap": 17,
+      "fraction": 0.005557371690094802
+    }
+  ],
+  "original_placeholder_counts": {
+    "first_seal_minute": {
+      "nonmissing": 2113,
+      "zero": 2113,
+      "positive": 0
+    },
+    "last_seal_minute": {
+      "nonmissing": 2113,
+      "zero": 2113,
+      "positive": 0
+    },
+    "bomb_count": {
+      "nonmissing": 2113,
+      "zero": 2113,
+      "positive": 0
+    }
+  },
+  "available_contiguous_blocks": [
+    {
+      "dates": [
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01"
+      ],
+      "relay_rows": 52,
+      "known_relay_labels": 35,
+      "unknown_relay_labels": 17,
+      "independent_unseen_holdout": false
+    },
+    {
+      "dates": [
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21"
+      ],
+      "relay_rows": 138,
+      "known_relay_labels": 117,
+      "unknown_relay_labels": 21,
+      "independent_unseen_holdout": false
+    },
+    {
+      "dates": [
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30"
+      ],
+      "relay_rows": 27,
+      "known_relay_labels": 16,
+      "unknown_relay_labels": 11,
+      "independent_unseen_holdout": false
+    }
+  ],
+  "sampled_price_qualification": {
+    "rows": 182,
+    "dates": 16,
+    "price_reconciled": 182,
+    "full_grid": 176,
+    "volume_reconciled": 97,
+    "original_capture_hash": 27,
+    "report_bomb_positive_no_sampled_close_drop": 66,
+    "sampled_drop_and_return": 29,
+    "tick_path_verified": 0,
+    "order_book_verified": 0,
+    "absorption_verified": 0
+  },
+  "v49_recovery": {
+    "returned_case_files": 210,
+    "unique_requested_dates": [
+      "2024-01-17",
+      "2024-01-18",
+      "2024-01-19",
+      "2024-01-22",
+      "2024-01-23",
+      "2024-01-24",
+      "2024-01-25",
+      "2024-01-26"
+    ],
+    "all48": 210,
+    "wrong_requested_date": 0,
+    "with_seal_fields": 0,
+    "receipt_not_daily_reconciliation": true
+  },
+  "raw_source_field_mismatches": [],
+  "no_fit": true,
+  "independent_unseen_event_window_found": false,
+  "source_sha256": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v275\\reported_seal_archive_20261002_v2\\reported_seal_rows.csv": "1d5f54ea94fd6cc8298e0dde850a30c24acad4fd17ca52f7a443fd0e505e1be0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v275\\reported_seal_archive_20261002_v2\\report.json": "6032946de2dbace147df4b03904428bd1a5d21d17d262dd41d307b3ecb8f140f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_sampled_path_20261012T153639Z\\actual_sampled_history_CAPTURE_BOUND\\sampled_path_evidence_bank.json": "0345741fcc551b4409025be722b402216c4ec1e81d5cacdaa2f3bef89b6d39d4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\cap_followup_20261014T170949Z\\seal_agent\\audit_existing_seals.py": "3a7a46d9b19b373eb54ee9246f97b21232f7abae9d2a7413ffd2145b66962c30"
+  }
+}

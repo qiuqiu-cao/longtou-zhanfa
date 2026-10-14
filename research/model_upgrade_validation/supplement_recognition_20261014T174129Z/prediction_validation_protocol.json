@@ -1,0 +1,41 @@
+{
+  "version": "supplement-direct-observation-prediction-protocol-1",
+  "status": "PREREGISTERED_INPUT_QUALIFICATION_REQUIRED_NOT_FITTED",
+  "hypothesis": "Complete source-bound parent/child connection and current-streak chronology adds promotion discrimination beyond the original29 fields.",
+  "baseline": "Original saved BASE; no baseline refitting; preserve all original inputs, labels, scores and failures.",
+  "challenge_count": 1,
+  "challenge": "ORIGINAL29_PLUS_DIRECT_PARENT_CHILD_CHRONOLOGY",
+  "features_fixed": [
+    "Eligible explicit or grouped child/anchor connection with source-bound higher anchor when the current child streak starts: 1/0/unknown.",
+    "Source-bound child starts before the scoped anchor break and continues to signal close: 1/0/unknown.",
+    "Source-bound previous child first-board observation and current streak restarts on the scoped anchor break: 1/0/unknown."
+  ],
+  "feature_semantics": "These are observed discussion/timing inputs, never confirmed supplement-dragon role labels or funds-causality labels. NAME_MATCH_ONLY is ineligible. Multiple anchor cycles without source-bound scope remain unknown. Unknown does not mean false.",
+  "missingness": "Three added missing indicators; training-window medians only; preserve the original preprocessing for all original29 fields.",
+  "multiple_anchors": "Apply the same fixed eligibility policy to every recorded alternative anchor; any eligible observed match yields1, known complete nonmatch0, unresolved source/chronology unknown. No anchor selected from next-day outcomes.",
+  "historical_inputs_required": [
+    "The entire original dated candidate pool, including all failed/uncovered/unknown candidates; no winner-only relation bank.",
+    "A fixed bounded set of existing archived discussions, exact source spans, author/comment distinction, source versions, publication/capture/review clocks and all alternatives before inspecting target outcomes for extraction.",
+    "All market observations no later than each signal close; exact signal and next official session; a prior break is an explicit event, never inferred from missing boards.",
+    "Original mature promotion labels, unchanged members,252-session training windows,daily weights,C=0.25 and strict score>0.5. No role truths constructed from promotion or source opinions.",
+    "Freeze the full data manifest and eligibility/missingness audit before any fit. Current15 relation cards alone are insufficient historical input."
+  ],
+  "knowledge_time_policy": "Real forward inputs must actually exist before judgement freeze. Late-retrieved historical source is separately qualified as retrospective current-knowledge diagnosis if publication/version and no-target-data restrictions hold; it is never an original-time qualification or fresh blind result.",
+  "role_training_boundary": "The existing SUPPLEMENT supervised role and C2 OOF gates remain unmet. This does not ban historical promotion research using newly qualified directly observed inputs and original promotion labels.",
+  "evaluation": {
+    "segments": ["2025H2","2026-01_to_08","2026-09"],
+    "fits_max": 3,
+    "fits_per_challenge_segment": 1,
+    "batch_budget_minutes": 30,
+    "accuracy_gain_required_each_segment_pp": 3,
+    "must_not_degrade_each_segment": ["Complete positive Recall","Precision","F1","prediction coverage"],
+    "stratification": ["board height","actual signal-day OHLC one-price identity","unknown actual identity","old low-turnover proxy separately","source coverage and relation strength"],
+    "special_gate": "September actual non-one-price Recall must not fall; original full denominators and source unknowns retained.",
+    "uncertainty": "Use the existing fixed common date-block paired interval and multiple-comparison policy; no ordinary independent-row confidence claims.",
+    "unknown_metrics": "Undefined metrics or insufficient complete source qualification cannot pass.",
+    "probability": "No Brier claim without a calibrated probability.",
+    "stop": "After completion,failure or30-minute budget stop; preserve predictions before downstream checks; no threshold/weight/feature tuning or rerun from results."
+  },
+  "forward_gate": "Winning retrospective diagnostics still require the original fixed source and120-day forward acceptance before deployment. Record all candidates and abstentions before model display; keep recognition, promotion and execution outcomes distinct.",
+  "actual_current_batch": {"new_fits":0,"new_role_truth":0,"new_formal_forward_samples":0,"deployment":false,"historical_complete_relation_inputs_available":false}
+}

@@ -1,0 +1,252 @@
+"""One fixed retrospective curvature challenge; no production integration."""
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import importlib.metadata
+from pathlib import Path
+import time
+import warnings
+
+import joblib
+import numpy as np
+import pandas as pd
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.exceptions import ConvergenceWarning
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.utils.validation import check_is_fitted
+from threadpoolctl import threadpool_limits
+
+import relay_context_research as common
+from relay_expert_research import subgroup
+
+ROOT = Path(__file__).resolve().parent
+ARM = "SIGNAL_TURNOVER_AMPLITUDE_CURVATURE"
+CURVE_FIELDS = ("turnover", "amplitude")
+PARAMETERS = {"C": .25, "solver": "lbfgs", "max_iter": 2500,
+              "class_weight": None, "random_state": 271}
+
+
+class CurvatureAppend(TransformerMixin, BaseEstimator):
+    """Keep standardized original dimensions; append two training-scaled squares."""
+    def __init__(self, indices=(18, 20)):
+        self.indices = indices
+
+    def fit(self, X, y=None):
+        a = np.asarray(X, dtype=float)
+        if a.ndim != 2 or a.shape[1] < 29 or not np.isfinite(a).all():
+            raise ValueError("finite original transformed inputs required")
+        self.n_features_in_ = a.shape[1]
+        self.square_scaler_ = StandardScaler().fit(a[:, self.indices] ** 2)
+        return self
+
+    def transform(self, X):
+        check_is_fitted(self, "square_scaler_")
+        a = np.asarray(X, dtype=float)
+        if a.ndim != 2 or a.shape[1] != self.n_features_in_ or not np.isfinite(a).all():
+            raise ValueError("original transformed dimension/values changed")
+        return np.column_stack([a, self.square_scaler_.transform(a[:, self.indices] ** 2)])
+
+
+def estimator():
+    return Pipeline([
+        ("imputer", SimpleImputer(strategy="median", add_indicator=True, keep_empty_features=True)),
+        ("original_scale", StandardScaler()),
+        ("curvature", CurvatureAppend()),
+        ("logisticregression", LogisticRegression(**PARAMETERS)),
+    ])
+
+
+def definition():
+    return {"version": "signal-curvature-fixed-1", "arms": ["BASE", ARM],
+            "original_fields": common.RELAY_FIELDS, "curve_fields": list(CURVE_FIELDS),
+            "formula": "For each field: square original training-imputed standardized value, then scale its square using training only; append to unchanged original transformed dimensions",
+            "parameters": PARAMETERS, "window": 252, "weight": "inverse original candidate rows per signal date",
+            "threshold": "unrounded positive score strictly >0.5", "folds": common.history.FOLDS,
+            "maximum_predictive_fits": 3, "BASE_refits": 0, "budget_seconds": 1800,
+            "curvature_sign_and_peak": "learned freely; no imposed negative coefficient or optimal turnover range",
+            "screen": {"each_fold_Accuracy_delta_min": .03, "guards": list(common.GATE["guards"]),
+                       "September_actual_nonword_Recall": "must not fall", "nonword_first_and_positive_coverage": "original guards",
+                       "interval": "original five-session block, 2000 draws, seed20261007, tails0.00625/0.99375; lower bound>0"},
+            "history_status": "Previously inspected retrospective research, not blind or new forward samples",
+            "stop": "No retries after fit/failure/budget; finish all three fixed folds if possible; never retune after effects"}
+
+
+def token(value):
+    return None if value is None or pd.isna(value) else value
+
+
+def paired_signature(rows):
+    result = {(r["signal_date"], r["code"]): (token(r["target_date"]), token(r["truth"])) for r in rows}
+    if len(result) != len(rows):
+        raise ValueError("duplicate original signal/code pair")
+    return result
+
+
+def ensure_unattempted(root):
+    if (Path(root) / "attempt_STARTED.json").exists():
+        raise ValueError("fixed curvature comparison already attempted; no refit or retuning")
+
+
+def prepare(root, started):
+    root = Path(root).resolve()
+    if (root / "protocol_BEFORE_ANY_FIT.json").exists():
+        raise ValueError("protocol already frozen")
+    elapsed = (datetime.now(timezone.utc)-datetime.fromisoformat(started)).total_seconds()
+    if not 0 <= elapsed < 1800:
+        raise ValueError("actual timezone-aware batch start within fixed budget required")
+    receipt_path = ROOT / "research/model_upgrade_validation/relay_context_20261011T151204Z/source_reconstruction_BEFORE_FITS.json"
+    receipt = common.read(receipt_path)
+    common.verify(receipt["sources"] | {receipt["prepared_path"]: receipt["prepared_sha256"]})
+    for package, version in receipt["runtime_versions"].items():
+        if importlib.metadata.version(package) != version:
+            raise ValueError("original dependency drift")
+    full = joblib.load(receipt["prepared_path"])["relay"]
+    base_path = ROOT / "research/model_upgrade_validation/fixed_20261007T112017Z/relay_history/predictions.csv"
+    base = pd.read_csv(base_path, dtype={"code": str}, low_memory=False)
+    if len(full) != 9245 or full.duplicated(["date", "code"]).any():
+        raise ValueError("original full cohort changed")
+    checks = []
+    for fold in common.history.FOLDS:
+        train = common.history.training_rows(full, fold["start"], "relay")
+        wanted = next(c for c in receipt["training_checks"] if c["fold"] == fold["id"])
+        if (common.history._frame_digest(train, common.RELAY_FIELDS) != wanted["training_digest"]
+                or len(train) != wanted["train_n"] or train.date.nunique() != 252
+                or train.target_date.max() != wanted["training_max_label_date"]):
+            raise ValueError("original training membership/values/maturity changed")
+        test = full[full.date.between(fold["start"], fold["end"])]
+        b = base[base.arm.eq("BASE") & base.fold.eq(fold["id"])]
+        original = {(r.date, r.code): (token(r.target_date), token(r.target)) for r in test.itertuples()}
+        reference = {(r.date, r.code): (token(r.target_date), token(r.target)) for r in b.itertuples()}
+        if original != reference or len(b) != len(test):
+            raise ValueError("full test pool/known and unknown labels differ")
+        for field in CURVE_FIELDS:
+            observed = pd.to_numeric(train[field], errors="coerce").dropna()
+            if observed.empty or not np.isfinite(observed).all() or (observed < 0).any():
+                raise ValueError("invalid original signal turnover/amplitude")
+        checks.append({**wanted, "test_n": len(test), "test_unknown": int(test.target.isna().sum()),
+                       "weights_sum": float((1 / train.groupby("date").date.transform("size")).sum())})
+    sources = receipt["sources"] | {str(receipt_path): common.sha(receipt_path),
+        receipt["prepared_path"]: receipt["prepared_sha256"], str(base_path): common.sha(base_path),
+        str(Path(__file__).resolve()): common.sha(__file__),
+        str(ROOT / "tests/test_relay_curvature_research.py"): common.sha(ROOT / "tests/test_relay_curvature_research.py")}
+    for file in ["relay_context_research.py", "relay_expert_research.py", "cycle_regime_diagnostics.py", "relay_class_balance_research.py", "model_upgrade_history.py"]:
+        p = ROOT / file
+        sources[str(p)] = common.sha(p)
+    for relative in ["research/model_upgrade_validation/fixed_20261007T112017Z/models/relay/BASE/model.joblib",
+                     "results/score_update_20261014T1153Z/supplemental_BASE_scores.json",
+                     "data/independent_stock_judgement/registry.jsonl"]:
+        p = ROOT / relative
+        sources[str(p)] = common.sha(p)
+    protocol = {"definition": definition(), "formed_at": common.now(), "batch_started_at": started,
+                "authorization": "2026-10-14 user: extract valuable suggestions and test effects or objectively audit project",
+                "rationale": "Unresolved nonword misses and fixed linear turnover/amplitude contributions; test specifically interpretable signal-day curvature, different from cumulative-turnover/V166 or earlier broad nonlinear models",
+                "prepared_path": receipt["prepared_path"], "baseline_path": str(base_path),
+                "sessions": receipt["sessions"], "runtime_versions": receipt["runtime_versions"],
+                "training_checks": checks, "sources": sources,
+                "excluded": ["ideal last-day ratio1.2 with incorrect reference semantics", "unqualified old seal placeholders", "historical topic/role truth unavailable", "retries of failed cumulative/nonlinear/proxy/phase challenges"]}
+    common.write_new(root / "protocol_BEFORE_ANY_FIT.json", protocol)
+    return {"status": "FROZEN_BEFORE_ANY_FIT", "training_checks": checks}
+
+
+def compare(root):
+    root = Path(root).resolve()
+    ensure_unattempted(root)
+    path = root / "protocol_BEFORE_ANY_FIT.json"
+    p = common.read(path)
+    if p["definition"] != definition():
+        raise ValueError("frozen curvature definition changed")
+    common.verify(p["sources"])
+    for package, version in p["runtime_versions"].items():
+        if importlib.metadata.version(package) != version:
+            raise ValueError("dependency drift")
+    full = joblib.load(p["prepared_path"])["relay"]
+    saved = pd.read_csv(p["baseline_path"], dtype={"code": str}, low_memory=False)
+    common.write_new(root / "attempt_STARTED.json", {"formed_at": common.now(), "protocol_sha256": common.sha(path)})
+    output, comparisons, logs = [], {}, []
+    for fold in p["definition"]["folds"]:
+        if (datetime.now(timezone.utc)-datetime.fromisoformat(p["batch_started_at"])).total_seconds() >= 1800:
+            common.write_new(root / "BUDGET_STOP.json", {"formed_at": common.now(), "fit_count": len(logs), "no_retry": True})
+            raise ValueError("30-minute fixed budget exhausted")
+        train = common.history.training_rows(full, fold["start"], "relay")
+        test = full[full.date.between(fold["start"], fold["end"])].copy()
+        base = saved[saved.arm.eq("BASE") & saved.fold.eq(fold["id"])].copy()
+        receipt = next(c for c in p["training_checks"] if c["fold"] == fold["id"])
+        if common.history._frame_digest(train, common.RELAY_FIELDS) != receipt["training_digest"]:
+            raise ValueError("training member/data drift")
+        common.write_new(root / (fold["id"] + "_fit_STARTED.json"), {"formed_at": common.now(), "fit_attempts": 1,
+                         "training_digest": receipt["training_digest"], "train_n": len(train), "BASE_refits": 0})
+        model = estimator()
+        began = time.monotonic()
+        try:
+            with warnings.catch_warnings(), threadpool_limits(limits=2):
+                warnings.simplefilter("error", ConvergenceWarning)
+                model.fit(train[common.RELAY_FIELDS], train.target.astype(int),
+                          logisticregression__sample_weight=1 / train.groupby("date").date.transform("size"))
+                predicted = common.history._predict(model, test, common.RELAY_FIELDS, "relay")
+            # Save immediately, before label comparisons, serialization or metrics.
+            cols = list(dict.fromkeys(["date", "target_date", "code", "name", "boards", "label_valid", "target", "status", "predicted", "raw_score"] + common.RELAY_FIELDS))
+            with (root / (fold["id"] + "_predictions_BEFORE_VALIDATION.csv")).open("x", encoding="utf-8-sig", newline="") as f:
+                predicted[cols].to_csv(f, index=False)
+            artifact = root / (fold["id"] + "_research_only.joblib")
+            joblib.dump(model, artifact)
+            loaded = common.history._predict(joblib.load(artifact), test, common.RELAY_FIELDS, "relay")
+            reproduction = common.history.compare_reproduction(loaded, predicted, "relay")
+            br = common.project(base, "BASE", p["sessions"])
+            cr = common.project(predicted, ARM, p["sessions"])
+            if paired_signature(br) != paired_signature(cr):
+                raise ValueError("paired original full pool/truth changed")
+            bm, cm = common.score(br, p["sessions"], fold), common.score(cr, p["sessions"], fold)
+            groups = {"BASE": subgroup(br, test), ARM: subgroup(cr, test)}
+            guards = common.guards(bm, cm)
+            if fold["id"] == "2026Sep":
+                guards["September_actual_nonword_Recall"] = groups[ARM]["true_nonword"]["complete_positive_Recall"] >= groups["BASE"]["true_nonword"]["complete_positive_Recall"]
+            delta = cm["Accuracy"] - bm["Accuracy"]
+            comparisons[fold["id"]] = {"BASE": bm, ARM: cm, "Accuracy_delta": delta,
+                "guards": guards, "point_screen_passed": delta >= .03 and all(guards.values()), "subgroups": groups,
+                "square_coefficients": dict(zip(CURVE_FIELDS, model[-1].coef_[0][-2:].tolist())),
+                "preprocessed_original_dimensions": model["curvature"].n_features_in_,
+                "new_total_dimensions": len(model[-1].coef_[0])}
+            logs.append({"fold": fold["id"], "fit_count": 1, "elapsed_seconds": time.monotonic()-began,
+                         "model_sha256": common.sha(artifact), "save_load": reproduction})
+            output.extend([{**r, "fold": fold["id"]} for r in br + cr])
+            pd.DataFrame(output).to_csv(root / "full_candidate_comparison.csv", index=False, encoding="utf-8-sig")
+            common.write_new(root / (fold["id"] + "_checkpoint.json"), comparisons[fold["id"]])
+            print(fold["id"], "BASE", bm["Accuracy"], "CURVE", cm["Accuracy"], "delta", delta, flush=True)
+        except Exception as exc:
+            common.write_new(root / "FIT_OR_VALIDATION_FAILURE_STOP.json", {"formed_at": common.now(), "fold": fold["id"],
+                "error": type(exc).__name__ + ": " + str(exc), "fit_receipts": len(logs)+1, "no_retry": True})
+            raise
+    common.verify(p["sources"])
+    passed = all(v["point_screen_passed"] for v in comparisons.values())
+    result = {"formed_at": common.now(), "status": "POINT_SCREEN_PASSED_INTERVAL_AND_FORWARD_REQUIRED" if passed else "REJECTED_SIGNAL_CURVATURE",
+        "comparisons": comparisons, "fit_logs": logs, "fit_count": len(logs), "BASE_refits": 0,
+        "new_mature_forward_samples": 0, "historical_blind": False, "deployment_authorized": False,
+        "production_changed": False, "full_pool_rows": 3707, "comparison_rows": len(output),
+        "protocol_sha256": common.sha(path), "predictions_sha256": common.sha(root / "full_candidate_comparison.csv")}
+    common.write_new(root / "report.json", result)
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("command", choices=["prepare", "compare"])
+    parser.add_argument("--root", required=True)
+    parser.add_argument("--started")
+    args = parser.parse_args()
+    # Serialize class under its stable importable module, not __main__.
+    import relay_curvature_research as registered
+    if args.command == "prepare":
+        if not args.started:
+            parser.error("prepare requires the actual --started timestamp")
+        result = registered.prepare(args.root, args.started)
+    else:
+        result = registered.compare(args.root)
+    print(result["status"])
+
+
+if __name__ == "__main__":
+    main()
