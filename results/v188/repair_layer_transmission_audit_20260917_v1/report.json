@@ -1,0 +1,307 @@
+{
+  "version": "v188-repair-layer-transmission-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "data_contract": {
+    "same_day_layers_available_at_repair_close": true,
+    "thresholds_frozen_from_development_only": true,
+    "next_session_fields_used_only_as_labels": true,
+    "missing_layer_fields_filled_as_zero": false,
+    "actual_stock_entries": 0,
+    "complete_stock_trades": 0
+  },
+  "layer_definition": {
+    "first_board_layer": "promotion_1to2 >= development median",
+    "middle_board_layer": "promotion_mid >= development median",
+    "height_layer": "space_feedback > 0",
+    "synchronized": "all three layers confirmed"
+  },
+  "frozen_development_thresholds": {
+    "promotion_1to2_median": 0.1923076923076923,
+    "promotion_mid_median": 0.4444444444444444,
+    "space_feedback_strictly_above": 0.0
+  },
+  "scope": {
+    "repair_sessions": 131,
+    "first_date": "2023-12-26",
+    "last_date": "2026-09-11"
+  },
+  "split": {
+    "method": "chronological_70_30_by_repair_session",
+    "split_date": "2025-09-09",
+    "development_sessions": 91,
+    "validation_sessions": 40,
+    "validation_previously_inspected": true
+  },
+  "summaries": {
+    "development": {
+      "ALL_REPAIR": {
+        "sessions": 91,
+        "next_relapse_rate": 0.46153846153846156,
+        "next_advance_rate": 0.4065934065934066,
+        "next_previous_limit_median_return": 0.01578026178598028,
+        "next_failed_rate": 0.3616457029141575,
+        "next_down_limit_count": 7.527472527472527,
+        "mean_layer_score": 1.5824175824175823
+      },
+      "SYNCHRONIZED_3": {
+        "sessions": 24,
+        "next_relapse_rate": 0.2916666666666667,
+        "next_advance_rate": 0.5416666666666666,
+        "next_previous_limit_median_return": 0.026877456768345825,
+        "next_failed_rate": 0.37634127465751516,
+        "next_down_limit_count": 5.208333333333333,
+        "mean_layer_score": 3.0
+      },
+      "PARTIAL_0_TO_2": {
+        "sessions": 67,
+        "next_relapse_rate": 0.5223880597014925,
+        "next_advance_rate": 0.3582089552238806,
+        "next_previous_limit_median_return": 0.011805147165431427,
+        "next_failed_rate": 0.35638161751355174,
+        "next_down_limit_count": 8.35820895522388,
+        "mean_layer_score": 1.0746268656716418
+      },
+      "MIDDLE_CONFIRMED": {
+        "sessions": 46,
+        "next_relapse_rate": 0.34782608695652173,
+        "next_advance_rate": 0.5434782608695652,
+        "next_previous_limit_median_return": 0.022185752772642123,
+        "next_failed_rate": 0.36586950104028365,
+        "next_down_limit_count": 5.173913043478261,
+        "mean_layer_score": 2.3260869565217392
+      },
+      "MIDDLE_UNCONFIRMED": {
+        "sessions": 45,
+        "next_relapse_rate": 0.5777777777777777,
+        "next_advance_rate": 0.26666666666666666,
+        "next_previous_limit_median_return": 0.009232426555170396,
+        "next_failed_rate": 0.3573280426074507,
+        "next_down_limit_count": 9.933333333333334,
+        "mean_layer_score": 0.8222222222222222
+      }
+    },
+    "validation": {
+      "ALL_REPAIR": {
+        "sessions": 40,
+        "next_relapse_rate": 0.4,
+        "next_advance_rate": 0.475,
+        "next_previous_limit_median_return": 0.005127168358375471,
+        "next_failed_rate": 0.29684888906477724,
+        "next_down_limit_count": 15.45,
+        "mean_layer_score": 1.0
+      },
+      "SYNCHRONIZED_3": {
+        "sessions": 3,
+        "next_relapse_rate": 0.3333333333333333,
+        "next_advance_rate": 0.3333333333333333,
+        "next_previous_limit_median_return": 0.016882280366710467,
+        "next_failed_rate": 0.30650243003184174,
+        "next_down_limit_count": 4.0,
+        "mean_layer_score": 3.0
+      },
+      "PARTIAL_0_TO_2": {
+        "sessions": 37,
+        "next_relapse_rate": 0.40540540540540543,
+        "next_advance_rate": 0.4864864864864865,
+        "next_previous_limit_median_return": 0.004174051168510471,
+        "next_failed_rate": 0.2960661695269071,
+        "next_down_limit_count": 16.37837837837838,
+        "mean_layer_score": 0.8378378378378378
+      },
+      "MIDDLE_CONFIRMED": {
+        "sessions": 12,
+        "next_relapse_rate": 0.4166666666666667,
+        "next_advance_rate": 0.5,
+        "next_previous_limit_median_return": 0.00878673128963279,
+        "next_failed_rate": 0.31792781928695096,
+        "next_down_limit_count": 10.75,
+        "mean_layer_score": 2.0
+      },
+      "MIDDLE_UNCONFIRMED": {
+        "sessions": 28,
+        "next_relapse_rate": 0.39285714285714285,
+        "next_advance_rate": 0.4642857142857143,
+        "next_previous_limit_median_return": 0.003558784244979476,
+        "next_failed_rate": 0.28781506182670274,
+        "next_down_limit_count": 17.464285714285715,
+        "mean_layer_score": 0.5714285714285714
+      }
+    }
+  },
+  "session_clustered_comparisons": {
+    "development": {
+      "synchronized_minus_partial": {
+        "comparison": "SYNCHRONIZED_3_MINUS_PARTIAL_0_TO_2",
+        "session_clustered": true,
+        "adequate_for_interval": true,
+        "minimum_group_sessions": 24,
+        "metrics": {
+          "next_relapse_rate": {
+            "estimate": -0.2307213930348258,
+            "ci95": [
+              -0.44527363184079605,
+              0.010572139303482553
+            ]
+          },
+          "next_advance_rate": {
+            "estimate": 0.18345771144278605,
+            "ci95": [
+              -0.06662002487562185,
+              0.4247512437810946
+            ]
+          },
+          "next_median": {
+            "estimate": 0.015072309602914398,
+            "ci95": [
+              0.001961725160714752,
+              0.0293644013531544
+            ]
+          },
+          "next_failed_rate": {
+            "estimate": 0.019959657143963416,
+            "ci95": [
+              -0.027306820525699757,
+              0.07509506295668357
+            ]
+          },
+          "next_down_limit_count": {
+            "estimate": -3.149875621890547,
+            "ci95": [
+              -6.765889303482587,
+              0.5481965174129341
+            ]
+          }
+        }
+      },
+      "middle_confirmed_minus_unconfirmed": {
+        "comparison": "MIDDLE_CONFIRMED_MINUS_UNCONFIRMED",
+        "session_clustered": true,
+        "adequate_for_interval": true,
+        "minimum_group_sessions": 45,
+        "metrics": {
+          "next_relapse_rate": {
+            "estimate": -0.229951690821256,
+            "ci95": [
+              -0.4275483091787439,
+              -0.03188405797101451
+            ]
+          },
+          "next_advance_rate": {
+            "estimate": 0.2768115942028985,
+            "ci95": [
+              0.07922705314009659,
+              0.4734420289855072
+            ]
+          },
+          "next_median": {
+            "estimate": 0.012953326217471728,
+            "ci95": [
+              0.002272285323041061,
+              0.024200229975858162
+            ]
+          },
+          "next_failed_rate": {
+            "estimate": 0.008541458432832938,
+            "ci95": [
+              -0.030096242121215776,
+              0.04908166459105851
+            ]
+          },
+          "next_down_limit_count": {
+            "estimate": -4.759420289855073,
+            "ci95": [
+              -8.672475845410629,
+              -1.2579710144927532
+            ]
+          }
+        }
+      }
+    },
+    "validation": {
+      "synchronized_minus_partial": {
+        "comparison": "SYNCHRONIZED_3_MINUS_PARTIAL_0_TO_2",
+        "session_clustered": true,
+        "adequate_for_interval": false,
+        "minimum_group_sessions": 3,
+        "metrics": {}
+      },
+      "middle_confirmed_minus_unconfirmed": {
+        "comparison": "MIDDLE_CONFIRMED_MINUS_UNCONFIRMED",
+        "session_clustered": true,
+        "adequate_for_interval": true,
+        "minimum_group_sessions": 12,
+        "metrics": {
+          "next_relapse_rate": {
+            "estimate": 0.023809523809523836,
+            "ci95": [
+              -0.2979166666666667,
+              0.39285714285714285
+            ]
+          },
+          "next_advance_rate": {
+            "estimate": 0.0357142857142857,
+            "ci95": [
+              -0.33333333333333337,
+              0.36904761904761907
+            ]
+          },
+          "next_median": {
+            "estimate": 0.005227947044653314,
+            "ci95": [
+              -0.010394648175070938,
+              0.0206478077901274
+            ]
+          },
+          "next_failed_rate": {
+            "estimate": 0.03011275746024822,
+            "ci95": [
+              -0.04020604890979897,
+              0.10256215306805395
+            ]
+          },
+          "next_down_limit_count": {
+            "estimate": -6.714285714285715,
+            "ci95": [
+              -20.214583333333334,
+              5.977380952380944
+            ]
+          }
+        }
+      }
+    }
+  },
+  "synchronized_repair_lower_relapse_stable_across_time": false,
+  "middle_confirmation_lower_relapse_stable_across_time": false,
+  "latest_repair_layer_context": {
+    "signal_date": "2026-09-16",
+    "first_board_layer_confirmed": true,
+    "middle_board_layer_confirmed": false,
+    "height_layer_confirmed": true,
+    "repair_layer_score": 2,
+    "repair_layer_class": "PARTIAL_0_TO_2",
+    "status": "HISTORICAL_SCENARIO_CONTEXT_ONLY"
+  },
+  "governance": {
+    "historical_repair_layer_scenario_context_allowed": true,
+    "calibrated_layer_followthrough_probability_allowed": false,
+    "repair_layer_score_direct_emotion_gate_allowed": false,
+    "middle_board_confirmation_positive_ranking_factor_allowed": false,
+    "repair_layer_direct_stock_reranking_allowed": false,
+    "repair_layer_position_size_increase_allowed": false,
+    "repair_layer_entry_authorized": false,
+    "requires_next_session_auction_middle_board_loss_and_theme_confirmation": true
+  },
+  "interpretation": "Synchronized low, middle and height repair is directionally associated with less next-session relapse, but the recent synchronized validation group is too small. Middle-board confirmation also fails stable time-separated separation. Layer structure may describe a scenario only and cannot rank stocks or authorize entry.",
+  "limitations": [
+    "repair states and layer fields are close-derived",
+    "development medians are descriptive thresholds, not optimized trading cutoffs",
+    "the recent synchronized validation group is below ten sessions",
+    "specific-theme propagation and intraday order are unavailable historically",
+    "validation dates were inspected and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803",
+    "D:\\Documents\\ChatGPT\\龙头战法\\repair_layer_transmission_audit_v188.py": "8ed434444348bcd12525a022727b1ff77d9f8e60ee8a037495f7ec75604eb02c"
+  },
+  "observations_sha256": "d03cfd672c5088976ef70d045fdec73efa3aa30e50b613e0b30879355363c67a"
+}

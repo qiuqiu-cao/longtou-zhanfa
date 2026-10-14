@@ -1,0 +1,32 @@
+{
+  "formed_at": "2026-10-12T02:37:32.961128+00:00",
+  "started_at": "2026-10-12T02:22:10+00:00",
+  "budget_minutes": 30,
+  "hypothesis": "完整逐股催化五栏与字段语义分栏，拒绝以未核催化/模型负向作为主观负向理由，可减少识别遗漏；预测改善须后续同池检验。",
+  "fixed_baseline": "现有stock_judgement_review.py及原BASE原输出",
+  "single_challenger": "来源绑定的催化上下文＋独立判断理由校验；无新分数、权重、阈值",
+  "inputs": "仅现有10月9日11只来源绑定特征与已有CLS、公司公告、原帖、WHO原通报；不扩采、不恢复真实题材时点专项",
+  "application_scope": "当前盘中仅独立诊断附页；未来新信号收盘后至目标竞价前prepare/freeze/compare，与原独立账本一致；旧记录走旧入口",
+  "metrics": [
+    "全候选保留及催化覆盖",
+    "五栏正确分离与原文复现",
+    "同日期同候选Accuracy、完整Recall、Precision、F1、覆盖、板位和真实一字分层（到期）"
+  ],
+  "expected_improvement": "华北已核催化自动进入逐股事实卡；股吧不认证业务/疫情；未核不按无催化；换手参考日未知不叙述连续两日变化",
+  "training_gate": "当前新字段无同口径历史全候选及实际时点训练成员，T1既有合格0，数值拟合不启动",
+  "numeric_fits": 0,
+  "rejected_challenges_not_retried": [
+    "M1",
+    "R1",
+    "R2",
+    "R3",
+    "E1",
+    "E2",
+    "H1",
+    "H2"
+  ],
+  "end_condition": "完成可调用入口、完整11只功能回放、相关拒绝检查与旧件哈希验证即停；30分钟到即保存完整可恢复节点，不计预测改善。",
+  "original_program_sha256": "ca5092c8daf6221f40cdfa6e6166dbf0910755a0bcae3ed3739f10f731eb3249",
+  "original_prediction_sha256": "7ec19645098525b3f75d3a8e1f2592e5feda5e7cf6560128ab5a7900dba9d23c",
+  "original_independent_record_sha256": "e6a42c15ed0035892aee66c11ae11629f3c11769fdb08ec7e0461f7e979e6cc1"
+}

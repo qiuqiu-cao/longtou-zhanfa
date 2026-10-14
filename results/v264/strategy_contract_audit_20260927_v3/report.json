@@ -1,0 +1,70 @@
+{
+  "version": "v264-strategy-contract-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "live_ready": false,
+  "decision": "CASH",
+  "requirements": [
+    {
+      "requirement": "A/B/C Top1/Top3/Top5 identity metrics",
+      "status": "PASS",
+      "evidence": "aggregate.*.models.model.top1/top3/top5"
+    },
+    {
+      "requirement": "future max board and future gain",
+      "status": "PASS",
+      "evidence": "aggregate.*.models.model.top1_future_max_board_mean/top1_future_gain_mean"
+    },
+    {
+      "requirement": "1/3/5 day return and risk proxy",
+      "status": "PASS",
+      "evidence": "aggregate.B_second_board.models.model.top1_forward_bar_proxy"
+    },
+    {
+      "requirement": "environment-stratified results",
+      "status": "PASS",
+      "evidence": "aggregate.*.models.model.top1_by_environment"
+    },
+    {
+      "requirement": "failure taxonomy",
+      "status": "PASS",
+      "evidence": "aggregate.*.failure_category_counts_top1"
+    },
+    {
+      "requirement": "verified topic-leader label",
+      "status": "UNAVAILABLE",
+      "evidence": "UNAVAILABLE_IN_FEATURE_SCHEMA"
+    },
+    {
+      "requirement": "auction/Level-2/intraday execution",
+      "status": "UNAVAILABLE",
+      "evidence": "No timestamped auction, queue, VWAP or tick fields in V263 features"
+    },
+    {
+      "requirement": "actual fills and executable win rate",
+      "status": "UNAVAILABLE",
+      "evidence": "actual_fill_count=0"
+    },
+    {
+      "requirement": "pristine blind test",
+      "status": "NOT_MET",
+      "evidence": "is_pristine_blind_test=False"
+    },
+    {
+      "requirement": "survivorship-free universe",
+      "status": "NOT_MET",
+      "evidence": "survivorship_risk=True"
+    }
+  ],
+  "source_report_status": "DIAGNOSTIC_ONLY",
+  "source_version": "v263-early-leader-topk-forward-proxy-1",
+  "governance": {
+    "strategy_upgrade_allowed": false,
+    "strategy_upgrade_reason": "identity diagnostics improved coverage, but theme/execution/blind/universe gates are not passed",
+    "topic_leader_unavailable_blocks_topic_claim": true,
+    "execution_evidence_unavailable_blocks_entry_authorization": true,
+    "diagnostic_identity_may_not_be_presented_as_trade_win_rate": true
+  },
+  "source_hash": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v263\\early_leader_topk_walkforward_20260927_v5\\report.json": "e592debfaabfd03a71a28640cca6433cbe56512c3d6f0d42d1c5c8ee79d96a37"
+  }
+}

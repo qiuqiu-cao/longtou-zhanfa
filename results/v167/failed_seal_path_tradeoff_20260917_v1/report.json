@@ -1,0 +1,91 @@
+{
+  "version": "v167-failed-seal-path-tradeoff-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "first-board candidates on frozen prequential evaluation dates",
+  "definitions": {
+    "LOCKED_NO_REOPEN": "failed_seal_count = 0",
+    "QUICK_REPAIR": "failed_seal_count > 0 and last seal minus first seal <= 30 minutes",
+    "PROLONGED_CONTEST": "failed_seal_count > 0 and last seal minus first seal > 30 minutes"
+  },
+  "evaluation_sessions": 13,
+  "candidate_rows": 577,
+  "evaluable_rows": 577,
+  "unavailable_rows": 0,
+  "groups": {
+    "LOCKED_NO_REOPEN": {
+      "candidate_n": 256,
+      "session_n": 13,
+      "promotion_rate": 0.16796875,
+      "filled_n": 94,
+      "b2_known_n": 33,
+      "b2_mean_net_return": 0.0012001925314114174,
+      "b2_positive_rate": 0.48484848484848486,
+      "b1_big_loss_known_n": 64,
+      "b1_big_loss_rate": 0.015625
+    },
+    "QUICK_REPAIR": {
+      "candidate_n": 162,
+      "session_n": 13,
+      "promotion_rate": 0.19135802469135801,
+      "filled_n": 58,
+      "b2_known_n": 26,
+      "b2_mean_net_return": -0.003711716038358237,
+      "b2_positive_rate": 0.46153846153846156,
+      "b1_big_loss_known_n": 41,
+      "b1_big_loss_rate": 0.024390243902439025
+    },
+    "PROLONGED_CONTEST": {
+      "candidate_n": 159,
+      "session_n": 13,
+      "promotion_rate": 0.12578616352201258,
+      "filled_n": 42,
+      "b2_known_n": 22,
+      "b2_mean_net_return": -0.025743248334065237,
+      "b2_positive_rate": 0.2727272727272727,
+      "b1_big_loss_known_n": 31,
+      "b1_big_loss_rate": 0.0967741935483871
+    }
+  },
+  "quick_repair_minus_prolonged_contest": {
+    "promotion_rate": 0.06557186116934544,
+    "b2_mean_net_return": 0.022031532295707,
+    "b2_positive_rate": 0.18881118881118886,
+    "b1_big_loss_rate": -0.07238394964594808
+  },
+  "date_cluster_bootstrap95": {
+    "promotion_rate": [
+      -0.005411051042974176,
+      0.12867842628355666
+    ],
+    "b2_mean_net_return": [
+      -0.04263602157208178,
+      0.06751470278479112
+    ],
+    "b2_positive_rate": [
+      -0.19191919191919193,
+      0.4564102564102564
+    ],
+    "b1_big_loss_rate": [
+      -0.1111111111111111,
+      0.0
+    ]
+  },
+  "governance": {
+    "failed_seal_path_positive_ranking_factor_allowed": false,
+    "raw_failed_seal_count_monotonic_rule_allowed": false,
+    "stock_entry_authorized": false
+  },
+  "interpretation": "Raw reopening count is not a sufficient strength score.  The duration of the contest, later promotion, executable holding return and tail loss must agree.",
+  "limitations": [
+    "only later frozen first-board dates are evaluated",
+    "last-minus-first seal time does not reveal every intraday reopen duration",
+    "daily open fill is a proxy rather than queue-level execution",
+    "specific-theme and auction absorption are absent from this isolated test"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\first_board_observations.csv": "41a64531e7c4c8ff82830f7a5026ae99e93ce55886e5b7e97586e547222a0d46",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v1\\first_board_trade_outcomes_LABEL_ONLY.csv": "0388d5b9ec8d7f6a610be9100661132b4b623ff5780460bfa4643a968a83d81f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\prequential_predictions.csv": "632e4d032dc81d89b9e76bc9991653201d88142cce3dc4a2bb8b952e3b10331b"
+  },
+  "rows_sha256": "b0925910daced4f8e4d56aef8cdcc114970fc06ff5627fe77e440007a3671a36"
+}

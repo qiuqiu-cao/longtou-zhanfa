@@ -1,0 +1,33 @@
+{
+  "freeze_id": "299f67c3a483c0e8",
+  "created_at": "2026-09-17T00:07:16.869555+08:00",
+  "data_end": "2026-09-16",
+  "policy": {
+    "version": "first-board-shadow-policy-v128-1",
+    "status": "DIAGNOSTIC_ONLY",
+    "action_authorized": false,
+    "candidate_scope": "Shanghai/Shenzhen main-board, non-ST, closing first boards",
+    "daily_selection": "highest base-quality score after excluding thin_control_risk=1",
+    "thin_control_rule": "WATCH_CONTROL_OR_LIQUIDITY_RISK; never substitute after selection",
+    "execution_baseline": "next-session open only when below upper limit; otherwise unfilled",
+    "evaluation": "B+1/B+2/B+3 net return after frozen costs; no retroactive replacement",
+    "minimum_forward_fills": 60,
+    "minimum_complete_trades_for_70pct_challenge": 100,
+    "entry_signal": "none; shadow research only"
+  },
+  "artifact_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\report.json": "36c872613d408b07c82215e2979151b24ea4797cb3b88527f07cb92437952243",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v1\\report.json": "44aac1e65cd541d57c408ed5607494d084c173d685e0c2378e02e896e0c62fd9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v126\\first_board_profit_link_20260916_v1\\report.json": "3680b4d02e93d4382867a60b785fc1d1135a8e5659cdc3154c3da7516f9be53c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v127\\first_board_factor_profit_20260916_v1\\report.json": "1460a04b3838f1460b6accacd0fabcfa1fd74d238e9953d19a4eb4c9c9e584bc"
+  },
+  "code_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_promotion_v124.py": "94a801cbdf12ec7e17a7edb11c93a4df45646f7ea2a87e0e37cc159a53b167fd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_trade_outcomes_v125.py": "631a16d7cf996faa098e3cfaa661c04c0a87f57885747e279f02b93f0a7feb99",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_profit_link_audit_v126.py": "6619560b7c2ee4861e16c9fbe97203e8b0b5f3c2056a05432e65f4885c092495",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_factor_profit_audit_v127.py": "d24cb071f3a4c4b5136453a667ef801ba4b833f5de8bb0fb87d96229aacebfd0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_forward_registry_v128.py": "ade885218d98639fd3416b788986f2ed1ac83ab4d8548d830e37f865790b4ce2"
+  },
+  "assurance": "LOCAL_TAMPER_EVIDENT_ONLY",
+  "warning": "hashes are not an external trusted timestamp"
+}

@@ -1,0 +1,230 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "deployment_allowed": false,
+  "paper_trade_ready": false,
+  "challenge_target_is_guarantee": false,
+  "data_gates": [
+    {
+      "name": "historical_trading_days",
+      "passed": true,
+      "observed": 504,
+      "requirement": ">=250"
+    },
+    {
+      "name": "complete_point_in_time_universe",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "point_in_time_security_status",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "board_1_observations",
+      "passed": true,
+      "observed": 28265,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_2_observations",
+      "passed": true,
+      "observed": 5152,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_3_observations",
+      "passed": true,
+      "observed": 1742,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_4_observations",
+      "passed": true,
+      "observed": 818,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_5_observations",
+      "passed": true,
+      "observed": 381,
+      "requirement": ">=100"
+    }
+  ],
+  "blind_complete_trade_gates": [
+    {
+      "name": "independent_blind_window",
+      "passed": false,
+      "observed": false,
+      "requirement": "true and never reused for tuning"
+    },
+    {
+      "name": "verified_execution_basis",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "blind_completed_trades",
+      "passed": false,
+      "observed": 0,
+      "requirement": ">=100"
+    },
+    {
+      "name": "complete_trade_win_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": ">=70%"
+    },
+    {
+      "name": "large_loss_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": "<=10%"
+    },
+    {
+      "name": "positive_mean_net_return",
+      "passed": false,
+      "observed": null,
+      "requirement": ">0 after all costs"
+    },
+    {
+      "name": "profit_factor",
+      "passed": false,
+      "observed": null,
+      "requirement": ">1"
+    },
+    {
+      "name": "account_drawdown_budget",
+      "passed": false,
+      "observed": null,
+      "requirement": "known and within pre-frozen maximum drawdown"
+    },
+    {
+      "name": "better_than_simple_baseline",
+      "passed": false,
+      "observed": false,
+      "requirement": "true under identical scope/execution/costs"
+    },
+    {
+      "name": "first_and_relay_reported_separately",
+      "passed": false,
+      "observed": [],
+      "requirement": "both groups reported without selective deletion"
+    }
+  ],
+  "frozen_forward_gates": [
+    {
+      "name": "model_and_rules_frozen",
+      "passed": true,
+      "observed": true,
+      "requirement": "true"
+    },
+    {
+      "name": "no_forward_retuning",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "forward_completed_trades",
+      "passed": false,
+      "observed": 0,
+      "requirement": ">=60"
+    },
+    {
+      "name": "forward_complete_trade_win_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": ">=70%"
+    },
+    {
+      "name": "forward_large_loss_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": "<=10%"
+    },
+    {
+      "name": "forward_positive_mean_net_return",
+      "passed": false,
+      "observed": null,
+      "requirement": ">0 after all costs"
+    },
+    {
+      "name": "forward_account_drawdown_budget",
+      "passed": false,
+      "observed": null,
+      "requirement": "known and within pre-frozen maximum drawdown"
+    }
+  ],
+  "failed_gates": [
+    "complete_point_in_time_universe",
+    "point_in_time_security_status",
+    "independent_blind_window",
+    "verified_execution_basis",
+    "blind_completed_trades",
+    "complete_trade_win_rate",
+    "large_loss_rate",
+    "positive_mean_net_return",
+    "profit_factor",
+    "account_drawdown_budget",
+    "better_than_simple_baseline",
+    "first_and_relay_reported_separately",
+    "no_forward_retuning",
+    "forward_completed_trades",
+    "forward_complete_trade_win_rate",
+    "forward_large_loss_rate",
+    "forward_positive_mean_net_return",
+    "forward_account_drawdown_budget"
+  ],
+  "scope": "all supplied Shanghai/Shenzhen main-board non-ST closing limit-ups: first and consecutive boards",
+  "note": "70% is a complete-trade challenge gate, not a forecast or return guarantee",
+  "evidence": {
+    "data": {
+      "trading_days": 504,
+      "universe_complete": false,
+      "point_in_time_status_complete": false,
+      "board_observations": {
+        "1": 28265,
+        "2": 5152,
+        "3": 1742,
+        "4": 818,
+        "5": 381
+      },
+      "candidate_rows": 37325
+    },
+    "blind_complete_trades": {
+      "independent_blind_window": false,
+      "execution_basis_verified": false,
+      "completed_trades": 0,
+      "win_rate": null,
+      "big_loss_rate": null,
+      "mean_net_return": null,
+      "profit_factor": null,
+      "account_max_drawdown": null,
+      "frozen_max_drawdown_limit": null,
+      "outperforms_baseline": false,
+      "group_metrics": {}
+    },
+    "frozen_forward": {
+      "frozen_before_period": true,
+      "no_retuning": false,
+      "completed_trades": 0,
+      "win_rate": null,
+      "big_loss_rate": null,
+      "mean_net_return": null,
+      "account_max_drawdown": null,
+      "frozen_max_drawdown_limit": null
+    }
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\manifest.json": "c9cddad05789adc3b7cf9897a4c0f3438b69a648fd310fc9213b7423a446ac88",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\full_pool_outcomes_20260905\\manifest.json": "c5af9e6dbd79496d8d80466c81f36443cad4ce07f13de410539865820d0c4659",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\emotion_broken_feedback_20260905\\report.json": "faa21248a2f76ad28ea326312fd12f12902f5a396ea86bb768ccef114339940f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v10\\intraday_forward\\intraday_forward_monitor.json": "36b37933ff03019c80c748d8e29933b8386ce5cde03065606262df07d4e72a43",
+    "D:\\Documents\\ChatGPT\\龙头战法\\system_acceptance_audit.py": "0b4abaf1869981fbc93f8095656d84a4b551d3ad499c1a74d10815a600509dfe"
+  }
+}

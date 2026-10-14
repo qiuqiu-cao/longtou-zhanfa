@@ -1,0 +1,429 @@
+{
+  "version": "v186-promotion-payoff-separation-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target_contract": {
+    "no_touch_rows_retained_as_negative": true,
+    "one_price_rows_retained_as_negative": true,
+    "touchable_unknown_b2_excluded_from_b2_denominator": true,
+    "unknown_touch_rows_excluded_not_filled": true,
+    "missing_promotion_labels_filled_as_zero": false,
+    "actual_fills": 0,
+    "complete_trades": 0
+  },
+  "scope": {
+    "rows": 25873,
+    "sessions": 503,
+    "promotion_known_rows": 25873,
+    "b2_target_known_rows": 25826,
+    "b2_b3_target_known_rows": 25806,
+    "unknown_touch_rows_excluded": 111
+  },
+  "split": {
+    "method": "chronological_70_30_by_signal_date",
+    "split_date": "2025-05-16",
+    "development_sessions": 352,
+    "validation_sessions": 151,
+    "validation_previously_inspected": true
+  },
+  "summaries": {
+    "ALL": {
+      "development": {
+        "rows": 18475,
+        "sessions": 352,
+        "promotion_known_rows": 18475,
+        "promotion_rate": 0.2500676589986468,
+        "paired_b2_rows": 18467,
+        "full_denominator_buyable_b2_positive_rate": 0.09183949748199491,
+        "promoted_rows_in_paired_b2": 4614,
+        "promoted_and_buyable_b2_positive_rate": 0.3112267013437365,
+        "promoted_without_buyable_b2_positive_rate": 0.6887732986562636,
+        "promoted_one_price_unbuyable_rate": 0.24208929345470306,
+        "paired_b2_b3_rows": 18466,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.07424455756525507,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.2560156080641665,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.2564322469982847,
+        "touchable_rate": 0.31994587280108255
+      },
+      "validation": {
+        "rows": 7398,
+        "sessions": 151,
+        "promotion_known_rows": 7398,
+        "promotion_rate": 0.2379021357123547,
+        "paired_b2_rows": 7359,
+        "full_denominator_buyable_b2_positive_rate": 0.10232368528332654,
+        "promoted_rows_in_paired_b2": 1732,
+        "promoted_and_buyable_b2_positive_rate": 0.3712471131639723,
+        "promoted_without_buyable_b2_positive_rate": 0.6287528868360277,
+        "promoted_one_price_unbuyable_rate": 0.2113163972286374,
+        "paired_b2_b3_rows": 7340,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.08365122615803815,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.3135543920884235,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.1937590711175617,
+        "touchable_rate": 0.28926736955934035
+      }
+    },
+    "FIRST_BOARD": {
+      "development": {
+        "rows": 14019,
+        "sessions": 352,
+        "promotion_known_rows": 14019,
+        "promotion_rate": 0.19766031813966758,
+        "paired_b2_rows": 14013,
+        "full_denominator_buyable_b2_positive_rate": 0.07792763862128024,
+        "promoted_rows_in_paired_b2": 2766,
+        "promoted_and_buyable_b2_positive_rate": 0.3318872017353579,
+        "promoted_without_buyable_b2_positive_rate": 0.6681127982646421,
+        "promoted_one_price_unbuyable_rate": 0.1876355748373102,
+        "paired_b2_b3_rows": 14012,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.06308878104481873,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.27233273056057866,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.22474410324877614,
+        "touchable_rate": 0.27705257151009344
+      },
+      "validation": {
+        "rows": 5666,
+        "sessions": 151,
+        "promotion_known_rows": 5666,
+        "promotion_rate": 0.19043416872573243,
+        "paired_b2_rows": 5644,
+        "full_denominator_buyable_b2_positive_rate": 0.08114812189936216,
+        "promoted_rows_in_paired_b2": 1063,
+        "promoted_and_buyable_b2_positive_rate": 0.36876763875823143,
+        "promoted_without_buyable_b2_positive_rate": 0.6312323612417686,
+        "promoted_one_price_unbuyable_rate": 0.17591721542803387,
+        "paired_b2_b3_rows": 5630,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.06571936056838366,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.3090047393364929,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.17253121452894438,
+        "touchable_rate": 0.2435580656547829
+      }
+    },
+    "CONSECUTIVE_BOARD": {
+      "development": {
+        "rows": 4456,
+        "sessions": 351,
+        "promotion_known_rows": 4456,
+        "promotion_rate": 0.41494614003590663,
+        "paired_b2_rows": 4454,
+        "full_denominator_buyable_b2_positive_rate": 0.13560844185002247,
+        "promoted_rows_in_paired_b2": 1848,
+        "promoted_and_buyable_b2_positive_rate": 0.2803030303030303,
+        "promoted_without_buyable_b2_positive_rate": 0.7196969696969697,
+        "promoted_one_price_unbuyable_rate": 0.3235930735930736,
+        "paired_b2_b3_rows": 4454,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.10933991917377638,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.23160173160173161,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.3133493205435651,
+        "touchable_rate": 0.45489228007181326
+      },
+      "validation": {
+        "rows": 1732,
+        "sessions": 151,
+        "promotion_known_rows": 1732,
+        "promotion_rate": 0.3931870669745958,
+        "paired_b2_rows": 1715,
+        "full_denominator_buyable_b2_positive_rate": 0.17201166180758018,
+        "promoted_rows_in_paired_b2": 669,
+        "promoted_and_buyable_b2_positive_rate": 0.375186846038864,
+        "promoted_without_buyable_b2_positive_rate": 0.624813153961136,
+        "promoted_one_price_unbuyable_rate": 0.26756352765321373,
+        "paired_b2_b3_rows": 1710,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.14269005847953217,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.3207831325301205,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.23138832997987926,
+        "touchable_rate": 0.4387990762124711
+      }
+    }
+  },
+  "board_level_summaries": {
+    "1": {
+      "development": {
+        "rows": 14019,
+        "sessions": 352,
+        "promotion_known_rows": 14019,
+        "promotion_rate": 0.19766031813966758,
+        "paired_b2_rows": 14013,
+        "full_denominator_buyable_b2_positive_rate": 0.07792763862128024,
+        "promoted_rows_in_paired_b2": 2766,
+        "promoted_and_buyable_b2_positive_rate": 0.3318872017353579,
+        "promoted_without_buyable_b2_positive_rate": 0.6681127982646421,
+        "promoted_one_price_unbuyable_rate": 0.1876355748373102,
+        "paired_b2_b3_rows": 14012,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.06308878104481873,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.27233273056057866,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.22474410324877614,
+        "touchable_rate": 0.27705257151009344
+      },
+      "validation": {
+        "rows": 5666,
+        "sessions": 151,
+        "promotion_known_rows": 5666,
+        "promotion_rate": 0.19043416872573243,
+        "paired_b2_rows": 5644,
+        "full_denominator_buyable_b2_positive_rate": 0.08114812189936216,
+        "promoted_rows_in_paired_b2": 1063,
+        "promoted_and_buyable_b2_positive_rate": 0.36876763875823143,
+        "promoted_without_buyable_b2_positive_rate": 0.6312323612417686,
+        "promoted_one_price_unbuyable_rate": 0.17591721542803387,
+        "paired_b2_b3_rows": 5630,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.06571936056838366,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.3090047393364929,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.17253121452894438,
+        "touchable_rate": 0.2435580656547829
+      }
+    },
+    "2": {
+      "development": {
+        "rows": 2750,
+        "sessions": 347,
+        "promotion_known_rows": 2750,
+        "promotion_rate": 0.3549090909090909,
+        "paired_b2_rows": 2749,
+        "full_denominator_buyable_b2_positive_rate": 0.12222626409603492,
+        "promoted_rows_in_paired_b2": 975,
+        "promoted_and_buyable_b2_positive_rate": 0.2953846153846154,
+        "promoted_without_buyable_b2_positive_rate": 0.7046153846153846,
+        "promoted_one_price_unbuyable_rate": 0.318974358974359,
+        "paired_b2_b3_rows": 2749,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.09639869043288468,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.23794871794871794,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.2796992481203007,
+        "touchable_rate": 0.41709090909090907
+      },
+      "validation": {
+        "rows": 1082,
+        "sessions": 150,
+        "promotion_known_rows": 1082,
+        "promotion_rate": 0.3687615526802218,
+        "paired_b2_rows": 1074,
+        "full_denominator_buyable_b2_positive_rate": 0.15921787709497207,
+        "promoted_rows_in_paired_b2": 393,
+        "promoted_and_buyable_b2_positive_rate": 0.36895674300254455,
+        "promoted_without_buyable_b2_positive_rate": 0.6310432569974554,
+        "promoted_one_price_unbuyable_rate": 0.26463104325699743,
+        "paired_b2_b3_rows": 1071,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.13352007469654528,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.3230769230769231,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.21428571428571427,
+        "touchable_rate": 0.4048059149722736
+      }
+    },
+    "3": {
+      "development": {
+        "rows": 974,
+        "sessions": 303,
+        "promotion_known_rows": 974,
+        "promotion_rate": 0.4948665297741273,
+        "paired_b2_rows": 973,
+        "full_denominator_buyable_b2_positive_rate": 0.16238437821171633,
+        "promoted_rows_in_paired_b2": 482,
+        "promoted_and_buyable_b2_positive_rate": 0.27800829875518673,
+        "promoted_without_buyable_b2_positive_rate": 0.7219917012448133,
+        "promoted_one_price_unbuyable_rate": 0.3257261410788382,
+        "paired_b2_b3_rows": 973,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.13257965056526208,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.23236514522821577,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.3169230769230769,
+        "touchable_rate": 0.502053388090349
+      },
+      "validation": {
+        "rows": 398,
+        "sessions": 138,
+        "promotion_known_rows": 398,
+        "promotion_rate": 0.4547738693467337,
+        "paired_b2_rows": 392,
+        "full_denominator_buyable_b2_positive_rate": 0.19387755102040816,
+        "promoted_rows_in_paired_b2": 177,
+        "promoted_and_buyable_b2_positive_rate": 0.3898305084745763,
+        "promoted_without_buyable_b2_positive_rate": 0.6101694915254238,
+        "promoted_one_price_unbuyable_rate": 0.3163841807909605,
+        "paired_b2_b3_rows": 391,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.1534526854219949,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.3068181818181818,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.2459016393442623,
+        "touchable_rate": 0.46984924623115576
+      }
+    },
+    "4": {
+      "development": {
+        "rows": 482,
+        "sessions": 236,
+        "promotion_known_rows": 482,
+        "promotion_rate": 0.524896265560166,
+        "paired_b2_rows": 482,
+        "full_denominator_buyable_b2_positive_rate": 0.13900414937759337,
+        "promoted_rows_in_paired_b2": 253,
+        "promoted_and_buyable_b2_positive_rate": 0.23715415019762845,
+        "promoted_without_buyable_b2_positive_rate": 0.7628458498023716,
+        "promoted_one_price_unbuyable_rate": 0.3557312252964427,
+        "paired_b2_b3_rows": 482,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.12033195020746888,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.20948616600790515,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.4049079754601227,
+        "touchable_rate": 0.529045643153527
+      },
+      "validation": {
+        "rows": 177,
+        "sessions": 100,
+        "promotion_known_rows": 177,
+        "promotion_rate": 0.4067796610169492,
+        "paired_b2_rows": 176,
+        "full_denominator_buyable_b2_positive_rate": 0.19886363636363635,
+        "promoted_rows_in_paired_b2": 71,
+        "promoted_and_buyable_b2_positive_rate": 0.38028169014084506,
+        "promoted_without_buyable_b2_positive_rate": 0.6197183098591549,
+        "promoted_one_price_unbuyable_rate": 0.2112676056338028,
+        "paired_b2_b3_rows": 175,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.17142857142857143,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.34285714285714286,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.2631578947368421,
+        "touchable_rate": 0.5141242937853108
+      }
+    },
+    "5": {
+      "development": {
+        "rows": 250,
+        "sessions": 155,
+        "promotion_known_rows": 250,
+        "promotion_rate": 0.552,
+        "paired_b2_rows": 250,
+        "full_denominator_buyable_b2_positive_rate": 0.172,
+        "promoted_rows_in_paired_b2": 138,
+        "promoted_and_buyable_b2_positive_rate": 0.2608695652173913,
+        "promoted_without_buyable_b2_positive_rate": 0.7391304347826086,
+        "promoted_one_price_unbuyable_rate": 0.2898550724637681,
+        "paired_b2_b3_rows": 250,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.14,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.2246376811594203,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.37755102040816324,
+        "touchable_rate": 0.544
+      },
+      "validation": {
+        "rows": 75,
+        "sessions": 56,
+        "promotion_known_rows": 75,
+        "promotion_rate": 0.38666666666666666,
+        "paired_b2_rows": 73,
+        "full_denominator_buyable_b2_positive_rate": 0.1780821917808219,
+        "promoted_rows_in_paired_b2": 28,
+        "promoted_and_buyable_b2_positive_rate": 0.35714285714285715,
+        "promoted_without_buyable_b2_positive_rate": 0.6428571428571429,
+        "promoted_one_price_unbuyable_rate": 0.14285714285714285,
+        "paired_b2_b3_rows": 73,
+        "full_denominator_buyable_b2_b3_both_positive_rate": 0.1506849315068493,
+        "promoted_and_buyable_b2_b3_both_positive_rate": 0.32142857142857145,
+        "conditional_b1_big_loss_rate_among_promoted_buyable": 0.2916666666666667,
+        "touchable_rate": 0.5866666666666667
+      }
+    }
+  },
+  "date_clustered_identity_minus_payoff": {
+    "ALL": {
+      "development": {
+        "date_clustered": true,
+        "promotion_rate_minus_full_b2_positive_rate": 0.15801158823847944,
+        "promotion_minus_b2_ci95": [
+          0.1398040708972286,
+          0.17754117779973944
+        ],
+        "promoted_without_buyable_b2_positive_rate": 0.6887732986562636,
+        "promoted_without_b2_ci95": [
+          0.6539271255627233,
+          0.7232623970764317
+        ]
+      },
+      "validation": {
+        "date_clustered": true,
+        "promotion_rate_minus_full_b2_positive_rate": 0.13303437967115098,
+        "promotion_minus_b2_ci95": [
+          0.12071838783178078,
+          0.1459769470381297
+        ],
+        "promoted_without_buyable_b2_positive_rate": 0.6287528868360277,
+        "promoted_without_b2_ci95": [
+          0.59916591434967,
+          0.6567261867231539
+        ]
+      }
+    },
+    "FIRST_BOARD": {
+      "development": {
+        "date_clustered": true,
+        "promotion_rate_minus_full_b2_positive_rate": 0.11946050096339114,
+        "promotion_minus_b2_ci95": [
+          0.10229447768123666,
+          0.1408427594028631
+        ],
+        "promoted_without_buyable_b2_positive_rate": 0.6681127982646421,
+        "promoted_without_b2_ci95": [
+          0.6212459968808852,
+          0.7139272727127861
+        ]
+      },
+      "validation": {
+        "date_clustered": true,
+        "promotion_rate_minus_full_b2_positive_rate": 0.10719347980155917,
+        "promotion_minus_b2_ci95": [
+          0.09506145691342116,
+          0.12089377180655166
+        ],
+        "promoted_without_buyable_b2_positive_rate": 0.6312323612417686,
+        "promoted_without_b2_ci95": [
+          0.5984173971178132,
+          0.6634897940814264
+        ]
+      }
+    },
+    "CONSECUTIVE_BOARD": {
+      "development": {
+        "date_clustered": true,
+        "promotion_rate_minus_full_b2_positive_rate": 0.2792995060619668,
+        "promotion_minus_b2_ci95": [
+          0.24593886936840462,
+          0.31196933605672567
+        ],
+        "promoted_without_buyable_b2_positive_rate": 0.7196969696969697,
+        "promoted_without_b2_ci95": [
+          0.6904942431384102,
+          0.7475200728245569
+        ]
+      },
+      "validation": {
+        "date_clustered": true,
+        "promotion_rate_minus_full_b2_positive_rate": 0.21807580174927113,
+        "promotion_minus_b2_ci95": [
+          0.19055871752320697,
+          0.24480166475859108
+        ],
+        "promoted_without_buyable_b2_positive_rate": 0.624813153961136,
+        "promoted_without_b2_ci95": [
+          0.5821783998431218,
+          0.6656080276429511
+        ]
+      }
+    }
+  },
+  "promotion_is_buyable_b2_payoff_equivalent": false,
+  "promotion_is_buyable_b2_b3_sustained_equivalent": false,
+  "governance": {
+    "promotion_probability_may_be_presented_as_trade_win_probability": false,
+    "promotion_probability_may_replace_b2_b3_payoff_target": false,
+    "board_level_promotion_rate_may_directly_rank_entries": false,
+    "requires_separate_buyability_payoff_and_big_loss_models": true,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "Promotion describes continuing identity, not an executable post-fill payoff. A majority of promoted names fail the full-denominator buyable B+2-positive path, and fewer preserve positive marks through both B+2 and B+3. Promotion, buyability, multi-session payoff and big-loss risk must remain separate targets.",
+  "limitations": [
+    "daily proxy without verified auction queue or actual fill",
+    "current-universe survivorship bias and incomplete historical eligibility",
+    "validation dates were inspected and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\group_rank_walkforward_touchfixed_20260917_v4\\report.json": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\promotion_payoff_separation_audit_v186.py": "ed9e6d3149b2c4b3486b3d6a0e3641356db99bdb647749d2ed8a64d678acf1cd"
+  },
+  "observations_sha256": "6a71d7cc2f727adde3d73fbf0a6c079970eb7618e525f36dee898952d5d6f176"
+}

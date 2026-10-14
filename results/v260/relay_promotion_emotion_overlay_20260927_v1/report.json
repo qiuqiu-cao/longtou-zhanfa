@@ -1,0 +1,2084 @@
+{
+  "version": "v260-emotion-overlay-no-substitution-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "supersedes": "v258-regime-gated-relay-ranking-1",
+  "rule": "keep model top; non-divergence=PRIMARY_RELAY_IDENTITY; divergence=EMOTION_OBSERVATION_ONLY",
+  "fold_reports": {
+    "2024H2": {
+      "fold": "2024H2",
+      "pools": {
+        "two_board:non_one_price": {
+          "pool_rows": 1186,
+          "pool_dates": 125,
+          "overall_model": {
+            "selected_days": 125,
+            "successes": 38,
+            "promotion_rate": 0.304,
+            "wilson95": [
+              0.23020330949980428,
+              0.38948432483385975
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 47,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 47,
+            "mean_proxy_net_observed_only": -0.049754196564485396,
+            "proxy_positive_observed_only": 0.3191489361702128,
+            "proxy_big_loss_observed_only": 0.52,
+            "selected_score_brier": 0.2386267031007338,
+            "selected_score_auc": 0.4643073200241984
+          },
+          "conditional_non_divergence": {
+            "dates": 85,
+            "model": {
+              "selected_days": 85,
+              "successes": 28,
+              "promotion_rate": 0.32941176470588235,
+              "wilson95": [
+                0.23877773614216136,
+                0.4347980877473385
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 32,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 32,
+              "mean_proxy_net_observed_only": -0.03898025776542493,
+              "proxy_positive_observed_only": 0.34375,
+              "proxy_big_loss_observed_only": 0.47058823529411764,
+              "selected_score_brier": 0.24393149841812914,
+              "selected_score_auc": 0.4586466165413534
+            },
+            "baseline_comparator": {
+              "selected_days": 85,
+              "successes": 25,
+              "promotion_rate": 0.29411764705882354,
+              "wilson95": [
+                0.207855270788822,
+                0.3981845166640227
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 29,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 29,
+              "mean_proxy_net_observed_only": -0.05198155421373112,
+              "proxy_positive_observed_only": 0.3103448275862069,
+              "proxy_big_loss_observed_only": 0.5161290322580645
+            },
+            "paired": {
+              "paired_days": 85,
+              "model_successes": 28,
+              "baseline_successes": 25,
+              "difference": 0.03529411764705882,
+              "bootstrap95": [
+                -0.08235294117647059,
+                0.15294117647058825
+              ],
+              "circular_5_date_block95": [
+                -0.058823529411764705,
+                0.12941176470588237
+              ],
+              "model_only_wins": 16,
+              "baseline_only_wins": 13
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 32,
+                "mean_net_observed_only": -0.03898025776542493,
+                "positive_rate_observed_only": 0.34375,
+                "big_loss_rate_observed_only": 0.47058823529411764
+              },
+              "baseline": {
+                "known_net_rows": 29,
+                "mean_net_observed_only": -0.05198155421373112,
+                "positive_rate_observed_only": 0.3103448275862069,
+                "big_loss_rate_observed_only": 0.5161290322580645
+              },
+              "mean_net_difference": 0.013001296448306193,
+              "positive_rate_difference": 0.033405172413793094,
+              "big_loss_rate_difference": -0.04554079696394686,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 40,
+            "model": {
+              "selected_days": 40,
+              "successes": 10,
+              "promotion_rate": 0.25,
+              "wilson95": [
+                0.14187118639096302,
+                0.40193961420768026
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 15,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 15,
+              "mean_proxy_net_observed_only": -0.07273859933581443,
+              "proxy_positive_observed_only": 0.26666666666666666,
+              "proxy_big_loss_observed_only": 0.625,
+              "selected_score_brier": 0.22735401305126884,
+              "selected_score_auc": 0.45999999999999996
+            },
+            "baseline_comparator": {
+              "selected_days": 40,
+              "successes": 14,
+              "promotion_rate": 0.35,
+              "wilson95": [
+                0.2213452887317629,
+                0.5049411916274231
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 19,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 19,
+              "mean_proxy_net_observed_only": -0.010528310532241214,
+              "proxy_positive_observed_only": 0.5789473684210527,
+              "proxy_big_loss_observed_only": 0.45
+            },
+            "paired": {
+              "paired_days": 40,
+              "model_successes": 10,
+              "baseline_successes": 14,
+              "difference": -0.1,
+              "bootstrap95": [
+                -0.275,
+                0.075
+              ],
+              "circular_5_date_block95": [
+                -0.3,
+                0.075
+              ],
+              "model_only_wins": 4,
+              "baseline_only_wins": 8
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 15,
+                "mean_net_observed_only": -0.07273859933581443,
+                "positive_rate_observed_only": 0.26666666666666666,
+                "big_loss_rate_observed_only": 0.625
+              },
+              "baseline": {
+                "known_net_rows": 19,
+                "mean_net_observed_only": -0.010528310532241214,
+                "positive_rate_observed_only": 0.5789473684210527,
+                "big_loss_rate_observed_only": 0.45
+              },
+              "mean_net_difference": -0.06221028880357322,
+              "positive_rate_difference": -0.312280701754386,
+              "big_loss_rate_difference": 0.175,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 85,
+            "EMOTION_OBSERVATION_ONLY": 40
+          },
+          "substitution_performed": false
+        },
+        "three_plus:non_one_price": {
+          "pool_rows": 728,
+          "pool_dates": 115,
+          "overall_model": {
+            "selected_days": 115,
+            "successes": 62,
+            "promotion_rate": 0.5391304347826087,
+            "wilson95": [
+              0.4482376584453216,
+              0.6274934886586452
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 62,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 62,
+            "mean_proxy_net_observed_only": -0.03048791862774927,
+            "proxy_positive_observed_only": 0.4838709677419355,
+            "proxy_big_loss_observed_only": 0.4461538461538462,
+            "selected_score_brier": 0.25180987673857574,
+            "selected_score_auc": 0.5562994522215459
+          },
+          "conditional_non_divergence": {
+            "dates": 79,
+            "model": {
+              "selected_days": 79,
+              "successes": 41,
+              "promotion_rate": 0.5189873417721519,
+              "wilson95": [
+                0.4105110559940594,
+                0.6257026954621209
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 45,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 45,
+              "mean_proxy_net_observed_only": -0.039523630570726415,
+              "proxy_positive_observed_only": 0.4222222222222222,
+              "proxy_big_loss_observed_only": 0.48936170212765956,
+              "selected_score_brier": 0.23939765121083587,
+              "selected_score_auc": 0.6059050064184852
+            },
+            "baseline_comparator": {
+              "selected_days": 79,
+              "successes": 35,
+              "promotion_rate": 0.4430379746835443,
+              "wilson95": [
+                0.33867787511454334,
+                0.5526808705169161
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 41,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 41,
+              "mean_proxy_net_observed_only": -0.03966542935628357,
+              "proxy_positive_observed_only": 0.43902439024390244,
+              "proxy_big_loss_observed_only": 0.4772727272727273
+            },
+            "paired": {
+              "paired_days": 79,
+              "model_successes": 41,
+              "baseline_successes": 35,
+              "difference": 0.0759493670886076,
+              "bootstrap95": [
+                -0.02531645569620253,
+                0.17721518987341772
+              ],
+              "circular_5_date_block95": [
+                -0.0379746835443038,
+                0.17721518987341772
+              ],
+              "model_only_wins": 11,
+              "baseline_only_wins": 5
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 45,
+                "mean_net_observed_only": -0.039523630570726415,
+                "positive_rate_observed_only": 0.4222222222222222,
+                "big_loss_rate_observed_only": 0.48936170212765956
+              },
+              "baseline": {
+                "known_net_rows": 41,
+                "mean_net_observed_only": -0.03966542935628357,
+                "positive_rate_observed_only": 0.43902439024390244,
+                "big_loss_rate_observed_only": 0.4772727272727273
+              },
+              "mean_net_difference": 0.00014179878555715258,
+              "positive_rate_difference": -0.01680216802168022,
+              "big_loss_rate_difference": 0.012088974854932266,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 36,
+            "model": {
+              "selected_days": 36,
+              "successes": 21,
+              "promotion_rate": 0.5833333333333334,
+              "wilson95": [
+                0.4220025157487166,
+                0.7285943794855394
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 17,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 17,
+              "mean_proxy_net_observed_only": -0.006569857602221516,
+              "proxy_positive_observed_only": 0.6470588235294118,
+              "proxy_big_loss_observed_only": 0.3333333333333333,
+              "selected_score_brier": 0.2790478160911159,
+              "selected_score_auc": 0.4380952380952381
+            },
+            "baseline_comparator": {
+              "selected_days": 36,
+              "successes": 19,
+              "promotion_rate": 0.5277777777777778,
+              "wilson95": [
+                0.37005938022987594,
+                0.6801395848482095
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 21,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 21,
+              "mean_proxy_net_observed_only": -0.03869921981348997,
+              "proxy_positive_observed_only": 0.5238095238095238,
+              "proxy_big_loss_observed_only": 0.5
+            },
+            "paired": {
+              "paired_days": 36,
+              "model_successes": 21,
+              "baseline_successes": 19,
+              "difference": 0.05555555555555555,
+              "bootstrap95": [
+                -0.05555555555555555,
+                0.16666666666666666
+              ],
+              "circular_5_date_block95": [
+                -0.05555555555555555,
+                0.19444444444444445
+              ],
+              "model_only_wins": 3,
+              "baseline_only_wins": 1
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 17,
+                "mean_net_observed_only": -0.006569857602221516,
+                "positive_rate_observed_only": 0.6470588235294118,
+                "big_loss_rate_observed_only": 0.3333333333333333
+              },
+              "baseline": {
+                "known_net_rows": 21,
+                "mean_net_observed_only": -0.03869921981348997,
+                "positive_rate_observed_only": 0.5238095238095238,
+                "big_loss_rate_observed_only": 0.5
+              },
+              "mean_net_difference": 0.032129362211268456,
+              "positive_rate_difference": 0.12324929971988796,
+              "big_loss_rate_difference": -0.16666666666666669,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 79,
+            "EMOTION_OBSERVATION_ONLY": 36
+          },
+          "substitution_performed": false
+        },
+        "all_boards:non_one_price": {
+          "pool_rows": 1914,
+          "pool_dates": 125,
+          "overall_model": {
+            "selected_days": 125,
+            "successes": 62,
+            "promotion_rate": 0.496,
+            "wilson95": [
+              0.40978626901633625,
+              0.5824522541333303
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 61,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 61,
+            "mean_proxy_net_observed_only": -0.0368465463783413,
+            "proxy_positive_observed_only": 0.4426229508196721,
+            "proxy_big_loss_observed_only": 0.453125,
+            "selected_score_brier": 0.2542293004227487,
+            "selected_score_auc": 0.5657962109575013
+          },
+          "conditional_non_divergence": {
+            "dates": 85,
+            "model": {
+              "selected_days": 85,
+              "successes": 40,
+              "promotion_rate": 0.47058823529411764,
+              "wilson95": [
+                0.3680617001376212,
+                0.5756582694984995
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 43,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 43,
+              "mean_proxy_net_observed_only": -0.046992243494950015,
+              "proxy_positive_observed_only": 0.37209302325581395,
+              "proxy_big_loss_observed_only": 0.4888888888888889,
+              "selected_score_brier": 0.24321608513978812,
+              "selected_score_auc": 0.6216666666666666
+            },
+            "baseline_comparator": {
+              "selected_days": 85,
+              "successes": 35,
+              "promotion_rate": 0.4117647058823529,
+              "wilson95": [
+                0.31317005505324164,
+                0.5179898538551204
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 42,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 42,
+              "mean_proxy_net_observed_only": -0.03920212098429571,
+              "proxy_positive_observed_only": 0.42857142857142855,
+              "proxy_big_loss_observed_only": 0.4666666666666667
+            },
+            "paired": {
+              "paired_days": 85,
+              "model_successes": 40,
+              "baseline_successes": 35,
+              "difference": 0.058823529411764705,
+              "bootstrap95": [
+                -0.047058823529411764,
+                0.16470588235294117
+              ],
+              "circular_5_date_block95": [
+                -0.058823529411764705,
+                0.17647058823529413
+              ],
+              "model_only_wins": 14,
+              "baseline_only_wins": 9
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 43,
+                "mean_net_observed_only": -0.046992243494950015,
+                "positive_rate_observed_only": 0.37209302325581395,
+                "big_loss_rate_observed_only": 0.4888888888888889
+              },
+              "baseline": {
+                "known_net_rows": 42,
+                "mean_net_observed_only": -0.03920212098429571,
+                "positive_rate_observed_only": 0.42857142857142855,
+                "big_loss_rate_observed_only": 0.4666666666666667
+              },
+              "mean_net_difference": -0.007790122510654307,
+              "positive_rate_difference": -0.0564784053156146,
+              "big_loss_rate_difference": 0.0222222222222222,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 40,
+            "model": {
+              "selected_days": 40,
+              "successes": 22,
+              "promotion_rate": 0.55,
+              "wilson95": [
+                0.39829091798932054,
+                0.6929469218909508
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 18,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 18,
+              "mean_proxy_net_observed_only": -0.012609603266442697,
+              "proxy_positive_observed_only": 0.6111111111111112,
+              "proxy_big_loss_observed_only": 0.3684210526315789,
+              "selected_score_brier": 0.27763238289904,
+              "selected_score_auc": 0.44696969696969696
+            },
+            "baseline_comparator": {
+              "selected_days": 40,
+              "successes": 20,
+              "promotion_rate": 0.5,
+              "wilson95": [
+                0.35199526933465386,
+                0.6480047306653461
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 22,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 22,
+              "mean_proxy_net_observed_only": -0.0325339853446513,
+              "proxy_positive_observed_only": 0.5454545454545454,
+              "proxy_big_loss_observed_only": 0.4782608695652174
+            },
+            "paired": {
+              "paired_days": 40,
+              "model_successes": 22,
+              "baseline_successes": 20,
+              "difference": 0.05,
+              "bootstrap95": [
+                -0.05,
+                0.15
+              ],
+              "circular_5_date_block95": [
+                -0.05,
+                0.175
+              ],
+              "model_only_wins": 3,
+              "baseline_only_wins": 1
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 18,
+                "mean_net_observed_only": -0.012609603266442697,
+                "positive_rate_observed_only": 0.6111111111111112,
+                "big_loss_rate_observed_only": 0.3684210526315789
+              },
+              "baseline": {
+                "known_net_rows": 22,
+                "mean_net_observed_only": -0.0325339853446513,
+                "positive_rate_observed_only": 0.5454545454545454,
+                "big_loss_rate_observed_only": 0.4782608695652174
+              },
+              "mean_net_difference": 0.019924382078208604,
+              "positive_rate_difference": 0.06565656565656575,
+              "big_loss_rate_difference": -0.10983981693363848,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 85,
+            "EMOTION_OBSERVATION_ONLY": 40
+          },
+          "substitution_performed": false
+        }
+      }
+    },
+    "2025": {
+      "fold": "2025",
+      "pools": {
+        "two_board:non_one_price": {
+          "pool_rows": 1520,
+          "pool_dates": 242,
+          "overall_model": {
+            "selected_days": 242,
+            "successes": 109,
+            "promotion_rate": 0.45041322314049587,
+            "wilson95": [
+              0.38898983728513764,
+              0.5133862708166917
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 109,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 109,
+            "mean_proxy_net_observed_only": -0.025268096214504453,
+            "proxy_positive_observed_only": 0.46788990825688076,
+            "proxy_big_loss_observed_only": 0.3944954128440367,
+            "selected_score_brier": 0.24224147333041068,
+            "selected_score_auc": 0.5856384079464717
+          },
+          "conditional_non_divergence": {
+            "dates": 173,
+            "model": {
+              "selected_days": 173,
+              "successes": 78,
+              "promotion_rate": 0.4508670520231214,
+              "wilson95": [
+                0.3785902732326384,
+                0.5252784229805221
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 76,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 76,
+              "mean_proxy_net_observed_only": -0.026036841092336137,
+              "proxy_positive_observed_only": 0.4605263157894737,
+              "proxy_big_loss_observed_only": 0.39473684210526316,
+              "selected_score_brier": 0.24333169779460798,
+              "selected_score_auc": 0.5786774628879892
+            },
+            "baseline_comparator": {
+              "selected_days": 173,
+              "successes": 50,
+              "promotion_rate": 0.28901734104046245,
+              "wilson95": [
+                0.22663249737226657,
+                0.3605683746018936
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 63,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 63,
+              "mean_proxy_net_observed_only": -0.037168001643976524,
+              "proxy_positive_observed_only": 0.36507936507936506,
+              "proxy_big_loss_observed_only": 0.4603174603174603
+            },
+            "paired": {
+              "paired_days": 173,
+              "model_successes": 78,
+              "baseline_successes": 50,
+              "difference": 0.16184971098265896,
+              "bootstrap95": [
+                0.07514450867052024,
+                0.24855491329479767
+              ],
+              "circular_5_date_block95": [
+                0.07514450867052024,
+                0.24855491329479767
+              ],
+              "model_only_wins": 47,
+              "baseline_only_wins": 19
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 76,
+                "mean_net_observed_only": -0.026036841092336137,
+                "positive_rate_observed_only": 0.4605263157894737,
+                "big_loss_rate_observed_only": 0.39473684210526316
+              },
+              "baseline": {
+                "known_net_rows": 63,
+                "mean_net_observed_only": -0.037168001643976524,
+                "positive_rate_observed_only": 0.36507936507936506,
+                "big_loss_rate_observed_only": 0.4603174603174603
+              },
+              "mean_net_difference": 0.011131160551640387,
+              "positive_rate_difference": 0.09544695071010861,
+              "big_loss_rate_difference": -0.06558061821219713,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 69,
+            "model": {
+              "selected_days": 69,
+              "successes": 31,
+              "promotion_rate": 0.4492753623188406,
+              "wilson95": [
+                0.33768855629243716,
+                0.5662123249731188
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 33,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 33,
+              "mean_proxy_net_observed_only": -0.023497653465558745,
+              "proxy_positive_observed_only": 0.48484848484848486,
+              "proxy_big_loss_observed_only": 0.3939393939393939,
+              "selected_score_brier": 0.2395080119926408,
+              "selected_score_auc": 0.6103565365025467
+            },
+            "baseline_comparator": {
+              "selected_days": 69,
+              "successes": 26,
+              "promotion_rate": 0.37681159420289856,
+              "wilson95": [
+                0.27183529027019365,
+                0.4947811356604423
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 25,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 25,
+              "mean_proxy_net_observed_only": -0.020909222500977025,
+              "proxy_positive_observed_only": 0.56,
+              "proxy_big_loss_observed_only": 0.36
+            },
+            "paired": {
+              "paired_days": 69,
+              "model_successes": 31,
+              "baseline_successes": 26,
+              "difference": 0.07246376811594203,
+              "bootstrap95": [
+                -0.07246376811594203,
+                0.21739130434782608
+              ],
+              "circular_5_date_block95": [
+                -0.057971014492753624,
+                0.2028985507246377
+              ],
+              "model_only_wins": 16,
+              "baseline_only_wins": 11
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 33,
+                "mean_net_observed_only": -0.023497653465558745,
+                "positive_rate_observed_only": 0.48484848484848486,
+                "big_loss_rate_observed_only": 0.3939393939393939
+              },
+              "baseline": {
+                "known_net_rows": 25,
+                "mean_net_observed_only": -0.020909222500977025,
+                "positive_rate_observed_only": 0.56,
+                "big_loss_rate_observed_only": 0.36
+              },
+              "mean_net_difference": -0.0025884309645817193,
+              "positive_rate_difference": -0.07515151515151519,
+              "big_loss_rate_difference": 0.033939393939393936,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 173,
+            "EMOTION_OBSERVATION_ONLY": 69
+          },
+          "substitution_performed": false
+        },
+        "three_plus:non_one_price": {
+          "pool_rows": 999,
+          "pool_dates": 237,
+          "overall_model": {
+            "selected_days": 237,
+            "successes": 120,
+            "promotion_rate": 0.5063291139240507,
+            "wilson95": [
+              0.44308617876439027,
+              0.5693701483758364
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 134,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 134,
+            "mean_proxy_net_observed_only": -0.01607861301086699,
+            "proxy_positive_observed_only": 0.4925373134328358,
+            "proxy_big_loss_observed_only": 0.3235294117647059,
+            "selected_score_brier": 0.2506092374564814,
+            "selected_score_auc": 0.5517094017094017
+          },
+          "conditional_non_divergence": {
+            "dates": 168,
+            "model": {
+              "selected_days": 168,
+              "successes": 92,
+              "promotion_rate": 0.5476190476190477,
+              "wilson95": [
+                0.47212934624121194,
+                0.6209797329635627
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 100,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 100,
+              "mean_proxy_net_observed_only": -0.015937384559068797,
+              "proxy_positive_observed_only": 0.48,
+              "proxy_big_loss_observed_only": 0.32673267326732675,
+              "selected_score_brier": 0.2406298896336915,
+              "selected_score_auc": 0.5919622425629291
+            },
+            "baseline_comparator": {
+              "selected_days": 168,
+              "successes": 82,
+              "promotion_rate": 0.4880952380952381,
+              "wilson95": [
+                0.4136246958370636,
+                0.5630980343617429
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 96,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 96,
+              "mean_proxy_net_observed_only": -0.03601994541207851,
+              "proxy_positive_observed_only": 0.34375,
+              "proxy_big_loss_observed_only": 0.3958333333333333
+            },
+            "paired": {
+              "paired_days": 168,
+              "model_successes": 92,
+              "baseline_successes": 82,
+              "difference": 0.05952380952380952,
+              "bootstrap95": [
+                -0.017857142857142856,
+                0.13690476190476192
+              ],
+              "circular_5_date_block95": [
+                -0.011904761904761904,
+                0.13095238095238096
+              ],
+              "model_only_wins": 27,
+              "baseline_only_wins": 17
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 100,
+                "mean_net_observed_only": -0.015937384559068797,
+                "positive_rate_observed_only": 0.48,
+                "big_loss_rate_observed_only": 0.32673267326732675
+              },
+              "baseline": {
+                "known_net_rows": 96,
+                "mean_net_observed_only": -0.03601994541207851,
+                "positive_rate_observed_only": 0.34375,
+                "big_loss_rate_observed_only": 0.3958333333333333
+              },
+              "mean_net_difference": 0.02008256085300971,
+              "positive_rate_difference": 0.13624999999999998,
+              "big_loss_rate_difference": -0.06910066006600657,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 69,
+            "model": {
+              "selected_days": 69,
+              "successes": 28,
+              "promotion_rate": 0.4057971014492754,
+              "wilson95": [
+                0.29788908641297196,
+                0.523641121651632
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 34,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 34,
+              "mean_proxy_net_observed_only": -0.016493990810273446,
+              "proxy_positive_observed_only": 0.5294117647058824,
+              "proxy_big_loss_observed_only": 0.3142857142857143,
+              "selected_score_brier": 0.27490677998153534,
+              "selected_score_auc": 0.4869337979094077
+            },
+            "baseline_comparator": {
+              "selected_days": 69,
+              "successes": 17,
+              "promotion_rate": 0.2463768115942029,
+              "wilson95": [
+                0.15989777817017553,
+                0.3596066281576044
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 28,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 28,
+              "mean_proxy_net_observed_only": -0.018615505109767706,
+              "proxy_positive_observed_only": 0.5357142857142857,
+              "proxy_big_loss_observed_only": 0.3103448275862069
+            },
+            "paired": {
+              "paired_days": 69,
+              "model_successes": 28,
+              "baseline_successes": 17,
+              "difference": 0.15942028985507245,
+              "bootstrap95": [
+                0.07246376811594203,
+                0.2608695652173913
+              ],
+              "circular_5_date_block95": [
+                0.07246376811594203,
+                0.2608695652173913
+              ],
+              "model_only_wins": 12,
+              "baseline_only_wins": 1
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 34,
+                "mean_net_observed_only": -0.016493990810273446,
+                "positive_rate_observed_only": 0.5294117647058824,
+                "big_loss_rate_observed_only": 0.3142857142857143
+              },
+              "baseline": {
+                "known_net_rows": 28,
+                "mean_net_observed_only": -0.018615505109767706,
+                "positive_rate_observed_only": 0.5357142857142857,
+                "big_loss_rate_observed_only": 0.3103448275862069
+              },
+              "mean_net_difference": 0.0021215142994942607,
+              "positive_rate_difference": -0.006302521008403339,
+              "big_loss_rate_difference": 0.003940886699507373,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 168,
+            "EMOTION_OBSERVATION_ONLY": 69
+          },
+          "substitution_performed": false
+        },
+        "all_boards:non_one_price": {
+          "pool_rows": 2519,
+          "pool_dates": 243,
+          "overall_model": {
+            "selected_days": 243,
+            "successes": 133,
+            "promotion_rate": 0.5473251028806584,
+            "wilson95": [
+              0.4844894840998521,
+              0.6086877321987567
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 135,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 135,
+            "mean_proxy_net_observed_only": -0.00920505580733052,
+            "proxy_positive_observed_only": 0.5259259259259259,
+            "proxy_big_loss_observed_only": 0.29927007299270075,
+            "selected_score_brier": 0.2566158851747533,
+            "selected_score_auc": 0.4932330827067669
+          },
+          "conditional_non_divergence": {
+            "dates": 173,
+            "model": {
+              "selected_days": 173,
+              "successes": 104,
+              "promotion_rate": 0.6011560693641619,
+              "wilson95": [
+                0.5267561722042776,
+                0.6711612179450978
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 96,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 96,
+              "mean_proxy_net_observed_only": -0.003040990339863211,
+              "proxy_positive_observed_only": 0.53125,
+              "proxy_big_loss_observed_only": 0.27835051546391754,
+              "selected_score_brier": 0.24767945910455444,
+              "selected_score_auc": 0.511845039018952
+            },
+            "baseline_comparator": {
+              "selected_days": 173,
+              "successes": 82,
+              "promotion_rate": 0.47398843930635837,
+              "wilson95": [
+                0.40095812990557195,
+                0.5481488269131599
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 96,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 96,
+              "mean_proxy_net_observed_only": -0.03601994541207851,
+              "proxy_positive_observed_only": 0.34375,
+              "proxy_big_loss_observed_only": 0.3958333333333333
+            },
+            "paired": {
+              "paired_days": 173,
+              "model_successes": 104,
+              "baseline_successes": 82,
+              "difference": 0.12716763005780346,
+              "bootstrap95": [
+                0.05202312138728324,
+                0.20809248554913296
+              ],
+              "circular_5_date_block95": [
+                0.05202312138728324,
+                0.2023121387283237
+              ],
+              "model_only_wins": 36,
+              "baseline_only_wins": 14
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 96,
+                "mean_net_observed_only": -0.003040990339863211,
+                "positive_rate_observed_only": 0.53125,
+                "big_loss_rate_observed_only": 0.27835051546391754
+              },
+              "baseline": {
+                "known_net_rows": 96,
+                "mean_net_observed_only": -0.03601994541207851,
+                "positive_rate_observed_only": 0.34375,
+                "big_loss_rate_observed_only": 0.3958333333333333
+              },
+              "mean_net_difference": 0.032978955072215294,
+              "positive_rate_difference": 0.1875,
+              "big_loss_rate_difference": -0.11748281786941578,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 70,
+            "model": {
+              "selected_days": 70,
+              "successes": 29,
+              "promotion_rate": 0.4142857142857143,
+              "wilson95": [
+                0.30630178568736466,
+                0.5311878821543955
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 39,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 39,
+              "mean_proxy_net_observed_only": -0.024378140034942358,
+              "proxy_positive_observed_only": 0.5128205128205128,
+              "proxy_big_loss_observed_only": 0.35,
+              "selected_score_brier": 0.2787016238911019,
+              "selected_score_auc": 0.48191757779646766
+            },
+            "baseline_comparator": {
+              "selected_days": 70,
+              "successes": 18,
+              "promotion_rate": 0.2571428571428571,
+              "wilson95": [
+                0.16929275741343847,
+                0.3702613014715483
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 28,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 28,
+              "mean_proxy_net_observed_only": -0.0186155051097677,
+              "proxy_positive_observed_only": 0.5357142857142857,
+              "proxy_big_loss_observed_only": 0.3103448275862069
+            },
+            "paired": {
+              "paired_days": 70,
+              "model_successes": 29,
+              "baseline_successes": 18,
+              "difference": 0.15714285714285714,
+              "bootstrap95": [
+                0.05714285714285714,
+                0.2714285714285714
+              ],
+              "circular_5_date_block95": [
+                0.04285714285714286,
+                0.2857142857142857
+              ],
+              "model_only_wins": 14,
+              "baseline_only_wins": 3
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 39,
+                "mean_net_observed_only": -0.024378140034942358,
+                "positive_rate_observed_only": 0.5128205128205128,
+                "big_loss_rate_observed_only": 0.35
+              },
+              "baseline": {
+                "known_net_rows": 28,
+                "mean_net_observed_only": -0.0186155051097677,
+                "positive_rate_observed_only": 0.5357142857142857,
+                "big_loss_rate_observed_only": 0.3103448275862069
+              },
+              "mean_net_difference": -0.005762634925174658,
+              "positive_rate_difference": -0.022893772893772923,
+              "big_loss_rate_difference": 0.03965517241379307,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 173,
+            "EMOTION_OBSERVATION_ONLY": 70
+          },
+          "substitution_performed": false
+        }
+      }
+    },
+    "2026YTD": {
+      "fold": "2026YTD",
+      "pools": {
+        "two_board:non_one_price": {
+          "pool_rows": 1156,
+          "pool_dates": 158,
+          "overall_model": {
+            "selected_days": 158,
+            "successes": 64,
+            "promotion_rate": 0.4050632911392405,
+            "wilson95": [
+              0.33165210857864863,
+              0.48298129735698797
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 77,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 77,
+            "mean_proxy_net_observed_only": -0.030435240110281876,
+            "proxy_positive_observed_only": 0.35064935064935066,
+            "proxy_big_loss_observed_only": 0.3246753246753247,
+            "selected_score_brier": 0.23726819058734944,
+            "selected_score_auc": 0.6053856382978723
+          },
+          "conditional_non_divergence": {
+            "dates": 113,
+            "model": {
+              "selected_days": 113,
+              "successes": 50,
+              "promotion_rate": 0.4424778761061947,
+              "wilson95": [
+                0.35429034812482846,
+                0.534447775044706
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 58,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 58,
+              "mean_proxy_net_observed_only": -0.028591472058091615,
+              "proxy_positive_observed_only": 0.3793103448275862,
+              "proxy_big_loss_observed_only": 0.3103448275862069,
+              "selected_score_brier": 0.24398754840772047,
+              "selected_score_auc": 0.5704761904761905
+            },
+            "baseline_comparator": {
+              "selected_days": 113,
+              "successes": 31,
+              "promotion_rate": 0.2743362831858407,
+              "wilson95": [
+                0.2005141227614801,
+                0.362996975826693
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 43,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 43,
+              "mean_proxy_net_observed_only": -0.022653680701708947,
+              "proxy_positive_observed_only": 0.37209302325581395,
+              "proxy_big_loss_observed_only": 0.2558139534883721
+            },
+            "paired": {
+              "paired_days": 113,
+              "model_successes": 50,
+              "baseline_successes": 31,
+              "difference": 0.168141592920354,
+              "bootstrap95": [
+                0.061946902654867256,
+                0.26548672566371684
+              ],
+              "circular_5_date_block95": [
+                0.07079646017699115,
+                0.26548672566371684
+              ],
+              "model_only_wins": 28,
+              "baseline_only_wins": 9
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 58,
+                "mean_net_observed_only": -0.028591472058091615,
+                "positive_rate_observed_only": 0.3793103448275862,
+                "big_loss_rate_observed_only": 0.3103448275862069
+              },
+              "baseline": {
+                "known_net_rows": 43,
+                "mean_net_observed_only": -0.022653680701708947,
+                "positive_rate_observed_only": 0.37209302325581395,
+                "big_loss_rate_observed_only": 0.2558139534883721
+              },
+              "mean_net_difference": -0.005937791356382668,
+              "positive_rate_difference": 0.007217321571772239,
+              "big_loss_rate_difference": 0.0545308740978348,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 45,
+            "model": {
+              "selected_days": 45,
+              "successes": 14,
+              "promotion_rate": 0.3111111111111111,
+              "wilson95": [
+                0.1952869926365341,
+                0.45664805577366824
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 19,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 19,
+              "mean_proxy_net_observed_only": -0.036063584690652156,
+              "proxy_positive_observed_only": 0.2631578947368421,
+              "proxy_big_loss_observed_only": 0.3684210526315789,
+              "selected_score_brier": 0.22039513650508458,
+              "selected_score_auc": 0.6474654377880185
+            },
+            "baseline_comparator": {
+              "selected_days": 45,
+              "successes": 9,
+              "promotion_rate": 0.2,
+              "wilson95": [
+                0.1089612680783129,
+                0.3382296911614202
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 14,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 14,
+              "mean_proxy_net_observed_only": -0.00882990014561551,
+              "proxy_positive_observed_only": 0.42857142857142855,
+              "proxy_big_loss_observed_only": 0.375
+            },
+            "paired": {
+              "paired_days": 45,
+              "model_successes": 14,
+              "baseline_successes": 9,
+              "difference": 0.1111111111111111,
+              "bootstrap95": [
+                -0.044444444444444446,
+                0.26666666666666666
+              ],
+              "circular_5_date_block95": [
+                -0.044444444444444446,
+                0.24444444444444444
+              ],
+              "model_only_wins": 9,
+              "baseline_only_wins": 4
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 19,
+                "mean_net_observed_only": -0.036063584690652156,
+                "positive_rate_observed_only": 0.2631578947368421,
+                "big_loss_rate_observed_only": 0.3684210526315789
+              },
+              "baseline": {
+                "known_net_rows": 14,
+                "mean_net_observed_only": -0.00882990014561551,
+                "positive_rate_observed_only": 0.42857142857142855,
+                "big_loss_rate_observed_only": 0.375
+              },
+              "mean_net_difference": -0.02723368454503665,
+              "positive_rate_difference": -0.16541353383458646,
+              "big_loss_rate_difference": -0.006578947368421073,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 113,
+            "EMOTION_OBSERVATION_ONLY": 45
+          },
+          "substitution_performed": false
+        },
+        "three_plus:non_one_price": {
+          "pool_rows": 491,
+          "pool_dates": 154,
+          "overall_model": {
+            "selected_days": 154,
+            "successes": 58,
+            "promotion_rate": 0.37662337662337664,
+            "wilson95": [
+              0.3039760705318012,
+              0.45527602784643606
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 89,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 89,
+            "mean_proxy_net_observed_only": -0.013501220257771231,
+            "proxy_positive_observed_only": 0.4606741573033708,
+            "proxy_big_loss_observed_only": 0.2808988764044944,
+            "selected_score_brier": 0.25772466895980667,
+            "selected_score_auc": 0.579382183908046
+          },
+          "conditional_non_divergence": {
+            "dates": 111,
+            "model": {
+              "selected_days": 111,
+              "successes": 44,
+              "promotion_rate": 0.3963963963963964,
+              "wilson95": [
+                0.31033266426367256,
+                0.4893912313034269
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 67,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 67,
+              "mean_proxy_net_observed_only": -0.020281197887035533,
+              "proxy_positive_observed_only": 0.44776119402985076,
+              "proxy_big_loss_observed_only": 0.31343283582089554,
+              "selected_score_brier": 0.2628912608583576,
+              "selected_score_auc": 0.5515603799185889
+            },
+            "baseline_comparator": {
+              "selected_days": 111,
+              "successes": 41,
+              "promotion_rate": 0.36936936936936937,
+              "wilson95": [
+                0.2853601624988851,
+                0.46211779278137066
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 64,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 64,
+              "mean_proxy_net_observed_only": -0.012238568530418723,
+              "proxy_positive_observed_only": 0.484375,
+              "proxy_big_loss_observed_only": 0.2923076923076923
+            },
+            "paired": {
+              "paired_days": 111,
+              "model_successes": 44,
+              "baseline_successes": 41,
+              "difference": 0.02702702702702703,
+              "bootstrap95": [
+                -0.06306306306306306,
+                0.11711711711711711
+              ],
+              "circular_5_date_block95": [
+                -0.09009009009009009,
+                0.14414414414414414
+              ],
+              "model_only_wins": 14,
+              "baseline_only_wins": 11
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 67,
+                "mean_net_observed_only": -0.020281197887035533,
+                "positive_rate_observed_only": 0.44776119402985076,
+                "big_loss_rate_observed_only": 0.31343283582089554
+              },
+              "baseline": {
+                "known_net_rows": 64,
+                "mean_net_observed_only": -0.012238568530418723,
+                "positive_rate_observed_only": 0.484375,
+                "big_loss_rate_observed_only": 0.2923076923076923
+              },
+              "mean_net_difference": -0.00804262935661681,
+              "positive_rate_difference": -0.03661380597014924,
+              "big_loss_rate_difference": 0.021125143513203215,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 43,
+            "model": {
+              "selected_days": 43,
+              "successes": 14,
+              "promotion_rate": 0.32558139534883723,
+              "wilson95": [
+                0.20493297126568708,
+                0.47483789032470525
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 22,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 22,
+              "mean_proxy_net_observed_only": 0.007146893431351901,
+              "proxy_positive_observed_only": 0.5,
+              "proxy_big_loss_observed_only": 0.18181818181818182,
+              "selected_score_brier": 0.24438765266354717,
+              "selected_score_auc": 0.6477832512315271
+            },
+            "baseline_comparator": {
+              "selected_days": 43,
+              "successes": 14,
+              "promotion_rate": 0.32558139534883723,
+              "wilson95": [
+                0.20493297126568708,
+                0.47483789032470525
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 22,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 22,
+              "mean_proxy_net_observed_only": -0.007505707211400993,
+              "proxy_positive_observed_only": 0.45454545454545453,
+              "proxy_big_loss_observed_only": 0.2727272727272727
+            },
+            "paired": {
+              "paired_days": 43,
+              "model_successes": 14,
+              "baseline_successes": 14,
+              "difference": 0.0,
+              "bootstrap95": [
+                -0.13953488372093023,
+                0.13953488372093023
+              ],
+              "circular_5_date_block95": [
+                -0.11627906976744186,
+                0.09302325581395349
+              ],
+              "model_only_wins": 4,
+              "baseline_only_wins": 4
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 22,
+                "mean_net_observed_only": 0.007146893431351901,
+                "positive_rate_observed_only": 0.5,
+                "big_loss_rate_observed_only": 0.18181818181818182
+              },
+              "baseline": {
+                "known_net_rows": 22,
+                "mean_net_observed_only": -0.007505707211400993,
+                "positive_rate_observed_only": 0.45454545454545453,
+                "big_loss_rate_observed_only": 0.2727272727272727
+              },
+              "mean_net_difference": 0.014652600642752894,
+              "positive_rate_difference": 0.04545454545454547,
+              "big_loss_rate_difference": -0.09090909090909088,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 111,
+            "EMOTION_OBSERVATION_ONLY": 43
+          },
+          "substitution_performed": false
+        },
+        "all_boards:non_one_price": {
+          "pool_rows": 1647,
+          "pool_dates": 159,
+          "overall_model": {
+            "selected_days": 159,
+            "successes": 66,
+            "promotion_rate": 0.41509433962264153,
+            "wilson95": [
+              0.34139064083926335,
+              0.49280391750272573
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 102,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 102,
+            "mean_proxy_net_observed_only": -0.021941257898900907,
+            "proxy_positive_observed_only": 0.4117647058823529,
+            "proxy_big_loss_observed_only": 0.3235294117647059,
+            "selected_score_brier": 0.2598113212714259,
+            "selected_score_auc": 0.5500162919517758
+          },
+          "conditional_non_divergence": {
+            "dates": 113,
+            "model": {
+              "selected_days": 113,
+              "successes": 49,
+              "promotion_rate": 0.4336283185840708,
+              "wilson95": [
+                0.34592545883998016,
+                0.5256954525094825
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 72,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 72,
+              "mean_proxy_net_observed_only": -0.026049435481513606,
+              "proxy_positive_observed_only": 0.4166666666666667,
+              "proxy_big_loss_observed_only": 0.3333333333333333,
+              "selected_score_brier": 0.2635821550550989,
+              "selected_score_auc": 0.5181760204081632
+            },
+            "baseline_comparator": {
+              "selected_days": 113,
+              "successes": 41,
+              "promotion_rate": 0.36283185840707965,
+              "wilson95": [
+                0.2800425427544222,
+                0.4546406740344673
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 64,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 64,
+              "mean_proxy_net_observed_only": -0.012238568530418725,
+              "proxy_positive_observed_only": 0.484375,
+              "proxy_big_loss_observed_only": 0.2923076923076923
+            },
+            "paired": {
+              "paired_days": 113,
+              "model_successes": 49,
+              "baseline_successes": 41,
+              "difference": 0.07079646017699115,
+              "bootstrap95": [
+                -0.02654867256637168,
+                0.168141592920354
+              ],
+              "circular_5_date_block95": [
+                -0.05309734513274336,
+                0.18584070796460178
+              ],
+              "model_only_wins": 20,
+              "baseline_only_wins": 12
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 72,
+                "mean_net_observed_only": -0.026049435481513606,
+                "positive_rate_observed_only": 0.4166666666666667,
+                "big_loss_rate_observed_only": 0.3333333333333333
+              },
+              "baseline": {
+                "known_net_rows": 64,
+                "mean_net_observed_only": -0.012238568530418725,
+                "positive_rate_observed_only": 0.484375,
+                "big_loss_rate_observed_only": 0.2923076923076923
+              },
+              "mean_net_difference": -0.013810866951094881,
+              "positive_rate_difference": -0.06770833333333331,
+              "big_loss_rate_difference": 0.04102564102564099,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "conditional_divergence": {
+            "dates": 46,
+            "model": {
+              "selected_days": 46,
+              "successes": 17,
+              "promotion_rate": 0.3695652173913043,
+              "wilson95": [
+                0.24523754590839622,
+                0.513999035766103
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 30,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 30,
+              "mean_proxy_net_observed_only": -0.01208163170063044,
+              "proxy_positive_observed_only": 0.4,
+              "proxy_big_loss_observed_only": 0.3,
+              "selected_score_brier": 0.25054818610718577,
+              "selected_score_auc": 0.6389452332657202
+            },
+            "baseline_comparator": {
+              "selected_days": 46,
+              "successes": 14,
+              "promotion_rate": 0.30434782608695654,
+              "wilson95": [
+                0.1907984080276724,
+                0.4480564644840765
+              ],
+              "one_word_signal_rows": 0,
+              "inferred_touch_fill_rows": 22,
+              "actual_fill_rows": 0,
+              "known_proxy_net_rows": 22,
+              "mean_proxy_net_observed_only": -0.007505707211400995,
+              "proxy_positive_observed_only": 0.45454545454545453,
+              "proxy_big_loss_observed_only": 0.30434782608695654
+            },
+            "paired": {
+              "paired_days": 46,
+              "model_successes": 17,
+              "baseline_successes": 14,
+              "difference": 0.06521739130434782,
+              "bootstrap95": [
+                -0.08695652173913043,
+                0.21739130434782608
+              ],
+              "circular_5_date_block95": [
+                -0.06521739130434782,
+                0.1956521739130435
+              ],
+              "model_only_wins": 8,
+              "baseline_only_wins": 5
+            },
+            "proxy_trade_outcome": {
+              "model": {
+                "known_net_rows": 30,
+                "mean_net_observed_only": -0.01208163170063044,
+                "positive_rate_observed_only": 0.4,
+                "big_loss_rate_observed_only": 0.3
+              },
+              "baseline": {
+                "known_net_rows": 22,
+                "mean_net_observed_only": -0.007505707211400995,
+                "positive_rate_observed_only": 0.45454545454545453,
+                "big_loss_rate_observed_only": 0.30434782608695654
+              },
+              "mean_net_difference": -0.004575924489229445,
+              "positive_rate_difference": -0.05454545454545451,
+              "big_loss_rate_difference": -0.004347826086956552,
+              "warning": "inferred daily-OHLC proxy; no actual fills"
+            }
+          },
+          "selection_status_counts": {
+            "PRIMARY_RELAY_IDENTITY": 113,
+            "EMOTION_OBSERVATION_ONLY": 46
+          },
+          "substitution_performed": false
+        }
+      }
+    }
+  },
+  "combined_reports": {
+    "two_board:non_one_price": {
+      "pool_rows": 3862,
+      "pool_dates": 525,
+      "overall_model": {
+        "selected_days": 525,
+        "successes": 211,
+        "promotion_rate": 0.40190476190476193,
+        "wilson95": [
+          0.36082511798638467,
+          0.44440951654909994
+        ],
+        "one_word_signal_rows": 0,
+        "inferred_touch_fill_rows": 233,
+        "actual_fill_rows": 0,
+        "known_proxy_net_rows": 233,
+        "mean_proxy_net_observed_only": -0.031914949418040794,
+        "proxy_positive_observed_only": 0.39914163090128757,
+        "proxy_big_loss_observed_only": 0.3983050847457627,
+        "selected_score_brier": 0.23988409246924253,
+        "selected_score_auc": 0.5672261297431099
+      },
+      "conditional_non_divergence": {
+        "dates": 371,
+        "model": {
+          "selected_days": 371,
+          "successes": 156,
+          "promotion_rate": 0.42048517520215634,
+          "wilson95": [
+            0.37132082242958186,
+            0.4712792992708763
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 166,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 166,
+          "mean_proxy_net_observed_only": -0.029424539463135287,
+          "proxy_positive_observed_only": 0.40963855421686746,
+          "proxy_big_loss_observed_only": 0.38095238095238093,
+          "selected_score_brier": 0.24366887885196917,
+          "selected_score_auc": 0.5524746571258199
+        },
+        "baseline_comparator": {
+          "selected_days": 371,
+          "successes": 106,
+          "promotion_rate": 0.2857142857142857,
+          "wilson95": [
+            0.24212500082405605,
+            0.33369566613141577
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 135,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 135,
+          "mean_proxy_net_observed_only": -0.0357270921921645,
+          "proxy_positive_observed_only": 0.35555555555555557,
+          "proxy_big_loss_observed_only": 0.40875912408759124
+        },
+        "paired": {
+          "paired_days": 371,
+          "model_successes": 156,
+          "baseline_successes": 106,
+          "difference": 0.1347708894878706,
+          "bootstrap95": [
+            0.07547169811320754,
+            0.1940700808625337
+          ],
+          "circular_5_date_block95": [
+            0.07816711590296496,
+            0.19137466307277629
+          ],
+          "model_only_wins": 91,
+          "baseline_only_wins": 41
+        },
+        "proxy_trade_outcome": {
+          "model": {
+            "known_net_rows": 166,
+            "mean_net_observed_only": -0.029424539463135287,
+            "positive_rate_observed_only": 0.40963855421686746,
+            "big_loss_rate_observed_only": 0.38095238095238093
+          },
+          "baseline": {
+            "known_net_rows": 135,
+            "mean_net_observed_only": -0.0357270921921645,
+            "positive_rate_observed_only": 0.35555555555555557,
+            "big_loss_rate_observed_only": 0.40875912408759124
+          },
+          "mean_net_difference": 0.006302552729029215,
+          "positive_rate_difference": 0.05408299866131189,
+          "big_loss_rate_difference": -0.02780674313521031,
+          "warning": "inferred daily-OHLC proxy; no actual fills"
+        }
+      },
+      "conditional_divergence": {
+        "dates": 154,
+        "model": {
+          "selected_days": 154,
+          "successes": 55,
+          "promotion_rate": 0.35714285714285715,
+          "wilson95": [
+            0.2857880373562984,
+            0.43545123445008155
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 67,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 67,
+          "mean_proxy_net_observed_only": -0.03808521885855293,
+          "proxy_positive_observed_only": 0.373134328358209,
+          "proxy_big_loss_observed_only": 0.4411764705882353,
+          "selected_score_brier": 0.2307661980017648,
+          "selected_score_auc": 0.5917355371900825
+        },
+        "baseline_comparator": {
+          "selected_days": 154,
+          "successes": 49,
+          "promotion_rate": 0.3181818181818182,
+          "wilson95": [
+            0.2498098345872583,
+            0.39540378407540705
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 58,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 58,
+          "mean_proxy_net_observed_only": -0.014592880425441823,
+          "proxy_positive_observed_only": 0.5344827586206896,
+          "proxy_big_loss_observed_only": 0.39344262295081966
+        },
+        "paired": {
+          "paired_days": 154,
+          "model_successes": 55,
+          "baseline_successes": 49,
+          "difference": 0.03896103896103896,
+          "bootstrap95": [
+            -0.05194805194805195,
+            0.12987012987012986
+          ],
+          "circular_5_date_block95": [
+            -0.05844155844155844,
+            0.12987012987012986
+          ],
+          "model_only_wins": 29,
+          "baseline_only_wins": 23
+        },
+        "proxy_trade_outcome": {
+          "model": {
+            "known_net_rows": 67,
+            "mean_net_observed_only": -0.03808521885855293,
+            "positive_rate_observed_only": 0.373134328358209,
+            "big_loss_rate_observed_only": 0.4411764705882353
+          },
+          "baseline": {
+            "known_net_rows": 58,
+            "mean_net_observed_only": -0.014592880425441823,
+            "positive_rate_observed_only": 0.5344827586206896,
+            "big_loss_rate_observed_only": 0.39344262295081966
+          },
+          "mean_net_difference": -0.023492338433111104,
+          "positive_rate_difference": -0.16134843026248064,
+          "big_loss_rate_difference": 0.047733847637415616,
+          "warning": "inferred daily-OHLC proxy; no actual fills"
+        }
+      },
+      "selection_status_counts": {
+        "PRIMARY_RELAY_IDENTITY": 371,
+        "EMOTION_OBSERVATION_ONLY": 154
+      },
+      "substitution_performed": false
+    },
+    "three_plus:non_one_price": {
+      "pool_rows": 2218,
+      "pool_dates": 506,
+      "overall_model": {
+        "selected_days": 506,
+        "successes": 240,
+        "promotion_rate": 0.4743083003952569,
+        "wilson95": [
+          0.43115769952026084,
+          0.5178460553722107
+        ],
+        "one_word_signal_rows": 0,
+        "inferred_touch_fill_rows": 285,
+        "actual_fill_rows": 0,
+        "known_proxy_net_rows": 285,
+        "mean_proxy_net_observed_only": -0.01840839895199393,
+        "proxy_positive_observed_only": 0.4807017543859649,
+        "proxy_big_loss_observed_only": 0.33793103448275863,
+        "selected_score_brier": 0.2530476761303015,
+        "selected_score_auc": 0.5643327067669173
+      },
+      "conditional_non_divergence": {
+        "dates": 358,
+        "model": {
+          "selected_days": 358,
+          "successes": 177,
+          "promotion_rate": 0.49441340782122906,
+          "wilson95": [
+            0.44295790649460276,
+            0.5459875283015184
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 212,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 212,
+          "mean_proxy_net_observed_only": -0.02231670797179693,
+          "proxy_positive_observed_only": 0.45754716981132076,
+          "proxy_big_loss_observed_only": 0.3581395348837209,
+          "selected_score_brier": 0.2472602398307092,
+          "selected_score_auc": 0.5857290008427756
+        },
+        "baseline_comparator": {
+          "selected_days": 358,
+          "successes": 158,
+          "promotion_rate": 0.441340782122905,
+          "wilson95": [
+            0.3907975154330622,
+            0.49312954992621005
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 201,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 201,
+          "mean_proxy_net_observed_only": -0.02919137188613911,
+          "proxy_positive_observed_only": 0.4079601990049751,
+          "proxy_big_loss_observed_only": 0.3804878048780488
+        },
+        "paired": {
+          "paired_days": 358,
+          "model_successes": 177,
+          "baseline_successes": 158,
+          "difference": 0.05307262569832402,
+          "bootstrap95": [
+            0.002793296089385475,
+            0.10335195530726257
+          ],
+          "circular_5_date_block95": [
+            0.0,
+            0.10893854748603352
+          ],
+          "model_only_wins": 52,
+          "baseline_only_wins": 33
+        },
+        "proxy_trade_outcome": {
+          "model": {
+            "known_net_rows": 212,
+            "mean_net_observed_only": -0.02231670797179693,
+            "positive_rate_observed_only": 0.45754716981132076,
+            "big_loss_rate_observed_only": 0.3581395348837209
+          },
+          "baseline": {
+            "known_net_rows": 201,
+            "mean_net_observed_only": -0.02919137188613911,
+            "positive_rate_observed_only": 0.4079601990049751,
+            "big_loss_rate_observed_only": 0.3804878048780488
+          },
+          "mean_net_difference": 0.0068746639143421814,
+          "positive_rate_difference": 0.049586970806345665,
+          "big_loss_rate_difference": -0.022348269994327874,
+          "warning": "inferred daily-OHLC proxy; no actual fills"
+        }
+      },
+      "conditional_divergence": {
+        "dates": 148,
+        "model": {
+          "selected_days": 148,
+          "successes": 63,
+          "promotion_rate": 0.42567567567567566,
+          "wilson95": [
+            0.3488885757698126,
+            0.5062234590402633
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 73,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 73,
+          "mean_proxy_net_observed_only": -0.007058241250648235,
+          "proxy_positive_observed_only": 0.547945205479452,
+          "proxy_big_loss_observed_only": 0.28,
+          "selected_score_brier": 0.26704701528742325,
+          "selected_score_auc": 0.5182072829131652
+        },
+        "baseline_comparator": {
+          "selected_days": 148,
+          "successes": 50,
+          "promotion_rate": 0.33783783783783783,
+          "wilson95": [
+            0.2665989373658896,
+            0.4172818658560945
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 71,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 71,
+          "mean_proxy_net_observed_only": -0.02111328616630433,
+          "proxy_positive_observed_only": 0.5070422535211268,
+          "proxy_big_loss_observed_only": 0.3561643835616438
+        },
+        "paired": {
+          "paired_days": 148,
+          "model_successes": 63,
+          "baseline_successes": 50,
+          "difference": 0.08783783783783784,
+          "bootstrap95": [
+            0.02027027027027027,
+            0.1554054054054054
+          ],
+          "circular_5_date_block95": [
+            0.02027027027027027,
+            0.1554054054054054
+          ],
+          "model_only_wins": 19,
+          "baseline_only_wins": 6
+        },
+        "proxy_trade_outcome": {
+          "model": {
+            "known_net_rows": 73,
+            "mean_net_observed_only": -0.007058241250648235,
+            "positive_rate_observed_only": 0.547945205479452,
+            "big_loss_rate_observed_only": 0.28
+          },
+          "baseline": {
+            "known_net_rows": 71,
+            "mean_net_observed_only": -0.02111328616630433,
+            "positive_rate_observed_only": 0.5070422535211268,
+            "big_loss_rate_observed_only": 0.3561643835616438
+          },
+          "mean_net_difference": 0.014055044915656095,
+          "positive_rate_difference": 0.04090295195832527,
+          "big_loss_rate_difference": -0.07616438356164379,
+          "warning": "inferred daily-OHLC proxy; no actual fills"
+        }
+      },
+      "selection_status_counts": {
+        "PRIMARY_RELAY_IDENTITY": 358,
+        "EMOTION_OBSERVATION_ONLY": 148
+      },
+      "substitution_performed": false
+    },
+    "all_boards:non_one_price": {
+      "pool_rows": 6080,
+      "pool_dates": 527,
+      "overall_model": {
+        "selected_days": 527,
+        "successes": 261,
+        "promotion_rate": 0.4952561669829222,
+        "wilson95": [
+          0.4527584502104955,
+          0.5378225416903482
+        ],
+        "one_word_signal_rows": 0,
+        "inferred_touch_fill_rows": 298,
+        "actual_fill_rows": 0,
+        "known_proxy_net_rows": 298,
+        "mean_proxy_net_observed_only": -0.019222584458913866,
+        "proxy_positive_observed_only": 0.4697986577181208,
+        "proxy_big_loss_observed_only": 0.33993399339933994,
+        "selected_score_brier": 0.2570138951280178,
+        "selected_score_auc": 0.5336617405582922
+      },
+      "conditional_non_divergence": {
+        "dates": 371,
+        "model": {
+          "selected_days": 371,
+          "successes": 193,
+          "promotion_rate": 0.5202156334231806,
+          "wilson95": [
+            0.4694326695898453,
+            0.5705842486219025
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 211,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 211,
+          "mean_proxy_net_observed_only": -0.01984910377999383,
+          "proxy_positive_observed_only": 0.4597156398104265,
+          "proxy_big_loss_observed_only": 0.3411214953271028,
+          "selected_score_brier": 0.2515005314910946,
+          "selected_score_auc": 0.5440123420853467
+        },
+        "baseline_comparator": {
+          "selected_days": 371,
+          "successes": 158,
+          "promotion_rate": 0.42587601078167114,
+          "wilson95": [
+            0.3765724369986753,
+            0.4766988628915823
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 202,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 202,
+          "mean_proxy_net_observed_only": -0.029146892212112648,
+          "proxy_positive_observed_only": 0.40594059405940597,
+          "proxy_big_loss_observed_only": 0.3786407766990291
+        },
+        "paired": {
+          "paired_days": 371,
+          "model_successes": 193,
+          "baseline_successes": 158,
+          "difference": 0.09433962264150944,
+          "bootstrap95": [
+            0.04043126684636118,
+            0.14824797843665768
+          ],
+          "circular_5_date_block95": [
+            0.03504043126684636,
+            0.15363881401617252
+          ],
+          "model_only_wins": 70,
+          "baseline_only_wins": 35
+        },
+        "proxy_trade_outcome": {
+          "model": {
+            "known_net_rows": 211,
+            "mean_net_observed_only": -0.01984910377999383,
+            "positive_rate_observed_only": 0.4597156398104265,
+            "big_loss_rate_observed_only": 0.3411214953271028
+          },
+          "baseline": {
+            "known_net_rows": 202,
+            "mean_net_observed_only": -0.029146892212112648,
+            "positive_rate_observed_only": 0.40594059405940597,
+            "big_loss_rate_observed_only": 0.3786407766990291
+          },
+          "mean_net_difference": 0.009297788432118818,
+          "positive_rate_difference": 0.053775045751020545,
+          "big_loss_rate_difference": -0.03751928137192634,
+          "warning": "inferred daily-OHLC proxy; no actual fills"
+        }
+      },
+      "conditional_divergence": {
+        "dates": 156,
+        "model": {
+          "selected_days": 156,
+          "successes": 68,
+          "promotion_rate": 0.4358974358974359,
+          "wilson95": [
+            0.3605494424755592,
+            0.5143265743753913
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 87,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 87,
+          "mean_proxy_net_observed_only": -0.01770309507100728,
+          "proxy_positive_observed_only": 0.4942528735632184,
+          "proxy_big_loss_observed_only": 0.33707865168539325,
+          "selected_score_brier": 0.2701258048030082,
+          "selected_score_auc": 0.5135360962566844
+        },
+        "baseline_comparator": {
+          "selected_days": 156,
+          "successes": 52,
+          "promotion_rate": 0.3333333333333333,
+          "wilson95": [
+            0.26414937342324535,
+            0.4105282703892262
+          ],
+          "one_word_signal_rows": 0,
+          "inferred_touch_fill_rows": 72,
+          "actual_fill_rows": 0,
+          "known_proxy_net_rows": 72,
+          "mean_proxy_net_observed_only": -0.019473713601481202,
+          "proxy_positive_observed_only": 0.5138888888888888,
+          "proxy_big_loss_observed_only": 0.36
+        },
+        "paired": {
+          "paired_days": 156,
+          "model_successes": 68,
+          "baseline_successes": 52,
+          "difference": 0.10256410256410256,
+          "bootstrap95": [
+            0.03205128205128205,
+            0.17307692307692307
+          ],
+          "circular_5_date_block95": [
+            0.03205128205128205,
+            0.1794871794871795
+          ],
+          "model_only_wins": 25,
+          "baseline_only_wins": 9
+        },
+        "proxy_trade_outcome": {
+          "model": {
+            "known_net_rows": 87,
+            "mean_net_observed_only": -0.01770309507100728,
+            "positive_rate_observed_only": 0.4942528735632184,
+            "big_loss_rate_observed_only": 0.33707865168539325
+          },
+          "baseline": {
+            "known_net_rows": 72,
+            "mean_net_observed_only": -0.019473713601481202,
+            "positive_rate_observed_only": 0.5138888888888888,
+            "big_loss_rate_observed_only": 0.36
+          },
+          "mean_net_difference": 0.0017706185304739233,
+          "positive_rate_difference": -0.01963601532567044,
+          "big_loss_rate_difference": -0.022921348314606738,
+          "warning": "inferred daily-OHLC proxy; no actual fills"
+        }
+      },
+      "selection_status_counts": {
+        "PRIMARY_RELAY_IDENTITY": 371,
+        "EMOTION_OBSERVATION_ONLY": 156
+      },
+      "substitution_performed": false
+    }
+  },
+  "interpretation": {
+    "is_pristine_blind_test": false,
+    "reason": "historical V257 windows were already inspected",
+    "post_hoc_candidate": true,
+    "theme_and_intraday_missing": true,
+    "actual_fill_count": 0,
+    "promotion_is_eventual_leader": false,
+    "entry_authorized": false,
+    "code_order_substitution": false,
+    "decision_contract": {
+      "identity_channel": "LEADER_IDENTITY_DIAGNOSTIC",
+      "divergence_channel": "EMOTION_OBSERVATION_ONLY",
+      "trade_authorization": "CASH",
+      "reason": "theme_intraday_actual_fill_evidence_missing"
+    }
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v257\\relay_promotion_walkforward_20260926_v3\\all_fold_predictions_LABEL_ONLY.csv": "a9dcce8b7cb0f83b335e0f875b2cd2f03f34fa3dcdf3857a172c10133e444cd8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_promotion_emotion_overlay_v260.py": "b0fba1323ef6d5bc3a4efce998c1b1c1b7bd82e43ec948b9e1ed7a2adfcb68d1"
+  },
+  "artifact_hashes": {
+    "2024H2__all_boards": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2024H2__three_plus": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2024H2__two_board": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2025__all_boards": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2025__three_plus": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2025__two_board": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2026YTD__all_boards": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2026YTD__three_plus": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2026YTD__two_board": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

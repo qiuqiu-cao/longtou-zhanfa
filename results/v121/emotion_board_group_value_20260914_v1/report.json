@@ -1,0 +1,327 @@
+{
+  "version": "v121-emotion-board-group-economic-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "mainboard historical reconstructed first/consecutive closing-limit candidates",
+  "outcome": "hypothetical next-session non-one-price limit-touch fill to B+1/B+2/B+3 close marks",
+  "split": {
+    "method": "first_70pct_sessions_define_probability_quintiles_last_30pct_evaluate",
+    "development_sessions": 466,
+    "evaluation_sessions": 200,
+    "development_end": "2025-11-03",
+    "evaluation_start": "2025-11-04",
+    "low_risk_cutoff": 0.4108108108108108,
+    "high_risk_cutoff": 0.5680933852140078
+  },
+  "board_groups": {
+    "FIRST_BOARD": {
+      "candidate_rows": 9532,
+      "evaluation_sessions": 200,
+      "high_risk_candidate_rows": 152,
+      "low_risk_candidate_rows": 2226,
+      "metrics": {
+        "b1_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.012689435673345918,
+          "low_risk_mean": -0.014455124142178755,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.5410256410256411,
+          "low_risk_mean": 0.40125843483428625,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.1,
+          "low_risk_mean": 0.21310083424344262,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.01443508154413951,
+          "low_risk_mean": -0.01243658935301641,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.48461538461538467,
+          "low_risk_mean": 0.38485319941782786,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.13333333333333333,
+          "low_risk_mean": 0.28186861004778957,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 39,
+          "high_risk_mean": 0.029888354711797682,
+          "low_risk_mean": -0.010849014926837668,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 39,
+          "high_risk_mean": 0.5846153846153846,
+          "low_risk_mean": 0.4004850084511909,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 39,
+          "high_risk_mean": 0.1,
+          "low_risk_mean": 0.370065853156073,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        }
+      },
+      "direction_pass_count": 0,
+      "strong_ci_pass_count": 0,
+      "risk_overlay_proxy_gate_passed": false
+    },
+    "CONSECUTIVE_BOARD": {
+      "candidate_rows": 2158,
+      "evaluation_sessions": 200,
+      "high_risk_candidate_rows": 10,
+      "low_risk_candidate_rows": 500,
+      "metrics": {
+        "b1_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.04501144220726573,
+          "low_risk_mean": -0.02245751880812328,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.8333333333333333,
+          "low_risk_mean": 0.4345596764346764,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.0,
+          "low_risk_mean": 0.3448168498168498,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.07385834243073372,
+          "low_risk_mean": -0.014175476536785522,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.6666666666666666,
+          "low_risk_mean": 0.4119604700854701,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 40,
+          "high_risk_mean": 0.0,
+          "low_risk_mean": 0.3371794871794872,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 39,
+          "high_risk_mean": 0.12378703685308534,
+          "low_risk_mean": -0.013846486000606516,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 39,
+          "high_risk_mean": 0.8333333333333333,
+          "low_risk_mean": 0.45374049027895186,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 2,
+          "low_risk_sessions": 39,
+          "high_risk_mean": 0.0,
+          "low_risk_mean": 0.3869830312138004,
+          "high_minus_low": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "status": "INSUFFICIENT",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        }
+      },
+      "direction_pass_count": 0,
+      "strong_ci_pass_count": 0,
+      "risk_overlay_proxy_gate_passed": false
+    }
+  },
+  "gate_rule": "at least 7/9 expected directions and 3/9 session-block-bootstrap CIs exclude zero",
+  "positive_buy_factor_authorized": false,
+  "deployment_authorized": false,
+  "complete_trade_count": 0,
+  "limitations": [
+    "daily high touching limit does not establish an actual fill or queue priority",
+    "features are historical reconstructions rather than original forward archives",
+    "risk cutoffs are distributional quintiles and are not deployment thresholds",
+    "session-level aggregation avoids overweighting broad limit-up days but loses candidate detail",
+    "complete-trade profitability remains untested"
+  ],
+  "generated_at": "2026-09-13T23:39:59.028180+08:00",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v3\\full_pool_eod_features.csv": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831_v3\\outcomes_LABEL_ONLY.csv": "fcf810543af341ab2aab1cc08e86a1aa06f12da9108f72bbd7f0ec6f9d550f87",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9"
+  },
+  "evaluation_rows_sha256": "1a8373cc495d25d0ca01aa36946f4e8870e9d7ef15fcd14f5c4aa6613c0a0d24"
+}

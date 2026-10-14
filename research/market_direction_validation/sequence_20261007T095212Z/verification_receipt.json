@@ -1,0 +1,1363 @@
+{
+  "started_at": "2026-10-07T10:07:44.312065+00:00",
+  "verified_at": "2026-10-07T10:07:46.282272+00:00",
+  "status": "PASS",
+  "reviewer": "independent_child_agent",
+  "method": "Independent pandas/numpy row and metric reconstruction; no import of research metric implementation; no fitting, training, bootstrap or changes to original artifacts",
+  "sequence_sha256": "301fab5f6947a8ad28557582fc26c3cbd240ad12340beb246496f2ede8a019cf",
+  "used_implementation_sha256": "d7003a5ccae114b0ead2e5c138b2eb05518cb27d1a492954e4dbd22db491b606",
+  "current_implementation_sha256": "a85fa98e1732d88b1d5d70e7c6dc91c3f816b511088c09293872b33ff0d742ba",
+  "source_artifact_hashes": {
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage1\\predictions_NO_LABELS_NOT_FORWARD.csv": "1e090d7a87847a30800bf7ca18c53e46887e89f931d092580116d90db8293431",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage1\\scores_LABEL_ONLY.csv": "7f89c73767bddc365474024dc8beac5d5710983dd0d13802a72d89ec28c5d966",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage1\\report.json": "9559945bb5ad21350c68e30d17d6ecbe4f63d8bf8299a3a3ac4dc6de80199716",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage2\\predictions_NO_LABELS_NOT_FORWARD.csv": "c1cc3327b9c62510f6774ad9d40f5e634047c1e170e36f46e8c497deac917c80",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage2\\scores_LABEL_ONLY.csv": "d1ab63b7770c95586ae28c1bc9e270afd8820f646e85f7a3170387df94e13518",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage2\\report.json": "aed962de8c1702997092f98f8b150ddfa9701ffad47ab289fa091ed6cb8c766c",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage3\\predictions_NO_LABELS_NOT_FORWARD.csv": "9cbb9bd623f86f7ca31a8df7ca070a3dd539143913d3105bc0630ec9b899519d",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage3\\scores_LABEL_ONLY.csv": "f2266fed6ec4d2ffcdf61194d278a4e03bd21dfeff4f0ee428a01c1ff05a1031",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage3\\report.json": "d823941fff04a5aefeb35e88d76c63d220ae7c8dae849c52d04224651622697c"
+  },
+  "checks": [
+    {
+      "check": "official_grid_order_unique",
+      "passed": true
+    },
+    {
+      "check": "observations_match_official_grid",
+      "passed": true
+    },
+    {
+      "check": "full_registered_signal_dates_181",
+      "passed": true
+    },
+    {
+      "check": "sequence_family4_tails",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\observations_DIAGNOSTIC.csv",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\observation_status.csv",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\report.json",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\protocol.json",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\research\\market_environment_validation\\conditional_levels_20261007T090923Z\\predictions_NO_LABELS_NOT_FORWARD.csv",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\research\\market_environment_validation\\conditional_levels_20261007T090923Z\\report.json",
+      "passed": true
+    },
+    {
+      "check": "input_hash_D:\\Documents\\ChatGPT\\龙头战法\\market_environment_regression.py",
+      "passed": true
+    },
+    {
+      "check": "protected_hash_data/v271/expectation_registry/2026-09-30_2c74dc406eef7dcf.json",
+      "passed": true
+    },
+    {
+      "check": "protected_hash_hypothesis_bound_daily_runner_v298.py",
+      "passed": true
+    },
+    {
+      "check": "protected_hash_research_indicator_pipeline.py",
+      "passed": true
+    },
+    {
+      "check": "protected_hash_research/theme_same_height/protocol.json",
+      "passed": true
+    },
+    {
+      "check": "protected_hash_research/theme_same_height/comparison_specification.json",
+      "passed": true
+    },
+    {
+      "check": "protected_hash_market_interval_research_v300.py",
+      "passed": true
+    },
+    {
+      "check": "stage1_receipt_prediction_hash",
+      "passed": true
+    },
+    {
+      "check": "stage1_receipt_protocol_hash",
+      "passed": true
+    },
+    {
+      "check": "stage1_used_implementation_hash",
+      "passed": true
+    },
+    {
+      "check": "stage1_sequence_hash",
+      "passed": true
+    },
+    {
+      "check": "stage1_artifact_hash_metric_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "stage1_artifact_hash_predictions_NO_LABELS_NOT_FORWARD.csv",
+      "passed": true
+    },
+    {
+      "check": "stage1_artifact_hash_scores_LABEL_ONLY.csv",
+      "passed": true
+    },
+    {
+      "check": "stage1_predictions_unchanged_by_labeling",
+      "passed": true
+    },
+    {
+      "check": "stage1_original_keys_unique",
+      "passed": true
+    },
+    {
+      "check": "stage1_all_arm_dates",
+      "passed": true
+    },
+    {
+      "check": "stage1_exact_next_official_target",
+      "passed": true
+    },
+    {
+      "check": "stage1_training_max_date_boundary",
+      "passed": true
+    },
+    {
+      "check": "stage1_independent_actual_value",
+      "passed": true
+    },
+    {
+      "check": "stage1_independent_actual_positive",
+      "passed": true
+    },
+    {
+      "check": "stage1_independent_correct",
+      "passed": true
+    },
+    {
+      "check": "stage1_independent_false_positive",
+      "passed": true
+    },
+    {
+      "check": "stage1_evaluated_mask",
+      "passed": true
+    },
+    {
+      "check": "stage1_probability_finite_binary_contract",
+      "passed": true
+    },
+    {
+      "check": "stage1_no_forward_or_calibration",
+      "passed": true
+    },
+    {
+      "check": "stage1_reconstructed_training_membership_digest",
+      "passed": true,
+      "detail": {
+        "rows_checked": 362
+      }
+    },
+    {
+      "check": "stage1_neighbor_boundaries",
+      "passed": true
+    },
+    {
+      "check": "stage1_sept30_oct8_unknown",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_DEVELOPMENT_DIAGNOSTIC_RIDGE120_SIGN_SAVED",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_DEVELOPMENT_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_DEVELOPMENT_DIAGNOSTIC_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_EVALUATION_DIAGNOSTIC_RIDGE120_SIGN_SAVED",
+      "passed": true
+    },
+    {
+      "check": "stage1_147registered_124truth_RIDGE120_SIGN_SAVED",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_EVALUATION_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_147registered_124truth_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_EVALUATION_DIAGNOSTIC_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_147registered_124truth_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_ALL_DIAGNOSTIC_RIDGE120_SIGN_SAVED",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_ALL_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_metrics_ALL_DIAGNOSTIC_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_paired_metrics_DEVELOPMENT_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_paired_metrics_DEVELOPMENT_DIAGNOSTIC_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_paired_metrics_EVALUATION_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_paired_metrics_EVALUATION_DIAGNOSTIC_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_paired_metrics_ALL_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_paired_metrics_ALL_DIAGNOSTIC_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-01_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-01_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-02_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-02_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-03_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-03_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-04_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-04_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-05_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-05_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-06_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-06_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-07_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-07_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-08_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-08_KNN120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-09_LR120",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_RIDGE120_SIGN_SAVED_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage1_monthly_metrics_2026-09_KNN120",
+      "passed": true
+    },
+    {
+      "check": "stage2_receipt_prediction_hash",
+      "passed": true
+    },
+    {
+      "check": "stage2_receipt_protocol_hash",
+      "passed": true
+    },
+    {
+      "check": "stage2_used_implementation_hash",
+      "passed": true
+    },
+    {
+      "check": "stage2_sequence_hash",
+      "passed": true
+    },
+    {
+      "check": "stage2_artifact_hash_metric_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "stage2_artifact_hash_predictions_NO_LABELS_NOT_FORWARD.csv",
+      "passed": true
+    },
+    {
+      "check": "stage2_artifact_hash_scores_LABEL_ONLY.csv",
+      "passed": true
+    },
+    {
+      "check": "stage2_predictions_unchanged_by_labeling",
+      "passed": true
+    },
+    {
+      "check": "stage2_original_keys_unique",
+      "passed": true
+    },
+    {
+      "check": "stage2_all_arm_dates",
+      "passed": true
+    },
+    {
+      "check": "stage2_exact_next_official_target",
+      "passed": true
+    },
+    {
+      "check": "stage2_training_max_date_boundary",
+      "passed": true
+    },
+    {
+      "check": "stage2_independent_actual_value",
+      "passed": true
+    },
+    {
+      "check": "stage2_independent_actual_positive",
+      "passed": true
+    },
+    {
+      "check": "stage2_independent_correct",
+      "passed": true
+    },
+    {
+      "check": "stage2_independent_false_positive",
+      "passed": true
+    },
+    {
+      "check": "stage2_evaluated_mask",
+      "passed": true
+    },
+    {
+      "check": "stage2_probability_finite_binary_contract",
+      "passed": true
+    },
+    {
+      "check": "stage2_no_forward_or_calibration",
+      "passed": true
+    },
+    {
+      "check": "stage2_reconstructed_training_membership_digest",
+      "passed": true,
+      "detail": {
+        "rows_checked": 362
+      }
+    },
+    {
+      "check": "stage2_neighbor_boundaries",
+      "passed": true
+    },
+    {
+      "check": "stage2_sept30_oct8_unknown",
+      "passed": true
+    },
+    {
+      "check": "stage2_metrics_DEVELOPMENT_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage2_metrics_DEVELOPMENT_DIAGNOSTIC_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_metrics_EVALUATION_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage2_147registered_124truth_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage2_metrics_EVALUATION_DIAGNOSTIC_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_147registered_124truth_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_metrics_ALL_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage2_metrics_ALL_DIAGNOSTIC_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_paired_metrics_DEVELOPMENT_DIAGNOSTIC_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_paired_metrics_EVALUATION_DIAGNOSTIC_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_paired_metrics_ALL_DIAGNOSTIC_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-01_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-02_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-03_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-04_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-05_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-06_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-07_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-08_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage2_monthly_metrics_2026-09_LR120_NEGATIVE2",
+      "passed": true
+    },
+    {
+      "check": "stage3_receipt_prediction_hash",
+      "passed": true
+    },
+    {
+      "check": "stage3_receipt_protocol_hash",
+      "passed": true
+    },
+    {
+      "check": "stage3_used_implementation_hash",
+      "passed": true
+    },
+    {
+      "check": "stage3_sequence_hash",
+      "passed": true
+    },
+    {
+      "check": "stage3_artifact_hash_metric_summary.csv",
+      "passed": true
+    },
+    {
+      "check": "stage3_artifact_hash_predictions_NO_LABELS_NOT_FORWARD.csv",
+      "passed": true
+    },
+    {
+      "check": "stage3_artifact_hash_scores_LABEL_ONLY.csv",
+      "passed": true
+    },
+    {
+      "check": "stage3_predictions_unchanged_by_labeling",
+      "passed": true
+    },
+    {
+      "check": "stage3_original_keys_unique",
+      "passed": true
+    },
+    {
+      "check": "stage3_all_arm_dates",
+      "passed": true
+    },
+    {
+      "check": "stage3_exact_next_official_target",
+      "passed": true
+    },
+    {
+      "check": "stage3_training_max_date_boundary",
+      "passed": true
+    },
+    {
+      "check": "stage3_independent_actual_value",
+      "passed": true
+    },
+    {
+      "check": "stage3_independent_actual_positive",
+      "passed": true
+    },
+    {
+      "check": "stage3_independent_correct",
+      "passed": true
+    },
+    {
+      "check": "stage3_independent_false_positive",
+      "passed": true
+    },
+    {
+      "check": "stage3_evaluated_mask",
+      "passed": true
+    },
+    {
+      "check": "stage3_probability_finite_binary_contract",
+      "passed": true
+    },
+    {
+      "check": "stage3_no_forward_or_calibration",
+      "passed": true
+    },
+    {
+      "check": "stage3_reconstructed_training_membership_digest",
+      "passed": true,
+      "detail": {
+        "rows_checked": 362
+      }
+    },
+    {
+      "check": "stage3_neighbor_boundaries",
+      "passed": true
+    },
+    {
+      "check": "stage3_sept30_oct8_unknown",
+      "passed": true
+    },
+    {
+      "check": "stage3_metrics_DEVELOPMENT_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage3_metrics_DEVELOPMENT_DIAGNOSTIC_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_metrics_EVALUATION_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage3_147registered_124truth_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage3_metrics_EVALUATION_DIAGNOSTIC_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_147registered_124truth_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_metrics_ALL_DIAGNOSTIC_LR120",
+      "passed": true
+    },
+    {
+      "check": "stage3_metrics_ALL_DIAGNOSTIC_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_paired_metrics_DEVELOPMENT_DIAGNOSTIC_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_paired_metrics_EVALUATION_DIAGNOSTIC_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_paired_metrics_ALL_DIAGNOSTIC_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-01_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-02_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-03_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-04_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-05_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-06_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-07_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-08_LR252",
+      "passed": true
+    },
+    {
+      "check": "paired_original_date_order_LR120_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_monthly_metrics_2026-09_LR252",
+      "passed": true
+    },
+    {
+      "check": "stage3_fixed_month_gate_independent",
+      "passed": true,
+      "detail": {
+        "eligible_months": [
+          "2026-03",
+          "2026-04",
+          "2026-05",
+          "2026-06",
+          "2026-07",
+          "2026-08",
+          "2026-09"
+        ],
+        "improving_months": [
+          "2026-03",
+          "2026-05",
+          "2026-08",
+          "2026-09"
+        ]
+      }
+    },
+    {
+      "check": "LR120_stage1_stage2_baseline_consistency",
+      "passed": true
+    },
+    {
+      "check": "LR120_stage1_stage3_baseline_consistency",
+      "passed": true
+    }
+  ],
+  "failed_checks": [],
+  "evaluation_recalculated": [
+    {
+      "stage": 1,
+      "arm": "RIDGE120_SIGN_SAVED",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 73,
+      "tn": 6,
+      "fp": 38,
+      "fn": 7,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 111,
+      "positive_call_fraction": 0.8951612903225806,
+      "accuracy": 0.6370967741935484,
+      "balanced_accuracy": 0.5244318181818182,
+      "precision": 0.6576576576576577,
+      "scored_positive_recall": 0.9125,
+      "complete_positive_recall": 0.9125,
+      "nonpositive_recall": 0.13636363636363635,
+      "FPR": 0.8636363636363636,
+      "F1": 0.7643979057591623,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 0,
+      "raw_score_Brier": null,
+      "raw_score_logloss": null
+    },
+    {
+      "stage": 1,
+      "arm": "LR120",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 71,
+      "tn": 6,
+      "fp": 38,
+      "fn": 9,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 109,
+      "positive_call_fraction": 0.8790322580645161,
+      "accuracy": 0.6209677419354839,
+      "balanced_accuracy": 0.5119318181818182,
+      "precision": 0.6513761467889908,
+      "scored_positive_recall": 0.8875,
+      "complete_positive_recall": 0.8875,
+      "nonpositive_recall": 0.13636363636363635,
+      "FPR": 0.8636363636363636,
+      "F1": 0.7513227513227513,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 124,
+      "raw_score_Brier": 0.2405234739105998,
+      "raw_score_logloss": 0.7042201586513565
+    },
+    {
+      "stage": 1,
+      "arm": "KNN120",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 80,
+      "tn": 0,
+      "fp": 44,
+      "fn": 0,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 124,
+      "positive_call_fraction": 1.0,
+      "accuracy": 0.6451612903225806,
+      "balanced_accuracy": 0.5,
+      "precision": 0.6451612903225806,
+      "scored_positive_recall": 1.0,
+      "complete_positive_recall": 1.0,
+      "nonpositive_recall": 0.0,
+      "FPR": 1.0,
+      "F1": 0.7843137254901961,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 124,
+      "raw_score_Brier": 0.22675736961451246,
+      "raw_score_logloss": 0.6474451775422546
+    },
+    {
+      "stage": 2,
+      "arm": "LR120",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 71,
+      "tn": 6,
+      "fp": 38,
+      "fn": 9,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 109,
+      "positive_call_fraction": 0.8790322580645161,
+      "accuracy": 0.6209677419354839,
+      "balanced_accuracy": 0.5119318181818182,
+      "precision": 0.6513761467889908,
+      "scored_positive_recall": 0.8875,
+      "complete_positive_recall": 0.8875,
+      "nonpositive_recall": 0.13636363636363635,
+      "FPR": 0.8636363636363636,
+      "F1": 0.7513227513227513,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 124,
+      "raw_score_Brier": 0.2405234739105998,
+      "raw_score_logloss": 0.7042201586513565
+    },
+    {
+      "stage": 2,
+      "arm": "LR120_NEGATIVE2",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 50,
+      "tn": 20,
+      "fp": 24,
+      "fn": 30,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 74,
+      "positive_call_fraction": 0.5967741935483871,
+      "accuracy": 0.5645161290322581,
+      "balanced_accuracy": 0.5397727272727273,
+      "precision": 0.6756756756756757,
+      "scored_positive_recall": 0.625,
+      "complete_positive_recall": 0.625,
+      "nonpositive_recall": 0.45454545454545453,
+      "FPR": 0.5454545454545454,
+      "F1": 0.6493506493506493,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 124,
+      "raw_score_Brier": 0.25639777479800724,
+      "raw_score_logloss": 0.7324985458553134
+    },
+    {
+      "stage": 3,
+      "arm": "LR120",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 71,
+      "tn": 6,
+      "fp": 38,
+      "fn": 9,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 109,
+      "positive_call_fraction": 0.8790322580645161,
+      "accuracy": 0.6209677419354839,
+      "balanced_accuracy": 0.5119318181818182,
+      "precision": 0.6513761467889908,
+      "scored_positive_recall": 0.8875,
+      "complete_positive_recall": 0.8875,
+      "nonpositive_recall": 0.13636363636363635,
+      "FPR": 0.8636363636363636,
+      "F1": 0.7513227513227513,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 124,
+      "raw_score_Brier": 0.2405234739105998,
+      "raw_score_logloss": 0.7042201586513565
+    },
+    {
+      "stage": 3,
+      "arm": "LR252",
+      "registered_dates": 147,
+      "known_target_dates": 124,
+      "predicted_dates": 147,
+      "scored_dates": 124,
+      "unknown_target_dates": 23,
+      "unknown_prediction_dates": 0,
+      "scoring_coverage": 0.8435374149659864,
+      "label_coverage": 0.8435374149659864,
+      "valid_label_scoring_coverage": 1.0,
+      "tp": 75,
+      "tn": 7,
+      "fp": 37,
+      "fn": 5,
+      "positive_count": 80,
+      "nonpositive_count": 44,
+      "called_positive": 112,
+      "positive_call_fraction": 0.9032258064516129,
+      "accuracy": 0.6612903225806451,
+      "balanced_accuracy": 0.5482954545454546,
+      "precision": 0.6696428571428571,
+      "scored_positive_recall": 0.9375,
+      "complete_positive_recall": 0.9375,
+      "nonpositive_recall": 0.1590909090909091,
+      "FPR": 0.8409090909090909,
+      "F1": 0.78125,
+      "all_positive_accuracy": 0.6451612903225806,
+      "all_nonpositive_accuracy": 0.3548387096774194,
+      "raw_score_dates": 124,
+      "raw_score_Brier": 0.22819997438619652,
+      "raw_score_logloss": 0.6794710742898441
+    }
+  ],
+  "monthly_recalculated": {
+    "1": [
+      {
+        "month": "2026-01",
+        "arm": "LR120",
+        "paired_dates": 14,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-01",
+        "arm": "KNN120",
+        "paired_dates": 14,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-02",
+        "arm": "LR120",
+        "paired_dates": 13,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-02",
+        "arm": "KNN120",
+        "paired_dates": 13,
+        "accuracy_difference": 0.07692307692307687
+      },
+      {
+        "month": "2026-03",
+        "arm": "LR120",
+        "paired_dates": 19,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-03",
+        "arm": "KNN120",
+        "paired_dates": 19,
+        "accuracy_difference": 0.1578947368421053
+      },
+      {
+        "month": "2026-04",
+        "arm": "LR120",
+        "paired_dates": 21,
+        "accuracy_difference": 0.04761904761904756
+      },
+      {
+        "month": "2026-04",
+        "arm": "KNN120",
+        "paired_dates": 21,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-05",
+        "arm": "LR120",
+        "paired_dates": 16,
+        "accuracy_difference": -0.0625
+      },
+      {
+        "month": "2026-05",
+        "arm": "KNN120",
+        "paired_dates": 16,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-06",
+        "arm": "LR120",
+        "paired_dates": 17,
+        "accuracy_difference": 0.05882352941176472
+      },
+      {
+        "month": "2026-06",
+        "arm": "KNN120",
+        "paired_dates": 17,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-07",
+        "arm": "LR120",
+        "paired_dates": 21,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-07",
+        "arm": "KNN120",
+        "paired_dates": 21,
+        "accuracy_difference": -0.04761904761904756
+      },
+      {
+        "month": "2026-08",
+        "arm": "LR120",
+        "paired_dates": 19,
+        "accuracy_difference": -0.10526315789473689
+      },
+      {
+        "month": "2026-08",
+        "arm": "KNN120",
+        "paired_dates": 19,
+        "accuracy_difference": -0.052631578947368474
+      },
+      {
+        "month": "2026-09",
+        "arm": "LR120",
+        "paired_dates": 11,
+        "accuracy_difference": -0.09090909090909094
+      },
+      {
+        "month": "2026-09",
+        "arm": "KNN120",
+        "paired_dates": 11,
+        "accuracy_difference": 0.0
+      }
+    ],
+    "2": [
+      {
+        "month": "2026-01",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 14,
+        "accuracy_difference": -0.1428571428571428
+      },
+      {
+        "month": "2026-02",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 13,
+        "accuracy_difference": -0.07692307692307698
+      },
+      {
+        "month": "2026-03",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 19,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-04",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 21,
+        "accuracy_difference": -0.1428571428571428
+      },
+      {
+        "month": "2026-05",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 16,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-06",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 17,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-07",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 21,
+        "accuracy_difference": -0.14285714285714285
+      },
+      {
+        "month": "2026-08",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 19,
+        "accuracy_difference": 0.05263157894736842
+      },
+      {
+        "month": "2026-09",
+        "arm": "LR120_NEGATIVE2",
+        "paired_dates": 11,
+        "accuracy_difference": -0.18181818181818182
+      }
+    ],
+    "3": [
+      {
+        "month": "2026-01",
+        "arm": "LR252",
+        "paired_dates": 14,
+        "accuracy_difference": 0.0714285714285714
+      },
+      {
+        "month": "2026-02",
+        "arm": "LR252",
+        "paired_dates": 13,
+        "accuracy_difference": 0.07692307692307687
+      },
+      {
+        "month": "2026-03",
+        "arm": "LR252",
+        "paired_dates": 19,
+        "accuracy_difference": 0.10526315789473684
+      },
+      {
+        "month": "2026-04",
+        "arm": "LR252",
+        "paired_dates": 21,
+        "accuracy_difference": -0.04761904761904756
+      },
+      {
+        "month": "2026-05",
+        "arm": "LR252",
+        "paired_dates": 16,
+        "accuracy_difference": 0.0625
+      },
+      {
+        "month": "2026-06",
+        "arm": "LR252",
+        "paired_dates": 17,
+        "accuracy_difference": 0.0
+      },
+      {
+        "month": "2026-07",
+        "arm": "LR252",
+        "paired_dates": 21,
+        "accuracy_difference": -0.04761904761904756
+      },
+      {
+        "month": "2026-08",
+        "arm": "LR252",
+        "paired_dates": 19,
+        "accuracy_difference": 0.15789473684210525
+      },
+      {
+        "month": "2026-09",
+        "arm": "LR252",
+        "paired_dates": 11,
+        "accuracy_difference": 0.09090909090909094
+      }
+    ]
+  },
+  "scope_clarification": "Original reports nested paired baseline/challenger metrics are paired-only, not full registration or full Recall. Full registration, unknown coverage and complete Recall are in summaries. In these actual artifacts each arm has the same scored-date set, so paired and full scored confusion/Recall values coincide; nested coverage=1 means 124/124 paired, not 124/147 registration. Current code now explicitly names PAIRED_ONLY; original reports remain intact.",
+  "uncertainty_boundary": "Original bootstrap interval values were not rerun or numerically revalidated. Fixed family4 tail specification .00625/.99375 was checked; monthly gate was independently counted using all fixed March-September months.",
+  "new_forward_samples": 0,
+  "production_model_changed": false,
+  "elapsed_seconds": 1.970207
+}

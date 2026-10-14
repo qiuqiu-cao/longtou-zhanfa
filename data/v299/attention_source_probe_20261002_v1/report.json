@@ -1,0 +1,210 @@
+{
+  "recorded_at": "2026-10-02T15:37:09.310971+00:00",
+  "requests": [
+    {
+      "kind": "discovery_source",
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/akfamily/akshare/main/akshare/stock/stock_hot_rank_em.py",
+      "query": null,
+      "requested_at": "2026-10-02T15:36:57.431567+00:00",
+      "available_at": "2026-10-02T15:36:58.496049+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v299\\attention_source_probe_20261002_v1\\discovery_source.response",
+      "raw_sha256": "ae9d8d85289085f8283caff1d587c6473e7da9635233dde6e021f4ad4848e4c1",
+      "final_url": "https://raw.githubusercontent.com/akfamily/akshare/main/akshare/stock/stock_hot_rank_em.py",
+      "status": "PRIMARY_SOURCE_RECEIVED"
+    },
+    {
+      "kind": "intraday",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "srcSecurityCode": "SH600825",
+        "marketType": ""
+      },
+      "requested_at": "2026-10-02T15:36:58.496254+00:00",
+      "available_at": "2026-10-02T15:37:01.499294+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v299\\attention_source_probe_20261002_v1\\intraday.response",
+      "raw_sha256": "920c5fbf8d6f897896f75918cf922627bb6b670541c24bda14242ecb48d7afbe",
+      "final_url": "https://emappdata.eastmoney.com/stockrank/getCurrentList",
+      "status": "RAW_JSON_RECEIVED",
+      "response_keys": [
+        "globalId",
+        "message",
+        "status",
+        "code",
+        "data",
+        "stack"
+      ],
+      "rows": 142,
+      "first": [
+        {
+          "calcTime": "2026-10-02 00:00:00",
+          "rank": 14
+        }
+      ],
+      "last": [
+        {
+          "calcTime": "2026-10-02 23:30:00",
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "kind": "profiles",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisProfileList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "srcSecurityCode": "SH600825",
+        "marketType": "",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-02T15:37:01.499506+00:00",
+      "available_at": "2026-10-02T15:37:03.956491+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v299\\attention_source_probe_20261002_v1\\profiles.response",
+      "raw_sha256": "5ee65f11fcf4b88656731363cd249ebf14ca8f1052301f96f23376e1f8e2f215",
+      "final_url": "https://emappdata.eastmoney.com/stockrank/getHisProfileList",
+      "status": "RAW_JSON_RECEIVED",
+      "response_keys": [
+        "globalId",
+        "message",
+        "status",
+        "code",
+        "data",
+        "stack"
+      ],
+      "rows": 365,
+      "first": [
+        {
+          "calcTime": "2025-10-03 23:00:00",
+          "innerCode": "600825",
+          "srcSecurityCode": "SH600825",
+          "uidCount": 0,
+          "newUidRate": "31.99%",
+          "newUidChangeRank": "0.27%",
+          "oldUidRate": "68.01%",
+          "oldUidChangeRank": "-0.27%",
+          "flag": 0
+        }
+      ],
+      "last": [
+        {
+          "calcTime": "2026-10-02 22:00:00",
+          "innerCode": "600825",
+          "srcSecurityCode": "SH600825",
+          "uidCount": 0,
+          "newUidRate": "38.22%",
+          "newUidChangeRank": "-0.54%",
+          "oldUidRate": "61.78%",
+          "oldUidChangeRank": "0.54%",
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "kind": "keywords",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHotStockRankList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "srcSecurityCode": "SH600825"
+      },
+      "requested_at": "2026-10-02T15:37:03.957097+00:00",
+      "available_at": "2026-10-02T15:37:06.377043+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v299\\attention_source_probe_20261002_v1\\keywords.response",
+      "raw_sha256": "51b430ea87c93155d65a1a294e9fe1521dedef05480575f348b80a37f55bf375",
+      "final_url": "https://emappdata.eastmoney.com/stockrank/getHotStockRankList",
+      "status": "RAW_JSON_RECEIVED",
+      "response_keys": [
+        "globalId",
+        "message",
+        "status",
+        "code",
+        "data",
+        "stack"
+      ],
+      "rows": 5,
+      "first": [
+        {
+          "calcTime": "2026-10-02 23:00:00",
+          "srcSecurityCode": "SH600825",
+          "conceptName": "沪企改革",
+          "conceptId": "BK0672",
+          "hitCount": 48,
+          "flag": 0
+        }
+      ],
+      "last": [
+        {
+          "calcTime": "2026-10-02 23:00:00",
+          "srcSecurityCode": "SH600825",
+          "conceptName": "电商概念",
+          "conceptId": "BK0665",
+          "hitCount": 1,
+          "flag": 0
+        }
+      ]
+    },
+    {
+      "kind": "related",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getFollowStockRankList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "srcSecurityCode": "SH600825"
+      },
+      "requested_at": "2026-10-02T15:37:06.377228+00:00",
+      "available_at": "2026-10-02T15:37:09.310775+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v299\\attention_source_probe_20261002_v1\\related.response",
+      "raw_sha256": "8797f2366ec5d1618d950c3d098b923e7cf2c16cf0ee4d112bb5c6fc336271ca",
+      "final_url": "https://emappdata.eastmoney.com/stockrank/getFollowStockRankList",
+      "status": "RAW_JSON_RECEIVED",
+      "response_keys": [
+        "globalId",
+        "message",
+        "status",
+        "code",
+        "data",
+        "stack"
+      ],
+      "rows": 10,
+      "first": [
+        {
+          "calcTime": "2026-10-02 22:00:00",
+          "innerCode": "600825",
+          "srcSecurityCode": "SH600825",
+          "followInnerCode": "gs80096445",
+          "followSrcSecurityCode": "SH601811",
+          "rate": "7.72%",
+          "flag": 0
+        }
+      ],
+      "last": [
+        {
+          "calcTime": "2026-10-02 22:00:00",
+          "innerCode": "600825",
+          "srcSecurityCode": "SH600825",
+          "followInnerCode": "gs80326081",
+          "followSrcSecurityCode": "SH603230",
+          "rate": "3.40%",
+          "flag": 0
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\probe_attention_sources_v299.py": "d2d41f8cdaf913f52c8aac521e913ae5670b1ea6987715324e155396d0e5bfef"
+  },
+  "original_forecast_modified": false,
+  "forum_consensus_verified": false
+}

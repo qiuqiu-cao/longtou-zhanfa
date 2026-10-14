@@ -1,0 +1,245 @@
+{
+  "version": "v259-historical-replay-calendar-audit-2",
+  "status": "LABEL_INVALID_DIAGNOSTIC_ONLY",
+  "source_audit": {
+    "source_rows": 9080,
+    "source_dates": 669,
+    "source_range": [
+      "2023-11-29",
+      "2026-09-01"
+    ],
+    "theme_available_rows": 0,
+    "complete_label_dates": 669
+  },
+  "target_date": "2026-09-01",
+  "train_rows": 7111,
+  "max_training_label_date": "2025-12-31",
+  "target_date_complete": false,
+  "calendar_audit": [
+    {
+      "date": "2026-09-01",
+      "code": "000560",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "000892",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "001330",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "002084",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "002679",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "002855",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "002909",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "003005",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "600121",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "600371",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "600540",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "600551",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "600892",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "601086",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "603533",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "603721",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    },
+    {
+      "date": "2026-09-01",
+      "code": "605577",
+      "trade_date": "2026-09-04",
+      "expected_trade_date": "2026-09-02",
+      "calendar_label_status": "WRONG_SESSION_LABEL",
+      "evaluation_label_valid": false
+    }
+  ],
+  "selections": {
+    "two_board:non_one_price": {
+      "candidate_rows": 6,
+      "market_risk_state": "NON_DIVERGENCE",
+      "baseline_comparator_only": [
+        {
+          "date": "2026-09-01",
+          "code": "001330",
+          "boards": 2,
+          "promoted_next_day": null
+        }
+      ],
+      "identity_model": [
+        {
+          "date": "2026-09-01",
+          "code": "603721",
+          "boards": 2,
+          "promoted_next_day": null,
+          "score_identity_emotion_price_volume": 0.586576178568549,
+          "calendar_label_status": "WRONG_SESSION_LABEL"
+        }
+      ]
+    },
+    "three_plus:non_one_price": {
+      "candidate_rows": 8,
+      "market_risk_state": "NON_DIVERGENCE",
+      "baseline_comparator_only": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": null
+        }
+      ],
+      "identity_model": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": null,
+          "score_identity_emotion_price_volume": 0.737621319060076,
+          "calendar_label_status": "WRONG_SESSION_LABEL"
+        }
+      ]
+    },
+    "all_boards:non_one_price": {
+      "candidate_rows": 14,
+      "market_risk_state": "NON_DIVERGENCE",
+      "baseline_comparator_only": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": null
+        }
+      ],
+      "identity_model": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": null,
+          "score_identity_emotion_price_volume": 0.737621319060076,
+          "calendar_label_status": "WRONG_SESSION_LABEL"
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "is_pristine_blind_test": false,
+    "is_forward_test": false,
+    "reason": "historical date and outcomes inspected before prediction registration",
+    "ranking_rule": "preserve diagnostic model ranking; V258 code-order fallback withdrawn",
+    "calibrated_probability": false,
+    "training_calendar_coverage": "NOT_FULLY_AUDITED_BY_THIS_TARGET_DATE_CHECK",
+    "actual_fill_count": 0,
+    "theme_and_intraday_missing": true,
+    "sample_warning": "one target date; not evidence of production win rate",
+    "entry_authorized": false
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_20260906\\leader_candidates.csv": "5a5e9986bf5b6394eb1a1d582a42fffddf17e091e431e43e7e07237226985b50",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v195\\trading_calendar_integrity_20260917_v4\\verified_trading_calendar.csv": "beb652b36d39600af927e91a293ef8e8a2cbc7bdea2c156beb81bf42ab523f80",
+    "D:\\Documents\\ChatGPT\\龙头战法\\frozen_v258_forward_check.py": "b3c665b875eca6ae54406586d0eb81d498991f25c3c54489d17349cc066af9d2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_promotion_holdout_v256.py": "604d83341387a0a7e4e12fd0871dc62a9cf50f5267b69dcd8f49c75cd6293e4f"
+  },
+  "artifact_hashes": {
+    "target_predictions_LABEL_ONLY.csv": "c003ae6a1281b106c749448e9ac59f249279aaa2a9b1180a7dd68644c99cdf5f"
+  }
+}

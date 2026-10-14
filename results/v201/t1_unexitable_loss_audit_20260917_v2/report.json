@@ -1,0 +1,135 @@
+{
+  "version": "v201-t1-unexitable-loss-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": {
+    "outcome_rows": 1116,
+    "outcome_sessions": 24,
+    "frozen_top1_sessions": 10
+  },
+  "all_candidates": {
+    "filled_open_proxy_rows": 1048,
+    "B_intraday_path_observed_rows": 1048,
+    "same_day_stop_executable_rows": 0,
+    "B_intraday_breach_minus_4pct": {
+      "known_rows": 1048,
+      "count": 447,
+      "rate": 0.4265267175572519,
+      "executable_same_day_exit_count": 0
+    },
+    "B_intraday_breach_minus_5pct": {
+      "known_rows": 1048,
+      "count": 317,
+      "rate": 0.30248091603053434,
+      "executable_same_day_exit_count": 0
+    },
+    "B_intraday_breach_minus_7pct": {
+      "known_rows": 1048,
+      "count": 143,
+      "rate": 0.1364503816793893,
+      "executable_same_day_exit_count": 0
+    },
+    "B_plus_1_exit_status_counts": {
+      "B_PLUS_1_OPEN_EXIT_PROXY": 1017,
+      "MISSING_B_PLUS_1_BAR": 22,
+      "OPEN_DOWN_LIMIT_QUEUE_UNVERIFIABLE": 5,
+      "ONE_PRICE_DOWN_LIMIT_UNSELLABLE": 4
+    },
+    "B_plus_1_open_exit_proxy": {
+      "known_executable_rows": 1017,
+      "mean_net_return": -0.01105779743526166,
+      "median_net_return": -0.018967448243676355,
+      "big_loss_rate": 0.10816125860373647
+    }
+  },
+  "frozen_emotion_top1": {
+    "filled_open_proxy_rows": 10,
+    "B_intraday_path_observed_rows": 10,
+    "same_day_stop_executable_rows": 0,
+    "B_intraday_breach_minus_4pct": {
+      "known_rows": 10,
+      "count": 5,
+      "rate": 0.5,
+      "executable_same_day_exit_count": 0
+    },
+    "B_intraday_breach_minus_5pct": {
+      "known_rows": 10,
+      "count": 5,
+      "rate": 0.5,
+      "executable_same_day_exit_count": 0
+    },
+    "B_intraday_breach_minus_7pct": {
+      "known_rows": 10,
+      "count": 2,
+      "rate": 0.2,
+      "executable_same_day_exit_count": 0
+    },
+    "B_plus_1_exit_status_counts": {
+      "B_PLUS_1_OPEN_EXIT_PROXY": 9,
+      "OPEN_DOWN_LIMIT_QUEUE_UNVERIFIABLE": 1
+    },
+    "B_plus_1_open_exit_proxy": {
+      "known_executable_rows": 9,
+      "mean_net_return": -0.0023464802825218355,
+      "median_net_return": -0.0170330533968851,
+      "big_loss_rate": 0.3333333333333333
+    }
+  },
+  "frozen_top1_tail_case_details": [
+    {
+      "signal_date": "2026-08-26",
+      "code": "600272",
+      "name": "开开实业",
+      "buy_date_B": "2026-08-27",
+      "B_intraday_mae_net_of_buy_cost": -0.08345046438323689,
+      "B_plus_1_exit_status": "B_PLUS_1_OPEN_EXIT_PROXY",
+      "B_plus_1_open_exit_net_return": -0.03760857107346438,
+      "existing_B_plus_1_close_net_return": -0.1001418390359719
+    },
+    {
+      "signal_date": "2026-08-27",
+      "code": "600721",
+      "name": "百花医药",
+      "buy_date_B": "2026-08-28",
+      "B_intraday_mae_net_of_buy_cost": -0.08198975461695368,
+      "B_plus_1_exit_status": "OPEN_DOWN_LIMIT_QUEUE_UNVERIFIABLE",
+      "B_plus_1_open_exit_net_return": null,
+      "existing_B_plus_1_close_net_return": -0.1513728243809775
+    }
+  ],
+  "execution_contract": {
+    "B_is_buy_session": true,
+    "mainboard_A_share_same_day_sale_allowed": false,
+    "B_intraday_threshold_is_executable_stop": false,
+    "earliest_daily_bar_exit_proxy": "B_plus_1_open",
+    "one_price_B_plus_1_down_limit_is_sellable": false,
+    "open_down_limit_then_break_queue_fill_assumed": false,
+    "daily_bar_can_verify_queue_position": false
+  },
+  "official_basis": {
+    "sse_rule": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml",
+    "szse_rule": "https://docs.static.szse.cn/www/lawrules/rule/trade/current/W020260424690713155663.pdf",
+    "rule_summary": "Securities bought by an investor may not be sold before settlement unless the product is explicitly eligible for turnaround trading; ordinary mainboard A shares are not in the same-day list."
+  },
+  "governance": {
+    "same_day_stop_may_be_backtested_as_executed": false,
+    "B_plus_1_down_limit_queue_may_be_assumed_filled": false,
+    "fixed_stop_loss_guarantee_allowed": false,
+    "pre_entry_veto_or_position_limit_required": true,
+    "entry_authorized": false
+  },
+  "interpretation": "A B-session drawdown is an unexitable exposure under T+1, not a stop-fill. Risk control must therefore act before entry through abstention and position limits, then use the earliest actually executable B+1 evidence. A lower-limit opening cannot be treated as a guaranteed sale without queue evidence.",
+  "limitations": [
+    "daily bars do not identify whether the intraday low occurred before or after any later confirmation entry",
+    "daily bars cannot verify B+1 lower-limit queue position, partial fills or cancellation sequence",
+    "the entry remains an opening-auction proxy and not a broker-confirmed fill",
+    "the inspected sample is not a sealed final blind test"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv": "25f907b16d2436688608eca063bd850c708d60d4b0630b6ccaa3c4e864b3636a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v196\\first_board_profit_ranker_20260917_v2\\daily_top1_no_replacement.csv": "c3294b4778d66644ffe6fb7f322eee3da4be6cc0e1808b8fb6f1342922872a87"
+  },
+  "artifact_hashes": {
+    "t1_unexitable_loss_rows.csv": "85509045fe5e1b4ba2d9341ecfc90fb3cc72bb48d9e1abc4fb7699357ed25b89"
+  }
+}

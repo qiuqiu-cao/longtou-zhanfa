@@ -1,0 +1,127 @@
+{
+  "audit_version": "short-term-critical-gaps-1",
+  "audited_at": "2026-10-13T00:16:51+08:00",
+  "scope": "Read-only audit of the four short-term checks, role evidence, sampled history and confirmation contract; only the two requested audit documents were written.",
+  "status": "INITIAL_AUDIT_WITH_PARTIAL_FIX_REVIEW",
+  "model_scores_viewed": false,
+  "new_external_sources_collected": false,
+  "numerical_fits": 0,
+  "new_mature_forward_samples": 0,
+  "predictive_improvement_verified": false,
+  "source_bindings_at_audit": {
+    "D:/Documents/ChatGPT/龙头战法/stock_short_term_context.py": "6e0dfa824f5ea288ec2ef66d3986dac907fb83af0e9b1c3a2c7457a6f71351af",
+    "D:/Documents/ChatGPT/龙头战法/leader_role_engine.py": "6c68facf27cfff65c5bcdb8d549fa9281bfb832e5c7aa79a894a6533f9ce6e0c",
+    "D:/Documents/ChatGPT/龙头战法/leader_role_review.py": "9d843f09bc128f4a3419a142fb47fcd2755f0950cb251382c245f2d02d0a372c",
+    "D:/Documents/ChatGPT/龙头战法/stock_catalyst_context.py": "b216fabab824c43c3c956fd6fcbb956739b94eb0e462c7c54d53e8cffb5c3c21",
+    "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/short_term_thinking_20261012T153000Z/current18_short_term_FINAL.json": "e85ef496e222902c750a13e46ea8915c35b74d763bdf1a9f006b1250554a54f9"
+  },
+  "saved_projection_observation": {
+    "file": "research/model_upgrade_validation/short_term_thinking_20261012T153000Z/current18_short_term_FINAL.json",
+    "signal_date": "2026-10-12",
+    "target_date": "2026-10-13",
+    "track": "DIAGNOSTIC",
+    "complete_original_candidates": 18,
+    "supported_allowed_counts": {
+      "launch_and_continuation": 0,
+      "theme_transition": 0,
+      "independent_strength": 0,
+      "absorption_and_competition": 0
+    },
+    "nonempty_counterevidence_ref_counts": {
+      "launch_and_continuation": 0,
+      "theme_transition": 0,
+      "independent_strength": 0,
+      "absorption_and_competition": 0
+    },
+    "interpretation": "A correctly unknown diagnostic appendix is not evidence that lifecycle reasoning is operationally complete or predictively improved. It is not an original-time prediction."
+  },
+  "gaps": [
+    {
+      "id": "G01",
+      "priority": "P1",
+      "title": "事前预期尚未成为可检验契约",
+      "interfaces": ["stock_short_term_context.validate_assessments", "leader_role_review.confirm"],
+      "evidence": "confirmation_plan validates only a future timestamp, PENDING and nonempty requirement text. The audited confirm verifies dates, source hashes and pool membership, but not a prior expectation identifier, declared observable, comparator, value or a source pointer. Empty source_bindings and duplicate confirmation codes are not explicitly rejected.",
+      "root_cause": "A written requirement is not a frozen rule that can distinguish expectation met, exceeded, contradicted and still unknown.",
+      "minimum_change": "Before observation, freeze an expectation ID, exact stock/session/observation time, observable, comparison rule, source requirements, cancellation rule and unknown handling. Append a later observation linked to that exact ID and exact source value; reject empty bindings, duplicates and late redefinition. Use unknown when the required source is unavailable.",
+      "implementation_owner": "expectation_design agent (separate implementation; this audit does not certify completion)",
+      "prediction_effect_status": "UNVERIFIED"
+    },
+    {
+      "id": "G02",
+      "priority": "P1",
+      "title": "有真实反证时也难以撤销生命周期假设",
+      "interfaces": ["stock_short_term_context.project_rows", "stock_short_term_context._check", "stock_short_term_context.validate_assessments"],
+      "evidence": "launch_and_continuation, theme_transition and absorption_and_competition always receive an empty counterevidence_refs list. CONTRADICTED requires nonempty refs that are a subset of that list, so these three checks can never be contradicted through the current API. independent_strength only permits pressure_after_invalidated. All 18 saved rows have empty counterevidence_refs for all four checks.",
+      "root_cause": "Missing evidence and observed refutation are not represented symmetrically. Free-text counterevidence does not reach the bound state transition.",
+      "minimum_change": "For each explicitly defined hypothesis, project concrete observed refutations and their source pointers, then accept CONTRADICTED only when those refs exist. Keep missing source, absent coverage and an unobserved next-day outcome UNKNOWN. Separate launch-date and continuation hypotheses so failure of one does not erase the other.",
+      "minimum_verification": "A source-bound true refutation can be frozen as CONTRADICTED; missing data cannot; invented refs cannot. Preserve the complete original pool and prior records.",
+      "followup_review": {
+        "reviewed_at": "2026-10-13T00:19:58+08:00",
+        "status": "PARTIALLY_FIXED_BY_PARENT_CODE_CHANGE",
+        "observed_change": "project_rows now supplies actual observed counterrefs for board non-continuation, unchanged specific-theme membership, current same-theme non-outperformance and a qualified path ending OPEN. The absolute inability to use CONTRADICTED for three checks is removed.",
+        "remaining_scope_requirement": "The respective counterrefs refute only observed board continuation, stock membership change, current relative outperformance and reseal by the last observed path timestamp. They must not deny an unknown launch cause, market-mainline change, narrative switch, historical autonomy or a later unobserved reseal. Bind a target claim and explicit observed window to the ref."
+      },
+      "prediction_effect_status": "UNVERIFIED"
+    },
+    {
+      "id": "G03",
+      "priority": "P1",
+      "title": "原文存在与股票—交易题材关系仍有语义混用",
+      "interfaces": ["stock_catalyst_context.validate_bank", "stock_catalyst_context.build_rows", "stock_short_term_context.project_rows topic_narratives"],
+      "evidence": "The October 12 Jiuyang claim in the saved catalyst context is a board-count summary naming Jiuyang's sixth board. It is classified NARRATIVE and gives PRESENT_IN_CHECKED_SOURCE, but theme_id is null. The short-term projection correctly excludes it from specific_topic_narratives and does not certify a launch cause. validate_bank checks exact excerpt and stock anchor but does not check an explicit stock-to-topic relation; a future manually assigned matching theme_id would still be only a string unless separately reviewed.",
+      "root_cause": "A stock mention, a price/board summary, an explicit traded narrative, a business relation and an official event are different claims but the first three are not fully separated in the claim contract.",
+      "minimum_change": "Distinguish STOCK_MENTION, PRICE_OR_BOARD_SUMMARY and EXPLICIT_TRADE_NARRATIVE. Require an independently reviewed stock-to-specific-topic relation with exact topic/stock evidence offsets or an explicitly reviewed cross-sentence relation. Display verified original text and verified trade-topic relation as separate fields. Neither certifies fund causality or core identity.",
+      "current_protection": "The existing no-theme-id rejection is useful and must remain. Do not describe this audit as finding an already false Jiuyang launch verdict.",
+      "prediction_effect_status": "UNVERIFIED"
+    },
+    {
+      "id": "G04",
+      "priority": "P1",
+      "title": "竞争路径仍是口号而非逐对反事实判断",
+      "interfaces": ["leader_role_engine._valid_group competition", "stock_short_term_context.project_rows absorption_and_competition"],
+      "evidence": "The output hardcodes joint_promotion_joint_failure_and_position_competition_all_possible=True. competition validation accepts the supplied peer_codes and complete_within_scope=True but does not compare those peers to the complete bound same-height or required specific-theme roster. A pure-function check confirmed that a one-peer subset passes without any roster comparison.",
+      "root_cause": "Possible joint outcomes are declared globally, while the analyst is not required to identify which competitor, which synchronised evidence, and which change would alter the stock's hypothesis.",
+      "minimum_change": "Bind a peer-scope identifier and reconstruct the required peers from the saved complete pool/theme. For each relevant competitor retain joint promotion, joint failure and divergent-strength paths, each with observed support, refutation and unknowns. Do not predeclare one winner or infer causality from coincident failure.",
+      "minimum_verification": "Omitting a required rival is rejected; changing the scope is explicit; a genuinely sole candidate can remain valid without fabricating a rival.",
+      "prediction_effect_status": "UNVERIFIED"
+    },
+    {
+      "id": "G05",
+      "priority": "P1",
+      "title": "当日角色与跨日角色延续门禁不够明确",
+      "interfaces": ["leader_role_engine._valid_group cycle", "leader_role_engine.evidence_row", "stock_short_term_context.project_rows independent_strength", "leader_role_review.freeze role_assessment"],
+      "evidence": "cycle records need only end on or before the signal date. A pure-function check returned True for an October 12 candidate with three records ending September 29; evidence_row derives cycle_is_* from that stale last record. The independent-strength before_after_core_retained gate uses survived and role_retained, but not the computed pressure_pre_event_core, so before COMPETING and after CORE can be described as core retained. Role freeze also checks required-group availability, but does not require specific per-role support/refutation refs for EVIDENCE_SUPPORTED or INVALIDATED.",
+      "root_cause": "Source presence, evidence freshness, emergence of a role and retention of a role are not the same condition.",
+      "minimum_change": "Require the current cycle observation for the signal session, or mark an explicit validity period and stale UNKNOWN. Require a source-bound pre-event CORE state to use core retained; otherwise label emergence or competition strengthening. Preserve a dated role transition record with supporting and invalidating evidence, without auto-certifying a leader.",
+      "minimum_verification": "Stale cycle cannot be rendered as the current stage; COMPETING-to-CORE cannot satisfy retained-core; missing intermediate sessions remain unknown.",
+      "followup_review": {
+        "reviewed_at": "2026-10-13T00:19:58+08:00",
+        "status": "PARTIALLY_FIXED_BY_PARENT_CODE_CHANGE",
+        "observed_change": "The short-term _qualified_group now requires cycle.records[-1].date to match the row signal_date. independent_strength now requires pressure_pre_event_core==1. These two local changes address the identified current-cycle and retained-core defects without rewriting the legacy engine fields or frozen outputs.",
+        "remaining_gap": "Per-role claim scope, dated emergence/retention/invalidation transitions and precise per-role evidence references remain separate work. Legacy engine freshness behavior is retained for compatibility and should not be mistaken for a repaired engine-wide gate."
+      },
+      "prediction_effect_status": "UNVERIFIED"
+    },
+    {
+      "id": "G06",
+      "priority": "P2",
+      "title": "五分钟价格事实不能完成盘口承接、切换时刻和可买性判断",
+      "interfaces": ["leader_role_engine.sampled_price_path", "leader_role_engine.sampled_history", "stock_short_term_context.project_rows absorption_and_competition", "leader_role_review.confirm"],
+      "evidence": "sampled_price_path correctly fixes tick_path_verified, auction_verified, order_book_seal_verified and absorption_verified to false and leaves actual_reseal_verified/open duration unknown. sampled_path is separate from the complete path group required by TURNOVER and absorption checks. Thus a five-minute limit-close/drop/limit-close sequence cannot fill the richer opening/reseal contract, and the saved 18-stock appendix has zero supported absorption checks.",
+      "root_cause": "The information granularity cannot determine intra-bar order, actual queue stability, executable fills, auction changes or the exact moment of narrative switching.",
+      "minimum_change": "Keep a distinct observed-price-path assessment that can use already saved five-minute facts. Reserve seal/absorption/tradability conclusions for appropriately granular actual sources. At 09:25/09:35/10:00 append only available synchronised stock, peer and theme observations with true acquisition times; do not broaden collection or relabel unavailable data.",
+      "minimum_verification": "Five-minute price recovery can be supported while actual reseal, absorption and executable entry remain UNKNOWN. Missing observations cannot become failure.",
+      "prediction_effect_status": "UNVERIFIED"
+    }
+  ],
+  "corrected_audit_interpretation": "Repeated OPEN events do not reset the open timer: evidence_row already guards opened is None. No open-duration bug is claimed for that case.",
+  "followup_test_report": {
+    "source": "Parent agent message",
+    "reported_relevant_tests_passed": 15,
+    "reported_new_tests": 3,
+    "independently_rerun_by_this_auditor": false,
+    "interpretation": "The partial fixes were inspected in code. Test results belong to the parent implementation evidence and are not prediction accuracy."
+  },
+  "boundary": "No code was changed by this auditor. Parent code changes were inspected and marked explicitly as partial fixes. Source verification, pure-function acceptance checks and written findings are not predictive improvement, identity truth, deployment authority or a new forward sample. Concurrent implementation must report its own final changes and validation."
+}

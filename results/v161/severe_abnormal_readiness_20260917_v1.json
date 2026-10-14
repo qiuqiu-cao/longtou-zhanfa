@@ -1,0 +1,243 @@
+{
+  "version": "v161-severe-abnormal-readiness-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scanned_events": 217,
+  "official_confirmed_events": 2,
+  "training_ready_labels": 0,
+  "rule_ids": [
+    "SSE_MAIN_20230217",
+    "SSE_MAIN_20260706",
+    "SZSE_MAIN_20230217",
+    "SZSE_MAIN_20260706"
+  ],
+  "benchmark_audit": {
+    "required_symbols": [
+      "sh000002",
+      "sz399107"
+    ],
+    "per_symbol": {
+      "sh000002": {
+        "present": true,
+        "rows": 692,
+        "date_min": "2023-11-01",
+        "date_max": "2026-09-04",
+        "data_status_values": [
+          "provider_observed_not_official_reconciled"
+        ],
+        "official_reconciled": false,
+        "missing_event_date_count": 0,
+        "insufficient_window_history_count": 0
+      },
+      "sz399107": {
+        "present": true,
+        "rows": 692,
+        "date_min": "2023-11-01",
+        "date_max": "2026-09-04",
+        "data_status_values": [
+          "provider_observed_not_official_reconciled"
+        ],
+        "official_reconciled": false,
+        "missing_event_date_count": 0,
+        "insufficient_window_history_count": 0
+      }
+    },
+    "calendar_complete_for_scanned_events": true,
+    "official_reconciliation_complete": false,
+    "issues": [
+      "BENCHMARK_NOT_OFFICIAL_RECONCILED:sh000002",
+      "BENCHMARK_NOT_OFFICIAL_RECONCILED:sz399107"
+    ]
+  },
+  "stock_data_audit": {
+    "required_columns_present": false,
+    "missing_columns": [
+      "adjustment_status",
+      "price_limit_status"
+    ],
+    "matched_event_rows": 0,
+    "point_in_time_eligibility_complete": false,
+    "corporate_action_treatment_complete": false,
+    "price_limit_eligibility_complete": false,
+    "full_market_universe_complete": false
+  },
+  "label_support": {
+    "positive": 0,
+    "negative": 0,
+    "distinct_sessions": 0,
+    "candidate_groups": {
+      "FIRST_BOARD": 0,
+      "CONSECUTIVE_BOARD": 0
+    }
+  },
+  "gates": [
+    {
+      "name": "official_rule_version_coverage",
+      "passed": true,
+      "observed": 4,
+      "requirement": "one verified exchange rule for every event date"
+    },
+    {
+      "name": "benchmark_calendar_coverage",
+      "passed": true,
+      "observed": {
+        "sh000002": {
+          "present": true,
+          "rows": 692,
+          "date_min": "2023-11-01",
+          "date_max": "2026-09-04",
+          "data_status_values": [
+            "provider_observed_not_official_reconciled"
+          ],
+          "official_reconciled": false,
+          "missing_event_date_count": 0,
+          "insufficient_window_history_count": 0
+        },
+        "sz399107": {
+          "present": true,
+          "rows": 692,
+          "date_min": "2023-11-01",
+          "date_max": "2026-09-04",
+          "data_status_values": [
+            "provider_observed_not_official_reconciled"
+          ],
+          "official_reconciled": false,
+          "missing_event_date_count": 0,
+          "insufficient_window_history_count": 0
+        }
+      },
+      "requirement": "benchmark event dates and complete rule windows"
+    },
+    {
+      "name": "benchmark_official_reconciliation",
+      "passed": false,
+      "observed": {
+        "sh000002": {
+          "present": true,
+          "rows": 692,
+          "date_min": "2023-11-01",
+          "date_max": "2026-09-04",
+          "data_status_values": [
+            "provider_observed_not_official_reconciled"
+          ],
+          "official_reconciled": false,
+          "missing_event_date_count": 0,
+          "insufficient_window_history_count": 0
+        },
+        "sz399107": {
+          "present": true,
+          "rows": 692,
+          "date_min": "2023-11-01",
+          "date_max": "2026-09-04",
+          "data_status_values": [
+            "provider_observed_not_official_reconciled"
+          ],
+          "official_reconciled": false,
+          "missing_event_date_count": 0,
+          "insufficient_window_history_count": 0
+        }
+      },
+      "requirement": "officially reconciled benchmark closes"
+    },
+    {
+      "name": "official_publication_reset_chronology",
+      "passed": false,
+      "observed": null,
+      "requirement": "verified complete publications and resets"
+    },
+    {
+      "name": "stock_corporate_action_treatment",
+      "passed": false,
+      "observed": {
+        "required_columns_present": false,
+        "missing_columns": [
+          "adjustment_status",
+          "price_limit_status"
+        ],
+        "matched_event_rows": 0,
+        "point_in_time_eligibility_complete": false,
+        "corporate_action_treatment_complete": false,
+        "price_limit_eligibility_complete": false,
+        "full_market_universe_complete": false
+      },
+      "requirement": "verified treatment for every event row"
+    },
+    {
+      "name": "point_in_time_security_and_limit_status",
+      "passed": false,
+      "observed": {
+        "required_columns_present": false,
+        "missing_columns": [
+          "adjustment_status",
+          "price_limit_status"
+        ],
+        "matched_event_rows": 0,
+        "point_in_time_eligibility_complete": false,
+        "corporate_action_treatment_complete": false,
+        "price_limit_eligibility_complete": false,
+        "full_market_universe_complete": false
+      },
+      "requirement": "verified non-ST/new-listing and limit applicability"
+    },
+    {
+      "name": "complete_candidate_universe",
+      "passed": false,
+      "observed": {
+        "library": null,
+        "daily": false
+      },
+      "requirement": "verified full-market eligible candidate set"
+    },
+    {
+      "name": "point_in_time_feature_timestamps",
+      "passed": false,
+      "observed": 0,
+      "requirement": "feature and outcome availability timestamps on every label"
+    },
+    {
+      "name": "right_censoring_safe_horizon",
+      "passed": false,
+      "observed": 0,
+      "requirement": "declared positive horizon and fully observed outcome"
+    },
+    {
+      "name": "minimum_verified_label_support",
+      "passed": false,
+      "observed": {
+        "positive": 0,
+        "negative": 0,
+        "sessions": 0,
+        "groups": {
+          "FIRST_BOARD": 0,
+          "CONSECUTIVE_BOARD": 0
+        }
+      },
+      "requirement": {
+        "positive": 100,
+        "negative": 100,
+        "sessions": 250,
+        "each_group": 30
+      }
+    }
+  ],
+  "failed_gates": [
+    "benchmark_official_reconciliation",
+    "official_publication_reset_chronology",
+    "stock_corporate_action_treatment",
+    "point_in_time_security_and_limit_status",
+    "complete_candidate_universe",
+    "point_in_time_feature_timestamps",
+    "right_censoring_safe_horizon",
+    "minimum_verified_label_support"
+  ],
+  "calibrated_hit_probability_allowed": false,
+  "candidate_reranking_allowed": false,
+  "diagnostic_counterfactual_path_rating_allowed": true,
+  "missing_values_treated_as_zero": false,
+  "interpretation": "A formal 100%/200% rule-distance path may be shown as a diagnostic only; it is not a hit probability, buy signal, overflow guarantee, or proof that an exchange publication will occur.",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v19\\target_event_library_20260904.json": "7b30a6111ab5ef839133dbc835dd1e7bb359def8bcc7c5a1f16eb14d50cc7f9c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv": "7ca5ad1fad2bfbf674a2050a867d6e43c63e182ae2e717e4e4adfe48e315929d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v18\\benchmarks_20260904\\sh000002.csv": "811fca3da9259f9a684f263deb4fd3cb8258a4babb759ccd7a6fc3ac3094d775",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v18\\benchmarks_20260904\\sz399107.csv": "ea90e3c12a41839b38ca2b98b38f65393f9f0ba8b573069cafc91c0ce4ffe4fb"
+  }
+}

@@ -1,0 +1,749 @@
+{
+  "created_at_utc": "2026-10-02T20:51:01.749709+00:00",
+  "status": "FIXED_COMPARISON_COMPLETE_NO_UPGRADE",
+  "metrics": {
+    "baseline": {
+      "nonword_rank_top1": {
+        "hits": 7,
+        "scorable_dates": 13,
+        "rate": 0.5384615384615384
+      },
+      "positive_nonword_top1": {
+        "registered_calls": 6,
+        "scorable_calls": 5,
+        "hits": 3,
+        "rate": 0.6
+      },
+      "all_candidate_binary": {
+        "registered": 182,
+        "scorable": 133,
+        "unknown": 49,
+        "coverage": 0.7307692307692307,
+        "accuracy": 0.6165413533834586,
+        "precision": 0.5588235294117647,
+        "known_label_recall": 0.34545454545454546,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.42696629213483145,
+        "confusion": {
+          "tp": 19,
+          "fp": 15,
+          "fn": 36,
+          "tn": 63
+        },
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "nonword_binary": {
+        "registered": 143,
+        "scorable": 107,
+        "unknown": 36,
+        "coverage": 0.7482517482517482,
+        "accuracy": 0.6448598130841121,
+        "precision": 0.6,
+        "known_label_recall": 0.15,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.24,
+        "confusion": {
+          "tp": 6,
+          "fp": 4,
+          "fn": 34,
+          "tn": 63
+        },
+        "all_fail_accuracy": 0.6261682242990654,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "by_height_binary": {
+        "2": {
+          "registered": 113,
+          "scorable": 86,
+          "unknown": 27,
+          "coverage": 0.7610619469026548,
+          "accuracy": 0.627906976744186,
+          "precision": 0.5294117647058824,
+          "known_label_recall": 0.2727272727272727,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.36,
+          "confusion": {
+            "tp": 9,
+            "fp": 8,
+            "fn": 24,
+            "tn": 45
+          },
+          "all_fail_accuracy": 0.6162790697674418,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "3": {
+          "registered": 41,
+          "scorable": 28,
+          "unknown": 13,
+          "coverage": 0.6829268292682927,
+          "accuracy": 0.6071428571428571,
+          "precision": 0.6666666666666666,
+          "known_label_recall": 0.42857142857142855,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.5217391304347826,
+          "confusion": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 8,
+            "tn": 11
+          },
+          "all_fail_accuracy": 0.5,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "4": {
+          "registered": 15,
+          "scorable": 11,
+          "unknown": 4,
+          "coverage": 0.7333333333333333,
+          "accuracy": 0.45454545454545453,
+          "precision": 0.25,
+          "known_label_recall": 0.25,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.25,
+          "confusion": {
+            "tp": 1,
+            "fp": 3,
+            "fn": 3,
+            "tn": 4
+          },
+          "all_fail_accuracy": 0.6363636363636364,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "5": {
+          "registered": 6,
+          "scorable": 5,
+          "unknown": 1,
+          "coverage": 0.8333333333333334,
+          "accuracy": 0.8,
+          "precision": 1.0,
+          "known_label_recall": 0.6666666666666666,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.8,
+          "confusion": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "tn": 2
+          },
+          "all_fail_accuracy": 0.4,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "6": {
+          "registered": 5,
+          "scorable": 3,
+          "unknown": 2,
+          "coverage": 0.6,
+          "accuracy": 0.6666666666666666,
+          "precision": 0.5,
+          "known_label_recall": 1.0,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.6666666666666666,
+          "confusion": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "tn": 1
+          },
+          "all_fail_accuracy": 0.6666666666666666,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "7": {
+          "registered": 2,
+          "scorable": 0,
+          "unknown": 2,
+          "coverage": 0.0,
+          "accuracy": null,
+          "precision": null,
+          "known_label_recall": null,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": null,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "all_fail_accuracy": null,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        }
+      },
+      "latest20_official_sessions_historical": {
+        "registered": 165,
+        "scorable": 133,
+        "unknown": 32,
+        "coverage": 0.806060606060606,
+        "accuracy": 0.6165413533834586,
+        "precision": 0.5588235294117647,
+        "known_label_recall": 0.34545454545454546,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.42696629213483145,
+        "confusion": {
+          "tp": 19,
+          "fp": 15,
+          "fn": 36,
+          "tn": 63
+        },
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "latest60_historical": {
+        "status": "UNAVAILABLE_FIXED_OOS_ONLY_COVERS_SEPTEMBER",
+        "reason": "do not combine training/in-sample scores with this fixed evaluation"
+      },
+      "true_forward20_60": {
+        "status": "UNAVAILABLE_NO_NEW_SETTLED_FORWARD_SAMPLES"
+      }
+    },
+    "A": {
+      "nonword_rank_top1": {
+        "hits": 9,
+        "scorable_dates": 13,
+        "rate": 0.6923076923076923
+      },
+      "positive_nonword_top1": {
+        "registered_calls": 5,
+        "scorable_calls": 4,
+        "hits": 3,
+        "rate": 0.75
+      },
+      "all_candidate_binary": {
+        "registered": 182,
+        "scorable": 133,
+        "unknown": 49,
+        "coverage": 0.7307692307692307,
+        "accuracy": 0.5939849624060151,
+        "precision": 0.5161290322580645,
+        "known_label_recall": 0.2909090909090909,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.37209302325581395,
+        "confusion": {
+          "tp": 16,
+          "fp": 15,
+          "fn": 39,
+          "tn": 63
+        },
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "nonword_binary": {
+        "registered": 143,
+        "scorable": 107,
+        "unknown": 36,
+        "coverage": 0.7482517482517482,
+        "accuracy": 0.6355140186915887,
+        "precision": 0.5555555555555556,
+        "known_label_recall": 0.125,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.20408163265306123,
+        "confusion": {
+          "tp": 5,
+          "fp": 4,
+          "fn": 35,
+          "tn": 63
+        },
+        "all_fail_accuracy": 0.6261682242990654,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "by_height_binary": {
+        "2": {
+          "registered": 113,
+          "scorable": 86,
+          "unknown": 27,
+          "coverage": 0.7610619469026548,
+          "accuracy": 0.6046511627906976,
+          "precision": 0.46153846153846156,
+          "known_label_recall": 0.18181818181818182,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.2608695652173913,
+          "confusion": {
+            "tp": 6,
+            "fp": 7,
+            "fn": 27,
+            "tn": 46
+          },
+          "all_fail_accuracy": 0.6162790697674418,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "3": {
+          "registered": 41,
+          "scorable": 28,
+          "unknown": 13,
+          "coverage": 0.6829268292682927,
+          "accuracy": 0.6071428571428571,
+          "precision": 0.6666666666666666,
+          "known_label_recall": 0.42857142857142855,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.5217391304347826,
+          "confusion": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 8,
+            "tn": 11
+          },
+          "all_fail_accuracy": 0.5,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "4": {
+          "registered": 15,
+          "scorable": 11,
+          "unknown": 4,
+          "coverage": 0.7333333333333333,
+          "accuracy": 0.36363636363636365,
+          "precision": 0.2,
+          "known_label_recall": 0.25,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.2222222222222222,
+          "confusion": {
+            "tp": 1,
+            "fp": 4,
+            "fn": 3,
+            "tn": 3
+          },
+          "all_fail_accuracy": 0.6363636363636364,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "5": {
+          "registered": 6,
+          "scorable": 5,
+          "unknown": 1,
+          "coverage": 0.8333333333333334,
+          "accuracy": 0.8,
+          "precision": 1.0,
+          "known_label_recall": 0.6666666666666666,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.8,
+          "confusion": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "tn": 2
+          },
+          "all_fail_accuracy": 0.4,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "6": {
+          "registered": 5,
+          "scorable": 3,
+          "unknown": 2,
+          "coverage": 0.6,
+          "accuracy": 0.6666666666666666,
+          "precision": 0.5,
+          "known_label_recall": 1.0,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.6666666666666666,
+          "confusion": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "tn": 1
+          },
+          "all_fail_accuracy": 0.6666666666666666,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "7": {
+          "registered": 2,
+          "scorable": 0,
+          "unknown": 2,
+          "coverage": 0.0,
+          "accuracy": null,
+          "precision": null,
+          "known_label_recall": null,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": null,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "all_fail_accuracy": null,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        }
+      },
+      "latest20_official_sessions_historical": {
+        "registered": 165,
+        "scorable": 133,
+        "unknown": 32,
+        "coverage": 0.806060606060606,
+        "accuracy": 0.5939849624060151,
+        "precision": 0.5161290322580645,
+        "known_label_recall": 0.2909090909090909,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.37209302325581395,
+        "confusion": {
+          "tp": 16,
+          "fp": 15,
+          "fn": 39,
+          "tn": 63
+        },
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "latest60_historical": {
+        "status": "UNAVAILABLE_FIXED_OOS_ONLY_COVERS_SEPTEMBER",
+        "reason": "do not combine training/in-sample scores with this fixed evaluation"
+      },
+      "true_forward20_60": {
+        "status": "UNAVAILABLE_NO_NEW_SETTLED_FORWARD_SAMPLES"
+      }
+    },
+    "B": {
+      "nonword_rank_top1": {
+        "hits": 8,
+        "scorable_dates": 13,
+        "rate": 0.6153846153846154
+      },
+      "positive_nonword_top1": {
+        "registered_calls": 5,
+        "scorable_calls": 4,
+        "hits": 2,
+        "rate": 0.5
+      },
+      "all_candidate_binary": {
+        "registered": 182,
+        "scorable": 133,
+        "unknown": 49,
+        "coverage": 0.7307692307692307,
+        "accuracy": 0.6015037593984962,
+        "precision": 0.5333333333333333,
+        "known_label_recall": 0.2909090909090909,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.3764705882352941,
+        "confusion": {
+          "tp": 16,
+          "fp": 14,
+          "fn": 39,
+          "tn": 64
+        },
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "nonword_binary": {
+        "registered": 143,
+        "scorable": 107,
+        "unknown": 36,
+        "coverage": 0.7482517482517482,
+        "accuracy": 0.6448598130841121,
+        "precision": 0.625,
+        "known_label_recall": 0.125,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.20833333333333334,
+        "confusion": {
+          "tp": 5,
+          "fp": 3,
+          "fn": 35,
+          "tn": 64
+        },
+        "all_fail_accuracy": 0.6261682242990654,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "by_height_binary": {
+        "2": {
+          "registered": 113,
+          "scorable": 86,
+          "unknown": 27,
+          "coverage": 0.7610619469026548,
+          "accuracy": 0.6162790697674418,
+          "precision": 0.5,
+          "known_label_recall": 0.18181818181818182,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.26666666666666666,
+          "confusion": {
+            "tp": 6,
+            "fp": 6,
+            "fn": 27,
+            "tn": 47
+          },
+          "all_fail_accuracy": 0.6162790697674418,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "3": {
+          "registered": 41,
+          "scorable": 28,
+          "unknown": 13,
+          "coverage": 0.6829268292682927,
+          "accuracy": 0.6071428571428571,
+          "precision": 0.6666666666666666,
+          "known_label_recall": 0.42857142857142855,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.5217391304347826,
+          "confusion": {
+            "tp": 6,
+            "fp": 3,
+            "fn": 8,
+            "tn": 11
+          },
+          "all_fail_accuracy": 0.5,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "4": {
+          "registered": 15,
+          "scorable": 11,
+          "unknown": 4,
+          "coverage": 0.7333333333333333,
+          "accuracy": 0.36363636363636365,
+          "precision": 0.2,
+          "known_label_recall": 0.25,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.2222222222222222,
+          "confusion": {
+            "tp": 1,
+            "fp": 4,
+            "fn": 3,
+            "tn": 3
+          },
+          "all_fail_accuracy": 0.6363636363636364,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "5": {
+          "registered": 6,
+          "scorable": 5,
+          "unknown": 1,
+          "coverage": 0.8333333333333334,
+          "accuracy": 0.8,
+          "precision": 1.0,
+          "known_label_recall": 0.6666666666666666,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.8,
+          "confusion": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "tn": 2
+          },
+          "all_fail_accuracy": 0.4,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "6": {
+          "registered": 5,
+          "scorable": 3,
+          "unknown": 2,
+          "coverage": 0.6,
+          "accuracy": 0.6666666666666666,
+          "precision": 0.5,
+          "known_label_recall": 1.0,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": 0.6666666666666666,
+          "confusion": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "tn": 1
+          },
+          "all_fail_accuracy": 0.6666666666666666,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        },
+        "7": {
+          "registered": 2,
+          "scorable": 0,
+          "unknown": 2,
+          "coverage": 0.0,
+          "accuracy": null,
+          "precision": null,
+          "known_label_recall": null,
+          "complete_registered_positive_recall": null,
+          "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+          "f1_known_labels": null,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "all_fail_accuracy": null,
+          "brier": null,
+          "brier_reason": "uncalibrated internal ranking scores"
+        }
+      },
+      "latest20_official_sessions_historical": {
+        "registered": 165,
+        "scorable": 133,
+        "unknown": 32,
+        "coverage": 0.806060606060606,
+        "accuracy": 0.6015037593984962,
+        "precision": 0.5333333333333333,
+        "known_label_recall": 0.2909090909090909,
+        "complete_registered_positive_recall": null,
+        "complete_recall_status": "UNKNOWN_OUTCOMES_EXIST",
+        "f1_known_labels": 0.3764705882352941,
+        "confusion": {
+          "tp": 16,
+          "fp": 14,
+          "fn": 39,
+          "tn": 64
+        },
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "uncalibrated internal ranking scores"
+      },
+      "latest60_historical": {
+        "status": "UNAVAILABLE_FIXED_OOS_ONLY_COVERS_SEPTEMBER",
+        "reason": "do not combine training/in-sample scores with this fixed evaluation"
+      },
+      "true_forward20_60": {
+        "status": "UNAVAILABLE_NO_NEW_SETTLED_FORWARD_SAMPLES"
+      }
+    }
+  },
+  "comparisons": {
+    "A": {
+      "top1_difference_pp": 15.384615384615385,
+      "paired_interval": {
+        "confidence": 0.975,
+        "bounds": [
+          0.0,
+          0.4444444444444444
+        ],
+        "official_slots": 21,
+        "unknown_slots": 8,
+        "valid_draw_fraction": 1.0,
+        "method": "exploratory circular 5-session block bootstrap; 5000 draws"
+      },
+      "gained_dates": [
+        "2026-09-07",
+        "2026-09-29"
+      ],
+      "lost_dates": [],
+      "changed_selection_dates": [
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-09",
+        "2026-09-17",
+        "2026-09-29"
+      ],
+      "all_binary_accuracy_difference_pp": -2.2556390977443552
+    },
+    "B": {
+      "top1_difference_pp": 7.6923076923076925,
+      "paired_interval": {
+        "confidence": 0.975,
+        "bounds": [
+          0.0,
+          0.375
+        ],
+        "official_slots": 21,
+        "unknown_slots": 8,
+        "valid_draw_fraction": 1.0,
+        "method": "exploratory circular 5-session block bootstrap; 5000 draws"
+      },
+      "gained_dates": [
+        "2026-09-29"
+      ],
+      "lost_dates": [],
+      "changed_selection_dates": [
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-29"
+      ],
+      "all_binary_accuracy_difference_pp": -1.5037593984962405
+    }
+  },
+  "denominator_audit": {
+    "train": {
+      "original_ratio_rows": 2686,
+      "max_reconstruction_absolute_error": 1.2363443602225743e-11,
+      "previous_session_reference_rows": 1097,
+      "original_ratio_values_replaced": false
+    },
+    "evaluation": {
+      "original_ratio_rows": 169,
+      "max_reconstruction_absolute_error": 3.0736116229945765e-07,
+      "previous_session_reference_rows": 64,
+      "original_ratio_values_replaced": false
+    },
+    "baseline": {
+      "train_rows": 3059,
+      "evaluation_rows": 182,
+      "train_ratio_known": 2686,
+      "evaluation_ratio_known": 169,
+      "train_ratio_feature_coverage": 0.8780647270349787,
+      "evaluation_ratio_feature_coverage": 0.9285714285714286
+    },
+    "A": {
+      "train_rows": 3059,
+      "evaluation_rows": 182,
+      "train_ratio_known": 1097,
+      "evaluation_ratio_known": 64,
+      "train_ratio_feature_coverage": 0.35861392611964693,
+      "evaluation_ratio_feature_coverage": 0.3516483516483517
+    },
+    "B": {
+      "train_rows": 3059,
+      "evaluation_rows": 182,
+      "train_ratio_known": 764,
+      "evaluation_ratio_known": 49,
+      "train_ratio_feature_coverage": 0.2497548218372017,
+      "evaluation_ratio_feature_coverage": 0.2692307692307692
+    }
+  },
+  "baseline_reconstruction_max_error": 3.3306690738754696e-16,
+  "registered_calendar_slots": 21,
+  "dates_with_candidates": 16,
+  "full_label_dates": 13,
+  "original_candidates_retained": 182,
+  "no_stable60_claim": true,
+  "new_forward_samples": 0,
+  "production_model_changed": false,
+  "limitations": [
+    "viewed retrospective history, not blind or forward",
+    "archives formed after historical signal dates; nominal 15:00 timestamps are not acquisition proof",
+    "proxy definitions differ between historical and September sources",
+    "missing true previous first-board denominator is not reconstructed",
+    "feature coverage falls; median imputation is not verified market evidence",
+    "original historical outcome/price conflicts retained for matched baseline only",
+    "no executable trading-return or calibrated-probability claim"
+  ],
+  "protocol_sha256": "c0cbe4ccee9a9e6afd907fe836d0f2701e2a4dba2c996183568fc117b670a738",
+  "implementation_sha256": "94fac89314b599484560472b21091e8817645e823eec7add33119fb0f159f058"
+}

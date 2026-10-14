@@ -1,0 +1,69 @@
+{
+  "version": "v156-emotion-first-scenario-card-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-16",
+  "current_market": {
+    "emotion_state": "修复",
+    "limit_count": 80,
+    "consecutive_count": 11,
+    "max_board": 6,
+    "failed_count": 10,
+    "failed_rate": 0.1111111111111111,
+    "down_limit_count": 4,
+    "yesterday_premium": 0.0096195888519287,
+    "previous_limit_tail_loss": -0.0331428575515747,
+    "promotion_mid": 0.2,
+    "ladder_gap_count": 2,
+    "middle_density": 0.9090909090909092,
+    "observed_at": "2026-09-16 15:00:00",
+    "data_status": "verified"
+  },
+  "next_session_forecast": {
+    "risk_off_probability": 0.4426779218566552,
+    "risk_band": "MIXED",
+    "primary_scenario": "ROTATION_AND_DIVERGENCE_COEXIST",
+    "confidence": "V144_ONLY_DAMAGE_VECTOR_NOT_READY",
+    "supporting_market_change": "specific-theme breadth, middle-board promotion and prior-limit premium improve together",
+    "invalidation_market_change": "height survives alone while middle boards and prior winners deteriorate",
+    "damage_vector_aggregate_ready": false,
+    "damage_band": "UNAVAILABLE",
+    "validated_damage_components": {
+      "down_limit_spread": {
+        "probability": 0.22305556225693005,
+        "outcome": "down_limit_count",
+        "damage_direction": "HIGH"
+      },
+      "middle_promotion_damage": {
+        "probability": 0.2899604778308941,
+        "outcome": "promotion_mid",
+        "damage_direction": "LOW"
+      }
+    },
+    "unvalidated_component_count": 3
+  },
+  "transmission_logic": [
+    "prior winners lose premium or show deeper tail loss",
+    "middle-board promotion weakens and ladder gaps widen",
+    "failed boards and down-limits expand",
+    "height board becomes isolated and theme followers stop responding",
+    "leader selection threshold rises and cash becomes a valid outcome"
+  ],
+  "leader_selection_policy": {
+    "allowed_candidate_type": "one frozen specific-theme core; first-board and relay compared separately",
+    "forbidden_inference": "promoting an intraday backup when the frozen primary fails",
+    "emotion_direct_stock_reranking_allowed": false,
+    "first_board_and_relay_must_be_ranked_separately": true,
+    "one_comprehensive_primary_or_cash": true
+  },
+  "horizon": {
+    "next_session": "AVAILABLE_DIAGNOSTIC",
+    "next_two_to_three_sessions": "UNAVAILABLE_FAILED_HISTORICAL_GATE"
+  },
+  "entry_authorized": false,
+  "guarantee": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v144\\emotion_actionable_risk_20260917_v1\\report.json": "516c9eb9fff1e37b923da47aac28c54c4bef5583f7ef7777dad2707699d1aff3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v155\\emotion_damage_vector_20260917_v1\\report.json": "4dd59cbe9a26322d82df7cef7f59d5627910ce557edfd442defb40ee80ae5e2b"
+  }
+}

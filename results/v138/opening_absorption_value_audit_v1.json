@@ -1,0 +1,126 @@
+{
+  "version": "v138-opening-absorption-value-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cohort_rows": 2243,
+  "feature_joined_rows": 976,
+  "usable_feature_rows": 967,
+  "groups": {
+    "CONSECUTIVE_BOARD": {
+      "coverage": {
+        "cohort_rows": 522,
+        "usable_feature_rows": 519,
+        "coverage_rate": 0.9942528735632183
+      },
+      "above_vwap_1000": {
+        "False": {
+          "rows_with_feature": 232,
+          "b2_proxy_known": 106,
+          "b2_mean_net_close_mark": -0.06289822986858858,
+          "b2_positive_rate": 0.29245283018867924,
+          "b2_large_loss_rate": 0.5,
+          "actual_verified_fills": 0
+        },
+        "True": {
+          "rows_with_feature": 287,
+          "b2_proxy_known": 191,
+          "b2_mean_net_close_mark": -0.015848220943445165,
+          "b2_positive_rate": 0.38219895287958117,
+          "b2_large_loss_rate": 0.36649214659685864,
+          "actual_verified_fills": 0
+        }
+      },
+      "absorption_path": {
+        "BELOW_NOT_RECLAIMED_BY_1000": {
+          "rows_with_feature": 195,
+          "b2_proxy_known": 95,
+          "b2_mean_net_close_mark": -0.06907672022147181,
+          "b2_positive_rate": 0.28421052631578947,
+          "b2_large_loss_rate": 0.5157894736842106,
+          "actual_verified_fills": 0
+        },
+        "BELOW_THEN_RECLAIMED_BY_1000": {
+          "rows_with_feature": 132,
+          "b2_proxy_known": 63,
+          "b2_mean_net_close_mark": -0.026792461448204498,
+          "b2_positive_rate": 0.3492063492063492,
+          "b2_large_loss_rate": 0.31746031746031744,
+          "actual_verified_fills": 0
+        },
+        "NEVER_BELOW_CUM_VWAP_BY_1000": {
+          "rows_with_feature": 192,
+          "b2_proxy_known": 139,
+          "b2_mean_net_close_mark": -0.010388554489148993,
+          "b2_positive_rate": 0.39568345323741005,
+          "b2_large_loss_rate": 0.38848920863309355,
+          "actual_verified_fills": 0
+        }
+      }
+    },
+    "FIRST_BOARD": {
+      "coverage": {
+        "cohort_rows": 1721,
+        "usable_feature_rows": 448,
+        "coverage_rate": 0.26031377106333525
+      },
+      "above_vwap_1000": {
+        "False": {
+          "rows_with_feature": 267,
+          "b2_proxy_known": 51,
+          "b2_mean_net_close_mark": -0.05780119784332804,
+          "b2_positive_rate": 0.19607843137254902,
+          "b2_large_loss_rate": 0.49019607843137253,
+          "actual_verified_fills": 0
+        },
+        "True": {
+          "rows_with_feature": 181,
+          "b2_proxy_known": 104,
+          "b2_mean_net_close_mark": -0.01252388044412308,
+          "b2_positive_rate": 0.34615384615384615,
+          "b2_large_loss_rate": 0.4230769230769231,
+          "actual_verified_fills": 0
+        }
+      },
+      "absorption_path": {
+        "BELOW_NOT_RECLAIMED_BY_1000": {
+          "rows_with_feature": 234,
+          "b2_proxy_known": 45,
+          "b2_mean_net_close_mark": -0.07035795877504726,
+          "b2_positive_rate": 0.15555555555555556,
+          "b2_large_loss_rate": 0.5111111111111111,
+          "actual_verified_fills": 0
+        },
+        "BELOW_THEN_RECLAIMED_BY_1000": {
+          "rows_with_feature": 113,
+          "b2_proxy_known": 35,
+          "b2_mean_net_close_mark": -0.0032808068191860743,
+          "b2_positive_rate": 0.4,
+          "b2_large_loss_rate": 0.37142857142857144,
+          "actual_verified_fills": 0
+        },
+        "NEVER_BELOW_CUM_VWAP_BY_1000": {
+          "rows_with_feature": 101,
+          "b2_proxy_known": 75,
+          "b2_mean_net_close_mark": -0.012925443635331883,
+          "b2_positive_rate": 0.3333333333333333,
+          "b2_large_loss_rate": 0.44,
+          "actual_verified_fills": 0
+        }
+      }
+    }
+  },
+  "target": "B+2 net close mark after hypothetical next-session daily price-path opportunity",
+  "actual_verified_fills": 0,
+  "complete_trade_exit_tested": false,
+  "threshold_tuning": false,
+  "deployment_authorized": false,
+  "limitations": [
+    "historical minute coverage is incomplete and first-board coverage is selected",
+    "five-minute bars do not prove actual entry or queue position",
+    "B+2 close mark is not a frozen complete-trade exit"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v48\\jan_feb_full_pool_locked\\cohort.csv": "10f26057a6337afb30ce111d783ad018ea012de0efeaf19778a47695f8ac12ef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v138\\opening_absorption_reconciled_v3\\opening_absorption_features.csv": "090619ca761f451bf826099c8dd558ec103eb882951624eb959fac1510fa25f3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831_v3\\outcomes_LABEL_ONLY.csv": "fcf810543af341ab2aab1cc08e86a1aa06f12da9108f72bbd7f0ec6f9d550f87"
+  }
+}

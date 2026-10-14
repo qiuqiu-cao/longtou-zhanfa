@@ -1,0 +1,60 @@
+{
+  "version": "v12-selective-risk-gate-1",
+  "status": "REJECTED_DIAGNOSTIC_ONLY",
+  "generated_at_utc": "2026-09-01T14:30:24.528112+00:00",
+  "blind_opened": true,
+  "blind_reuse_prohibited": true,
+  "population": {
+    "daily_top_rows": 243,
+    "start": "2024-10-30T00:00:00",
+    "end": "2026-08-26T00:00:00",
+    "large_loss_rate": 0.3868312757201646,
+    "selection": "one highest V10-style joint-score, buyable, non-one-word, 2-5 board candidate per active-state date"
+  },
+  "split": {
+    "total_dates": 243,
+    "development": {
+      "start": "2024-10-30T00:00:00",
+      "end": "2025-11-25T00:00:00",
+      "n": 145
+    },
+    "embargo_1": "2025-11-26T00:00:00",
+    "validation": {
+      "start": "2025-12-01T00:00:00",
+      "end": "2026-04-09T00:00:00",
+      "n": 48
+    },
+    "embargo_2": "2026-04-10T00:00:00",
+    "blind": {
+      "start": "2026-04-13T00:00:00",
+      "end": "2026-08-26T00:00:00",
+      "n": 48
+    }
+  },
+  "threshold_grid": {
+    "joint_min": [
+      0.15,
+      0.65,
+      0.025
+    ],
+    "loss_max": [
+      0.15,
+      0.55,
+      0.025
+    ]
+  },
+  "threshold_selection": "development+validation only; minimize worst preblind Wilson upper bound after fixed sample and risk-separation gates",
+  "selected_threshold": null,
+  "evaluation": null,
+  "deployment_gate_passed": false,
+  "blind_gate_reason": "no preblind-stable threshold; blind window not used for threshold selection",
+  "veto_only_gate_passed": false,
+  "veto_gate_reason": "no preblind-stable veto threshold",
+  "live_use": "NEVER_UPGRADE; no live probability; risk output may only downgrade after a new frozen forward protocol",
+  "label_limit": "inferred daily limit-touch fill and T+1 proxy; no tick/queue proof",
+  "input": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v8\\relay_model_lab\\prequential_predictions.csv",
+    "sha256": "380fa8f9ab922cdf34a617eb848a2cbb21af0a31c2d7b8869927f12da19dbc7a"
+  },
+  "script_sha256": "74cded45c80a035f0898dd1d2ffb728c93194bb298642db0e619ae038cb79fbb"
+}

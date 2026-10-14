@@ -1,0 +1,97 @@
+{
+  "version": "v13-forward-risk-monitor-1",
+  "status": "DATA_COLLECTION_REQUIRED",
+  "generated_at_utc": "2026-09-01T14:33:17.385370+00:00",
+  "thresholds": {
+    "minimum_resolved": 60,
+    "maximum_large_loss_rate": 0.1,
+    "maximum_wilson_upper": 0.15,
+    "minimum_label_coverage": 0.9,
+    "minimum_promotion_precision": 0.7
+  },
+  "overall": {
+    "settled": 0,
+    "executed_proxy": 0,
+    "resolved_large_loss": 0,
+    "large_loss_label_coverage": null,
+    "large_losses": 0,
+    "large_loss_rate": null,
+    "large_loss_wilson_low": null,
+    "large_loss_wilson_high": null,
+    "resolved_promotions": 0,
+    "promotion_precision": null,
+    "sell_blocked": 0
+  },
+  "by_board": {
+    "2": {
+      "settled": 0,
+      "executed_proxy": 0,
+      "resolved_large_loss": 0,
+      "large_loss_label_coverage": null,
+      "large_losses": 0,
+      "large_loss_rate": null,
+      "large_loss_wilson_low": null,
+      "large_loss_wilson_high": null,
+      "resolved_promotions": 0,
+      "promotion_precision": null,
+      "sell_blocked": 0
+    },
+    "3": {
+      "settled": 0,
+      "executed_proxy": 0,
+      "resolved_large_loss": 0,
+      "large_loss_label_coverage": null,
+      "large_losses": 0,
+      "large_loss_rate": null,
+      "large_loss_wilson_low": null,
+      "large_loss_wilson_high": null,
+      "resolved_promotions": 0,
+      "promotion_precision": null,
+      "sell_blocked": 0
+    },
+    "4": {
+      "settled": 0,
+      "executed_proxy": 0,
+      "resolved_large_loss": 0,
+      "large_loss_label_coverage": null,
+      "large_losses": 0,
+      "large_loss_rate": null,
+      "large_loss_wilson_low": null,
+      "large_loss_wilson_high": null,
+      "resolved_promotions": 0,
+      "promotion_precision": null,
+      "sell_blocked": 0
+    },
+    "5": {
+      "settled": 0,
+      "executed_proxy": 0,
+      "resolved_large_loss": 0,
+      "large_loss_label_coverage": null,
+      "large_losses": 0,
+      "large_loss_rate": null,
+      "large_loss_wilson_low": null,
+      "large_loss_wilson_high": null,
+      "resolved_promotions": 0,
+      "promotion_precision": null,
+      "sell_blocked": 0
+    }
+  },
+  "point_gate_passed": false,
+  "confidence_gate_passed": false,
+  "reason": "need 60 more resolved executed-proxy large-loss labels",
+  "verification": {
+    "status": "PASS",
+    "version": "v10-intraday-forward-1",
+    "model_lock_id": "9738e2c165075798",
+    "events": 1,
+    "plans": 1,
+    "confirmations": 0,
+    "settlements": 0,
+    "pending": 1,
+    "head_event_hash": "936c4b37c74ffd2e8476a0206bac688c6e158d346273e5b10ad0079da7d184c5",
+    "errors": [],
+    "assurance": "LOCAL_TAMPER_EVIDENT_ONLY"
+  },
+  "evidence_rule": "only hash-verified V10 settlements with on-time CONFIRM_RESEAL executed proxies are counted; missing labels remain unavailable",
+  "deployment_effect": "component-only monitor; never upgrades a candidate and never overrides the full historical/forward gates"
+}

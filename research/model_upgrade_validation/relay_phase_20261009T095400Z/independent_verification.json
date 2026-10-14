@@ -1,0 +1,295 @@
+{
+  "formed_at": "2026-10-11T14:15:46.974509+00:00",
+  "status": "ALL_FULL_CANDIDATE_COUNTS_SCORES_LABELS_AND_METRICS_INDEPENDENTLY_EQUAL",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_phase_20261009T095400Z\\protocol_BEFORE_EFFECTS.json": "665e6abf68663fc537adf14b565644bc7a5e29d5a8294b20a4a7ac06ae8e41d5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_phase_20261009T095400Z\\implementation_BEFORE_FITS.json": "ffa5bc92f0bde58b482d975fdc39e7c704a59a8c63201350d9974004713e2b37",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_phase_20261009T095400Z\\training_checks_BEFORE_FITS.json": "d8098dbfb9d8500129007387dbc6d37becc5353e4bd6f617582134802b6c0888",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_phase_20261009T095400Z\\attempt_STARTED.json": "dba021f22f05757d0e4a7b0ff743dbe8b0420955313d27c92258f543603b5f85",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_phase_20261009T095400Z\\report.json": "10760ad0532b699eb8461069d778bb3a3233cee0ede7991c88b184ae39019f0d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_phase_20261009T095400Z\\full_candidate_comparison.csv": "595c9b2b05620fbab9769ae5fdf82dc3bfb75b0c0de5d07237c07b69d5c1af7a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\tests\\test_relay_phase_saved_results.py": "0fe33d06792f6f03e980b7a4d598b9b98ba1e69f9ecdeb3d49956036b7d438be"
+  },
+  "rows": 7414,
+  "unique_candidates": 3707,
+  "unknown_labels_per_arm": 67,
+  "folds": {
+    "2025H2": {
+      "BASE": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6470959595959596,
+        "Precision": 0.6345609065155807,
+        "complete_positive_Recall": 0.3425076452599388,
+        "F1": 0.4448857994041708,
+        "confusion": {
+          "TP": 224,
+          "TN": 801,
+          "FP": 129,
+          "FN": 430
+        },
+        "positive_support": 654,
+        "complete_positive_misses": 430,
+        "signal_days": 126,
+        "true_nonword_rank_first": {
+          "official_days": 126,
+          "scoreable_days": 0,
+          "promotions": 0,
+          "rate": null
+        },
+        "transition_subgroup": {
+          "original_registered_count": 97,
+          "scoreable_count": 97,
+          "coverage": 1.0,
+          "Accuracy": 0.6391752577319587,
+          "Precision": 0.625,
+          "complete_positive_Recall": 0.2564102564102564,
+          "F1": 0.3636363636363636,
+          "confusion": {
+            "TP": 10,
+            "TN": 52,
+            "FP": 6,
+            "FN": 29
+          },
+          "positive_support": 39,
+          "complete_positive_misses": 29,
+          "signal_days": 65
+        }
+      },
+      "R3": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6470959595959596,
+        "Precision": 0.6172839506172839,
+        "complete_positive_Recall": 0.382262996941896,
+        "F1": 0.4721435316336166,
+        "confusion": {
+          "TP": 250,
+          "TN": 775,
+          "FP": 155,
+          "FN": 404
+        },
+        "positive_support": 654,
+        "complete_positive_misses": 404,
+        "signal_days": 126,
+        "true_nonword_rank_first": {
+          "official_days": 126,
+          "scoreable_days": 0,
+          "promotions": 0,
+          "rate": null
+        },
+        "transition_subgroup": {
+          "original_registered_count": 97,
+          "scoreable_count": 97,
+          "coverage": 1.0,
+          "Accuracy": 0.5670103092783505,
+          "Precision": 0.36363636363636365,
+          "complete_positive_Recall": 0.10256410256410256,
+          "F1": 0.16,
+          "confusion": {
+            "TP": 4,
+            "TN": 51,
+            "FP": 7,
+            "FN": 35
+          },
+          "positive_support": 39,
+          "complete_positive_misses": 35,
+          "signal_days": 65
+        }
+      },
+      "Accuracy_delta": 0.0,
+      "phase_known_rows": 652,
+      "transition_rows": 97
+    },
+    "2026JanAug": {
+      "BASE": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7197087883515341,
+        "Precision": 0.6105990783410138,
+        "complete_positive_Recall": 0.41732283464566927,
+        "F1": 0.4957904583723105,
+        "confusion": {
+          "TP": 265,
+          "TN": 1119,
+          "FP": 169,
+          "FN": 370
+        },
+        "positive_support": 635,
+        "complete_positive_misses": 370,
+        "signal_days": 160,
+        "true_nonword_rank_first": {
+          "official_days": 160,
+          "scoreable_days": 0,
+          "promotions": 0,
+          "rate": null
+        },
+        "transition_subgroup": {
+          "original_registered_count": 101,
+          "scoreable_count": 97,
+          "coverage": 0.9603960396039604,
+          "Accuracy": 0.7216494845360825,
+          "Precision": 0.6666666666666666,
+          "complete_positive_Recall": 0.36363636363636365,
+          "F1": 0.4705882352941177,
+          "confusion": {
+            "TP": 12,
+            "TN": 58,
+            "FP": 6,
+            "FN": 21
+          },
+          "positive_support": 33,
+          "complete_positive_misses": 21,
+          "signal_days": 68
+        }
+      },
+      "R3": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7165886635465418,
+        "Precision": 0.6018099547511312,
+        "complete_positive_Recall": 0.4188976377952756,
+        "F1": 0.49396471680594245,
+        "confusion": {
+          "TP": 266,
+          "TN": 1112,
+          "FP": 176,
+          "FN": 369
+        },
+        "positive_support": 635,
+        "complete_positive_misses": 369,
+        "signal_days": 160,
+        "true_nonword_rank_first": {
+          "official_days": 160,
+          "scoreable_days": 0,
+          "promotions": 0,
+          "rate": null
+        },
+        "transition_subgroup": {
+          "original_registered_count": 101,
+          "scoreable_count": 97,
+          "coverage": 0.9603960396039604,
+          "Accuracy": 0.6597938144329897,
+          "Precision": 0.5,
+          "complete_positive_Recall": 0.3939393939393939,
+          "F1": 0.4406779661016949,
+          "confusion": {
+            "TP": 13,
+            "TN": 51,
+            "FP": 13,
+            "FN": 20
+          },
+          "positive_support": 33,
+          "complete_positive_misses": 20,
+          "signal_days": 68
+        }
+      },
+      "Accuracy_delta": -0.0031201248049922414,
+      "phase_known_rows": 638,
+      "transition_rows": 101
+    },
+    "2026Sep": {
+      "BASE": {
+        "original_registered_count": 182,
+        "scoreable_count": 133,
+        "coverage": 0.7307692307692307,
+        "Accuracy": 0.6165413533834586,
+        "Precision": 0.5588235294117647,
+        "complete_positive_Recall": 0.34545454545454546,
+        "F1": 0.42696629213483145,
+        "confusion": {
+          "TP": 19,
+          "TN": 63,
+          "FP": 15,
+          "FN": 36
+        },
+        "positive_support": 55,
+        "complete_positive_misses": 36,
+        "signal_days": 16,
+        "true_nonword_rank_first": {
+          "official_days": 21,
+          "scoreable_days": 13,
+          "promotions": 7,
+          "rate": 0.5384615384615384
+        },
+        "transition_subgroup": {
+          "original_registered_count": 10,
+          "scoreable_count": 6,
+          "coverage": 0.6,
+          "Accuracy": 0.5,
+          "Precision": 0.0,
+          "complete_positive_Recall": 0.0,
+          "F1": 0.0,
+          "confusion": {
+            "TP": 0,
+            "TN": 3,
+            "FP": 1,
+            "FN": 2
+          },
+          "positive_support": 2,
+          "complete_positive_misses": 2,
+          "signal_days": 8
+        }
+      },
+      "R3": {
+        "original_registered_count": 182,
+        "scoreable_count": 133,
+        "coverage": 0.7307692307692307,
+        "Accuracy": 0.6090225563909775,
+        "Precision": 0.5428571428571428,
+        "complete_positive_Recall": 0.34545454545454546,
+        "F1": 0.4222222222222222,
+        "confusion": {
+          "TP": 19,
+          "TN": 62,
+          "FP": 16,
+          "FN": 36
+        },
+        "positive_support": 55,
+        "complete_positive_misses": 36,
+        "signal_days": 16,
+        "true_nonword_rank_first": {
+          "official_days": 21,
+          "scoreable_days": 13,
+          "promotions": 8,
+          "rate": 0.6153846153846154
+        },
+        "transition_subgroup": {
+          "original_registered_count": 10,
+          "scoreable_count": 6,
+          "coverage": 0.6,
+          "Accuracy": 0.6666666666666666,
+          "Precision": 0.5,
+          "complete_positive_Recall": 0.5,
+          "F1": 0.5,
+          "confusion": {
+            "TP": 1,
+            "TN": 3,
+            "FP": 1,
+            "FN": 1
+          },
+          "positive_support": 2,
+          "complete_positive_misses": 1,
+          "signal_days": 8
+        }
+      },
+      "Accuracy_delta": -0.007518796992481147,
+      "phase_known_rows": 64,
+      "transition_rows": 10
+    }
+  },
+  "new_mature_forward_days": 0,
+  "numerical_fits_during_verification": 0,
+  "source_reports_unchanged": true,
+  "targeted_independent_recount_test_passed": 1,
+  "test_reader_corrections": [
+    "Saved original predictions are numeric 0/1, not literal True/False",
+    "Missing original target dates remain unknown and are retained; official successor does not fabricate original target metadata"
+  ],
+  "effect_comparison_completed_at": "2026-10-09T09:55:35.555969+00:00",
+  "interrupted_gap_counted_as_runtime": false
+}

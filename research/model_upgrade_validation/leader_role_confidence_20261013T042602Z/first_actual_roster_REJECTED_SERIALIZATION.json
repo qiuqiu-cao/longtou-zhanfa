@@ -1,0 +1,10 @@
+{
+  "formed_at": "2026-10-13T04:35:40.800955+00:00",
+  "actual_exit_code": 1,
+  "engine_sha256": "1844bc0dd1d6be17a35dd99d6e974a38ea8f6c97204b81eb960f8d0515693b63",
+  "stage": "original standardized pool replay comparison",
+  "reason": "CSV missing security fields deserialize to NaN while in-memory original adapter returns None",
+  "affected_column": "is_st",
+  "no_roster_or_identity_accepted": true,
+  "repair": "Compare rebuilt adapter output after the original CSV serialization roundtrip; preserve missing values as unknown and refuse false/true differences"
+}

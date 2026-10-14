@@ -1,0 +1,545 @@
+{
+  "version": "v276-prequential-call-confidence-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "channels": {
+    "market_direction_top_call": {
+      "combined": {
+        "raw": {
+          "n": 219,
+          "actual_success_rate": 0.6529680365296804,
+          "mean_forecast_confidence": 0.6302236356781298,
+          "brier": 0.2300250757218308,
+          "ece_10bin": 0.11197751672954058
+        },
+        "calibrated": {
+          "n": 219,
+          "actual_success_rate": 0.6529680365296804,
+          "mean_forecast_confidence": 0.6643424094999459,
+          "brier": 0.2317754420345802,
+          "ece_10bin": 0.10407469079493108
+        },
+        "confidence_at_least_60": {
+          "n": 154,
+          "successes": 105,
+          "accuracy": 0.6818181818181818,
+          "wilson95": [
+            0.604596215924593,
+            0.7501901654127416
+          ],
+          "coverage_of_calibrated_calls": 0.7031963470319634
+        }
+      },
+      "2025H2": {
+        "raw": {
+          "n": 60,
+          "actual_success_rate": 0.7333333333333333,
+          "mean_forecast_confidence": 0.6246239977989796,
+          "brier": 0.22880257353591843,
+          "ece_10bin": 0.21365543558081235
+        },
+        "calibrated": {
+          "n": 60,
+          "actual_success_rate": 0.7333333333333333,
+          "mean_forecast_confidence": 0.6115234045546024,
+          "brier": 0.2328082187090092,
+          "ece_10bin": 0.2504799492954774
+        },
+        "confidence_at_least_60": {
+          "n": 32,
+          "successes": 25,
+          "accuracy": 0.78125,
+          "wilson95": [
+            0.6124500635075647,
+            0.8897616374739581
+          ],
+          "coverage_of_calibrated_calls": 0.5333333333333333
+        }
+      },
+      "2026YTD": {
+        "raw": {
+          "n": 159,
+          "actual_success_rate": 0.6226415094339622,
+          "mean_forecast_confidence": 0.6323367065759222,
+          "brier": 0.2304863973014204,
+          "ece_10bin": 0.09018003263961903
+        },
+        "calibrated": {
+          "n": 159,
+          "actual_success_rate": 0.6226415094339622,
+          "mean_forecast_confidence": 0.6842741094793209,
+          "brier": 0.23138571498762592,
+          "ece_10bin": 0.09050503163768375
+        },
+        "confidence_at_least_60": {
+          "n": 122,
+          "successes": 80,
+          "accuracy": 0.6557377049180327,
+          "wilson95": [
+            0.5678346242942165,
+            0.7341326316174024
+          ],
+          "coverage_of_calibrated_calls": 0.7672955974842768
+        }
+      }
+    },
+    "relay_identity_top1": {
+      "combined": {
+        "raw": {
+          "n": 219,
+          "actual_success_rate": 0.726027397260274,
+          "mean_forecast_confidence": 0.6717816321388206,
+          "brier": 0.2003056841841141,
+          "ece_10bin": 0.09872615432379003
+        },
+        "calibrated": {
+          "n": 219,
+          "actual_success_rate": 0.726027397260274,
+          "mean_forecast_confidence": 0.7168275674665758,
+          "brier": 0.20338567193337853,
+          "ece_10bin": 0.05560165271298207
+        },
+        "confidence_at_least_60": {
+          "n": 219,
+          "successes": 159,
+          "accuracy": 0.726027397260274,
+          "wilson95": [
+            0.6634443468765174,
+            0.7808176882219819
+          ],
+          "coverage_of_calibrated_calls": 1.0
+        }
+      },
+      "2025H2": {
+        "raw": {
+          "n": 60,
+          "actual_success_rate": 0.7666666666666667,
+          "mean_forecast_confidence": 0.6944103387079072,
+          "brier": 0.20085914959921056,
+          "ece_10bin": 0.11993016572036273
+        },
+        "calibrated": {
+          "n": 60,
+          "actual_success_rate": 0.7666666666666667,
+          "mean_forecast_confidence": 0.6580366956811122,
+          "brier": 0.1916704132726273,
+          "ece_10bin": 0.10862997098555449
+        },
+        "confidence_at_least_60": {
+          "n": 60,
+          "successes": 46,
+          "accuracy": 0.7666666666666667,
+          "wilson95": [
+            0.6456372962239805,
+            0.8556043826335717
+          ],
+          "coverage_of_calibrated_calls": 1.0
+        }
+      },
+      "2026YTD": {
+        "raw": {
+          "n": 159,
+          "actual_success_rate": 0.710691823899371,
+          "mean_forecast_confidence": 0.6632424975844482,
+          "brier": 0.20009682931049283,
+          "ece_10bin": 0.11240323999375834
+        },
+        "calibrated": {
+          "n": 159,
+          "actual_success_rate": 0.710691823899371,
+          "mean_forecast_confidence": 0.7390128021025999,
+          "brier": 0.20780652425819032,
+          "ece_10bin": 0.035590966572388666
+        },
+        "confidence_at_least_60": {
+          "n": 159,
+          "successes": 113,
+          "accuracy": 0.710691823899371,
+          "wilson95": [
+            0.6358999717910752,
+            0.7755431612121373
+          ],
+          "coverage_of_calibrated_calls": 1.0
+        }
+      }
+    },
+    "relay_non_one_word_top1": {
+      "combined": {
+        "raw": {
+          "n": 219,
+          "actual_success_rate": 0.4611872146118721,
+          "mean_forecast_confidence": 0.49824615984004705,
+          "brier": 0.25210048538691887,
+          "ece_10bin": 0.06028113793733801
+        },
+        "calibrated": {
+          "n": 219,
+          "actual_success_rate": 0.4611872146118721,
+          "mean_forecast_confidence": 0.5106845597584072,
+          "brier": 0.2509679478838988,
+          "ece_10bin": 0.07649334227067617
+        },
+        "confidence_at_least_60": {
+          "n": 0,
+          "successes": 0,
+          "accuracy": null,
+          "wilson95": null,
+          "coverage_of_calibrated_calls": 0.0
+        }
+      },
+      "2025H2": {
+        "raw": {
+          "n": 60,
+          "actual_success_rate": 0.5666666666666667,
+          "mean_forecast_confidence": 0.5067629867249888,
+          "brier": 0.26411837125077287,
+          "ece_10bin": 0.11907152923847653
+        },
+        "calibrated": {
+          "n": 60,
+          "actual_success_rate": 0.5666666666666667,
+          "mean_forecast_confidence": 0.56199370934719,
+          "brier": 0.24521816568696972,
+          "ece_10bin": 0.0046729573194767005
+        },
+        "confidence_at_least_60": {
+          "n": 0,
+          "successes": 0,
+          "accuracy": null,
+          "wilson95": null,
+          "coverage_of_calibrated_calls": 0.0
+        }
+      },
+      "2026YTD": {
+        "raw": {
+          "n": 159,
+          "actual_success_rate": 0.42138364779874216,
+          "mean_forecast_confidence": 0.4950322629023333,
+          "brier": 0.24756543411754,
+          "ece_10bin": 0.09470774049794967
+        },
+        "calibrated": {
+          "n": 159,
+          "actual_success_rate": 0.42138364779874216,
+          "mean_forecast_confidence": 0.4913226165173571,
+          "brier": 0.2531376770148155,
+          "ece_10bin": 0.10712213456884713
+        },
+        "confidence_at_least_60": {
+          "n": 0,
+          "successes": 0,
+          "accuracy": null,
+          "wilson95": null,
+          "coverage_of_calibrated_calls": 0.0
+        }
+      }
+    }
+  },
+  "calibration_logs": {
+    "market_direction_top_call": [
+      {
+        "month": "2025-07",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 0
+      },
+      {
+        "month": "2025-08",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 22
+      },
+      {
+        "month": "2025-09",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 43
+      },
+      {
+        "month": "2025-10",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 65,
+        "max_calibration_label_date": "2025-09-30",
+        "coefficient": 1.1212210874573907
+      },
+      {
+        "month": "2025-11",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 82,
+        "max_calibration_label_date": "2025-10-31",
+        "coefficient": 0.8003305311520705
+      },
+      {
+        "month": "2025-12",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 102,
+        "max_calibration_label_date": "2025-11-28",
+        "coefficient": 0.6755846377131878
+      },
+      {
+        "month": "2026-01",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2025-12-31",
+        "coefficient": 0.6650328921856865
+      },
+      {
+        "month": "2026-02",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-01-30",
+        "coefficient": 0.5925181560532594
+      },
+      {
+        "month": "2026-03",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-02-27",
+        "coefficient": 0.5282681475283769
+      },
+      {
+        "month": "2026-04",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-03-31",
+        "coefficient": 0.5495547488374326
+      },
+      {
+        "month": "2026-05",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-04-30",
+        "coefficient": 0.6092031058415053
+      },
+      {
+        "month": "2026-06",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-05-29",
+        "coefficient": 0.6388484534733816
+      },
+      {
+        "month": "2026-07",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-06-30",
+        "coefficient": 0.8246243116589129
+      },
+      {
+        "month": "2026-08",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-07-31",
+        "coefficient": 0.45170637984071826
+      }
+    ],
+    "relay_identity_top1": [
+      {
+        "month": "2025-07",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 0
+      },
+      {
+        "month": "2025-08",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 22
+      },
+      {
+        "month": "2025-09",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 43
+      },
+      {
+        "month": "2025-10",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 65,
+        "max_calibration_label_date": "2025-09-30",
+        "coefficient": 0.21376660098228661
+      },
+      {
+        "month": "2025-11",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 82,
+        "max_calibration_label_date": "2025-10-31",
+        "coefficient": 0.014496017406280334
+      },
+      {
+        "month": "2025-12",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 102,
+        "max_calibration_label_date": "2025-11-28",
+        "coefficient": -0.08267709588767981
+      },
+      {
+        "month": "2026-01",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2025-12-31",
+        "coefficient": -0.08142653388626868
+      },
+      {
+        "month": "2026-02",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-01-30",
+        "coefficient": -0.2069312588442167
+      },
+      {
+        "month": "2026-03",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-02-27",
+        "coefficient": -0.027655608800693444
+      },
+      {
+        "month": "2026-04",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-03-31",
+        "coefficient": 0.30844960642824737
+      },
+      {
+        "month": "2026-05",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-04-30",
+        "coefficient": 0.6398104263183114
+      },
+      {
+        "month": "2026-06",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-05-29",
+        "coefficient": 0.7934869710543734
+      },
+      {
+        "month": "2026-07",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-06-30",
+        "coefficient": 0.7437225581114082
+      },
+      {
+        "month": "2026-08",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-07-31",
+        "coefficient": 0.8635623138640388
+      }
+    ],
+    "relay_non_one_word_top1": [
+      {
+        "month": "2025-07",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 0
+      },
+      {
+        "month": "2025-08",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 22
+      },
+      {
+        "month": "2025-09",
+        "status": "INSUFFICIENT_PRIOR_CALLS",
+        "n": 43
+      },
+      {
+        "month": "2025-10",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 65,
+        "max_calibration_label_date": "2025-09-30",
+        "coefficient": -0.009668126578324504
+      },
+      {
+        "month": "2025-11",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 82,
+        "max_calibration_label_date": "2025-10-31",
+        "coefficient": -0.03887084824183358
+      },
+      {
+        "month": "2025-12",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 102,
+        "max_calibration_label_date": "2025-11-28",
+        "coefficient": -0.05824099298122414
+      },
+      {
+        "month": "2026-01",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2025-12-31",
+        "coefficient": -0.23197557043063297
+      },
+      {
+        "month": "2026-02",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-01-30",
+        "coefficient": 0.04634165267094838
+      },
+      {
+        "month": "2026-03",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-02-27",
+        "coefficient": 0.03778449745279501
+      },
+      {
+        "month": "2026-04",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-03-31",
+        "coefficient": 0.15111286518024492
+      },
+      {
+        "month": "2026-05",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-04-30",
+        "coefficient": 0.22611980533969156
+      },
+      {
+        "month": "2026-06",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-05-29",
+        "coefficient": 0.3077885311914202
+      },
+      {
+        "month": "2026-07",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-06-30",
+        "coefficient": 0.36321742545778024
+      },
+      {
+        "month": "2026-08",
+        "status": "CAUSAL_PRIOR_CALL_CALIBRATION",
+        "n": 120,
+        "max_calibration_label_date": "2026-07-31",
+        "coefficient": 0.16439159252915383
+      }
+    ]
+  },
+  "specification": {
+    "minimum_prior_calls": 60,
+    "trailing_calls": 120,
+    "selection_changed": false,
+    "update": "monthly"
+  },
+  "target_definitions": {
+    "market_direction_top_call": "reliability of the called improve/continue/worsen direction",
+    "relay_identity_top1": "promotion probability of the fixed identity Top1",
+    "relay_non_one_word_top1": "promotion probability of the fixed non-one-word Top1"
+  },
+  "limitations": [
+    "Prior-output calibration does not create new information or increase raw prediction hits",
+    "Model-family changes may shift the relation between raw score and correctness",
+    "No pristine forward validation; calibration confidence may not be presented as a guaranteed win rate",
+    "Market-direction reliability may not replace three-regime or index probability"
+  ],
+  "goal_verified": false,
+  "live_probability_display_authorized": false,
+  "source_hashes": {
+    "prequential_confidence_calibration_v276.py": "73958590f0cf5686ed5b7d83f8ee5d09e92da0b0ff06064270c306fc9e9c07b4",
+    "results\\v274\\monthly_refit_20261002_v1\\market_predictions_LABEL_ONLY.csv": "9604c03630bc01971d37fb938b08ddc07ac782eade9b07e2a8362a986a60228a",
+    "results\\v274\\monthly_refit_20261002_v1\\relay_predictions_LABEL_ONLY.csv": "eb3d76a8a0fa7ed8e6e00a8e87db93d8b83c3f19c4bb1640ccae3621124ad10b"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "registered_at": "2026-10-02T20:06:52.976047+00:00",
+  "hypothesis": "Prior recorded same-code relay advancement consistency adds information beyond the frozen 29 closing features",
+  "source": "https://github.com/guoyaohua/limit-up-sniper",
+  "source_scope": "first-board historical consistency motivates a narrower >=2-board recorded-event proxy",
+  "study_kind": "VIEWED_HISTORY_RETROSPECTIVE_INCREMENT_NOT_BLIND_OR_FORWARD",
+  "baseline": "Exactly V278 September frozen logistic C=.25, last 252 known-label dates before Sep 1; no new model selection",
+  "challenger": "Same training rows/date weights/imputer/scaler/logistic settings, add only Wilson95 lower statistic and log1p known prior event count",
+  "extra_fields": [
+    "prior_relay_wilson_lower",
+    "log_prior_relay_known_n"
+  ],
+  "history_window": "250 official signal sessions; target_date strictly earlier than row date and frozen Sep-1 cutoff for evaluation",
+  "zero_history": "Wilson statistic remains NaN, count=0; original train-only median and missing indicator; not zero failures",
+  "unknown_history": "Count separately, exclude from success/known denominators; historical unseen/missing full-market events remain unobservable",
+  "primary": "true OHLC nonword Top1 exact next-session closing advancement, same full-label dates",
+  "expected_minimum_improvement_pp": 5,
+  "minimum_support": "60 complete matched dates and paired interval lower>0; current September cannot pass support gate",
+  "ranking_ties": "score descending, boards descending, code ascending; rank is separate from predicted promotion flag",
+  "binary_threshold": 0.5,
+  "limits": "All original candidates retained; no same-day/September history outcomes in added features; no parameter scan, production changes or saved production weights",
+  "ending": "one fixed comparison and source checks complete; do not change rules after results",
+  "source_hashes": {
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "results\\v278\\september_falsification_20261002_v6\\report.json": "b930e9d154c289786dd525741248ae5f35b35b19b55c3cb8cad02ac0b2ff63ef",
+    "results\\v278\\september_falsification_20261002_v6\\relay_predictions_LABEL_ONLY.csv": "3a5b77c41d5f3664dac2ae4ff845ade58612f0602c47d660793f6d9e3c622766",
+    "data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "research\\experience_stock_character.py": "bcead8bb4a484beef11da5f22cb21f0ad3c3e8b797b3f5596a8a7580464a9541",
+    "next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371"
+  }
+}

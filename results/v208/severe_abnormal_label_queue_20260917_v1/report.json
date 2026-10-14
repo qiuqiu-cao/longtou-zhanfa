@@ -1,0 +1,27 @@
+{
+  "version": "v208-severe-abnormal-label-queue-1",
+  "status": "CALIBRATION_BLOCKED",
+  "target": "official_100pct_severe_abnormal_publication_within_declared_horizon",
+  "candidate_events": 155,
+  "official_positive_events": 2,
+  "training_ready_positive_events": 0,
+  "training_ready_negative_events": 0,
+  "failed_gates": [
+    "benchmark_official_reconciliation",
+    "official_publication_reset_chronology",
+    "stock_corporate_action_treatment",
+    "point_in_time_security_and_limit_status",
+    "complete_candidate_universe",
+    "point_in_time_feature_timestamps",
+    "right_censoring_safe_horizon",
+    "minimum_verified_label_support"
+  ],
+  "calibrated_probability_emitted": false,
+  "calibrated_probability_allowed": false,
+  "negative_label_policy": "No publication is not a negative. A negative requires a frozen full-market cohort, complete declared horizon, official-publication reconciliation and no right censoring.",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v31_target_event_library_20260904.json": "389738676eb32ce8b9e65fef7a73585f83d8a08d2c60fc94d3a44bf671aa0abd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v161\\severe_abnormal_readiness_20260917_v2.json": "a5d8806f3d9893cf66692f58bec831a3cc3fcdbcc84e5ce156c07c45d1ac6eae"
+  },
+  "output_sha256": "dd16ce43048cf7749708874d160407ec7c08fa3df1a361d83c16a494da13807e"
+}

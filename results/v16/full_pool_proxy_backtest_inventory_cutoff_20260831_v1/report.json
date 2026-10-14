@@ -1,0 +1,222 @@
+{
+  "status": "EXPLORATORY_ONLY",
+  "target": "next_session_non_one_price_limit_touch_and_b2_positive_close_mark_proxy",
+  "selection_scope": "available_nonst_mainboard_history_first_and_consecutive_same_day_rank",
+  "validation_start": "2025-07-28",
+  "validation_end_exclusive": "2025-12-26",
+  "training_rows": 21012,
+  "training_sessions": 399,
+  "validation_candidates": 5156,
+  "validation_sessions": 103,
+  "one_choice_per_day": true,
+  "outcome_availability_purge": true,
+  "episode_overlap_purged": true,
+  "same_day_weight_total": true,
+  "groups": {
+    "height_only": {
+      "all_candidates": {
+        "candidates": 5156,
+        "proxy_positives": 602,
+        "proxy_base_rate": 0.11675717610550815,
+        "candidate_auc": 0.5839596309768201,
+        "candidate_brier": 0.10218424617650156
+      },
+      "daily_top1": {
+        "selected_sessions": 103,
+        "proxy_successes": 24,
+        "proxy_success_rate": 0.23300970873786409,
+        "proxy_success_wilson_95": [
+          0.16187608389419228,
+          0.32334247632498886
+        ],
+        "selected_score_auc": 0.4741561181434599,
+        "selected_score_brier": 0.18584808988852428,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 103,
+        "next_session_one_price_cases": 12,
+        "actual_fills": 0,
+        "complete_trade_win_rate": null
+      }
+    },
+    "identity": {
+      "all_candidates": {
+        "candidates": 5156,
+        "proxy_positives": 602,
+        "proxy_base_rate": 0.11675717610550815,
+        "candidate_auc": 0.5899185776587192,
+        "candidate_brier": 0.10201400433742915
+      },
+      "daily_top1": {
+        "selected_sessions": 103,
+        "proxy_successes": 24,
+        "proxy_success_rate": 0.23300970873786409,
+        "proxy_success_wilson_95": [
+          0.16187608389419228,
+          0.32334247632498886
+        ],
+        "selected_score_auc": 0.5007911392405063,
+        "selected_score_brier": 0.1841872405890278,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 103,
+        "next_session_one_price_cases": 12,
+        "actual_fills": 0,
+        "complete_trade_win_rate": null
+      }
+    },
+    "identity_plus_emotion": {
+      "all_candidates": {
+        "candidates": 5156,
+        "proxy_positives": 602,
+        "proxy_base_rate": 0.11675717610550815,
+        "candidate_auc": 0.5776377453576645,
+        "candidate_brier": 0.10222720804842961
+      },
+      "daily_top1": {
+        "selected_sessions": 103,
+        "proxy_successes": 24,
+        "proxy_success_rate": 0.23300970873786409,
+        "proxy_success_wilson_95": [
+          0.16187608389419228,
+          0.32334247632498886
+        ],
+        "selected_score_auc": 0.5295358649789029,
+        "selected_score_brier": 0.18281428302463837,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 103,
+        "next_session_one_price_cases": 12,
+        "actual_fills": 0,
+        "complete_trade_win_rate": null
+      }
+    },
+    "identity_emotion_price_volume": {
+      "all_candidates": {
+        "candidates": 5156,
+        "proxy_positives": 602,
+        "proxy_base_rate": 0.11675717610550815,
+        "candidate_auc": 0.5850123362762392,
+        "candidate_brier": 0.10214541134964643
+      },
+      "daily_top1": {
+        "selected_sessions": 103,
+        "proxy_successes": 23,
+        "proxy_success_rate": 0.22330097087378642,
+        "proxy_success_wilson_95": [
+          0.15365763149685502,
+          0.31284160363938723
+        ],
+        "selected_score_auc": 0.5516304347826086,
+        "selected_score_brier": 0.17362273149676893,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 103,
+        "next_session_one_price_cases": 20,
+        "actual_fills": 0,
+        "complete_trade_win_rate": null
+      }
+    },
+    "highest_board_baseline": {
+      "all_candidates": {
+        "candidates": 5156,
+        "proxy_positives": 602,
+        "proxy_base_rate": 0.11675717610550815,
+        "candidate_auc": 0.5839596309768201,
+        "candidate_brier": null
+      },
+      "daily_top1": {
+        "selected_sessions": 103,
+        "proxy_successes": 24,
+        "proxy_success_rate": 0.23300970873786409,
+        "proxy_success_wilson_95": [
+          0.16187608389419228,
+          0.32334247632498886
+        ],
+        "selected_score_auc": 0.4741561181434599,
+        "selected_score_brier": null,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 103,
+        "next_session_one_price_cases": 12,
+        "actual_fills": 0,
+        "complete_trade_win_rate": null
+      }
+    }
+  },
+  "august_2025_subgroup": {
+    "height_only": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.33333333333333326,
+      "selected_score_brier": 0.13818273372192305,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 2,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.29629629629629634,
+      "selected_score_brier": 0.13442569563286594,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 2,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity_plus_emotion": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.38888888888888884,
+      "selected_score_brier": 0.13307664579558867,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 2,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity_emotion_price_volume": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.5185185185185185,
+      "selected_score_brier": 0.1304133383348709,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 6,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    }
+  },
+  "deployment_authorized": false,
+  "limitations": [
+    "reused historical validation is not a sealed blind test",
+    "current-universe historical reconstruction is not a complete point-in-time market universe",
+    "daily OHLC cannot prove order timing, queue position, fill, or a sellable exit",
+    "the target is a price-opportunity proxy and is not complete-trade win probability",
+    "themes, opening confirmation, failed-board manifests, announcements, and actual fills are absent",
+    "results cannot guarantee premium, prevent a nuclear open, or authorize a live recommendation"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831\\full_pool_eod_features.csv": "7ea3f4b002dd4f1bd1109d071672de7ce2da21a9fe2e2260d6aa09a9286ae0f1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831\\outcomes_LABEL_ONLY.csv": "7b8de56633324d7329e68192e05111d3c4a5a96d866747682577ed21ff39c307",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_proxy_backtest.py": "419e73340a7a3761219e8385f3d9600bd77f4c4f399b69ad98ec9632d26c60ea"
+  }
+}

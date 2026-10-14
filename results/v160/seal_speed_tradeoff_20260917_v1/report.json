@@ -1,0 +1,87 @@
+{
+  "version": "v160-seal-speed-tradeoff-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "first-board candidates on frozen prequential evaluation dates",
+  "fast_definition": "first seal no later than 09:35 (20 minutes after 09:15)",
+  "evaluation_sessions": 13,
+  "candidate_rows": 577,
+  "groups": {
+    "fast": {
+      "candidate_n": 89,
+      "session_n": 13,
+      "promotion_rate": 0.23595505617977527,
+      "filled_n": 31,
+      "fill_rate": 0.34831460674157305,
+      "b2_known_n": 16,
+      "b2_mean_net_return": -0.017418055934049104,
+      "b2_positive_rate": 0.5625,
+      "b1_big_loss_known_n": 21,
+      "b1_big_loss_rate": 0.09523809523809523
+    },
+    "not_fast": {
+      "candidate_n": 488,
+      "session_n": 13,
+      "promotion_rate": 0.14959016393442623,
+      "filled_n": 163,
+      "fill_rate": 0.33401639344262296,
+      "b2_known_n": 65,
+      "b2_mean_net_return": -0.005300935874852109,
+      "b2_positive_rate": 0.38461538461538464,
+      "b1_big_loss_known_n": 115,
+      "b1_big_loss_rate": 0.02608695652173913
+    }
+  },
+  "fast_minus_not_fast": {
+    "promotion_rate": 0.08636489224534905,
+    "fill_rate": 0.014298213298950091,
+    "b2_mean_net_return": -0.012117120059196995,
+    "b2_positive_rate": 0.17788461538461536,
+    "b1_big_loss_rate": 0.0691511387163561
+  },
+  "date_cluster_bootstrap95": {
+    "promotion_rate": [
+      -0.00555825493849842,
+      0.19523630515464846
+    ],
+    "fill_rate": [
+      -0.07878642284806249,
+      0.10624129370586911
+    ],
+    "b2_mean_net_return": [
+      -0.04401893856556588,
+      0.00548107837366313
+    ],
+    "b2_positive_rate": [
+      -0.01428571428571429,
+      0.2577777777777778
+    ],
+    "b1_big_loss_rate": [
+      -0.04,
+      0.2357142857142857
+    ]
+  },
+  "earliest_daily_top1": {
+    "sessions": 13,
+    "promotion_rate": 0.07692307692307693,
+    "filled_n": 4
+  },
+  "governance": {
+    "fast_seal_positive_ranking_factor_allowed": false,
+    "fast_seal_hard_reject_allowed": false,
+    "allowed_role": "ATTENTION_OR_IDENTITY_CLUE_ONLY",
+    "stock_entry_authorized": false
+  },
+  "interpretation": "Seal speed may correlate with next-session promotion while failing to improve B+2 net return or large-loss risk. It must interact with specific-theme status, cross-theme competition, buyability and opening absorption.",
+  "limitations": [
+    "only 13 later sessions are available",
+    "the evaluation period has already been inspected by prior research",
+    "daily open fill is a proxy and cannot verify auction queue or partial execution",
+    "specific-theme and cross-theme V150/V157 factors are not present in this sample"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\first_board_observations.csv": "41a64531e7c4c8ff82830f7a5026ae99e93ce55886e5b7e97586e547222a0d46",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v1\\first_board_trade_outcomes_LABEL_ONLY.csv": "0388d5b9ec8d7f6a610be9100661132b4b623ff5780460bfa4643a968a83d81f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\prequential_predictions.csv": "632e4d032dc81d89b9e76bc9991653201d88142cce3dc4a2bb8b952e3b10331b"
+  },
+  "rows_sha256": "f3e911dac5cae7f13b9a9a7273daaa1ea39a7bbb21c06b36f77fe7429506f421"
+}

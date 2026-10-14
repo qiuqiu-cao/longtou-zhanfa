@@ -1,0 +1,87 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2025-07-25",
+  "retrieved_date": "2026-09-04",
+  "retrieval_precision": "date_only",
+  "mode": "historical_reconstruction",
+  "selection": "Date-based source search, no selection by later winning stock; exploratory case, not blind test",
+  "original_version_archive_verified": false,
+  "live_feature_eligible": false,
+  "full_theme_roster_available": false,
+  "sources": [
+    {
+      "id": "cls-2096067",
+      "url": "https://www.cls.cn/detail/2096067",
+      "published_at": "2025-07-25T11:42:31+08:00",
+      "source_kind": "financial_news_market_summary",
+      "reported_scope": "all_market_excluding_ST_and_delisting",
+      "reported_limit_count": 35,
+      "reported_consecutive_count": 8,
+      "reported_failed_count": 16,
+      "reported_seal_rate_pct": 69,
+      "reported_five_board_names": ["西藏天路", "西宁特钢", "南方路机", "西藏旅游"],
+      "scope_note": "Intraday snapshot, not end-of-day outcomes or mainboard-only pool"
+    },
+    {
+      "id": "cls-2096296",
+      "url": "https://www.cls.cn/detail/2096296",
+      "published_at": "2025-07-25T15:18:09+08:00",
+      "source_kind": "financial_news_market_summary",
+      "reported_scope": "all_market_excluding_ST_and_delisting",
+      "reported_limit_count": 45,
+      "reported_consecutive_count": 9,
+      "reported_failed_count": 26,
+      "reported_seal_rate_pct": 63,
+      "uninterrupted_vs_window_count_warning": "汇通集团11天7板 is a window statistic, not seven uninterrupted boards"
+    },
+    {
+      "id": "cls-2096350",
+      "url": "https://www.cls.cn/detail/2096350",
+      "published_at": "2025-07-25T15:43:17+08:00",
+      "source_kind": "financial_news_relay_summary",
+      "reported_prior_consecutive_count": 18,
+      "reported_three_or_more_today": 5,
+      "reported_relay_promotion_rate_pct": 27.78,
+      "reported_repeated_opening_names": ["西宁特钢", "西藏天路"],
+      "opening_count": null,
+      "opening_timestamps": null,
+      "denominator_warning": "Today's total consecutive count includes newly promoted second boards; do not divide 9 by prior 18 to estimate existing relay promotion"
+    },
+    {
+      "id": "stcn-2746571",
+      "url": "https://www.stcn.com/article/detail/2746571.html",
+      "published_at_conservative": "2025-07-25T16:17:59+08:00",
+      "publication_precision": "minute",
+      "source_kind": "financial_news_concept_statistics",
+      "reported_theme": "雅下水电",
+      "reported_theme_return_pct": -3.68,
+      "membership_interpretation": "Broad common catalyst spans industries; not proof all members share one narrow subtheme",
+      "funds_flow_used_as_true_orders": false
+    }
+  ],
+  "local_comparison": {
+    "file": "data/v23/candidate_emotion_features_strict.csv",
+    "date": "2025-07-25",
+    "observed_candidates": [
+      {"code": "001226", "boards": 3},
+      {"code": "002826", "boards": 2},
+      {"code": "003023", "boards": 3},
+      {"code": "600117", "boards": 5},
+      {"code": "600288", "boards": 2},
+      {"code": "600326", "boards": 5},
+      {"code": "600749", "boards": 5},
+      {"code": "603176", "boards": 2}
+    ],
+    "local_count": 8,
+    "news_count": 9,
+    "coverage_reconciled": false,
+    "difference_cause": "unresolved; news scope and local available-mainboard-history scope differ",
+    "outcomes_after_signal_loaded_for_case": false
+  },
+  "hypotheses": [
+    "Increasing total limit-ups can coexist with weakening relay quality; total count alone cannot identify repair",
+    "Repeated openings among height leaders plus weak peer feedback challenges a simple healthy-elimination interpretation",
+    "A surviving locked board may be an emotion anchor without an executable entry"
+  ],
+  "not_established": ["unique best candidate", "executable entry", "next-session profitable exit", "calibrated premium odds", "causal funds intent"]
+}

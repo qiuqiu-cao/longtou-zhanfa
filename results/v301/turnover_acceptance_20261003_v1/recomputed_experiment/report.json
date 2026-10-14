@@ -1,0 +1,551 @@
+{
+  "version": "v301-official-turnover-bands-1",
+  "recorded_at_utc": "2026-10-02T16:48:41.292020+00:00",
+  "status": "OFFICIAL_BROADER_SCOPE_AMOUNT_INTERVAL_RESEARCH_ONLY",
+  "protocol": {
+    "version": "v301-official-turnover-bands-1",
+    "signal_start": "2026-01-01",
+    "signal_end": "2026-09-30",
+    "arms": [
+      "LEVEL",
+      "PERSISTENCE_DELTA"
+    ],
+    "lookback_official_sessions": 120,
+    "minimum_known_observations": 60,
+    "quantiles": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "quantile_method": "linear",
+    "alpha": 0.2,
+    "nominal_coverage": 0.8,
+    "unit": "亿元",
+    "bounds": "nonnegative, continuous; no rounding of interval boundaries",
+    "target_join": "exact official successor, never next available observation",
+    "periods": {
+      "ALL": [
+        "2026-01-01",
+        "2026-09-30"
+      ],
+      "JAN_FEB": [
+        "2026-01-01",
+        "2026-02-28"
+      ],
+      "MAR_SEP": [
+        "2026-03-01",
+        "2026-09-30"
+      ]
+    },
+    "bootstrap": {
+      "draws": 5000,
+      "seed": 301,
+      "block_official_sessions": 5,
+      "family_channels": 2,
+      "tails": [
+        0.0125,
+        0.9875
+      ]
+    },
+    "scope": {
+      "mainboard_a_amount_yi": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "shsz_stock_category_amount_yi": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE"
+    },
+    "protocol_stable_60_target_redefinition": false,
+    "threshold_selection_on_test": false,
+    "scope_matches_original_non_st_pool": false,
+    "genuine_historical_availability_certified": false,
+    "pure_blind_test": false,
+    "forward_evidence": false,
+    "core_upgrade_authorized": false,
+    "goal_complete": false
+  },
+  "source_dates": 302,
+  "channels": 2,
+  "prediction_rows": 724,
+  "metrics": [
+    {
+      "period": "ALL",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "official_signal_dates": 181,
+      "retained_rows": 181,
+      "intervals_issued": 181,
+      "known_targets": 180,
+      "evaluated_dates": 180,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.6777777777777778,
+      "mean_width": 7250.407250000001,
+      "mean_interval_score": 11604.085472222223,
+      "median_forecast_mae": 2864.665027777778
+    },
+    {
+      "period": "ALL",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "official_signal_dates": 181,
+      "retained_rows": 181,
+      "intervals_issued": 181,
+      "known_targets": 180,
+      "evaluated_dates": 180,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.7777777777777778,
+      "mean_width": 3598.5129611111124,
+      "mean_interval_score": 5618.636461111111,
+      "median_forecast_mae": 1195.8671666666664
+    },
+    {
+      "period": "ALL",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE",
+      "official_signal_dates": 181,
+      "retained_rows": 181,
+      "intervals_issued": 181,
+      "known_targets": 180,
+      "evaluated_dates": 180,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.65,
+      "mean_width": 12648.830277777775,
+      "mean_interval_score": 20497.870611111106,
+      "median_forecast_mae": 5155.51038888889
+    },
+    {
+      "period": "ALL",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE",
+      "official_signal_dates": 181,
+      "retained_rows": 181,
+      "intervals_issued": 181,
+      "known_targets": 180,
+      "evaluated_dates": 180,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.7611111111111111,
+      "mean_width": 5841.948527777779,
+      "mean_interval_score": 9695.550638888888,
+      "median_forecast_mae": 2063.274805555555
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "official_signal_dates": 34,
+      "retained_rows": 34,
+      "intervals_issued": 34,
+      "known_targets": 34,
+      "evaluated_dates": 34,
+      "missing_target_dates": [],
+      "coverage": 0.5294117647058824,
+      "mean_width": 6900.343941176473,
+      "mean_interval_score": 17107.390411764703,
+      "median_forecast_mae": 3961.0573529411768
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "official_signal_dates": 34,
+      "retained_rows": 34,
+      "intervals_issued": 34,
+      "known_targets": 34,
+      "evaluated_dates": 34,
+      "missing_target_dates": [],
+      "coverage": 0.6764705882352942,
+      "mean_width": 3494.579117647059,
+      "mean_interval_score": 6796.93205882353,
+      "median_forecast_mae": 1402.000735294118
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE",
+      "official_signal_dates": 34,
+      "retained_rows": 34,
+      "intervals_issued": 34,
+      "known_targets": 34,
+      "evaluated_dates": 34,
+      "missing_target_dates": [],
+      "coverage": 0.5588235294117647,
+      "mean_width": 11561.976117647062,
+      "mean_interval_score": 27929.52435294117,
+      "median_forecast_mae": 6593.1994117647055
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE",
+      "official_signal_dates": 34,
+      "retained_rows": 34,
+      "intervals_issued": 34,
+      "known_targets": 34,
+      "evaluated_dates": 34,
+      "missing_target_dates": [],
+      "coverage": 0.7058823529411765,
+      "mean_width": 5467.672941176472,
+      "mean_interval_score": 10872.561176470585,
+      "median_forecast_mae": 2200.7461764705877
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "official_signal_dates": 147,
+      "retained_rows": 147,
+      "intervals_issued": 147,
+      "known_targets": 146,
+      "evaluated_dates": 146,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.7123287671232876,
+      "mean_width": 7331.928842465753,
+      "mean_interval_score": 10322.493910958905,
+      "median_forecast_mae": 2609.340787671233
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "official_signal_dates": 147,
+      "retained_rows": 147,
+      "intervals_issued": 147,
+      "known_targets": 146,
+      "evaluated_dates": 146,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.8013698630136986,
+      "mean_width": 3622.716732876713,
+      "mean_interval_score": 5344.238856164383,
+      "median_forecast_mae": 1147.8634589041096
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE",
+      "official_signal_dates": 147,
+      "retained_rows": 147,
+      "intervals_issued": 147,
+      "known_targets": 146,
+      "evaluated_dates": 146,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.6712328767123288,
+      "mean_width": 12901.933301369862,
+      "mean_interval_score": 18767.21152054794,
+      "median_forecast_mae": 4820.70609589041
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "scope": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE",
+      "official_signal_dates": 147,
+      "retained_rows": 147,
+      "intervals_issued": 147,
+      "known_targets": 146,
+      "evaluated_dates": 146,
+      "missing_target_dates": [
+        "2026-09-30"
+      ],
+      "coverage": 0.773972602739726,
+      "mean_width": 5929.108595890411,
+      "mean_interval_score": 9421.452294520546,
+      "median_forecast_mae": 2031.2609246575337
+    }
+  ],
+  "paired_metrics": [
+    {
+      "period": "ALL",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "official_signal_dates": 181,
+      "common_dates": 180,
+      "coverage": 0.6777777777777778,
+      "mean_width": 7250.407250000001,
+      "mean_interval_score": 11604.085472222223,
+      "median_forecast_mae": 2864.665027777778
+    },
+    {
+      "period": "ALL",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "official_signal_dates": 181,
+      "common_dates": 180,
+      "coverage": 0.7777777777777778,
+      "mean_width": 3598.5129611111124,
+      "mean_interval_score": 5618.636461111111,
+      "median_forecast_mae": 1195.8671666666664
+    },
+    {
+      "period": "ALL",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "official_signal_dates": 181,
+      "common_dates": 180,
+      "coverage": 0.65,
+      "mean_width": 12648.830277777775,
+      "mean_interval_score": 20497.870611111106,
+      "median_forecast_mae": 5155.51038888889
+    },
+    {
+      "period": "ALL",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "official_signal_dates": 181,
+      "common_dates": 180,
+      "coverage": 0.7611111111111111,
+      "mean_width": 5841.948527777779,
+      "mean_interval_score": 9695.550638888888,
+      "median_forecast_mae": 2063.274805555555
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "official_signal_dates": 34,
+      "common_dates": 34,
+      "coverage": 0.5294117647058824,
+      "mean_width": 6900.343941176473,
+      "mean_interval_score": 17107.390411764703,
+      "median_forecast_mae": 3961.0573529411768
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "official_signal_dates": 34,
+      "common_dates": 34,
+      "coverage": 0.6764705882352942,
+      "mean_width": 3494.579117647059,
+      "mean_interval_score": 6796.93205882353,
+      "median_forecast_mae": 1402.000735294118
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "official_signal_dates": 34,
+      "common_dates": 34,
+      "coverage": 0.5588235294117647,
+      "mean_width": 11561.976117647062,
+      "mean_interval_score": 27929.52435294117,
+      "median_forecast_mae": 6593.1994117647055
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "official_signal_dates": 34,
+      "common_dates": 34,
+      "coverage": 0.7058823529411765,
+      "mean_width": 5467.672941176472,
+      "mean_interval_score": 10872.561176470585,
+      "median_forecast_mae": 2200.7461764705877
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "official_signal_dates": 147,
+      "common_dates": 146,
+      "coverage": 0.7123287671232876,
+      "mean_width": 7331.928842465753,
+      "mean_interval_score": 10322.493910958905,
+      "median_forecast_mae": 2609.340787671233
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "mainboard_a_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "official_signal_dates": 147,
+      "common_dates": 146,
+      "coverage": 0.8013698630136986,
+      "mean_width": 3622.716732876713,
+      "mean_interval_score": 5344.238856164383,
+      "median_forecast_mae": 1147.8634589041096
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "LEVEL",
+      "unit": "亿元",
+      "official_signal_dates": 147,
+      "common_dates": 146,
+      "coverage": 0.6712328767123288,
+      "mean_width": 12901.933301369862,
+      "mean_interval_score": 18767.21152054794,
+      "median_forecast_mae": 4820.70609589041
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "shsz_stock_category_amount_yi",
+      "arm": "PERSISTENCE_DELTA",
+      "unit": "亿元",
+      "official_signal_dates": 147,
+      "common_dates": 146,
+      "coverage": 0.773972602739726,
+      "mean_width": 5929.108595890411,
+      "mean_interval_score": 9421.452294520546,
+      "median_forecast_mae": 2031.2609246575337
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "period": "ALL",
+      "metric": "mainboard_a_amount_yi",
+      "status": "PAIRED_OFFICIAL_DATE_BLOCK_DIAGNOSTIC",
+      "pairs": 180,
+      "official_dates": 181,
+      "difference_delta_minus_level": -5985.449011111111,
+      "adjusted_interval": [
+        -8670.573527511991,
+        -3813.4329372210586
+      ],
+      "finite_draws": 5000,
+      "lower_score_is_better": true,
+      "simultaneous_or_live_guarantee": false
+    },
+    {
+      "period": "ALL",
+      "metric": "shsz_stock_category_amount_yi",
+      "status": "PAIRED_OFFICIAL_DATE_BLOCK_DIAGNOSTIC",
+      "pairs": 180,
+      "official_dates": 181,
+      "difference_delta_minus_level": -10802.319972222222,
+      "adjusted_interval": [
+        -15493.511960433992,
+        -6992.24617051105
+      ],
+      "finite_draws": 5000,
+      "lower_score_is_better": true,
+      "simultaneous_or_live_guarantee": false
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "mainboard_a_amount_yi",
+      "status": "PAIRED_OFFICIAL_DATE_BLOCK_DIAGNOSTIC",
+      "pairs": 34,
+      "official_dates": 34,
+      "difference_delta_minus_level": -10310.458352941174,
+      "adjusted_interval": [
+        -20191.518925735287,
+        -3451.7764044117675
+      ],
+      "finite_draws": 5000,
+      "lower_score_is_better": true,
+      "simultaneous_or_live_guarantee": false
+    },
+    {
+      "period": "JAN_FEB",
+      "metric": "shsz_stock_category_amount_yi",
+      "status": "PAIRED_OFFICIAL_DATE_BLOCK_DIAGNOSTIC",
+      "pairs": 34,
+      "official_dates": 34,
+      "difference_delta_minus_level": -17056.96317647058,
+      "adjusted_interval": [
+        -35291.06845036763,
+        -5681.668192279426
+      ],
+      "finite_draws": 5000,
+      "lower_score_is_better": true,
+      "simultaneous_or_live_guarantee": false
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "mainboard_a_amount_yi",
+      "status": "PAIRED_OFFICIAL_DATE_BLOCK_DIAGNOSTIC",
+      "pairs": 146,
+      "official_dates": 147,
+      "difference_delta_minus_level": -4978.25505479452,
+      "adjusted_interval": [
+        -7030.110882135284,
+        -3130.7558079931987
+      ],
+      "finite_draws": 5000,
+      "lower_score_is_better": true,
+      "simultaneous_or_live_guarantee": false
+    },
+    {
+      "period": "MAR_SEP",
+      "metric": "shsz_stock_category_amount_yi",
+      "status": "PAIRED_OFFICIAL_DATE_BLOCK_DIAGNOSTIC",
+      "pairs": 146,
+      "official_dates": 147,
+      "difference_delta_minus_level": -9345.759226027396,
+      "adjusted_interval": [
+        -12928.438575595235,
+        -5966.093007159278
+      ],
+      "finite_draws": 5000,
+      "lower_score_is_better": true,
+      "simultaneous_or_live_guarantee": false
+    }
+  ],
+  "original_forecast_sha256": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+  "same_scope_original_turnover_slot_complete": false,
+  "forward_evidence": false,
+  "pure_blind_test": false,
+  "core_upgrade_authorized": false,
+  "stable_60_proved": false,
+  "goal_complete": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\exchange_turnover_intervals_v301.py": "f18c47ccdedf6bf26e77282acbf3f5e7506ac1783f82a0454d614ef4cd2cabbc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v301\\turnover_history_repaired_observations_20261003_v1\\report.json": "040a6686d65354f8e3946d2079a01d8d9721175805c1d0bda7feff6d27b68101",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v301\\turnover_history_repaired_observations_20261003_v1\\market_amounts_NOT_ORIGINAL_POOL_SCOPE.csv": "8e1eb9cb2bdb95d23a397350220f9845fd9bb86ba3780c7719aaba47596ffa9d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\market_interval_research_v300.py": "d628a18fea9277efe0db31d9ed1a1f905a3ca4ff7b9ba4b27462fd9295d27ea5"
+  },
+  "artifact_hashes": {
+    "amount_grid_NOT_ORIGINAL_SCOPE.csv": "1f4411fe0ad97921c1ea0bd390ff5dd6eeecd5656c6af51bc2183e7f72d33735",
+    "coverage_and_scores.csv": "4453e2d15318db4598601aeadb6e287c8a5e25f913831158a8b56c0f12229b43",
+    "paired_common_date_summary.csv": "bf27c1484d6b8c61a095091f40ef3915464ed2a5dd273a396f10262d0ee9fdd1",
+    "paired_interval_score.json": "003b5c10e1faf0d509ec1211e486764ef6d6e523d12c9e3e6d6490565dd745c0",
+    "predictions_NO_LABELS_NOT_FORWARD.csv": "cb2fbc0ca8973896315605999f326ea1971a68af1a8bec99c40ffdaf42b1690b",
+    "prediction_receipt.json": "df542372723de3bf00f9962b991f503f285cb7223d8769e850c34ca51520292c",
+    "protocol.json": "3747b0cce9eee1ed671439144a14ae77b6e765510e1db0eda845258dd41b8e39",
+    "scores_LABEL_ONLY.csv": "b80997d8714cc7c1c91de7c6cf46301f0c4c7553ee929e634be99c5316d670c5"
+  }
+}

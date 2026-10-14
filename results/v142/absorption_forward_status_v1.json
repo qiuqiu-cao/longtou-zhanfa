@@ -1,0 +1,52 @@
+{
+  "version": "v142-absorption-forward-report-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "registry_verification": {
+    "status": "PASS",
+    "errors": [],
+    "event_count": 1,
+    "snapshot_count": 0,
+    "last_event_hash": "452dda61c1f2a337c86b949442d7230a077ba164be924967720580ab289bcf86",
+    "settlement_count": 0
+  },
+  "snapshot_sessions": 0,
+  "settled_sessions": 0,
+  "unsettled_sessions": [],
+  "candidate_records": 0,
+  "execution_state_counts": {},
+  "actual_fills": {
+    "completed_trades": 0,
+    "win_rate": null,
+    "mean_net_return": null,
+    "average_win": null,
+    "average_loss": null,
+    "payoff_ratio": null,
+    "profit_factor": null,
+    "large_loss_rate": null,
+    "maximum_consecutive_losses": 0,
+    "trade_sequence_max_drawdown_proxy": null,
+    "account_max_drawdown": null
+  },
+  "conservative_sim_fills": {
+    "completed_trades": 0,
+    "win_rate": null,
+    "mean_net_return": null,
+    "average_win": null,
+    "average_loss": null,
+    "payoff_ratio": null,
+    "profit_factor": null,
+    "large_loss_rate": null,
+    "maximum_consecutive_losses": 0,
+    "trade_sequence_max_drawdown_proxy": null,
+    "account_max_drawdown": null
+  },
+  "candidate_b2_by_board_and_gate": {},
+  "minimum_sample_gate_passed": false,
+  "challenge_70pct_testable": false,
+  "deployment_authorized": false,
+  "limitations": [
+    "actual and simulated fills are never combined into an actual-performance claim",
+    "trade-sequence drawdown assumes one full unit per completed trade and is not account drawdown",
+    "account drawdown remains unavailable without frozen capital and position ledger"
+  ]
+}

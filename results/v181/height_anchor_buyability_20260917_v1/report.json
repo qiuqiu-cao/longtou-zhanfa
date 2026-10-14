@@ -1,0 +1,126 @@
+{
+  "version": "v181-height-anchor-buyability-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target_contract": {
+    "description": "next-session touched limit AND not one-price AND B+2 net close mark > 0",
+    "no_touch_rows_retained_as_negative": true,
+    "next_session_one_price_rows_retained_as_negative": true,
+    "touchable_rows_with_unknown_b2_excluded": 2,
+    "actual_fills": 0,
+    "complete_trades": 0
+  },
+  "height_anchor_scope": {
+    "rows": 714,
+    "sessions": 500,
+    "unique_anchor_rows": 374,
+    "co_high_anchor_rows": 340,
+    "all_anchor_proxy_success_rate": 0.20448179271708683,
+    "unique_anchor_proxy_success_rate": 0.20855614973262032,
+    "co_high_anchor_proxy_success_rate": 0.2
+  },
+  "split": {
+    "method": "chronological_70_30_by_signal_date",
+    "split_date": "2025-05-16",
+    "development_rows": 472,
+    "development_sessions": 350,
+    "validation_rows": 242,
+    "validation_sessions": 150,
+    "validation_previously_inspected": true
+  },
+  "models": {
+    "boards_only": {
+      "features": [
+        "boards"
+      ],
+      "metrics": {
+        "rows": 242,
+        "positive_rate": 0.22727272727272727,
+        "auc": 0.3945065629557608,
+        "brier": 0.18138985368531155,
+        "log_loss": 0.5555902295639638
+      }
+    },
+    "identity_emotion_price_volume": {
+      "features": [
+        "boards",
+        "sole_known_top_proxy",
+        "open_gap_pct",
+        "amplitude_pct",
+        "amount_to_float_cap",
+        "one_price_day_proxy",
+        "turnover",
+        "market_failed_rate",
+        "market_seal_rate",
+        "market_ladder_gap_count",
+        "market_one_word_share",
+        "market_previous_limit_tail_loss",
+        "market_promotion_mid",
+        "market_space_feedback",
+        "market_crowding_risk",
+        "market_regime_fragility",
+        "market_false_acceleration"
+      ],
+      "metrics": {
+        "rows": 242,
+        "positive_rate": 0.22727272727272727,
+        "auc": 0.37929022848808946,
+        "brier": 0.18799155346441784,
+        "log_loss": 0.5824228467434068
+      }
+    }
+  },
+  "date_clustered_metric_gains": {
+    "auc_gain": {
+      "estimate": -0.015007035418282792,
+      "ci95": [
+        -0.08056119900853356,
+        0.04912520092149177
+      ]
+    },
+    "brier_gain": {
+      "estimate": -0.006536566574175866,
+      "ci95": [
+        -0.01146364363922658,
+        -0.0015206627481792973
+      ]
+    },
+    "log_loss_gain": {
+      "estimate": -0.026681907633350814,
+      "ci95": [
+        -0.04609607908200314,
+        -0.008157121245434324
+      ]
+    }
+  },
+  "daily_top1_within_height_anchors": {
+    "paired_sessions": 150,
+    "baseline_success_rate": 0.18,
+    "challenger_success_rate": 0.18,
+    "difference": 0.0,
+    "bootstrap95": [
+      -0.04666666666666667,
+      0.04666666666666667
+    ]
+  },
+  "height_anchor_buyability_uplift_supported": false,
+  "governance": {
+    "height_anchor_can_auto_fill_relay_primary": false,
+    "height_anchor_can_auto_fill_current_buy": false,
+    "candidate_probability_claim_allowed": false,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "Highest-board identity is an emotion role, not proof of a buyable B+2 edge. Only if the corrected challenger beats boards-only metrics and daily selection under date-clustered intervals could a ranking claim be reconsidered.",
+  "limitations": [
+    "daily proxy cannot prove auction queue, fill, T+1 sellability, or realized exit",
+    "historical candidate universe is not independently full-market complete",
+    "features are retrospective reconstruction rather than frozen forward archives",
+    "specific-theme, catalyst, competition identity, and abnormal-rule paths are absent",
+    "validation dates were inspected by prior project research and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\full_pool_features_20260905_v2\\full_pool_eod_features.csv": "52bb9eea10a02addb233ef6b06d1b6fc1dada7a9a2168cceb043c90e11c5466d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e"
+  },
+  "predictions_sha256": "bdf4ddf83a8e9dfb22b4083eab2b08a083251eb0ac1432192d4d26531b1d5407"
+}

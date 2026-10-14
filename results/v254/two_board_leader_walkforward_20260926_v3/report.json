@@ -1,0 +1,793 @@
+{
+  "version": "v254-two-board-leader-seed-walkforward-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target": "2_to_3_next_session_promotion_LABEL_ONLY",
+  "source_cutoff": "2025-12-24",
+  "rows": 3832,
+  "date_clusters": 497,
+  "target_rate_all_candidates": 0.3588204592901879,
+  "models": {
+    "identity": [
+      "height_gap_to_known_top",
+      "same_height_known_count",
+      "sole_known_top_proxy",
+      "candidate_pool_count",
+      "unknown_height_pool_count"
+    ],
+    "identity_emotion": [
+      "height_gap_to_known_top",
+      "same_height_known_count",
+      "sole_known_top_proxy",
+      "candidate_pool_count",
+      "unknown_height_pool_count",
+      "market_yesterday_premium",
+      "market_previous_limit_tail_loss",
+      "market_failed_tail_loss",
+      "market_failed_rate",
+      "market_down_limit_count",
+      "market_promotion_overall",
+      "market_promotion_1to2",
+      "market_promotion_2to3",
+      "market_promotion_mid",
+      "market_space_feedback_3d",
+      "market_middle_density",
+      "market_ladder_gap_count",
+      "market_breadth_health",
+      "market_relay_appetite",
+      "market_ladder_health",
+      "market_loss_effect_health",
+      "market_crowding_risk",
+      "market_regime_fragility",
+      "market_false_acceleration",
+      "market_emotion_score",
+      "market_state_start",
+      "market_state_warming",
+      "market_state_acceleration",
+      "market_state_consensus",
+      "market_state_divergence",
+      "market_state_retreat",
+      "market_state_repair"
+    ],
+    "identity_emotion_price_volume": [
+      "height_gap_to_known_top",
+      "same_height_known_count",
+      "sole_known_top_proxy",
+      "candidate_pool_count",
+      "unknown_height_pool_count",
+      "market_yesterday_premium",
+      "market_previous_limit_tail_loss",
+      "market_failed_tail_loss",
+      "market_failed_rate",
+      "market_down_limit_count",
+      "market_promotion_overall",
+      "market_promotion_1to2",
+      "market_promotion_2to3",
+      "market_promotion_mid",
+      "market_space_feedback_3d",
+      "market_middle_density",
+      "market_ladder_gap_count",
+      "market_breadth_health",
+      "market_relay_appetite",
+      "market_ladder_health",
+      "market_loss_effect_health",
+      "market_crowding_risk",
+      "market_regime_fragility",
+      "market_false_acceleration",
+      "market_emotion_score",
+      "market_state_start",
+      "market_state_warming",
+      "market_state_acceleration",
+      "market_state_consensus",
+      "market_state_divergence",
+      "market_state_retreat",
+      "market_state_repair",
+      "open_gap_pct",
+      "amplitude_pct",
+      "amount_to_float_cap",
+      "turnover",
+      "one_price_day_proxy"
+    ],
+    "identity_emotion_price_volume_non_one_price": [
+      "height_gap_to_known_top",
+      "same_height_known_count",
+      "sole_known_top_proxy",
+      "candidate_pool_count",
+      "unknown_height_pool_count",
+      "market_yesterday_premium",
+      "market_previous_limit_tail_loss",
+      "market_failed_tail_loss",
+      "market_failed_rate",
+      "market_down_limit_count",
+      "market_promotion_overall",
+      "market_promotion_1to2",
+      "market_promotion_2to3",
+      "market_promotion_mid",
+      "market_space_feedback_3d",
+      "market_middle_density",
+      "market_ladder_gap_count",
+      "market_breadth_health",
+      "market_relay_appetite",
+      "market_ladder_health",
+      "market_loss_effect_health",
+      "market_crowding_risk",
+      "market_regime_fragility",
+      "market_false_acceleration",
+      "market_emotion_score",
+      "market_state_start",
+      "market_state_warming",
+      "market_state_acceleration",
+      "market_state_consensus",
+      "market_state_divergence",
+      "market_state_retreat",
+      "market_state_repair",
+      "open_gap_pct",
+      "amplitude_pct",
+      "amount_to_float_cap",
+      "turnover"
+    ]
+  },
+  "walk_forward": {
+    "method": "expanding chronological windows; train strictly before validation",
+    "windows": [
+      {
+        "start": "2024-07-01",
+        "end_exclusive": "2024-10-01",
+        "training_rows": 817,
+        "validation_rows": 358,
+        "training_days": 136,
+        "validation_days": 63,
+        "status": "OK",
+        "baseline": {
+          "selected_days": 63,
+          "successes_2_to_3": 17,
+          "promotion_rate": 0.2698412698412698,
+          "promotion_wilson_95": [
+            0.17583844412315988,
+            0.39029909219551784
+          ],
+          "candidate_auc": 0.5108695652173914,
+          "candidate_brier": null,
+          "one_price_signal_rows": 8
+        },
+        "baseline_non_one_price": {
+          "selected_days": 63,
+          "successes_2_to_3": 13,
+          "promotion_rate": 0.20634920634920634,
+          "promotion_wilson_95": [
+            0.1247531961549383,
+            0.3216981432861334
+          ],
+          "candidate_auc": 0.5138461538461538,
+          "candidate_brier": null,
+          "one_price_signal_rows": 0
+        },
+        "models": {
+          "identity": {
+            "selected_days": 63,
+            "successes_2_to_3": 17,
+            "promotion_rate": 0.2698412698412698,
+            "promotion_wilson_95": [
+              0.17583844412315988,
+              0.39029909219551784
+            ],
+            "candidate_auc": 0.49552429667519177,
+            "candidate_brier": 0.2148786613100996,
+            "one_price_signal_rows": 8
+          },
+          "identity_emotion": {
+            "selected_days": 63,
+            "successes_2_to_3": 17,
+            "promotion_rate": 0.2698412698412698,
+            "promotion_wilson_95": [
+              0.17583844412315988,
+              0.39029909219551784
+            ],
+            "candidate_auc": 0.5843989769820972,
+            "candidate_brier": 0.22088399492091898,
+            "one_price_signal_rows": 8
+          },
+          "identity_emotion_price_volume": {
+            "selected_days": 63,
+            "successes_2_to_3": 38,
+            "promotion_rate": 0.6031746031746031,
+            "promotion_wilson_95": [
+              0.47980918511657444,
+              0.7146808848095354
+            ],
+            "candidate_auc": 0.6463157894736842,
+            "candidate_brier": 0.23057223590399836,
+            "one_price_signal_rows": 36
+          },
+          "identity_emotion_price_volume_non_one_price": {
+            "selected_days": 63,
+            "successes_2_to_3": 20,
+            "promotion_rate": 0.31746031746031744,
+            "promotion_wilson_95": [
+              0.21586686653519657,
+              0.4400353174416858
+            ],
+            "candidate_auc": 0.6499999999999999,
+            "candidate_brier": 0.21451728167060455,
+            "one_price_signal_rows": 0
+          }
+        }
+      },
+      {
+        "start": "2024-10-01",
+        "end_exclusive": "2025-01-01",
+        "training_rows": 1175,
+        "validation_rows": 939,
+        "training_days": 199,
+        "validation_days": 61,
+        "status": "OK",
+        "baseline": {
+          "selected_days": 61,
+          "successes_2_to_3": 26,
+          "promotion_rate": 0.4262295081967213,
+          "promotion_wilson_95": [
+            0.3101522193852527,
+            0.5510476955505343
+          ],
+          "candidate_auc": 0.4824175824175824,
+          "candidate_brier": null,
+          "one_price_signal_rows": 7
+        },
+        "baseline_non_one_price": {
+          "selected_days": 61,
+          "successes_2_to_3": 25,
+          "promotion_rate": 0.4098360655737705,
+          "promotion_wilson_95": [
+            0.2953533743182536,
+            0.5350020772699307
+          ],
+          "candidate_auc": 0.48333333333333334,
+          "candidate_brier": null,
+          "one_price_signal_rows": 0
+        },
+        "models": {
+          "identity": {
+            "selected_days": 61,
+            "successes_2_to_3": 26,
+            "promotion_rate": 0.4262295081967213,
+            "promotion_wilson_95": [
+              0.3101522193852527,
+              0.5510476955505343
+            ],
+            "candidate_auc": 0.5527472527472528,
+            "candidate_brier": 0.24158056857273982,
+            "one_price_signal_rows": 7
+          },
+          "identity_emotion": {
+            "selected_days": 61,
+            "successes_2_to_3": 26,
+            "promotion_rate": 0.4262295081967213,
+            "promotion_wilson_95": [
+              0.3101522193852527,
+              0.5510476955505343
+            ],
+            "candidate_auc": 0.5076923076923077,
+            "candidate_brier": 0.25718804803793155,
+            "one_price_signal_rows": 7
+          },
+          "identity_emotion_price_volume": {
+            "selected_days": 61,
+            "successes_2_to_3": 31,
+            "promotion_rate": 0.5081967213114754,
+            "promotion_wilson_95": [
+              0.3860261849109117,
+              0.6293960467628898
+            ],
+            "candidate_auc": 0.4623655913978495,
+            "candidate_brier": 0.28113090604526664,
+            "one_price_signal_rows": 47
+          },
+          "identity_emotion_price_volume_non_one_price": {
+            "selected_days": 61,
+            "successes_2_to_3": 17,
+            "promotion_rate": 0.2786885245901639,
+            "promotion_wilson_95": [
+              0.18188543892565973,
+              0.4017143058817016
+            ],
+            "candidate_auc": 0.4425133689839572,
+            "candidate_brier": 0.23226156573249476,
+            "one_price_signal_rows": 0
+          }
+        }
+      },
+      {
+        "start": "2025-01-01",
+        "end_exclusive": "2025-04-01",
+        "training_rows": 2114,
+        "validation_rows": 423,
+        "training_days": 260,
+        "validation_days": 57,
+        "status": "OK",
+        "baseline": {
+          "selected_days": 57,
+          "successes_2_to_3": 20,
+          "promotion_rate": 0.3508771929824561,
+          "promotion_wilson_95": [
+            0.2400042200916009,
+            0.480581046443498
+          ],
+          "candidate_auc": 0.5641891891891893,
+          "candidate_brier": null,
+          "one_price_signal_rows": 15
+        },
+        "baseline_non_one_price": {
+          "selected_days": 57,
+          "successes_2_to_3": 15,
+          "promotion_rate": 0.2631578947368421,
+          "promotion_wilson_95": [
+            0.16645786597973072,
+            0.3897657926348382
+          ],
+          "candidate_auc": 0.611904761904762,
+          "candidate_brier": null,
+          "one_price_signal_rows": 0
+        },
+        "models": {
+          "identity": {
+            "selected_days": 57,
+            "successes_2_to_3": 20,
+            "promotion_rate": 0.3508771929824561,
+            "promotion_wilson_95": [
+              0.2400042200916009,
+              0.480581046443498
+            ],
+            "candidate_auc": 0.577027027027027,
+            "candidate_brier": 0.2253485696502975,
+            "one_price_signal_rows": 15
+          },
+          "identity_emotion": {
+            "selected_days": 57,
+            "successes_2_to_3": 20,
+            "promotion_rate": 0.3508771929824561,
+            "promotion_wilson_95": [
+              0.2400042200916009,
+              0.480581046443498
+            ],
+            "candidate_auc": 0.5972972972972973,
+            "candidate_brier": 0.21669990150774082,
+            "one_price_signal_rows": 15
+          },
+          "identity_emotion_price_volume": {
+            "selected_days": 57,
+            "successes_2_to_3": 38,
+            "promotion_rate": 0.6666666666666666,
+            "promotion_wilson_95": [
+              0.5372251158005144,
+              0.7750619392484925
+            ],
+            "candidate_auc": 0.5609418282548476,
+            "candidate_brier": 0.21868282115570353,
+            "one_price_signal_rows": 49
+          },
+          "identity_emotion_price_volume_non_one_price": {
+            "selected_days": 57,
+            "successes_2_to_3": 17,
+            "promotion_rate": 0.2982456140350877,
+            "promotion_wilson_95": [
+              0.19532550074818086,
+              0.42664280103459995
+            ],
+            "candidate_auc": 0.6,
+            "candidate_brier": 0.20105422900334932,
+            "one_price_signal_rows": 0
+          }
+        }
+      },
+      {
+        "start": "2025-04-01",
+        "end_exclusive": "2025-07-01",
+        "training_rows": 2537,
+        "validation_rows": 429,
+        "training_days": 317,
+        "validation_days": 60,
+        "status": "OK",
+        "baseline": {
+          "selected_days": 60,
+          "successes_2_to_3": 19,
+          "promotion_rate": 0.31666666666666665,
+          "promotion_wilson_95": [
+            0.21305867552366523,
+            0.44233767026176773
+          ],
+          "candidate_auc": 0.566752246469833,
+          "candidate_brier": null,
+          "one_price_signal_rows": 9
+        },
+        "baseline_non_one_price": {
+          "selected_days": 59,
+          "successes_2_to_3": 18,
+          "promotion_rate": 0.3050847457627119,
+          "promotion_wilson_95": [
+            0.20253631980116063,
+            0.4314632653194519
+          ],
+          "candidate_auc": 0.575880758807588,
+          "candidate_brier": null,
+          "one_price_signal_rows": 0
+        },
+        "models": {
+          "identity": {
+            "selected_days": 60,
+            "successes_2_to_3": 19,
+            "promotion_rate": 0.31666666666666665,
+            "promotion_wilson_95": [
+              0.21305867552366523,
+              0.44233767026176773
+            ],
+            "candidate_auc": 0.3735558408215661,
+            "candidate_brier": 0.23053279304238894,
+            "one_price_signal_rows": 9
+          },
+          "identity_emotion": {
+            "selected_days": 60,
+            "successes_2_to_3": 19,
+            "promotion_rate": 0.31666666666666665,
+            "promotion_wilson_95": [
+              0.21305867552366523,
+              0.44233767026176773
+            ],
+            "candidate_auc": 0.4249037227214377,
+            "candidate_brier": 0.23421990458066622,
+            "one_price_signal_rows": 9
+          },
+          "identity_emotion_price_volume": {
+            "selected_days": 60,
+            "successes_2_to_3": 38,
+            "promotion_rate": 0.6333333333333333,
+            "promotion_wilson_95": [
+              0.5068300063010303,
+              0.7437908331277456
+            ],
+            "candidate_auc": 0.6291866028708134,
+            "candidate_brier": 0.21270896805930875,
+            "one_price_signal_rows": 53
+          },
+          "identity_emotion_price_volume_non_one_price": {
+            "selected_days": 59,
+            "successes_2_to_3": 24,
+            "promotion_rate": 0.4067796610169492,
+            "promotion_wilson_95": [
+              0.29089033587192775,
+              0.5340659874466261
+            ],
+            "candidate_auc": 0.47380952380952385,
+            "candidate_brier": 0.25595805048192605,
+            "one_price_signal_rows": 0
+          }
+        }
+      },
+      {
+        "start": "2025-07-01",
+        "end_exclusive": "2025-10-01",
+        "training_rows": 2966,
+        "validation_rows": 484,
+        "training_days": 377,
+        "validation_days": 65,
+        "status": "OK",
+        "baseline": {
+          "selected_days": 65,
+          "successes_2_to_3": 17,
+          "promotion_rate": 0.26153846153846155,
+          "promotion_wilson_95": [
+            0.17018193413221397,
+            0.37950802696022556
+          ],
+          "candidate_auc": 0.5490196078431372,
+          "candidate_brier": null,
+          "one_price_signal_rows": 10
+        },
+        "baseline_non_one_price": {
+          "selected_days": 65,
+          "successes_2_to_3": 18,
+          "promotion_rate": 0.27692307692307694,
+          "promotion_wilson_95": [
+            0.1829358381283011,
+            0.39580638353881975
+          ],
+          "candidate_auc": 0.46690307328605196,
+          "candidate_brier": null,
+          "one_price_signal_rows": 0
+        },
+        "models": {
+          "identity": {
+            "selected_days": 65,
+            "successes_2_to_3": 17,
+            "promotion_rate": 0.26153846153846155,
+            "promotion_wilson_95": [
+              0.17018193413221397,
+              0.37950802696022556
+            ],
+            "candidate_auc": 0.5747549019607844,
+            "candidate_brier": 0.20400188184655796,
+            "one_price_signal_rows": 10
+          },
+          "identity_emotion": {
+            "selected_days": 65,
+            "successes_2_to_3": 17,
+            "promotion_rate": 0.26153846153846155,
+            "promotion_wilson_95": [
+              0.17018193413221397,
+              0.37950802696022556
+            ],
+            "candidate_auc": 0.6348039215686275,
+            "candidate_brier": 0.19713307347534428,
+            "one_price_signal_rows": 10
+          },
+          "identity_emotion_price_volume": {
+            "selected_days": 65,
+            "successes_2_to_3": 40,
+            "promotion_rate": 0.6153846153846154,
+            "promotion_wilson_95": [
+              0.493842028060131,
+              0.7240499262499791
+            ],
+            "candidate_auc": 0.5750000000000001,
+            "candidate_brier": 0.24350257525415048,
+            "one_price_signal_rows": 44
+          },
+          "identity_emotion_price_volume_non_one_price": {
+            "selected_days": 65,
+            "successes_2_to_3": 28,
+            "promotion_rate": 0.4307692307692308,
+            "promotion_wilson_95": [
+              0.3175945741563928,
+              0.5516702532575414
+            ],
+            "candidate_auc": 0.4613899613899614,
+            "candidate_brier": 0.26667223052077793,
+            "one_price_signal_rows": 0
+          }
+        }
+      },
+      {
+        "start": "2025-10-01",
+        "end_exclusive": "2026-01-01",
+        "training_rows": 3450,
+        "validation_rows": 382,
+        "training_days": 442,
+        "validation_days": 55,
+        "status": "OK",
+        "baseline": {
+          "selected_days": 55,
+          "successes_2_to_3": 24,
+          "promotion_rate": 0.43636363636363634,
+          "promotion_wilson_95": [
+            0.3137344236063191,
+            0.5673018365358555
+          ],
+          "candidate_auc": 0.46505376344086025,
+          "candidate_brier": null,
+          "one_price_signal_rows": 5
+        },
+        "baseline_non_one_price": {
+          "selected_days": 55,
+          "successes_2_to_3": 21,
+          "promotion_rate": 0.38181818181818183,
+          "promotion_wilson_95": [
+            0.265159542588938,
+            0.5139077976751008
+          ],
+          "candidate_auc": 0.5,
+          "candidate_brier": null,
+          "one_price_signal_rows": 0
+        },
+        "models": {
+          "identity": {
+            "selected_days": 55,
+            "successes_2_to_3": 24,
+            "promotion_rate": 0.43636363636363634,
+            "promotion_wilson_95": [
+              0.3137344236063191,
+              0.5673018365358555
+            ],
+            "candidate_auc": 0.5,
+            "candidate_brier": 0.24840636436281202,
+            "one_price_signal_rows": 5
+          },
+          "identity_emotion": {
+            "selected_days": 55,
+            "successes_2_to_3": 24,
+            "promotion_rate": 0.43636363636363634,
+            "promotion_wilson_95": [
+              0.3137344236063191,
+              0.5673018365358555
+            ],
+            "candidate_auc": 0.3521505376344086,
+            "candidate_brier": 0.2644507714141566,
+            "one_price_signal_rows": 5
+          },
+          "identity_emotion_price_volume": {
+            "selected_days": 55,
+            "successes_2_to_3": 28,
+            "promotion_rate": 0.509090909090909,
+            "promotion_wilson_95": [
+              0.380762598469722,
+              0.6362322215099672
+            ],
+            "candidate_auc": 0.66005291005291,
+            "candidate_brier": 0.23438554526097852,
+            "one_price_signal_rows": 34
+          },
+          "identity_emotion_price_volume_non_one_price": {
+            "selected_days": 55,
+            "successes_2_to_3": 20,
+            "promotion_rate": 0.36363636363636365,
+            "promotion_wilson_95": [
+              0.2493053153030725,
+              0.4957723850015874
+            ],
+            "candidate_auc": 0.5528571428571428,
+            "candidate_brier": 0.2313013740677271,
+            "one_price_signal_rows": 0
+          }
+        }
+      }
+    ],
+    "blind_complete_trade_count": 0
+  },
+  "aggregate_selected": {
+    "identity": {
+      "selected_days": 361,
+      "successes_2_to_3": 123,
+      "promotion_rate": 0.3407202216066482,
+      "promotion_wilson_95": [
+        0.2937355269376252,
+        0.3910590674823084
+      ],
+      "candidate_auc": 0.5269351643096263,
+      "candidate_brier": 0.22679523201679952,
+      "one_price_signal_rows": 54
+    },
+    "identity_emotion": {
+      "selected_days": 361,
+      "successes_2_to_3": 123,
+      "promotion_rate": 0.3407202216066482,
+      "promotion_wilson_95": [
+        0.2937355269376252,
+        0.3910590674823084
+      ],
+      "candidate_auc": 0.5088474414155907,
+      "candidate_brier": 0.23093543898833496,
+      "one_price_signal_rows": 54
+    },
+    "identity_emotion_price_volume": {
+      "selected_days": 361,
+      "successes_2_to_3": 213,
+      "promotion_rate": 0.590027700831025,
+      "promotion_wilson_95": [
+        0.5386036584630143,
+        0.6395559186039799
+      ],
+      "candidate_auc": 0.5950704225352111,
+      "candidate_brier": 0.237178303049918,
+      "one_price_signal_rows": 263
+    },
+    "identity_emotion_price_volume_non_one_price": {
+      "selected_days": 360,
+      "successes_2_to_3": 126,
+      "promotion_rate": 0.35,
+      "promotion_wilson_95": [
+        0.3025483531772323,
+        0.40061906388937574
+      ],
+      "candidate_auc": 0.5197056030389362,
+      "candidate_brier": 0.23416508567813993,
+      "one_price_signal_rows": 0
+    },
+    "same_height_identity_baseline": {
+      "selected_days": 361,
+      "successes_2_to_3": 123,
+      "promotion_rate": 0.3407202216066482,
+      "promotion_wilson_95": [
+        0.2937355269376252,
+        0.3910590674823084
+      ],
+      "candidate_auc": 0.47653207624513216,
+      "candidate_brier": null,
+      "one_price_signal_rows": 54
+    },
+    "same_height_identity_baseline_non_one_price": {
+      "selected_days": 360,
+      "successes_2_to_3": 110,
+      "promotion_rate": 0.3055555555555556,
+      "promotion_wilson_95": [
+        0.26023190232252474,
+        0.3549851198008562
+      ],
+      "candidate_auc": 0.48214545454545454,
+      "candidate_brier": null,
+      "one_price_signal_rows": 0
+    }
+  },
+  "paired_comparison_vs_same_height_baseline": {
+    "identity_minus_baseline": {
+      "paired_days": 361,
+      "left_successes": 123,
+      "right_successes": 123,
+      "difference": 0.0,
+      "bootstrap95": [
+        0.0,
+        0.0
+      ]
+    },
+    "identity_emotion_minus_baseline": {
+      "paired_days": 361,
+      "left_successes": 123,
+      "right_successes": 123,
+      "difference": 0.0,
+      "bootstrap95": [
+        0.0,
+        0.0
+      ]
+    },
+    "identity_emotion_price_volume_minus_baseline": {
+      "paired_days": 361,
+      "left_successes": 213,
+      "right_successes": 123,
+      "difference": 0.24930747922437674,
+      "bootstrap95": [
+        0.18559556786703602,
+        0.31301939058171746
+      ]
+    },
+    "identity_emotion_price_volume_non_one_price_minus_baseline": {
+      "paired_days": 360,
+      "left_successes": 126,
+      "right_successes": 123,
+      "difference": 0.008333333333333333,
+      "bootstrap95": [
+        -0.058333333333333334,
+        0.075
+      ]
+    },
+    "identity_emotion_price_volume_non_one_price_minus_same_denominator_baseline": {
+      "paired_days": 360,
+      "left_successes": 126,
+      "right_successes": 110,
+      "difference": 0.044444444444444446,
+      "bootstrap95": [
+        -0.016666666666666666,
+        0.10555555555555556
+      ]
+    }
+  },
+  "data_quality": {
+    "feature_status": {
+      "historical_reconstruction_not_forward_archive": 3832
+    },
+    "feature_archive": "historical_reconstruction_not_forward_archive",
+    "promotion_label": "daily limit-up pool LABEL_ONLY; identity target, not fill/profit",
+    "theme_fields": "unavailable in this source",
+    "auction_vwap_level2": "unavailable",
+    "survivorship": "historical universe incomplete"
+  },
+  "conclusions": {
+    "v253_two_board_module_validated": false,
+    "leader_identity_improvement_proven": false,
+    "trade_win_rate_proven": false,
+    "entry_authorized": false
+  },
+  "blocking_reasons": [
+    "二板历史身份标签没有完整题材与同题材竞争分母",
+    "封板时间/封板金额/竞价/VWAP不可用，无法验证完整二板条件",
+    "特征为事后重建而非当时归档，且历史股票宇宙不完整",
+    "晋级标签不等于买后收益，真实成交数为0"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\full_pool_features_20260905_v2\\full_pool_eod_features.csv": "52bb9eea10a02addb233ef6b06d1b6fc1dada7a9a2168cceb043c90e11c5466d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e"
+  },
+  "artifact_hashes": {
+    "selected_identity.csv": "f86f8ee9d1b86157c784adbd15f76872a292af0f6c72de1d9644c6f849b6d464",
+    "selected_identity_emotion.csv": "2829045ae2e2298cca7df725b07b027ddaf87c31ed626b19a8f95c8147d8fb29",
+    "selected_identity_emotion_price_volume.csv": "830c091347f43bc1f77e69c101ada2ace1917cacf6850ece7452ec226e9ce7b7",
+    "selected_identity_emotion_price_volume_non_one_price.csv": "898585402fc86aac7929dd08150954f17cde3e8d76b88f0800c1e8e6be75b075",
+    "selected_same_height_identity_baseline.csv": "965e3f464ac9f3c7d7d8f5a0a2c4e058fce74dd716b59d0417abe7e39bdc5f9f",
+    "selected_same_height_identity_baseline_non_one_price.csv": "9e143972e2db229a73913a6aab370796ae5a044ece23bb4463c76fcf04d1154d"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "version": "v297-fixed-experience-proxies-1",
+  "recorded_at": "2026-10-02T15:01:08.433197+00:00",
+  "hypotheses": [
+    {
+      "id": "digital_height",
+      "name": "数字板高度压制",
+      "definition": "当前5板与同日4/6板比较；固定局部代理，不代表所有数字关口",
+      "testable": true
+    },
+    {
+      "id": "first_session",
+      "name": "特定日期效应",
+      "definition": "当月第一个官方交易日与其余交易日比较",
+      "testable": true
+    },
+    {
+      "id": "pre_holiday",
+      "name": "节前效应",
+      "definition": "已知下一交易日距信号日超过3个自然日，与其余日比较",
+      "testable": true
+    },
+    {
+      "id": "friday",
+      "name": "周五效应",
+      "definition": "信号日为周五，与其余交易日比较",
+      "testable": true
+    },
+    {
+      "id": "month_end",
+      "name": "月底效应",
+      "definition": "当月最后一个官方交易日，与其余交易日比较",
+      "testable": true
+    },
+    {
+      "id": "leader_break",
+      "name": "龙头断板日",
+      "definition": "需要事先确认的周期/题材龙头及当日已发生的断板，不能用最高板替代",
+      "testable": false
+    },
+    {
+      "id": "high_height",
+      "name": "高标压制",
+      "definition": "当前5板及以上与2至4板比较；高度与环境混杂需分层",
+      "testable": true
+    },
+    {
+      "id": "symbolic_name",
+      "name": "名字玄学",
+      "definition": "需当时名称、预先固定字典、首次讨论时间及完整同字分母",
+      "testable": false
+    },
+    {
+      "id": "zodiac",
+      "name": "生肖玄学",
+      "definition": "需预先固定生肖字典、当时名称与叙事发生时间；禁止看赢家扩字典",
+      "testable": false
+    },
+    {
+      "id": "code_eight",
+      "name": "代码玄学",
+      "definition": "固定代码末位8与其余末位比较，仅限原连板候选范围",
+      "testable": true
+    },
+    {
+      "id": "stock_character",
+      "name": "历史股性",
+      "definition": "需要此前全股票结果及失败记录，禁止只数后来幸存龙头",
+      "testable": false
+    },
+    {
+      "id": "region",
+      "name": "地域炒作",
+      "definition": "需当时注册地址/业务地区、主题首次出现时间及完整同地域分母",
+      "testable": false
+    },
+    {
+      "id": "controller",
+      "name": "同一实控人联动",
+      "definition": "需当时控制关系与公告可得时间，不能用当前关系回填",
+      "testable": false
+    },
+    {
+      "id": "old_leader_rebound",
+      "name": "老龙反抽",
+      "definition": "需此前已确认身份、反抽与失败统一标签、未反抽对照",
+      "testable": false
+    },
+    {
+      "id": "monster_memory",
+      "name": "妖股记忆",
+      "definition": "需事先定义历史妖股范围并保存全部失败/沉寂样本",
+      "testable": false
+    }
+  ],
+  "development": "2025-07 through 2025-12",
+  "confirmation": "2026-01 through 2026-09; previously viewed diagnostic, not pristine blind",
+  "outcome": "original exact-next-session closing board promotion",
+  "bootstrap_dates": 5,
+  "bootstrap_draws": 5000,
+  "family_tests": 7,
+  "minimum_exposed_and_control": {
+    "rows_each": 50,
+    "dates_each": 20
+  },
+  "all_rules_core": false,
+  "no_definition_or_threshold_search": true
+}

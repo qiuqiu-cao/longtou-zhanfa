@@ -1,0 +1,265 @@
+{
+  "formed_at": "2026-10-13T05:45:50.012446+00:00",
+  "kind": "SYNTHETIC_TIME_SEMANTICS_ONLY_NOT_MARKET_PREDICTION",
+  "record": {
+    "signal_date": "2026-10-12",
+    "target_date": "2026-10-13",
+    "formed_at": "2026-10-12T22:00:00+08:00",
+    "rows": [
+      {
+        "code": "002242",
+        "short_term_assessment": {
+          "confirmation_plan": [
+            {
+              "checkpoint_id": "open",
+              "baseline_kind": "AUTHOR_PREDECLARED",
+              "planned_at": "2026-10-13T09:35:00+08:00",
+              "observation_window": {
+                "start_at": "2026-10-13T09:30:00+08:00",
+                "end_at": "2026-10-13T09:35:00+08:00"
+              },
+              "status": "PENDING",
+              "requirement": "实际价格路径与完整同身位范围对照",
+              "paths": {
+                "normal": {
+                  "state": "DEFINED",
+                  "reason": "在注册窗口核对价格路径及完整同身位对照",
+                  "conditions": [
+                    {
+                      "condition_id": "normal_stock",
+                      "metric": "retained",
+                      "scope": "STOCK",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "002242"
+                      ],
+                      "operator": "EQ",
+                      "expected": true,
+                      "unit": "boolean"
+                    }
+                  ]
+                },
+                "stronger": {
+                  "state": "DEFINED",
+                  "reason": "在注册窗口核对价格路径及完整同身位对照",
+                  "conditions": [
+                    {
+                      "condition_id": "stronger_stock",
+                      "metric": "retained",
+                      "scope": "STOCK",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "002242"
+                      ],
+                      "operator": "EQ",
+                      "expected": true,
+                      "unit": "boolean"
+                    },
+                    {
+                      "condition_id": "stronger_peers",
+                      "metric": "retained",
+                      "scope": "PEERS",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "600241"
+                      ],
+                      "operator": "EQ",
+                      "expected": true,
+                      "unit": "boolean"
+                    }
+                  ]
+                },
+                "weaker": {
+                  "state": "DEFINED",
+                  "reason": "在注册窗口核对价格路径及完整同身位对照",
+                  "conditions": [
+                    {
+                      "condition_id": "weaker_stock",
+                      "metric": "retained",
+                      "scope": "STOCK",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "002242"
+                      ],
+                      "operator": "EQ",
+                      "expected": false,
+                      "unit": "boolean"
+                    },
+                    {
+                      "condition_id": "weaker_peers",
+                      "metric": "retained",
+                      "scope": "PEERS",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "600241"
+                      ],
+                      "operator": "EQ",
+                      "expected": false,
+                      "unit": "boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "confirmation": {
+    "signal_date": "2026-10-12",
+    "target_date": "2026-10-13",
+    "observed_at": "2026-10-13T09:35:00+08:00",
+    "source_bindings": {
+      "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6"
+    },
+    "rows": [
+      {
+        "code": "002242",
+        "checkpoints": [
+          {
+            "checkpoint_id": "open",
+            "observations": [
+              {
+                "condition_id": "normal_stock",
+                "source_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json",
+                "source_sha256": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6",
+                "pointer": "/cells/normal_stock",
+                "raw_value": {
+                  "metric": "retained",
+                  "scope": "STOCK",
+                  "scope_id": "fixture",
+                  "comparison_codes": [
+                    "002242"
+                  ],
+                  "unit": "boolean",
+                  "value": false,
+                  "observed_at": "2026-10-13T09:35:00+08:00",
+                  "available_at": "2026-10-13T09:36:00+08:00"
+                }
+              },
+              {
+                "condition_id": "stronger_stock",
+                "source_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json",
+                "source_sha256": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6",
+                "pointer": "/cells/stronger_stock",
+                "raw_value": {
+                  "metric": "retained",
+                  "scope": "STOCK",
+                  "scope_id": "fixture",
+                  "comparison_codes": [
+                    "002242"
+                  ],
+                  "unit": "boolean",
+                  "value": true,
+                  "observed_at": "2026-10-13T09:31:00+08:00",
+                  "available_at": "2026-10-13T09:36:00+08:00"
+                }
+              },
+              {
+                "condition_id": "stronger_peers",
+                "source_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json",
+                "source_sha256": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6",
+                "pointer": "/cells/stronger_peers",
+                "raw_value": {
+                  "metric": "retained",
+                  "scope": "PEERS",
+                  "scope_id": "fixture",
+                  "comparison_codes": [
+                    "600241"
+                  ],
+                  "unit": "boolean",
+                  "value": true,
+                  "observed_at": "2026-10-13T09:35:00+08:00",
+                  "available_at": "2026-10-13T09:36:00+08:00"
+                }
+              },
+              {
+                "condition_id": "weaker_stock",
+                "source_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json",
+                "source_sha256": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6",
+                "pointer": "/cells/weaker_stock",
+                "raw_value": {
+                  "metric": "retained",
+                  "scope": "STOCK",
+                  "scope_id": "fixture",
+                  "comparison_codes": [
+                    "002242"
+                  ],
+                  "unit": "boolean",
+                  "value": true,
+                  "observed_at": "2026-10-13T09:35:00+08:00",
+                  "available_at": "2026-10-13T09:36:00+08:00"
+                }
+              },
+              {
+                "condition_id": "weaker_peers",
+                "source_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json",
+                "source_sha256": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6",
+                "pointer": "/cells/weaker_peers",
+                "raw_value": {
+                  "metric": "retained",
+                  "scope": "PEERS",
+                  "scope_id": "fixture",
+                  "comparison_codes": [
+                    "600241"
+                  ],
+                  "unit": "boolean",
+                  "value": true,
+                  "observed_at": "2026-10-13T09:35:00+08:00",
+                  "available_at": "2026-10-13T09:36:00+08:00"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "result": {
+    "version": "stock-expectation-review-1",
+    "rows": [
+      {
+        "code": "002242",
+        "status": "APPENDED_EXPECTATION_OBSERVATION",
+        "checkpoints": [
+          {
+            "checkpoint_id": "open",
+            "status": "STRONGER",
+            "path_states": {
+              "normal": "FAIL",
+              "stronger": "PASS",
+              "weaker": "FAIL"
+            },
+            "condition_states": {
+              "normal_stock": "FAIL",
+              "stronger_stock": "PASS",
+              "stronger_peers": "PASS",
+              "weaker_stock": "FAIL",
+              "weaker_peers": "FAIL"
+            },
+            "missing_condition_ids": [],
+            "unscored_source_observations": []
+          }
+        ]
+      }
+    ],
+    "original_prediction_changed": false,
+    "registered_pool_size": 1,
+    "observed_codes": [
+      "002242"
+    ],
+    "unobserved_codes": [],
+    "unobserved_rows": [],
+    "observation_coverage": 1.0,
+    "expectation_basis": "AUTHOR_PREDECLARED_NOT_VERIFIED_MARKET_CONSENSUS",
+    "automatic_causality_identity_or_entry_certified": false,
+    "numeric_model_scores_changed": false
+  },
+  "latest_stock_at_checkpoint": false,
+  "earlier_selected_stock_value": true,
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6"
+  },
+  "before_code_sha256": "3cd3b8b6294b5ac6ae21b54f93bb6e69bc92c5df1bbb98e779b475f8f0bd975e"
+}

@@ -1,0 +1,82 @@
+{
+  "registered_at_utc": "2026-10-02T20:46:02.351625+00:00",
+  "batch_start_utc": "2026-10-02T20:40:16+00:00",
+  "budget_minutes": 30,
+  "human_authorization": "补充上去，然后回测，看看预测情况有没有提升",
+  "hypothesis": "现换手放大比的非上一交易日/原一字代理分母可能混淆换手变化；处理分母状态能给原预测带来增量",
+  "reference_ids": [
+    "REF04",
+    "REF08"
+  ],
+  "author_experience_translation": "REF04原帖成交量/实际换手经验仅启发更窄的原换手比状态代理；不宣称测试了真一字、真实成交量或承接",
+  "source_url": "https://m.tgb.cn/a/2rhlKB6gyXA",
+  "study_kind": "VIEWED_HISTORY_RETROSPECTIVE_FIXED_DIAGNOSTIC_NOT_BLIND_OR_FORWARD",
+  "prior_attempts": "九月已多次查看；先前股性Wilson试验没有整体改善，原失败保留；本次一新分母状态假设，两固定变体，无参数搜索",
+  "baseline": "原V278九月冻结29特征，logistic C=.25，最后252个截止前可用标签日期，原3059条训练/同日期权重/中位数填补/标准化",
+  "training_boundary": "信号日和目标标签日均严格早于2026-09-01；使用原历史标签不补改已知价格冲突",
+  "evaluation_boundary": [
+    "2026-09-01",
+    "2026-09-30"
+  ],
+  "all_candidates_retained": true,
+  "arms": {
+    "A_LAST_SESSION": "只将参考不为官方上一交易日、无参考、非正有限分母或无有效原比值的turnover_vs_prev记NaN；重算全同日同板位该特征百分位",
+    "B_PRIOR_NONWORD_PROXY": "在A基础上仅保留prior_one_word_proxy==0的比值；一字代理或未知均NaN；重算全组该百分位"
+  },
+  "changed_feature_fields": [
+    "turnover_vs_prev",
+    "turnover_vs_prev_same_height_percentile"
+  ],
+  "other_27_feature_columns_unchanged": true,
+  "no_added_fields_to_model": true,
+  "reference_policy": "全历史≥2板观察及此前九月观察；仅同代码严格早于信号日的最后非空有限换手记录，零仍作为原字典最近记录；不读其未来标签。不补缺首板分母",
+  "ratio_reconstruction_check": {
+    "rtol": 1e-06,
+    "atol": 1e-09,
+    "purpose": "只校验原分母/数值来源，容许CSV精度差；不改变原ratio，不放宽涨停价或标签校验"
+  },
+  "one_word_proxy_limits": "历史首末封时刻/炸板/换手代理，与九月OHLC一价加换手<3有定义差异；不当作已核验真一字",
+  "primary_metric": "全标签/一字域已知的相同日期，非一字排名Top1确切下一交易日收盘晋级",
+  "secondary_metrics": [
+    "正向非一字Top1的调用数和已知命中率",
+    "全候选已知标签Accuracy/Precision/Recall/F1",
+    "非一字二分类及各板位指标",
+    "原登记/可评分数与覆盖",
+    "最近20个官方交易日历史指标；60日不混训练内结果"
+  ],
+  "binary_threshold": 0.5,
+  "ranking_ties": "score降序、boards降序、code升序；排名首选低于.5仍为断板",
+  "complete_positive_recall": "有未知结果则完整登记正例Recall不可计算，known_label_recall单独报告",
+  "brier": "分数未校准，不计算概率Brier",
+  "expected_meaningful_gain_pp": 5,
+  "uncertainty": {
+    "method": "5-session circular moving block over 21 official slots including missing slots",
+    "draws": 5000,
+    "seed": 20261003,
+    "paired_interval_confidence": 0.975,
+    "comparisons": 2,
+    "interpretation": "探索性配对诊断，两个对比97.5%边际区间；重复使用历史不变成独立证据"
+  },
+  "acceptance": "至少60个同日期完整样本、配对区间下界>0、Top1增幅>=5pp、全候选Accuracy/Precision/F1无下降和覆盖不减；此九月窗口不能达到样本门槛。稳定60须原前向双窗口契约",
+  "end_condition": "完成一次基准与两个预设变体固定比较及必要核验，保留结果，不按结果改参数/换筛选",
+  "production_model_changed": false,
+  "original_C1_C2_changed": false,
+  "new_forward_samples": 0,
+  "input_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v278\\september_falsification_20261002_v6\\relay_predictions_LABEL_ONLY.csv": "3a5b77c41d5f3664dac2ae4ff845ade58612f0602c47d660793f6d9e3c622766",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v278\\september_falsification_20261002_v6\\report.json": "b930e9d154c289786dd525741248ae5f35b35b19b55c3cb8cad02ac0b2ff63ef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\comparison_specification.json": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\龙头战法外部经验参考库.json": "0ecc554cabdc00edb63666b40d37c3e129a743c4a1d5da58ee4d68fb3c7ab837",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\experience_validation_20261002T200651724600Z\\protocol_BEFORE_SCORING.json": "fff0e3a12285598b07d93a174e649c22b06b2a8efbdb71248c2d31e889db32d8"
+  },
+  "original_production_registry_sha256": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+  "original_theme_specification_sha256": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066"
+}

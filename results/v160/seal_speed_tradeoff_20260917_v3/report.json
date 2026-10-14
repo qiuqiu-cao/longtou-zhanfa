@@ -1,0 +1,100 @@
+{
+  "version": "v160-seal-speed-tradeoff-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "first-board candidates on frozen prequential evaluation dates",
+  "fast_definition": "first seal no later than 09:35 (20 minutes after 09:15)",
+  "evaluation_sessions": 12,
+  "execution_observed_sessions": 12,
+  "complete_execution_sessions": 10,
+  "candidate_rows": 518,
+  "execution_observed_rows": 516,
+  "missing_execution_evidence_rows": 2,
+  "groups": {
+    "fast": {
+      "candidate_n": 80,
+      "session_n": 12,
+      "promotion_rate": 0.2625,
+      "execution_observed_n": 79,
+      "missing_execution_evidence_n": 1,
+      "unverifiable_limit_queue_n": 15,
+      "filled_n": 64,
+      "fill_rate": 0.810126582278481,
+      "b2_known_n": 58,
+      "b2_mean_net_return": -0.017385546516203394,
+      "b2_positive_rate": 0.4482758620689655,
+      "b1_big_loss_known_n": 62,
+      "b1_big_loss_rate": 0.1935483870967742
+    },
+    "not_fast": {
+      "candidate_n": 438,
+      "session_n": 12,
+      "promotion_rate": 0.16666666666666666,
+      "execution_observed_n": 437,
+      "missing_execution_evidence_n": 1,
+      "unverifiable_limit_queue_n": 20,
+      "filled_n": 417,
+      "fill_rate": 0.954233409610984,
+      "b2_known_n": 368,
+      "b2_mean_net_return": -0.014450084606808702,
+      "b2_positive_rate": 0.3695652173913043,
+      "b1_big_loss_known_n": 397,
+      "b1_big_loss_rate": 0.11083123425692695
+    }
+  },
+  "fast_minus_not_fast": {
+    "promotion_rate": 0.09583333333333335,
+    "fill_rate": -0.14410682733250302,
+    "b2_mean_net_return": -0.002935461909394692,
+    "b2_positive_rate": 0.0787106446776612,
+    "b1_big_loss_rate": 0.08271715283984724
+  },
+  "date_cluster_bootstrap95": {
+    "promotion_rate": [
+      -0.0032901464937727023,
+      0.21303451284278532
+    ],
+    "fill_rate": [
+      -0.2547962856232949,
+      -0.044730156234590604
+    ],
+    "b2_mean_net_return": [
+      -0.02168388294688446,
+      0.013366968127172413
+    ],
+    "b2_positive_rate": [
+      -0.03173495359256095,
+      0.1982136561690249
+    ],
+    "b1_big_loss_rate": [
+      -0.025247077720633566,
+      0.24574884700958097
+    ]
+  },
+  "earliest_daily_top1": {
+    "sessions": 12,
+    "promotion_rate": 0.08333333333333333,
+    "filled_n": 10
+  },
+  "governance": {
+    "fast_seal_positive_ranking_factor_allowed": false,
+    "minimum_complete_execution_sessions_for_factor": 20,
+    "missing_bar_is_unfilled_trade": false,
+    "fast_seal_hard_reject_allowed": false,
+    "allowed_role": "ATTENTION_OR_IDENTITY_CLUE_ONLY",
+    "stock_entry_authorized": false
+  },
+  "interpretation": "Seal speed may correlate with next-session promotion while failing to improve B+2 net return or large-loss risk. It must interact with specific-theme status, cross-theme competition, buyability and opening absorption.",
+  "limitations": [
+    "identity and execution coverage are reported separately",
+    "a missing B-session bar is unavailable evidence, never an unfilled trade",
+    "the evaluation period has already been inspected by prior research",
+    "daily open fill is a proxy and cannot verify auction queue or partial execution",
+    "specific-theme and cross-theme V150/V157 factors are not present in this sample"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\first_board_observations.csv": "b326bc02c08c20aa3e1af2bd0dc5bda70a9fb86f1c99b70f82cc8f8d4bb2a808",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\prequential_predictions.csv": "5c0db4344f94bac9fd4d057f69582a8d781ec2cadbb147fa6145f9841bcf8052"
+  },
+  "rows_sha256": "4cb1880aa010a13e3dcc757208f817f8a142a3146f16b4edd1337917e37f44db"
+}

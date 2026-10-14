@@ -1,0 +1,59 @@
+{
+  "version": "v193-current-reset-evidence-overlay-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-16",
+  "candidate_count": 80,
+  "official_reset_evidence_count": 32,
+  "official_reset_evidence_missing_count": 48,
+  "official_regulatory_distance_count": 0,
+  "verified_benchmark_count": 0,
+  "corporate_action_reconciled_count": 0,
+  "candidate_reranking_allowed": false,
+  "buy_signal": false,
+  "entry_authorized": false,
+  "priority_candidates": [
+    {
+      "code": "000993",
+      "name": "闽东电力",
+      "reset_status": "unavailable",
+      "reset_evidence_detail": "company_index_no_event_found_not_exchange_exhaustive",
+      "official_reset_evidence": false,
+      "regulatory_distance_status": "unavailable",
+      "distance_100_pp": 18.486166494555448,
+      "distance_200_pp": 106.87081450933442
+    },
+    {
+      "code": "605058",
+      "name": "澳弘电子",
+      "reset_status": "verified",
+      "reset_evidence_detail": "verified_no_exchange_event_since_rule_effective",
+      "official_reset_evidence": true,
+      "regulatory_distance_status": "unavailable",
+      "distance_100_pp": 37.64645195372026,
+      "distance_200_pp": 125.88195331490044
+    }
+  ],
+  "governance": {
+    "verified_reset_alone_makes_distance_official": false,
+    "partial_company_index_absence_counts_as_verified": false,
+    "distance_may_rank_candidates": false,
+    "distance_may_authorize_entry": false
+  },
+  "interpretation": "The reset blocker is removed only for candidates with complete SSE exchange-session coverage. Benchmark authority, corporate actions, historical price-limit eligibility, theme identity, and competition remain unresolved, so all distances stay diagnostic-only.",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v191\\current_abnormal_distance_20260916_v3\\candidate_unreconciled_distances.csv": "2d5d0ba8b12b09cda935f3d77a4fd80009d1a65fc2b1f2b28e73414dbead8785",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v2\\candidate_reset_chronology.csv": "0ce51eab2dad859048f36ac627951e50b06ed3b9e039acfee75643958a9efdc7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v2\\report.json": "f03c17bd4aefa457198086362e40b36818c8793e3fbb4ee27558311bbe1345c0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\apply_current_reset_evidence_v193.py": "0c37825887c37e347a5bd266d94d1415936361cd0efd851b0f77353e2b492f26"
+  },
+  "files": {
+    "candidate_partially_reconciled_distances.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v193\\current_reset_overlay_20260916_v1\\candidate_partially_reconciled_distances.csv",
+      "sha256": "117f2c6040e7c48825c87eb03bb940f12f09a00fe99b557b9f8c4012e0b7c0db"
+    },
+    "v171_partial_reset_evidence.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v193\\current_reset_overlay_20260916_v1\\v171_partial_reset_evidence.csv",
+      "sha256": "b61d964a0df23c4ecc479fd208b23a14f6f0004e23aed3de68cc03be11665dea"
+    }
+  }
+}

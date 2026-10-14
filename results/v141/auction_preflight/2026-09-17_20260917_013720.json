@@ -1,0 +1,77 @@
+{
+  "version": "v135-auction-monitor-entry-1",
+  "status": "READY_FULL_SEQUENCE_PUBLIC_ONLY",
+  "checked_at": "2026-09-17T01:37:20.859597+08:00",
+  "trade_date": "2026-09-17",
+  "candidate_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\current_full_pool_20260916_v1\\all_closing_and_failed_candidates.csv",
+  "review_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20260916_v5\\review.json",
+  "market_dates_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+  "expected_prior_session": "2026-09-16",
+  "candidate_signal_date": "2026-09-16",
+  "review_signal_date": "2026-09-16",
+  "candidate_count": 80,
+  "first_board_count": 69,
+  "relay_count": 11,
+  "emotion_anchors": [
+    {
+      "code": "000993",
+      "name": "闽东电力",
+      "boards": 6
+    }
+  ],
+  "highest_leader_potential": {
+    "code": "000993",
+    "name": "闽东电力",
+    "boards": 6,
+    "research_score_not_probability": 79.0,
+    "evidence_status": "INFERRED_EOD_RANKING_NOT_PROBABILITY",
+    "supporting_evidence": [
+      "当前处于最高板层级，具有高度先发优势"
+    ],
+    "opposition_evidence": [
+      "竞争身份未完整核验",
+      "真实细分题材证据不完整",
+      "反复炸板削弱高度竞争力"
+    ],
+    "same_as_current_anchor": true
+  },
+  "next_height_challenger": {
+    "code": "605058",
+    "name": "澳弘电子",
+    "boards": 4,
+    "research_score_not_probability": 31.0,
+    "evidence_status": "INFERRED_EOD_RANKING_NOT_PROBABILITY",
+    "supporting_evidence": [
+      "封板反复程度较低",
+      "换手处于可观察区间"
+    ],
+    "opposition_evidence": [
+      "竞争身份未完整核验",
+      "真实细分题材证据不完整",
+      "存在有效硬风险事件"
+    ],
+    "same_as_current_anchor": false
+  },
+  "reachable_capture_points": [
+    "09:20",
+    "09:24:50",
+    "09:25",
+    "09:30",
+    "09:35",
+    "10:00"
+  ],
+  "missed_capture_points": [],
+  "universe_status": "AVAILABLE",
+  "absorption_forward_registry_status": "PASS",
+  "issues": [],
+  "launch_command": "python \"D:\\Documents\\ChatGPT\\龙头战法\\auction_monitor_entry_v135.py\" start --trade-date 2026-09-17",
+  "data_scope": {
+    "public_level1_price": "CONDITIONAL_WHEN_FRESH",
+    "public_1min_vwap_reseal": "INFERRED_WHEN_09:35_OR_10:00_CAPTURED",
+    "level2_queue": "UNAVAILABLE",
+    "auction_cancel_sequence": "UNAVAILABLE",
+    "actual_fill": "UNAVAILABLE_UNTIL_BROKER_IMPORT"
+  },
+  "direct_entry_authorized": false,
+  "automatic_order_placement": false
+}

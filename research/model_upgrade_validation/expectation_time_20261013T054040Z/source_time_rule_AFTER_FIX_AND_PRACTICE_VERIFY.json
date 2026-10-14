@@ -1,0 +1,349 @@
+{
+  "formed_at": "2026-10-13T06:06:52.207726+00:00",
+  "kind": "SYNTHETIC_TIME_SEMANTICS_AND_ACTUAL_REGISTRY_ROUTE_NOT_MARKET_PREDICTION_GAIN",
+  "checks": {
+    "early_snapshot_checkpoint_rejected": "source observation time differs from frozen condition time",
+    "checkpoint_latest_no_path_match_not_automatic_weaker": true,
+    "explicit_multitime_preserved_without_snapshot_claim": true,
+    "legacy_contract_not_backfilled": true,
+    "actual18_before_close_collect_rejected": "practice outcome collection requires the effective target close",
+    "actual_registered_structured_plans_count_zero": true
+  },
+  "checkpoint_record_synthetic": {
+    "signal_date": "2026-10-12",
+    "target_date": "2026-10-13",
+    "formed_at": "2026-10-12T22:00:00+08:00",
+    "rows": [
+      {
+        "code": "002242",
+        "short_term_assessment": {
+          "confirmation_plan": [
+            {
+              "checkpoint_id": "open",
+              "baseline_kind": "AUTHOR_PREDECLARED",
+              "planned_at": "2026-10-13T09:35:00+08:00",
+              "observation_window": {
+                "start_at": "2026-10-13T09:30:00+08:00",
+                "end_at": "2026-10-13T09:35:00+08:00"
+              },
+              "status": "PENDING",
+              "requirement": "实际价格路径与完整同身位范围对照",
+              "paths": {
+                "normal": {
+                  "state": "DEFINED",
+                  "reason": "在注册窗口核对价格路径及完整同身位对照",
+                  "conditions": [
+                    {
+                      "condition_id": "normal_stock",
+                      "metric": "retained",
+                      "scope": "STOCK",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "002242"
+                      ],
+                      "operator": "EQ",
+                      "expected": true,
+                      "unit": "boolean"
+                    }
+                  ]
+                },
+                "stronger": {
+                  "state": "DEFINED",
+                  "reason": "在注册窗口核对价格路径及完整同身位对照",
+                  "conditions": [
+                    {
+                      "condition_id": "stronger_stock",
+                      "metric": "retained",
+                      "scope": "STOCK",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "002242"
+                      ],
+                      "operator": "EQ",
+                      "expected": true,
+                      "unit": "boolean"
+                    },
+                    {
+                      "condition_id": "stronger_peers",
+                      "metric": "retained",
+                      "scope": "PEERS",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "600241"
+                      ],
+                      "operator": "EQ",
+                      "expected": true,
+                      "unit": "boolean"
+                    }
+                  ]
+                },
+                "weaker": {
+                  "state": "DEFINED",
+                  "reason": "在注册窗口核对价格路径及完整同身位对照",
+                  "conditions": [
+                    {
+                      "condition_id": "weaker_stock",
+                      "metric": "retained",
+                      "scope": "STOCK",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "002242"
+                      ],
+                      "operator": "EQ",
+                      "expected": false,
+                      "unit": "boolean"
+                    },
+                    {
+                      "condition_id": "weaker_peers",
+                      "metric": "retained",
+                      "scope": "PEERS",
+                      "scope_id": "fixture",
+                      "comparison_codes": [
+                        "600241"
+                      ],
+                      "operator": "EQ",
+                      "expected": false,
+                      "unit": "boolean"
+                    }
+                  ]
+                }
+              },
+              "observation_time_rule": "AT_CHECKPOINT"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "checkpoint_latest_result_synthetic": {
+    "version": "stock-expectation-review-1",
+    "rows": [
+      {
+        "code": "002242",
+        "status": "APPENDED_EXPECTATION_OBSERVATION",
+        "checkpoints": [
+          {
+            "checkpoint_id": "open",
+            "status": "NO_PATH_MATCH",
+            "path_states": {
+              "normal": "FAIL",
+              "stronger": "FAIL",
+              "weaker": "FAIL"
+            },
+            "condition_states": {
+              "normal_stock": "FAIL",
+              "stronger_stock": "FAIL",
+              "stronger_peers": "PASS",
+              "weaker_stock": "FAIL",
+              "weaker_peers": "FAIL"
+            },
+            "missing_condition_ids": [],
+            "observation_time_rule": "AT_CHECKPOINT",
+            "observed_condition_times": {
+              "normal_stock": "2026-10-13T09:35:00+08:00",
+              "stronger_stock": "2026-10-13T09:35:00+08:00",
+              "stronger_peers": "2026-10-13T09:35:00+08:00",
+              "weaker_stock": "2026-10-13T09:35:00+08:00",
+              "weaker_peers": "2026-10-13T09:35:00+08:00"
+            },
+            "assessment_scope": "SOURCE_VALUES_AT_PLANNED_TIME",
+            "synchronous_tick_order_or_absorption_verified": false,
+            "unscored_source_observations": []
+          }
+        ]
+      }
+    ],
+    "original_prediction_changed": false,
+    "registered_pool_size": 1,
+    "observed_codes": [
+      "002242"
+    ],
+    "unobserved_codes": [],
+    "unobserved_rows": [],
+    "observation_coverage": 1.0,
+    "expectation_basis": "AUTHOR_PREDECLARED_NOT_VERIFIED_MARKET_CONSENSUS",
+    "automatic_causality_identity_or_entry_certified": false,
+    "numeric_model_scores_changed": false
+  },
+  "explicit_multitime_result_synthetic": {
+    "version": "stock-expectation-review-1",
+    "rows": [
+      {
+        "code": "002242",
+        "status": "APPENDED_EXPECTATION_OBSERVATION",
+        "checkpoints": [
+          {
+            "checkpoint_id": "open",
+            "status": "STRONGER",
+            "path_states": {
+              "normal": "FAIL",
+              "stronger": "PASS",
+              "weaker": "FAIL"
+            },
+            "condition_states": {
+              "normal_stock": "FAIL",
+              "stronger_stock": "PASS",
+              "stronger_peers": "PASS",
+              "weaker_stock": "FAIL",
+              "weaker_peers": "FAIL"
+            },
+            "missing_condition_ids": [],
+            "observation_time_rule": "DECLARED_TIMES",
+            "observed_condition_times": {
+              "normal_stock": "2026-10-13T09:35:00+08:00",
+              "stronger_stock": "2026-10-13T09:31:00+08:00",
+              "stronger_peers": "2026-10-13T09:35:00+08:00",
+              "weaker_stock": "2026-10-13T09:35:00+08:00",
+              "weaker_peers": "2026-10-13T09:35:00+08:00"
+            },
+            "assessment_scope": "AUTHOR_PREDECLARED_MULTITIME_PATH",
+            "synchronous_tick_order_or_absorption_verified": false,
+            "unscored_source_observations": []
+          }
+        ]
+      }
+    ],
+    "original_prediction_changed": false,
+    "registered_pool_size": 1,
+    "observed_codes": [
+      "002242"
+    ],
+    "unobserved_codes": [],
+    "unobserved_rows": [],
+    "observation_coverage": 1.0,
+    "expectation_basis": "AUTHOR_PREDECLARED_NOT_VERIFIED_MARKET_CONSENSUS",
+    "automatic_causality_identity_or_entry_certified": false,
+    "numeric_model_scores_changed": false
+  },
+  "legacy_replay_synthetic": {
+    "version": "stock-expectation-review-1",
+    "rows": [
+      {
+        "code": "002242",
+        "status": "APPENDED_EXPECTATION_OBSERVATION",
+        "checkpoints": [
+          {
+            "checkpoint_id": "open",
+            "status": "STRONGER",
+            "path_states": {
+              "normal": "FAIL",
+              "stronger": "PASS",
+              "weaker": "FAIL"
+            },
+            "condition_states": {
+              "normal_stock": "FAIL",
+              "stronger_stock": "PASS",
+              "stronger_peers": "PASS",
+              "weaker_stock": "FAIL",
+              "weaker_peers": "FAIL"
+            },
+            "missing_condition_ids": [],
+            "observation_time_rule": "LEGACY_UNSPECIFIED_WINDOW",
+            "observed_condition_times": {
+              "normal_stock": "2026-10-13T09:35:00+08:00",
+              "stronger_stock": "2026-10-13T09:31:00+08:00",
+              "stronger_peers": "2026-10-13T09:35:00+08:00",
+              "weaker_stock": "2026-10-13T09:35:00+08:00",
+              "weaker_peers": "2026-10-13T09:35:00+08:00"
+            },
+            "assessment_scope": "LEGACY_WINDOW_ONLY_NOT_A_CHECKPOINT_SNAPSHOT",
+            "synchronous_tick_order_or_absorption_verified": false,
+            "unscored_source_observations": []
+          }
+        ]
+      }
+    ],
+    "original_prediction_changed": false,
+    "registered_pool_size": 1,
+    "observed_codes": [
+      "002242"
+    ],
+    "unobserved_codes": [],
+    "unobserved_rows": [],
+    "observation_coverage": 1.0,
+    "expectation_basis": "AUTHOR_PREDECLARED_NOT_VERIFIED_MARKET_CONSENSUS",
+    "automatic_causality_identity_or_entry_certified": false,
+    "numeric_model_scores_changed": false
+  },
+  "actual_signal_date": "2026-10-12",
+  "actual_target_date": "2026-10-13",
+  "actual_pool_size": 18,
+  "actual_registered_codes": [
+    "000892",
+    "001330",
+    "002242",
+    "002343",
+    "002692",
+    "002696",
+    "600241",
+    "600812",
+    "600825",
+    "601595",
+    "601811",
+    "601929",
+    "603096",
+    "603232",
+    "603533",
+    "605136",
+    "605287",
+    "605577"
+  ],
+  "protected": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_role_engine.py": {
+      "before": "7ee36bede33be062e1dcc20709d792dfe1d41bffd65db6c2f632a6ab66f37ff7",
+      "after": "343a8c6eb8ea610ea43a8fbc7f24c73f4dab6f7012c20503feb82a92e32215fa",
+      "unchanged": false
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_role_research.py": {
+      "before": "1ad2889723e275875de49dab61ca837c5b4ba200f2e42bc6aac859f9fa12eee3",
+      "after": "af08c6d9d9fdba37b4ad2ac4b5d89f2f36860878d6bb6482e8106718b458bfa9",
+      "unchanged": false
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_judgement_review.py": {
+      "before": "ca5092c8daf6221f40cdfa6e6166dbf0910755a0bcae3ed3739f10f731eb3249",
+      "after": "ca5092c8daf6221f40cdfa6e6166dbf0910755a0bcae3ed3739f10f731eb3249",
+      "unchanged": true
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_catalyst_context.py": {
+      "before": "b216fabab824c43c3c956fd6fcbb956739b94eb0e462c7c54d53e8cffb5c3c21",
+      "after": "b216fabab824c43c3c956fd6fcbb956739b94eb0e462c7c54d53e8cffb5c3c21",
+      "unchanged": true
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_short_term_context.py": {
+      "before": "dcde3e69ddf160ca31b1c9b3882b54f124e33be893df97637989c7576315e324",
+      "after": "dcde3e69ddf160ca31b1c9b3882b54f124e33be893df97637989c7576315e324",
+      "unchanged": true
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_narrative_review.py": {
+      "before": "82f7d479f9f6047599f5060e5b73493333c0580f40c45391cc983015cdb38287",
+      "after": "82f7d479f9f6047599f5060e5b73493333c0580f40c45391cc983015cdb38287",
+      "unchanged": true
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_pairwise_comparison.py": {
+      "before": "596e84b3e49c7373abcff742cd57cc64613ef0d5caf9b724303e0adaf541765b",
+      "after": "596e84b3e49c7373abcff742cd57cc64613ef0d5caf9b724303e0adaf541765b",
+      "unchanged": true
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\independent_stock_judgement\\registry.jsonl": {
+      "before": "392c372a0ac3c59c66a1e883c8de9355ed491ae90e1940c1be2a4ac3901a3c51",
+      "after": "392c372a0ac3c59c66a1e883c8de9355ed491ae90e1940c1be2a4ac3901a3c51",
+      "unchanged": true
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261012T105005Z\\independent\\record_before_scores.json": {
+      "before": "02c12a72b1c9b522665c8f81daeaf40d45d1b1ab980598c41caa508d89f21969",
+      "after": "02c12a72b1c9b522665c8f81daeaf40d45d1b1ab980598c41caa508d89f21969",
+      "unchanged": true
+    }
+  },
+  "shared_code_change": "Separate active shared work modified engine/research; this batch did not edit them. Original records and independent controller protections hold. First aggregate before/after assertion rejected, now differences explicitly retained.",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_time_20261013T054040Z\\synthetic_mixed_time_source_BEFORE.json": "69c9bf2be25884991c39874599d06ab62fc9bb98124becd4d02fb4bc84de0fb6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261012T105005Z\\independent\\record_before_scores.json": "02c12a72b1c9b522665c8f81daeaf40d45d1b1ab980598c41caa508d89f21969",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261012T105005Z\\independent\\facts_with_catalysts.json": "c5d274ced166f5f86af0f95e07d96429d6ba67d6d8e073a3bf90ce0539776a11",
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_expectation_review.py": "734cdc63587f9cd7669f268b018177404238e39dd9c307dbe6dddddadfd4e64a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_role_review.py": "765db98b9cb52683f08589ecdebb0f39073dc25f8f346eeb3bc4961c96216046",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_role_engine.py": "343a8c6eb8ea610ea43a8fbc7f24c73f4dab6f7012c20503feb82a92e32215fa"
+  },
+  "new_mature_forward_samples": 0,
+  "numeric_fits": 0
+}

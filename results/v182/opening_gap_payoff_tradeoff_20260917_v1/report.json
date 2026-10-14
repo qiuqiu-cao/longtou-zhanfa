@@ -1,0 +1,704 @@
+{
+  "version": "v182-opening-gap-payoff-tradeoff-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "feature_contract": {
+    "entry_open_gap_available_not_before": "next_session_official_open_09:30",
+    "prior_close_model_use_allowed": false,
+    "auction_09_25_equivalence_claim_allowed": false,
+    "data_status": "INFERRED_FROM_THIRD_PARTY_DAILY_OHLC"
+  },
+  "target_contract": {
+    "description": "next-session touched limit AND not one-price AND B+2 net close mark > 0",
+    "no_touch_rows_retained_as_negative": true,
+    "next_session_one_price_rows_retained_as_negative": true,
+    "touchable_rows_with_unknown_b2_excluded": 47,
+    "actual_fills": 0,
+    "complete_trades": 0
+  },
+  "scope": {
+    "rows": 25826,
+    "sessions": 503,
+    "first_board_rows": 19657,
+    "relay_rows": 6169,
+    "opening_gap_missing_rows_excluded": 902
+  },
+  "split": {
+    "method": "chronological_70_30_by_signal_date",
+    "split_date": "2025-05-19",
+    "development_rows": 18467,
+    "development_sessions": 352,
+    "validation_rows": 7359,
+    "validation_sessions": 151,
+    "validation_previously_inspected": true
+  },
+  "band_definitions": {
+    "LE_0": "opening gap <= 0%",
+    "GT_0_LE_5": "0% < opening gap <= 5%",
+    "GT_5_LE_7": "5% < opening gap <= 7%",
+    "GT_7": "opening gap > 7%"
+  },
+  "summaries": {
+    "ALL": {
+      "development": {
+        "LE_0": {
+          "rows": 6045,
+          "sessions": 350,
+          "combined_buyable_b2_positive_rate": 0.035897435897435895,
+          "touchable_rate": 0.13300248138957815,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.26990049751243783,
+          "conditional_b1_big_loss_rate": 0.4291044776119403,
+          "conditional_mean_b2_net_close_mark": -0.048686945892076665
+        },
+        "GT_0_LE_5": {
+          "rows": 7453,
+          "sessions": 351,
+          "combined_buyable_b2_positive_rate": 0.08707902857909566,
+          "touchable_rate": 0.2788139004427747,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.31231953801732437,
+          "conditional_b1_big_loss_rate": 0.37054860442733395,
+          "conditional_mean_b2_net_close_mark": -0.038959024338329366
+        },
+        "GT_5_LE_7": {
+          "rows": 1157,
+          "sessions": 319,
+          "combined_buyable_b2_positive_rate": 0.18668971477960242,
+          "touchable_rate": 0.6127917026793431,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.304654442877292,
+          "conditional_b1_big_loss_rate": 0.3765867418899859,
+          "conditional_mean_b2_net_close_mark": -0.04178045513177977
+        },
+        "GT_7": {
+          "rows": 3812,
+          "sessions": 350,
+          "combined_buyable_b2_positive_rate": 0.16107030430220357,
+          "touchable_rate": 0.6065057712486883,
+          "one_price_unbuyable_rate": 0.29302203567681007,
+          "conditional_b2_positive_rate": 0.2655709342560554,
+          "conditional_b1_big_loss_rate": 0.5017301038062284,
+          "conditional_mean_b2_net_close_mark": -0.05703401843438981
+        }
+      },
+      "validation": {
+        "LE_0": {
+          "rows": 2442,
+          "sessions": 151,
+          "combined_buyable_b2_positive_rate": 0.036036036036036036,
+          "touchable_rate": 0.0945945945945946,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.38095238095238093,
+          "conditional_b1_big_loss_rate": 0.31601731601731603,
+          "conditional_mean_b2_net_close_mark": -0.014374145864704996
+        },
+        "GT_0_LE_5": {
+          "rows": 3218,
+          "sessions": 151,
+          "combined_buyable_b2_positive_rate": 0.0839030453697949,
+          "touchable_rate": 0.2597886886264761,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.3229665071770335,
+          "conditional_b1_big_loss_rate": 0.3181818181818182,
+          "conditional_mean_b2_net_close_mark": -0.02604586876052951
+        },
+        "GT_5_LE_7": {
+          "rows": 552,
+          "sessions": 141,
+          "combined_buyable_b2_positive_rate": 0.24456521739130435,
+          "touchable_rate": 0.6521739130434783,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.375,
+          "conditional_b1_big_loss_rate": 0.3416666666666667,
+          "conditional_mean_b2_net_close_mark": -0.019556878575095724
+        },
+        "GT_7": {
+          "rows": 1147,
+          "sessions": 151,
+          "combined_buyable_b2_positive_rate": 0.22667829119442023,
+          "touchable_rate": 0.5876198779424586,
+          "one_price_unbuyable_rate": 0.3190932868352223,
+          "conditional_b2_positive_rate": 0.3857566765578635,
+          "conditional_b1_big_loss_rate": 0.39465875370919884,
+          "conditional_mean_b2_net_close_mark": -0.030617801039627874
+        }
+      }
+    },
+    "FIRST_BOARD": {
+      "development": {
+        "LE_0": {
+          "rows": 4610,
+          "sessions": 349,
+          "combined_buyable_b2_positive_rate": 0.02776572668112798,
+          "touchable_rate": 0.10238611713665943,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.2711864406779661,
+          "conditional_b1_big_loss_rate": 0.4025423728813559,
+          "conditional_mean_b2_net_close_mark": -0.04131518661986851
+        },
+        "GT_0_LE_5": {
+          "rows": 6346,
+          "sessions": 351,
+          "combined_buyable_b2_positive_rate": 0.07689883391112512,
+          "touchable_rate": 0.23873306019539867,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.3221122112211221,
+          "conditional_b1_big_loss_rate": 0.32739273927392737,
+          "conditional_mean_b2_net_close_mark": -0.03069466627576069
+        },
+        "GT_5_LE_7": {
+          "rows": 854,
+          "sessions": 282,
+          "combined_buyable_b2_positive_rate": 0.1721311475409836,
+          "touchable_rate": 0.572599531615925,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.3006134969325153,
+          "conditional_b1_big_loss_rate": 0.3374233128834356,
+          "conditional_mean_b2_net_close_mark": -0.03293410406875267
+        },
+        "GT_7": {
+          "rows": 2203,
+          "sessions": 334,
+          "combined_buyable_b2_positive_rate": 0.14934180662732638,
+          "touchable_rate": 0.6364049024058103,
+          "one_price_unbuyable_rate": 0.23558783477076714,
+          "conditional_b2_positive_rate": 0.2346647646219686,
+          "conditional_b1_big_loss_rate": 0.5263908701854494,
+          "conditional_mean_b2_net_close_mark": -0.0606984373144136
+        }
+      },
+      "validation": {
+        "LE_0": {
+          "rows": 1930,
+          "sessions": 151,
+          "combined_buyable_b2_positive_rate": 0.02538860103626943,
+          "touchable_rate": 0.06735751295336788,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.3769230769230769,
+          "conditional_b1_big_loss_rate": 0.24615384615384617,
+          "conditional_mean_b2_net_close_mark": -0.0030049782993616346
+        },
+        "GT_0_LE_5": {
+          "rows": 2683,
+          "sessions": 151,
+          "combined_buyable_b2_positive_rate": 0.07007081625046589,
+          "touchable_rate": 0.22735743570629893,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.3081967213114754,
+          "conditional_b1_big_loss_rate": 0.29180327868852457,
+          "conditional_mean_b2_net_close_mark": -0.02489819343299984
+        },
+        "GT_5_LE_7": {
+          "rows": 410,
+          "sessions": 134,
+          "combined_buyable_b2_positive_rate": 0.22439024390243903,
+          "touchable_rate": 0.6292682926829268,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.35658914728682173,
+          "conditional_b1_big_loss_rate": 0.32945736434108525,
+          "conditional_mean_b2_net_close_mark": -0.01849687580292502
+        },
+        "GT_7": {
+          "rows": 621,
+          "sessions": 149,
+          "combined_buyable_b2_positive_rate": 0.20772946859903382,
+          "touchable_rate": 0.5797101449275363,
+          "one_price_unbuyable_rate": 0.30112721417069244,
+          "conditional_b2_positive_rate": 0.35833333333333334,
+          "conditional_b1_big_loss_rate": 0.3861111111111111,
+          "conditional_mean_b2_net_close_mark": -0.026205312209930623
+        }
+      }
+    },
+    "CONSECUTIVE_BOARD": {
+      "development": {
+        "LE_0": {
+          "rows": 1435,
+          "sessions": 323,
+          "combined_buyable_b2_positive_rate": 0.06202090592334495,
+          "touchable_rate": 0.2313588850174216,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.2680722891566265,
+          "conditional_b1_big_loss_rate": 0.46686746987951805,
+          "conditional_mean_b2_net_close_mark": -0.05916727835136054
+        },
+        "GT_0_LE_5": {
+          "rows": 1107,
+          "sessions": 299,
+          "combined_buyable_b2_positive_rate": 0.14543812104787715,
+          "touchable_rate": 0.5085817524841915,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.28596802841918295,
+          "conditional_b1_big_loss_rate": 0.4866785079928952,
+          "conditional_mean_b2_net_close_mark": -0.061197927472950255
+        },
+        "GT_5_LE_7": {
+          "rows": 303,
+          "sessions": 191,
+          "combined_buyable_b2_positive_rate": 0.22772277227722773,
+          "touchable_rate": 0.7260726072607261,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.31363636363636366,
+          "conditional_b1_big_loss_rate": 0.4636363636363636,
+          "conditional_mean_b2_net_close_mark": -0.06144348090369001
+        },
+        "GT_7": {
+          "rows": 1609,
+          "sessions": 329,
+          "combined_buyable_b2_positive_rate": 0.17712865133623368,
+          "touchable_rate": 0.5655686761963953,
+          "one_price_unbuyable_rate": 0.3716594157862026,
+          "conditional_b2_positive_rate": 0.3131868131868132,
+          "conditional_b1_big_loss_rate": 0.46373626373626375,
+          "conditional_mean_b2_net_close_mark": -0.05138839725879274
+        }
+      },
+      "validation": {
+        "LE_0": {
+          "rows": 512,
+          "sessions": 142,
+          "combined_buyable_b2_positive_rate": 0.076171875,
+          "touchable_rate": 0.197265625,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.38613861386138615,
+          "conditional_b1_big_loss_rate": 0.40594059405940597,
+          "conditional_mean_b2_net_close_mark": -0.02900772787950338
+        },
+        "GT_0_LE_5": {
+          "rows": 535,
+          "sessions": 147,
+          "combined_buyable_b2_positive_rate": 0.15327102803738318,
+          "touchable_rate": 0.4224299065420561,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.36283185840707965,
+          "conditional_b1_big_loss_rate": 0.3893805309734513,
+          "conditional_mean_b2_net_close_mark": -0.02914357650297686
+        },
+        "GT_5_LE_7": {
+          "rows": 142,
+          "sessions": 86,
+          "combined_buyable_b2_positive_rate": 0.3028169014084507,
+          "touchable_rate": 0.7183098591549296,
+          "one_price_unbuyable_rate": 0.0,
+          "conditional_b2_positive_rate": 0.4215686274509804,
+          "conditional_b1_big_loss_rate": 0.37254901960784315,
+          "conditional_mean_b2_net_close_mark": -0.022238062057645138
+        },
+        "GT_7": {
+          "rows": 526,
+          "sessions": 144,
+          "combined_buyable_b2_positive_rate": 0.24904942965779467,
+          "touchable_rate": 0.596958174904943,
+          "one_price_unbuyable_rate": 0.3403041825095057,
+          "conditional_b2_positive_rate": 0.4171974522292994,
+          "conditional_b1_big_loss_rate": 0.40445859872611467,
+          "conditional_mean_b2_net_close_mark": -0.035676705430363574
+        }
+      }
+    }
+  },
+  "date_clustered_comparisons": {
+    "ALL": {
+      "development_5_7_vs_gt_7": {
+        "comparison": "GT_5_LE_7_MINUS_GT_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": 0.025619410477398852,
+            "ci95": [
+              -0.02103334343661938,
+              0.07135540644408893
+            ]
+          },
+          "one_price": {
+            "estimate": -0.29302203567681007,
+            "ci95": [
+              -0.356278538880236,
+              -0.2235244039913635
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": 0.03908350862123661,
+            "ci95": [
+              -0.062059272152979315,
+              0.1347871547642604
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.18310183942489294,
+            "ci95": [
+              -0.2770367705863226,
+              -0.07692109009512399
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": 0.015253563302610046,
+            "ci95": [
+              -0.012344665124685928,
+              0.039765912186534406
+            ]
+          }
+        }
+      },
+      "validation_5_7_vs_gt_7": {
+        "comparison": "GT_5_LE_7_MINUS_GT_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": 0.017886926196884118,
+            "ci95": [
+              -0.0201173319589529,
+              0.062017332972192786
+            ]
+          },
+          "one_price": {
+            "estimate": -0.3190932868352223,
+            "ci95": [
+              -0.3485426287303242,
+              -0.2890480985497187
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": -0.010756676557863498,
+            "ci95": [
+              -0.07204709590510192,
+              0.053690668518043175
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.13014342235410487,
+            "ci95": [
+              -0.19341607043631032,
+              -0.06838794842143918
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": 0.011060922464532146,
+            "ci95": [
+              -0.003512578937798781,
+              0.025892380143876317
+            ]
+          }
+        }
+      },
+      "validation_0_5_vs_5_7": {
+        "comparison": "GT_0_LE_5_MINUS_GT_5_LE_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": -0.16066217202150945,
+            "ci95": [
+              -0.1961780555460866,
+              -0.12488882673658579
+            ]
+          },
+          "one_price": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": -0.05203349282296649,
+            "ci95": [
+              -0.10859386226777884,
+              0.0052557160132206595
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.023484848484848497,
+            "ci95": [
+              -0.07435857865535044,
+              0.026266382019651112
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": -0.006488990185433786,
+            "ci95": [
+              -0.01944205953325124,
+              0.0064489731934433865
+            ]
+          }
+        }
+      }
+    },
+    "FIRST_BOARD": {
+      "development_5_7_vs_gt_7": {
+        "comparison": "GT_5_LE_7_MINUS_GT_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": 0.022789340913657224,
+            "ci95": [
+              -0.04164152268216936,
+              0.07609685499243456
+            ]
+          },
+          "one_price": {
+            "estimate": -0.23558783477076714,
+            "ci95": [
+              -0.3185194307608101,
+              -0.1602741322825206
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": 0.06594873231054671,
+            "ci95": [
+              -0.07879267722353568,
+              0.17475872949282564
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.23105029624637902,
+            "ci95": [
+              -0.34499570288617193,
+              -0.07448072027835112
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": 0.027764333245660917,
+            "ci95": [
+              -0.010074195931497632,
+              0.055312082576498334
+            ]
+          }
+        }
+      },
+      "validation_5_7_vs_gt_7": {
+        "comparison": "GT_5_LE_7_MINUS_GT_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": 0.016660775303405206,
+            "ci95": [
+              -0.026852827630239,
+              0.06440899410780318
+            ]
+          },
+          "one_price": {
+            "estimate": -0.30112721417069244,
+            "ci95": [
+              -0.3406934409484838,
+              -0.26003250236162484
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": -0.0017441860465116088,
+            "ci95": [
+              -0.0767552497108071,
+              0.07726341742008716
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.10665374677002587,
+            "ci95": [
+              -0.1873866330303656,
+              -0.024785369753678423
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": 0.007708436407005598,
+            "ci95": [
+              -0.009324019372218238,
+              0.02599034203918011
+            ]
+          }
+        }
+      },
+      "validation_0_5_vs_5_7": {
+        "comparison": "GT_0_LE_5_MINUS_GT_5_LE_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": -0.15431942765197315,
+            "ci95": [
+              -0.1928381595180479,
+              -0.11619157932846724
+            ]
+          },
+          "one_price": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": -0.04839242597534632,
+            "ci95": [
+              -0.11340426317507016,
+              0.019988513569035544
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.037654085652560676,
+            "ci95": [
+              -0.09884942930792026,
+              0.02182654496660394
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": -0.006401317630074812,
+            "ci95": [
+              -0.02120347973456697,
+              0.008473185437904667
+            ]
+          }
+        }
+      }
+    },
+    "CONSECUTIVE_BOARD": {
+      "development_5_7_vs_gt_7": {
+        "comparison": "GT_5_LE_7_MINUS_GT_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": 0.05059412094099405,
+            "ci95": [
+              -0.0008515910486485099,
+              0.10762454012192796
+            ]
+          },
+          "one_price": {
+            "estimate": -0.3716594157862026,
+            "ci95": [
+              -0.40824953520329804,
+              -0.3369098080293125
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": 0.0004495504495504732,
+            "ci95": [
+              -0.07297860397733553,
+              0.08017038537022667
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.08251748251748248,
+            "ci95": [
+              -0.16658677914326334,
+              -0.00019575236710060774
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": -0.010055083644897274,
+            "ci95": [
+              -0.0337096794135489,
+              0.015150852332702228
+            ]
+          }
+        }
+      },
+      "validation_5_7_vs_gt_7": {
+        "comparison": "GT_5_LE_7_MINUS_GT_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": 0.05376747175065602,
+            "ci95": [
+              -0.0314324656929946,
+              0.14185328691147897
+            ]
+          },
+          "one_price": {
+            "estimate": -0.3403041825095057,
+            "ci95": [
+              -0.38115091485069746,
+              -0.2964426877470356
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": 0.004371175221681012,
+            "ci95": [
+              -0.11040941570088804,
+              0.12188834081087135
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": -0.14018983389534156,
+            "ci95": [
+              -0.25877928760395436,
+              -0.021053281783556595
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": 0.01343864337271844,
+            "ci95": [
+              -0.01570309609991933,
+              0.04275365257823498
+            ]
+          }
+        }
+      },
+      "validation_0_5_vs_5_7": {
+        "comparison": "GT_0_LE_5_MINUS_GT_5_LE_7",
+        "date_clustered": true,
+        "metrics": {
+          "combined": {
+            "estimate": -0.1495458733710675,
+            "ci95": [
+              -0.23505213729540758,
+              -0.06245847239692887
+            ]
+          },
+          "one_price": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "conditional_b2_positive": {
+            "estimate": -0.05873676904390074,
+            "ci95": [
+              -0.1748602525946276,
+              0.056422588481481094
+            ]
+          },
+          "conditional_b1_big_loss": {
+            "estimate": 0.016831511365608176,
+            "ci95": [
+              -0.09125242476423968,
+              0.12176640105013452
+            ]
+          },
+          "conditional_mean_b2": {
+            "estimate": -0.006905514445331724,
+            "ci95": [
+              -0.03438174806489432,
+              0.020053731202262084
+            ]
+          }
+        }
+      }
+    }
+  },
+  "directional_replication": {
+    "five_to_seven_combined_better_than_above_seven_in_both_periods": true,
+    "five_to_seven_big_loss_lower_than_above_seven_in_both_periods": true,
+    "five_to_seven_vs_above_seven_both_ci_confirmed": false
+  },
+  "governance": {
+    "opening_gap_direct_entry_allowed": false,
+    "opening_gap_direct_stock_reranking_allowed": false,
+    "above_seven_default_risk_flag_allowed": true,
+    "zero_to_five_automatic_buy_allowed": false,
+    "five_to_seven_automatic_buy_allowed": false,
+    "requires_intraday_absorption_reseal_and_theme_confirmation": true
+  },
+  "interpretation": "Opening strength is a trade-off, not a monotonic buy factor. The 5-7% band has higher touch identity, while >7% contains more one-price/unbuyable rows and worse conditional loss. Neither 0-5% nor 5-7% authorizes entry without actual absorption, reseal, theme support and a valid price ceiling.",
+  "limitations": [
+    "official open is known after 09:30 and cannot be used in the prior-close model",
+    "daily OHLC cannot prove auction match amount, queue, fill, VWAP path, or reseal",
+    "historical candidate universe is not independently full-market complete",
+    "daily limit-touch entry and close marks are proxies rather than complete trades",
+    "validation dates were inspected and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\full_pool_features_20260905_v2\\full_pool_eod_features.csv": "52bb9eea10a02addb233ef6b06d1b6fc1dada7a9a2168cceb043c90e11c5466d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459"
+  },
+  "observations_sha256": "03588fd84518292207e4d56a6834595ddead503e564ae3573d04656ad8c9660c"
+}

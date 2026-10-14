@@ -1,0 +1,4663 @@
+{
+  "version": "v292-daily-research-1",
+  "recorded_at": "2026-10-12T10:55:38.783384+00:00",
+  "status": "RUN_COMPLETE",
+  "jobs": [
+    {
+      "registration": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json",
+      "registration_hash": "2c74dc406eef7dcf2eff66a016b18bf1e854e70bd3c9b3222f47b829ac3518a9",
+      "signal_date": "2026-09-30",
+      "target_date": "2026-10-08",
+      "forecast_status": "FORWARD_REGISTERED",
+      "status": "UNCHANGED",
+      "scoring_status": "PARTIAL",
+      "source": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\outcome_inbox\\2026-10-08\\outcomes_20261008T092321Z.json"
+    },
+    {
+      "registration": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-08_fcf1205edfbc2269.json",
+      "registration_hash": "fcf1205edfbc2269d3c2a3c50f09a0bb788382aba65ea5573d59a0ea298c733e",
+      "signal_date": "2026-10-08",
+      "target_date": "2026-10-09",
+      "forecast_status": "FORWARD_REGISTERED",
+      "status": "UNCHANGED",
+      "scoring_status": "PARTIAL",
+      "source": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\outcome_inbox\\2026-10-09\\outcomes_20261009T0920Z.json"
+    }
+  ],
+  "errors": [],
+  "statistics": {
+    "version": "v292-daily-research-1",
+    "asof": "2026-10-12T10:55:38.783384+00:00",
+    "windows": {
+      "20": {
+        "requested_window": "20",
+        "monitoring_start": "2026-10-08",
+        "window_completed_sessions": 3,
+        "start": "2026-10-08",
+        "end": "2026-10-12",
+        "registered_forward_dates": 2,
+        "missing_registration_sessions": 1,
+        "unsettled_registration_hashes": [],
+        "layers": {
+          "break": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 21,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 11,
+            "scored": 10,
+            "correct": 7,
+            "wrong": 3,
+            "accuracy": 0.7,
+            "accuracy_wilson_95": [
+              0.39677814746114537,
+              0.8922087325936989
+            ],
+            "tp": 5,
+            "fp": 2,
+            "fn": 1,
+            "tn": 2,
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.35893445183261935,
+              0.9177810759959433
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.236593090512564,
+              0.7634069094874361
+            ],
+            "uncalled_known_positives": 4,
+            "f1": 0.7692307692307693,
+            "all_fail_baseline_accuracy": 0.4,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "driver": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "emotion": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "high_open_fade": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "leader": {
+            "total_frozen_rows": 1,
+            "known_outcomes": 0,
+            "unknown_outcomes": 1,
+            "unmade_forecasts": 1,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "market_direction": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 0,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "market_phase": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "market_primary": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 0,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "promotion": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 21,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 21,
+            "correct": 14,
+            "wrong": 7,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.4537345197425524,
+              0.8280524739491653
+            ],
+            "tp": 6,
+            "fp": 2,
+            "fn": 5,
+            "tn": 8,
+            "precision": 0.75,
+            "recall": 0.5454545454545454,
+            "all_known_positive_recall": 0.5454545454545454,
+            "precision_wilson_95": [
+              0.40927543031016883,
+              0.9285207872478909
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.280091537409322,
+              0.7872872837754024
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.631578947368421,
+            "all_fail_baseline_accuracy": 0.47619047619047616,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "rebound": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "reseal": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "strong_to_weak": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "theme": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "weak_to_strong": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          }
+        },
+        "tiers": {
+          "2进3": {
+            "total_frozen_rows": 9,
+            "known_outcomes": 9,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 9,
+            "correct": 6,
+            "wrong": 3,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.3542021355803963,
+              0.879416181613089
+            ],
+            "tp": 2,
+            "fp": 1,
+            "fn": 2,
+            "tn": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.5714285714285714,
+            "all_fail_baseline_accuracy": 0.5555555555555556,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "3进4": {
+            "total_frozen_rows": 7,
+            "known_outcomes": 7,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 7,
+            "correct": 4,
+            "wrong": 3,
+            "accuracy": 0.5714285714285714,
+            "accuracy_wilson_95": [
+              0.2504583645276572,
+              0.8417801447485302
+            ],
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "tn": 3,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "all_known_positive_recall": 0.3333333333333333,
+            "precision_wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.4,
+            "all_fail_baseline_accuracy": 0.5714285714285714,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "4进5": {
+            "total_frozen_rows": 3,
+            "known_outcomes": 3,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 3,
+            "correct": 2,
+            "wrong": 1,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "tn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.6666666666666666,
+            "all_fail_baseline_accuracy": 0.3333333333333333,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "5进6": {
+            "total_frozen_rows": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "5板以上": {
+            "total_frozen_rows": 2,
+            "known_outcomes": 2,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 2,
+            "correct": 2,
+            "wrong": 0,
+            "accuracy": 1.0,
+            "accuracy_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "all_known_positive_recall": 1.0,
+            "precision_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 1.0,
+            "all_fail_baseline_accuracy": 0.0,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "最高板": {
+            "total_frozen_rows": 2,
+            "known_outcomes": 2,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 2,
+            "correct": 2,
+            "wrong": 0,
+            "accuracy": 1.0,
+            "accuracy_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "all_known_positive_recall": 1.0,
+            "precision_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 1.0,
+            "all_fail_baseline_accuracy": 0.0,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          }
+        },
+        "future_pending": 0
+      },
+      "60": {
+        "requested_window": "60",
+        "monitoring_start": "2026-10-08",
+        "window_completed_sessions": 3,
+        "start": "2026-10-08",
+        "end": "2026-10-12",
+        "registered_forward_dates": 2,
+        "missing_registration_sessions": 1,
+        "unsettled_registration_hashes": [],
+        "layers": {
+          "break": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 21,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 11,
+            "scored": 10,
+            "correct": 7,
+            "wrong": 3,
+            "accuracy": 0.7,
+            "accuracy_wilson_95": [
+              0.39677814746114537,
+              0.8922087325936989
+            ],
+            "tp": 5,
+            "fp": 2,
+            "fn": 1,
+            "tn": 2,
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.35893445183261935,
+              0.9177810759959433
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.236593090512564,
+              0.7634069094874361
+            ],
+            "uncalled_known_positives": 4,
+            "f1": 0.7692307692307693,
+            "all_fail_baseline_accuracy": 0.4,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "driver": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "emotion": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "high_open_fade": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "leader": {
+            "total_frozen_rows": 1,
+            "known_outcomes": 0,
+            "unknown_outcomes": 1,
+            "unmade_forecasts": 1,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "market_direction": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 0,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "market_phase": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "market_primary": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 0,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "promotion": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 21,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 21,
+            "correct": 14,
+            "wrong": 7,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.4537345197425524,
+              0.8280524739491653
+            ],
+            "tp": 6,
+            "fp": 2,
+            "fn": 5,
+            "tn": 8,
+            "precision": 0.75,
+            "recall": 0.5454545454545454,
+            "all_known_positive_recall": 0.5454545454545454,
+            "precision_wilson_95": [
+              0.40927543031016883,
+              0.9285207872478909
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.280091537409322,
+              0.7872872837754024
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.631578947368421,
+            "all_fail_baseline_accuracy": 0.47619047619047616,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "rebound": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "reseal": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "strong_to_weak": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "theme": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "weak_to_strong": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          }
+        },
+        "tiers": {
+          "2进3": {
+            "total_frozen_rows": 9,
+            "known_outcomes": 9,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 9,
+            "correct": 6,
+            "wrong": 3,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.3542021355803963,
+              0.879416181613089
+            ],
+            "tp": 2,
+            "fp": 1,
+            "fn": 2,
+            "tn": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.5714285714285714,
+            "all_fail_baseline_accuracy": 0.5555555555555556,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "3进4": {
+            "total_frozen_rows": 7,
+            "known_outcomes": 7,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 7,
+            "correct": 4,
+            "wrong": 3,
+            "accuracy": 0.5714285714285714,
+            "accuracy_wilson_95": [
+              0.2504583645276572,
+              0.8417801447485302
+            ],
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "tn": 3,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "all_known_positive_recall": 0.3333333333333333,
+            "precision_wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.4,
+            "all_fail_baseline_accuracy": 0.5714285714285714,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "4进5": {
+            "total_frozen_rows": 3,
+            "known_outcomes": 3,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 3,
+            "correct": 2,
+            "wrong": 1,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "tn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.6666666666666666,
+            "all_fail_baseline_accuracy": 0.3333333333333333,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "5进6": {
+            "total_frozen_rows": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "5板以上": {
+            "total_frozen_rows": 2,
+            "known_outcomes": 2,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 2,
+            "correct": 2,
+            "wrong": 0,
+            "accuracy": 1.0,
+            "accuracy_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "all_known_positive_recall": 1.0,
+            "precision_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 1.0,
+            "all_fail_baseline_accuracy": 0.0,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "最高板": {
+            "total_frozen_rows": 2,
+            "known_outcomes": 2,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 2,
+            "correct": 2,
+            "wrong": 0,
+            "accuracy": 1.0,
+            "accuracy_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "all_known_positive_recall": 1.0,
+            "precision_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 1.0,
+            "all_fail_baseline_accuracy": 0.0,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          }
+        },
+        "future_pending": 0
+      },
+      "all": {
+        "requested_window": "all",
+        "monitoring_start": "2026-10-08",
+        "window_completed_sessions": 3,
+        "start": "2026-10-08",
+        "end": "2026-10-12",
+        "registered_forward_dates": 2,
+        "missing_registration_sessions": 1,
+        "unsettled_registration_hashes": [],
+        "layers": {
+          "break": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 21,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 11,
+            "scored": 10,
+            "correct": 7,
+            "wrong": 3,
+            "accuracy": 0.7,
+            "accuracy_wilson_95": [
+              0.39677814746114537,
+              0.8922087325936989
+            ],
+            "tp": 5,
+            "fp": 2,
+            "fn": 1,
+            "tn": 2,
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.35893445183261935,
+              0.9177810759959433
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.236593090512564,
+              0.7634069094874361
+            ],
+            "uncalled_known_positives": 4,
+            "f1": 0.7692307692307693,
+            "all_fail_baseline_accuracy": 0.4,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "driver": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "emotion": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "high_open_fade": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "leader": {
+            "total_frozen_rows": 1,
+            "known_outcomes": 0,
+            "unknown_outcomes": 1,
+            "unmade_forecasts": 1,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "market_direction": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 0,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "market_phase": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "market_primary": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 0,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "promotion": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 21,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 21,
+            "correct": 14,
+            "wrong": 7,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.4537345197425524,
+              0.8280524739491653
+            ],
+            "tp": 6,
+            "fp": 2,
+            "fn": 5,
+            "tn": 8,
+            "precision": 0.75,
+            "recall": 0.5454545454545454,
+            "all_known_positive_recall": 0.5454545454545454,
+            "precision_wilson_95": [
+              0.40927543031016883,
+              0.9285207872478909
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.280091537409322,
+              0.7872872837754024
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.631578947368421,
+            "all_fail_baseline_accuracy": 0.47619047619047616,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "rebound": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "reseal": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "strong_to_weak": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "theme": {
+            "total_frozen_rows": 2,
+            "scored": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 2,
+            "unmade_forecasts": 2,
+            "correct": 0,
+            "wrong": 0,
+            "partial": 0,
+            "accuracy": null,
+            "per_class": {},
+            "accuracy_wilson_95": null,
+            "top_call_reliability_brier": null,
+            "probability_scored_n": 0,
+            "multiclass_brier": null
+          },
+          "weak_to_strong": {
+            "total_frozen_rows": 21,
+            "known_outcomes": 0,
+            "unknown_outcomes": 21,
+            "unmade_forecasts": 21,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          }
+        },
+        "tiers": {
+          "2进3": {
+            "total_frozen_rows": 9,
+            "known_outcomes": 9,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 9,
+            "correct": 6,
+            "wrong": 3,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.3542021355803963,
+              0.879416181613089
+            ],
+            "tp": 2,
+            "fp": 1,
+            "fn": 2,
+            "tn": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.5714285714285714,
+            "all_fail_baseline_accuracy": 0.5555555555555556,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "3进4": {
+            "total_frozen_rows": 7,
+            "known_outcomes": 7,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 7,
+            "correct": 4,
+            "wrong": 3,
+            "accuracy": 0.5714285714285714,
+            "accuracy_wilson_95": [
+              0.2504583645276572,
+              0.8417801447485302
+            ],
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "tn": 3,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "all_known_positive_recall": 0.3333333333333333,
+            "precision_wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.4,
+            "all_fail_baseline_accuracy": 0.5714285714285714,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "4进5": {
+            "total_frozen_rows": 3,
+            "known_outcomes": 3,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 3,
+            "correct": 2,
+            "wrong": 1,
+            "accuracy": 0.6666666666666666,
+            "accuracy_wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "tn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "all_known_positive_recall": 0.5,
+            "precision_wilson_95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 0.6666666666666666,
+            "all_fail_baseline_accuracy": 0.3333333333333333,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "5进6": {
+            "total_frozen_rows": 0,
+            "known_outcomes": 0,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 0,
+            "correct": 0,
+            "wrong": 0,
+            "accuracy": null,
+            "accuracy_wilson_95": null,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": null,
+            "recall": null,
+            "all_known_positive_recall": null,
+            "precision_wilson_95": null,
+            "all_known_positive_recall_wilson_95": null,
+            "uncalled_known_positives": 0,
+            "f1": null,
+            "all_fail_baseline_accuracy": null,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "5板以上": {
+            "total_frozen_rows": 2,
+            "known_outcomes": 2,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 2,
+            "correct": 2,
+            "wrong": 0,
+            "accuracy": 1.0,
+            "accuracy_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "all_known_positive_recall": 1.0,
+            "precision_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 1.0,
+            "all_fail_baseline_accuracy": 0.0,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          },
+          "最高板": {
+            "total_frozen_rows": 2,
+            "known_outcomes": 2,
+            "unknown_outcomes": 0,
+            "unmade_forecasts": 0,
+            "scored": 2,
+            "correct": 2,
+            "wrong": 0,
+            "accuracy": 1.0,
+            "accuracy_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "all_known_positive_recall": 1.0,
+            "precision_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "all_known_positive_recall_wilson_95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "uncalled_known_positives": 0,
+            "f1": 1.0,
+            "all_fail_baseline_accuracy": 0.0,
+            "probability_scored_n": 0,
+            "brier": null,
+            "calibration_bins": [
+              {
+                "low": 0.0,
+                "high": 0.1,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.3,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.3,
+                "high": 0.4,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.4,
+                "high": 0.5,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.5,
+                "high": 0.6,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.6,
+                "high": 0.7,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.7,
+                "high": 0.8,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.8,
+                "high": 0.9,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              },
+              {
+                "low": 0.9,
+                "high": 1.0,
+                "n": 0,
+                "mean_probability": null,
+                "actual_rate": null
+              }
+            ]
+          }
+        },
+        "future_pending": 0
+      }
+    },
+    "stable_60_verified": false,
+    "notes": [
+      "回放与事后附页不进入前向统计",
+      "缺结果、未预测及未登记交易日单列",
+      "二分类准确率不能代替正向精确率和召回率",
+      "未校准概率不计算Brier",
+      "Wilson区间为描述性二项区间，同日股票相关性需另做日期聚类检验，不能据此宣布稳定60%"
+    ]
+  },
+  "model_upgrade": "NO_AUTOMATIC_UPGRADE",
+  "trade_execution": "DISABLED",
+  "sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v298\\exchange_calendar_extension_20261003_v2\\calendar.json": "2f991b34d9317dcc1ed0d4c3e4da40132eedf27ea23431415e1048172b119cdd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-08_fcf1205edfbc2269.json": "2987f19f09f8e33783b88d2c856a00ba965f9e063631ca57d69d0b5edb06334b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\hypothesis_bound_daily_runner_v298.py": "dd10c06fb5f9a348a0fb465a2bc30fbeb2c3a340784f520b300a798dc66b071e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\hypothesis_review_v298.py": "476d773489a710b78254c16774a7b87c588cb74781f17046a3552fe6a72db6e9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\daily_research_template_v298.py": "3db4e78fb0752dd553ffd0190821dc2196b13dec11e6d51e7e681ee3fb65c14c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\daily_research_report_v298.py": "1e7798f4d89a3494424864c9d1b8938f96e4b1e0f5fcba9b8b3c9bad6a081237",
+    "D:\\Documents\\ChatGPT\\龙头战法\\experience_hypotheses_v297.py": "182528506843b5ffd862dafef4202e6ac44ff4ad0a1e7a8c0f26643e53338f11",
+    "D:\\Documents\\ChatGPT\\龙头战法\\daily_research_template_v292.py": "a77d0a2bcdd65c0276ad6e5d100f283c72c703139dbd7ae0721a050fc3ffb718",
+    "D:\\Documents\\ChatGPT\\龙头战法\\context_bound_daily_runner_v296.py": "8df8bd9544740f9f4f62b82f01bbfba67a825371680d783e45f7c0b04d4143a7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\context_freeze_contract_v296.py": "37bec7ff9303995ae4459b64c0eaa7ec47f2b9e2d876e35e77bf62245ac42588",
+    "D:\\Documents\\ChatGPT\\龙头战法\\context_draft_bridge_v295.py": "be8adc082ecaa2824756289f20178b3da351b2a8ed9d44d8b1bd5396dbe3dcce",
+    "D:\\Documents\\ChatGPT\\龙头战法\\point_context_reconciled_v295.py": "a05ea8a6e43042845e835d1f1a40a2a9f8e380b0ef533476b9f8a7f8868fcb7d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\point_context_v295.py": "acbfaba0277cf0feb29badfabb2155c80fdae9491ebba4907eb52f6cd0040c41",
+    "D:\\Documents\\ChatGPT\\龙头战法\\source_bound_daily_runner_v293.py": "d0c0b8149b194aa01a2e9b3534a84e7c36c2bae1e0eec5e6c7f5add30d208f4c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_outcome_bridge_v293.py": "2503b7de56e3e4e304d4f396806d4a97c8b35f64cb3bc98a14c33f2345733b08",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_outcome_sources_v293.py": "2d7f8c05e50bae8d20c22c218337cd8e9d1c017d75dbfc7591e2dfa54d6b9c4e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\daily_research_contract_v292.py": "39d4c191e80d054b68e2ecfa12a4570b7a6e23a18f4e24b713531628942c4f2d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\daily_research_report_v292.py": "169a8fe2f0a192bed388411cff4d1f28501af677ffad09522ca0894e732ca518",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_expectation_contract_v271.py": "e4dd02836990b1ec0b369eb7d1a74787001fd5d2b1c901eb14e7392d93468606"
+  },
+  "ledger_sha256": "e2f81bc8f6bd8b7e46f416b9c99e38d4d1716439bd37657a9fe6fd0f1fe3d9d7"
+}

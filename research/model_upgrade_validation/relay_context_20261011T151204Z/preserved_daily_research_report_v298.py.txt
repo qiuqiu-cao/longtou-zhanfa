@@ -1,0 +1,36 @@
+"""Render the frozen hypotheses as a readable table, never retrofit old plans."""
+from daily_research_report_v292 import render as original_render, text
+from hypothesis_review_v298 import IDS, validate_hypotheses
+
+
+def hypothesis_table(items):
+    lines = ["", "| 经验假设 | 等级 | 检验状态 | 固定定义与限制 | 证据/缺口 | 核心规则 |",
+        "|---|---|---|---|---|---|"]
+    for item in items:
+        evidence = item.get("statistical_evidence")
+        state = "历史代理已检验" if item.get("backtest_completed") else "未检验 / 时点输入不足"
+        source = "" if not evidence else "；来源=" + text(evidence["source"]) + "；SHA=" + evidence["source_sha256"]
+        lines.append("| " + " | ".join([text(item["name"]), item["grade"], state,
+            text(item["definition"]), text(item["reason"]) + source, "否"]) + " |")
+    lines += ["", "历史组间晋级率不是预测准确率；未检验不等于零效应。高位关联不能证明高标压制或相对原模型的预测增量。",
+        "本表不授权概率加分、交易或核心规则升级。"]
+    return "\n".join(lines)
+
+
+def render(registered, run_report, settlement=None):
+    plan = registered["plan"]
+    result = validate_hypotheses(plan)
+    rendered = original_render(registered, run_report, settlement)
+    ext = plan.get("daily_research")
+    if ext and [r.get("id") for r in ext.get("hypotheses", [])] == IDS:
+        lines = rendered.splitlines()
+        matches = [i for i, line in enumerate(lines) if line.startswith("玄学假设：")]
+        if len(matches) != 1:
+            raise ValueError("expected exactly one frozen hypothesis report section")
+        binding = plan.get("hypothesis_binding")
+        available = binding["available_at"] if binding else "没有可用验收绑定，全部保留未检验"
+        lines[matches[0]] = "经验研究验收可得时间：" + available + hypothesis_table(ext["hypotheses"])
+        return "\n".join(lines) + "\n"
+    # Legacy displays remain byte-identical. A current appendix is a separate
+    # artifact, never part of the frozen plan's section eleven.
+    return rendered

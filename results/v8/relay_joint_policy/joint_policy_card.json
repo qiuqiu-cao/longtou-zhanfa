@@ -1,0 +1,246 @@
+{
+  "version": "v8-relay-joint-policy-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "gate_decision": "AUTO_REJECTED_NO_FEASIBLE_CALIBRATION_THRESHOLD",
+  "generated_at_utc": "2026-09-01T07:06:25.233936+00:00",
+  "target_rules": {
+    "executed_promotion_precision": 0.7,
+    "maximum_large_loss_rate": 0.1,
+    "minimum_executed_trades": 31,
+    "signals_per_active_week": [
+      3.0,
+      5.0
+    ]
+  },
+  "large_loss_model_used": false,
+  "large_loss_model_reason": "V8 large-loss models failed chronological stability; actual selected-trade labels remain the hard gate",
+  "daily_signal_cap": 1,
+  "policies": [
+    {
+      "policy": "strict_identity",
+      "population_rows": 121,
+      "split": {
+        "calibration": [
+          "2024-10-30",
+          "2025-09-11",
+          123
+        ],
+        "embargo_1": [
+          "2025-09-12",
+          "2025-09-12",
+          1
+        ],
+        "validation": [
+          "2025-09-16",
+          "2026-03-11",
+          60
+        ],
+        "embargo_2": [
+          "2026-03-12",
+          "2026-03-12",
+          1
+        ],
+        "sealed_holdout": [
+          "2026-03-13",
+          "2026-08-31",
+          61
+        ]
+      },
+      "calibration_frontier": {
+        "best_precision": {
+          "threshold": 0.27014659,
+          "signals": 44,
+          "executed": 31,
+          "fill_rate": 0.7045454545454546,
+          "executed_promotion_precision": 0.7419354838709677,
+          "promotion_wilson_95": [
+            0.5675352757228489,
+            0.8629845626313024
+          ],
+          "large_loss_labeled": 31,
+          "large_loss_label_coverage": 1.0,
+          "large_loss_rate": 0.3870967741935484,
+          "signals_per_active_week": 1.7886178861788617,
+          "mean_net_return": -0.03408299569965466,
+          "median_net_return": -0.044146614355633454,
+          "average_win": 0.08451110448621374,
+          "average_loss": -0.10274273791252582,
+          "profit_factor": 0.4762135265103257,
+          "maximum_drawdown": -0.8324342102949185,
+          "unresolved_sell_blocked": 1,
+          "passes": false
+        },
+        "best_large_loss": {
+          "threshold": 0.30200645,
+          "signals": 32,
+          "executed": 21,
+          "fill_rate": 0.65625,
+          "executed_promotion_precision": 0.7142857142857143,
+          "promotion_wilson_95": [
+            0.500432261771624,
+            0.8618632425437179
+          ],
+          "large_loss_labeled": 21,
+          "large_loss_label_coverage": 1.0,
+          "large_loss_rate": 0.3333333333333333,
+          "signals_per_active_week": 1.3008130081300813,
+          "mean_net_return": -0.03721574250321284,
+          "median_net_return": -0.044146614355633454,
+          "average_win": 0.08418584086370838,
+          "average_loss": -0.11815013141449365,
+          "profit_factor": 0.47502184921187585,
+          "maximum_drawdown": -0.735110815328536,
+          "unresolved_sell_blocked": 1,
+          "passes": false
+        },
+        "best_mean_return": {
+          "threshold": 0.33977771,
+          "signals": 14,
+          "executed": 11,
+          "fill_rate": 0.7857142857142857,
+          "executed_promotion_precision": 0.6363636363636364,
+          "promotion_wilson_95": [
+            0.35379677689163724,
+            0.8483377638586862
+          ],
+          "large_loss_labeled": 11,
+          "large_loss_label_coverage": 1.0,
+          "large_loss_rate": 0.45454545454545453,
+          "signals_per_active_week": 0.5691056910569106,
+          "mean_net_return": -0.029064007374124585,
+          "median_net_return": -0.02094805590886565,
+          "average_win": 0.07995441659043329,
+          "average_loss": -0.13808243133868245,
+          "profit_factor": 0.5790339568567173,
+          "maximum_drawdown": -0.5272625586772696,
+          "unresolved_sell_blocked": 1,
+          "passes": false
+        }
+      },
+      "calibration_feasible_thresholds": 0,
+      "sealed_holdout_evaluated": false,
+      "status": "NO_FEASIBLE_CALIBRATION_THRESHOLD",
+      "operational_threshold": null,
+      "validation": null,
+      "sealed_holdout": "NOT_EVALUATED"
+    },
+    {
+      "policy": "height_confirmed",
+      "population_rows": 245,
+      "split": {
+        "calibration": [
+          "2024-10-30",
+          "2025-09-11",
+          123
+        ],
+        "embargo_1": [
+          "2025-09-12",
+          "2025-09-12",
+          1
+        ],
+        "validation": [
+          "2025-09-16",
+          "2026-03-11",
+          60
+        ],
+        "embargo_2": [
+          "2026-03-12",
+          "2026-03-12",
+          1
+        ],
+        "sealed_holdout": [
+          "2026-03-13",
+          "2026-08-31",
+          61
+        ]
+      },
+      "calibration_frontier": {
+        "best_precision": {
+          "threshold": 0.31050498,
+          "signals": 75,
+          "executed": 42,
+          "fill_rate": 0.56,
+          "executed_promotion_precision": 0.8333333333333334,
+          "promotion_wilson_95": [
+            0.693957037952257,
+            0.916841887041635
+          ],
+          "large_loss_labeled": 42,
+          "large_loss_label_coverage": 1.0,
+          "large_loss_rate": 0.42857142857142855,
+          "signals_per_active_week": 3.048780487804878,
+          "mean_net_return": -0.025609764191150804,
+          "median_net_return": -0.048175715777325795,
+          "average_win": 0.08325981851425508,
+          "average_loss": -0.10607858619079864,
+          "profit_factor": 0.5801346724934054,
+          "maximum_drawdown": -0.8039745949867947,
+          "unresolved_sell_blocked": 2,
+          "passes": false
+        },
+        "best_large_loss": {
+          "threshold": 0.2659083,
+          "signals": 115,
+          "executed": 61,
+          "fill_rate": 0.5304347826086957,
+          "executed_promotion_precision": 0.7704918032786885,
+          "promotion_wilson_95": [
+            0.6508635609254849,
+            0.858068976211168
+          ],
+          "large_loss_labeled": 61,
+          "large_loss_label_coverage": 1.0,
+          "large_loss_rate": 0.39344262295081966,
+          "signals_per_active_week": 4.67479674796748,
+          "mean_net_return": -0.02458364870412469,
+          "median_net_return": -0.0437177363699102,
+          "average_win": 0.08187269235290713,
+          "average_loss": -0.09758228257180365,
+          "profit_factor": 0.5753224179293913,
+          "maximum_drawdown": -0.8735265321960267,
+          "unresolved_sell_blocked": 2,
+          "passes": false
+        },
+        "best_mean_return": {
+          "threshold": 0.29797505,
+          "signals": 87,
+          "executed": 46,
+          "fill_rate": 0.5287356321839081,
+          "executed_promotion_precision": 0.8043478260869565,
+          "promotion_wilson_95": [
+            0.668284622588308,
+            0.893495095558782
+          ],
+          "large_loss_labeled": 46,
+          "large_loss_label_coverage": 1.0,
+          "large_loss_rate": 0.41304347826086957,
+          "signals_per_active_week": 3.536585365853658,
+          "mean_net_return": -0.02158190166208158,
+          "median_net_return": -0.045536287539793746,
+          "average_win": 0.08383503631183481,
+          "average_loss": -0.10169877452225805,
+          "profit_factor": 0.6265033958993254,
+          "maximum_drawdown": -0.7790065644211301,
+          "unresolved_sell_blocked": 2,
+          "passes": false
+        }
+      },
+      "calibration_feasible_thresholds": 0,
+      "sealed_holdout_evaluated": false,
+      "status": "NO_FEASIBLE_CALIBRATION_THRESHOLD",
+      "operational_threshold": null,
+      "validation": null,
+      "sealed_holdout": "NOT_EVALUATED"
+    }
+  ],
+  "deployment_allowed": false,
+  "deployment_reason": "historical dates are development evidence; execution labels are inferred daily OHLC and no tick/VWAP confirmation exists",
+  "integrity": {
+    "predictions_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v8\\relay_model_lab\\prequential_predictions.csv",
+    "predictions_sha256": "380fa8f9ab922cdf34a617eb848a2cbb21af0a31c2d7b8869927f12da19dbc7a",
+    "model_card_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v8\\relay_model_lab\\relay_model_lab_card.json",
+    "model_card_sha256": "3442e4d58397cdd34d2c7db299fd7792ebede1397eb7eaed2edc42647a764947",
+    "policy_script_path": "D:\\Documents\\ChatGPT\\龙头战法\\relay_joint_policy_v8.py",
+    "policy_script_sha256": "3dca964634b37761b1a80aeab83603d34529a83d3f7ccc8aa08ea2d2bde37659"
+  }
+}

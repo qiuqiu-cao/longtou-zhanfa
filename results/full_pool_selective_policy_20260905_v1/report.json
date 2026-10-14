@@ -1,0 +1,385 @@
+{
+  "status": "NO_SELECTIVE_PROXY_THRESHOLD",
+  "target": "next_session_non_one_price_limit_touch_and_b2_positive_close_mark_proxy",
+  "model": "same_day_weighted_logistic_identity_emotion_price_volume",
+  "train_end_exclusive": "2025-01-01",
+  "training_rows": 13904,
+  "training_sessions": 263,
+  "outcome_availability_purge": true,
+  "episode_overlap_purged": true,
+  "threshold_grid_frozen": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45
+  ],
+  "calibration_requirements": {
+    "minimum_proxy_precision": 0.7,
+    "minimum_selections": 30
+  },
+  "operational_threshold": null,
+  "default_decision": "CASH",
+  "validation_at_operational_threshold": null,
+  "windows": {
+    "calibration": {
+      "start": "2025-01-01",
+      "end_exclusive": "2025-04-01",
+      "candidate_rows": 3111,
+      "sessions": 57,
+      "unconditional_top1": {
+        "selections": 57,
+        "proxy_successes": 11,
+        "proxy_precision": 0.19298245614035087,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 57
+      },
+      "fixed_threshold_frontier": [
+        {
+          "selections": 57,
+          "proxy_successes": 11,
+          "proxy_precision": 0.19298245614035087,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 57,
+          "threshold": 0.1,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 56,
+          "proxy_successes": 11,
+          "proxy_precision": 0.19642857142857142,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 56,
+          "threshold": 0.15,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 44,
+          "proxy_successes": 9,
+          "proxy_precision": 0.20454545454545456,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 44,
+          "threshold": 0.2,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 35,
+          "proxy_successes": 7,
+          "proxy_precision": 0.2,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 35,
+          "threshold": 0.25,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 21,
+          "proxy_successes": 3,
+          "proxy_precision": 0.14285714285714285,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 21,
+          "threshold": 0.3,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 11,
+          "proxy_successes": 3,
+          "proxy_precision": 0.2727272727272727,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 11,
+          "threshold": 0.35,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 3,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 3,
+          "threshold": 0.4,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "threshold": 0.45,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        }
+      ],
+      "best_fixed_threshold_with_minimum_sample": {
+        "selections": 44,
+        "proxy_successes": 9,
+        "proxy_precision": 0.20454545454545456,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 44,
+        "threshold": 0.2,
+        "minimum_sample_pass": true,
+        "proxy_precision_pass": false,
+        "proxy_gate_pass": false
+      }
+    },
+    "validation": {
+      "start": "2025-04-01",
+      "end_exclusive": "2025-07-28",
+      "candidate_rows": 4020,
+      "sessions": 79,
+      "unconditional_top1": {
+        "selections": 79,
+        "proxy_successes": 14,
+        "proxy_precision": 0.17721518987341772,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 79
+      },
+      "fixed_threshold_frontier": [
+        {
+          "selections": 79,
+          "proxy_successes": 14,
+          "proxy_precision": 0.17721518987341772,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 79,
+          "threshold": 0.1,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 73,
+          "proxy_successes": 13,
+          "proxy_precision": 0.1780821917808219,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 73,
+          "threshold": 0.15,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 51,
+          "proxy_successes": 9,
+          "proxy_precision": 0.17647058823529413,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 51,
+          "threshold": 0.2,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 26,
+          "proxy_successes": 4,
+          "proxy_precision": 0.15384615384615385,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 26,
+          "threshold": 0.25,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 8,
+          "proxy_successes": 1,
+          "proxy_precision": 0.125,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 8,
+          "threshold": 0.3,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 5,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 5,
+          "threshold": 0.35,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 1,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 1,
+          "threshold": 0.4,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "threshold": 0.45,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        }
+      ],
+      "best_fixed_threshold_with_minimum_sample": {
+        "selections": 73,
+        "proxy_successes": 13,
+        "proxy_precision": 0.1780821917808219,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 73,
+        "threshold": 0.15,
+        "minimum_sample_pass": true,
+        "proxy_precision_pass": false,
+        "proxy_gate_pass": false
+      }
+    },
+    "reused_research_evaluation": {
+      "start": "2025-07-28",
+      "end_exclusive": "2025-12-26",
+      "candidate_rows": 5025,
+      "sessions": 101,
+      "unconditional_top1": {
+        "selections": 101,
+        "proxy_successes": 20,
+        "proxy_precision": 0.19801980198019803,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 101
+      },
+      "fixed_threshold_frontier": [
+        {
+          "selections": 101,
+          "proxy_successes": 20,
+          "proxy_precision": 0.19801980198019803,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 101,
+          "threshold": 0.1,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 93,
+          "proxy_successes": 20,
+          "proxy_precision": 0.21505376344086022,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 93,
+          "threshold": 0.15,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 74,
+          "proxy_successes": 16,
+          "proxy_precision": 0.21621621621621623,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 74,
+          "threshold": 0.2,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 43,
+          "proxy_successes": 10,
+          "proxy_precision": 0.23255813953488372,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 43,
+          "threshold": 0.25,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 30,
+          "proxy_successes": 8,
+          "proxy_precision": 0.26666666666666666,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 30,
+          "threshold": 0.3,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 15,
+          "proxy_successes": 5,
+          "proxy_precision": 0.3333333333333333,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 15,
+          "threshold": 0.35,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 8,
+          "proxy_successes": 3,
+          "proxy_precision": 0.375,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 8,
+          "threshold": 0.4,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 1,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 1,
+          "threshold": 0.45,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "proxy_gate_pass": false
+        }
+      ],
+      "best_fixed_threshold_with_minimum_sample": {
+        "selections": 30,
+        "proxy_successes": 8,
+        "proxy_precision": 0.26666666666666666,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 30,
+        "threshold": 0.3,
+        "minimum_sample_pass": true,
+        "proxy_precision_pass": false,
+        "proxy_gate_pass": false
+      }
+    }
+  },
+  "deployment_authorized": false,
+  "complete_trade_evidence": false,
+  "limitations": [
+    "the target is a reconstructed daily price-opportunity proxy, not a completed trade",
+    "all reported windows are historical research windows and none is a sealed future blind period",
+    "emotion-active weeks cannot be identified reliably from the reconstructed fields, so the 3-to-5 active-week frequency gate is not tested",
+    "no actual order, queue, fill, exit, announcement, or point-in-time theme evidence is present",
+    "a null threshold means cash; validation or later-window results may not be used to rescue calibration"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\full_pool_features_20260905_v1\\full_pool_eod_features.csv": "6384d1746c551c474dbcbce8d396ae10ff6fddabc84df0c73a0d80da414570fa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\full_pool_outcomes_20260905\\outcomes_LABEL_ONLY.csv": "64c24f970a2ca7f4c49e0661f2fa155df2572a3a669f1ad46ad504d98d0fa304",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_selective_policy_experiment.py": "939eeff9a441f6013039b7cfc2204ceb44ebbbb6f1b94000e34d955019cd4016"
+  }
+}

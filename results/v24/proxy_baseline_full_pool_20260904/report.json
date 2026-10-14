@@ -1,0 +1,100 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "label_warning": "incomplete event library; both positives and negatives may be wrong",
+  "train_rows": 4793,
+  "validation_start": "2025-07-28",
+  "exploratory_test_start": "2026-02-10",
+  "embargo_sessions": 30,
+  "features": [
+    "boards",
+    "height_gap_to_known_top",
+    "same_height_known_count",
+    "sole_known_top_proxy",
+    "candidate_pool_count",
+    "unknown_height_pool_count",
+    "turnover",
+    "amount_to_float_cap",
+    "open_gap_pct",
+    "amplitude_pct",
+    "one_price_day_proxy",
+    "close",
+    "market_limit_count",
+    "market_consecutive_count",
+    "market_max_board",
+    "market_failed_count",
+    "market_down_limit_count",
+    "market_seal_rate",
+    "market_failed_rate",
+    "market_height_change",
+    "market_limit_change",
+    "market_middle_density",
+    "market_ladder_gap_count",
+    "market_yesterday_premium",
+    "market_previous_limit_tail_loss",
+    "market_promotion_overall",
+    "market_promotion_1to2",
+    "market_promotion_2to3",
+    "market_promotion_3to4",
+    "market_promotion_4to5",
+    "market_promotion_mid",
+    "market_space_feedback",
+    "market_previous_limit_feedback_coverage"
+  ],
+  "target_threshold_fixed_before_fit": 0.8,
+  "actual_trades_simulated": 0,
+  "expected_holding_days": null,
+  "splits": {
+    "train": {
+      "rows": 4793,
+      "positive_rows": 313,
+      "auc": 0.8151044043815608,
+      "brier": 0.052588220438011236
+    },
+    "validation": {
+      "rows": 1106,
+      "positive_rows": 38,
+      "auc": 0.7848166765227677,
+      "brier": 0.031524848409585526
+    },
+    "exploratory_test": {
+      "rows": 1468,
+      "positive_rows": 37,
+      "auc": 0.8513419079456815,
+      "brier": 0.02127782177549285
+    }
+  },
+  "ranking_pool_rows": 1564,
+  "ranking_pool_unresolved_rows": 96,
+  "ranking_policy": "all_feature_candidates_before_outcome_join; eligibility and unresolved labels require further audit",
+  "test_model_daily_top1": {
+    "selected_rows": 135,
+    "selected_episodes": 73,
+    "unresolved_episodes": 5,
+    "proxy_hit_rate": null,
+    "proxy_hit_rate_lower": 0.0958904109589041,
+    "proxy_hit_rate_upper": 0.1643835616438356,
+    "verified_hit_rate": null,
+    "actual_profit_win_rate": null
+  },
+  "test_highest_board_baseline": {
+    "selected_rows": 135,
+    "selected_episodes": 78,
+    "unresolved_episodes": 6,
+    "proxy_hit_rate": null,
+    "proxy_hit_rate_lower": 0.08974358974358974,
+    "proxy_hit_rate_upper": 0.16666666666666666,
+    "verified_hit_rate": null,
+    "actual_profit_win_rate": null
+  },
+  "test_model_top1_above_80pct": {
+    "selected_rows": 2,
+    "selected_episodes": 1,
+    "unresolved_episodes": 1,
+    "proxy_hit_rate": null,
+    "proxy_hit_rate_lower": 0.0,
+    "proxy_hit_rate_upper": 1.0,
+    "verified_hit_rate": null,
+    "actual_profit_win_rate": null
+  },
+  "not_final_blind_test": true
+}

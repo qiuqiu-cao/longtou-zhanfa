@@ -1,0 +1,336 @@
+{
+  "version": "v121-emotion-board-group-economic-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "mainboard historical reconstructed first/consecutive closing-limit candidates",
+  "outcome": "hypothetical next-session non-one-price limit-touch fill to B+1/B+2/B+3 close marks",
+  "split": {
+    "method": "last_30pct_sessions_evaluated_against_trailing_120_session_probability_quintiles",
+    "development_sessions": 466,
+    "evaluation_sessions": 200,
+    "development_end": "2025-11-03",
+    "evaluation_start": "2025-11-04",
+    "risk_cutoff_lookback_sessions": 120,
+    "first_evaluation_cutoffs": {
+      "low": 0.4022346368715084,
+      "high": 0.5618880014439782,
+      "probability": 0.4248704663212435
+    },
+    "last_evaluation_cutoffs": {
+      "low": 0.40658610371790843,
+      "high": 0.557717538807798,
+      "probability": 0.4372759856630824
+    }
+  },
+  "board_groups": {
+    "FIRST_BOARD": {
+      "candidate_rows": 9532,
+      "evaluation_sessions": 200,
+      "high_risk_candidate_rows": 1523,
+      "low_risk_candidate_rows": 2063,
+      "metrics": {
+        "b1_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": -0.014762571172763396,
+          "low_risk_mean": -0.013413706936584887,
+          "high_minus_low": -0.001348864236178509,
+          "ci95": [
+            -0.014061971533662962,
+            0.011070397816531486
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.42402071612597925,
+          "low_risk_mean": 0.4052643739950242,
+          "high_minus_low": 0.01875634213095506,
+          "ci95": [
+            -0.05936274593879072,
+            0.09848608254180986
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.23469896331738435,
+          "low_risk_mean": 0.21386276374666469,
+          "high_minus_low": 0.020836199570719666,
+          "ci95": [
+            -0.06017600676559655,
+            0.1025704826033774
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": -0.013558519141129257,
+          "low_risk_mean": -0.01122701334247096,
+          "high_minus_low": -0.002331505798658297,
+          "ci95": [
+            -0.023352049333454163,
+            0.017793622651110064
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.38200527542632806,
+          "low_risk_mean": 0.38903048585711125,
+          "high_minus_low": -0.007025210430783191,
+          "ci95": [
+            -0.0957114166798765,
+            0.08322240421311623
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.3027654363180679,
+          "low_risk_mean": 0.27769579464625904,
+          "high_minus_low": 0.025069641671808862,
+          "ci95": [
+            -0.060327139362549506,
+            0.11021249084619829
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 36,
+          "high_risk_mean": -0.018662924934037057,
+          "low_risk_mean": -0.009320702170117726,
+          "high_minus_low": -0.009342222763919331,
+          "ci95": [
+            -0.03801728298481708,
+            0.018492438533567735
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 36,
+          "high_risk_mean": 0.40859115299904775,
+          "low_risk_mean": 0.4122538208838519,
+          "high_minus_low": -0.003662667884804127,
+          "ci95": [
+            -0.10045931105883377,
+            0.09659579057685987
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 36,
+          "high_risk_mean": 0.3640042340700235,
+          "low_risk_mean": 0.36849726684500506,
+          "high_minus_low": -0.004493032774981531,
+          "ci95": [
+            -0.10843103869989411,
+            0.10639881651918841
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        }
+      },
+      "direction_pass_count": 7,
+      "strong_ci_pass_count": 0,
+      "risk_overlay_proxy_gate_passed": false
+    },
+    "CONSECUTIVE_BOARD": {
+      "candidate_rows": 2158,
+      "evaluation_sessions": 200,
+      "high_risk_candidate_rows": 313,
+      "low_risk_candidate_rows": 463,
+      "metrics": {
+        "b1_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": -0.01767258359977147,
+          "low_risk_mean": -0.021259876703772624,
+          "high_minus_low": 0.0035872931040011533,
+          "ci95": [
+            -0.018102499980899103,
+            0.025081721517530884
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.48117737525632265,
+          "low_risk_mean": 0.4427672177672177,
+          "high_minus_low": 0.038410157489104924,
+          "ci95": [
+            -0.06231857378238973,
+            0.13845023516076133
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b1_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.31017743221690586,
+          "low_risk_mean": 0.3254776754776754,
+          "high_minus_low": -0.015300243260769564,
+          "ci95": [
+            -0.11463936285482339,
+            0.08775638575803041
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": -0.009661880402000207,
+          "low_risk_mean": -0.014746641175320957,
+          "high_minus_low": 0.00508476077332075,
+          "ci95": [
+            -0.027103055185400095,
+            0.0322448851183468
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.4426862611073138,
+          "low_risk_mean": 0.4115788865788866,
+          "high_minus_low": 0.031107374528427212,
+          "ci95": [
+            -0.07211985205406263,
+            0.13496171325118686
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b2_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 37,
+          "high_risk_mean": 0.3112781954887218,
+          "low_risk_mean": 0.34424809424809427,
+          "high_minus_low": -0.03296989875937245,
+          "ci95": [
+            -0.13596304951568108,
+            0.07192682850577586
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_mark": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 36,
+          "high_risk_mean": -0.012104080101500143,
+          "low_risk_mean": -0.017388487877228784,
+          "high_minus_low": 0.005284407775728641,
+          "ci95": [
+            -0.03655306321075358,
+            0.04676602875811391
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_positive": {
+          "expected_high_risk_direction": "LOWER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 36,
+          "high_risk_mean": 0.38783891547049437,
+          "low_risk_mean": 0.4359966422466422,
+          "high_minus_low": -0.048157726776147824,
+          "ci95": [
+            -0.18437501795232064,
+            0.08718753164476824
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": true,
+          "ci_excludes_zero_in_expected_direction": false
+        },
+        "b3_large_loss": {
+          "expected_high_risk_direction": "HIGHER",
+          "high_risk_sessions": 38,
+          "low_risk_sessions": 36,
+          "high_risk_mean": 0.38454659375712,
+          "low_risk_mean": 0.4053427282593949,
+          "high_minus_low": -0.020796134502274854,
+          "ci95": [
+            -0.14088986539370302,
+            0.10907350132404951
+          ],
+          "status": "SESSION_LEVEL_BLOCK_BOOTSTRAP_DESCRIPTIVE",
+          "direction_pass": false,
+          "ci_excludes_zero_in_expected_direction": false
+        }
+      },
+      "direction_pass_count": 1,
+      "strong_ci_pass_count": 0,
+      "risk_overlay_proxy_gate_passed": false
+    }
+  },
+  "gate_rule": "at least 7/9 expected directions and 3/9 session-block-bootstrap CIs exclude zero",
+  "positive_buy_factor_authorized": false,
+  "deployment_authorized": false,
+  "complete_trade_count": 0,
+  "limitations": [
+    "daily high touching limit does not establish an actual fill or queue priority",
+    "features are historical reconstructions rather than original forward archives",
+    "risk groups use trailing distributional quintiles and are not deployment thresholds",
+    "session-level aggregation avoids overweighting broad limit-up days but loses candidate detail",
+    "complete-trade profitability remains untested"
+  ],
+  "generated_at": "2026-09-13T23:40:59.303991+08:00",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v3\\full_pool_eod_features.csv": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831_v3\\outcomes_LABEL_ONLY.csv": "fcf810543af341ab2aab1cc08e86a1aa06f12da9108f72bbd7f0ec6f9d550f87",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9"
+  },
+  "evaluation_rows_sha256": "1c737ae3a9855ad662d237c6417432f89468f8d77d44dabcad9d7dcc73a583e1"
+}

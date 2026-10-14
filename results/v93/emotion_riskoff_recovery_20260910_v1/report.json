@@ -1,0 +1,86 @@
+{
+  "version": "v93-riskoff-recovery-challenger-1",
+  "status": "RESEARCH_ONLY",
+  "scope": "only signal dates whose state is 大分歧 or 退潮",
+  "target": "next state is 启动/升温/加速/一致/修复 versus 大分歧/退潮",
+  "features": [
+    "limit_count",
+    "limit_change",
+    "seal_rate",
+    "failed_rate",
+    "max_board",
+    "height_change",
+    "middle_density",
+    "ladder_gap_count",
+    "unique_space",
+    "one_word_share",
+    "breadth_height_divergence",
+    "promotion_overall",
+    "promotion_mid",
+    "yesterday_premium",
+    "previous_limit_tail_loss",
+    "down_limit_count",
+    "breadth_health",
+    "relay_appetite",
+    "ladder_health",
+    "loss_effect_health",
+    "regime_fragility",
+    "emotion_quality_score"
+  ],
+  "split": {
+    "method": "chronological_70_30",
+    "train_n": 219,
+    "blind_n": 95,
+    "train_end": "2025-10-29",
+    "blind_start": "2025-10-31"
+  },
+  "blind": {
+    "challenger": {
+      "n": 95,
+      "positive_rate": 0.4631578947368421,
+      "auc": 0.6390374331550802,
+      "brier": 0.23775699978920875,
+      "log_loss": 0.6703684945543558,
+      "accuracy_at_0_5": 0.6,
+      "precision_at_0_5": 0.5833333333333334,
+      "recall_at_0_5": 0.4772727272727273,
+      "tp": 21,
+      "fp": 15,
+      "fn": 23,
+      "tn": 36
+    },
+    "train_prior_baseline": {
+      "n": 95,
+      "positive_rate": 0.4631578947368421,
+      "auc": 0.5,
+      "brier": 0.24869394979912404,
+      "log_loss": 0.6905330432004109,
+      "accuracy_at_0_5": 0.5368421052631579,
+      "precision_at_0_5": null,
+      "recall_at_0_5": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 44,
+      "tn": 51
+    }
+  },
+  "promotion_gate_passed": true,
+  "promotion_rule": "blind Brier and log loss improve train-prior baseline; AUC>=0.55",
+  "latest_research_prediction": {
+    "signal_date": "2026-09-09",
+    "current_state": "大分歧",
+    "recovery_probability": 0.5268459166579498,
+    "continued_risk_off_probability": 0.4731540833420502,
+    "top_class": "RECOVERY",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "generated_at": "2026-09-10T03:32:55.193156+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "973a62462a91b38859748f8d7b0f9a1374990cc3337d94766740f0cf5db6a120"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v93\\emotion_riskoff_recovery_20260910_v1\\blind_predictions.csv",
+    "sha256": "64ff9b2d5e4fb6a82acf7af0ee18a72c83c1bfa9f4714449114130ee6410d0b5"
+  }
+}

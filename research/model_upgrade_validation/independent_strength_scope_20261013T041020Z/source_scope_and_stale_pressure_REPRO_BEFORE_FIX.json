@@ -1,0 +1,311 @@
+{
+  "formed_at": "2026-10-13T04:13:02.987930+00:00",
+  "kind": "SYNTHETIC_LOGICAL_REPRO_NOT_MARKET_OUTCOME",
+  "valid_pressure_group": true,
+  "before_fix_current_independent_supported": true,
+  "source_theme_full_complete": false,
+  "pressure_end_date": "2026-10-08",
+  "review_window": [
+    "2026-10-09",
+    "2026-10-12"
+  ],
+  "old_projection": {
+    "code": "002242",
+    "name": "九阳股份",
+    "boards": 6,
+    "signal_date": "2026-10-12",
+    "scope_id": "fixture",
+    "track": "DIAGNOSTIC",
+    "daily_timeline": [
+      {
+        "signal_date": "2026-10-09",
+        "boards": 5,
+        "available_at": "2026-10-09T16:00:00+08:00",
+        "decision_at": "2026-10-09T16:01:00+08:00",
+        "actual_one_word_daily": 0,
+        "source_pool": {}
+      },
+      {
+        "signal_date": "2026-10-12",
+        "boards": 6,
+        "available_at": "2026-10-12T16:00:00+08:00",
+        "decision_at": "2026-10-12T16:01:00+08:00",
+        "actual_one_word_daily": 0,
+        "source_pool": {}
+      }
+    ],
+    "missing_official_sessions": [],
+    "multi_day_connection_complete": true,
+    "checks": {
+      "launch_and_continuation": {
+        "facts": {
+          "own_start": "2026-10-08",
+          "first_observed_pool_date": "2026-10-09",
+          "first_pool_observation_is_launch": false,
+          "anchor_code": "600241",
+          "anchor_stage": null,
+          "launch_or_continuation_cause_confirmed": false,
+          "narrative_evidence": [
+            {
+              "source_id": "fixture",
+              "event_id": null,
+              "theme_id": null,
+              "excerpt": "九阳股份晋级六连板",
+              "url": null,
+              "published_upper": null,
+              "available_at": null,
+              "usable_at_original_cutoff": null
+            }
+          ],
+          "specific_topic_narratives": [],
+          "stock_mention_or_board_count_is_launch_cause": false
+        },
+        "gates": {
+          "source_bound_actual_start": true,
+          "consecutive_same_scope_stock_observations": true,
+          "board_continuation_observed": true,
+          "checked_specific_topic_narrative_present": false
+        },
+        "supported_allowed": false,
+        "missing_gates": [
+          "checked_specific_topic_narrative_present"
+        ],
+        "supporting_refs": [
+          "source_start",
+          "daily_timeline"
+        ],
+        "counterevidence_refs": [],
+        "counterevidence_details": {}
+      },
+      "theme_transition": {
+        "facts": {
+          "market_stage_history": [],
+          "market_stage_changes": [],
+          "market_theme_switch": {
+            "state": "UNKNOWN",
+            "reason": "NO_BOUND_DAILY_MARKET_MAINLINE_HISTORY"
+          },
+          "stock_theme_membership_history": [
+            {
+              "date": "2026-10-09",
+              "theme_id": "topic",
+              "comparison_scope_id": "fixture",
+              "relative_return_ex_self_pp": 11.0,
+              "source": {}
+            },
+            {
+              "date": "2026-10-12",
+              "theme_id": "topic",
+              "comparison_scope_id": "fixture",
+              "relative_return_ex_self_pp": 11.0,
+              "source": {}
+            }
+          ],
+          "stock_theme_membership_changes": [],
+          "stock_narrative_switch": {
+            "state": "UNKNOWN",
+            "reason": "NARRATIVE_OCCURRENCE_DOES_NOT_VERIFY_PREVIOUS_NARRATIVE_EXIT"
+          },
+          "new_narrative_presence_is_switch": false,
+          "support_scope": "Observed specific-theme membership change only; market and narrative switches remain separate"
+        },
+        "gates": {
+          "consecutive_verified_specific_theme_memberships": true,
+          "observed_theme_membership_change": false
+        },
+        "supported_allowed": false,
+        "missing_gates": [
+          "observed_theme_membership_change"
+        ],
+        "supporting_refs": [
+          "daily_theme_memberships"
+        ],
+        "counterevidence_refs": [
+          "same_specific_theme_membership_in_observed_window"
+        ],
+        "counterevidence_details": {
+          "same_specific_theme_membership_in_observed_window": {
+            "target_claim": "SPECIFIC_THEME_MEMBERSHIP_CHANGED_IN_OBSERVED_WINDOW",
+            "window_start": "2026-10-09",
+            "window_end": "2026-10-12",
+            "source_refs": [
+              "daily_theme_memberships"
+            ],
+            "does_not_disprove": [
+              "MARKET_MAINLINE_CHANGE",
+              "STOCK_NARRATIVE_CHANGE"
+            ]
+          }
+        }
+      },
+      "independent_strength": {
+        "facts": {
+          "own_return_pct": 10.0,
+          "theme_peer_mean_return_pct_ex_self": -1.0,
+          "relative_return_ex_self_pp": 11.0,
+          "pressure_observations": {
+            "event_id": "old_fixture_event",
+            "started_at": "2026-10-08T09:45:00+08:00",
+            "ended_at": "2026-10-08T10:10:00+08:00",
+            "pre_cycle_id": "old_cycle",
+            "post_cycle_id": "old_cycle",
+            "pre_event_observation": {
+              "code": "002242",
+              "observed_at": "2026-10-08T09:35:00+08:00",
+              "state": "CORE",
+              "relative_rank": 1,
+              "price": 10
+            },
+            "post_event_observation": {
+              "code": "002242",
+              "observed_at": "2026-10-08T10:15:00+08:00",
+              "state": "CORE",
+              "relative_rank": 1,
+              "price": 11
+            },
+            "post_competition": {
+              "complete_within_scope": true,
+              "peer_codes": [
+                "600241"
+              ],
+              "prior_at": "2026-10-08T09:35:00+08:00",
+              "current_at": "2026-10-08T10:15:00+08:00",
+              "prior": {
+                "002242": "CORE",
+                "600241": "COMPETING"
+              },
+              "current": {
+                "002242": "STRONG",
+                "600241": "FAILED"
+              }
+            }
+          },
+          "meaning": "Independent-strength candidate under observed pressure, never verified autonomous funding or core identity",
+          "identity_confirmed": false,
+          "fund_causality_confirmed": false
+        },
+        "gates": {
+          "consecutive_comparable_theme_relative_strength": true,
+          "theme_weakness_excluding_self_with_own_strength": true,
+          "actual_pressure_before_after_core_retained": true,
+          "complete_post_event_competition": true
+        },
+        "supported_allowed": true,
+        "missing_gates": [],
+        "supporting_refs": [
+          "daily_theme_memberships",
+          "theme_ex_self_returns",
+          "pressure_before_after"
+        ],
+        "counterevidence_refs": [],
+        "counterevidence_details": {}
+      },
+      "absorption_and_competition": {
+        "facts": {
+          "actual_events": [
+            {
+              "state": "OPEN"
+            },
+            {
+              "state": "SEALED"
+            }
+          ],
+          "actual_open_minutes": null,
+          "actual_resealed": 1.0,
+          "competition": {
+            "peer_codes": [
+              "600241"
+            ]
+          },
+          "same_height_peers": [
+            "600241"
+          ],
+          "joint_promotion_joint_failure_and_position_competition_all_possible": true,
+          "single_volume_increase_confirms_absorption": false,
+          "causal_absorption_or_tradability_confirmed": false,
+          "support_scope": "Observed open/reseal and competition facts only; order-book causality and fills remain unknown"
+        },
+        "gates": {
+          "actual_complete_open_and_reseal_path": true,
+          "complete_same_observation_competition": true
+        },
+        "supported_allowed": true,
+        "missing_gates": [],
+        "supporting_refs": [
+          "actual_price_path",
+          "complete_competition"
+        ],
+        "counterevidence_refs": [],
+        "counterevidence_details": {}
+      }
+    },
+    "aesthetic_price_comparison": {
+      "version": "relay-aesthetic-context-1",
+      "candidate_id": "2026-10-12:002242",
+      "code": "002242",
+      "signal_date": "2026-10-12",
+      "name": null,
+      "boards": 6,
+      "actual_one_word_daily": 0,
+      "low_turnover_proxy_is_not_one_word_identity": true,
+      "price_path_state": "UNKNOWN_NO_QUALIFIED_INTRADAY_PRICE_PATH",
+      "price_path_facts": {
+        "interval_minutes": null,
+        "grid_complete": null,
+        "sampled_close_drop_observed": null,
+        "sampled_recovery_close_observed": null,
+        "after_touch_low_drawdown_pct": null,
+        "provider_bomb_count": null,
+        "first_last_reported_gap_minutes": null,
+        "first_last_gap_is_not_actual_open_duration": true,
+        "actual_reseal_verified": null,
+        "absorption_verified": false,
+        "within_bar_high_low_order": "UNKNOWN"
+      },
+      "current_survivor_comparison": {
+        "scope": "current",
+        "complete_comparison": false,
+        "state": "UNKNOWN",
+        "peer_codes": [],
+        "missing_peer_codes": [],
+        "relative_min_pp": null,
+        "relative_last_pp": null,
+        "positive_bar_share": null,
+        "active_displacement_or_core_identity_confirmed": false,
+        "reason": "NO_QUALIFIED_PEER_PATH_SOURCE",
+        "comparison_cohort": "CURRENT_CLOSING_SURVIVORS_ONLY"
+      },
+      "prior_rival_comparison": {
+        "scope": "prior",
+        "complete_comparison": false,
+        "state": "UNKNOWN",
+        "peer_codes": [],
+        "missing_peer_codes": [],
+        "relative_min_pp": null,
+        "relative_last_pp": null,
+        "positive_bar_share": null,
+        "active_displacement_or_core_identity_confirmed": false,
+        "reason": "NO_QUALIFIED_PEER_PATH_SOURCE",
+        "comparison_cohort": "PRIOR_DECLARED_RIVALS_WITH_CURRENT_OBSERVATIONS"
+      },
+      "review_questions": [],
+      "missing_evidence": [
+        "NO_QUALIFIED_SAMPLED_PATH",
+        "COMPLETE_ORIGINAL_RIVAL_COMPARISON_UNAVAILABLE",
+        "TICK_ORDER_BOOK_ABSORPTION_UNVERIFIED",
+        "EXECUTABLE_FILL_UNVERIFIED",
+        "THEME_CAUSALITY_AND_ROLE_IDENTITY_REQUIRE_SEPARATE_EVIDENCE"
+      ],
+      "sampled_source": null,
+      "peer_source": null,
+      "promotion_judgement": "NOT_CREATED_BY_DESCRIPTOR",
+      "trade_entry": "NOT_CREATED_BY_DESCRIPTOR",
+      "aesthetic_score_or_probability": null,
+      "automatic_leader_identity": false,
+      "availability_track": "Inherited from parent qualified role projection"
+    },
+    "role_identity_confirmed": false,
+    "fund_causality_confirmed": false,
+    "model_score_call_or_rank_included": false
+  }
+}

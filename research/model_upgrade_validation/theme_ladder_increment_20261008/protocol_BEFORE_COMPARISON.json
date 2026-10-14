@@ -1,0 +1,63 @@
+{
+  "research_id": "THEME_LADDER_INCREMENT_FROM_SAVED_INPUTS",
+  "registered_at": "2026-10-08T11:15:16Z",
+  "authorization": "本轮用户要求每次复盘和交流更新迭代，按可复核预测准确率择优，差模型应被淘汰；允许固定证据支持后的替换，禁止凭本日事后结果追调",
+  "hypothesis": "在原BASE之外显式表达同题材连板集中、首板扩散和多层梯队，可减少主线内晋级漏判；识别覆盖改善与预测效果分开验证",
+  "budget_minutes": 30,
+  "baseline": {
+    "model": "V278_PRESEPTEMBER_FROZEN_BASE_REUSED_NO_REFIT",
+    "relay_model_sha256": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7",
+    "fixed_protocol": "research/model_upgrade_validation/fixed_20261007T112017Z/protocol_BEFORE_EFFECTS.json",
+    "scores_and_predictions_immutable": true
+  },
+  "challengers": [
+    {
+      "id": "T1_THEME_LADDER",
+      "recipe": "同一训练成员及原BASE LogisticRegression C=0.25,max_iter=2500,random_state=271；中位数插补和标准化仅在训练集拟合；原29字段+以下3字段；不另调权/阈值",
+      "fields": [
+        "same_theme_relay_share",
+        "same_theme_first_board_share",
+        "same_theme_distinct_board_levels"
+      ],
+      "definitions": {
+        "same_theme_relay_share": "当期固定主板池中同语义题材2板以上成员数/当期全部2板以上成员数",
+        "same_theme_first_board_share": "当期固定主板池中同语义题材首板数/当期全部首板数",
+        "same_theme_distinct_board_levels": "同语义题材收盘封板成员的不同板位个数，首板纳入",
+        "family_membership": "供应商当前分类名称的预先声明语义族；原作者叙事另列，不自动等同事实业务/主动题材。电池族只匹配分类名称含电池，不匹配原因正文，不并储能/新能源，不硬编码股票名单",
+        "overlap": "一只股票有多个电池分类只计一次；跨族允许重叠且披露，不求和伪造全市场分母",
+        "missing": "未取得/过时/晚于截止的分类为未知；全候选保留；没有完整同口径题材输入时不能把计数当完整训练特征，禁止未知填0"
+      }
+    }
+  ],
+  "maximum_challengers": 1,
+  "metric_policy": {
+    "primary": "同一完整候选、同一日期、相同已成熟标签上的全候选晋级Accuracy",
+    "secondary": [
+      "Precision",
+      "完整正例Recall",
+      "F1",
+      "真实非一字top1",
+      "全登记覆盖率",
+      "分板位指标"
+    ],
+    "brier": "未校准不报校准概率Brier；若展示原分数损失须明确为内部原分数诊断",
+    "minimum_improvement_pp": 3,
+    "coverage_floor": 0.9,
+    "positive_recall_and_f1_must_not_decrease": true,
+    "uncertainty": "固定5交易日块、2000次、seed=20261008的配对重采样；下界>0；不凭当日/单一题材子集选择",
+    "deployment": "同时服从现有120日影子固定验收及最新显式授权；历史看过结果不能支持自动切换"
+  },
+  "data_boundary": {
+    "source": "仅本地既有档案；不重启真实题材时点专项或新增采集",
+    "old_historical_results_seen": true,
+    "backfill_current_categories_into_history": false,
+    "signal_observations": "只读信号日完整limit_up/failed_board及当期V295有效分类；档案和衍生结果实际形成时间不得晚于本独立截止",
+    "target_labels": "目标收盘后才读取，不改原预测/原来源/失败",
+    "training_gate": "须先具有同一题材定义和完整字段、训练标签先于评价信号日期的固定数据；缺合格训练输入则不拟合、不制造增益",
+    "old_theme_PIT_protocol_remains_stopped": true,
+    "oct8_original_BASE_cutoff": "2026-10-08T17:23:04.917365+08:00",
+    "oct8_new_context_may_not_change_original_BASE": true
+  },
+  "expected_improvement": "减少题材结构遗漏；预计晋级Accuracy可能提高，尚未证明，不将程序测试/补查条数当预测改善",
+  "end_condition": "本批完成已有数据可用性核对、最小自动题材梯队代码与必要验证；仅在训练门满足时做一次固定比较，否则明确0拟合及可恢复缺口；到30分钟结束，不换假设调参重跑"
+}

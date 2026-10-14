@@ -1,0 +1,39 @@
+{
+  "version": "v95-recovery-uncertainty-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "generated_at": "2026-09-10T03:37:23.586079+08:00",
+  "n": 95,
+  "repetitions": 2000,
+  "block_length": 5,
+  "point_estimates": {
+    "brier_improvement_vs_prior": 0.010936950009915292,
+    "log_loss_improvement_vs_prior": 0.020164548646055103,
+    "auc": 0.6390374331550802
+  },
+  "ci95": {
+    "brier_improvement_vs_prior": [
+      -0.01266486713244316,
+      0.03571724167257956
+    ],
+    "log_loss_improvement_vs_prior": [
+      -0.029241283162686666,
+      0.07274085767545382
+    ],
+    "auc": [
+      0.5273949038187874,
+      0.743044693037793
+    ]
+  },
+  "bootstrap_probability_brier_improves": 0.803,
+  "bootstrap_probability_log_loss_impro": 0.7715,
+  "stable_gate_passed": false,
+  "stable_gate_rule": "lower 95% bounds: Brier gain>0, log-loss gain>0, AUC>0.5",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v93\\emotion_riskoff_recovery_20260910_v1\\blind_predictions.csv",
+    "sha256": "64ff9b2d5e4fb6a82acf7af0ee18a72c83c1bfa9f4714449114130ee6410d0b5"
+  },
+  "limitations": [
+    "block bootstrap is descriptive for serial dependence",
+    "forward validation remains required even if the historical stability gate passes"
+  ]
+}

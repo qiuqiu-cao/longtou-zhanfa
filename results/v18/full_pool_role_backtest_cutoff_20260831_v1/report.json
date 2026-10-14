@@ -1,0 +1,402 @@
+{
+  "status": "EXPLORATORY_ONLY",
+  "role_definitions": {
+    "emotion_anchor": "highest observed board; descriptive emotion reference only",
+    "leader_potential": "next-session closing-limit promotion proxy",
+    "current_buy_opportunity": "non-one-price next-session touch plus positive close-mark proxy"
+  },
+  "windows": [
+    {
+      "start": "2025-01-02",
+      "end_exclusive": "2025-04-01",
+      "training_rows": 13925,
+      "validation_rows": 3115,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 57,
+          "known_target": 57,
+          "positive": 26,
+          "positive_rate": 0.45614035087719296,
+          "auc": 0.49193548387096775,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 57
+        },
+        "leader_potential": {
+          "selected_sessions": 57,
+          "known_target": 57,
+          "positive": 39,
+          "positive_rate": 0.6842105263157895,
+          "auc": 0.5726495726495726,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 57
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 57,
+          "known_target": 20,
+          "positive": 6,
+          "positive_rate": 0.3,
+          "auc": 0.35714285714285715,
+          "first_board_selections": 16,
+          "consecutive_board_selections": 41
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 57,
+          "known_target": 57,
+          "positive": 17,
+          "positive_rate": 0.2982456140350877,
+          "auc": 0.5279411764705882,
+          "first_board_selections": 16,
+          "consecutive_board_selections": 41
+        }
+      },
+      "overlap": {
+        "anchor_leader": 17,
+        "leader_opportunity": 15,
+        "anchor_opportunity": 20
+      }
+    },
+    {
+      "start": "2025-04-01",
+      "end_exclusive": "2025-07-01",
+      "training_rows": 17068,
+      "validation_rows": 3056,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 27,
+          "positive_rate": 0.45,
+          "auc": 0.3855218855218855,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 60
+        },
+        "leader_potential": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 42,
+          "positive_rate": 0.7,
+          "auc": 0.35714285714285715,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 60
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 60,
+          "known_target": 24,
+          "positive": 6,
+          "positive_rate": 0.25,
+          "auc": 0.5,
+          "first_board_selections": 19,
+          "consecutive_board_selections": 41
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 15,
+          "positive_rate": 0.25,
+          "auc": 0.5274074074074074,
+          "first_board_selections": 19,
+          "consecutive_board_selections": 41
+        }
+      },
+      "overlap": {
+        "anchor_leader": 19,
+        "leader_opportunity": 14,
+        "anchor_opportunity": 17
+      }
+    },
+    {
+      "start": "2025-07-01",
+      "end_exclusive": "2025-10-01",
+      "training_rows": 20072,
+      "validation_rows": 3355,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 66,
+          "known_target": 66,
+          "positive": 28,
+          "positive_rate": 0.42424242424242425,
+          "auc": 0.3660714285714286,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 66
+        },
+        "leader_potential": {
+          "selected_sessions": 66,
+          "known_target": 66,
+          "positive": 33,
+          "positive_rate": 0.5,
+          "auc": 0.4196510560146924,
+          "first_board_selections": 3,
+          "consecutive_board_selections": 63
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 66,
+          "known_target": 26,
+          "positive": 11,
+          "positive_rate": 0.4230769230769231,
+          "auc": 0.6484848484848484,
+          "first_board_selections": 28,
+          "consecutive_board_selections": 38
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 66,
+          "known_target": 66,
+          "positive": 20,
+          "positive_rate": 0.30303030303030304,
+          "auc": 0.4880434782608696,
+          "first_board_selections": 28,
+          "consecutive_board_selections": 38
+        }
+      },
+      "overlap": {
+        "anchor_leader": 19,
+        "leader_opportunity": 10,
+        "anchor_opportunity": 12
+      }
+    },
+    {
+      "start": "2025-10-01",
+      "end_exclusive": "2026-01-01",
+      "training_rows": 23449,
+      "validation_rows": 3018,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 31,
+          "positive_rate": 0.5166666666666667,
+          "auc": 0.45494994438264735,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 60
+        },
+        "leader_potential": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 41,
+          "positive_rate": 0.6833333333333333,
+          "auc": 0.36585365853658536,
+          "first_board_selections": 2,
+          "consecutive_board_selections": 58
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 60,
+          "known_target": 23,
+          "positive": 15,
+          "positive_rate": 0.6521739130434783,
+          "auc": 0.5,
+          "first_board_selections": 17,
+          "consecutive_board_selections": 43
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 15,
+          "positive_rate": 0.25,
+          "auc": 0.5599999999999999,
+          "first_board_selections": 17,
+          "consecutive_board_selections": 43
+        }
+      },
+      "overlap": {
+        "anchor_leader": 22,
+        "leader_opportunity": 12,
+        "anchor_opportunity": 12
+      }
+    },
+    {
+      "start": "2026-01-01",
+      "end_exclusive": "2026-04-01",
+      "training_rows": 26457,
+      "validation_rows": 3148,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 56,
+          "known_target": 56,
+          "positive": 22,
+          "positive_rate": 0.39285714285714285,
+          "auc": 0.4458556149732621,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 56
+        },
+        "leader_potential": {
+          "selected_sessions": 56,
+          "known_target": 56,
+          "positive": 33,
+          "positive_rate": 0.5892857142857143,
+          "auc": 0.549407114624506,
+          "first_board_selections": 6,
+          "consecutive_board_selections": 50
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 56,
+          "known_target": 19,
+          "positive": 8,
+          "positive_rate": 0.42105263157894735,
+          "auc": 0.14772727272727273,
+          "first_board_selections": 14,
+          "consecutive_board_selections": 42
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 56,
+          "known_target": 56,
+          "positive": 12,
+          "positive_rate": 0.21428571428571427,
+          "auc": 0.44128787878787873,
+          "first_board_selections": 14,
+          "consecutive_board_selections": 42
+        }
+      },
+      "overlap": {
+        "anchor_leader": 16,
+        "leader_opportunity": 11,
+        "anchor_opportunity": 15
+      }
+    },
+    {
+      "start": "2026-04-01",
+      "end_exclusive": "2026-07-01",
+      "training_rows": 29599,
+      "validation_rows": 4109,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 22,
+          "positive_rate": 0.36666666666666664,
+          "auc": 0.5592105263157896,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 60
+        },
+        "leader_potential": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 40,
+          "positive_rate": 0.6666666666666666,
+          "auc": 0.4475,
+          "first_board_selections": 8,
+          "consecutive_board_selections": 52
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 60,
+          "known_target": 26,
+          "positive": 9,
+          "positive_rate": 0.34615384615384615,
+          "auc": 0.5686274509803921,
+          "first_board_selections": 17,
+          "consecutive_board_selections": 43
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 60,
+          "known_target": 60,
+          "positive": 21,
+          "positive_rate": 0.35,
+          "auc": 0.5128205128205128,
+          "first_board_selections": 17,
+          "consecutive_board_selections": 43
+        }
+      },
+      "overlap": {
+        "anchor_leader": 15,
+        "leader_opportunity": 9,
+        "anchor_opportunity": 13
+      }
+    },
+    {
+      "start": "2026-07-01",
+      "end_exclusive": "2026-09-01",
+      "training_rows": 33605,
+      "validation_rows": 2866,
+      "status": "OK",
+      "roles": {
+        "emotion_anchor": {
+          "selected_sessions": 44,
+          "known_target": 42,
+          "positive": 19,
+          "positive_rate": 0.4523809523809524,
+          "auc": 0.551487414187643,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 44
+        },
+        "leader_potential": {
+          "selected_sessions": 44,
+          "known_target": 42,
+          "positive": 25,
+          "positive_rate": 0.5952380952380952,
+          "auc": 0.6447058823529411,
+          "first_board_selections": 9,
+          "consecutive_board_selections": 35
+        },
+        "current_buy_opportunity": {
+          "selected_sessions": 44,
+          "known_target": 9,
+          "positive": 6,
+          "positive_rate": 0.6666666666666666,
+          "auc": 0.7777777777777779,
+          "first_board_selections": 13,
+          "consecutive_board_selections": 31
+        },
+        "opportunity_selection_on_leader_target": {
+          "selected_sessions": 44,
+          "known_target": 42,
+          "positive": 6,
+          "positive_rate": 0.14285714285714285,
+          "auc": 0.5370370370370371,
+          "first_board_selections": 13,
+          "consecutive_board_selections": 31
+        }
+      },
+      "overlap": {
+        "anchor_leader": 9,
+        "leader_opportunity": 8,
+        "anchor_opportunity": 12
+      }
+    }
+  ],
+  "aggregate_roles": {
+    "emotion_anchor": {
+      "selected_sessions": 403,
+      "known_target": 401,
+      "positive": 175,
+      "positive_rate": 0.43640897755610975,
+      "auc": 0.4784197218710493,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 403
+    },
+    "leader_potential": {
+      "selected_sessions": 403,
+      "known_target": 401,
+      "positive": 253,
+      "positive_rate": 0.6309226932668329,
+      "auc": 0.481786133960047,
+      "first_board_selections": 28,
+      "consecutive_board_selections": 375
+    },
+    "current_buy_opportunity": {
+      "selected_sessions": 403,
+      "known_target": 147,
+      "positive": 61,
+      "positive_rate": 0.41496598639455784,
+      "auc": 0.5148684712161647,
+      "first_board_selections": 124,
+      "consecutive_board_selections": 279
+    }
+  },
+  "deployment_authorized": false,
+  "complete_trade_count": 0,
+  "limitations": [
+    "role targets are daily-bar proxies, not fills or complete-trade probabilities",
+    "current historical candidate universe is not proven complete",
+    "auction, Level-2, specific theme and broker execution evidence are absent",
+    "emotion anchor is descriptive and not a buy signal"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v2\\full_pool_eod_features.csv": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831_v3\\outcomes_LABEL_ONLY.csv": "fcf810543af341ab2aab1cc08e86a1aa06f12da9108f72bbd7f0ec6f9d550f87",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_role_backtest_v18.py": "ca8b11fa1a73647710123bcbc3fa6624cef34991fb3d6da697f895d230cb4430"
+  }
+}

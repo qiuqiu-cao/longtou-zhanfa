@@ -1,0 +1,80 @@
+{
+  "version": "regime-theme-g1-fixed-1",
+  "formed_at": "2026-10-08T18:37:29.213780+00:00",
+  "hypothesis": "完整当日题材结构孤立筛选可改善真实非一字排名首选收盘晋级率；效果待真实前向验证",
+  "arms": [
+    "BASE",
+    "G1"
+  ],
+  "scope": "same frozen model, same full signal-day relay candidates and exact official next-session labels",
+  "rules": {
+    "isolated_max_sealed_members_including_self": 2,
+    "all_eligible_groups_required": true,
+    "parent_support_overrides_small_child": true,
+    "unknown_keep": true,
+    "risk_ratio": "unique failed stocks / unique closing sealed stocks",
+    "risk_strictly_greater_than": 0.4,
+    "ranking": "raw_score DESC, code ASC",
+    "list_size": 5,
+    "industry_proxy_separate": true,
+    "name_symbols_excluded": true
+  },
+  "model_binding": {
+    "manifest_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\manifest.json",
+    "manifest_sha256": "d857b632d895a89c7b24cf20e79fb1e3776f5e0bd96c718a918b2a3e4e73d19d",
+    "model_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\model.joblib",
+    "model_sha256": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7"
+  },
+  "theme_policy": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\mainline_analysis_20261008T122231Z\\policy_schema_corrected.json",
+    "sha256": "c747a82b0cb8ad5019b37a8aab5413476e61d7298995cec08ec9f5a7a6ec0690"
+  },
+  "validation": {
+    "official_signal_days": 120,
+    "min_complete_paired_days": 60,
+    "min_effective_coverage": 0.9,
+    "min_primary_improvement": 0.03,
+    "block_days": 5,
+    "bootstrap_samples": 2000,
+    "seed": 20261007,
+    "tails": [
+      0.00625,
+      0.99375
+    ],
+    "segments": [
+      40,
+      40,
+      40
+    ],
+    "positive_first_coverage_not_down": true,
+    "observation_positive_capture_not_down": true,
+    "all_original_calls_scores_unchanged": true
+  },
+  "window": "first eligible signal with signal cutoff and actual registration AFTER protocol; all subsequent official sessions retained, never retro-register Oct8",
+  "historical_replay_is_forward": false,
+  "production_effect": "shadow only; apply only after fixed source-bound review passes; failure retains BASE; no retuning",
+  "model_change_policy": "REFUSE automatic migration; retain original study and require separate protocol",
+  "calendar_limit": "official calendar currently ends 2026-12-31; extend with official sources before scoring uncovered sessions, do not guess 2027",
+  "numerical_refits": 0,
+  "source_preimages": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\current_model_diagnostics.py": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\regime_theme_g1_20261008T183729Z\\source_preimages\\current_model_diagnostics.py",
+      "sha256": "57775e5efb1b5b791ca0fd15fa406a8e97a6ef66d3d72da0ccdbdd7713d9809c"
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\daily_research_template_v298.py": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\regime_theme_g1_20261008T183729Z\\source_preimages\\daily_research_template_v298.py",
+      "sha256": "589dec91c7c8b7e8040e964dc9c0ac1612dc82e7cc45cde7f4175a46bed91835"
+    },
+    "D:\\Documents\\ChatGPT\\龙头战法\\hypothesis_bound_daily_runner_v298.py": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\regime_theme_g1_20261008T183729Z\\source_preimages\\hypothesis_bound_daily_runner_v298.py",
+      "sha256": "46c82eff2a93707f85b8ae0efd7ca471feec393fab9120d8b5dab89502f025db"
+    }
+  },
+  "protected_originals": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-08_fcf1205edfbc2269.json": "2987f19f09f8e33783b88d2c856a00ba965f9e063631ca57d69d0b5edb06334b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\settlement_ledger.jsonl": "26cb8dc3419ec151563528045068a4d987fc87b5535544b5ad78cc92676e1c18",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\protocol_BEFORE_EFFECTS.json": "bc10758cad773a130358a069d321dba9fc632ae87135d375b8fd6c24f19eccf6"
+  },
+  "status": "BEFORE_G1_EFFECT_COMPARISON"
+}

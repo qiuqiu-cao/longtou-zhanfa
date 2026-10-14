@@ -1,0 +1,52 @@
+{
+  "formed_at": "2026-10-14T12:33:24.244434+00:00",
+  "effective_at": "2026-10-14T12:22:29+00:00",
+  "required_sequence": [
+    "完整当期候选及首板/炸板事实",
+    "定向查已知作者当前股吧正文和相关讨论",
+    "完整逐股题材预读卡和具体未覆盖范围",
+    "公告/事件/行情核验及独立主线和逐股判断",
+    "作者留档后展示模型分数和冲突",
+    "实际时点追加确认并到期同池结算"
+  ],
+  "author_priority": [
+    "延边刺客",
+    "毛竹下的橙子",
+    "林曜01",
+    "凯域竟知"
+  ],
+  "author_quality_not_certified": true,
+  "source_scope": "优先复用已保存来源，每批通常2—3篇相关原文；用户提示跨行业/补涨线索定向补核，不扩全论坛",
+  "review_items": [
+    "实际交易叙事与行业身份",
+    "高位情绪锚—低位补涨及名称/同音/地域关联",
+    "同板位和同题材竞争，共同晋级/共同失败/分化",
+    "作者支持与反证及不同观点",
+    "消息真实性、公司业务和开盘取消条件"
+  ],
+  "source_rules": [
+    "作者正文/作者回复/其他评论分开",
+    "原文与搜索摘要分开",
+    "页面发布时间/评论时间/真实取得时间分开",
+    "旧文只作背景，不当信号日活跃认证",
+    "材料未覆盖和作者不点名不是没有催化，也不自动转正",
+    "来源失败按已有有界请求记录缺口，不循环重试或因未知跳过股票"
+  ],
+  "execution": {
+    "entry": "stock_forum_preread.py",
+    "use_before": "leader_role_review.py prepare / stock_catalyst_context.py prepare以及独立个股结论",
+    "context_only": true,
+    "no_new_model_scores": true,
+    "no_old_forecast_rewrite": true
+  },
+  "current_run": {
+    "model_outputs_already_seen": true,
+    "no_blind_or_prior_review_claim": true,
+    "complete_pool": 15,
+    "signal_day_coverage": 0,
+    "background_coverage": 4,
+    "uncovered": 11,
+    "new_fits": 0,
+    "new_formal_labels": 0
+  }
+}

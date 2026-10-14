@@ -1,0 +1,248 @@
+{
+  "version": "v180-breadth-quality-path-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "session_rows": 248,
+  "split_date": "2025-05-26",
+  "path_contract": {
+    "b1_b2_b3_are_market_sessions_not_candidate_trade_returns": true,
+    "three_consecutive_verified_future_sessions_required": true,
+    "signal_known_at_close": true
+  },
+  "state_summaries": {
+    "FRAGILE_EXPANSION": {
+      "sessions": 61,
+      "adverse_b1_rate": 0.5573770491803278,
+      "adverse_any_b1_b2_rate": 0.7704918032786885,
+      "adverse_any_b1_b3_rate": 0.9016393442622951,
+      "no_adverse_b1_b3_rate": 0.09836065573770492,
+      "mean_median_premium_b1_b3": 0.011486231718328865,
+      "mean_middle_promotion_b1_b3": 0.4057365271365877,
+      "max_down_limits_b1_b3_mean": 57.75409836065574
+    },
+    "CLEAN_EXPANSION": {
+      "sessions": 187,
+      "adverse_b1_rate": 0.39037433155080214,
+      "adverse_any_b1_b2_rate": 0.6310160427807486,
+      "adverse_any_b1_b3_rate": 0.7967914438502673,
+      "no_adverse_b1_b3_rate": 0.20320855614973263,
+      "mean_median_premium_b1_b3": 0.010457704397493342,
+      "mean_middle_promotion_b1_b3": 0.4288849408169762,
+      "max_down_limits_b1_b3_mean": 55.00534759358289
+    }
+  },
+  "chronological_split": {
+    "discovery_first_70pct_dates": {
+      "FRAGILE_EXPANSION": {
+        "sessions": 39,
+        "adverse_b1_rate": 0.5128205128205128,
+        "adverse_any_b1_b2_rate": 0.7435897435897436,
+        "adverse_any_b1_b3_rate": 0.8717948717948718,
+        "no_adverse_b1_b3_rate": 0.1282051282051282,
+        "mean_median_premium_b1_b3": 0.010673900637620498,
+        "mean_middle_promotion_b1_b3": 0.41941186563131255,
+        "max_down_limits_b1_b3_mean": 83.76923076923077
+      },
+      "CLEAN_EXPANSION": {
+        "sessions": 134,
+        "adverse_b1_rate": 0.41044776119402987,
+        "adverse_any_b1_b2_rate": 0.6417910447761194,
+        "adverse_any_b1_b3_rate": 0.8059701492537313,
+        "no_adverse_b1_b3_rate": 0.19402985074626866,
+        "mean_median_premium_b1_b3": 0.0095977090632214,
+        "mean_middle_promotion_b1_b3": 0.4397446640750997,
+        "max_down_limits_b1_b3_mean": 71.85074626865672
+      }
+    },
+    "validation_last_30pct_dates": {
+      "FRAGILE_EXPANSION": {
+        "sessions": 22,
+        "adverse_b1_rate": 0.6363636363636364,
+        "adverse_any_b1_b2_rate": 0.8181818181818182,
+        "adverse_any_b1_b3_rate": 0.9545454545454546,
+        "no_adverse_b1_b3_rate": 0.045454545454545456,
+        "mean_median_premium_b1_b3": 0.012926273179584615,
+        "mean_middle_promotion_b1_b3": 0.381493881623212,
+        "max_down_limits_b1_b3_mean": 11.636363636363637
+      },
+      "CLEAN_EXPANSION": {
+        "sessions": 53,
+        "adverse_b1_rate": 0.33962264150943394,
+        "adverse_any_b1_b2_rate": 0.6037735849056604,
+        "adverse_any_b1_b3_rate": 0.7735849056603774,
+        "no_adverse_b1_b3_rate": 0.22641509433962265,
+        "mean_median_premium_b1_b3": 0.012632032223765802,
+        "mean_middle_promotion_b1_b3": 0.4014282820134188,
+        "max_down_limits_b1_b3_mean": 12.415094339622641
+      }
+    }
+  },
+  "discovery_comparisons": {
+    "adverse_b1": {
+      "metric": "adverse_b1",
+      "estimate_fragile_minus_clean": 0.1023727516264829,
+      "ci95": [
+        -0.07388538078836583,
+        0.2870503252965941
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    },
+    "adverse_any_b1_b2": {
+      "metric": "adverse_any_b1_b2",
+      "estimate_fragile_minus_clean": 0.10179869881362424,
+      "ci95": [
+        -0.05300420972062758,
+        0.2533486414083429
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    },
+    "adverse_any_b1_b3": {
+      "metric": "adverse_any_b1_b3",
+      "estimate_fragile_minus_clean": 0.06582472254114047,
+      "ci95": [
+        -0.06008419441255264,
+        0.186591083046307
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    },
+    "no_adverse_b1_b3": {
+      "metric": "no_adverse_b1_b3",
+      "estimate_fragile_minus_clean": -0.06582472254114047,
+      "ci95": [
+        -0.18331419823957137,
+        0.060084194412552624
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    },
+    "mean_median_premium_b1_b3": {
+      "metric": "mean_median_premium_b1_b3",
+      "estimate_fragile_minus_clean": 0.0010761915743990984,
+      "ci95": [
+        -0.004624275991372275,
+        0.007012551606251297
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    },
+    "mean_middle_promotion_b1_b3": {
+      "metric": "mean_middle_promotion_b1_b3",
+      "estimate_fragile_minus_clean": -0.02033279844378716,
+      "ci95": [
+        -0.05864724970869836,
+        0.01816974152174158
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    },
+    "max_down_limits_b1_b3": {
+      "metric": "max_down_limits_b1_b3",
+      "estimate_fragile_minus_clean": 11.918484500574053,
+      "ci95": [
+        -85.81682931496364,
+        149.73358687332572
+      ],
+      "fragile_sessions": 39,
+      "clean_sessions": 134
+    }
+  },
+  "validation_comparisons": {
+    "adverse_b1": {
+      "metric": "adverse_b1",
+      "estimate_fragile_minus_clean": 0.2967409948542024,
+      "ci95": [
+        0.05823327615780445,
+        0.5428816466552315
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    },
+    "adverse_any_b1_b2": {
+      "metric": "adverse_any_b1_b2",
+      "estimate_fragile_minus_clean": 0.21440823327615788,
+      "ci95": [
+        0.002572898799313883,
+        0.41089193825042913
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    },
+    "adverse_any_b1_b3": {
+      "metric": "adverse_any_b1_b3",
+      "estimate_fragile_minus_clean": 0.18096054888507718,
+      "ci95": [
+        0.03344768439108059,
+        0.3207547169811321
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    },
+    "no_adverse_b1_b3": {
+      "metric": "no_adverse_b1_b3",
+      "estimate_fragile_minus_clean": -0.18096054888507718,
+      "ci95": [
+        -0.3018867924528302,
+        -0.03344768439108062
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    },
+    "mean_median_premium_b1_b3": {
+      "metric": "mean_median_premium_b1_b3",
+      "estimate_fragile_minus_clean": 0.0002942409558188124,
+      "ci95": [
+        -0.005732600616230327,
+        0.006588045846304642
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    },
+    "mean_middle_promotion_b1_b3": {
+      "metric": "mean_middle_promotion_b1_b3",
+      "estimate_fragile_minus_clean": -0.019934400390206775,
+      "ci95": [
+        -0.06681950677124282,
+        0.026847539072761103
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    },
+    "max_down_limits_b1_b3": {
+      "metric": "max_down_limits_b1_b3",
+      "estimate_fragile_minus_clean": -0.7787307032590043,
+      "ci95": [
+        -5.186363636363636,
+        3.754352487135509
+      ],
+      "fragile_sessions": 22,
+      "clean_sessions": 53
+    }
+  },
+  "stable_adverse_path_horizons": {
+    "adverse_b1": false,
+    "adverse_any_b1_b2": false,
+    "adverse_any_b1_b3": false
+  },
+  "any_two_or_three_session_path_stable": false,
+  "governance": {
+    "two_to_three_session_probability_claim_allowed": false,
+    "historical_scenario_path_use_allowed": true,
+    "candidate_holding_period_inference_allowed": false,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "Breadth quality may describe a multi-session market risk path, but aggregate B+1/B+2/B+3 emotion outcomes cannot be converted into a candidate holding rule.",
+  "limitations": [
+    "aggregate provider pool completeness is not independently proven",
+    "dates have been inspected by earlier project research and are not a sealed blind set",
+    "overlapping three-session paths require future date-clustered confirmation",
+    "no candidate-level theme, fill, cost, or executable exit path"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "92b05b48180552102177a98e2dc668a6280853b4009ba1bf8a347f8b77a71d25"
+}

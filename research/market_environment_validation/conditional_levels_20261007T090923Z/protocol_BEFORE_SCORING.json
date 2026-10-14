@@ -1,0 +1,121 @@
+{
+  "artifact_kind": "PREDECLARED_FIXED_MARKET_POINT_FORECAST_COMPARISON",
+  "recorded_at": "2026-10-07T09:13:57.100230+00:00",
+  "batch_started_at": "2026-10-07T09:09:23+00:00",
+  "budget_minutes": 30,
+  "human_request": "通过以往的行情进行回测来精进判断；提高对行情的预测判断的准确性",
+  "hypothesis": "Supervised joint market-level prediction can reduce next-session previous-limit-pool median-feedback error versus a fixed empirical LEVEL baseline; adding exact-session changes may or may not add value.",
+  "novelty": "V272 already tested numeric quantile regression. This is a fixed rolling Ridge challenge on the official grid against V300 LEVEL median, not the first numeric regression and not a claim to beat the current production model.",
+  "primary_target": "yesterday_premium",
+  "secondary_targets": [
+    "sh_a_return_pct",
+    "sz_a_return_pct",
+    "limit_count",
+    "down_limit_count",
+    "failed_rate",
+    "max_board",
+    "relay_promotion_rate"
+  ],
+  "input_channels": [
+    "sh_a_return_pct",
+    "sz_a_return_pct",
+    "limit_count",
+    "down_limit_count",
+    "failed_rate",
+    "max_board",
+    "relay_promotion_rate",
+    "yesterday_premium"
+  ],
+  "baseline": "LEVEL: median of known target metric levels in last120 official dates<=signal; n>=60; same V300 median definition",
+  "challengers": {
+    "RIDGE_LEVEL": "Fixed Ridge alpha10 on8 current levels",
+    "RIDGE_LEVEL_DELTA": "same estimator on8 levels and8 exact-official-predecessor changes"
+  },
+  "estimator": {
+    "model": "sklearn Ridge",
+    "alpha": 10.0,
+    "fit_intercept": true,
+    "imputation": "training-only median with missing indicators; missing labels never imputed",
+    "scaling": "training-only StandardScaler",
+    "parameter_search": false,
+    "all_training_column_missing": "Drop that feature for that fit, record its name; no invented observed0; current missing values only imputed with learned training median"
+  },
+  "training": "last120 official target dates<=signal; features on exact prior official date, target on next official date; minimum60 finite target pairs and at least one observed level per feature row",
+  "current_missing": "all8 levels missing -> challenger unknown; otherwise training-only imputation recorded as statistical operation, not observed facts",
+  "features": "only archived8 observations; delta on full official grid so gaps remain unknown; no emotion_state, quality score, current theme or future outcome feature",
+  "physical_bounds": "V300 metric bounds; continuous points, no forced integer rounding",
+  "signal_dates": [
+    "2026-01-01",
+    "2026-09-30"
+  ],
+  "periods": {
+    "DEVELOPMENT_DIAGNOSTIC": [
+      "2026-01-01",
+      "2026-02-28"
+    ],
+    "EVALUATION_DIAGNOSTIC": [
+      "2026-03-01",
+      "2026-09-30"
+    ],
+    "ALL_DIAGNOSTIC": [
+      "2026-01-01",
+      "2026-09-30"
+    ]
+  },
+  "rolling_learning": "each date may only learn labels whose target has closed by that signal date; no later labels; rolling protocol fixed now",
+  "primary_metric": "paired mean absolute error on yesterday_premium, fraction units and percentage-point display",
+  "secondary_metrics": "per-channel MAE, RMSE, coverage; positive-vs-nonpositive Accuracy, balanced accuracy, Precision, complete-positive Recall and F1 only for two index returns and median feedback; >0 positive, <=0 nonpositive",
+  "reference_directions": "all-positive and all-nonpositive baselines on same dates; no market-wide combined Accuracy",
+  "Brier": "unavailable: point regression outputs are not calibrated probabilities",
+  "uncertainty": {
+    "paired_MAE_difference": "challenger minus LEVEL",
+    "draws": 2000,
+    "seed": 20261007,
+    "block_official_sessions": 5,
+    "primary_family_size": 2,
+    "tails": [
+      0.0125,
+      0.9875
+    ],
+    "missing_dates": "retained on official grid, never compacted before block sampling",
+    "secondary": "exploratory, not separate upgrade gates"
+  },
+  "candidate_gate": "Evaluation>=60 paired primary dates; lower primaryMAE and adjusted interval upper<0; no lower scoring coverage or primary direction accuracy; development primary MAE not worse. Even pass only justifies prospective confirmation, not core upgrade.",
+  "ending_condition": "one fixed run with both challengers, causality/source checks and report; stop without retuning, or30minutes at a complete recoverable node",
+  "expected_improvement": "test reduction in next-session factual-market forecast error, no promised percentage",
+  "history_already_inspected": true,
+  "pure_blind": false,
+  "historical_actual_availability_certified": false,
+  "provider_scope_exchange_certified": false,
+  "data_boundary": "V300 already source-checked retrospective observations; no historical theme reconstruction or new downloads; future Oct8 targets remain unknown; historical replay not forward",
+  "new_forward_samples": 0,
+  "production_model_changed": false,
+  "numeric_trials_this_batch": 1,
+  "max_challengers": 2,
+  "protected_paths": [
+    "data/v271/expectation_registry/2026-09-30_2c74dc406eef7dcf.json",
+    "hypothesis_bound_daily_runner_v298.py",
+    "research_indicator_pipeline.py",
+    "research/theme_same_height/protocol.json",
+    "research/theme_same_height/comparison_specification.json",
+    "market_interval_research_v300.py"
+  ],
+  "input_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\observations_DIAGNOSTIC.csv": "2d99fe941f1e06f3022041a1438752c607c94a26931bfb80596ff131eba77e2c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\observation_status.csv": "14e3dc982660334c9d6401c9b31b8ccc8271d566be0330de6bf56d484a61ee85",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\report.json": "1340cb12653c742fb6f43afa5c3d0b95ef980a1c94b5475b6d3f1234cca89015",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\protocol.json": "3357e38d856cae1ca03b95d2358b7397125721823833b1d48dc46e56edd7a171",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2"
+  },
+  "protected_sha256": {
+    "data/v271/expectation_registry/2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "hypothesis_bound_daily_runner_v298.py": "46c82eff2a93707f85b8ae0efd7ca471feec393fab9120d8b5dab89502f025db",
+    "research_indicator_pipeline.py": "aeda6ab57ad62edfda8d2ceaf502ebdc987410e4bfca4844f91b49c567614db1",
+    "research/theme_same_height/protocol.json": "47857a79776cd6f29027a0b2854409e30d06a1c71588a549dd70b0d9a99be68b",
+    "research/theme_same_height/comparison_specification.json": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066",
+    "market_interval_research_v300.py": "d628a18fea9277efe0db31d9ed1a1f905a3ca4ff7b9ba4b27462fd9295d27ea5"
+  },
+  "comparison_scope": "V300 fixed research point baseline; no direct paired claim versus V272 production ecology classifier or its different folds",
+  "direction_contract": "Zero-boundary positive/nonpositive tests differ from existing V272 ±0.05 quality/±0.3 index three-class targets; no pooled market accuracy",
+  "pre_scoring_clarification_at": "2026-10-07T09:16:42.011311+00:00"
+}

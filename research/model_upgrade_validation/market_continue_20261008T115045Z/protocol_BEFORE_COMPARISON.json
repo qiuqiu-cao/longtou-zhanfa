@@ -1,0 +1,79 @@
+{
+  "research_id": "M1_BALANCED_SUBSAMPLE",
+  "registered_at": "2026-10-08T11:54:51.041391+00:00",
+  "budget_minutes": 30,
+  "hypothesis": "Training-only balanced bootstrap class weights may recover CONTINUE recall without sacrificing full-date three-class accuracy or other class recall.",
+  "baseline": "Saved BASE predictions and original fold-specific training membership; no BASE refit",
+  "challengers": [
+    {
+      "id": "M1_BALANCED_SUBSAMPLE",
+      "only_change": "RandomForestClassifier.class_weight=None -> balanced_subsample",
+      "forest": {
+        "n_estimators": 160,
+        "max_depth": 5,
+        "min_samples_leaf": 15,
+        "max_features": 0.75,
+        "random_state": 274,
+        "n_jobs": 2,
+        "class_weight": "balanced_subsample"
+      }
+    }
+  ],
+  "maximum_challengers": 1,
+  "maximum_fold_fits": 3,
+  "fields": "Original ordered 46 market fields; unchanged",
+  "folds": [
+    {
+      "id": "2025H2",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "2026JanAug",
+      "start": "2026-01-01",
+      "end": "2026-08-31"
+    },
+    {
+      "id": "2026Sep",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "labels": "Original exact-next-official-session emotion quality delta: >0.05 IMPROVE, <-0.05 WORSEN, else CONTINUE; invalid/unknown retained",
+  "preprocessing": "Original training-only median, add_indicator=True, keep_empty_features=True; market sample_weight=ones",
+  "training_boundary": "Original identical members and labels; signal and target date strictly before fold start; original training digest must match before any fit",
+  "historical_evidence": "PREVIOUSLY_INSPECTED_HISTORICAL_DIAGNOSTIC_NOT_BLIND_NOT_FORWARD",
+  "primary": "Full same-date known-label three-class Accuracy with complete original official-grid coverage disclosed",
+  "secondary": [
+    "All three complete recalls",
+    "All three Precision/F1",
+    "macro_f1",
+    "coverage",
+    "confusion_matrix"
+  ],
+  "diagnostic_gate": "2026JanAug AND 2026Sep each: Accuracy +3pp; all complete recalls, macroF1 and scoring coverage not lower; CONTINUE recall strictly improves; label coverage >=90%. Missing class/label metrics cannot pass.",
+  "future_freeze": "Only if BOTH fixed later-fold gates pass, save the September estimator already fitted; zero extra fits. No production or shadow-arm replacement; prior 120-day gates still required.",
+  "rejected_policy": "If either later gate does not pass, mark REJECTED_FOR_FUTURE_USE; retain predictions, metrics, failures and protocol but save no deployable challenger.",
+  "brier": "No calibrated probabilities; calibrated Brier unavailable",
+  "stop": "Finish this one fixed comparison or 30-minute deadline; no retuning, retry or second hypothesis",
+  "protected_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\hypothesis_bound_daily_runner_v298.py": "46c82eff2a93707f85b8ae0efd7ca471feec393fab9120d8b5dab89502f025db",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_outcome_sources_v293.py": "2d7f8c05e50bae8d20c22c218337cd8e9d1c017d75dbfc7591e2dfa54d6b9c4e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_outcome_bridge_v293.py": "2503b7de56e3e4e304d4f396806d4a97c8b35f64cb3bc98a14c33f2345733b08",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\protocol.json": "47857a79776cd6f29027a0b2854409e30d06a1c71588a549dd70b0d9a99be68b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\comparison_specification.json": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066",
+    "D:\\Documents\\ChatGPT\\龙头战法\\market_direction_research.py": "a85fa98e1732d88b1d5d70e7c6dc91c3f816b511088c09293872b33ff0d742ba",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\protocol_BEFORE_EFFECTS.json": "bc10758cad773a130358a069d321dba9fc632ae87135d375b8fd6c24f19eccf6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\production_hold_20261007.json": "b56ba60afc01bc98336393597ef91b5b6f6481d89c00aeb0a5ef633fc1d51357",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\production_authorization_20261008.json": "2bcc3a19073d23812e65e5fbb68baf6c18715ad5a0c13d1ee145ba23b421f1c7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\market_history\\predictions.csv": "df39c2bc89b192bdb5672fddfe4bfc4b878d6d75a7bf93aa3afc39b6bb747d34",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\market_history\\report.json": "2b67faa70c814df0542e48fd68452d710ab65520cbe9395d876103c42cc5a14c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\market_history\\metrics.json": "34a2169e0f15b2fc23ead9b3aea163571da9f346d24a3f214b542e0bad4224b3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\market\\BASE\\model.joblib": "9632a0f4efcf0cff6dbde56cfd996fe2337170cc5bea965f04e0032d109073f7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\market\\BASE\\manifest.json": "0b1ca298dd01d76279ab5cfb6a29626cadb06034eca88ad2c9db3f34f0eb58f4"
+  },
+  "implementation_sha256": "9f7fab1e5d2d0b04e7ceaa1516fafb70c2203668c75589f354f63a3e908588d7",
+  "orders_enabled": false,
+  "production_upgrade_allowed": false
+}

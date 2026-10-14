@@ -1,0 +1,105 @@
+{
+  "version": "v126-first-board-profit-link-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "metrics": {
+    "earliest_seal": {
+      "selected_sessions": 13,
+      "filled_trades": 4,
+      "fill_rate": 0.3076923076923077,
+      "promotion_precision_all_selections": 0.07692307692307693,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 3,
+        "mean_net_return": 0.020691690100371033,
+        "positive_rate": 0.6666666666666666
+      },
+      "B_plus_2": {
+        "n": 2,
+        "mean_net_return": -0.0322914065684015,
+        "positive_rate": 0.5
+      },
+      "B_plus_3": {
+        "n": 1,
+        "mean_net_return": 0.0134633799135575,
+        "positive_rate": 1.0
+      },
+      "big_loss_B_plus_1_rate": 0.0
+    },
+    "speed_only": {
+      "selected_sessions": 13,
+      "filled_trades": 4,
+      "fill_rate": 0.3076923076923077,
+      "promotion_precision_all_selections": 0.07692307692307693,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 3,
+        "mean_net_return": 0.020691690100371033,
+        "positive_rate": 0.6666666666666666
+      },
+      "B_plus_2": {
+        "n": 2,
+        "mean_net_return": -0.0322914065684015,
+        "positive_rate": 0.5
+      },
+      "B_plus_3": {
+        "n": 1,
+        "mean_net_return": 0.0134633799135575,
+        "positive_rate": 1.0
+      },
+      "big_loss_B_plus_1_rate": 0.0
+    },
+    "base_quality": {
+      "selected_sessions": 13,
+      "filled_trades": 4,
+      "fill_rate": 0.3076923076923077,
+      "promotion_precision_all_selections": 0.15384615384615385,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 3,
+        "mean_net_return": 0.0516457524281001,
+        "positive_rate": 0.6666666666666666
+      },
+      "B_plus_2": {
+        "n": 2,
+        "mean_net_return": 0.009736682909848048,
+        "positive_rate": 0.5
+      },
+      "B_plus_3": {
+        "n": 1,
+        "mean_net_return": 0.0741656136062967,
+        "positive_rate": 1.0
+      },
+      "big_loss_B_plus_1_rate": 0.0
+    },
+    "emotion_challenger": {
+      "selected_sessions": 13,
+      "filled_trades": 4,
+      "fill_rate": 0.3076923076923077,
+      "promotion_precision_all_selections": 0.15384615384615385,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 3,
+        "mean_net_return": 0.0516457524281001,
+        "positive_rate": 0.6666666666666666
+      },
+      "B_plus_2": {
+        "n": 2,
+        "mean_net_return": 0.009736682909848048,
+        "positive_rate": 0.5
+      },
+      "B_plus_3": {
+        "n": 1,
+        "mean_net_return": 0.0741656136062967,
+        "positive_rate": 1.0
+      },
+      "big_loss_B_plus_1_rate": 0.0
+    }
+  },
+  "governance": {
+    "one_selection_per_day": true,
+    "unfilled_top1_not_replaced": true,
+    "test_results_not_used_to_retune": true,
+    "deployment_authorized": false
+  },
+  "conclusion_rule": "A ranker is not promoted unless it improves mean net return and positive rate, does not worsen big-loss rate, and is confirmed on a larger frozen forward sample."
+}

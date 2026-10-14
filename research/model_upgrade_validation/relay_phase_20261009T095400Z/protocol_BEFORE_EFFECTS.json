@@ -1,0 +1,67 @@
+{
+  "version": "relay-oneword-to-turnover-fixed-1",
+  "formed_at": "2026-10-09T09:55:32.033300+00:00",
+  "batch_started_at": "2026-10-09T09:55:32.033300+00:00",
+  "budget_minutes": 30,
+  "hypothesis": "Original one-word feature is static; exact official previous-session proxy identity and its transition to current turnover may recover promotion recall without broad class balancing. The old proxy remains distinct from verified OHLC identity; theme support is separate and does not enter this challenge.",
+  "arms": [
+    "BASE",
+    "R3"
+  ],
+  "base_root": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z",
+  "cached_receipt": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_balance_20261009T044001Z\\implementation_BEFORE_FITS.json",
+  "sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_balance_20261009T044001Z\\implementation_BEFORE_FITS.json": "518c5cfd18d2eb8df11f4868c24f450de2c28c5aa3a8cf2eb3a85ec3dc2c7583",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\report.json": "e84637692618c7e0f9a4da5035737f70a648a046b1c52547e0f40668435cecf5"
+  },
+  "fields": [
+    "prior_official_signal_one_word_proxy",
+    "one_word_to_turnover_proxy"
+  ],
+  "definition": "Previous row is same code on exact official predecessor session, all original candidates retained; previous boards+1=current boards, previous/current signal_one_word each 0/1. Prior identity = original previous signal_one_word; transition=(1-current)*prior; missing previous row, unknown proxy or inconsistent board relation stays NaN. Never use target-day OHLC, target label or last observed older appearance.",
+  "parameters": {
+    "C": 0.25,
+    "max_iter": 2500,
+    "random_state": 271,
+    "solver": "lbfgs",
+    "class_weight": null,
+    "window": 252,
+    "threshold": 0.5
+  },
+  "folds": [
+    {
+      "id": "2025H2",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "2026JanAug",
+      "start": "2026-01-01",
+      "end": "2026-08-31"
+    },
+    {
+      "id": "2026Sep",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "sample_weights": "Original inverse labeled-candidate count per signal date, unchanged.",
+  "preprocessing": "Original median/add_indicator/keep_empty_features/scaler; fit on same original training members only.",
+  "historical_screen": {
+    "primary": "full candidate same-date Accuracy",
+    "minimum_accuracy_gain_each_segment": 0.03,
+    "not_decrease": [
+      "Precision",
+      "complete_positive_Recall",
+      "F1",
+      "coverage",
+      "true_nonword_rank_first_when_known"
+    ]
+  },
+  "future_acceptance": "Past labels were previously seen; any surviving challenge needs a separate future fixed 120-official-day protocol and full original stock acceptance gates. No retroactive Oct8 new forecast; no automatic upgrade.",
+  "stopping": "Three predetermined folds, each fit once. No threshold/parameter search, no alternative fit on failure; stop after fixed comparison or 30 minutes.",
+  "numerical_hypothesis_count": 1,
+  "production_changed": false,
+  "calibrated_probability_Brier": null
+}

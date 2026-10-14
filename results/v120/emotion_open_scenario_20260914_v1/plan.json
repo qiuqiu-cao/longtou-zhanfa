@@ -1,0 +1,123 @@
+{
+  "version": "v120-emotion-open-scenario-protocol-1",
+  "status": "FROZEN_DIAGNOSTIC_PROTOCOL",
+  "signal_date": "2026-09-11",
+  "target_date": "2026-09-14",
+  "preopen_default": "RISK_OFF",
+  "frozen_close_forecast": {
+    "risk_off_probability": 0.5012490418207572,
+    "repair_probability": 0.2825742215376658,
+    "risk_on_probability": 0.2161767366415767,
+    "paper_veto_triggered": true
+  },
+  "snapshot_0925": {
+    "required_fields": [
+      "previous_limit_auction_median_return",
+      "previous_limit_negative_auction_rate",
+      "down_limit_indication_count",
+      "relay_positive_auction_rate",
+      "verified_theme_core_positive_rate"
+    ],
+    "values": {
+      "previous_limit_auction_median_return": null,
+      "previous_limit_negative_auction_rate": null,
+      "down_limit_indication_count": null,
+      "relay_positive_auction_rate": null,
+      "verified_theme_core_positive_rate": null
+    },
+    "classification": {
+      "state": "DATA_LIMITED",
+      "missing": [
+        "previous_limit_auction_median_return",
+        "previous_limit_negative_auction_rate",
+        "down_limit_indication_count",
+        "relay_positive_auction_rate",
+        "verified_theme_core_positive_rate"
+      ],
+      "emotion_gate": "CLOSED"
+    },
+    "rules": {
+      "risk_off_if_any": [
+        "auction median<=-2%",
+        "negative auction rate>=60%",
+        "down-limit indications>=10"
+      ],
+      "repair_candidate_if_all": [
+        "auction median>=0",
+        "negative auction rate<=45%",
+        "down-limit indications<=5",
+        "relay positive rate>=50%",
+        "verified theme-core positive rate>=50%"
+      ]
+    }
+  },
+  "snapshot_0935": {
+    "required_fields": [
+      "previous_limit_return_median",
+      "early_failed_board_rate",
+      "down_limit_count",
+      "relay_positive_rate",
+      "verified_core_above_vwap_rate",
+      "verified_theme_sync_rate"
+    ],
+    "values": {
+      "previous_limit_return_median": null,
+      "early_failed_board_rate": null,
+      "down_limit_count": null,
+      "relay_positive_rate": null,
+      "verified_core_above_vwap_rate": null,
+      "verified_theme_sync_rate": null
+    },
+    "classification": {
+      "state": "DATA_LIMITED",
+      "missing": [
+        "previous_limit_return_median",
+        "early_failed_board_rate",
+        "down_limit_count",
+        "relay_positive_rate",
+        "verified_core_above_vwap_rate",
+        "verified_theme_sync_rate"
+      ],
+      "emotion_gate": "CLOSED"
+    },
+    "rules": {
+      "risk_off_if_any": [
+        "previous-limit median<=-2%",
+        "early failed-board rate>=35%",
+        "down-limit count>=10",
+        "relay positive rate<=25%"
+      ],
+      "effective_repair_if_all": [
+        "previous-limit median>0",
+        "early failed-board rate<=30%",
+        "down-limit count<=5",
+        "relay positive rate>=50%",
+        "verified cores above VWAP>=50%",
+        "verified theme sync>=50%"
+      ]
+    }
+  },
+  "decision_effect": {
+    "CONTINUED_RISK_OFF": "CASH",
+    "WEAK_OR_MIXED_REPAIR": "CASH",
+    "WEAK_OR_NARROW_REPAIR": "CASH",
+    "DATA_LIMITED": "CASH",
+    "EFFECTIVE_REPAIR_CONFIRMED_AT_0935": "emotion gate only conditionally opens; candidate, price, execution, and risk gates remain mandatory",
+    "unattended_user_default": "CASH_NO_PRESET_BLIND_ORDER"
+  },
+  "field_definitions": {
+    "early_failed_board_rate": "09:35 touched-but-unsealed count / all securities touched limit by 09:35",
+    "relay_positive_rate": "share of prior-close consecutive-board candidates above prior close",
+    "verified_core_above_vwap_rate": "share of predeclared verified theme cores trading above 09:30-09:35 VWAP",
+    "verified_theme_sync_rate": "share of members in the selected verified theme above prior close",
+    "missing_policy": "missing cannot pass a repair condition; a known hard-risk condition may still close the gate"
+  },
+  "historical_calibration_status": "NOT_YET_VALIDATED_AS_ENTRY_OVERLAY",
+  "direct_buy_authorized": false,
+  "order_submitted": false,
+  "guarantee": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v119\\emotion_decision_card_20260911_v1\\card.json": "9d0e6642a5c7b21af6b423486fd715cd0d64e6e4ad1c274657c475949a5daa27",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v88\\frozen_regime_research\\forecast_20260911_for_20260914_v1.json": "4e139adbfa3fac1c8f988fa26876683e442ca05e87328d760a25a55e432fce2e"
+  }
+}

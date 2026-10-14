@@ -1,0 +1,219 @@
+{
+  "version": "v177-profit-concentration-emotion-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "session_rows": 503,
+  "signal_dates": 503,
+  "split_date": "2025-05-19",
+  "state_summaries": {
+    "BROAD_NEGATIVE": {
+      "sessions": 84,
+      "signal_mean_premium": -0.011542667007963596,
+      "signal_median_premium": -0.026745697879551004,
+      "signal_mean_minus_median_gap": 0.015203030871587406,
+      "next_adverse_state_rate": 0.5476190476190477,
+      "next_failed_rate_mean": 0.34631471623173116,
+      "next_promotion_mid_mean": 0.40729735240604803,
+      "next_previous_limit_median_return_mean": 0.01192499905490679,
+      "next_down_limit_count_mean": 24.94047619047619
+    },
+    "BROAD_POSITIVE": {
+      "sessions": 337,
+      "signal_mean_premium": 0.028031170210629355,
+      "signal_median_premium": 0.02486448786573223,
+      "signal_mean_minus_median_gap": 0.0031666823448971283,
+      "next_adverse_state_rate": 0.4391691394658754,
+      "next_failed_rate_mean": 0.35531567869979297,
+      "next_promotion_mid_mean": 0.42544772868514347,
+      "next_previous_limit_median_return_mean": 0.01223434673135675,
+      "next_down_limit_count_mean": 19.58160237388724
+    },
+    "MEDIAN_POSITIVE_MEAN_NONPOSITIVE": {
+      "sessions": 2,
+      "signal_mean_premium": -0.00470757877956845,
+      "signal_median_premium": 0.0055000525280801925,
+      "signal_mean_minus_median_gap": -0.010207631307648641,
+      "next_adverse_state_rate": 0.5,
+      "next_failed_rate_mean": 0.357717863531817,
+      "next_promotion_mid_mean": 0.75,
+      "next_previous_limit_median_return_mean": 0.0010523979521845986,
+      "next_down_limit_count_mean": 636.5
+    },
+    "NARROW_POSITIVE": {
+      "sessions": 80,
+      "signal_mean_premium": 0.008180325516971454,
+      "signal_median_premium": -0.008324403397354288,
+      "signal_mean_minus_median_gap": 0.016504728914325743,
+      "next_adverse_state_rate": 0.5375,
+      "next_failed_rate_mean": 0.35705411673939647,
+      "next_promotion_mid_mean": 0.42342615717615717,
+      "next_previous_limit_median_return_mean": 0.00471745462802236,
+      "next_down_limit_count_mean": 11.2
+    }
+  },
+  "bootstrap_comparisons": {
+    "next_adverse_narrow_minus_broad_positive": {
+      "left": "NARROW_POSITIVE",
+      "right": "BROAD_POSITIVE",
+      "metric": "next_adverse_state",
+      "estimate": 0.0983308605341246,
+      "ci95": [
+        -0.02774480712166172,
+        0.22039039317507425
+      ],
+      "sessions_left": 80,
+      "sessions_right": 337
+    },
+    "next_failed_rate_narrow_minus_broad_positive": {
+      "left": "NARROW_POSITIVE",
+      "right": "BROAD_POSITIVE",
+      "metric": "next_failed_rate",
+      "estimate": 0.001738438039603496,
+      "ci95": [
+        -0.019420157269368674,
+        0.024043809584631672
+      ],
+      "sessions_left": 80,
+      "sessions_right": 337
+    },
+    "next_promotion_mid_narrow_minus_broad_positive": {
+      "left": "NARROW_POSITIVE",
+      "right": "BROAD_POSITIVE",
+      "metric": "next_promotion_mid",
+      "estimate": -0.0020215715089862973,
+      "ci95": [
+        -0.047823313754520064,
+        0.043280267879171185
+      ],
+      "sessions_left": 80,
+      "sessions_right": 337
+    },
+    "next_median_premium_narrow_minus_broad_positive": {
+      "left": "NARROW_POSITIVE",
+      "right": "BROAD_POSITIVE",
+      "metric": "next_previous_limit_median_return",
+      "estimate": -0.0075168921033343895,
+      "ci95": [
+        -0.013209739155633822,
+        -0.0017913733893858703
+      ],
+      "sessions_left": 80,
+      "sessions_right": 337
+    },
+    "next_down_limits_narrow_minus_broad_positive": {
+      "left": "NARROW_POSITIVE",
+      "right": "BROAD_POSITIVE",
+      "metric": "next_down_limit_count",
+      "estimate": -8.38160237388724,
+      "ci95": [
+        -25.650591617210683,
+        3.5753004451038675
+      ],
+      "sessions_left": 80,
+      "sessions_right": 337
+    }
+  },
+  "chronological_split": {
+    "discovery_first_70pct_dates": {
+      "BROAD_NEGATIVE": {
+        "sessions": 64,
+        "signal_mean_premium": -0.012893387093115459,
+        "signal_median_premium": -0.028632063884273525,
+        "signal_mean_minus_median_gap": 0.015738676791158066,
+        "next_adverse_state_rate": 0.5625,
+        "next_failed_rate_mean": 0.3552759863614434,
+        "next_promotion_mid_mean": 0.41245757752211554,
+        "next_previous_limit_median_return_mean": 0.010453497812479066,
+        "next_down_limit_count_mean": 28.8125
+      },
+      "BROAD_POSITIVE": {
+        "sessions": 221,
+        "signal_mean_premium": 0.029494462385564815,
+        "signal_median_premium": 0.026485067330122746,
+        "signal_mean_minus_median_gap": 0.0030093950554420696,
+        "next_adverse_state_rate": 0.45701357466063347,
+        "next_failed_rate_mean": 0.36538974774071525,
+        "next_promotion_mid_mean": 0.43332316987175246,
+        "next_previous_limit_median_return_mean": 0.011932187790947206,
+        "next_down_limit_count_mean": 26.70135746606335
+      },
+      "MEDIAN_POSITIVE_MEAN_NONPOSITIVE": {
+        "sessions": 2,
+        "signal_mean_premium": -0.00470757877956845,
+        "signal_median_premium": 0.0055000525280801925,
+        "signal_mean_minus_median_gap": -0.010207631307648641,
+        "next_adverse_state_rate": 0.5,
+        "next_failed_rate_mean": 0.357717863531817,
+        "next_promotion_mid_mean": 0.75,
+        "next_previous_limit_median_return_mean": 0.0010523979521845986,
+        "next_down_limit_count_mean": 636.5
+      },
+      "NARROW_POSITIVE": {
+        "sessions": 65,
+        "signal_mean_premium": 0.008577985735315806,
+        "signal_median_premium": -0.008337276516038782,
+        "signal_mean_minus_median_gap": 0.016915262251354587,
+        "next_adverse_state_rate": 0.5538461538461539,
+        "next_failed_rate_mean": 0.3612547994554019,
+        "next_promotion_mid_mean": 0.4302951749105595,
+        "next_previous_limit_median_return_mean": 0.003554438271065342,
+        "next_down_limit_count_mean": 11.676923076923076
+      }
+    },
+    "validation_last_30pct_dates": {
+      "BROAD_NEGATIVE": {
+        "sessions": 20,
+        "signal_mean_premium": -0.0072203627354776355,
+        "signal_median_premium": -0.020709326664438938,
+        "signal_mean_minus_median_gap": 0.013488963928961307,
+        "next_adverse_state_rate": 0.5,
+        "next_failed_rate_mean": 0.31763865181665213,
+        "next_promotion_mid_mean": 0.39078463203463204,
+        "next_previous_limit_median_return_mean": 0.016633803030675513,
+        "next_down_limit_count_mean": 12.55
+      },
+      "BROAD_POSITIVE": {
+        "sessions": 116,
+        "signal_mean_premium": 0.02524334632562301,
+        "signal_median_premium": 0.021777004575815804,
+        "signal_mean_minus_median_gap": 0.0034663417498071968,
+        "next_adverse_state_rate": 0.4051724137931034,
+        "next_failed_rate_mean": 0.33612284026838074,
+        "next_promotion_mid_mean": 0.4104436553899661,
+        "next_previous_limit_median_return_mean": 0.012810011609205973,
+        "next_down_limit_count_mean": 6.017241379310345
+      },
+      "NARROW_POSITIVE": {
+        "sessions": 15,
+        "signal_mean_premium": 0.006457131237479253,
+        "signal_median_premium": -0.00826861988305482,
+        "signal_mean_minus_median_gap": 0.014725751120534073,
+        "next_adverse_state_rate": 0.4666666666666667,
+        "next_failed_rate_mean": 0.33885115830337253,
+        "next_promotion_mid_mean": 0.39366041366041366,
+        "next_previous_limit_median_return_mean": 0.00975719217483611,
+        "next_down_limit_count_mean": 9.133333333333333
+      }
+    }
+  },
+  "narrow_profit_next_adverse_association_stable": false,
+  "validation_next_adverse_difference_narrow_minus_broad": 0.06149425287356325,
+  "governance": {
+    "mean_premium_alone_sufficient_for_supportive_emotion": false,
+    "median_and_distribution_required": true,
+    "profit_concentration_direct_stock_reranking_allowed": false,
+    "profit_concentration_entry_authorized": false,
+    "historical_emotion_scenario_use_allowed": true
+  },
+  "interpretation": "A positive mean with a non-positive median is a narrow-profit state: a few strong names may mask weak typical feedback. It must be evaluated separately from broad positive premium. The result is an environment diagnostic, not a stock score.",
+  "limitations": [
+    "provider previous-limit pool completeness is not independently proven",
+    "mean and median are close-to-close feedback, not executable entry returns",
+    "single chronological split is not a sealed blind test",
+    "no theme attribution, candidate execution, fees or T+1 exit path"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "2d45fd980a0ac7c776c2df5f185242af03416eb3d06869bdd652644daad815f7"
+}

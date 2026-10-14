@@ -1,0 +1,5 @@
+{
+  "failure": "AttributeError: model_upgrade_history has no RELAY_FIELDS; before output and fits",
+  "script_sha256": "fb9bb20fe7bdfaf17abc3674ece44327256dc4b6984a655780598ed5402ed50a",
+  "fix": "Use original hash-bound prepared relay_fields; also restrict source joins to original requested date/code cohorts to prevent future request-universe expansion"
+}

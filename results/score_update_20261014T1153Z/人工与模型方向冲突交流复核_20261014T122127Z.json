@@ -1,0 +1,126 @@
+{
+  "recorded_at": "2026-10-14T12:21:27.580505+00:00",
+  "status": "EXISTING_FULL_POOL_PREDICTION_CONFLICT_REVIEWED_NO_MODEL_CHANGE",
+  "user_question": "人工观察与模型方向冲突这是为什么",
+  "signal_date": "2026-10-14",
+  "target_date": "2026-10-15",
+  "full_candidate_count": 15,
+  "focus": "002343",
+  "confirmed_actual_prediction_disagreement": true,
+  "model_score_old": 61.8,
+  "model_score_current": 43.0,
+  "manual_pre_current_model_direction": "PROMOTE",
+  "main_model_negative_changes": [
+    {
+      "field": "log_signal_amount",
+      "old_signal_value": 18.581567116554027,
+      "new_signal_value": 19.93963456048249,
+      "logit_change": -0.31850511022438255
+    },
+    {
+      "field": "promotion_3to4",
+      "old_signal_value": 0.0,
+      "new_signal_value": 0.6,
+      "logit_change": -0.16759236524330118
+    },
+    {
+      "field": "loss_effect_health",
+      "old_signal_value": 0.6153198653198653,
+      "new_signal_value": 0.2862179487179487,
+      "logit_change": -0.16476363633763616
+    },
+    {
+      "field": "turnover_vs_prev_same_height_percentile",
+      "old_signal_value": 0.2,
+      "new_signal_value": 0.6666666666666666,
+      "logit_change": -0.12411403515184129
+    },
+    {
+      "field": "regime_fragility",
+      "old_signal_value": 0.2741348762892881,
+      "new_signal_value": 0.4904928794490035,
+      "logit_change": -0.08375311514731233
+    },
+    {
+      "field": "amplitude",
+      "old_signal_value": 0.0,
+      "new_signal_value": 4.3478260869565215,
+      "logit_change": -0.08125595481768445
+    },
+    {
+      "field": "turnover",
+      "old_signal_value": 0.03369061470031738,
+      "new_signal_value": 0.119426,
+      "logit_change": -0.04669754732860795
+    },
+    {
+      "field": "down_limit_rate",
+      "old_signal_value": 0.8,
+      "new_signal_value": 1.0,
+      "logit_change": -0.03843899064004577
+    }
+  ],
+  "ciwen_proxy_did_not_change": true,
+  "model_input_scope": "Original29 numeric fields; topic narrative, stock-specific sector role, Dragon-Tiger seat behavior and intraday acceptance process are not direct inputs. No currently unverified seat/tick facts invoked.",
+  "independent_support": "4板与新经典共同延续可能；实际日线有换手仍收8.10，相对传媒后排冲高回落更强。",
+  "independent_rebuttal": "9.65%高开后日内最低7.78，不能从供应商零开板认定全天没有分歧；公司AIGC尚无收入。",
+  "old_same_pool_comparison_supplemental_not_formal": {
+    "model": {
+      "original_full_pool": 10,
+      "predicted_count": 10,
+      "positive_actual_full_pool": 4,
+      "TP": 2,
+      "FP": 0,
+      "TN": 6,
+      "FN_among_judged": 2,
+      "unknown_prediction_count": 0,
+      "Accuracy_judged": 0.8,
+      "correct_over_full_pool": 0.8,
+      "complete_Recall": 0.5,
+      "Precision": 1.0,
+      "F1_complete_recall": 0.6666666666666666,
+      "prediction_coverage": 1.0
+    },
+    "independent": {
+      "original_full_pool": 10,
+      "predicted_count": 8,
+      "positive_actual_full_pool": 4,
+      "TP": 3,
+      "FP": 3,
+      "TN": 2,
+      "FN_among_judged": 0,
+      "unknown_prediction_count": 2,
+      "Accuracy_judged": 0.625,
+      "correct_over_full_pool": 0.5,
+      "complete_Recall": 0.75,
+      "Precision": 0.5,
+      "F1_complete_recall": 0.6,
+      "prediction_coverage": 0.8
+    }
+  },
+  "rechecked_learning": "Real same-outcome disagreement must be acknowledged; distinguish prior independent direction from conditional tradable observation. Larger turnover is ambiguous; no claim of confirmed acceptance or superiority. Ciwen proxy0->0, so do not misattribute its score drop to proxy loss.",
+  "implemented": "Verified all15 existing direction conflicts and existing score decomposition; clarified manual-trade wording without replacing prior prediction.",
+  "numeric_accuracy_gain_or_model_upgrade_proven": false,
+  "existing_prediction_directions_changed": false,
+  "new_fits": 0,
+  "new_matured_or_formal_settled_samples": 0,
+  "formal_originals_or_automation_or_goal_changed": false,
+  "unique_next_step": "Append actual15 opening confirmation and full15 same-pool closing outcome comparison, retaining unknowns and suspension qualification flags.",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\score_update_20261014T1153Z\\supplemental_BASE_scores.json": "7c0745ab43dd48b08bd6d82024670f60c47d783e4ec03b4aa9cd793dae4f9a00",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\score_update_20261014T1153Z\\昨日与今日原权重分数变化解释.json": "84754bc97900c96b56391a772ded4db91044652fd04144c949202ed1fe093b17",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\score_update_20261014T1153Z\\评分核验与全候选冲突.json": "59473b6f4f73915772b35df11c8e2ed59c638e2725efe71bb20eb0e36fd8cc67",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\15日完整15只条件判断.json": "6d3ebc11b60a0eaec62a343cc8155a5e6f220b440a4da4a4b808e37b1ee8d5f9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\original10_supplemental_review.json": "89bcc7b05b0aa707ccbc9442f000ca511a31bea8c7902e87d8cc9828ab5df8b4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261014T1118Z\\news\\cls_focus_single_source_projection.txt": "093d8ba2a21c625e7600508dea34ffa2ce878169c88d9699a78acf0009dca6c0"
+  },
+  "new_web_check": {
+    "focus_url": "https://www.cls.cn/detail/2504650",
+    "direct_open_status": "unavailable on this call; existing previously captured full body retained",
+    "corroboration_urls": [
+      "https://www.cls.cn/detail/2504449",
+      "https://www.cls.cn/detail/2504213"
+    ],
+    "corroboration_level": "new search summaries only; no retroactive historical insertion"
+  }
+}

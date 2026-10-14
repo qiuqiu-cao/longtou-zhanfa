@@ -1,0 +1,1537 @@
+{
+  "version": "v217-symbolic-name-cluster-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-21",
+  "asof": "2026-09-21T19:00:00+08:00",
+  "data_quality": {
+    "name_match_status": "VERIFIED_WITHIN_ARCHIVED_PROVIDER_POOL",
+    "availability_status": "VERIFIED_AVAILABLE_BY_ASOF",
+    "provider_pool_status": "verified",
+    "full_market_completeness": "not_independently_verified",
+    "mainboard_closing_limit_count": 93,
+    "mainboard_failed_board_count": 23,
+    "point_in_time_security_scope_complete": false
+  },
+  "scope": {
+    "mainboard_only": true,
+    "closing_limit_and_failed_board_observed": true,
+    "token_lengths": [
+      1,
+      2
+    ],
+    "industry_diversity_required": true
+  },
+  "thresholds": {
+    "min_member_count": 4,
+    "min_member_share": 0.08,
+    "min_relay_member_count": 2,
+    "min_distinct_board_levels": 2,
+    "min_distinct_industries": 3,
+    "max_ngram_length": 2
+  },
+  "stop_tokens": [
+    "业",
+    "份",
+    "公",
+    "公司",
+    "发",
+    "发展",
+    "司",
+    "团",
+    "实",
+    "实业",
+    "展",
+    "技",
+    "控",
+    "控股",
+    "科",
+    "科技",
+    "股",
+    "股份",
+    "集",
+    "集团"
+  ],
+  "cluster_count": 2,
+  "top_cluster": {
+    "cluster_id": "name_ngram_1_华",
+    "token": "华",
+    "ngram_length": 1,
+    "classification": "SYMBOLIC_LADDER_CANDIDATE",
+    "name_match_evidence_status": "VERIFIED_WITHIN_ARCHIVED_PROVIDER_POOL",
+    "narrative_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME",
+    "member_count": 29,
+    "member_share": 0.3118279569892473,
+    "relay_member_count": 7,
+    "first_board_member_count": 22,
+    "failed_board_member_count": 2,
+    "distinct_board_levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "board_level_count": 5,
+    "max_board": 5,
+    "global_height_anchor_member_count": 1,
+    "ladder_contiguous": true,
+    "distinct_industry_count": 20,
+    "industries": [
+      "一般零售",
+      "中药Ⅱ",
+      "光学光电",
+      "其他家电",
+      "养殖业",
+      "出版",
+      "化学制品",
+      "化学制药",
+      "医疗器械",
+      "医疗服务",
+      "多元金融",
+      "家居用品",
+      "小金属",
+      "广告营销",
+      "房地产开",
+      "房地产服",
+      "电网设备",
+      "纺织制造",
+      "软件开发",
+      "通信设备"
+    ],
+    "position_counts": {
+      "prefix": 16,
+      "infix": 11,
+      "suffix": 2,
+      "whole_name": 0
+    },
+    "members": [
+      {
+        "code": "001216",
+        "name": "华瓷股份",
+        "boards": 5,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "家居用品",
+        "position": "prefix"
+      },
+      {
+        "code": "603230",
+        "name": "内蒙新华",
+        "boards": 4,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "出版",
+        "position": "suffix"
+      },
+      {
+        "code": "000504",
+        "name": "南华生物",
+        "boards": 3,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "医疗服务",
+        "position": "infix"
+      },
+      {
+        "code": "002453",
+        "name": "华软科技",
+        "boards": 3,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "化学制品",
+        "position": "prefix"
+      },
+      {
+        "code": "600448",
+        "name": "华纺股份",
+        "boards": 3,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "纺织制造",
+        "position": "prefix"
+      },
+      {
+        "code": "000532",
+        "name": "华金资本",
+        "boards": 2,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "多元金融",
+        "position": "prefix"
+      },
+      {
+        "code": "601811",
+        "name": "新华文轩",
+        "boards": 2,
+        "board_group": "CONSECUTIVE_BOARD",
+        "industry_provider": "出版",
+        "position": "infix"
+      },
+      {
+        "code": "000020",
+        "name": "深华发Ａ",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "光学光电",
+        "position": "infix"
+      },
+      {
+        "code": "000607",
+        "name": "华媒控股",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "广告营销",
+        "position": "prefix"
+      },
+      {
+        "code": "000756",
+        "name": "新华制药",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "化学制药",
+        "position": "infix"
+      },
+      {
+        "code": "002022",
+        "name": "科华生物",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "医疗器械",
+        "position": "infix"
+      },
+      {
+        "code": "002042",
+        "name": "华孚时尚",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "纺织制造",
+        "position": "prefix"
+      },
+      {
+        "code": "002178",
+        "name": "延华智能",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "软件开发",
+        "position": "infix"
+      },
+      {
+        "code": "002321",
+        "name": "华英农业",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "养殖业",
+        "position": "prefix"
+      },
+      {
+        "code": "002349",
+        "name": "精华制药",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "中药Ⅱ",
+        "position": "infix"
+      },
+      {
+        "code": "002614",
+        "name": "奥佳华",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "其他家电",
+        "position": "suffix"
+      },
+      {
+        "code": "002907",
+        "name": "华森制药",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "中药Ⅱ",
+        "position": "prefix"
+      },
+      {
+        "code": "600281",
+        "name": "华阳新材",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "小金属",
+        "position": "prefix"
+      },
+      {
+        "code": "600301",
+        "name": "华锡有色",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "小金属",
+        "position": "prefix"
+      },
+      {
+        "code": "600325",
+        "name": "华发股份",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "房地产开",
+        "position": "prefix"
+      },
+      {
+        "code": "600503",
+        "name": "华丽家族",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "房地产开",
+        "position": "prefix"
+      },
+      {
+        "code": "600587",
+        "name": "新华医疗",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "医疗器械",
+        "position": "infix"
+      },
+      {
+        "code": "600743",
+        "name": "华远控股",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "房地产服",
+        "position": "prefix"
+      },
+      {
+        "code": "600785",
+        "name": "新华百货",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "一般零售",
+        "position": "infix"
+      },
+      {
+        "code": "600812",
+        "name": "华北制药",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "化学制药",
+        "position": "prefix"
+      },
+      {
+        "code": "600825",
+        "name": "新华传媒",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "出版",
+        "position": "infix"
+      },
+      {
+        "code": "603042",
+        "name": "华脉科技",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "通信设备",
+        "position": "prefix"
+      },
+      {
+        "code": "603093",
+        "name": "南华期货",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "多元金融",
+        "position": "infix"
+      },
+      {
+        "code": "605196",
+        "name": "华通线缆",
+        "boards": 1,
+        "board_group": "FIRST_BOARD",
+        "industry_provider": "电网设备",
+        "position": "prefix"
+      }
+    ],
+    "failed_board_members": [
+      {
+        "code": "600308",
+        "name": "华泰股份"
+      },
+      {
+        "code": "600675",
+        "name": "中华企业"
+      }
+    ],
+    "previous_session_comparison": {
+      "status": "COMPARABLE_FROZEN_RULES",
+      "previous_member_count": 12,
+      "member_count_change": 17,
+      "previous_member_share": 0.16666666666666666,
+      "member_share_change": 0.14516129032258066,
+      "previous_max_board": 4,
+      "max_board_change": 1
+    },
+    "real_theme_eligible": false,
+    "candidate_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "clusters": [
+    {
+      "cluster_id": "name_ngram_1_华",
+      "token": "华",
+      "ngram_length": 1,
+      "classification": "SYMBOLIC_LADDER_CANDIDATE",
+      "name_match_evidence_status": "VERIFIED_WITHIN_ARCHIVED_PROVIDER_POOL",
+      "narrative_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME",
+      "member_count": 29,
+      "member_share": 0.3118279569892473,
+      "relay_member_count": 7,
+      "first_board_member_count": 22,
+      "failed_board_member_count": 2,
+      "distinct_board_levels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "board_level_count": 5,
+      "max_board": 5,
+      "global_height_anchor_member_count": 1,
+      "ladder_contiguous": true,
+      "distinct_industry_count": 20,
+      "industries": [
+        "一般零售",
+        "中药Ⅱ",
+        "光学光电",
+        "其他家电",
+        "养殖业",
+        "出版",
+        "化学制品",
+        "化学制药",
+        "医疗器械",
+        "医疗服务",
+        "多元金融",
+        "家居用品",
+        "小金属",
+        "广告营销",
+        "房地产开",
+        "房地产服",
+        "电网设备",
+        "纺织制造",
+        "软件开发",
+        "通信设备"
+      ],
+      "position_counts": {
+        "prefix": 16,
+        "infix": 11,
+        "suffix": 2,
+        "whole_name": 0
+      },
+      "members": [
+        {
+          "code": "001216",
+          "name": "华瓷股份",
+          "boards": 5,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "家居用品",
+          "position": "prefix"
+        },
+        {
+          "code": "603230",
+          "name": "内蒙新华",
+          "boards": 4,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "出版",
+          "position": "suffix"
+        },
+        {
+          "code": "000504",
+          "name": "南华生物",
+          "boards": 3,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "医疗服务",
+          "position": "infix"
+        },
+        {
+          "code": "002453",
+          "name": "华软科技",
+          "boards": 3,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "化学制品",
+          "position": "prefix"
+        },
+        {
+          "code": "600448",
+          "name": "华纺股份",
+          "boards": 3,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "纺织制造",
+          "position": "prefix"
+        },
+        {
+          "code": "000532",
+          "name": "华金资本",
+          "boards": 2,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "多元金融",
+          "position": "prefix"
+        },
+        {
+          "code": "601811",
+          "name": "新华文轩",
+          "boards": 2,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "出版",
+          "position": "infix"
+        },
+        {
+          "code": "000020",
+          "name": "深华发Ａ",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "光学光电",
+          "position": "infix"
+        },
+        {
+          "code": "000607",
+          "name": "华媒控股",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "广告营销",
+          "position": "prefix"
+        },
+        {
+          "code": "000756",
+          "name": "新华制药",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "化学制药",
+          "position": "infix"
+        },
+        {
+          "code": "002022",
+          "name": "科华生物",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "医疗器械",
+          "position": "infix"
+        },
+        {
+          "code": "002042",
+          "name": "华孚时尚",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "纺织制造",
+          "position": "prefix"
+        },
+        {
+          "code": "002178",
+          "name": "延华智能",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "软件开发",
+          "position": "infix"
+        },
+        {
+          "code": "002321",
+          "name": "华英农业",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "养殖业",
+          "position": "prefix"
+        },
+        {
+          "code": "002349",
+          "name": "精华制药",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "中药Ⅱ",
+          "position": "infix"
+        },
+        {
+          "code": "002614",
+          "name": "奥佳华",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "其他家电",
+          "position": "suffix"
+        },
+        {
+          "code": "002907",
+          "name": "华森制药",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "中药Ⅱ",
+          "position": "prefix"
+        },
+        {
+          "code": "600281",
+          "name": "华阳新材",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "小金属",
+          "position": "prefix"
+        },
+        {
+          "code": "600301",
+          "name": "华锡有色",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "小金属",
+          "position": "prefix"
+        },
+        {
+          "code": "600325",
+          "name": "华发股份",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "房地产开",
+          "position": "prefix"
+        },
+        {
+          "code": "600503",
+          "name": "华丽家族",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "房地产开",
+          "position": "prefix"
+        },
+        {
+          "code": "600587",
+          "name": "新华医疗",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "医疗器械",
+          "position": "infix"
+        },
+        {
+          "code": "600743",
+          "name": "华远控股",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "房地产服",
+          "position": "prefix"
+        },
+        {
+          "code": "600785",
+          "name": "新华百货",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "一般零售",
+          "position": "infix"
+        },
+        {
+          "code": "600812",
+          "name": "华北制药",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "化学制药",
+          "position": "prefix"
+        },
+        {
+          "code": "600825",
+          "name": "新华传媒",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "出版",
+          "position": "infix"
+        },
+        {
+          "code": "603042",
+          "name": "华脉科技",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "通信设备",
+          "position": "prefix"
+        },
+        {
+          "code": "603093",
+          "name": "南华期货",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "多元金融",
+          "position": "infix"
+        },
+        {
+          "code": "605196",
+          "name": "华通线缆",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "电网设备",
+          "position": "prefix"
+        }
+      ],
+      "failed_board_members": [
+        {
+          "code": "600308",
+          "name": "华泰股份"
+        },
+        {
+          "code": "600675",
+          "name": "中华企业"
+        }
+      ],
+      "previous_session_comparison": {
+        "status": "COMPARABLE_FROZEN_RULES",
+        "previous_member_count": 12,
+        "member_count_change": 17,
+        "previous_member_share": 0.16666666666666666,
+        "member_share_change": 0.14516129032258066,
+        "previous_max_board": 4,
+        "max_board_change": 1
+      },
+      "real_theme_eligible": false,
+      "candidate_reranking_allowed": false,
+      "entry_authorized": false
+    },
+    {
+      "cluster_id": "name_ngram_1_新",
+      "token": "新",
+      "ngram_length": 1,
+      "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+      "name_match_evidence_status": "VERIFIED_WITHIN_ARCHIVED_PROVIDER_POOL",
+      "narrative_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME",
+      "member_count": 11,
+      "member_share": 0.11827956989247312,
+      "relay_member_count": 2,
+      "first_board_member_count": 9,
+      "failed_board_member_count": 1,
+      "distinct_board_levels": [
+        1,
+        2,
+        4
+      ],
+      "board_level_count": 3,
+      "max_board": 4,
+      "global_height_anchor_member_count": 0,
+      "ladder_contiguous": false,
+      "distinct_industry_count": 9,
+      "industries": [
+        "一般零售",
+        "光学光电",
+        "其他电子",
+        "出版",
+        "化学制药",
+        "化学原料",
+        "医疗器械",
+        "塑料",
+        "小金属"
+      ],
+      "position_counts": {
+        "prefix": 6,
+        "infix": 5,
+        "suffix": 0,
+        "whole_name": 0
+      },
+      "members": [
+        {
+          "code": "603230",
+          "name": "内蒙新华",
+          "boards": 4,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "出版",
+          "position": "infix"
+        },
+        {
+          "code": "601811",
+          "name": "新华文轩",
+          "boards": 2,
+          "board_group": "CONSECUTIVE_BOARD",
+          "industry_provider": "出版",
+          "position": "prefix"
+        },
+        {
+          "code": "000756",
+          "name": "新华制药",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "化学制药",
+          "position": "prefix"
+        },
+        {
+          "code": "001373",
+          "name": "翔腾新材",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "光学光电",
+          "position": "infix"
+        },
+        {
+          "code": "002388",
+          "name": "新亚制程",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "其他电子",
+          "position": "prefix"
+        },
+        {
+          "code": "002585",
+          "name": "双星新材",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "塑料",
+          "position": "infix"
+        },
+        {
+          "code": "600281",
+          "name": "华阳新材",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "小金属",
+          "position": "infix"
+        },
+        {
+          "code": "600587",
+          "name": "新华医疗",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "医疗器械",
+          "position": "prefix"
+        },
+        {
+          "code": "600785",
+          "name": "新华百货",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "一般零售",
+          "position": "prefix"
+        },
+        {
+          "code": "600825",
+          "name": "新华传媒",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "出版",
+          "position": "prefix"
+        },
+        {
+          "code": "603663",
+          "name": "三祥新材",
+          "boards": 1,
+          "board_group": "FIRST_BOARD",
+          "industry_provider": "化学原料",
+          "position": "infix"
+        }
+      ],
+      "failed_board_members": [
+        {
+          "code": "605068",
+          "name": "明新旭腾"
+        }
+      ],
+      "previous_session_comparison": {
+        "status": "COMPARABLE_FROZEN_RULES",
+        "previous_member_count": 6,
+        "member_count_change": 5,
+        "previous_member_share": 0.08333333333333333,
+        "member_share_change": 0.034946236559139796,
+        "previous_max_board": 3,
+        "max_board_change": 1
+      },
+      "real_theme_eligible": false,
+      "candidate_reranking_allowed": false,
+      "entry_authorized": false
+    }
+  ],
+  "candidate_records": [
+    {
+      "code": "000020",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "000402",
+      "clusters": []
+    },
+    {
+      "code": "000504",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "000532",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "000560",
+      "clusters": []
+    },
+    {
+      "code": "000566",
+      "clusters": []
+    },
+    {
+      "code": "000607",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "000756",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "000829",
+      "clusters": []
+    },
+    {
+      "code": "000910",
+      "clusters": []
+    },
+    {
+      "code": "000995",
+      "clusters": []
+    },
+    {
+      "code": "001201",
+      "clusters": []
+    },
+    {
+      "code": "001216",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_HEIGHT_ANCHOR",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "001234",
+      "clusters": []
+    },
+    {
+      "code": "001317",
+      "clusters": []
+    },
+    {
+      "code": "001373",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "001376",
+      "clusters": []
+    },
+    {
+      "code": "001389",
+      "clusters": []
+    },
+    {
+      "code": "002022",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002042",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002080",
+      "clusters": []
+    },
+    {
+      "code": "002084",
+      "clusters": []
+    },
+    {
+      "code": "002172",
+      "clusters": []
+    },
+    {
+      "code": "002178",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002246",
+      "clusters": []
+    },
+    {
+      "code": "002259",
+      "clusters": []
+    },
+    {
+      "code": "002285",
+      "clusters": []
+    },
+    {
+      "code": "002303",
+      "clusters": []
+    },
+    {
+      "code": "002321",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002349",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002367",
+      "clusters": []
+    },
+    {
+      "code": "002388",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002453",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002585",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002589",
+      "clusters": []
+    },
+    {
+      "code": "002614",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002622",
+      "clusters": []
+    },
+    {
+      "code": "002724",
+      "clusters": []
+    },
+    {
+      "code": "002755",
+      "clusters": []
+    },
+    {
+      "code": "002792",
+      "clusters": []
+    },
+    {
+      "code": "002795",
+      "clusters": []
+    },
+    {
+      "code": "002860",
+      "clusters": []
+    },
+    {
+      "code": "002869",
+      "clusters": []
+    },
+    {
+      "code": "002900",
+      "clusters": []
+    },
+    {
+      "code": "002907",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "002963",
+      "clusters": []
+    },
+    {
+      "code": "600127",
+      "clusters": []
+    },
+    {
+      "code": "600218",
+      "clusters": []
+    },
+    {
+      "code": "600281",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600301",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600325",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600448",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600503",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600587",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600593",
+      "clusters": []
+    },
+    {
+      "code": "600606",
+      "clusters": []
+    },
+    {
+      "code": "600613",
+      "clusters": []
+    },
+    {
+      "code": "600630",
+      "clusters": []
+    },
+    {
+      "code": "600664",
+      "clusters": []
+    },
+    {
+      "code": "600712",
+      "clusters": []
+    },
+    {
+      "code": "600714",
+      "clusters": []
+    },
+    {
+      "code": "600721",
+      "clusters": []
+    },
+    {
+      "code": "600743",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600785",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600812",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600825",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "600857",
+      "clusters": []
+    },
+    {
+      "code": "600894",
+      "clusters": []
+    },
+    {
+      "code": "600992",
+      "clusters": []
+    },
+    {
+      "code": "601086",
+      "clusters": []
+    },
+    {
+      "code": "601123",
+      "clusters": []
+    },
+    {
+      "code": "601579",
+      "clusters": []
+    },
+    {
+      "code": "601811",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "603001",
+      "clusters": []
+    },
+    {
+      "code": "603020",
+      "clusters": []
+    },
+    {
+      "code": "603042",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "603068",
+      "clusters": []
+    },
+    {
+      "code": "603093",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "603151",
+      "clusters": []
+    },
+    {
+      "code": "603175",
+      "clusters": []
+    },
+    {
+      "code": "603230",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        },
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_RELAY_SUPPORT",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "603258",
+      "clusters": []
+    },
+    {
+      "code": "603289",
+      "clusters": []
+    },
+    {
+      "code": "603316",
+      "clusters": []
+    },
+    {
+      "code": "603319",
+      "clusters": []
+    },
+    {
+      "code": "603395",
+      "clusters": []
+    },
+    {
+      "code": "603580",
+      "clusters": []
+    },
+    {
+      "code": "603636",
+      "clusters": []
+    },
+    {
+      "code": "603663",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_新",
+          "token": "新",
+          "classification": "SYMBOLIC_DIFFUSION_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "603819",
+      "clusters": []
+    },
+    {
+      "code": "603958",
+      "clusters": []
+    },
+    {
+      "code": "605196",
+      "clusters": [
+        {
+          "cluster_id": "name_ngram_1_华",
+          "token": "华",
+          "classification": "SYMBOLIC_LADDER_CANDIDATE",
+          "role": "SYMBOLIC_FIRST_BOARD_EXPANSION",
+          "evidence_status": "INFERRED_SYMBOLIC_CLUSTER_NOT_REAL_THEME"
+        }
+      ]
+    },
+    {
+      "code": "605566",
+      "clusters": []
+    }
+  ],
+  "audit": {
+    "unique_tokens_scanned": 383,
+    "minimum_members_for_this_pool": 8,
+    "rejected_counts_by_first_failed_gate": {
+      "member_count_or_share": 380,
+      "relay_count": 1,
+      "board_levels": 0,
+      "industry_diversity": 0
+    }
+  },
+  "governance": {
+    "post_hoc_rule_design_after_2026_09_18_case": true,
+    "real_theme_substitution_allowed": false,
+    "business_or_catalyst_claim_allowed": false,
+    "candidate_reranking_allowed": false,
+    "probability_uplift_claim_allowed": false,
+    "direct_entry_allowed": false,
+    "requires_forward_validation_before_model_use": true,
+    "next_session_auction_open_confirmation_still_required": true
+  },
+  "interpretation": "名称重复只证明归档涨停池内存在可观察的符号聚集。它可以提示情绪扩散，但不能替代真实题材、催化、业务归属、可买性或次日确认。",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\current_full_pool_20260921_v1\\all_closing_and_failed_candidates.csv": "c7fef19b346a16acfc37ff5f0fe06a74e7ff13d660b9f809af2e0dafca85e554",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\current_full_pool_20260921_v1\\manifest.json": "cee1cd03bedd16a9b14414a6e5658766f78b8e4f617e9102aacb448c199ba891",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v217\\symbolic_name_20260918_v1\\report.json": "35fa834326d9c5d22f3cfa6ed9ecf1031c692f6caf36508c83db38e105cbddf4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\symbolic_name_theme_v217.py": "2dd8412a0a516bb0b50f57a853c6cb4106482114cf290b0d6135e334db7aef22"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "version": "v132-height-anchor-joint-buy-1",
+  "evaluation": {
+    "status": "DIAGNOSTIC_ONLY",
+    "rank_top1_every_session": {
+      "signals": 563,
+      "weeks": 120,
+      "signals_per_week": 4.691666666666666,
+      "fill_proxies": 305,
+      "queue_unverifiable": 89,
+      "no_next_day_board_touch": 167,
+      "outcome_unavailable": 2,
+      "b1": {
+        "known": 305,
+        "mean": -0.04202881413571045,
+        "median": -0.0433024789109222,
+        "positive_rate": 0.42295081967213116,
+        "positive_wilson95": [
+          0.36880337711457856,
+          0.4790149819248176
+        ],
+        "large_loss_rate": 0.4459016393442623,
+        "large_loss_wilson95": [
+          0.39113427118906646,
+          0.5020147894130627
+        ]
+      },
+      "b2": {
+        "known": 304,
+        "mean": -0.05168876146500673,
+        "median": -0.0423566793249825,
+        "positive_rate": 0.35526315789473684,
+        "positive_wilson95": [
+          0.303576087603419,
+          0.41056248120041255
+        ],
+        "large_loss_rate": 0.45394736842105265,
+        "large_loss_wilson95": [
+          0.3989024626886913,
+          0.5101416273852551
+        ]
+      },
+      "b3": {
+        "known": 303,
+        "mean": -0.05618739636003511,
+        "median": -0.0985468610400681,
+        "positive_rate": 0.36303630363036304,
+        "positive_wilson95": [
+          0.3109185861979296,
+          0.4185834168266947
+        ],
+        "large_loss_rate": 0.5478547854785478,
+        "large_loss_wilson95": [
+          0.4915643040934006,
+          0.6029470442473932
+        ]
+      }
+    },
+    "online_threshold_gate": {
+      "signals": 0,
+      "weeks": 0,
+      "signals_per_week": null,
+      "fill_proxies": 0,
+      "queue_unverifiable": 0,
+      "no_next_day_board_touch": 0,
+      "outcome_unavailable": 0,
+      "b1": {
+        "known": 0,
+        "mean": null,
+        "median": null,
+        "positive_rate": null,
+        "positive_wilson95": null,
+        "large_loss_rate": null,
+        "large_loss_wilson95": null
+      },
+      "b2": {
+        "known": 0,
+        "mean": null,
+        "median": null,
+        "positive_rate": null,
+        "positive_wilson95": null,
+        "large_loss_rate": null,
+        "large_loss_wilson95": null
+      },
+      "b3": {
+        "known": 0,
+        "mean": null,
+        "median": null,
+        "positive_rate": null,
+        "positive_wilson95": null,
+        "large_loss_rate": null,
+        "large_loss_wilson95": null
+      }
+    },
+    "threshold_status_counts": {
+      "NO_THRESHOLD_MEETS_CHALLENGE": 504,
+      "INSUFFICIENT_PRIOR_FILLS": 59
+    },
+    "gated_role_success": {
+      "known": 0,
+      "rate": null
+    },
+    "governance": {
+      "future_label_in_features": false,
+      "time_embargo_applied": true,
+      "threshold_uses_current_or_future_result": false,
+      "unfilled_runner_up_substitution": false,
+      "actual_fill_verified": false,
+      "complete_exit_rule_tested": false,
+      "deployment_authorized": false
+    }
+  },
+  "target_definition": {
+    "role": "becomes or remains reconstructed maximum board within next 1-3 sessions",
+    "execution": "next session touches inferred upper limit and is not one-price",
+    "value": "B+2 close net mark relative to hypothetical upper-limit entry is positive",
+    "risk": "same B+2 net close mark is <= -7%"
+  },
+  "limitations": [
+    "reconstructed historical pool is not independently proven full-market complete",
+    "daily high touch cannot prove an accepted order or fill",
+    "online threshold is prequential research, not an untouched final blind test",
+    "B+2 close mark is not a frozen complete-trade exit result"
+  ]
+}

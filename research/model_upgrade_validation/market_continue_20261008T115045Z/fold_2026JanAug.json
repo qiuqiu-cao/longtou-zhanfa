@@ -1,0 +1,158 @@
+{
+  "BASE": {
+    "registered_rows": 160,
+    "known_outcome_rows": 160,
+    "predicted_rows": 160,
+    "scored_rows": 160,
+    "unknown_outcome_rows": 0,
+    "unknown_prediction_rows": 0,
+    "label_coverage": 1.0,
+    "scoring_coverage": 1.0,
+    "valid_label_scoring_coverage": 1.0,
+    "correct": 101,
+    "accuracy": 0.63125,
+    "confusion_matrix": {
+      "IMPROVE": {
+        "IMPROVE": 51,
+        "CONTINUE": 1,
+        "WORSEN": 13
+      },
+      "CONTINUE": {
+        "IMPROVE": 17,
+        "CONTINUE": 0,
+        "WORSEN": 14
+      },
+      "WORSEN": {
+        "IMPROVE": 12,
+        "CONTINUE": 2,
+        "WORSEN": 50
+      }
+    },
+    "by_class": {
+      "IMPROVE": {
+        "known_outcome_support": 65,
+        "scored_support": 65,
+        "scored_calls": 80,
+        "tp": 51,
+        "fp": 29,
+        "fn": 14,
+        "precision": 0.6375,
+        "scored_recall": 0.7846153846153846,
+        "complete_recall": 0.7846153846153846,
+        "F1": 0.7034482758620689
+      },
+      "CONTINUE": {
+        "known_outcome_support": 31,
+        "scored_support": 31,
+        "scored_calls": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 31,
+        "precision": 0.0,
+        "scored_recall": 0.0,
+        "complete_recall": 0.0,
+        "F1": 0.0
+      },
+      "WORSEN": {
+        "known_outcome_support": 64,
+        "scored_support": 64,
+        "scored_calls": 77,
+        "tp": 50,
+        "fp": 27,
+        "fn": 14,
+        "precision": 0.6493506493506493,
+        "scored_recall": 0.78125,
+        "complete_recall": 0.78125,
+        "F1": 0.7092198581560284
+      }
+    },
+    "all_registered_classes_scored": true,
+    "macro_f1": 0.4708893780060324,
+    "balanced_accuracy": 0.5219551282051281
+  },
+  "M1_BALANCED_SUBSAMPLE": {
+    "registered_rows": 160,
+    "known_outcome_rows": 160,
+    "predicted_rows": 160,
+    "scored_rows": 160,
+    "unknown_outcome_rows": 0,
+    "unknown_prediction_rows": 0,
+    "label_coverage": 1.0,
+    "scoring_coverage": 1.0,
+    "valid_label_scoring_coverage": 1.0,
+    "correct": 85,
+    "accuracy": 0.53125,
+    "confusion_matrix": {
+      "IMPROVE": {
+        "IMPROVE": 43,
+        "CONTINUE": 20,
+        "WORSEN": 2
+      },
+      "CONTINUE": {
+        "IMPROVE": 13,
+        "CONTINUE": 14,
+        "WORSEN": 4
+      },
+      "WORSEN": {
+        "IMPROVE": 8,
+        "CONTINUE": 28,
+        "WORSEN": 28
+      }
+    },
+    "by_class": {
+      "IMPROVE": {
+        "known_outcome_support": 65,
+        "scored_support": 65,
+        "scored_calls": 64,
+        "tp": 43,
+        "fp": 21,
+        "fn": 22,
+        "precision": 0.671875,
+        "scored_recall": 0.6615384615384615,
+        "complete_recall": 0.6615384615384615,
+        "F1": 0.6666666666666666
+      },
+      "CONTINUE": {
+        "known_outcome_support": 31,
+        "scored_support": 31,
+        "scored_calls": 62,
+        "tp": 14,
+        "fp": 48,
+        "fn": 17,
+        "precision": 0.22580645161290322,
+        "scored_recall": 0.45161290322580644,
+        "complete_recall": 0.45161290322580644,
+        "F1": 0.3010752688172043
+      },
+      "WORSEN": {
+        "known_outcome_support": 64,
+        "scored_support": 64,
+        "scored_calls": 34,
+        "tp": 28,
+        "fp": 6,
+        "fn": 36,
+        "precision": 0.8235294117647058,
+        "scored_recall": 0.4375,
+        "complete_recall": 0.4375,
+        "F1": 0.5714285714285714
+      }
+    },
+    "all_registered_classes_scored": true,
+    "macro_f1": 0.5130568356374808,
+    "balanced_accuracy": 0.516883788254756
+  },
+  "diagnostic_gate": {
+    "checks": {
+      "accuracy_improves_at_least3pp": false,
+      "label_coverage_at_least90pct": true,
+      "scoring_coverage_not_lower": true,
+      "macro_f1_not_lower": true,
+      "IMPROVE_complete_recall_not_lower": false,
+      "CONTINUE_complete_recall_not_lower": true,
+      "WORSEN_complete_recall_not_lower": false,
+      "CONTINUE_recall_strictly_improves": true
+    },
+    "passed": false
+  },
+  "accuracy_difference": -0.09999999999999998
+}

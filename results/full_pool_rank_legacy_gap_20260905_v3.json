@@ -1,0 +1,174 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "legacy_feature_rows": 37325,
+  "legacy_outcome_rows": 26775,
+  "matched_rows": 26775,
+  "feature_only_rows": 10550,
+  "outcome_only_rows": 0,
+  "valid_board_and_group_rows": 26331,
+  "board_group_source": "supplied",
+  "feature_time_at_or_before_close_rows": 26775,
+  "board_counts": {
+    "1": 19771,
+    "2": 3850,
+    "3": 1375,
+    "4": 663,
+    "5": 325,
+    "6": 167,
+    "7": 85,
+    "8": 43,
+    "9": 26,
+    "10": 13,
+    "11": 7,
+    "12": 4,
+    "13": 2
+  },
+  "first_and_relay_feature_coverage": true,
+  "inventory_reconciliation": {
+    "inventory_candidate_rows": 37325,
+    "feature_rows_found_in_inventory": 37325,
+    "feature_rows_missing_from_inventory": 0,
+    "board_height_exact_matches": 36746,
+    "inventory_left_censored_but_feature_height_assigned": 0,
+    "feature_coverage_of_inventory": 1.0,
+    "outcome_matched_coverage_of_inventory": 0.7173476222371065
+  },
+  "target_proxy_counts": {
+    "resolved": 26571,
+    "unresolved": 204,
+    "positive": 2903,
+    "negative": 23668
+  },
+  "feature_coverage": {
+    "boards_for_comparison": {
+      "observed": 26331,
+      "missing": 444,
+      "coverage": 0.9834173669467787
+    },
+    "height_gap_to_known_top": {
+      "observed": 26331,
+      "missing": 444,
+      "coverage": 0.9834173669467787
+    },
+    "same_height_known_count": {
+      "observed": 26331,
+      "missing": 444,
+      "coverage": 0.9834173669467787
+    },
+    "sole_known_top_proxy": {
+      "observed": 26331,
+      "missing": 444,
+      "coverage": 0.9834173669467787
+    },
+    "open_gap_pct": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "amplitude_pct": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "amount_to_float_cap": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "one_price_day_proxy": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "market_limit_count": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "market_consecutive_count": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "market_failed_rate": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "market_seal_rate": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "market_yesterday_premium": {
+      "observed": 26741,
+      "missing": 34,
+      "coverage": 0.9987301587301587
+    },
+    "market_previous_limit_tail_loss": {
+      "observed": 26741,
+      "missing": 34,
+      "coverage": 0.9987301587301587
+    },
+    "market_promotion_overall": {
+      "observed": 26741,
+      "missing": 34,
+      "coverage": 0.9987301587301587
+    },
+    "market_promotion_mid": {
+      "observed": 26716,
+      "missing": 59,
+      "coverage": 0.9977964519140989
+    },
+    "market_space_feedback": {
+      "observed": 26741,
+      "missing": 34,
+      "coverage": 0.9987301587301587
+    },
+    "market_middle_density": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    },
+    "market_ladder_gap_count": {
+      "observed": 26775,
+      "missing": 0,
+      "coverage": 1.0
+    }
+  },
+  "feature_status_values": [
+    "historical_reconstruction_not_forward_archive",
+    "left_censored_identity"
+  ],
+  "pool_scope_values": [
+    "available_nonst_mainboard_history_not_complete_market"
+  ],
+  "usable_for_exploratory_proxy_research": true,
+  "usable_for_locked_model_stack": false,
+  "complete_trade_evidence": false,
+  "blocking_gaps": [
+    "ACTUAL_QUEUE_AND_FILL_EVIDENCE_UNAVAILABLE",
+    "FAILED_BOARD_DAILY_MANIFESTS_UNAVAILABLE",
+    "FEATURE_AVAILABILITY_IS_RETROSPECTIVE",
+    "FULL_HISTORICAL_UNIVERSE_NOT_VERIFIED",
+    "HISTORICAL_RECONSTRUCTION_ONLY",
+    "ORIGINAL_POINT_IN_TIME_CAPTURE_UNAVAILABLE",
+    "POINT_IN_TIME_SECURITY_STATUS_NOT_REAUDITED",
+    "POOL_SCOPE_NOT_COMPLETE_MARKET",
+    "ROUNDED_LIMIT_AND_BOARD_IDENTITY_ONLY"
+  ],
+  "next_data_actions": [
+    "archive each new closing limit pool and failed-board pool with candidate IDs and board counts",
+    "attach dated exchange/security-master status to every candidate",
+    "store features with observed_at and available_at at collection time",
+    "continue separate auction/minute/order/fill and complete-trade ledgers"
+  ],
+  "note": "legacy opportunity labels are not actual trades and cannot satisfy the 70% complete-trade gate",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\full_pool_features_20260905_v1\\full_pool_eod_features.csv": "6384d1746c551c474dbcbce8d396ae10ff6fddabc84df0c73a0d80da414570fa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\full_pool_outcomes_20260905\\outcomes_LABEL_ONLY.csv": "64c24f970a2ca7f4c49e0661f2fa155df2572a3a669f1ad46ad504d98d0fa304",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\manifest.json": "c9cddad05789adc3b7cf9897a4c0f3438b69a648fd310fc9213b7423a446ac88",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_rank_legacy_gap_audit.py": "e37a04a646dee8df10397dd758e3422c85016f807a89e1e88b7a4f885f67a295"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "status": "DATA_COVERAGE_ONLY",
+  "rows": 676,
+  "dimensions": {
+    "height_feedback": {
+      "fields": {
+        "promotion_1to2": {
+          "column_exists": true,
+          "nonmissing": 675,
+          "missing": 1
+        },
+        "promotion_2to3": {
+          "column_exists": true,
+          "nonmissing": 670,
+          "missing": 6
+        },
+        "promotion_3to4": {
+          "column_exists": true,
+          "nonmissing": 601,
+          "missing": 75
+        },
+        "space_feedback": {
+          "column_exists": true,
+          "nonmissing": 675,
+          "missing": 1
+        }
+      },
+      "jointly_nonmissing": 597,
+      "source_verified_by_this_audit": false
+    },
+    "loss_transmission": {
+      "fields": {
+        "previous_limit_tail_loss": {
+          "column_exists": true,
+          "nonmissing": 675,
+          "missing": 1
+        },
+        "failed_tail_loss": {
+          "column_exists": true,
+          "nonmissing": 675,
+          "missing": 1
+        },
+        "down_limit_count": {
+          "column_exists": true,
+          "nonmissing": 675,
+          "missing": 1
+        }
+      },
+      "jointly_nonmissing": 674,
+      "source_verified_by_this_audit": false
+    },
+    "intraday_absorption": {
+      "fields": {
+        "first_pullback_volume_ratio": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        },
+        "vwap_reclaim_at": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        },
+        "reclaim_volume_ratio": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        }
+      },
+      "jointly_nonmissing": 0,
+      "source_verified_by_this_audit": false
+    },
+    "specific_theme_sync": {
+      "fields": {
+        "verified_theme_sync_rate": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        },
+        "theme_roster_available_at": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        }
+      },
+      "jointly_nonmissing": 0,
+      "source_verified_by_this_audit": false
+    },
+    "repair_close_quality": {
+      "fields": {
+        "repair_first_confirmed_at": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        },
+        "repair_close_retention": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        },
+        "repair_volume_support": {
+          "column_exists": false,
+          "nonmissing": 0,
+          "missing": 676
+        }
+      },
+      "jointly_nonmissing": 0,
+      "source_verified_by_this_audit": false
+    }
+  },
+  "date_start": "2023-11-28",
+  "date_end": "2026-09-11",
+  "data_status_counts": {
+    "verified": 675,
+    "sparse": 1
+  },
+  "warning": "Nonmissing does not prove source accuracy, point-in-time availability, or complete universe.",
+  "substitution_of_eod_for_intraday_allowed": false,
+  "deployment_authorized": false,
+  "input": "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260911\\emotion_overlay_v109\\market_emotion_model_input.csv",
+  "input_sha256": "29b4ab4710cdadf3d36a60e381e4c965365d0a3f2d7c89deca871af3c21d8ef1"
+}

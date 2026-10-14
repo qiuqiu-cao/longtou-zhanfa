@@ -1,0 +1,2085 @@
+{
+  "version": "v48-causal-reseal-replay-2",
+  "earliest_confirmation_rows": [
+    {
+      "code": "000020",
+      "signal_date": "2024-01-16",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-01-17",
+      "provider_code": "sz.000020",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "加速",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 4.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240117095500000",
+        "confirmation_index": 4,
+        "observed_bars": 5,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 16.62,
+        "asof": "20240117100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240117100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 16.62,
+        "asof": "20240117100000000",
+        "first_confirmation_time": "20240117095500000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "002319",
+      "signal_date": "2024-02-01",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-02",
+      "provider_code": "sz.002319",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 6.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240202094000000",
+        "confirmation_index": 1,
+        "observed_bars": 2,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 14.08,
+        "asof": "20240202100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": false,
+        "signal_type": "NOT_STILL_SEALED_AT_CUTOFF",
+        "confirmation_time": null,
+        "confirmation_index": null,
+        "observed_bars": 6,
+        "decision": "NO_ORDER",
+        "entry_price_cap": 14.08,
+        "asof": "20240202100000000",
+        "first_confirmation_time": "20240202094000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 2
+    },
+    {
+      "code": "603958",
+      "signal_date": "2024-02-02",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-05",
+      "provider_code": "sh.603958",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "退潮",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 2.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240205095000000",
+        "confirmation_index": 3,
+        "observed_bars": 4,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 13.92,
+        "asof": "20240205100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240205100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 13.92,
+        "asof": "20240205100000000",
+        "first_confirmation_time": "20240205095000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "603958",
+      "signal_date": "2024-02-05",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-06",
+      "provider_code": "sh.603958",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 1.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240206094000000",
+        "confirmation_index": 1,
+        "observed_bars": 2,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 15.31,
+        "asof": "20240206100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240206100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 15.31,
+        "asof": "20240206100000000",
+        "first_confirmation_time": "20240206094000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "002625",
+      "signal_date": "2024-02-07",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-08",
+      "provider_code": "sz.002625",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "升温",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 3.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240208094000000",
+        "confirmation_index": 1,
+        "observed_bars": 2,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 13.86,
+        "asof": "20240208100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240208100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 13.86,
+        "asof": "20240208100000000",
+        "first_confirmation_time": "20240208094000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 2
+    },
+    {
+      "code": "002290",
+      "signal_date": "2024-02-19",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-20",
+      "provider_code": "sz.002290",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 5.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240220094500000",
+        "confirmation_index": 2,
+        "observed_bars": 3,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 9.7,
+        "asof": "20240220100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240220100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 9.7,
+        "asof": "20240220100000000",
+        "first_confirmation_time": "20240220094500000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "601798",
+      "signal_date": "2024-02-20",
+      "boards": 4,
+      "start_known": true,
+      "entry_date": "2024-02-21",
+      "provider_code": "sh.601798",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 4.0,
+      "height_gap_to_known_top": 4.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240221094500000",
+        "confirmation_index": 2,
+        "observed_bars": 3,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 8.27,
+        "asof": "20240221100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240221100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 8.27,
+        "asof": "20240221100000000",
+        "first_confirmation_time": "20240221094500000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 4
+    },
+    {
+      "code": "000908",
+      "signal_date": "2024-02-21",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-22",
+      "provider_code": "sz.000908",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 6.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240222094000000",
+        "confirmation_index": 1,
+        "observed_bars": 2,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 2.02,
+        "asof": "20240222100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240222100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 2.02,
+        "asof": "20240222100000000",
+        "first_confirmation_time": "20240222094000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 2
+    },
+    {
+      "code": "600579",
+      "signal_date": "2024-02-22",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-23",
+      "provider_code": "sh.600579",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 7.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240223095500000",
+        "confirmation_index": 4,
+        "observed_bars": 5,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 7.66,
+        "asof": "20240223100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240223100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 7.66,
+        "asof": "20240223100000000",
+        "first_confirmation_time": "20240223095500000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "603363",
+      "signal_date": "2024-02-23",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-26",
+      "provider_code": "sh.603363",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "修复",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 9.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240226094500000",
+        "confirmation_index": 2,
+        "observed_bars": 3,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 4.28,
+        "asof": "20240226100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": false,
+        "signal_type": "NOT_STILL_SEALED_AT_CUTOFF",
+        "confirmation_time": null,
+        "confirmation_index": null,
+        "observed_bars": 6,
+        "decision": "NO_ORDER",
+        "entry_price_cap": 4.28,
+        "asof": "20240226100000000",
+        "first_confirmation_time": "20240226094500000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 2
+    },
+    {
+      "code": "002403",
+      "signal_date": "2024-02-26",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-27",
+      "provider_code": "sz.002403",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "一致",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 9.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240227094000000",
+        "confirmation_index": 1,
+        "observed_bars": 2,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 9.09,
+        "asof": "20240227100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240227100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 9.09,
+        "asof": "20240227100000000",
+        "first_confirmation_time": "20240227094000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 5
+    },
+    {
+      "code": "603363",
+      "signal_date": "2024-02-27",
+      "boards": 4,
+      "start_known": true,
+      "entry_date": "2024-02-28",
+      "provider_code": "sh.603363",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "加速",
+      "boards_for_comparison": 4.0,
+      "height_gap_to_known_top": 9.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240228094000000",
+        "confirmation_index": 1,
+        "observed_bars": 2,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 5.18,
+        "asof": "20240228100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240228100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 5.18,
+        "asof": "20240228100000000",
+        "first_confirmation_time": "20240228094000000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 3
+    },
+    {
+      "code": "000586",
+      "signal_date": "2024-02-28",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-29",
+      "provider_code": "sz.000586",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "退潮",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 6.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240229095500000",
+        "confirmation_index": 4,
+        "observed_bars": 5,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_NEXT_BAR",
+        "entry_price_cap": 11.8,
+        "asof": "20240229100000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240229100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 11.8,
+        "asof": "20240229100000000",
+        "first_confirmation_time": "20240229095500000"
+      },
+      "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    }
+  ],
+  "stable_1000_rows": [
+    {
+      "code": "000020",
+      "signal_date": "2024-01-16",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-01-17",
+      "provider_code": "sz.000020",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "加速",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 4.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240117100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 16.62,
+        "asof": "20240117100000000",
+        "first_confirmation_time": "20240117095500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240117100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 16.62,
+        "asof": "20240117100000000",
+        "first_confirmation_time": "20240117095500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "600088",
+      "signal_date": "2024-02-01",
+      "boards": 8,
+      "start_known": true,
+      "entry_date": "2024-02-02",
+      "provider_code": "sh.600088",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 8.0,
+      "height_gap_to_known_top": 0.0,
+      "sole_known_top_proxy": 1.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240202100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 31.85,
+        "asof": "20240202100000000",
+        "first_confirmation_time": "20240202094500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240202100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 31.85,
+        "asof": "20240202100000000",
+        "first_confirmation_time": "20240202094500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "603958",
+      "signal_date": "2024-02-02",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-05",
+      "provider_code": "sh.603958",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "退潮",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 2.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240205100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 13.92,
+        "asof": "20240205100000000",
+        "first_confirmation_time": "20240205095000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240205100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 13.92,
+        "asof": "20240205100000000",
+        "first_confirmation_time": "20240205095000000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "603958",
+      "signal_date": "2024-02-05",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-06",
+      "provider_code": "sh.603958",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 1.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240206100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 15.31,
+        "asof": "20240206100000000",
+        "first_confirmation_time": "20240206094000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240206100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 15.31,
+        "asof": "20240206100000000",
+        "first_confirmation_time": "20240206094000000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "002185",
+      "signal_date": "2024-02-07",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-08",
+      "provider_code": "sz.002185",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "升温",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 3.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240208100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 7.79,
+        "asof": "20240208100000000",
+        "first_confirmation_time": "20240208095000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240208100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 7.79,
+        "asof": "20240208100000000",
+        "first_confirmation_time": "20240208095000000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 2
+    },
+    {
+      "code": "002290",
+      "signal_date": "2024-02-19",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-20",
+      "provider_code": "sz.002290",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 5.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240220100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 9.7,
+        "asof": "20240220100000000",
+        "first_confirmation_time": "20240220094500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240220100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 9.7,
+        "asof": "20240220100000000",
+        "first_confirmation_time": "20240220094500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "601798",
+      "signal_date": "2024-02-20",
+      "boards": 4,
+      "start_known": true,
+      "entry_date": "2024-02-21",
+      "provider_code": "sh.601798",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 4.0,
+      "height_gap_to_known_top": 4.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240221100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 8.27,
+        "asof": "20240221100000000",
+        "first_confirmation_time": "20240221094500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240221100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 8.27,
+        "asof": "20240221100000000",
+        "first_confirmation_time": "20240221094500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 3
+    },
+    {
+      "code": "000908",
+      "signal_date": "2024-02-21",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-22",
+      "provider_code": "sz.000908",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 6.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240222100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 2.02,
+        "asof": "20240222100000000",
+        "first_confirmation_time": "20240222094000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240222100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 2.02,
+        "asof": "20240222100000000",
+        "first_confirmation_time": "20240222094000000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "600579",
+      "signal_date": "2024-02-22",
+      "boards": 3,
+      "start_known": true,
+      "entry_date": "2024-02-23",
+      "provider_code": "sh.600579",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "大分歧",
+      "boards_for_comparison": 3.0,
+      "height_gap_to_known_top": 7.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240223100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 7.66,
+        "asof": "20240223100000000",
+        "first_confirmation_time": "20240223095500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240223100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 7.66,
+        "asof": "20240223100000000",
+        "first_confirmation_time": "20240223095500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "600715",
+      "signal_date": "2024-02-23",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-26",
+      "provider_code": "sh.600715",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "修复",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 9.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240226100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 2.0,
+        "asof": "20240226100000000",
+        "first_confirmation_time": "20240226095000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "TOUCHED_PULLBACK_RESEAL",
+        "confirmation_time": "20240226100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 2.0,
+        "asof": "20240226100000000",
+        "first_confirmation_time": "20240226095000000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    },
+    {
+      "code": "603960",
+      "signal_date": "2024-02-26",
+      "boards": 12,
+      "start_known": true,
+      "entry_date": "2024-02-27",
+      "provider_code": "sh.603960",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "一致",
+      "boards_for_comparison": 12.0,
+      "height_gap_to_known_top": 0.0,
+      "sole_known_top_proxy": 1.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240227100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 41.03,
+        "asof": "20240227100000000",
+        "first_confirmation_time": "20240227094500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240227100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 41.03,
+        "asof": "20240227100000000",
+        "first_confirmation_time": "20240227094500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 3
+    },
+    {
+      "code": "603363",
+      "signal_date": "2024-02-27",
+      "boards": 4,
+      "start_known": true,
+      "entry_date": "2024-02-28",
+      "provider_code": "sh.603363",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "加速",
+      "boards_for_comparison": 4.0,
+      "height_gap_to_known_top": 9.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240228100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 5.18,
+        "asof": "20240228100000000",
+        "first_confirmation_time": "20240228094000000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240228100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 5.18,
+        "asof": "20240228100000000",
+        "first_confirmation_time": "20240228094000000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 3
+    },
+    {
+      "code": "000586",
+      "signal_date": "2024-02-28",
+      "boards": 2,
+      "start_known": true,
+      "entry_date": "2024-02-29",
+      "provider_code": "sz.000586",
+      "board_group": "CONSECUTIVE_BOARD",
+      "candidate_scope_eligible": true,
+      "minute_source_status": "HISTORICAL_PROVIDER_ARCHIVE_NOT_FORWARD",
+      "market_emotion_state": "退潮",
+      "boards_for_comparison": 2.0,
+      "height_gap_to_known_top": 6.0,
+      "sole_known_top_proxy": 0.0,
+      "signal": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240229100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 11.8,
+        "asof": "20240229100000000",
+        "first_confirmation_time": "20240229095500000"
+      },
+      "cutoff_signal_1000": {
+        "signal": true,
+        "signal_type": "FIRST_SEAL_FROM_BELOW",
+        "confirmation_time": "20240229100000000",
+        "confirmation_index": 5,
+        "observed_bars": 6,
+        "decision": "SUBMIT_LIMIT_BUY_PROXY_AFTER_STABLE_CUTOFF",
+        "entry_price_cap": 11.8,
+        "asof": "20240229100000000",
+        "first_confirmation_time": "20240229095500000"
+      },
+      "selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+      "same_day_signal_count": 1
+    }
+  ],
+  "missing": [
+    {
+      "code": "000595",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001217",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002578",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002632",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002660",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002952",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002976",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603052",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603333",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603396",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603530",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603577",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605118",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605167",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605178",
+      "entry_date": "2024-01-03",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000595",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000820",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001217",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001332",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600792",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600892",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603099",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603332",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603333",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603530",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603577",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605118",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605167",
+      "entry_date": "2024-01-04",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000820",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001339",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002819",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002888",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003015",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600593",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600805",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600844",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603099",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605167",
+      "entry_date": "2024-01-05",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002178",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002819",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003015",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003025",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600593",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601096",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603099",
+      "entry_date": "2024-01-08",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002403",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002819",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002882",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003025",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600593",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603065",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603099",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605158",
+      "entry_date": "2024-01-09",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000715",
+      "entry_date": "2024-01-10",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002347",
+      "entry_date": "2024-01-10",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002403",
+      "entry_date": "2024-01-10",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003025",
+      "entry_date": "2024-01-10",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600593",
+      "entry_date": "2024-01-10",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603099",
+      "entry_date": "2024-01-10",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000715",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001368",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002403",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002641",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603032",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603099",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603268",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603333",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603798",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603877",
+      "entry_date": "2024-01-11",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000715",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002641",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002708",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002882",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601086",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601096",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603219",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603231",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603333",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603877",
+      "entry_date": "2024-01-12",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603955",
+      "entry_date": "2024-01-15",
+      "state": "MISSING_DAILY_COMPARATOR"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002140",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002868",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600819",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600828",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603038",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603097",
+      "entry_date": "2024-01-16",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000020",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000532",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002767",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600318",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600630",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603958",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605366",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605399",
+      "entry_date": "2024-01-18",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001216",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002333",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003027",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600156",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600318",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603038",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603217",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603958",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605180",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605399",
+      "entry_date": "2024-01-19",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000068",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000635",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001216",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003027",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600156",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601566",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603066",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603083",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603958",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605399",
+      "entry_date": "2024-01-22",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-23",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001216",
+      "entry_date": "2024-01-23",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003027",
+      "entry_date": "2024-01-23",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600156",
+      "entry_date": "2024-01-23",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601113",
+      "entry_date": "2024-01-23",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603958",
+      "entry_date": "2024-01-23",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000017",
+      "entry_date": "2024-01-24",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000070",
+      "entry_date": "2024-01-24",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001216",
+      "entry_date": "2024-01-24",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "003027",
+      "entry_date": "2024-01-24",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603810",
+      "entry_date": "2024-01-24",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603958",
+      "entry_date": "2024-01-24",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000070",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600272",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600446",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600629",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600639",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600675",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600679",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600816",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600822",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601136",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603083",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603648",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603958",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "605268",
+      "entry_date": "2024-01-25",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000020",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000068",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000070",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000151",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001226",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002116",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002423",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600097",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600272",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600621",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600622",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600629",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600638",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600639",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600648",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600663",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600675",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600679",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600816",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600822",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600830",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603093",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603122",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603153",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603648",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603860",
+      "entry_date": "2024-01-26",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000020",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000068",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000070",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000151",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000736",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002116",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002423",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600171",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600272",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600622",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600629",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600639",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600648",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600675",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600679",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600708",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600822",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600830",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "601068",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603648",
+      "entry_date": "2024-01-29",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000068",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000151",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001379",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002116",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600639",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600675",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600679",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600708",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603648",
+      "entry_date": "2024-01-30",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "000037",
+      "entry_date": "2024-01-31",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001376",
+      "entry_date": "2024-01-31",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "002116",
+      "entry_date": "2024-01-31",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-01-31",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "001376",
+      "entry_date": "2024-02-01",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600088",
+      "entry_date": "2024-02-01",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "600629",
+      "entry_date": "2024-02-01",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603721",
+      "entry_date": "2024-02-01",
+      "state": "MISSING_ARCHIVE"
+    },
+    {
+      "code": "603767",
+      "entry_date": "2024-02-01",
+      "state": "MISSING_ARCHIVE"
+    }
+  ]
+}

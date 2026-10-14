@@ -1,0 +1,51 @@
+{
+  "version": "v91-emotion-risk-veto-paper-lock-1",
+  "status": "FROZEN_PAPER_VALIDATION_ONLY",
+  "locked_at": "2026-09-10T03:27:21.354864+08:00",
+  "risk_off_threshold": 0.4969478315099285,
+  "model": {
+    "ensemble_version": "v87-emotion-regime-ensemble-1",
+    "challenger_weight": 0.3,
+    "markov_weight": 0.7
+  },
+  "paper_rule": {
+    "trigger": "RISK_OFF probability >= fixed threshold",
+    "effect": {
+      "high_board_relay": "VETO",
+      "middle_board_relay": "VETO",
+      "first_board": "WATCH_ONLY_UNLESS_SEPARATE_RULE_VERSION_IS_VALIDATED"
+    },
+    "never_creates_buy_signal": true,
+    "missing_probability_action": "VETO_FAIL_CLOSED"
+  },
+  "forward_gate": {
+    "minimum_predictions": 60,
+    "required_high_risk_events": 15,
+    "required_direction_replication": [
+      "failed_rate_higher",
+      "tail_loss_lower",
+      "down_limit_count_higher"
+    ],
+    "status": "NOT_STARTED"
+  },
+  "current_shadow_application": {
+    "signal_date": "2026-09-09",
+    "risk_off_probability": 0.48908234724369043,
+    "triggered": false,
+    "status": "SHADOW_ONLY_NO_TRADE_AUTHORITY"
+  },
+  "evidence": {
+    "economic_audit": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v90\\emotion_fixed_cutoff_audit_20260910_v1\\report.json",
+      "sha256": "ae31368523bbbcd9fb77684d7cfc99920659c9c666f3f92940b96bf5f7e9d5fc"
+    },
+    "ensemble_report": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v87\\emotion_regime_ensemble_20260910_v1\\report.json",
+      "sha256": "f9647a7dc2df751ffc6e6de0a351cb6a4f23cf438226546a129256fdc020da6f"
+    },
+    "outer_blind_n": 202,
+    "high_risk_precision": 0.7352941176470589
+  },
+  "deployment_allowed": false,
+  "guarantee": false
+}

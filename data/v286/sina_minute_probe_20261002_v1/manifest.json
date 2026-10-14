@@ -1,0 +1,42 @@
+{
+  "status": "MINUTE_SOURCE_FEASIBILITY_ONLY",
+  "recorded_at": "2026-10-02T17:53:55.138400+08:00",
+  "source": "Sina public minute endpoint already used by project",
+  "requested_codes": [
+    "000678",
+    "600825"
+  ],
+  "requested_bar_limit": 240,
+  "errors": {},
+  "parsed_rows": 480,
+  "returned_dates": [
+    "2026-09-29",
+    "2026-09-30"
+  ],
+  "responses": {
+    "sz000678": {
+      "url": "https://quotes.sina.cn/cn/api/jsonp_v2.php/var%20_data=/CN_MarketDataService.getKLineData?symbol=sz000678&scale=1&ma=no&datalen=240",
+      "http_status": 200,
+      "requested_at": "2026-10-02T17:53:53.344001+08:00",
+      "received_at": "2026-10-02T17:53:54.919780+08:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v286\\sina_minute_probe_20261002_v1\\sz000678.response",
+      "sha256": "ac5f5eb2e41f64e4ebbf754eb5da1270cf93ed754310e7200350992c1c725f7d"
+    },
+    "sh600825": {
+      "url": "https://quotes.sina.cn/cn/api/jsonp_v2.php/var%20_data=/CN_MarketDataService.getKLineData?symbol=sh600825&scale=1&ma=no&datalen=240",
+      "http_status": 200,
+      "requested_at": "2026-10-02T17:53:53.344275+08:00",
+      "received_at": "2026-10-02T17:53:55.082607+08:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v286\\sina_minute_probe_20261002_v1\\sh600825.response",
+      "sha256": "ea7fca3be943e5e983976e7fba1848b2a52714c49f272950cf16acaca086e265"
+    }
+  },
+  "old_forecast_rewrite_allowed": false,
+  "trade_authorized": false,
+  "accuracy_claim_allowed": false,
+  "raw_minute_prices_units_and_daily_reconciliation_required": true,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\probe_public_minute_sources_v286.py": "dfc3be42a30d176a036403defccb8209cf206ef28ab6574a17b9a96915f7e339",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_minute_capture_v1.py": "88b21cb80c33066f9e3d83c1466c014fdba1a006055e9a440f98b75271bc903a"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "version": "v290-necessary-closing-board-sanity-1",
+  "recorded_at": "2026-10-02T11:39:15.483877+00:00",
+  "status": "FULL_COHORT_NECESSARY_CONDITION_AUDIT",
+  "candidate_rows": 2888,
+  "status_counts": {
+    "NECESSARY_CONDITION_ONLY": 2878,
+    "CLOSE_LIMIT_CONTRADICTION": 10
+  },
+  "contradictions": [
+    {
+      "date": "2025-12-15",
+      "code": "002682",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-01-14",
+      "code": "600676",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-04-15",
+      "code": "002980",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-04-30",
+      "code": "603629",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-06-16",
+      "code": "002051",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-06-17",
+      "code": "002484",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-06-29",
+      "code": "002674",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-07-20",
+      "code": "000899",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-08-05",
+      "code": "001229",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    },
+    {
+      "date": "2026-08-05",
+      "code": "002536",
+      "status": "CLOSE_LIMIT_CONTRADICTION",
+      "necessary_close_high_passed": false,
+      "close_limit_confirmed": false,
+      "board_height_confirmed": false,
+      "trade_authorized": false,
+      "official_upper_limit_price": null,
+      "high_minus_close": "0.01",
+      "reason": "Verified traded high exceeds verified close by at least one cent; closing at a fixed legal upper limit is contradicted"
+    }
+  ],
+  "missing_candidates_dropped": false,
+  "original_labels_rewritten": false,
+  "original_forecast_rewritten": false,
+  "model_retrained": false,
+  "accuracy_claim_allowed": false,
+  "goal_verified": false,
+  "trade_authorized": false,
+  "inference": "Under a fixed legal upper bound, a close at that bound cannot be below a verified traded high; price agreement alone does not establish a legal upper bound",
+  "limitations": [
+    "This is a necessary-condition diagnostic, not official limit-price or security-status certification",
+    "High equal to close does not prove limit-up, uninterrupted boards, theme identity or actual fills",
+    "Historical labels and predictions remain unchanged; conflicts cannot be removed to improve reported accuracy",
+    "OHLC disagreement remains unknown; no assumption that raw previous close is an ex-right reference"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v290\\long_interval_audit_20261002_v1\\report.json": "1e997d8e9256ca247a810df76d416fb5805c177c879650fbe3fd7cf77ae518e3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\signal_checks.json": "8290a32711e17ef2e3d25223c139e15ce59d29dc3c2a1fed001a760c142de4ae",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\candidate_scope_NO_OUTCOMES.csv": "4aba5aca18a322fbaffa4c176eb775bca41da0d6269dd70f7b02c8da5cc0a2e7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\long_interval_layers_v290.py": "e4ccf0aaf92e8c7083a9fc38e8d00d671445dac530c9875b5110da107389409f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\report.json": "8cadc1b257fd434819c9d51e0213e07038267086c352362618d7f277953662c8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\signal_checks.json": "f434e2ae4ffa642e433a2dec3032156de8a8ea85e491b79b80916d919044740d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\recovery_scope_NO_OUTCOMES.csv": "c1451abe41905d494fe9bb12470d03da472458bfa25d0e4c35c72edc59e3885b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\interval_normalized.csv": "e2abf69a4d8dedd8ae8fd0158ac6262426822fbd7016fec90dddc39402a5694f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\daily_normalized.csv": "74b370dbbca3e49713f46673ea433c385f6c4e4c6c00fe6a7896ad84a25e108b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\closing_board_sanity_v290.py": "01aa5d7080dda01deac85756356c3b05370b0af85c91acaf3a15c707456d7780"
+  },
+  "artifact_hashes": {
+    "closing_board_ledger_NO_OUTCOMES.json": "d53a9e08275e172db6b5ab443e82cc9714b2d2abf283e2500ac6080a78cfba30"
+  }
+}

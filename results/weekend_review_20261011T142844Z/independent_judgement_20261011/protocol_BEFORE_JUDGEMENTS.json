@@ -1,0 +1,94 @@
+{
+  "formed_at": "2026-10-11T17:00:14.040823+00:00",
+  "hypothesis": "先独立比较周期、题材角色及完整同身位竞争，再对照模型，能够减少以低换手代理损失替代个股转弱判断的偏差；预测提升待检验。",
+  "baseline": "当前已保存BASE完整11只原始判断",
+  "challenger": "当次分析者独立主观判断；无新数值分数或概率",
+  "signal_date": "2026-10-09",
+  "target_date": "2026-10-12",
+  "exposure": "MODEL_OUTPUT_ALREADY_SEEN",
+  "not_blind": true,
+  "not_original_signal_day_forecast": true,
+  "production_registration_changed": false,
+  "scope": "当前实际形成的周末到开盘前独立观察；保持11只；不迁移原三臂/G1/T1窗口",
+  "metrics": [
+    "Accuracy及分母",
+    "完整正例Recall",
+    "Precision",
+    "F1",
+    "登记/预测/标签/可评分覆盖",
+    "板位和真实一字分层",
+    "原预测与独立判断逐股配对"
+  ],
+  "unknown_policy": "未知标签不计错误；主观弃判保留，完整Recall保留正例弃判；覆盖不齐不能宣称胜出。",
+  "expected_improvement": "对非一字电池候选给出独立正向/反向理由，避免原负向自动删除；是否减少漏判及增加误报均待目标日。",
+  "end_condition": "完成入口相关核验、完整11只事前记录和用法更新即停；无目标结果不算准确率改善。",
+  "budget_minutes": 30,
+  "started_at": "2026-10-11T16:42:50+00:00",
+  "fits": 0,
+  "original_model_forward_samples_added": 0,
+  "sources": [
+    {
+      "source_id": "tgb_same_height",
+      "url": "https://www.tgb.cn/a/2roeQ5aY1Ji",
+      "captured_at": "2026-10-02T20:06:22.964487+00:00",
+      "raw_sha256": "5f77842a5fd6c915b546041b556edfe85b69cb2fb753ad27763441e8c0169ee2",
+      "review": {
+        "author": "穿越第三极",
+        "reported_publication_time_shanghai": "2026-04-29 15:37",
+        "ordinary_http_body_scope": "PUBLIC_PREFIX_ONLY_LOGIN_REQUIRED_FOR_REST",
+        "additional_source_kind": "PUBLIC_WEB_TOOL_EXTRACT_SEPARATE_FROM_HTTP",
+        "web_extract_can_show_plan": "Same-height comparison, auction and limit-up timing appear in the separate public web tool extract, not in this ordinary HTTP prefix."
+      },
+      "scope": "作者原帖经验；不认证收益或历史时点特征"
+    },
+    {
+      "source_id": "eastmoney_maozhu",
+      "url": "https://guba.eastmoney.com/news,cfhpl,924495930.html",
+      "captured_at": "2026-10-02T20:06:23.476200+00:00",
+      "raw_sha256": "24ff406f77f2712ce538c916480eef7f9bf1f8fff79a4221754164253e4794a9",
+      "review": {
+        "author": "毛竹下的橙子",
+        "reported_publication_time_shanghai": "2020-04-22 17:15:34",
+        "ordinary_http_body_scope": "PUBLIC_ARTICLE_BODY_AVAILABLE",
+        "usable_scope": "Author narrative only; claimed market facts and trades not independently verified."
+      },
+      "scope": "作者原帖经验；不认证收益或历史时点特征"
+    },
+    {
+      "source_id": "cycle",
+      "url": "https://m.tgb.cn/a/2vG3iyv9w1A",
+      "published_at": "2026-10-06T19:18:00+08:00",
+      "captured_at": "2026-10-11T15:18:28.519408+00:00",
+      "raw_sha256": "f128a57d5f11c508bc18c4c2207d2138eb44a5dff9aaeafd5ca4287516d7f4db",
+      "scope": "公开正文与当前可见评论；评论不冒充初始发布内容"
+    }
+  ],
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\source_manifest.json": "76bb58ec72ef986c206738d49c055e3e15e2b7e17175713309f11a20e3d6239f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\tgb_same_height.raw": "5f77842a5fd6c915b546041b556edfe85b69cb2fb753ad27763441e8c0169ee2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\web_tool_extract.json": "6c424962d9581dab0378f1d23df80dd3d7dd5d554656a3baee71c9cd30d8be1c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\eastmoney_maozhu.raw": "24ff406f77f2712ce538c916480eef7f9bf1f8fff79a4221754164253e4794a9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\eastmoney_maozhu_visible_text.txt": "7be10dbdd84e98e3b01bb8604fcd9e5f678e37842b73f4b7d055ac0cd35232d2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\forum_sources\\manifest.json": "62f620aafa9159deda9e167d1e58ea5ebec521cbd1241ee6205cc384149453e9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\forum_sources\\cycle_raw.html": "f128a57d5f11c508bc18c4c2207d2138eb44a5dff9aaeafd5ca4287516d7f4db",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\forum_sources\\cycle_text.txt": "e75bd475cba84fea4bb76c8ed2409a04de51cdcb6242ebbd16dd589dfae457cc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_judgement_review.py": "ca5092c8daf6221f40cdfa6e6166dbf0910755a0bcae3ed3739f10f731eb3249"
+  },
+  "lessons": [
+    {
+      "source": "tgb_same_height",
+      "use": "同身位比较写出相对优势和必须继续强势的预期，待竞价及封板先后确认；不把单项早封当充分条件。",
+      "boundary": "具体计划在单独保存的公开web工具摘录中；普通HTTP只看到前缀。作者自述收益不做有效性证据。"
+    },
+    {
+      "source": "eastmoney_maozhu",
+      "use": "有首板助攻仍可能出现后排回落与方向分流；空间高度、题材核心、可交易机会分别判断。",
+      "boundary": "单日旧案例；不将确定性上车措辞、收益或次日成败当已核验事实。"
+    },
+    {
+      "source": "cycle",
+      "use": "分歧时看核心与后排是否同步恶化；中位掉队和高位压力共同核查，不只看涨停增加。",
+      "boundary": "固定数值阈值和稳定收益说法不进入生产；核心身份仍须盘面事实。"
+    }
+  ]
+}

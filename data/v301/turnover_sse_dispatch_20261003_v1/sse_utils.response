@@ -1,0 +1,84 @@
+/**
+* 按需加载laydate日历并调用
+*/
+
+/** require bootstrap */
+function bootstrapModal(params) {
+  require(['bootstrap'], function () {
+    $('.modal').on("show.bs.modal", function () {
+      var modal = $(this);
+      modal.find('.modal-body').text(params.text);
+    })
+    $(".modal").modal();
+  })
+}
+
+/** require laydate */
+function laydate(params) {
+  require(['laydate'], function (laydate) {
+    laydate.render(params);
+  })
+}
+
+/** bootstrap-select */
+function bootstrapSelect(params) {
+  require(['bootstrapSelect'], function () {
+    $(".selectpicker").on('refreshed.bs.select', function (e) {
+      $(".bootstrap-select").removeClass("dropup");
+    });
+    params.method();
+  })
+}
+
+/** swiper 
+ * autoplayState 是否开启轮播 true 否; flase 或者 空 是.
+ * **/
+function setSwiper(params) {
+  require(['swiper'], function (Swiper) {
+    var swiperObj = new Swiper(params.el, params.param);
+    if(!isNull(params.param.autoplayState)){
+      //swiper鼠标移入暂停
+      swiperObj.el.onmouseover = function () {
+        swiperObj.autoplay.stop();
+      };
+      swiperObj.el.onmouseout = function () {
+        swiperObj.autoplay.start();
+      };
+    }
+  });
+}
+
+/** require wow */
+if ($(".wow").length > 0) {
+  require(['wow'], function () {
+    //页面滚动动画
+    var wow = new WOW({
+      boxClass: 'wow',      // 需要执行动画的元素的 class
+      animateClass: 'animated', // animation.css 动画的 class
+      offset: 100,          // 距离可视区域多少开始执行动画
+      mobile: true,       // 是否在移动设备上执行动画
+      live: true       // 异步加载的内容是否有效
+    });
+    wow.init();
+  })
+}
+
+if ($(".share").length > 0) {
+  require(['qrcode'], function () {
+    var webUrl = location.href;
+    var qrcode = new QRCode("article_qrcode", {
+      text: webUrl,
+      width: 128,
+      height: 128,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  })
+}
+if ($(".markup_js").length > 0) {
+  require(['markup'])
+}
+if ($(".markuptt_js").length > 0) {
+  require(['markuptt'])
+}

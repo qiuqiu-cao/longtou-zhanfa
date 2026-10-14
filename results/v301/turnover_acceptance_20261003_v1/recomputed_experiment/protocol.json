@@ -1,0 +1,69 @@
+{
+  "recorded_at_utc": "2026-10-02T16:48:40.734391+00:00",
+  "parameters": {
+    "version": "v301-official-turnover-bands-1",
+    "signal_start": "2026-01-01",
+    "signal_end": "2026-09-30",
+    "arms": [
+      "LEVEL",
+      "PERSISTENCE_DELTA"
+    ],
+    "lookback_official_sessions": 120,
+    "minimum_known_observations": 60,
+    "quantiles": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "quantile_method": "linear",
+    "alpha": 0.2,
+    "nominal_coverage": 0.8,
+    "unit": "亿元",
+    "bounds": "nonnegative, continuous; no rounding of interval boundaries",
+    "target_join": "exact official successor, never next available observation",
+    "periods": {
+      "ALL": [
+        "2026-01-01",
+        "2026-09-30"
+      ],
+      "JAN_FEB": [
+        "2026-01-01",
+        "2026-02-28"
+      ],
+      "MAR_SEP": [
+        "2026-03-01",
+        "2026-09-30"
+      ]
+    },
+    "bootstrap": {
+      "draws": 5000,
+      "seed": 301,
+      "block_official_sessions": 5,
+      "family_channels": 2,
+      "tails": [
+        0.0125,
+        0.9875
+      ]
+    },
+    "scope": {
+      "mainboard_a_amount_yi": "SHSZ_MAINBOARD_A_INCLUDING_ST",
+      "shsz_stock_category_amount_yi": "SHSZ_MAINBOARD_A_PLUS_STAR_BOARD_PLUS_CHINEXT_A_INCLUDING_ST_CDR_SCOPE_UNRESOLVED_EXCLUDING_B_BSE"
+    },
+    "protocol_stable_60_target_redefinition": false,
+    "threshold_selection_on_test": false,
+    "scope_matches_original_non_st_pool": false,
+    "genuine_historical_availability_certified": false,
+    "pure_blind_test": false,
+    "forward_evidence": false,
+    "core_upgrade_authorized": false,
+    "goal_complete": false
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\exchange_turnover_intervals_v301.py": "f18c47ccdedf6bf26e77282acbf3f5e7506ac1783f82a0454d614ef4cd2cabbc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v301\\turnover_history_repaired_observations_20261003_v1\\report.json": "040a6686d65354f8e3946d2079a01d8d9721175805c1d0bda7feff6d27b68101",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v301\\turnover_history_repaired_observations_20261003_v1\\market_amounts_NOT_ORIGINAL_POOL_SCOPE.csv": "8e1eb9cb2bdb95d23a397350220f9845fd9bb86ba3780c7719aaba47596ffa9d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\market_interval_research_v300.py": "d628a18fea9277efe0db31d9ed1a1f905a3ca4ff7b9ba4b27462fd9295d27ea5"
+  }
+}

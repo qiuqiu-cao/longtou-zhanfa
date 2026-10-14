@@ -1,0 +1,21 @@
+{
+  "formed_at": "2026-10-13T11:28:11.246595+00:00",
+  "exact_command": [
+    "D:/python/python.exe",
+    "theme_g1_validation.py",
+    "register",
+    "--protocol",
+    "research/model_upgrade_validation/regime_theme_g1_20261008T183729Z/protocol_BEFORE_COMPARISON.json",
+    "--registered",
+    "data/v271/expectation_registry/2026-10-13_47f5c10d3a45999a.json",
+    "--overlay",
+    "results/daily_review_20261013T074936Z/theme_with_model_conflicts/g1/report.json",
+    "--calendar",
+    "data/v298/exchange_calendar_extension_20261003_v2/calendar.json"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\theme_g1_validation.py\", line 399, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\theme_g1_validation.py\", line 388, in main\n    result = register(args.protocol, args.calendar, args.registered, args.overlay)\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\theme_g1_validation.py\", line 124, in register\n    raise ValueError(\"G1 changed an original call/score/rank\")\nValueError: G1 changed an original call/score/rank\n",
+  "original_protocol_or_windows_changed": false,
+  "retry": false
+}

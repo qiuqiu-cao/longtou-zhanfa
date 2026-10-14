@@ -1,0 +1,232 @@
+{
+  "version": "v187-repair-day-followthrough-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "data_contract": {
+    "signal_features_available_at_repair_day_close": true,
+    "next_session_fields_used_only_as_labels": true,
+    "sparse_signal_days_excluded": true,
+    "missing_quality_fields_filled_as_zero": false,
+    "actual_stock_entries": 0,
+    "complete_stock_trades": 0
+  },
+  "repair_definition": {
+    "broad_repair": "at least 3 of 4 same-day checks pass",
+    "same_day_checks": [
+      "previous-limit median return > 0",
+      "middle-board promotion >= 25%",
+      "failed-board rate <= 30%",
+      "down-limit count <= 5"
+    ],
+    "next_relapse": "next state is 大分歧 or 退潮",
+    "next_advance": "next state is 启动, 升温, 加速, or 一致"
+  },
+  "scope": {
+    "repair_sessions": 131,
+    "first_date": "2023-12-26",
+    "last_date": "2026-09-11"
+  },
+  "split": {
+    "method": "chronological_70_30_by_repair_session",
+    "split_date": "2025-09-09",
+    "development_sessions": 91,
+    "validation_sessions": 40,
+    "validation_previously_inspected": true
+  },
+  "summaries": {
+    "development": {
+      "ALL_REPAIR": {
+        "sessions": 91,
+        "relapse_rate": 0.46153846153846156,
+        "advance_rate": 0.4065934065934066,
+        "repair_stall_rate": 0.13186813186813187,
+        "next_previous_limit_median_return": 0.01578026178598028,
+        "next_middle_promotion": 0.4289321041504301,
+        "next_failed_rate": 0.3616457029141575,
+        "next_down_limit_count": 7.527472527472527,
+        "mean_same_day_quality_score": 2.5714285714285716
+      },
+      "BROAD_REPAIR": {
+        "sessions": 51,
+        "relapse_rate": 0.43137254901960786,
+        "advance_rate": 0.45098039215686275,
+        "repair_stall_rate": 0.11764705882352941,
+        "next_previous_limit_median_return": 0.018467867490758596,
+        "next_middle_promotion": 0.45024326906262246,
+        "next_failed_rate": 0.36510543918337335,
+        "next_down_limit_count": 5.980392156862745,
+        "mean_same_day_quality_score": 3.372549019607843
+      },
+      "NARROW_REPAIR": {
+        "sessions": 40,
+        "relapse_rate": 0.5,
+        "advance_rate": 0.35,
+        "repair_stall_rate": 0.15,
+        "next_previous_limit_median_return": 0.012353564512387926,
+        "next_middle_promotion": 0.401760368887385,
+        "next_failed_rate": 0.35723453917090725,
+        "next_down_limit_count": 9.5,
+        "mean_same_day_quality_score": 1.55
+      }
+    },
+    "validation": {
+      "ALL_REPAIR": {
+        "sessions": 40,
+        "relapse_rate": 0.4,
+        "advance_rate": 0.475,
+        "repair_stall_rate": 0.125,
+        "next_previous_limit_median_return": 0.005127168358375471,
+        "next_middle_promotion": 0.3711818798032033,
+        "next_failed_rate": 0.29684888906477724,
+        "next_down_limit_count": 15.45,
+        "mean_same_day_quality_score": 2.475
+      },
+      "BROAD_REPAIR": {
+        "sessions": 16,
+        "relapse_rate": 0.25,
+        "advance_rate": 0.5625,
+        "repair_stall_rate": 0.1875,
+        "next_previous_limit_median_return": 0.013081541537111295,
+        "next_middle_promotion": 0.382360347985348,
+        "next_failed_rate": 0.2530777527684838,
+        "next_down_limit_count": 11.0,
+        "mean_same_day_quality_score": 3.5625
+      },
+      "NARROW_REPAIR": {
+        "sessions": 24,
+        "relapse_rate": 0.5,
+        "advance_rate": 0.4166666666666667,
+        "repair_stall_rate": 0.08333333333333333,
+        "next_previous_limit_median_return": -0.00017574709411507898,
+        "next_middle_promotion": 0.36372956768177356,
+        "next_failed_rate": 0.32602964659563943,
+        "next_down_limit_count": 18.416666666666668,
+        "mean_same_day_quality_score": 1.75
+      }
+    }
+  },
+  "session_clustered_broad_minus_narrow": {
+    "development": {
+      "comparison": "BROAD_REPAIR_MINUS_NARROW_REPAIR",
+      "session_clustered": true,
+      "metrics": {
+        "relapse_rate": {
+          "estimate": -0.06862745098039214,
+          "ci95": [
+            -0.2721446078431372,
+            0.12598039215686274
+          ]
+        },
+        "advance_rate": {
+          "estimate": 0.10098039215686277,
+          "ci95": [
+            -0.09023284313725491,
+            0.2990196078431373
+          ]
+        },
+        "next_median": {
+          "estimate": 0.0061143029783706695,
+          "ci95": [
+            -0.005268372100440824,
+            0.017203377900500503
+          ]
+        },
+        "next_promotion_mid": {
+          "estimate": 0.04848290017523749,
+          "ci95": [
+            -0.03351623762541014,
+            0.12480705740093719
+          ]
+        },
+        "next_failed_rate": {
+          "estimate": 0.007870900012466098,
+          "ci95": [
+            -0.031197481233293013,
+            0.04683953235346812
+          ]
+        },
+        "next_down_limit_count": {
+          "estimate": -3.519607843137255,
+          "ci95": [
+            -7.1680392156862744,
+            0.28138480392156845
+          ]
+        }
+      }
+    },
+    "validation": {
+      "comparison": "BROAD_REPAIR_MINUS_NARROW_REPAIR",
+      "session_clustered": true,
+      "metrics": {
+        "relapse_rate": {
+          "estimate": -0.25,
+          "ci95": [
+            -0.5208333333333334,
+            0.04218749999999718
+          ]
+        },
+        "advance_rate": {
+          "estimate": 0.14583333333333331,
+          "ci95": [
+            -0.16666666666666669,
+            0.4583333333333333
+          ]
+        },
+        "next_median": {
+          "estimate": 0.013257288631226374,
+          "ci95": [
+            0.0003013500157135161,
+            0.027309110759444293
+          ]
+        },
+        "next_promotion_mid": {
+          "estimate": 0.018630780303574457,
+          "ci95": [
+            -0.08699005710724463,
+            0.12551193581064896
+          ]
+        },
+        "next_failed_rate": {
+          "estimate": -0.07295189382715561,
+          "ci95": [
+            -0.12236723098356554,
+            -0.021721066523527698
+          ]
+        },
+        "next_down_limit_count": {
+          "estimate": -7.416666666666668,
+          "ci95": [
+            -20.896354166666665,
+            4.896354166666664
+          ]
+        }
+      }
+    }
+  },
+  "broad_repair_lower_relapse_stable_across_time": false,
+  "latest_repair_context": {
+    "signal_date": "2026-09-16",
+    "emotion_state": "修复",
+    "quality_score": 3,
+    "quality_class": "BROAD_REPAIR",
+    "status": "HISTORICAL_SCENARIO_CONTEXT_ONLY"
+  },
+  "governance": {
+    "historical_repair_scenario_context_allowed": true,
+    "calibrated_next_relapse_probability_allowed": false,
+    "repair_score_direct_emotion_gate_allowed": false,
+    "repair_score_direct_stock_reranking_allowed": false,
+    "repair_score_entry_authorized": false,
+    "requires_next_session_auction_middle_board_and_loss_confirmation": true
+  },
+  "interpretation": "A broad repair has lower next-session relapse in the recent validation segment, but the effect is weak and uncertain in development. The repair score may describe the main scenario only; it cannot promise follow-through or authorize a stock entry.",
+  "limitations": [
+    "repair state and quality are close-derived and available only after the signal close",
+    "specific-theme and intraday repair breadth are unavailable historically",
+    "validation dates were inspected and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803",
+    "D:\\Documents\\ChatGPT\\龙头战法\\repair_day_followthrough_audit_v187.py": "65cb7677657f5666bb6924c62b5ebc0f986bf78c76f8c86cdd108dba3bbd239d"
+  },
+  "observations_sha256": "43526d244d7d0f690e1b5bbdcd932c283e773aaee7eff6cbb99d297053d2068e"
+}

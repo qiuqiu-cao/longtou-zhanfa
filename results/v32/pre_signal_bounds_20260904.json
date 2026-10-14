@@ -1,0 +1,136 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "rows": [
+    {
+      "code": "000017",
+      "signal_date": "2024-01-10",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 31.35672495976241,
+      "max_30d_pct": 32.63263082862332,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    },
+    {
+      "code": "000017",
+      "signal_date": "2024-01-11",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 42.45926818634605,
+      "max_30d_pct": 43.73108016813621,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    },
+    {
+      "code": "000017",
+      "signal_date": "2024-01-12",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 57.13621123916794,
+      "max_30d_pct": 58.36488099183709,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    },
+    {
+      "code": "000017",
+      "signal_date": "2024-01-15",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 70.87931928281579,
+      "max_30d_pct": 74.10153235559282,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    },
+    {
+      "code": "000017",
+      "signal_date": "2024-01-16",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 83.44094343220964,
+      "max_30d_pct": 90.95448492391792,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    },
+    {
+      "code": "000062",
+      "signal_date": "2024-09-02",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": false,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 146.98151197374315,
+      "max_30d_pct": 244.8646367962863,
+      "interpretation": "cannot_decide_actual_trigger_without_reset_history"
+    },
+    {
+      "code": "000062",
+      "signal_date": "2024-09-03",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": false,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 144.5293052143671,
+      "max_30d_pct": 278.1265682690097,
+      "interpretation": "cannot_decide_actual_trigger_without_reset_history"
+    },
+    {
+      "code": "000759",
+      "signal_date": "2024-12-26",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 40.97623148807307,
+      "max_30d_pct": 159.34393084074497,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    },
+    {
+      "code": "000759",
+      "signal_date": "2024-12-27",
+      "status": "CONDITIONAL_ARITHMETIC_ONLY",
+      "indicator_status": "inferred_NOT_regulatory_verified",
+      "current_below_both_conditional": true,
+      "prior_events_ruled_out": false,
+      "trading_permission": false,
+      "reason": "all_suffix_upper_bound",
+      "max_10d_pct": 39.60521699132289,
+      "max_30d_pct": 185.05171676323062,
+      "interpretation": "below_given_input_returns_and_suffix_window_assumption"
+    }
+  ],
+  "verified_trade_labels": 0,
+  "limitations": [
+    "returns use provider pre_close; ex-rights adjustment is not independently verified",
+    "security-status input provenance not reaudited here",
+    "special session exclusions could invalidate the suffix assumption",
+    "below at signal close does not prove no prior trigger, nor below at next-day entry",
+    "negative bound result is inconclusive, not a confirmed trigger"
+  ],
+  "source_hashes": {
+    "results/v31/event_relay_scope_20260904.json": "e4778579bf232ccf08abd83aa6d6adc555b757ff39a8a9d9e8219890ebcb3723",
+    "data/v11/point_in_time_rebuild/point_in_time_current_daily_bars.csv": "6204734c8449387e81a647fa848238a4a33ae90db068e6ead31dbb62dd92c70f",
+    "data\\v18\\benchmarks_20260904\\sh000002.csv": "811fca3da9259f9a684f263deb4fd3cb8258a4babb759ccd7a6fc3ac3094d775",
+    "data\\v18\\benchmarks_20260904\\sz399107.csv": "ea90e3c12a41839b38ca2b98b38f65393f9f0ba8b573069cafc91c0ce4ffe4fb"
+  }
+}

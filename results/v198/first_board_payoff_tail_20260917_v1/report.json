@@ -1,0 +1,196 @@
+{
+  "version": "v198-first-board-payoff-tail-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "ranker_metrics": {
+    "base_quality_probability": {
+      "selected_sessions": 10,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 2,
+      "filled_trades": 8,
+      "B_plus_2_known_trades": 8,
+      "win_count": 2,
+      "loss_or_flat_count": 6,
+      "win_rate": 0.25,
+      "mean_net_return": -0.03242451356500918,
+      "median_net_return": -0.0288071344310183,
+      "average_win": 0.05951698228399615,
+      "average_loss": -0.06307167884801095,
+      "payoff_ratio": 0.9436403687211047,
+      "profit_factor": 0.3145467895737015,
+      "compounded_return_full_capital_proxy": -0.24812463528619666,
+      "maximum_drawdown_full_capital_proxy": -0.31183233183199655,
+      "best_trade": 0.0925758350656003,
+      "worst_trade": -0.1560357219535184,
+      "B_plus_1_big_loss_rate": 0.125,
+      "bootstrap95": {
+        "mean_net_return": [
+          -0.08143617699058014,
+          0.016190870077776955
+        ],
+        "win_rate": [
+          0.0,
+          0.625
+        ],
+        "profit_factor": [
+          0.0,
+          1.8905822139223987
+        ]
+      }
+    },
+    "profit_base_probability": {
+      "selected_sessions": 10,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 0,
+      "filled_trades": 10,
+      "B_plus_2_known_trades": 10,
+      "win_count": 3,
+      "loss_or_flat_count": 7,
+      "win_rate": 0.3,
+      "mean_net_return": -0.05317370827631359,
+      "median_net_return": -0.028134249849334,
+      "average_win": 0.05405202516588057,
+      "average_loss": -0.09912759403725395,
+      "payoff_ratio": 0.5452772831908624,
+      "profit_factor": 0.23369026422465533,
+      "compounded_return_full_capital_proxy": -0.4507969697297153,
+      "maximum_drawdown_full_capital_proxy": -0.47805555648298736,
+      "best_trade": 0.0763901298139386,
+      "worst_trade": -0.1947199678838197,
+      "B_plus_1_big_loss_rate": 0.3,
+      "bootstrap95": {
+        "mean_net_return": [
+          -0.11361345728146113,
+          0.0043559483525082736
+        ],
+        "win_rate": [
+          0.0,
+          0.6
+        ],
+        "profit_factor": [
+          0.0,
+          1.1593098177995909
+        ]
+      }
+    },
+    "profit_emotion_probability": {
+      "selected_sessions": 10,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 0,
+      "filled_trades": 10,
+      "B_plus_2_known_trades": 10,
+      "win_count": 4,
+      "loss_or_flat_count": 6,
+      "win_rate": 0.4,
+      "mean_net_return": -0.0377449404015762,
+      "median_net_return": -0.028134249849334,
+      "average_win": 0.0734984157466247,
+      "average_loss": -0.11190717783371014,
+      "payoff_ratio": 0.6567801741532664,
+      "profit_factor": 0.43785344943551097,
+      "compounded_return_full_capital_proxy": -0.3641157067643125,
+      "maximum_drawdown_full_capital_proxy": -0.47805555648298736,
+      "best_trade": 0.1318375874888571,
+      "worst_trade": -0.1947199678838197,
+      "B_plus_1_big_loss_rate": 0.3,
+      "bootstrap95": {
+        "mean_net_return": [
+          -0.10950857728457673,
+          0.030252877294129735
+        ],
+        "win_rate": [
+          0.1,
+          0.7
+        ],
+        "profit_factor": [
+          0.04990432714251296,
+          2.31099559497691
+        ]
+      }
+    },
+    "profit_risk_adjusted_score": {
+      "selected_sessions": 10,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 0,
+      "filled_trades": 10,
+      "B_plus_2_known_trades": 10,
+      "win_count": 2,
+      "loss_or_flat_count": 8,
+      "win_rate": 0.2,
+      "mean_net_return": -0.0711961589576992,
+      "median_net_return": -0.0471422069358583,
+      "average_win": 0.07707680628474965,
+      "average_loss": -0.10826440026831141,
+      "payoff_ratio": 0.7119312174060022,
+      "profit_factor": 0.17798280435150055,
+      "compounded_return_full_capital_proxy": -0.5492795085652202,
+      "maximum_drawdown_full_capital_proxy": -0.6017798874883036,
+      "best_trade": 0.1318375874888571,
+      "worst_trade": -0.1947199678838197,
+      "B_plus_1_big_loss_rate": 0.4,
+      "bootstrap95": {
+        "mean_net_return": [
+          -0.13249871665335697,
+          -0.00723600732265928
+        ],
+        "win_rate": [
+          0.0,
+          0.5
+        ],
+        "profit_factor": [
+          0.0,
+          0.8425312973835025
+        ]
+      }
+    }
+  },
+  "paired_comparisons": {
+    "profit_emotion_probability_minus_base_quality_probability": {
+      "common_filled_sessions": 8,
+      "same_stock_sessions": 0,
+      "left_better_sessions": 4,
+      "tie_sessions": 0,
+      "left_worse_sessions": 4,
+      "mean_return_difference": 0.014028662369534421
+    },
+    "profit_emotion_probability_minus_profit_base_probability": {
+      "common_filled_sessions": 10,
+      "same_stock_sessions": 9,
+      "left_better_sessions": 1,
+      "tie_sessions": 9,
+      "left_worse_sessions": 0,
+      "mean_return_difference": 0.01542876787473739
+    },
+    "profit_emotion_probability_minus_profit_risk_adjusted_score": {
+      "common_filled_sessions": 10,
+      "same_stock_sessions": 8,
+      "left_better_sessions": 2,
+      "tie_sessions": 8,
+      "left_worse_sessions": 0,
+      "mean_return_difference": 0.033451218556123
+    }
+  },
+  "diagnosis": {
+    "emotion_ranker_higher_hit_but_negative_expectancy": true,
+    "win_rate_alone_sufficient_for_strategy": false
+  },
+  "governance": {
+    "unfilled_selection_replaced": false,
+    "full_capital_compounding_is_account_backtest": false,
+    "profit_factor_above_one_required_before_promotion": true,
+    "positive_mean_return_required_before_promotion": true,
+    "acceptable_drawdown_required_before_promotion": true,
+    "ranker_promotion_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "A higher hit rate can coexist with negative expectancy when losses are larger than wins. Identity, win probability, payoff magnitude and tail loss must be separate model targets.",
+  "limitations": [
+    "only ten complete evaluation sessions are available",
+    "the period has already been inspected and is not a sealed blind test",
+    "returns use a daily-open execution proxy and B+2 close valuation",
+    "full-capital compounding ignores concurrent positions and is not an account ledger",
+    "no threshold or stop rule is tuned on this small sample"
+  ],
+  "source_hash": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v196\\first_board_profit_ranker_20260917_v2\\daily_top1_no_replacement.csv": "c3294b4778d66644ffe6fb7f322eee3da4be6cc0e1808b8fb6f1342922872a87"
+  }
+}

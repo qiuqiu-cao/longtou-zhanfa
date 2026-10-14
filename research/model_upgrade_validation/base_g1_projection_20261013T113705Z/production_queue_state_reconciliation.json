@@ -1,0 +1,57 @@
+{
+  "formed_at": "2026-10-13T11:49:37.948700+00:00",
+  "prior_production_branch": {
+    "state": "ALL_ORIGINAL_REGISTERED_TARGETS_SETTLED_WAIT_VALID_NEW_SIGNAL",
+    "original_signal_date": "2026-09-30",
+    "original_target_date": "2026-10-08",
+    "candidate_count": 11,
+    "original_known_promotion_labels": 11,
+    "original_settlement_report": "results/v298/close_settlement_20261008T092450Z/report.json",
+    "new_signal_date": "2026-10-08",
+    "new_target_date": "2026-10-09",
+    "new_candidate_count": 10,
+    "new_plan_status": "AUTHOR_REVIEWED_V298_FROZEN",
+    "new_registration": "data/v271/expectation_registry/2026-10-08_fcf1205edfbc2269.json",
+    "new_registration_plan_sha256": "fcf1205edfbc2269d3c2a3c50f09a0bb788382aba65ea5573d59a0ea298c733e",
+    "target_result": "CURRENT10_FULL_SOURCE_BOUND_SETTLEMENT_COMPLETE",
+    "latest_settlement": {
+      "signal": "2026-10-08",
+      "target": "2026-10-09",
+      "all_candidates": 10,
+      "verified": 10,
+      "report": "results/v298/settlement_20261009T0921Z/report.json",
+      "ledger": "data/v293/settlement_ledger.jsonl",
+      "new_actual_forward_day": 1
+    },
+    "no_pending_registered_target": true,
+    "current_forward_signal_days": 2,
+    "current_forward_candidates": 21,
+    "current_forward_accuracy": 0.6666666666666666,
+    "last_state_change_at": "2026-10-11T14:22:43.404560+00:00"
+  },
+  "current_source_bound_state": {
+    "formed_at": "2026-10-13T11:49:37.948700+00:00",
+    "state": "ORIGINAL14_FORMAL_FORWARD_REGISTERED_WAIT_TARGET_OBSERVATIONS_AND_CLOSE",
+    "signal_date": "2026-10-13",
+    "target_date": "2026-10-14",
+    "registered_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-13_47f5c10d3a45999a.json",
+    "registered_file_sha256": "a54e814c6e948dde5319a4eb22d98517bab38f0d09cafdd9e80c56181b57d9cb",
+    "forecast_status": "FORWARD_REGISTERED",
+    "pending_candidates": 10,
+    "latest_mature_metrics": {
+      "signal_days": 3,
+      "registered": 39,
+      "known": 38,
+      "correct": 28,
+      "Accuracy": 0.7368421052631579,
+      "complete_positive_Recall": 0.5625,
+      "Precision": 0.75,
+      "F1": 0.6428571428571429,
+      "label_coverage": 0.9743589743589743,
+      "original_20_60_windows_complete": false
+    },
+    "new_mature_samples_in_this_fix_batch": 0,
+    "source_summary": "D:\\Documents\\ChatGPT\\龙头战法\\results\\outcome_review_20261013T073137Z\\complete18_error_and_learning_review.json"
+  },
+  "source_inspection_failure_preserved": "Initial read assumed signal/target at registry root and raised KeyError(signal_date); corrected to actual nested plan before any state mutation."
+}

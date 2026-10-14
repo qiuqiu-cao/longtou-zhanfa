@@ -1,0 +1,1282 @@
+{
+  "split": {
+    "train": [
+      "2023-11-29",
+      "2025-04-15"
+    ],
+    "embargo_1": "2025-04-16",
+    "calibration": [
+      "2025-04-17",
+      "2025-09-05"
+    ],
+    "embargo_2": "2025-09-08",
+    "validation": [
+      "2025-09-09",
+      "2026-02-04"
+    ],
+    "embargo_3": "2026-02-05",
+    "blind": [
+      "2026-02-06",
+      "2026-08-27"
+    ]
+  },
+  "policy": {
+    "signals": 0
+  },
+  "validation_integrity": {
+    "status": "REUSED_DEVELOPMENT_HOLDOUT",
+    "deployment_eligible": false,
+    "blind_window": [
+      "2026-02-06",
+      "2026-08-27"
+    ],
+    "window_fingerprint_sha256": "a22fade1348d8e6a911e9051c16aeb835b0d5c5f19009df82db512ee17bc5a5d",
+    "label_fingerprint_sha256": "098888903dd2dac1486a82ef0bef2bd7547c30efb9e19c7dd7f9243e58f61a81",
+    "model_code_fingerprint_sha256": "3824c9fc59c2d449db8d0c883cde51dde6e46afac43e93c4e446a55e890c020c",
+    "reuse_count_including_current": 12,
+    "prior_matching_models": [
+      "model_20260831_084839.json",
+      "model_20260831_085230.json",
+      "model_20260831_085829.json",
+      "model_20260831_090326.json",
+      "model_20260831_090643.json",
+      "model_20260831_105930.json",
+      "model_20260831_110133.json",
+      "model_20260831_111227.json",
+      "model_20260831_111824.json",
+      "model_20260831_113145.json",
+      "model_20260831_113453.json"
+    ],
+    "rule": "a blind window may be inspected once; any retraining or rule change after inspection converts it to a development holdout",
+    "next_fresh_blind_requirement": "use dates strictly after 2026-08-27 and freeze code before labels are inspected"
+  },
+  "calibration_evidence": {
+    "rows": 1226,
+    "dates": 98,
+    "status": "USABLE",
+    "rule": ">=100 rows across >=20 dates"
+  },
+  "joint_execution_policy": {
+    "threshold": 0.45,
+    "selection_signals": 13,
+    "executable_trades": 11,
+    "executed_promotion_precision": 0.8181818181818182,
+    "selection_promotion_precision": 0.6923076923076923,
+    "large_loss_rate": 0.09090909090909091,
+    "large_loss_label_coverage": 1.0,
+    "trades_per_active_week": 1.0784313725490198,
+    "precision_wilson_95": [
+      0.5230138624217553,
+      0.9486333993289995
+    ],
+    "target_precision": true,
+    "target_large_loss": true,
+    "target_frequency": false,
+    "minimum_trade_evidence": false,
+    "loss_coverage_ok": true,
+    "confidence_floor": true,
+    "operational": false,
+    "deployment_threshold": null,
+    "diagnostic_threshold": 0.45,
+    "minimum_trades": 31,
+    "validation_dates": 99,
+    "abstain_reason": "validation executable trades 11 < 31; executable frequency outside 3-5/week",
+    "frontier": [
+      {
+        "threshold": 0.01,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.02,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.03,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.04,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.05,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.06,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.07,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.08,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.09,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.1,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.1,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.11,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.11,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.12,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.12,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.12,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.13,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.14,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.15,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.16,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.16,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.17,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.17,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.17,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.18,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.19,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.19,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.19,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.19,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      },
+      {
+        "threshold": 0.2,
+        "executable_trades": 18,
+        "executed_promotion_precision": 0.6666666666666666,
+        "large_loss_rate": 0.2777777777777778,
+        "trades_per_active_week": 1.7647058823529413
+      }
+    ]
+  },
+  "policy_abstained": true,
+  "policy_abstain_reason": "validation executable trades 11 < 31; executable frequency outside 3-5/week",
+  "diagnostic_policy": {
+    "signals": 30,
+    "selection_signals": 30,
+    "executable_trades": 17,
+    "condition_not_triggered": 13,
+    "promotion_precision": 0.4,
+    "executed_promotion_precision": 0.6470588235294118,
+    "sell_blocked_count": 0,
+    "unresolved_return_count": 0,
+    "execution_status_counts": {
+      "inferred_daily_limit_touch_fill": 17,
+      "no_limit_touch_no_trade": 12,
+      "unbuyable_one_word_up": 1
+    },
+    "execution_source_counts": {
+      "inferred_from_unadjusted_daily_ohlc": 30
+    },
+    "verified_execution_count": 0,
+    "execution_quality": "INFERRED_DAILY_OHLC",
+    "large_loss_rate": 0.29411764705882354,
+    "execution_label_coverage": 1.0,
+    "average_mark_to_market_return": -0.004657046178566098,
+    "worst_mark_to_market_return": -0.222047619047619,
+    "compound_return": -0.16202648781062212,
+    "max_drawdown": -0.416347627262186,
+    "average_trade": -0.004657046178566098,
+    "profit_factor": 0.9013359547587692
+  },
+  "joint_diagnostic_policy": {
+    "signals": 19,
+    "selection_signals": 19,
+    "executable_trades": 12,
+    "condition_not_triggered": 7,
+    "promotion_precision": 0.5263157894736842,
+    "executed_promotion_precision": 0.75,
+    "sell_blocked_count": 0,
+    "unresolved_return_count": 0,
+    "execution_status_counts": {
+      "inferred_daily_limit_touch_fill": 12,
+      "no_limit_touch_no_trade": 6,
+      "unbuyable_one_word_up": 1
+    },
+    "execution_source_counts": {
+      "inferred_from_unadjusted_daily_ohlc": 19
+    },
+    "verified_execution_count": 0,
+    "execution_quality": "INFERRED_DAILY_OHLC",
+    "large_loss_rate": 0.3333333333333333,
+    "execution_label_coverage": 1.0,
+    "average_mark_to_market_return": -0.011278267446946424,
+    "worst_mark_to_market_return": -0.222047619047619,
+    "compound_return": -0.19291405547312834,
+    "max_drawdown": -0.44133973324291653,
+    "average_trade": -0.011278267446946424,
+    "profit_factor": 0.7862024028537183
+  },
+  "open_stage_diagnostic": {
+    "status": "TRAINED_DIAGNOSTIC_DAILY_OPEN_ONLY",
+    "feature_scope": "official_daily_open_proxy_without_vwap_or_sector_sync",
+    "deployment_eligible": false,
+    "required_live_features": [
+      "auction_gap"
+    ],
+    "split": {
+      "train": [
+        "2023-11-29",
+        "2025-04-15"
+      ],
+      "embargo_1": "2025-04-16",
+      "calibration": [
+        "2025-04-17",
+        "2025-09-05"
+      ],
+      "embargo_2": "2025-09-08",
+      "validation": [
+        "2025-09-09",
+        "2026-02-04"
+      ],
+      "embargo_3": "2026-02-05",
+      "blind": [
+        "2026-02-06",
+        "2026-08-27"
+      ]
+    },
+    "probability_metrics": {
+      "n": 1512,
+      "positive_rate": 0.3082010582010582,
+      "auc": 0.8251667911274506,
+      "brier": 0.1525849700605138,
+      "brier_baseline": 0.21321316592480616,
+      "brier_skill_score": 0.2843548408529053,
+      "ece_5bin": 0.08060873831341665,
+      "log_loss": 0.4811326375586283,
+      "log_loss_baseline": 0.6176537235515398,
+      "log_loss_skill_score": 0.2210317541808191,
+      "raw_threshold_signals": 604,
+      "raw_threshold_precision": 0.5943708609271523,
+      "raw_threshold_recall": 0.7703862660944206,
+      "raw_threshold_coverage": 0.3994708994708995
+    },
+    "joint_execution_policy": {
+      "threshold": 0.21,
+      "selection_signals": 17,
+      "executable_trades": 15,
+      "executed_promotion_precision": 0.6666666666666666,
+      "selection_promotion_precision": 0.5882352941176471,
+      "large_loss_rate": 0.26666666666666666,
+      "large_loss_label_coverage": 1.0,
+      "trades_per_active_week": 1.4705882352941178,
+      "precision_wilson_95": [
+        0.41713125151212976,
+        0.8482389930530876
+      ],
+      "target_precision": false,
+      "target_large_loss": false,
+      "target_frequency": false,
+      "minimum_trade_evidence": false,
+      "loss_coverage_ok": true,
+      "confidence_floor": false,
+      "operational": false,
+      "deployment_threshold": null,
+      "diagnostic_threshold": 0.21,
+      "minimum_trades": 31,
+      "validation_dates": 99,
+      "abstain_reason": "validation executable trades 15 < 31; executed promotion precision < 70%; large-loss rate > 10% or unavailable; executable frequency outside 3-5/week; executed precision Wilson lower bound < 50%",
+      "frontier": [
+        {
+          "threshold": 0.01,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.02,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.03,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.04,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.05,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.06,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.07,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.08,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.09,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.1,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.11,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.12,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.13,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.14,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.15,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.16,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.17,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.18,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.19,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.2,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.21,
+          "executable_trades": 18,
+          "executed_promotion_precision": 0.6111111111111112,
+          "large_loss_rate": 0.3333333333333333,
+          "trades_per_active_week": 1.7647058823529413
+        },
+        {
+          "threshold": 0.21,
+          "executable_trades": 15,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.26666666666666666,
+          "trades_per_active_week": 1.4705882352941178
+        },
+        {
+          "threshold": 0.22,
+          "executable_trades": 15,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.26666666666666666,
+          "trades_per_active_week": 1.4705882352941178
+        },
+        {
+          "threshold": 0.23,
+          "executable_trades": 15,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.26666666666666666,
+          "trades_per_active_week": 1.4705882352941178
+        },
+        {
+          "threshold": 0.24,
+          "executable_trades": 15,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.26666666666666666,
+          "trades_per_active_week": 1.4705882352941178
+        },
+        {
+          "threshold": 0.24,
+          "executable_trades": 15,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.26666666666666666,
+          "trades_per_active_week": 1.4705882352941178
+        },
+        {
+          "threshold": 0.25,
+          "executable_trades": 12,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.25,
+          "trades_per_active_week": 1.1764705882352942
+        },
+        {
+          "threshold": 0.26,
+          "executable_trades": 12,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.25,
+          "trades_per_active_week": 1.1764705882352942
+        },
+        {
+          "threshold": 0.27,
+          "executable_trades": 12,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.25,
+          "trades_per_active_week": 1.1764705882352942
+        },
+        {
+          "threshold": 0.28,
+          "executable_trades": 12,
+          "executed_promotion_precision": 0.6666666666666666,
+          "large_loss_rate": 0.25,
+          "trades_per_active_week": 1.1764705882352942
+        }
+      ]
+    },
+    "diagnostic_policy": {
+      "signals": 37,
+      "selection_signals": 37,
+      "executable_trades": 30,
+      "condition_not_triggered": 7,
+      "promotion_precision": 0.4594594594594595,
+      "executed_promotion_precision": 0.5666666666666667,
+      "sell_blocked_count": 0,
+      "unresolved_return_count": 0,
+      "execution_status_counts": {
+        "inferred_daily_limit_touch_fill": 30,
+        "no_limit_touch_no_trade": 7
+      },
+      "execution_source_counts": {
+        "inferred_from_unadjusted_daily_ohlc": 37
+      },
+      "verified_execution_count": 0,
+      "execution_quality": "INFERRED_DAILY_OHLC",
+      "large_loss_rate": 0.3333333333333333,
+      "execution_label_coverage": 1.0,
+      "average_mark_to_market_return": -0.018056299999585797,
+      "worst_mark_to_market_return": -0.254207729468599,
+      "compound_return": -0.5160714025150159,
+      "max_drawdown": -0.7053291662249069,
+      "average_trade": -0.018056299999585797,
+      "profit_factor": 0.6594408501026208
+    },
+    "warning": "daily official open is valid only for the 09:30+ stage; VWAP and sector sync remain unverified"
+  },
+  "height_survival_backtest": {
+    "status": "DIAGNOSTIC",
+    "n": 1497,
+    "censored_rows_excluded": 16,
+    "capped_actual_rows": 0,
+    "exact_mode_accuracy": 0.698062792251169,
+    "within_one_board_accuracy": 0.8830995323981295,
+    "interval_80_coverage": 0.9712758851035405,
+    "interval_80_mean_width": 2.352705410821643,
+    "mode_mae": 0.4956579826319305,
+    "expected_height_mae": 0.7581672470100492,
+    "baseline_mode_mae": 0.509686038744155,
+    "terminal_distribution_log_loss": 0.9263250678247688,
+    "two_more_board_brier": 0.10325715575992839,
+    "two_more_board_brier_baseline": 0.10780501104636349,
+    "two_more_board_brier_skill": 0.04218593590681252,
+    "by_current_board": [
+      {
+        "boards": 2,
+        "n": 1061,
+        "mae": 0.4344957587181904,
+        "within_one_accuracy": 0.8934967012252591,
+        "mean_predicted_terminal": 2.6872976020281296,
+        "mean_actual_terminal": 2.4373232799245996
+      },
+      {
+        "boards": 3,
+        "n": 278,
+        "mae": 0.6546762589928058,
+        "within_one_accuracy": 0.8597122302158273,
+        "mean_predicted_terminal": 3.9047239447796103,
+        "mean_actual_terminal": 3.6870503597122304
+      },
+      {
+        "boards": 4,
+        "n": 116,
+        "mae": 0.5948275862068966,
+        "within_one_accuracy": 0.853448275862069,
+        "mean_predicted_terminal": 5.032304933589078,
+        "mean_actual_terminal": 4.646551724137931
+      },
+      {
+        "boards": 5,
+        "n": 42,
+        "mae": 0.7142857142857143,
+        "within_one_accuracy": 0.8571428571428571,
+        "mean_predicted_terminal": 6.189303393493085,
+        "mean_actual_terminal": 5.785714285714286
+      }
+    ],
+    "warning": "terminal height is right-tail capped and remains diagnostic until evaluated on a fresh blind period"
+  },
+  "baseline_highest_board": {
+    "signals": 134,
+    "selection_signals": 134,
+    "executable_trades": 67,
+    "condition_not_triggered": 67,
+    "promotion_precision": 0.3880597014925373,
+    "executed_promotion_precision": 0.5970149253731343,
+    "sell_blocked_count": 0,
+    "unresolved_return_count": 0,
+    "execution_status_counts": {
+      "inferred_daily_limit_touch_fill": 67,
+      "no_limit_touch_no_trade": 55,
+      "unbuyable_one_word_up": 12
+    },
+    "execution_source_counts": {
+      "inferred_from_unadjusted_daily_ohlc": 134
+    },
+    "verified_execution_count": 0,
+    "execution_quality": "INFERRED_DAILY_OHLC",
+    "large_loss_rate": 0.34328358208955223,
+    "execution_label_coverage": 1.0,
+    "average_mark_to_market_return": -0.024322304498603863,
+    "worst_mark_to_market_return": -0.2665094110503946,
+    "compound_return": -0.868583375620503,
+    "max_drawdown": -0.903831812521896,
+    "average_trade": -0.024322304498603863,
+    "profit_factor": 0.5615718421529168
+  },
+  "probability_metrics": {
+    "n": 1513,
+    "positive_rate": 0.30799735624586916,
+    "auc": 0.7000217256744182,
+    "brier": 0.1901531119428444,
+    "brier_baseline": 0.21313498479142434,
+    "brier_skill_score": 0.10782778280661054,
+    "ece_5bin": 0.08318157488565543,
+    "log_loss": 0.5673961633982787,
+    "log_loss_baseline": 0.6174889244400393,
+    "log_loss_skill_score": 0.08112333526821802,
+    "raw_threshold_signals": 270,
+    "raw_threshold_precision": 0.6592592592592592,
+    "raw_threshold_recall": 0.38197424892703863,
+    "raw_threshold_coverage": 0.1784534038334435
+  },
+  "uncertainty": {
+    "status": "USABLE",
+    "mean_interval_width": 0.05144339995772508,
+    "median_absolute_point_shift": 0.006365978669531004
+  },
+  "distribution": {
+    "in_distribution_rows": 1384,
+    "drift_or_ood_rows": 129
+  },
+  "segment_reliability": {
+    "boards": [
+      {
+        "segment": "2",
+        "confidence": "HIGH",
+        "n": 1069,
+        "positive_rate": 0.264733395696913,
+        "auc": 0.676624497612818,
+        "brier": 0.17938892776307946,
+        "brier_baseline": 0.1946496248996947,
+        "brier_skill_score": 0.07840085561161114,
+        "ece_5bin": 0.09647827918945119,
+        "log_loss": 0.5439558824221484,
+        "log_loss_baseline": 0.5779499017805245,
+        "log_loss_skill_score": 0.05881828036244785
+      },
+      {
+        "segment": "3",
+        "confidence": "HIGH",
+        "n": 283,
+        "positive_rate": 0.4275618374558304,
+        "auc": 0.6794204672992552,
+        "brier": 0.21350523007270902,
+        "brier_baseline": 0.24475271260722448,
+        "brier_skill_score": 0.12766960660681603,
+        "ece_5bin": 0.050981892217917144,
+        "log_loss": 0.6179789160402651,
+        "log_loss_baseline": 0.6826155820077185,
+        "log_loss_skill_score": 0.09468970189245196
+      },
+      {
+        "segment": "4",
+        "confidence": "HIGH",
+        "n": 118,
+        "positive_rate": 0.3728813559322034,
+        "auc": 0.7628992628992629,
+        "brier": 0.21106390306585784,
+        "brier_baseline": 0.23384085033036484,
+        "brier_skill_score": 0.09740362828961768,
+        "ece_5bin": 0.12836463659992492,
+        "log_loss": 0.6134560430279546,
+        "log_loss_baseline": 0.6604713974359016,
+        "log_loss_skill_score": 0.07118454272277508
+      },
+      {
+        "segment": "5",
+        "confidence": "MEDIUM",
+        "n": 43,
+        "positive_rate": 0.4186046511627907,
+        "auc": 0.64,
+        "brier": 0.24668311438241164,
+        "brier_baseline": 0.243374797187669,
+        "brier_skill_score": -0.013593507762398094,
+        "ece_5bin": 0.13022838871659675,
+        "log_loss": 0.6908304789680321,
+        "log_loss_baseline": 0.6798376211857489,
+        "log_loss_skill_score": -0.016169828558634025
+      }
+    ],
+    "emotion_state": [
+      {
+        "segment": "修复",
+        "confidence": "HIGH",
+        "n": 283,
+        "positive_rate": 0.28975265017667845,
+        "auc": 0.6868705254216722,
+        "brier": 0.18641031166199373,
+        "brier_baseline": 0.20579605189226985,
+        "brier_skill_score": 0.09419879561355315,
+        "ece_5bin": 0.09950549011840217,
+        "log_loss": 0.5586021613788769,
+        "log_loss_baseline": 0.6019300609098703,
+        "log_loss_skill_score": 0.07198161770737876
+      },
+      {
+        "segment": "加速",
+        "confidence": "HIGH",
+        "n": 375,
+        "positive_rate": 0.3333333333333333,
+        "auc": 0.710752,
+        "brier": 0.19282021670091856,
+        "brier_baseline": 0.22222222222222224,
+        "brier_skill_score": 0.13230902484586649,
+        "ece_5bin": 0.09025205602721806,
+        "log_loss": 0.5738470446926686,
+        "log_loss_baseline": 0.6365141682948128,
+        "log_loss_skill_score": 0.09845361929652885
+      },
+      {
+        "segment": "升温",
+        "confidence": "HIGH",
+        "n": 273,
+        "positive_rate": 0.31135531135531136,
+        "auc": 0.6758448060075094,
+        "brier": 0.19505145852674471,
+        "brier_baseline": 0.2144131814461485,
+        "brier_skill_score": 0.09030099170589756,
+        "ece_5bin": 0.04135026072956738,
+        "log_loss": 0.5773608519227365,
+        "log_loss_baseline": 0.6201807848783394,
+        "log_loss_skill_score": 0.06904427547525982
+      },
+      {
+        "segment": "启动",
+        "confidence": "MEDIUM",
+        "n": 33,
+        "positive_rate": 0.30303030303030304,
+        "auc": 0.6,
+        "brier": 0.2056952933739571,
+        "brier_baseline": 0.21120293847566576,
+        "brier_skill_score": 0.02607750224243799,
+        "ece_5bin": 0.055270556368953346,
+        "log_loss": 0.6011729340101919,
+        "log_loss_baseline": 0.613410049457059,
+        "log_loss_skill_score": 0.019949323389302887
+      },
+      {
+        "segment": "大分歧",
+        "confidence": "HIGH",
+        "n": 354,
+        "positive_rate": 0.2994350282485876,
+        "auc": 0.754184418746196,
+        "brier": 0.18190678670561658,
+        "brier_baseline": 0.20977369210635513,
+        "brier_skill_score": 0.13284270835358158,
+        "ece_5bin": 0.10886051734906106,
+        "log_loss": 0.5493129509508471,
+        "log_loss_baseline": 0.6103848424422641,
+        "log_loss_skill_score": 0.10005473144951782
+      },
+      {
+        "segment": "退潮",
+        "confidence": "HIGH",
+        "n": 195,
+        "positive_rate": 0.29743589743589743,
+        "auc": 0.6656179209665241,
+        "brier": 0.19593827463284444,
+        "brier_baseline": 0.2089677843523997,
+        "brier_skill_score": 0.0623517627845569,
+        "ece_5bin": 0.08499994130878949,
+        "log_loss": 0.5809145526039978,
+        "log_loss_baseline": 0.6086760639476164,
+        "log_loss_skill_score": 0.045609664956379525
+      }
+    ],
+    "distribution_status": [
+      {
+        "segment": "DRIFT_WARNING",
+        "confidence": "HIGH",
+        "n": 129,
+        "positive_rate": 0.24806201550387597,
+        "auc": 0.7967139175257731,
+        "brier": 0.1304347927729778,
+        "brier_baseline": 0.18652725196803077,
+        "brier_skill_score": 0.3007199141317257,
+        "ece_5bin": 0.0834315017999079,
+        "log_loss": 0.42718580219637414,
+        "log_loss_baseline": 0.5601960182809017,
+        "log_loss_skill_score": 0.23743513296060526
+      },
+      {
+        "segment": "IN_DISTRIBUTION",
+        "confidence": "HIGH",
+        "n": 1384,
+        "positive_rate": 0.31358381502890176,
+        "auc": 0.6883846713558088,
+        "brier": 0.19571934255911083,
+        "brier_baseline": 0.21524900598082128,
+        "brier_skill_score": 0.09073056264636381,
+        "ece_5bin": 0.08315827967471714,
+        "log_loss": 0.580464903712618,
+        "log_loss_baseline": 0.6219381844692096,
+        "log_loss_skill_score": 0.06668392742598162
+      }
+    ]
+  },
+  "segment_reliability_gate": {
+    "passed": false,
+    "board_checks": [
+      {
+        "segment": "2",
+        "minimum_n": 20,
+        "n": 1069,
+        "brier_skill_score": 0.07840085561161114,
+        "passed": true
+      },
+      {
+        "segment": "3",
+        "minimum_n": 20,
+        "n": 283,
+        "brier_skill_score": 0.12766960660681603,
+        "passed": true
+      },
+      {
+        "segment": "4",
+        "minimum_n": 20,
+        "n": 118,
+        "brier_skill_score": 0.09740362828961768,
+        "passed": true
+      },
+      {
+        "segment": "5",
+        "minimum_n": 20,
+        "n": 43,
+        "brier_skill_score": -0.013593507762398094,
+        "passed": false
+      }
+    ],
+    "active_emotion_checks": [
+      {
+        "segment": "修复",
+        "minimum_n": 20,
+        "n": 283,
+        "brier_skill_score": 0.09419879561355315,
+        "passed": true
+      },
+      {
+        "segment": "加速",
+        "minimum_n": 20,
+        "n": 375,
+        "brier_skill_score": 0.13230902484586649,
+        "passed": true
+      },
+      {
+        "segment": "升温",
+        "minimum_n": 20,
+        "n": 273,
+        "brier_skill_score": 0.09030099170589756,
+        "passed": true
+      },
+      {
+        "segment": "启动",
+        "minimum_n": 20,
+        "n": 33,
+        "brier_skill_score": 0.02607750224243799,
+        "passed": true
+      }
+    ],
+    "active_state_coverage": true,
+    "distribution_check": {
+      "segment": "IN_DISTRIBUTION",
+      "minimum_n": 100,
+      "n": 1384,
+      "brier_skill_score": 0.09073056264636381,
+      "passed": true
+    },
+    "rule": "blind: each 2-5 board n>=20 and positive Brier skill; >=3 observed active states each n>=20 and positive skill; in-distribution n>=100 and positive skill"
+  },
+  "emotion_forecast_backtest": {
+    "status": "LOW_EVIDENCE",
+    "n": 667,
+    "usable_evidence_rows": 544,
+    "adverse_rate": 0.46776611694152925,
+    "adverse_auc": 0.5341052726616107,
+    "adverse_brier": 0.25123493111835155,
+    "adverse_brier_baseline": 0.2489609767829728,
+    "adverse_brier_skill_score": -0.009133778171833917,
+    "adverse_ece_5bin": 0.03660858503774132,
+    "adverse_log_loss": 0.6969213334068335,
+    "adverse_log_loss_baseline": 0.6910676923019339,
+    "markov_baseline": {
+      "n": 667,
+      "auc": 0.5341052726616107,
+      "brier": 0.25123493111835155,
+      "ece_5bin": 0.03660858503774132,
+      "log_loss": 0.6969213334068335
+    },
+    "supervised_challenger": {
+      "n": 585,
+      "auc": 0.5286736663684731,
+      "brier": 0.2585403437016262,
+      "ece_5bin": 0.07264516850080283,
+      "log_loss": 0.7135301853029034
+    },
+    "challenger_vs_markov_brier_skill": -0.03817140079026693,
+    "supervised_champion_rows": 0,
+    "multiclass_log_loss": 1.6952125587415137,
+    "uniform_multiclass_log_loss": 1.9459101490553132,
+    "multiclass_log_loss_skill": 0.12883307609835248,
+    "multiclass_top1_accuracy": 0.3148425787106447,
+    "rule": "n>=100, >=60 rows with >=20 same-state transitions, positive adverse Brier skill and positive seven-state log-loss skill; challenger needs >=60 prior causal forecasts, >=5% Brier gain vs Markov, lower log loss and ECE no worse by >2pp"
+  },
+  "emotion_forecast_gate": {
+    "passed": false,
+    "active_state_checks": [
+      {
+        "state": "修复",
+        "minimum_transitions": 20,
+        "observed_transitions": 130,
+        "passed": true
+      },
+      {
+        "state": "加速",
+        "minimum_transitions": 20,
+        "observed_transitions": 136,
+        "passed": true
+      },
+      {
+        "state": "升温",
+        "minimum_transitions": 20,
+        "observed_transitions": 65,
+        "passed": true
+      },
+      {
+        "state": "启动",
+        "minimum_transitions": 20,
+        "observed_transitions": 12,
+        "passed": false
+      }
+    ],
+    "forecast_coverage": 1.0,
+    "rule": "online as-of transition forecast coverage >=90%; each active state >=20 observed transitions"
+  },
+  "ablation": [
+    {
+      "through_group": "baseline",
+      "feature_count": 5,
+      "blind_auc": 0.5517952375682001,
+      "blind_brier": 0.21912029445756642,
+      "signals": 0,
+      "precision": null,
+      "threshold_operational": false,
+      "diagnostic_signals": 16,
+      "diagnostic_precision": 0.375
+    },
+    {
+      "through_group": "emotion",
+      "feature_count": 53,
+      "blind_auc": 0.5591993884017692,
+      "blind_brier": 0.22076717510298452,
+      "signals": 0,
+      "precision": null,
+      "threshold_operational": false,
+      "diagnostic_signals": 21,
+      "diagnostic_precision": 0.2857142857142857
+    },
+    {
+      "through_group": "theme",
+      "feature_count": 62,
+      "blind_auc": 0.5660911412537764,
+      "blind_brier": 0.21992287519464698,
+      "signals": 0,
+      "precision": null,
+      "threshold_operational": false,
+      "diagnostic_signals": 21,
+      "diagnostic_precision": 0.2857142857142857
+    },
+    {
+      "through_group": "individual",
+      "feature_count": 76,
+      "blind_auc": 0.679423326815631,
+      "blind_brier": 0.19352217805787342,
+      "signals": 0,
+      "precision": null,
+      "threshold_operational": false,
+      "diagnostic_signals": 25,
+      "diagnostic_precision": 0.44
+    },
+    {
+      "through_group": "open",
+      "feature_count": 89,
+      "blind_auc": 0.6793966821205898,
+      "blind_brier": 0.19353849128513936,
+      "signals": 0,
+      "precision": null,
+      "threshold_operational": false,
+      "diagnostic_signals": 25,
+      "diagnostic_precision": 0.44
+    },
+    {
+      "through_group": "risk",
+      "feature_count": 98,
+      "blind_auc": 0.6793618390578435,
+      "blind_brier": 0.19354921527459082,
+      "signals": 0,
+      "precision": null,
+      "threshold_operational": false,
+      "diagnostic_signals": 25,
+      "diagnostic_precision": 0.44
+    }
+  ],
+  "walk_forward": [
+    {
+      "fold": 1,
+      "train": [
+        "2023-11-29",
+        "2025-01-02"
+      ],
+      "embargo_1": "2025-01-03",
+      "calibration": [
+        "2025-01-06",
+        "2025-04-16"
+      ],
+      "embargo_2": "2025-04-17",
+      "validation": [
+        "2025-04-18",
+        "2025-07-24"
+      ],
+      "embargo_3": "2025-07-25",
+      "test": [
+        "2025-07-28",
+        "2025-11-04"
+      ],
+      "threshold_operational": false,
+      "joint_threshold_operational": false,
+      "joint_threshold_abstain_reason": "validation executable trades 14 < 25; executed promotion precision < 70%; large-loss rate > 10% or unavailable; executable frequency outside 3-5/week; executed precision Wilson lower bound < 50%",
+      "joint_test_executable_trades": 14,
+      "joint_test_executed_precision": 0.7142857142857143,
+      "joint_test_large_loss_rate": 0.35714285714285715,
+      "diagnostic_threshold": 0.39,
+      "drift_or_ood_rate": 0.0,
+      "n": 706,
+      "positive_rate": 0.37252124645892354,
+      "auc": 0.6397188200053214,
+      "brier": 0.22371087621178115,
+      "brier_baseline": 0.23374916739561347,
+      "brier_skill_score": 0.04294471418091861,
+      "ece_5bin": 0.041718185676536415,
+      "log_loss": 0.6399300061645231,
+      "log_loss_baseline": 0.6602839080417588,
+      "log_loss_skill_score": 0.030825985048765547
+    },
+    {
+      "fold": 2,
+      "train": [
+        "2023-11-29",
+        "2025-06-06"
+      ],
+      "embargo_1": "2025-06-09",
+      "calibration": [
+        "2025-06-10",
+        "2025-09-09"
+      ],
+      "embargo_2": "2025-09-10",
+      "validation": [
+        "2025-09-11",
+        "2025-12-19"
+      ],
+      "embargo_3": "2025-12-22",
+      "test": [
+        "2025-12-23",
+        "2026-04-03"
+      ],
+      "threshold_operational": false,
+      "joint_threshold_operational": false,
+      "joint_threshold_abstain_reason": "validation executable trades 6 < 20; executable frequency outside 3-5/week",
+      "joint_test_executable_trades": 5,
+      "joint_test_executed_precision": 0.4,
+      "joint_test_large_loss_rate": 0.4,
+      "diagnostic_threshold": 0.41,
+      "drift_or_ood_rate": 0.0,
+      "n": 777,
+      "positive_rate": 0.36293436293436293,
+      "auc": 0.6810731427752704,
+      "brier": 0.20529740204154887,
+      "brier_baseline": 0.23121301113579107,
+      "brier_skill_score": 0.11208542705679314,
+      "ece_5bin": 0.06065625423120138,
+      "log_loss": 0.6005728958796892,
+      "log_loss_baseline": 0.6550878581204792,
+      "log_loss_skill_score": 0.08321778760668774
+    },
+    {
+      "fold": 3,
+      "train": [
+        "2023-11-29",
+        "2025-10-31"
+      ],
+      "embargo_1": "2025-11-03",
+      "calibration": [
+        "2025-11-04",
+        "2026-02-05"
+      ],
+      "embargo_2": "2026-02-06",
+      "validation": [
+        "2026-02-09",
+        "2026-05-25"
+      ],
+      "embargo_3": "2026-05-26",
+      "test": [
+        "2026-05-27",
+        "2026-08-27"
+      ],
+      "threshold_operational": false,
+      "joint_threshold_operational": false,
+      "joint_threshold_abstain_reason": "validation executable trades 10 < 26; large-loss rate > 10% or unavailable; executable frequency outside 3-5/week; executed precision Wilson lower bound < 50%",
+      "joint_test_executable_trades": 13,
+      "joint_test_executed_precision": 0.38461538461538464,
+      "joint_test_large_loss_rate": 0.3076923076923077,
+      "diagnostic_threshold": 0.54,
+      "drift_or_ood_rate": 0.0,
+      "n": 803,
+      "positive_rate": 0.3013698630136986,
+      "auc": 0.6885505517007705,
+      "brier": 0.1967650199971628,
+      "brier_baseline": 0.21054606868080314,
+      "brier_skill_score": 0.06545383995999943,
+      "ece_5bin": 0.09914838641924462,
+      "log_loss": 0.5815545058408308,
+      "log_loss_baseline": 0.6120205200138218,
+      "log_loss_skill_score": 0.04977939983499724
+    }
+  ],
+  "integrity": {
+    "future_features": "forbidden; labels separated by date",
+    "embargo": "one trading date at each split",
+    "fills": "daily proxy enters at limit only after an OHLC touch and excludes one-price limit-up; no tick/queue proof",
+    "fees": "0.30% round-trip in verified or daily-proxy returns",
+    "execution_quality": "INFERRED_DAILY_OHLC unless execution_source is user_import",
+    "status": "DIAGNOSTIC_ONLY"
+  }
+}

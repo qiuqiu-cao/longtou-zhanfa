@@ -1,0 +1,53 @@
+{
+  "version": "v125-first-board-execution-outcomes-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "summary": {
+    "observations": 1175,
+    "filled_open_proxy": 761,
+    "unverifiable_limit_queue": 44,
+    "missing_or_invalid": 370,
+    "B_plus_1": {
+      "n": 703,
+      "mean_net_return": -0.012443297157395311,
+      "median_net_return": -0.02106974109476778,
+      "positive_rate": 0.3940256045519203
+    },
+    "B_plus_2": {
+      "n": 648,
+      "mean_net_return": -0.018834377934809715,
+      "median_net_return": -0.0299983758636298,
+      "positive_rate": 0.33487654320987653
+    },
+    "B_plus_3": {
+      "n": 601,
+      "mean_net_return": -0.019671508135310226,
+      "median_net_return": -0.03405913062234267,
+      "positive_rate": 0.3277870216306156
+    },
+    "big_loss_B_plus_1_rate": 0.18492176386913228,
+    "positive_B_plus_1_and_2_rate": 0.27314814814814814
+  },
+  "fee_assumptions": {
+    "buy_slippage": 0.001,
+    "sell_slippage": 0.001,
+    "commission_each_side": 0.00025,
+    "transfer_fee_each_side": 1e-05,
+    "sell_stamp_tax": 0.0005
+  },
+  "rules": {
+    "B": "immediate next trading session after signal date D",
+    "upper_limit_open": "unverifiable queue; never counted as filled",
+    "other_open": "filled at official open plus 10bp buy slippage proxy",
+    "exit": "B+1/B+2/B+3 official close less 10bp sell slippage and fees"
+  },
+  "limitations": [
+    "daily bars cannot verify auction order submission, partial fill, or 09:25-10:00 confirmation",
+    "this is an opening-entry baseline, not the final intraday execution strategy",
+    "missing later bars remain missing and are never imputed as wins"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\first_board_observations.csv": "41a64531e7c4c8ff82830f7a5026ae99e93ce55886e5b7e97586e547222a0d46",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv": "7ca5ad1fad2bfbf674a2050a867d6e43c63e182ae2e717e4e4adfe48e315929d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  }
+}

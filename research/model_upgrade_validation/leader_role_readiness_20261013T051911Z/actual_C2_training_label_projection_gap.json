@@ -1,0 +1,34 @@
+{
+  "formed_at": "2026-10-13T05:40:07.738171+00:00",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35"
+  },
+  "rows": [
+    {
+      "fold_cutoff": "2025-07-01",
+      "original_latest252_days_candidates": 4064,
+      "original_source_known_promotion_targets": 4064,
+      "targets_available_via_current_BASE_prediction_map": 0,
+      "targets_missing_from_C2_BASE_map": 4064
+    },
+    {
+      "fold_cutoff": "2026-01-01",
+      "original_latest252_days_candidates": 3235,
+      "original_source_known_promotion_targets": 3235,
+      "targets_available_via_current_BASE_prediction_map": 1584,
+      "targets_missing_from_C2_BASE_map": 1651
+    },
+    {
+      "fold_cutoff": "2026-09-01",
+      "original_latest252_days_candidates": 3064,
+      "original_source_known_promotion_targets": 3046,
+      "targets_available_via_current_BASE_prediction_map": 3046,
+      "targets_missing_from_C2_BASE_map": 0
+    }
+  ],
+  "reason": "Current downstream_fit reads targets through saved BASE predictions, which cover evaluation dates rather than the original full training cohort",
+  "new_fits": 0,
+  "no_labels_or_predictions_rewritten": true,
+  "next_required_fix": "Append separate source-bound original promotion training truth with actual maturity times; do not fabricate BASE predictions or refit finished trials"
+}

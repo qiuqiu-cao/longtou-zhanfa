@@ -1,0 +1,86 @@
+{
+  "version": "v10-intraday-readiness-2",
+  "status": "DATA_COLLECTION_REQUIRED",
+  "generated_at_utc": "2026-09-01T14:15:11.666979+00:00",
+  "thresholds": {
+    "minimum_full_candidate_sequences": 120,
+    "minimum_shadow_observations": 100,
+    "minimum_settled_confirmations": 60,
+    "minimum_capture_coverage": 0.9
+  },
+  "snapshot_coverage": {
+    "rows": 0,
+    "candidate_sequences": 0,
+    "technical_complete_sequences": 0,
+    "full_complete_sequences": 0,
+    "capture_coverage": 0.0
+  },
+  "shadow_coverage": {
+    "registered_plans": 1,
+    "shadow_observations": 1,
+    "shadow_confirmations": 0,
+    "settled_confirmations": 0,
+    "settlement_status": "V10_TAMPER_EVIDENT_LEDGER"
+  },
+  "legacy_unregistered_shadow_files": {
+    "score_files": 1,
+    "shadow_observations": 1,
+    "shadow_confirmations": 0,
+    "settled_confirmations": 0,
+    "settlement_status": "UNAVAILABLE_NO_V9_OUTCOME_LEDGER"
+  },
+  "v10_forward_ledger": {
+    "version": "v10-intraday-forward-1",
+    "status": "PASS",
+    "model_lock_id": "9738e2c165075798",
+    "registered_plans": 1,
+    "registered_candidates": 1,
+    "confirmations": 0,
+    "on_time_confirmations": 0,
+    "shadow_reseal_confirmations": 0,
+    "settlements": 0,
+    "executed_proxy": 0,
+    "executed_promotion_precision": null,
+    "large_loss_rate": null,
+    "resolved_return_count": 0,
+    "mean_net_return": null,
+    "profit_factor": null,
+    "sell_blocked": 0,
+    "deployment_allowed": false,
+    "deployment_reason": "forward evidence remains shadow-only until the frozen deployment gates pass",
+    "verification": {
+      "status": "PASS",
+      "version": "v10-intraday-forward-1",
+      "model_lock_id": "9738e2c165075798",
+      "events": 1,
+      "plans": 1,
+      "confirmations": 0,
+      "settlements": 0,
+      "pending": 1,
+      "head_event_hash": "936c4b37c74ffd2e8476a0206bac688c6e158d346273e5b10ad0079da7d184c5",
+      "errors": [],
+      "assurance": "LOCAL_TAMPER_EVIDENT_ONLY"
+    }
+  },
+  "session_ledger": {
+    "status": "PASS",
+    "version": "v4-session-forward-1",
+    "events": 1,
+    "plans": 1,
+    "captures": 0,
+    "assessments": 0,
+    "head_event_hash": "63be822d9510d1ed240ae005a3051768aff1f0021fcf04fac73725a64979eb00",
+    "errors": [],
+    "assurance": "LOCAL_TAMPER_EVIDENT_ONLY"
+  },
+  "gates": {
+    "full_sequences": false,
+    "capture_coverage": false,
+    "shadow_observations": false,
+    "settled_confirmations": false,
+    "session_ledger": true,
+    "v10_forward_ledger": true
+  },
+  "model_training_allowed": false,
+  "reason": "verified auction, minute, theme-sync and settled T+1 evidence must reach the frozen thresholds; missing observations are not imputed as safe zeros"
+}

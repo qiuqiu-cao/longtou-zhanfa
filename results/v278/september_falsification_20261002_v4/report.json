@@ -1,0 +1,767 @@
+{
+  "version": "v278-september-fixed-monthly-falsification-1",
+  "status": "RETROSPECTIVE_FALSIFICATION_ONLY",
+  "goal_verified": false,
+  "market": {
+    "dates_total": 16,
+    "complete_next_session_dates": 11,
+    "complete_source_forecasts": {
+      "n": 11,
+      "correct": 9,
+      "accuracy": 0.8181818181818182,
+      "wilson95": [
+        0.523019438039156,
+        0.9486323102539149
+      ],
+      "balanced_accuracy": 0.8166666666666667,
+      "macro_f1": 0.8166666666666667,
+      "by_class": {
+        "IMPROVE": {
+          "support": 5,
+          "called": 5,
+          "recall": 0.8
+        },
+        "WORSEN": {
+          "support": 6,
+          "called": 6,
+          "recall": 0.8333333333333334
+        }
+      }
+    },
+    "all_three_class_support": {
+      "IMPROVE": 5,
+      "CONTINUE": 0,
+      "WORSEN": 6
+    },
+    "balanced_accuracy_scope": "OBSERVED_CLASSES_ONLY; absent classes are untested"
+  },
+  "relay": {
+    "dates_total": 16,
+    "dates_with_complete_next_pool": 13,
+    "identity": {
+      "n": 13,
+      "successes": 10,
+      "accuracy": 0.7692307692307693,
+      "wilson95": [
+        0.49743624053272495,
+        0.9182047128150143
+      ]
+    },
+    "legacy_non_one_word_proxy": {
+      "n": 13,
+      "successes": 7,
+      "accuracy": 0.5384615384615384,
+      "wilson95": [
+        0.29143795714506004,
+        0.7679393219046169
+      ]
+    },
+    "ohlc_non_one_word": {
+      "n": 13,
+      "successes": 7,
+      "accuracy": 0.5384615384615384,
+      "wilson95": [
+        0.29143795714506004,
+        0.7679393219046169
+      ]
+    }
+  },
+  "selection_logs": {
+    "market": {
+      "chosen": {
+        "kind": "forest",
+        "window": null,
+        "validation_accuracy": 0.6031746031746031,
+        "validation_dates": 63
+      },
+      "validation_candidates": [
+        {
+          "kind": "logistic",
+          "window": 252,
+          "validation_accuracy": 0.5396825396825397,
+          "validation_dates": 63
+        },
+        {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.5396825396825397,
+          "validation_dates": 63
+        },
+        {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.5396825396825397,
+          "validation_dates": 63
+        },
+        {
+          "kind": "boosting",
+          "window": null,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        },
+        {
+          "kind": "forest",
+          "window": 252,
+          "validation_accuracy": 0.5396825396825397,
+          "validation_dates": 63
+        },
+        {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.6031746031746031,
+          "validation_dates": 63
+        }
+      ],
+      "max_refit_label_date": "2026-08-31",
+      "max_validation_label_date": "2026-08-31",
+      "refit_dates": 667,
+      "validation_start": "2026-06-02",
+      "september_labels_used": false,
+      "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+    },
+    "relay": {
+      "chosen": {
+        "kind": "logistic",
+        "window": 252,
+        "validation_accuracy": 0.4603174603174603,
+        "validation_dates": 63
+      },
+      "validation_candidates": [
+        {
+          "kind": "logistic",
+          "window": 252,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        },
+        {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        },
+        {
+          "kind": "boosting",
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "kind": "forest",
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        }
+      ],
+      "max_refit_label_date": "2026-08-31",
+      "max_validation_label_date": "2026-08-31",
+      "refit_dates": 252,
+      "validation_start": "2026-06-02",
+      "september_labels_used": false,
+      "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+    }
+  },
+  "source_audit": [
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-08-28",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260828\\failed_board.csv",
+      "sha256": "31c6199f9b03f68db77c0803a7ad9761739ea7380391be02807b20c0290759c2",
+      "captured_at": "2026-08-30T17:14:07",
+      "mainboard_rows": 14
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-08-28",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260828\\limit_down.csv",
+      "sha256": "a3ea1228f4fb7428cedc28585a281791fd94c9c7eac06e0a7613d2d7cbd3cdaf",
+      "captured_at": "2026-08-30T17:14:07",
+      "mainboard_rows": 1
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-08-28",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260828\\previous_limit.csv",
+      "sha256": "95bf7bab9fb0a8171a434af06803865792d8b3d7fb227b971eef38b40e338757",
+      "captured_at": "2026-08-30T17:14:07",
+      "mainboard_rows": 68
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-08-31",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260831\\failed_board.csv",
+      "sha256": "af6856c6a43c98a7b00fe2424d722d893a126efbfc3e4e4f7bc399957d022bec",
+      "captured_at": "2026-08-31T16:14:16",
+      "mainboard_rows": 29
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-08-31",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260831\\limit_down.csv",
+      "sha256": "f603f931c615c261f7eadfd064c128fcd9eca38d64e03e7b7863f0c22128e681",
+      "captured_at": "2026-08-31T16:14:16",
+      "mainboard_rows": 11
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-08-31",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260831\\previous_limit.csv",
+      "sha256": "75f5c9d8b8f0936a29d086ffd45b49f0778c4bb6410a30c96f65571f8da7f1d4",
+      "captured_at": "2026-08-31T16:14:16",
+      "mainboard_rows": 77
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-01",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260901\\failed_board.csv",
+      "sha256": "dc44f16fa2723e80bb39857fd26c167095b1299ea2cb6b5a2332ee5eadbcc5d6",
+      "captured_at": "2026-09-01T21:31:35",
+      "mainboard_rows": 4
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-01",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260901\\limit_down.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "captured_at": "2026-09-01T21:31:35",
+      "mainboard_rows": 0
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-01",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260901\\previous_limit.csv",
+      "sha256": "237bb3569a6e774b0bedf4fa35a8c5a2141d71a00eaf16857af8b255e8e616f4",
+      "captured_at": "2026-09-01T21:31:35",
+      "mainboard_rows": 79
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-04",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260904\\failed_board.csv",
+      "sha256": "faee8a9a6b407e4619d8b74c76aef26d9027d1cbdaca9d8c74f8161edf895af2",
+      "captured_at": "2026-09-05T21:20:01",
+      "mainboard_rows": 44
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-04",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260904\\limit_down.csv",
+      "sha256": "e2d8b4905b4d0b78ceee1dade3825f6616bb81070b9f686c57d93dced43f2a5a",
+      "captured_at": "2026-09-05T21:20:01",
+      "mainboard_rows": 9
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-04",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260904\\previous_limit.csv",
+      "sha256": "a2f82b626a9d4b78b6ce1a6e3174db6a8061aa48a3f30dbc85b2678555552e76",
+      "captured_at": "2026-09-05T21:20:01",
+      "mainboard_rows": 42
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-07",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260907\\failed_board.csv",
+      "sha256": "5cac30367588247f027728c96041780ba6303fc8678119e29cb36f8bfb66028e",
+      "captured_at": "2026-09-07T17:28:28",
+      "mainboard_rows": 15
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-07",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260907\\limit_down.csv",
+      "sha256": "5f76a38c00af389c94d45c925e7325456c45d197f3725de7e3f569ec5bbc255f",
+      "captured_at": "2026-09-07T17:28:28",
+      "mainboard_rows": 2
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-07",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260907\\previous_limit.csv",
+      "sha256": "5f0731b89be134ed2752da04dd6b3aa18a5ec5a566c12390121596cd28cf4718",
+      "captured_at": "2026-09-07T17:28:28",
+      "mainboard_rows": 38
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-08",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260908\\failed_board.csv",
+      "sha256": "b4ffd17f10c746a0a1e6a0d2961d21d078b169e58fa168bef546015d8a27968f",
+      "captured_at": "2026-09-08T20:09:39",
+      "mainboard_rows": 34
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-08",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260908\\limit_down.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "captured_at": "2026-09-08T20:09:39",
+      "mainboard_rows": 0
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-08",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260908\\previous_limit.csv",
+      "sha256": "05cf2e6a9ad0a8547522253678dcfdf789d4b7108062b9549d327284ac935398",
+      "captured_at": "2026-09-08T20:09:39",
+      "mainboard_rows": 86
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-09",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260909\\failed_board.csv",
+      "sha256": "6c261df33268a73608f87293027f169c28e4bdea6d3206502444608321754ab1",
+      "captured_at": "2026-09-10T02:36:52",
+      "mainboard_rows": 26
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-09",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260909\\limit_down.csv",
+      "sha256": "ca38719b99870d84d1fa2cf3438e4730fcdaaa770c91b568f945d1ef30851567",
+      "captured_at": "2026-09-10T02:36:52",
+      "mainboard_rows": 7
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-09",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260909\\previous_limit.csv",
+      "sha256": "0ed9f5b84b9ff14aa1ef4f103e13bb6a247e93af5e093ec9928798447941435e",
+      "captured_at": "2026-09-10T02:36:52",
+      "mainboard_rows": 70
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-10",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260910\\failed_board.csv",
+      "sha256": "a4156d02b7c94d7035817fcc8d40eaf19b3b7aebfeecc55baa842a10f33095d2",
+      "captured_at": "2026-09-10T18:05:27",
+      "mainboard_rows": 21
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-10",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260910\\limit_down.csv",
+      "sha256": "0396e0e348ab8eda61dc1258c9813b20b0467ed978b3ffe1ee02b19c58323044",
+      "captured_at": "2026-09-10T18:05:27",
+      "mainboard_rows": 11
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-10",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260910\\previous_limit.csv",
+      "sha256": "bd2a549f4a52124b8427f24c2fce2ff79616749907c2e5ed6ee8346570bf5866",
+      "captured_at": "2026-09-10T18:05:27",
+      "mainboard_rows": 48
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-11",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260911\\failed_board.csv",
+      "sha256": "8244724c781d9c75513bf431eb0873647d789c3987873055dfe217275997c77e",
+      "captured_at": "2026-09-13T20:46:54",
+      "mainboard_rows": 18
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-11",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260911\\limit_down.csv",
+      "sha256": "a7f6090081180ebd8785aa9b1bc11e1ae9646e25db9275b7c0a1717a3abc5319",
+      "captured_at": "2026-09-13T20:46:54",
+      "mainboard_rows": 21
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-11",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260911\\previous_limit.csv",
+      "sha256": "819a2418ca9d02516d4ddea1d2c3fd27c4f223b244fac6f260f94fe6e8c590fb",
+      "captured_at": "2026-09-13T20:46:54",
+      "mainboard_rows": 34
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-14",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260914\\failed_board.csv",
+      "sha256": "7ebd52400f75548e107cd3769d47c6a4d70e20e2f23ebd119bcd22881563af2f",
+      "captured_at": "2026-09-14T15:01:21",
+      "mainboard_rows": 28
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-14",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260914\\limit_down.csv",
+      "sha256": "f0b0a4e6d583671f68c2e62504574e9a8d5a6ceeed7b30a6571b90bc5c513213",
+      "captured_at": "2026-09-14T15:01:21",
+      "mainboard_rows": 16
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-14",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260914\\previous_limit.csv",
+      "sha256": "82281e4718497f2cc49951c919f271415da9aca6c46e8ce93e8b1daf0b6b0117",
+      "captured_at": "2026-09-14T15:01:21",
+      "mainboard_rows": 40
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-15",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260915\\failed_board.csv",
+      "sha256": "33e7304948c8a8a60f04362f7626336a1e8d6fa096253d849bf25e7dbfa8ce67",
+      "captured_at": "2026-09-15T21:18:50",
+      "mainboard_rows": 19
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-15",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260915\\limit_down.csv",
+      "sha256": "1d93c6fce5075d706be0493871a4911350ad70e5dee816b3bac9c63edcaef6e7",
+      "captured_at": "2026-09-15T21:18:50",
+      "mainboard_rows": 27
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-15",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260915\\previous_limit.csv",
+      "sha256": "833a0f2b5ccd152b64afda23b9de9107b6ff24ad6c4eb8ca0ea33672385411a4",
+      "captured_at": "2026-09-15T21:18:50",
+      "mainboard_rows": 47
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-16",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260916\\failed_board.csv",
+      "sha256": "9dc99f345cd24207716c811610093012e1a4815617b3271ec82318ff1c8f41fe",
+      "captured_at": "2026-09-16T18:43:13",
+      "mainboard_rows": 10
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-16",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260916\\limit_down.csv",
+      "sha256": "7de22c8016ff5eaf3dd9fa09c1a014e5343429366649c5d26879120e20a6fa3f",
+      "captured_at": "2026-09-16T18:43:13",
+      "mainboard_rows": 4
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-16",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260916\\previous_limit.csv",
+      "sha256": "4b9b04de2eabcf06a4c6258b96742d34e7bcb2c4e83cfc03bc9c6e8e82475b58",
+      "captured_at": "2026-09-16T18:43:13",
+      "mainboard_rows": 31
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-17",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260917\\failed_board.csv",
+      "sha256": "b29a2eda32ef6b2c4ab3e21098ef808f27d6ff9a82fb18f241b67306b0b51f40",
+      "captured_at": "2026-09-21T18:46:37",
+      "mainboard_rows": 18
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-17",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260917\\limit_down.csv",
+      "sha256": "49c7753a8469ab977250998e3761013424d836c682b360fe2664e3b1f7ae4d95",
+      "captured_at": "2026-09-21T18:46:37",
+      "mainboard_rows": 1
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-17",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260917\\previous_limit.csv",
+      "sha256": "6ae89a0f576a23657b52d1b7dcca5786d0851669af8976155e5e9868b6bd3399",
+      "captured_at": "2026-09-21T18:46:37",
+      "mainboard_rows": 80
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-18",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260918\\failed_board.csv",
+      "sha256": "36018b6d7428b8effd1abcf58cc46326de5b6ca1b47583b0fa08bf9f9bebc680",
+      "captured_at": "2026-09-20T15:59:35",
+      "mainboard_rows": 21
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-18",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260918\\limit_down.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "captured_at": "2026-09-20T15:59:35",
+      "mainboard_rows": 0
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-18",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260918\\previous_limit.csv",
+      "sha256": "8762d2468578874f6653edf1e9fbb06de1cd423baa2308109149c3201ce76fcc",
+      "captured_at": "2026-09-20T15:59:35",
+      "mainboard_rows": 44
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-21",
+      "kind": "failed_board",
+      "path": "data\\v3\\raw\\20260921\\failed_board.csv",
+      "sha256": "c0e9e496d95c5e5f279cd87671b9c90e29f6eb5527f96b8ff5f3ebf2c9d5740c",
+      "captured_at": "2026-09-21T18:34:30",
+      "mainboard_rows": 23
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-21",
+      "kind": "limit_down",
+      "path": "data\\v3\\raw\\20260921\\limit_down.csv",
+      "sha256": "e4bdf149a371bcc4c6c61d6f61d871a498b7941ee9460aa9adb4e4cd34b4c842",
+      "captured_at": "2026-09-21T18:34:30",
+      "mainboard_rows": 2
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-21",
+      "kind": "previous_limit",
+      "path": "data\\v3\\raw\\20260921\\previous_limit.csv",
+      "sha256": "bedc6513a59f461a21c22697e5dd8d717d41d051fbbf77d043830a54bd33e57e",
+      "captured_at": "2026-09-21T18:34:30",
+      "mainboard_rows": 72
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-28",
+      "kind": "failed_board",
+      "path": "data\\review_20260928_1827\\failed_board.csv",
+      "sha256": "85ca851a538026bf434ff0a979ea0bc104e9d0d93c00876bc11a624af8f22805",
+      "captured_at": "2026-09-28T18:27:41+08:00",
+      "mainboard_rows": 10
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-28",
+      "kind": "limit_down",
+      "path": "data\\review_20260928_1827\\limit_down.csv",
+      "sha256": "5b81132867a567906ef555e715683da4fbbb1d77e2026e4cb3a9401a64296ec8",
+      "captured_at": "2026-09-28T18:27:41+08:00",
+      "mainboard_rows": 56
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-28",
+      "kind": "previous_limit",
+      "path": "data\\review_20260928_1827\\previous_limit.csv",
+      "sha256": "6fff3cb08ffff170e5269bd3be49e1852320d49539e45d07b355c80a1a52a0da",
+      "captured_at": "2026-09-28T18:27:41+08:00",
+      "mainboard_rows": 46
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-29",
+      "kind": "failed_board",
+      "path": "data\\review_20260929_1557\\failed_board.csv",
+      "sha256": "709a82a30a7547c8d982bf25092dfd63587f623b6608ef8f6c4b7b4e733ffd8d",
+      "captured_at": "2026-09-29T15:57:10+08:00",
+      "mainboard_rows": 8
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-29",
+      "kind": "limit_down",
+      "path": "data\\review_20260929_1557\\limit_down.csv",
+      "sha256": "07000508cca28be8ff43c4bd653d9f675f809e31e10e10019c7ecdf4abfafe73",
+      "captured_at": "2026-09-29T15:57:10+08:00",
+      "mainboard_rows": 10
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-29",
+      "kind": "previous_limit",
+      "path": "data\\review_20260929_1557\\previous_limit.csv",
+      "sha256": "595cd83c2a613c009e58fccb3a61b12948de03ebd92c73e0d8a78b44828d5b23",
+      "captured_at": "2026-09-29T15:57:10+08:00",
+      "mainboard_rows": 31
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-30",
+      "kind": "failed_board",
+      "path": "data\\review_20260930_eod_1911\\failed_board.csv",
+      "sha256": "a655b7abf2edac2375cc8e91f6ed0634bee9260ee78ad5a10b51fa17ad95f387",
+      "captured_at": "2026-09-30T19:18:24+08:00",
+      "mainboard_rows": 11
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-30",
+      "kind": "limit_down",
+      "path": "data\\review_20260930_eod_1911\\limit_down.csv",
+      "sha256": "f52aaa4045fd8fe773109a8074b90255d6292ae033abc9bb2aae04849711bad5",
+      "captured_at": "2026-09-30T19:18:24+08:00",
+      "mainboard_rows": 8
+    },
+    {
+      "status": "MANIFEST_BOUND_PROVIDER_OBSERVATION",
+      "date": "2026-09-30",
+      "kind": "previous_limit",
+      "path": "data\\review_20260930_eod_1911\\previous_limit.csv",
+      "sha256": "5141681d9a06948832d4b9e05ebb9a0f1a9ec8b16caa98a00293c10ea06f95a7",
+      "captured_at": "2026-09-30T19:18:24+08:00",
+      "mainboard_rows": 51
+    }
+  ],
+  "calendar": {
+    "sessions": [
+      "2026-08-28",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-08",
+      "2026-10-09"
+    ],
+    "sources": [
+      "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "https://www.szse.cn/www/disclosure/notice/general/t20260917_622911.html"
+    ]
+  },
+  "ohlc_agreement": {
+    "relay_rows": 217,
+    "agreed_rows": 217
+  },
+  "missing_feature_rates": {
+    "boards": 0.0,
+    "height_gap": 0.0,
+    "same_height_rivals": 0.0,
+    "unique_space": 0.0,
+    "height_share": 0.0,
+    "is_space_leader": 0.0,
+    "emotion_score": 0.0,
+    "promotion_2to3": 0.07692307692307693,
+    "promotion_3to4": 0.1978021978021978,
+    "promotion_mid": 0.07692307692307693,
+    "previous_limit_tail_loss": 0.0,
+    "failed_rate": 0.0,
+    "down_limit_rate": 0.0,
+    "breadth_health": 0.0,
+    "ladder_health": 0.0,
+    "loss_effect_health": 0.0,
+    "crowding_risk": 0.0,
+    "regime_fragility": 0.0,
+    "turnover": 0.0,
+    "signal_amount": 0.0,
+    "amplitude": 0.0,
+    "turnover_vs_prev": 0.07142857142857142,
+    "price": 0.0,
+    "price_same_height_percentile": 0.0,
+    "signal_amount_same_height_percentile": 0.0,
+    "turnover_same_height_percentile": 0.0,
+    "turnover_vs_prev_same_height_percentile": 0.07142857142857142,
+    "signal_one_word": 0.0,
+    "log_signal_amount": 0.0
+  },
+  "coverage": {
+    "calendar_signal_sessions": 21,
+    "observed_market_sessions": 16,
+    "market_evaluable_sessions": 11,
+    "observed_relay_sessions": 16,
+    "missing_pool_signal_dates": [
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24"
+    ]
+  },
+  "source_hashes": {
+    "data\\v275\\reported_seal_archive_20261002_v2\\reported_seal_rows.csv": "1d5f54ea94fd6cc8298e0dde850a30c24acad4fd17ca52f7a443fd0e505e1be0",
+    "data\\v278\\september_unadjusted_20261002_v3\\unadjusted_daily.csv": "deaa3b134e4a814d22b256feaddd35fbe063c9c8b5642d63a72975306ce7ecb7",
+    "data\\v278\\september_unadjusted_20261002_v3\\report.json": "22a45282ca5b01db9c77695c057fd70d2fa7feda86614b72318507bb5a673bf0",
+    "september_forecast_holdout_v278.py": "467514b6419f6a680f53a11aec196274addac3afcd041f861d38bf2400a07204",
+    "historical_ohlc_archive_v278.py": "0bbdf22d8225cf6480c6af4371cf669bc7f6d226dd7027c4686ed852cb1a2c2c",
+    "rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371",
+    "leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "results\\v203\\index_emotion_divergence_20260917_v3\\index_emotion_calendar_rows.csv": "11e528164d47400b2b412cf730d55c6ee12cc77537eb3224437dbb862033037e"
+  },
+  "limitations": [
+    "September history previously inspected; no pristine blind or forward registration",
+    "Provider pools not exchange-certified, historical security universe still incomplete",
+    "Reconstructed OHLC loss fields vs reported pools can shift definitions; overlap drift retained",
+    "Missing sessions remain unknown; no shift across missing pools",
+    "Unadjusted Tencent daily bars are retrospectively received; no minute, queue or fill evidence",
+    "Legacy one-word proxy also requires turnover under 3%; pure OHLC definition reported separately",
+    "Legacy turnover_vs_prev compares with last observed relay-pool appearance, not necessarily previous session",
+    "Small available September denominator cannot prove stable 60%"
+  ],
+  "trade_authorized": false
+}

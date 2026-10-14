@@ -1,0 +1,509 @@
+{
+  "status": "COMPLETE_FIXED_ALL29_SEMANTIC_AND_STAGE_DIAGNOSTIC_NO_FITS",
+  "formed_at": "2026-10-13T12:09:00.574288+00:00",
+  "complete_prepared_candidates": 9245,
+  "historical_original_BASE_candidates": 3707,
+  "current_candidates": 10,
+  "ordered_fields": [
+    "boards",
+    "height_gap",
+    "same_height_rivals",
+    "unique_space",
+    "height_share",
+    "is_space_leader",
+    "emotion_score",
+    "promotion_2to3",
+    "promotion_3to4",
+    "promotion_mid",
+    "previous_limit_tail_loss",
+    "failed_rate",
+    "down_limit_rate",
+    "breadth_health",
+    "ladder_health",
+    "loss_effect_health",
+    "crowding_risk",
+    "regime_fragility",
+    "turnover",
+    "signal_amount",
+    "amplitude",
+    "turnover_vs_prev",
+    "price",
+    "price_same_height_percentile",
+    "signal_amount_same_height_percentile",
+    "turnover_same_height_percentile",
+    "turnover_vs_prev_same_height_percentile",
+    "signal_one_word",
+    "log_signal_amount"
+  ],
+  "training_checks": [
+    {
+      "fold": "2025H2",
+      "digest": "42ce437fb4e50ccb8851e49805fec2cc8bd044893f03c5e94359f3715e86a0b7",
+      "training_rows": 4062,
+      "training_dates": 252,
+      "latest_label": "2025-06-30",
+      "true_ohlc_identity_known": 0
+    },
+    {
+      "fold": "2026JanAug",
+      "digest": "fd67c90616818e71daaefdf6bd782c65eb5eb797cca5bae962fa7c4bf6eded2e",
+      "training_rows": 3243,
+      "training_dates": 252,
+      "latest_label": "2025-12-31",
+      "true_ohlc_identity_known": 0
+    },
+    {
+      "fold": "2026Sep",
+      "digest": "efad5d49f7ba3a26b859dcb8f7270599458e8b03806c33a4e5aaf3b02014e3fc",
+      "training_rows": 3059,
+      "training_dates": 252,
+      "latest_label": "2026-08-31",
+      "true_ohlc_identity_known": 0
+    }
+  ],
+  "cohort_counts": [
+    {
+      "cohort": "original_training_2025H2",
+      "rows": 4062,
+      "groups": {
+        "complete": 4062,
+        "true_nonword": 0,
+        "true_oneword": 0,
+        "unknown_true_identity": 4062,
+        "proxy0": 3182,
+        "proxy1": 880
+      },
+      "market_status": {
+        "verified": 4062
+      }
+    },
+    {
+      "cohort": "original_saved_2025H2",
+      "rows": 1584,
+      "groups": {
+        "complete": 1584,
+        "true_nonword": 0,
+        "true_oneword": 0,
+        "unknown_true_identity": 1584,
+        "proxy0": 1289,
+        "proxy1": 295
+      },
+      "market_status": {
+        "verified": 1584
+      }
+    },
+    {
+      "cohort": "original_training_2026JanAug",
+      "rows": 3243,
+      "groups": {
+        "complete": 3243,
+        "true_nonword": 0,
+        "true_oneword": 0,
+        "unknown_true_identity": 3243,
+        "proxy0": 2608,
+        "proxy1": 635
+      },
+      "market_status": {
+        "verified": 3243
+      }
+    },
+    {
+      "cohort": "original_saved_2026JanAug",
+      "rows": 1941,
+      "groups": {
+        "complete": 1941,
+        "true_nonword": 0,
+        "true_oneword": 0,
+        "unknown_true_identity": 1941,
+        "proxy0": 1660,
+        "proxy1": 281
+      },
+      "market_status": {
+        "verified": 1941
+      }
+    },
+    {
+      "cohort": "original_training_2026Sep",
+      "rows": 3059,
+      "groups": {
+        "complete": 3059,
+        "true_nonword": 0,
+        "true_oneword": 0,
+        "unknown_true_identity": 3059,
+        "proxy0": 2576,
+        "proxy1": 483
+      },
+      "market_status": {
+        "verified": 3059
+      }
+    },
+    {
+      "cohort": "original_saved_2026Sep",
+      "rows": 182,
+      "groups": {
+        "complete": 182,
+        "true_nonword": 143,
+        "true_oneword": 39,
+        "unknown_true_identity": 0,
+        "proxy0": 152,
+        "proxy1": 30
+      },
+      "market_status": {
+        "verified": 151,
+        "partial": 31
+      }
+    },
+    {
+      "cohort": "original_complete_2026-10-13_input10",
+      "rows": 10,
+      "groups": {
+        "complete": 10,
+        "true_nonword": 8,
+        "true_oneword": 2,
+        "unknown_true_identity": 0,
+        "proxy0": 9,
+        "proxy1": 1
+      },
+      "market_status": {
+        "partial": 10
+      }
+    }
+  ],
+  "original_metrics_by_identity": {
+    "2025H2": {
+      "complete": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6470959595959596,
+        "Precision": 0.6345609065155807,
+        "complete_positive_Recall": 0.3425076452599388,
+        "F1": 0.4448857994041708,
+        "confusion": {
+          "TP": 224,
+          "TN": 801,
+          "FP": 129,
+          "FN": 430
+        },
+        "complete_positive_misses": 430,
+        "positive_support": 654,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "true_nonword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_oneword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "unknown_true_identity": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6470959595959596,
+        "Precision": 0.6345609065155807,
+        "complete_positive_Recall": 0.3425076452599388,
+        "F1": 0.4448857994041708,
+        "confusion": {
+          "TP": 224,
+          "TN": 801,
+          "FP": 129,
+          "FN": 430
+        },
+        "complete_positive_misses": 430,
+        "positive_support": 654,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      }
+    },
+    "2026JanAug": {
+      "complete": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7197087883515341,
+        "Precision": 0.6105990783410138,
+        "complete_positive_Recall": 0.41732283464566927,
+        "F1": 0.4957904583723105,
+        "confusion": {
+          "TP": 265,
+          "TN": 1119,
+          "FP": 169,
+          "FN": 370
+        },
+        "complete_positive_misses": 370,
+        "positive_support": 635,
+        "signal_days": 160,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "true_nonword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_oneword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "unknown_true_identity": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7197087883515341,
+        "Precision": 0.6105990783410138,
+        "complete_positive_Recall": 0.41732283464566927,
+        "F1": 0.4957904583723105,
+        "confusion": {
+          "TP": 265,
+          "TN": 1119,
+          "FP": 169,
+          "FN": 370
+        },
+        "complete_positive_misses": 370,
+        "positive_support": 635,
+        "signal_days": 160,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      }
+    },
+    "2026Sep": {
+      "complete": {
+        "original_registered_count": 182,
+        "scoreable_count": 133,
+        "coverage": 0.7307692307692307,
+        "Accuracy": 0.6165413533834586,
+        "Precision": 0.5588235294117647,
+        "complete_positive_Recall": 0.34545454545454546,
+        "F1": 0.42696629213483145,
+        "confusion": {
+          "TP": 19,
+          "TN": 63,
+          "FP": 15,
+          "FN": 36
+        },
+        "complete_positive_misses": 36,
+        "positive_support": 55,
+        "signal_days": 16,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_nonword": {
+        "original_registered_count": 143,
+        "scoreable_count": 107,
+        "coverage": 0.7482517482517482,
+        "Accuracy": 0.6448598130841121,
+        "Precision": 0.6,
+        "complete_positive_Recall": 0.15,
+        "F1": 0.24,
+        "confusion": {
+          "TP": 6,
+          "TN": 63,
+          "FP": 4,
+          "FN": 34
+        },
+        "complete_positive_misses": 34,
+        "positive_support": 40,
+        "signal_days": 16,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_oneword": {
+        "original_registered_count": 39,
+        "scoreable_count": 26,
+        "coverage": 0.6666666666666666,
+        "Accuracy": 0.5,
+        "Precision": 0.5416666666666666,
+        "complete_positive_Recall": 0.8666666666666667,
+        "F1": 0.6666666666666667,
+        "confusion": {
+          "TP": 13,
+          "TN": 0,
+          "FP": 11,
+          "FN": 2
+        },
+        "complete_positive_misses": 2,
+        "positive_support": 15,
+        "signal_days": 15,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "unknown_true_identity": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      }
+    }
+  },
+  "september_proxy_actual_crosstab": [
+    {
+      "actual_one_word_daily": 0.0,
+      "signal_one_word": 0.0,
+      "rows": 143
+    },
+    {
+      "actual_one_word_daily": 1.0,
+      "signal_one_word": 0.0,
+      "rows": 9
+    },
+    {
+      "actual_one_word_daily": 1.0,
+      "signal_one_word": 1.0,
+      "rows": 30
+    }
+  ],
+  "september_turnover_reference": {
+    "known": 169,
+    "unknown": 13,
+    "equals_previous_official_session": 64,
+    "definition": "last observed relay-pool appearance; no previous-day assumption"
+  },
+  "current_unknown_fields": {
+    "603096": [
+      "previous_limit_tail_loss"
+    ],
+    "002343": [
+      "previous_limit_tail_loss"
+    ],
+    "002696": [
+      "previous_limit_tail_loss"
+    ],
+    "605136": [
+      "previous_limit_tail_loss"
+    ],
+    "001231": [
+      "previous_limit_tail_loss"
+    ],
+    "603968": [
+      "previous_limit_tail_loss"
+    ],
+    "605577": [
+      "previous_limit_tail_loss"
+    ],
+    "600851": [
+      "previous_limit_tail_loss"
+    ],
+    "600831": [
+      "previous_limit_tail_loss",
+      "turnover_vs_prev",
+      "turnover_vs_prev_same_height_percentile"
+    ],
+    "600693": [
+      "previous_limit_tail_loss"
+    ]
+  },
+  "current_outside_training_minmax": {
+    "603096": [],
+    "002343": [],
+    "002696": [],
+    "605136": [],
+    "001231": [],
+    "603968": [],
+    "605577": [],
+    "600851": [],
+    "600831": [],
+    "600693": []
+  },
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\base_predictions.json": "5beb0f5185e301d4560a2c3a2f76385dba57c9b3a90994fc18fb5ff0dfa49bfb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\features\\manifest.json": "8751cbdca8eb97ba6c2683d7685de789c9003bf0d2d28daf12a7cd6c6cb35573",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\features\\features.json": "e3f01e9573d447e4f16d44330fef7a50a2b10de222ab9e3ee9896eb63ddee1cf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\independent_source_repaired\\record_before_scores.json": "8ff2f2a474f625d4c6c1ea88d30c414a3740a5434f1f00d8be04c98c3215d38b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-13_47f5c10d3a45999a.json": "a54e814c6e948dde5319a4eb22d98517bab38f0d09cafdd9e80c56181b57d9cb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_inputs.py": "1fc7eee843596013132af27376c5a74dc424904afca30960207465c9c67d848b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_field_context.py": "7d813c845891ef82e15ab46fdb308755fe6631bb5f1b2192cd1a76c0828d79f4"
+  },
+  "numeric_fits": 0,
+  "new_real_forward_samples": 0,
+  "original_scores_calls_unchanged": true,
+  "Accuracy_gain_verified": false
+}

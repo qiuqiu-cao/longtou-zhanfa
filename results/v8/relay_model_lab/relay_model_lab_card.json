@@ -1,0 +1,2533 @@
+{
+  "version": "v8-relay-model-lab-1",
+  "status": "RESEARCH_ONLY",
+  "generated_at_utc": "2026-09-01T07:01:35.767644+00:00",
+  "data_start": "2023-11-29",
+  "data_end": "2026-08-31",
+  "rows": 8580,
+  "dates": 668,
+  "initial_dates": 220,
+  "retrain_dates": 20,
+  "label_maturity_enforced": true,
+  "calibration_embargo_dates": 1,
+  "feature_stages": {
+    "structure": [
+      "boards",
+      "height_gap",
+      "is_space_leader",
+      "unique_space",
+      "height_share",
+      "valid_identity",
+      "buyable_eod",
+      "one_word_proxy",
+      "one_word_streak",
+      "same_height_rivals",
+      "breadth_health",
+      "relay_appetite",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "false_acceleration",
+      "promotion_mid",
+      "failed_rate",
+      "down_limit_rate",
+      "middle_density",
+      "ladder_gap_count",
+      "breadth_height_divergence",
+      "yesterday_premium",
+      "previous_limit_tail_loss",
+      "emotion_adverse_markov_probability",
+      "emotion_v7_adverse_probability",
+      "state_start",
+      "state_warming",
+      "state_acceleration",
+      "state_consensus",
+      "state_divergence",
+      "state_retreat",
+      "state_repair"
+    ],
+    "plus_individual": [
+      "boards",
+      "height_gap",
+      "is_space_leader",
+      "unique_space",
+      "height_share",
+      "valid_identity",
+      "buyable_eod",
+      "one_word_proxy",
+      "one_word_streak",
+      "same_height_rivals",
+      "breadth_health",
+      "relay_appetite",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "false_acceleration",
+      "promotion_mid",
+      "failed_rate",
+      "down_limit_rate",
+      "middle_density",
+      "ladder_gap_count",
+      "breadth_height_divergence",
+      "yesterday_premium",
+      "previous_limit_tail_loss",
+      "emotion_adverse_markov_probability",
+      "emotion_v7_adverse_probability",
+      "state_start",
+      "state_warming",
+      "state_acceleration",
+      "state_consensus",
+      "state_divergence",
+      "state_retreat",
+      "state_repair",
+      "turnover",
+      "turnover_vs_prev",
+      "amount_float_cap",
+      "amplitude",
+      "relative_strength",
+      "price",
+      "float_cap_log"
+    ],
+    "plus_cross_section": [
+      "boards",
+      "height_gap",
+      "is_space_leader",
+      "unique_space",
+      "height_share",
+      "valid_identity",
+      "buyable_eod",
+      "one_word_proxy",
+      "one_word_streak",
+      "same_height_rivals",
+      "breadth_health",
+      "relay_appetite",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "false_acceleration",
+      "promotion_mid",
+      "failed_rate",
+      "down_limit_rate",
+      "middle_density",
+      "ladder_gap_count",
+      "breadth_height_divergence",
+      "yesterday_premium",
+      "previous_limit_tail_loss",
+      "emotion_adverse_markov_probability",
+      "emotion_v7_adverse_probability",
+      "state_start",
+      "state_warming",
+      "state_acceleration",
+      "state_consensus",
+      "state_divergence",
+      "state_retreat",
+      "state_repair",
+      "turnover",
+      "turnover_vs_prev",
+      "amount_float_cap",
+      "amplitude",
+      "relative_strength",
+      "price",
+      "float_cap_log",
+      "turnover_rank_pct",
+      "turnover_change_rank_pct",
+      "amount_float_rank_pct",
+      "amplitude_rank_pct",
+      "relative_strength_rank_pct",
+      "price_rank_pct",
+      "float_cap_rank_pct"
+    ],
+    "plus_stock_memory": [
+      "boards",
+      "height_gap",
+      "is_space_leader",
+      "unique_space",
+      "height_share",
+      "valid_identity",
+      "buyable_eod",
+      "one_word_proxy",
+      "one_word_streak",
+      "same_height_rivals",
+      "breadth_health",
+      "relay_appetite",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "false_acceleration",
+      "promotion_mid",
+      "failed_rate",
+      "down_limit_rate",
+      "middle_density",
+      "ladder_gap_count",
+      "breadth_height_divergence",
+      "yesterday_premium",
+      "previous_limit_tail_loss",
+      "emotion_adverse_markov_probability",
+      "emotion_v7_adverse_probability",
+      "state_start",
+      "state_warming",
+      "state_acceleration",
+      "state_consensus",
+      "state_divergence",
+      "state_retreat",
+      "state_repair",
+      "turnover",
+      "turnover_vs_prev",
+      "amount_float_cap",
+      "amplitude",
+      "relative_strength",
+      "price",
+      "float_cap_log",
+      "turnover_rank_pct",
+      "turnover_change_rank_pct",
+      "amount_float_rank_pct",
+      "amplitude_rank_pct",
+      "relative_strength_rank_pct",
+      "price_rank_pct",
+      "float_cap_rank_pct",
+      "prior_signal_count_log",
+      "prior_promotion_count",
+      "prior_promotion_rate",
+      "prior_two_more_count",
+      "prior_two_more_rate",
+      "prior_large_loss_count",
+      "prior_large_loss_rate",
+      "prior_terminal_max",
+      "prior_campaign_count_log",
+      "days_since_prior_campaign"
+    ]
+  },
+  "targets": {
+    "promotion": {
+      "label": "promotion_target",
+      "maturity": "promotion_maturity"
+    },
+    "fill": {
+      "label": "fill_target",
+      "maturity": "fill_maturity"
+    },
+    "two_more": {
+      "label": "two_more_target",
+      "maturity": "two_more_maturity"
+    },
+    "large_loss": {
+      "label": "large_loss_target",
+      "maturity": "large_loss_maturity"
+    }
+  },
+  "experiments": [
+    {
+      "name": "promotion__structure__logistic",
+      "target": "promotion",
+      "feature_stage": "structure",
+      "model": "logistic",
+      "feature_count": 34,
+      "overall": {
+        "n": 5918,
+        "positive_rate": 0.3933761405880365,
+        "auc": 0.64447653131551,
+        "brier": 0.22240835813365167,
+        "baseline_brier": 0.2388093466579586,
+        "brier_skill_vs_baseline": 0.0686781683959703,
+        "log_loss": 0.6368889269750189,
+        "baseline_log_loss": 0.6706035786186093,
+        "log_loss_improvement_vs_baseline": 0.03371465164359044
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.43671416596814755,
+          "auc": 0.6175888001553789,
+          "brier": 0.23438768378872157,
+          "baseline_brier": 0.24691036813270636,
+          "brier_skill_vs_baseline": 0.05071753138067592,
+          "log_loss": 0.6616275887777987,
+          "baseline_log_loss": 0.687000801416469,
+          "log_loss_improvement_vs_baseline": 0.025373212638670317
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.41135135135135137,
+          "auc": 0.6016834212390298,
+          "brier": 0.23127870110724466,
+          "baseline_brier": 0.24221311102878348,
+          "brier_skill_vs_baseline": 0.04514375739238752,
+          "log_loss": 0.6558480431428345,
+          "baseline_log_loss": 0.677494293028776,
+          "log_loss_improvement_vs_baseline": 0.021646249885941438
+        },
+        {
+          "fold": 3,
+          "n": 1682,
+          "positive_rate": 0.31212841854934603,
+          "auc": 0.6459348890809564,
+          "brier": 0.1956587710265507,
+          "baseline_brier": 0.2235739118632057,
+          "brier_skill_vs_baseline": 0.12485866800834511,
+          "log_loss": 0.5809431410226454,
+          "baseline_log_loss": 0.6397643424387628,
+          "log_loss_improvement_vs_baseline": 0.05882120141611735
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3552,
+        "positive_rate": 0.3947072072072072,
+        "auc": 0.6401386723285672,
+        "brier": 0.22247863324145464,
+        "baseline_brier": 0.23918201190168611,
+        "brier_skill_vs_baseline": 0.06983543004520454,
+        "log_loss": 0.6371004614283307,
+        "baseline_log_loss": 0.6713640690315036,
+        "log_loss_improvement_vs_baseline": 0.03426360760317293
+      },
+      "by_board": {
+        "2": {
+          "n": 3716,
+          "positive_rate": 0.3428417653390743,
+          "auc": 0.6212167819310677,
+          "brier": 0.21398594672378074,
+          "baseline_brier": 0.2295360001427131,
+          "brier_skill_vs_baseline": 0.06774559724515627,
+          "log_loss": 0.6193467559610858,
+          "baseline_log_loss": 0.6518403761219279,
+          "log_loss_improvement_vs_baseline": 0.03249362016084212
+        },
+        "3": {
+          "n": 1279,
+          "positive_rate": 0.48631743549648165,
+          "auc": 0.6310534094857753,
+          "brier": 0.23687496028964294,
+          "baseline_brier": 0.2556202689782817,
+          "brier_skill_vs_baseline": 0.07333263814940838,
+          "log_loss": 0.6671153190762168,
+          "baseline_log_loss": 0.7046073733015543,
+          "log_loss_improvement_vs_baseline": 0.03749205422533752
+        },
+        "4": {
+          "n": 632,
+          "positive_rate": 0.4588607594936709,
+          "auc": 0.6464105666465013,
+          "brier": 0.23162656849462035,
+          "baseline_brier": 0.2512358429539064,
+          "brier_skill_vs_baseline": 0.0780512614312111,
+          "log_loss": 0.65594733998137,
+          "baseline_log_loss": 0.6957656164545581,
+          "log_loss_improvement_vs_baseline": 0.03981827647318814
+        },
+        "5": {
+          "n": 291,
+          "positive_rate": 0.4879725085910653,
+          "auc": 0.5910057661404671,
+          "brier": 0.24635676945129867,
+          "baseline_brier": 0.25635244062331863,
+          "brier_skill_vs_baseline": 0.038991909527818724,
+          "log_loss": 0.6866560574572468,
+          "baseline_log_loss": 0.7061046066799902,
+          "log_loss_improvement_vs_baseline": 0.019448549222743416
+        }
+      }
+    },
+    {
+      "name": "promotion__plus_individual__logistic",
+      "target": "promotion",
+      "feature_stage": "plus_individual",
+      "model": "logistic",
+      "feature_count": 41,
+      "overall": {
+        "n": 5918,
+        "positive_rate": 0.3933761405880365,
+        "auc": 0.6671991212704247,
+        "brier": 0.2181234589450369,
+        "baseline_brier": 0.2388093466579586,
+        "brier_skill_vs_baseline": 0.08662093005325144,
+        "log_loss": 0.6268073899020253,
+        "baseline_log_loss": 0.6706035786186093,
+        "log_loss_improvement_vs_baseline": 0.04379618871658397
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.43671416596814755,
+          "auc": 0.6409570366054291,
+          "brier": 0.2307980462614228,
+          "baseline_brier": 0.24691036813270636,
+          "brier_skill_vs_baseline": 0.0652557524948637,
+          "log_loss": 0.6540422900236726,
+          "baseline_log_loss": 0.687000801416469,
+          "log_loss_improvement_vs_baseline": 0.032958511392796375
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.41135135135135137,
+          "auc": 0.6391908573248914,
+          "brier": 0.2273831503538725,
+          "baseline_brier": 0.24221311102878348,
+          "brier_skill_vs_baseline": 0.061226911342337154,
+          "log_loss": 0.6473693238010132,
+          "baseline_log_loss": 0.677494293028776,
+          "log_loss_improvement_vs_baseline": 0.030124969227762755
+        },
+        {
+          "fold": 3,
+          "n": 1682,
+          "positive_rate": 0.31212841854934603,
+          "auc": 0.693632958801498,
+          "brier": 0.18995937188008902,
+          "baseline_brier": 0.2235739118632057,
+          "brier_skill_vs_baseline": 0.15035090500041803,
+          "log_loss": 0.5655576577953798,
+          "baseline_log_loss": 0.6397643424387628,
+          "log_loss_improvement_vs_baseline": 0.07420668464338298
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3552,
+        "positive_rate": 0.3947072072072072,
+        "auc": 0.6639292704773911,
+        "brier": 0.2183139909452061,
+        "baseline_brier": 0.23918201190168611,
+        "brier_skill_vs_baseline": 0.08724745138885137,
+        "log_loss": 0.6273788906020398,
+        "baseline_log_loss": 0.6713640690315036,
+        "log_loss_improvement_vs_baseline": 0.04398517842946381
+      },
+      "by_board": {
+        "2": {
+          "n": 3716,
+          "positive_rate": 0.3428417653390743,
+          "auc": 0.6477547548976119,
+          "brier": 0.21028131240683934,
+          "baseline_brier": 0.2295360001427131,
+          "brier_skill_vs_baseline": 0.08388526298228705,
+          "log_loss": 0.6097944041284705,
+          "baseline_log_loss": 0.6518403761219279,
+          "log_loss_improvement_vs_baseline": 0.04204597199345739
+        },
+        "3": {
+          "n": 1279,
+          "positive_rate": 0.48631743549648165,
+          "auc": 0.6418167936689718,
+          "brier": 0.234136146285861,
+          "baseline_brier": 0.2556202689782817,
+          "brier_skill_vs_baseline": 0.08404702325951341,
+          "log_loss": 0.6614789839747032,
+          "baseline_log_loss": 0.7046073733015543,
+          "log_loss_improvement_vs_baseline": 0.043128389326851146
+        },
+        "4": {
+          "n": 632,
+          "positive_rate": 0.4588607594936709,
+          "auc": 0.701855212744505,
+          "brier": 0.22131787845069656,
+          "baseline_brier": 0.2512358429539064,
+          "brier_skill_vs_baseline": 0.11908318554967812,
+          "log_loss": 0.6340831802664187,
+          "baseline_log_loss": 0.6957656164545581,
+          "log_loss_improvement_vs_baseline": 0.0616824361881394
+        },
+        "5": {
+          "n": 291,
+          "positive_rate": 0.4879725085910653,
+          "auc": 0.6250590793080633,
+          "brier": 0.2409492881527735,
+          "baseline_brier": 0.25635244062331863,
+          "brier_skill_vs_baseline": 0.06008584288525787,
+          "log_loss": 0.6758692002294411,
+          "baseline_log_loss": 0.7061046066799902,
+          "log_loss_improvement_vs_baseline": 0.030235406450549118
+        }
+      }
+    },
+    {
+      "name": "promotion__plus_cross_section__logistic",
+      "target": "promotion",
+      "feature_stage": "plus_cross_section",
+      "model": "logistic",
+      "feature_count": 48,
+      "overall": {
+        "n": 5918,
+        "positive_rate": 0.3933761405880365,
+        "auc": 0.6709970182542189,
+        "brier": 0.21765453639990762,
+        "baseline_brier": 0.2388093466579586,
+        "brier_skill_vs_baseline": 0.08858451544759072,
+        "log_loss": 0.625744429213033,
+        "baseline_log_loss": 0.6706035786186093,
+        "log_loss_improvement_vs_baseline": 0.04485914940557634
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.43671416596814755,
+          "auc": 0.6427464639886664,
+          "brier": 0.23096204226088757,
+          "baseline_brier": 0.24691036813270636,
+          "brier_skill_vs_baseline": 0.06459156005651046,
+          "log_loss": 0.6543864929898294,
+          "baseline_log_loss": 0.687000801416469,
+          "log_loss_improvement_vs_baseline": 0.03261430842663959
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.41135135135135137,
+          "auc": 0.6513950881409967,
+          "brier": 0.22521172488303842,
+          "baseline_brier": 0.24221311102878348,
+          "brier_skill_vs_baseline": 0.07019184912630394,
+          "log_loss": 0.642710303346505,
+          "baseline_log_loss": 0.677494293028776,
+          "log_loss_improvement_vs_baseline": 0.03478398968227092
+        },
+        {
+          "fold": 3,
+          "n": 1682,
+          "positive_rate": 0.31212841854934603,
+          "auc": 0.6895616742807754,
+          "brier": 0.19046517392779705,
+          "baseline_brier": 0.2235739118632057,
+          "brier_skill_vs_baseline": 0.14808855675283938,
+          "log_loss": 0.5664538041723911,
+          "baseline_log_loss": 0.6397643424387628,
+          "log_loss_improvement_vs_baseline": 0.07331053826637168
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3552,
+        "positive_rate": 0.3947072072072072,
+        "auc": 0.6684265003483396,
+        "brier": 0.21772244907584656,
+        "baseline_brier": 0.23918201190168611,
+        "brier_skill_vs_baseline": 0.08972063850127798,
+        "log_loss": 0.6261238125134521,
+        "baseline_log_loss": 0.6713640690315036,
+        "log_loss_improvement_vs_baseline": 0.045240256518051525
+      },
+      "by_board": {
+        "2": {
+          "n": 3716,
+          "positive_rate": 0.3428417653390743,
+          "auc": 0.6538586895729752,
+          "brier": 0.20954461535908717,
+          "baseline_brier": 0.2295360001427131,
+          "brier_skill_vs_baseline": 0.08709476845112041,
+          "log_loss": 0.6081360206815685,
+          "baseline_log_loss": 0.6518403761219279,
+          "log_loss_improvement_vs_baseline": 0.043704355440359444
+        },
+        "3": {
+          "n": 1279,
+          "positive_rate": 0.48631743549648165,
+          "auc": 0.649708555403838,
+          "brier": 0.23372708161555925,
+          "baseline_brier": 0.2556202689782817,
+          "brier_skill_vs_baseline": 0.08564730586596236,
+          "log_loss": 0.6608699372648269,
+          "baseline_log_loss": 0.7046073733015543,
+          "log_loss_improvement_vs_baseline": 0.04373743603672742
+        },
+        "4": {
+          "n": 632,
+          "positive_rate": 0.4588607594936709,
+          "auc": 0.7034986892518652,
+          "brier": 0.22030517052875934,
+          "baseline_brier": 0.2512358429539064,
+          "brier_skill_vs_baseline": 0.12311409097316506,
+          "log_loss": 0.6314958722882501,
+          "baseline_log_loss": 0.6957656164545581,
+          "log_loss_improvement_vs_baseline": 0.06426974416630804
+        },
+        "5": {
+          "n": 291,
+          "positive_rate": 0.4879725085910653,
+          "auc": 0.6068626524246148,
+          "brier": 0.24481769958697383,
+          "baseline_brier": 0.25635244062331863,
+          "brier_skill_vs_baseline": 0.04499563572828946,
+          "log_loss": 0.6837252171207316,
+          "baseline_log_loss": 0.7061046066799902,
+          "log_loss_improvement_vs_baseline": 0.022379389559258556
+        }
+      }
+    },
+    {
+      "name": "promotion__plus_stock_memory__logistic",
+      "target": "promotion",
+      "feature_stage": "plus_stock_memory",
+      "model": "logistic",
+      "feature_count": 58,
+      "overall": {
+        "n": 5918,
+        "positive_rate": 0.3933761405880365,
+        "auc": 0.6666363945285205,
+        "brier": 0.21895033742171585,
+        "baseline_brier": 0.2388093466579586,
+        "brier_skill_vs_baseline": 0.08315842538896256,
+        "log_loss": 0.6285366176010384,
+        "baseline_log_loss": 0.6706035786186093,
+        "log_loss_improvement_vs_baseline": 0.0420669610175709
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.43671416596814755,
+          "auc": 0.6280982942601225,
+          "brier": 0.2340795393714155,
+          "baseline_brier": 0.24691036813270636,
+          "brier_skill_vs_baseline": 0.05196553250609026,
+          "log_loss": 0.6609480007289218,
+          "baseline_log_loss": 0.687000801416469,
+          "log_loss_improvement_vs_baseline": 0.02605280068754723
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.41135135135135137,
+          "auc": 0.6514433548240739,
+          "brier": 0.22537909254368976,
+          "baseline_brier": 0.24221311102878348,
+          "brier_skill_vs_baseline": 0.06950085572821552,
+          "log_loss": 0.6431604098808567,
+          "baseline_log_loss": 0.677494293028776,
+          "log_loss_improvement_vs_baseline": 0.0343338831479193
+        },
+        {
+          "fold": 3,
+          "n": 1682,
+          "positive_rate": 0.31212841854934603,
+          "auc": 0.6905659134872618,
+          "brier": 0.1904179516740136,
+          "baseline_brier": 0.2235739118632057,
+          "brier_skill_vs_baseline": 0.14829977215534274,
+          "log_loss": 0.5664750386112679,
+          "baseline_log_loss": 0.6397643424387628,
+          "log_loss_improvement_vs_baseline": 0.07328930382749488
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3552,
+        "positive_rate": 0.3947072072072072,
+        "auc": 0.6641591746010682,
+        "brier": 0.21925323415003783,
+        "baseline_brier": 0.23918201190168611,
+        "brier_skill_vs_baseline": 0.08332055405504257,
+        "log_loss": 0.6292772984074962,
+        "baseline_log_loss": 0.6713640690315036,
+        "log_loss_improvement_vs_baseline": 0.04208677062400734
+      },
+      "by_board": {
+        "2": {
+          "n": 3716,
+          "positive_rate": 0.3428417653390743,
+          "auc": 0.6502448645305788,
+          "brier": 0.21049358027948667,
+          "baseline_brier": 0.2295360001427131,
+          "brier_skill_vs_baseline": 0.082960493566965,
+          "log_loss": 0.6101800041762823,
+          "baseline_log_loss": 0.6518403761219279,
+          "log_loss_improvement_vs_baseline": 0.04166037194564565
+        },
+        "3": {
+          "n": 1279,
+          "positive_rate": 0.48631743549648165,
+          "auc": 0.6412539703514465,
+          "brier": 0.23575115402160973,
+          "baseline_brier": 0.2556202689782817,
+          "brier_skill_vs_baseline": 0.07772902765531531,
+          "log_loss": 0.665146978753223,
+          "baseline_log_loss": 0.7046073733015543,
+          "log_loss_improvement_vs_baseline": 0.03946039454833128
+        },
+        "4": {
+          "n": 632,
+          "positive_rate": 0.4588607594936709,
+          "auc": 0.6920548497680983,
+          "brier": 0.22330079821439872,
+          "baseline_brier": 0.2512358429539064,
+          "brier_skill_vs_baseline": 0.11119052286115416,
+          "log_loss": 0.6381636767463232,
+          "baseline_log_loss": 0.6957656164545581,
+          "log_loss_improvement_vs_baseline": 0.057601939708234906
+        },
+        "5": {
+          "n": 291,
+          "positive_rate": 0.4879725085910653,
+          "auc": 0.6018527271008602,
+          "brier": 0.24364990404812034,
+          "baseline_brier": 0.25635244062331863,
+          "brier_skill_vs_baseline": 0.049551065495269664,
+          "log_loss": 0.6811284464427189,
+          "baseline_log_loss": 0.7061046066799902,
+          "log_loss_improvement_vs_baseline": 0.02497616023727134
+        }
+      }
+    },
+    {
+      "name": "promotion__plus_stock_memory__hist_gb",
+      "target": "promotion",
+      "feature_stage": "plus_stock_memory",
+      "model": "hist_gb",
+      "feature_count": 58,
+      "overall": {
+        "n": 5918,
+        "positive_rate": 0.3933761405880365,
+        "auc": 0.6796436622347298,
+        "brier": 0.2143354082854164,
+        "baseline_brier": 0.2388093466579586,
+        "brier_skill_vs_baseline": 0.10248316791216594,
+        "log_loss": 0.6188392569341779,
+        "baseline_log_loss": 0.6706035786186093,
+        "log_loss_improvement_vs_baseline": 0.05176432168443146
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.43671416596814755,
+          "auc": 0.6575220929302623,
+          "brier": 0.22657537388329888,
+          "baseline_brier": 0.24691036813270636,
+          "brier_skill_vs_baseline": 0.08235779810784649,
+          "log_loss": 0.6459605970178764,
+          "baseline_log_loss": 0.687000801416469,
+          "log_loss_improvement_vs_baseline": 0.04104020439859257
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.41135135135135137,
+          "auc": 0.6562784698013464,
+          "brier": 0.22404641186358934,
+          "baseline_brier": 0.24221311102878348,
+          "brier_skill_vs_baseline": 0.07500295540580915,
+          "log_loss": 0.6395840665198729,
+          "baseline_log_loss": 0.677494293028776,
+          "log_loss_improvement_vs_baseline": 0.03791022650890308
+        },
+        {
+          "fold": 3,
+          "n": 1682,
+          "positive_rate": 0.31212841854934603,
+          "auc": 0.7027303782359962,
+          "brier": 0.1862914638524988,
+          "baseline_brier": 0.2235739118632057,
+          "brier_skill_vs_baseline": 0.16675670117324892,
+          "log_loss": 0.557549473834748,
+          "baseline_log_loss": 0.6397643424387628,
+          "log_loss_improvement_vs_baseline": 0.08221486860401483
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3552,
+        "positive_rate": 0.3947072072072072,
+        "auc": 0.6799578674982584,
+        "brier": 0.2144095940614654,
+        "baseline_brier": 0.23918201190168611,
+        "brier_skill_vs_baseline": 0.10357140841512458,
+        "log_loss": 0.6193084659922583,
+        "baseline_log_loss": 0.6713640690315036,
+        "log_loss_improvement_vs_baseline": 0.05205560303924528
+      },
+      "by_board": {
+        "2": {
+          "n": 3716,
+          "positive_rate": 0.3428417653390743,
+          "auc": 0.6670679706393993,
+          "brier": 0.2038894888549679,
+          "baseline_brier": 0.2295360001427131,
+          "brier_skill_vs_baseline": 0.1117319778675222,
+          "log_loss": 0.5961861255843178,
+          "baseline_log_loss": 0.6518403761219279,
+          "log_loss_improvement_vs_baseline": 0.055654250537610084
+        },
+        "3": {
+          "n": 1279,
+          "positive_rate": 0.48631743549648165,
+          "auc": 0.6426634757031622,
+          "brier": 0.23478037852498512,
+          "baseline_brier": 0.2556202689782817,
+          "brier_skill_vs_baseline": 0.08152675269685761,
+          "log_loss": 0.6636962221646358,
+          "baseline_log_loss": 0.7046073733015543,
+          "log_loss_improvement_vs_baseline": 0.040911151136918567
+        },
+        "4": {
+          "n": 632,
+          "positive_rate": 0.4588607594936709,
+          "auc": 0.6709316394434361,
+          "brier": 0.2269848952349413,
+          "baseline_brier": 0.2512358429539064,
+          "brier_skill_vs_baseline": 0.09652662388389521,
+          "log_loss": 0.6459253350982335,
+          "baseline_log_loss": 0.6957656164545581,
+          "log_loss_improvement_vs_baseline": 0.04984028135632468
+        },
+        "5": {
+          "n": 291,
+          "positive_rate": 0.4879725085910653,
+          "auc": 0.6616882503072125,
+          "brier": 0.23039535301063443,
+          "baseline_brier": 0.25635244062331863,
+          "brier_skill_vs_baseline": 0.1012554729323808,
+          "log_loss": 0.6521333331081999,
+          "baseline_log_loss": 0.7061046066799902,
+          "log_loss_improvement_vs_baseline": 0.053971273571790324
+        }
+      }
+    },
+    {
+      "name": "fill__structure__logistic",
+      "target": "fill",
+      "feature_stage": "structure",
+      "model": "logistic",
+      "feature_count": 34,
+      "overall": {
+        "n": 5890,
+        "positive_rate": 0.44550084889643465,
+        "auc": 0.5498845155370186,
+        "brier": 0.24548624715088707,
+        "baseline_brier": 0.24729890422847714,
+        "brier_skill_vs_baseline": 0.007329822520828366,
+        "log_loss": 0.6840663078989815,
+        "baseline_log_loss": 0.6877383105455864,
+        "log_loss_improvement_vs_baseline": 0.003672002646604944
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2382,
+          "positive_rate": 0.4869857262804366,
+          "auc": 0.5148484677464868,
+          "brier": 0.2505366180185737,
+          "baseline_brier": 0.25146802155290987,
+          "brier_skill_vs_baseline": 0.003703864724367012,
+          "log_loss": 0.6942496349317738,
+          "baseline_log_loss": 0.6961058650312136,
+          "log_loss_improvement_vs_baseline": 0.001856230099439804
+        },
+        {
+          "fold": 2,
+          "n": 1844,
+          "positive_rate": 0.45607375271149675,
+          "auc": 0.5055546795997264,
+          "brier": 0.2484002392619888,
+          "baseline_brier": 0.24812620648118114,
+          "brier_skill_vs_baseline": -0.0011044088598857194,
+          "log_loss": 0.6899742489803207,
+          "baseline_log_loss": 0.6893953246586326,
+          "log_loss_improvement_vs_baseline": -0.0005789243216880458
+        },
+        {
+          "fold": 3,
+          "n": 1664,
+          "positive_rate": 0.37439903846153844,
+          "auc": 0.5458967254291542,
+          "brier": 0.23502748221116296,
+          "baseline_brier": 0.2404140587832938,
+          "brier_skill_vs_baseline": 0.02240541422324327,
+          "log_loss": 0.662941951921757,
+          "baseline_log_loss": 0.6739239783285065,
+          "log_loss_improvement_vs_baseline": 0.010982026406749501
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 3546,
+        "positive_rate": 0.4500846023688663,
+        "auc": 0.548161911188227,
+        "brier": 0.2462377126711224,
+        "baseline_brier": 0.24796354740058718,
+        "brier_skill_vs_baseline": 0.006960034035473295,
+        "log_loss": 0.6855920031239416,
+        "baseline_log_loss": 0.6890746717303489,
+        "log_loss_improvement_vs_baseline": 0.0034826686064072243
+      },
+      "by_board": {
+        "2": {
+          "n": 3699,
+          "positive_rate": 0.40443363071100297,
+          "auc": 0.5363855741198803,
+          "brier": 0.24216273833045868,
+          "baseline_brier": 0.2436475726255991,
+          "brier_skill_vs_baseline": 0.006094188746226914,
+          "log_loss": 0.677363425327851,
+          "baseline_log_loss": 0.6804145525448967,
+          "log_loss_improvement_vs_baseline": 0.0030511272170457016
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.504313725490196,
+          "auc": 0.5180460952418451,
+          "brier": 0.2514324158646138,
+          "baseline_brier": 0.25240631844633815,
+          "brier_skill_vs_baseline": 0.003858471482485526,
+          "log_loss": 0.6960612795370472,
+          "baseline_log_loss": 0.6979810968890605,
+          "log_loss_improvement_vs_baseline": 0.0019198173520132977
+        },
+        "4": {
+          "n": 627,
+          "positive_rate": 0.5103668261562998,
+          "auc": 0.5117365635179153,
+          "brier": 0.25174465627835035,
+          "baseline_brier": 0.25307047373412195,
+          "brier_skill_vs_baseline": 0.005238925885777235,
+          "log_loss": 0.6967357509554672,
+          "baseline_log_loss": 0.6993140610858838,
+          "log_loss_improvement_vs_baseline": 0.002578310130416539
+        },
+        "5": {
+          "n": 289,
+          "positive_rate": 0.5709342560553633,
+          "auc": 0.5388318670576735,
+          "brier": 0.24821383017456797,
+          "baseline_brier": 0.2589790024680396,
+          "brier_skill_vs_baseline": 0.04156774175080147,
+          "log_loss": 0.6894525812403665,
+          "baseline_log_loss": 0.7111744097423197,
+          "log_loss_improvement_vs_baseline": 0.021721828501953255
+        }
+      }
+    },
+    {
+      "name": "fill__plus_individual__logistic",
+      "target": "fill",
+      "feature_stage": "plus_individual",
+      "model": "logistic",
+      "feature_count": 41,
+      "overall": {
+        "n": 5890,
+        "positive_rate": 0.44550084889643465,
+        "auc": 0.5612898460487208,
+        "brier": 0.24436615298030132,
+        "baseline_brier": 0.24729890422847714,
+        "brier_skill_vs_baseline": 0.011859135637197538,
+        "log_loss": 0.6817702019445665,
+        "baseline_log_loss": 0.6877383105455864,
+        "log_loss_improvement_vs_baseline": 0.005968108601019928
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2382,
+          "positive_rate": 0.4869857262804366,
+          "auc": 0.5246345730571702,
+          "brier": 0.250124408600025,
+          "baseline_brier": 0.25146802155290987,
+          "brier_skill_vs_baseline": 0.005343076803911551,
+          "log_loss": 0.6934813848003607,
+          "baseline_log_loss": 0.6961058650312136,
+          "log_loss_improvement_vs_baseline": 0.0026244802308529325
+        },
+        {
+          "fold": 2,
+          "n": 1844,
+          "positive_rate": 0.45607375271149675,
+          "auc": 0.5237486114782881,
+          "brier": 0.24789630006023253,
+          "baseline_brier": 0.24812620648118114,
+          "brier_skill_vs_baseline": 0.0009265704909169337,
+          "log_loss": 0.6889990310713976,
+          "baseline_log_loss": 0.6893953246586326,
+          "log_loss_improvement_vs_baseline": 0.0003962935872350304
+        },
+        {
+          "fold": 3,
+          "n": 1664,
+          "positive_rate": 0.37439903846153844,
+          "auc": 0.5788205253930734,
+          "brier": 0.23221125147695107,
+          "baseline_brier": 0.2404140587832938,
+          "brier_skill_vs_baseline": 0.03411949928326219,
+          "log_loss": 0.6569949624779932,
+          "baseline_log_loss": 0.6739239783285065,
+          "log_loss_improvement_vs_baseline": 0.016929015850513318
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3546,
+        "positive_rate": 0.4500846023688663,
+        "auc": 0.5610741597583703,
+        "brier": 0.24485589232645497,
+        "baseline_brier": 0.24796354740058718,
+        "brier_skill_vs_baseline": 0.012532709370832507,
+        "log_loss": 0.6828059517712203,
+        "baseline_log_loss": 0.6890746717303489,
+        "log_loss_improvement_vs_baseline": 0.006268719959128588
+      },
+      "by_board": {
+        "2": {
+          "n": 3699,
+          "positive_rate": 0.40443363071100297,
+          "auc": 0.5475321086219327,
+          "brier": 0.24111339950338292,
+          "baseline_brier": 0.2436475726255991,
+          "brier_skill_vs_baseline": 0.010400978326635446,
+          "log_loss": 0.6750950538853259,
+          "baseline_log_loss": 0.6804145525448967,
+          "log_loss_improvement_vs_baseline": 0.0053194986595708205
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.504313725490196,
+          "auc": 0.5273072228674922,
+          "brier": 0.2507919190390522,
+          "baseline_brier": 0.25240631844633815,
+          "brier_skill_vs_baseline": 0.006396034050269561,
+          "log_loss": 0.6947418232488126,
+          "baseline_log_loss": 0.6979810968890605,
+          "log_loss_improvement_vs_baseline": 0.003239273640247897
+        },
+        "4": {
+          "n": 627,
+          "positive_rate": 0.5103668261562998,
+          "auc": 0.549867671009772,
+          "brier": 0.24967821021094277,
+          "baseline_brier": 0.25307047373412195,
+          "brier_skill_vs_baseline": 0.013404422385296155,
+          "log_loss": 0.6931594725452567,
+          "baseline_log_loss": 0.6993140610858838,
+          "log_loss_improvement_vs_baseline": 0.006154588540627115
+        },
+        "5": {
+          "n": 289,
+          "positive_rate": 0.5709342560553633,
+          "auc": 0.5715542521994135,
+          "brier": 0.24612540385435538,
+          "baseline_brier": 0.2589790024680396,
+          "brier_skill_vs_baseline": 0.04963181760370894,
+          "log_loss": 0.6852701425728864,
+          "baseline_log_loss": 0.7111744097423197,
+          "log_loss_improvement_vs_baseline": 0.02590426716943328
+        }
+      }
+    },
+    {
+      "name": "fill__plus_cross_section__logistic",
+      "target": "fill",
+      "feature_stage": "plus_cross_section",
+      "model": "logistic",
+      "feature_count": 48,
+      "overall": {
+        "n": 5890,
+        "positive_rate": 0.44550084889643465,
+        "auc": 0.5642282412662614,
+        "brier": 0.2441108407083342,
+        "baseline_brier": 0.24729890422847714,
+        "brier_skill_vs_baseline": 0.012891539208752523,
+        "log_loss": 0.6812768531310975,
+        "baseline_log_loss": 0.6877383105455864,
+        "log_loss_improvement_vs_baseline": 0.0064614574144888914
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2382,
+          "positive_rate": 0.4869857262804366,
+          "auc": 0.5204272250126982,
+          "brier": 0.25021752402221864,
+          "baseline_brier": 0.25146802155290987,
+          "brier_skill_vs_baseline": 0.00497278947425972,
+          "log_loss": 0.693648752665147,
+          "baseline_log_loss": 0.6961058650312136,
+          "log_loss_improvement_vs_baseline": 0.002457112366066605
+        },
+        {
+          "fold": 2,
+          "n": 1844,
+          "positive_rate": 0.45607375271149675,
+          "auc": 0.5347121536697874,
+          "brier": 0.24751489858984707,
+          "baseline_brier": 0.24812620648118114,
+          "brier_skill_vs_baseline": 0.002463697406265064,
+          "log_loss": 0.6883199949505209,
+          "baseline_log_loss": 0.6893953246586326,
+          "log_loss_improvement_vs_baseline": 0.0010753297081117497
+        },
+        {
+          "fold": 3,
+          "n": 1664,
+          "positive_rate": 0.37439903846153844,
+          "auc": 0.5824702448411285,
+          "brier": 0.231596896966037,
+          "baseline_brier": 0.2404140587832938,
+          "brier_skill_vs_baseline": 0.03667490105145843,
+          "log_loss": 0.655761577767442,
+          "baseline_log_loss": 0.6739239783285065,
+          "log_loss_improvement_vs_baseline": 0.01816240056106444
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3546,
+        "positive_rate": 0.4500846023688663,
+        "auc": 0.5657692307692308,
+        "brier": 0.24442630693498654,
+        "baseline_brier": 0.24796354740058718,
+        "brier_skill_vs_baseline": 0.014265163176933382,
+        "log_loss": 0.6819588679126448,
+        "baseline_log_loss": 0.6890746717303489,
+        "log_loss_improvement_vs_baseline": 0.007115803817704047
+      },
+      "by_board": {
+        "2": {
+          "n": 3699,
+          "positive_rate": 0.40443363071100297,
+          "auc": 0.5500153533951029,
+          "brier": 0.2410070257050235,
+          "baseline_brier": 0.2436475726255991,
+          "brier_skill_vs_baseline": 0.010837567114338587,
+          "log_loss": 0.6748897510065235,
+          "baseline_log_loss": 0.6804145525448967,
+          "log_loss_improvement_vs_baseline": 0.005524801538373203
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.504313725490196,
+          "auc": 0.532516684056145,
+          "brier": 0.25050505698557435,
+          "baseline_brier": 0.25240631844633815,
+          "brier_skill_vs_baseline": 0.007532543053861862,
+          "log_loss": 0.6941733530473212,
+          "baseline_log_loss": 0.6979810968890605,
+          "log_loss_improvement_vs_baseline": 0.0038077438417393195
+        },
+        "4": {
+          "n": 627,
+          "positive_rate": 0.5103668261562998,
+          "auc": 0.563049674267101,
+          "brier": 0.2489429754340873,
+          "baseline_brier": 0.25307047373412195,
+          "brier_skill_vs_baseline": 0.01630967943092021,
+          "log_loss": 0.6918091843595374,
+          "baseline_log_loss": 0.6993140610858838,
+          "log_loss_improvement_vs_baseline": 0.007504876726346366
+        },
+        "5": {
+          "n": 289,
+          "positive_rate": 0.5709342560553633,
+          "auc": 0.5782013685239492,
+          "brier": 0.24514418835787702,
+          "baseline_brier": 0.2589790024680396,
+          "brier_skill_vs_baseline": 0.05342060158668638,
+          "log_loss": 0.6832805959870913,
+          "baseline_log_loss": 0.7111744097423197,
+          "log_loss_improvement_vs_baseline": 0.02789381375522837
+        }
+      }
+    },
+    {
+      "name": "fill__plus_stock_memory__logistic",
+      "target": "fill",
+      "feature_stage": "plus_stock_memory",
+      "model": "logistic",
+      "feature_count": 58,
+      "overall": {
+        "n": 5890,
+        "positive_rate": 0.44550084889643465,
+        "auc": 0.5523061653323973,
+        "brier": 0.2454825566726799,
+        "baseline_brier": 0.24729890422847714,
+        "brier_skill_vs_baseline": 0.0073447456690675095,
+        "log_loss": 0.6841177672573847,
+        "baseline_log_loss": 0.6877383105455864,
+        "log_loss_improvement_vs_baseline": 0.0036205432882017163
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2382,
+          "positive_rate": 0.4869857262804366,
+          "auc": 0.5222197923133359,
+          "brier": 0.2519191940405713,
+          "baseline_brier": 0.25146802155290987,
+          "brier_skill_vs_baseline": -0.001794154520623481,
+          "log_loss": 0.6972923979908897,
+          "baseline_log_loss": 0.6961058650312136,
+          "log_loss_improvement_vs_baseline": -0.0011865329596760787
+        },
+        {
+          "fold": 2,
+          "n": 1844,
+          "positive_rate": 0.45607375271149675,
+          "auc": 0.5212566817976511,
+          "brier": 0.24839771158840207,
+          "baseline_brier": 0.24812620648118114,
+          "brier_skill_vs_baseline": -0.001094221811840379,
+          "log_loss": 0.6900766086499762,
+          "baseline_log_loss": 0.6893953246586326,
+          "log_loss_improvement_vs_baseline": -0.0006812839913435953
+        },
+        {
+          "fold": 3,
+          "n": 1664,
+          "positive_rate": 0.37439903846153844,
+          "auc": 0.5666440004749107,
+          "brier": 0.23303807597862394,
+          "baseline_brier": 0.2404140587832938,
+          "brier_skill_vs_baseline": 0.030680330601291828,
+          "log_loss": 0.6586549824405892,
+          "baseline_log_loss": 0.6739239783285065,
+          "log_loss_improvement_vs_baseline": 0.015268995887917303
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 3546,
+        "positive_rate": 0.4500846023688663,
+        "auc": 0.5481000578369,
+        "brier": 0.2463317887799896,
+        "baseline_brier": 0.24796354740058718,
+        "brier_skill_vs_baseline": 0.0065806391209650705,
+        "log_loss": 0.6858759486856306,
+        "baseline_log_loss": 0.6890746717303489,
+        "log_loss_improvement_vs_baseline": 0.0031987230447182435
+      },
+      "by_board": {
+        "2": {
+          "n": 3699,
+          "positive_rate": 0.40443363071100297,
+          "auc": 0.5455313124300601,
+          "brier": 0.24142684902147052,
+          "baseline_brier": 0.2436475726255991,
+          "brier_skill_vs_baseline": 0.00911449098465289,
+          "log_loss": 0.6758165024689128,
+          "baseline_log_loss": 0.6804145525448967,
+          "log_loss_improvement_vs_baseline": 0.004598050075983906
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.504313725490196,
+          "auc": 0.5120356517117153,
+          "brier": 0.25324222845948313,
+          "baseline_brier": 0.25240631844633815,
+          "brier_skill_vs_baseline": -0.003311763422922054,
+          "log_loss": 0.6998248823240546,
+          "baseline_log_loss": 0.6979810968890605,
+          "log_loss_improvement_vs_baseline": -0.001843785434994083
+        },
+        "4": {
+          "n": 627,
+          "positive_rate": 0.5103668261562998,
+          "auc": 0.5410728827361564,
+          "brier": 0.25138205808313585,
+          "baseline_brier": 0.25307047373412195,
+          "brier_skill_vs_baseline": 0.00667172122481563,
+          "log_loss": 0.6964628015502445,
+          "baseline_log_loss": 0.6993140610858838,
+          "log_loss_improvement_vs_baseline": 0.00285125953563925
+        },
+        "5": {
+          "n": 289,
+          "positive_rate": 0.5709342560553633,
+          "auc": 0.573802541544477,
+          "brier": 0.25035969746608283,
+          "baseline_brier": 0.2589790024680396,
+          "brier_skill_vs_baseline": 0.033281868104424794,
+          "log_loss": 0.6942889445616427,
+          "baseline_log_loss": 0.7111744097423197,
+          "log_loss_improvement_vs_baseline": 0.016885465180677017
+        }
+      }
+    },
+    {
+      "name": "fill__plus_stock_memory__hist_gb",
+      "target": "fill",
+      "feature_stage": "plus_stock_memory",
+      "model": "hist_gb",
+      "feature_count": 58,
+      "overall": {
+        "n": 5890,
+        "positive_rate": 0.44550084889643465,
+        "auc": 0.5727492606753991,
+        "brier": 0.24251466646946493,
+        "baseline_brier": 0.24729890422847714,
+        "brier_skill_vs_baseline": 0.019345972332299954,
+        "log_loss": 0.6778707858847894,
+        "baseline_log_loss": 0.6877383105455864,
+        "log_loss_improvement_vs_baseline": 0.009867524660796989
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2382,
+          "positive_rate": 0.4869857262804366,
+          "auc": 0.5187718691799763,
+          "brier": 0.25077076944800125,
+          "baseline_brier": 0.25146802155290987,
+          "brier_skill_vs_baseline": 0.0027727267292391167,
+          "log_loss": 0.6947513739073033,
+          "baseline_log_loss": 0.6961058650312136,
+          "log_loss_improvement_vs_baseline": 0.0013544911239102841
+        },
+        {
+          "fold": 2,
+          "n": 1844,
+          "positive_rate": 0.45607375271149675,
+          "auc": 0.5697497282231784,
+          "brier": 0.24434832277818777,
+          "baseline_brier": 0.24812620648118114,
+          "brier_skill_vs_baseline": 0.015225653737143241,
+          "log_loss": 0.6818305227940212,
+          "baseline_log_loss": 0.6893953246586326,
+          "log_loss_improvement_vs_baseline": 0.007564801864611392
+        },
+        {
+          "fold": 3,
+          "n": 1664,
+          "positive_rate": 0.37439903846153844,
+          "auc": 0.6070229730333995,
+          "brier": 0.22866412588763893,
+          "baseline_brier": 0.2404140587832938,
+          "brier_skill_vs_baseline": 0.04887373456910071,
+          "log_loss": 0.6493183126093978,
+          "baseline_log_loss": 0.6739239783285065,
+          "log_loss_improvement_vs_baseline": 0.024605665719108716
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3546,
+        "positive_rate": 0.4500846023688663,
+        "auc": 0.5647905018957651,
+        "brier": 0.24376291891742666,
+        "baseline_brier": 0.24796354740058718,
+        "brier_skill_vs_baseline": 0.016940508099661855,
+        "log_loss": 0.680435052876,
+        "baseline_log_loss": 0.6890746717303489,
+        "log_loss_improvement_vs_baseline": 0.00863961885434883
+      },
+      "by_board": {
+        "2": {
+          "n": 3699,
+          "positive_rate": 0.40443363071100297,
+          "auc": 0.562623949839912,
+          "brier": 0.238456761824247,
+          "baseline_brier": 0.2436475726255991,
+          "brier_skill_vs_baseline": 0.021304586560887184,
+          "log_loss": 0.6694930368917268,
+          "baseline_log_loss": 0.6804145525448967,
+          "log_loss_improvement_vs_baseline": 0.0109215156531699
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.504313725490196,
+          "auc": 0.5450100399629899,
+          "brier": 0.2500284377153889,
+          "baseline_brier": 0.25240631844633815,
+          "brier_skill_vs_baseline": 0.00942084471413418,
+          "log_loss": 0.6933696580661659,
+          "baseline_log_loss": 0.6979810968890605,
+          "log_loss_improvement_vs_baseline": 0.004611438822894609
+        },
+        "4": {
+          "n": 627,
+          "positive_rate": 0.5103668261562998,
+          "auc": 0.5827972312703583,
+          "brier": 0.24638460545362076,
+          "baseline_brier": 0.25307047373412195,
+          "brier_skill_vs_baseline": 0.02641899776710188,
+          "log_loss": 0.6858795441145797,
+          "baseline_log_loss": 0.6993140610858838,
+          "log_loss_improvement_vs_baseline": 0.013434516971304045
+        },
+        "5": {
+          "n": 289,
+          "positive_rate": 0.5709342560553633,
+          "auc": 0.5404203323558162,
+          "brier": 0.2529080201062902,
+          "baseline_brier": 0.2589790024680396,
+          "brier_skill_vs_baseline": 0.02344198681705334,
+          "log_loss": 0.6993473951720046,
+          "baseline_log_loss": 0.7111744097423197,
+          "log_loss_improvement_vs_baseline": 0.011827014570315098
+        }
+      }
+    },
+    {
+      "name": "two_more__structure__logistic",
+      "target": "two_more",
+      "feature_stage": "structure",
+      "model": "logistic",
+      "feature_count": 34,
+      "overall": {
+        "n": 5902,
+        "positive_rate": 0.1870552355133853,
+        "auc": 0.6469767181071824,
+        "brier": 0.14581186690809073,
+        "baseline_brier": 0.15235615051521784,
+        "brier_skill_vs_baseline": 0.04295385243717775,
+        "log_loss": 0.4621177756063965,
+        "baseline_log_loss": 0.48283493271740763,
+        "log_loss_improvement_vs_baseline": 0.02071715711101113
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.2275775356244761,
+          "auc": 0.604828483465884,
+          "brier": 0.17182045207951716,
+          "baseline_brier": 0.17650838137914135,
+          "brier_skill_vs_baseline": 0.026559244739514543,
+          "log_loss": 0.5246530395874576,
+          "baseline_log_loss": 0.5385316542751423,
+          "log_loss_improvement_vs_baseline": 0.013878614687684698
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.1881081081081081,
+          "auc": 0.620303197269541,
+          "brier": 0.14809118777746022,
+          "baseline_brier": 0.15327329674665136,
+          "brier_skill_vs_baseline": 0.033809600753592184,
+          "log_loss": 0.4693485231019079,
+          "baseline_log_loss": 0.48516330993616136,
+          "log_loss_improvement_vs_baseline": 0.01581478683425347
+        },
+        {
+          "fold": 3,
+          "n": 1666,
+          "positive_rate": 0.12785114045618248,
+          "auc": 0.6417384785888998,
+          "brier": 0.10603201827222214,
+          "baseline_brier": 0.11674754104974759,
+          "brier_skill_vs_baseline": 0.09178371279750919,
+          "log_loss": 0.3645271257111338,
+          "baseline_log_loss": 0.4004820662759615,
+          "log_loss_improvement_vs_baseline": 0.035954940564827675
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3544,
+        "positive_rate": 0.17014672686230248,
+        "auc": 0.6479147952857272,
+        "brier": 0.13589195032166934,
+        "baseline_brier": 0.14246927720906608,
+        "brier_skill_vs_baseline": 0.04616663336997817,
+        "log_loss": 0.43864955841211084,
+        "baseline_log_loss": 0.46017375567068064,
+        "log_loss_improvement_vs_baseline": 0.0215241972585698
+      },
+      "by_board": {
+        "2": {
+          "n": 3708,
+          "positive_rate": 0.16477885652642935,
+          "auc": 0.6440914522104967,
+          "brier": 0.13288535081092767,
+          "baseline_brier": 0.13905855678133017,
+          "brier_skill_vs_baseline": 0.04439285228675194,
+          "log_loss": 0.4308473480892123,
+          "baseline_log_loss": 0.4521472488946874,
+          "log_loss_improvement_vs_baseline": 0.021299900805475058
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.2211764705882353,
+          "auc": 0.6283166563104854,
+          "brier": 0.16655557127620324,
+          "baseline_brier": 0.172607149349003,
+          "brier_skill_vs_baseline": 0.03505983440213001,
+          "log_loss": 0.5124177875586341,
+          "baseline_log_loss": 0.5294862399792196,
+          "log_loss_improvement_vs_baseline": 0.017068452420585523
+        },
+        "4": {
+          "n": 629,
+          "positive_rate": 0.22257551669316375,
+          "auc": 0.6580923166812738,
+          "brier": 0.16290477453583566,
+          "baseline_brier": 0.17361104372408895,
+          "brier_skill_vs_baseline": 0.06166813446077901,
+          "log_loss": 0.5033607795307633,
+          "baseline_log_loss": 0.5319237067493787,
+          "log_loss_improvement_vs_baseline": 0.02856292721861542
+        },
+        "5": {
+          "n": 290,
+          "positive_rate": 0.24482758620689654,
+          "auc": 0.6058588976783073,
+          "brier": 0.18281827973942022,
+          "baseline_brier": 0.1872462409421124,
+          "brier_skill_vs_baseline": 0.023647797576139773,
+          "log_loss": 0.5513466739725663,
+          "baseline_log_loss": 0.5636372637164658,
+          "log_loss_improvement_vs_baseline": 0.012290589743899516
+        }
+      }
+    },
+    {
+      "name": "two_more__plus_individual__logistic",
+      "target": "two_more",
+      "feature_stage": "plus_individual",
+      "model": "logistic",
+      "feature_count": 41,
+      "overall": {
+        "n": 5902,
+        "positive_rate": 0.1870552355133853,
+        "auc": 0.6788558487534057,
+        "brier": 0.14329879127096207,
+        "baseline_brier": 0.15235615051521784,
+        "brier_skill_vs_baseline": 0.05944859602731356,
+        "log_loss": 0.45222872779317186,
+        "baseline_log_loss": 0.48283493271740763,
+        "log_loss_improvement_vs_baseline": 0.03060620492423577
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.2275775356244761,
+          "auc": 0.6396309164435838,
+          "brier": 0.1692524500626926,
+          "baseline_brier": 0.17650838137914135,
+          "brier_skill_vs_baseline": 0.041108140359991996,
+          "log_loss": 0.5166254767689152,
+          "baseline_log_loss": 0.5385316542751423,
+          "log_loss_improvement_vs_baseline": 0.02190617750622703
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.1881081081081081,
+          "auc": 0.6734048089137855,
+          "brier": 0.14509736084298408,
+          "baseline_brier": 0.15327329674665136,
+          "brier_skill_vs_baseline": 0.05334220687626656,
+          "log_loss": 0.4578370101846311,
+          "baseline_log_loss": 0.48516330993616136,
+          "log_loss_improvement_vs_baseline": 0.02732629975153028
+        },
+        {
+          "fold": 3,
+          "n": 1666,
+          "positive_rate": 0.12785114045618248,
+          "auc": 0.6993786531993059,
+          "brier": 0.10413145418494178,
+          "baseline_brier": 0.11674754104974759,
+          "brier_skill_vs_baseline": 0.10806297718450397,
+          "log_loss": 0.3537737665204688,
+          "baseline_log_loss": 0.4004820662759615,
+          "log_loss_improvement_vs_baseline": 0.04670829975549268
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3544,
+        "positive_rate": 0.17014672686230248,
+        "auc": 0.6779363975768895,
+        "brier": 0.13413736071267182,
+        "baseline_brier": 0.14246927720906608,
+        "brier_skill_vs_baseline": 0.0584821981244954,
+        "log_loss": 0.42983987884315256,
+        "baseline_log_loss": 0.46017375567068064,
+        "log_loss_improvement_vs_baseline": 0.030333876827528083
+      },
+      "by_board": {
+        "2": {
+          "n": 3708,
+          "positive_rate": 0.16477885652642935,
+          "auc": 0.6705269393801192,
+          "brier": 0.1310878047117004,
+          "baseline_brier": 0.13905855678133017,
+          "brier_skill_vs_baseline": 0.05731939302493838,
+          "log_loss": 0.4233693162156162,
+          "baseline_log_loss": 0.4521472488946874,
+          "log_loss_improvement_vs_baseline": 0.028777932679071194
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.2211764705882353,
+          "auc": 0.6661310021212317,
+          "brier": 0.1630789656357903,
+          "baseline_brier": 0.172607149349003,
+          "brier_skill_vs_baseline": 0.05520155885285605,
+          "log_loss": 0.4991524416337817,
+          "baseline_log_loss": 0.5294862399792196,
+          "log_loss_improvement_vs_baseline": 0.030333798345437923
+        },
+        "4": {
+          "n": 629,
+          "positive_rate": 0.22257551669316375,
+          "auc": 0.710195734735612,
+          "brier": 0.15747210795286937,
+          "baseline_brier": 0.17361104372408895,
+          "brier_skill_vs_baseline": 0.09296030612469763,
+          "log_loss": 0.48503237760275025,
+          "baseline_log_loss": 0.5319237067493787,
+          "log_loss_improvement_vs_baseline": 0.04689132914662847
+        },
+        "5": {
+          "n": 290,
+          "positive_rate": 0.24482758620689654,
+          "auc": 0.6291722940382019,
+          "brier": 0.18172499697325994,
+          "baseline_brier": 0.1872462409421124,
+          "brier_skill_vs_baseline": 0.029486541043883263,
+          "log_loss": 0.5437786148710141,
+          "baseline_log_loss": 0.5636372637164658,
+          "log_loss_improvement_vs_baseline": 0.019858648845451743
+        }
+      }
+    },
+    {
+      "name": "two_more__plus_cross_section__logistic",
+      "target": "two_more",
+      "feature_stage": "plus_cross_section",
+      "model": "logistic",
+      "feature_count": 48,
+      "overall": {
+        "n": 5902,
+        "positive_rate": 0.1870552355133853,
+        "auc": 0.6796160915478067,
+        "brier": 0.14314826373603864,
+        "baseline_brier": 0.15235615051521784,
+        "brier_skill_vs_baseline": 0.060436593783980364,
+        "log_loss": 0.45178804744907797,
+        "baseline_log_loss": 0.48283493271740763,
+        "log_loss_improvement_vs_baseline": 0.03104688526832966
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.2275775356244761,
+          "auc": 0.636965912531514,
+          "brier": 0.169398120342076,
+          "baseline_brier": 0.17650838137914135,
+          "brier_skill_vs_baseline": 0.040282852188148865,
+          "log_loss": 0.5172707135392064,
+          "baseline_log_loss": 0.5385316542751423,
+          "log_loss_improvement_vs_baseline": 0.021260940735935874
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.1881081081081081,
+          "auc": 0.6756910326461271,
+          "brier": 0.1446077082602469,
+          "baseline_brier": 0.15327329674665136,
+          "brier_skill_vs_baseline": 0.05653684412313498,
+          "log_loss": 0.4568725889762706,
+          "baseline_log_loss": 0.48516330993616136,
+          "log_loss_improvement_vs_baseline": 0.02829072095989077
+        },
+        {
+          "fold": 3,
+          "n": 1666,
+          "positive_rate": 0.12785114045618248,
+          "auc": 0.706092946760628,
+          "brier": 0.10393329961131456,
+          "baseline_brier": 0.11674754104974759,
+          "brier_skill_vs_baseline": 0.10976026838092223,
+          "log_loss": 0.3523594501403427,
+          "baseline_log_loss": 0.4004820662759615,
+          "log_loss_improvement_vs_baseline": 0.0481226161356188
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3544,
+        "positive_rate": 0.17014672686230248,
+        "auc": 0.6803424789235282,
+        "brier": 0.1338485255103962,
+        "baseline_brier": 0.14246927720906608,
+        "brier_skill_vs_baseline": 0.060509548918532,
+        "log_loss": 0.4290143612389852,
+        "baseline_log_loss": 0.46017375567068064,
+        "log_loss_improvement_vs_baseline": 0.031159394431695464
+      },
+      "by_board": {
+        "2": {
+          "n": 3708,
+          "positive_rate": 0.16477885652642935,
+          "auc": 0.6720209145960903,
+          "brier": 0.1308151054992281,
+          "baseline_brier": 0.13905855678133017,
+          "brier_skill_vs_baseline": 0.05928043173254649,
+          "log_loss": 0.422721387771259,
+          "baseline_log_loss": 0.4521472488946874,
+          "log_loss_improvement_vs_baseline": 0.029425861123428376
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.2211764705882353,
+          "auc": 0.6666238135030319,
+          "brier": 0.16320804909634432,
+          "baseline_brier": 0.172607149349003,
+          "brier_skill_vs_baseline": 0.054453713464986175,
+          "log_loss": 0.49926824055268126,
+          "baseline_log_loss": 0.5294862399792196,
+          "log_loss_improvement_vs_baseline": 0.030217999426538356
+        },
+        "4": {
+          "n": 629,
+          "positive_rate": 0.22257551669316375,
+          "auc": 0.7081945661700263,
+          "brier": 0.15736949915610635,
+          "baseline_brier": 0.17361104372408895,
+          "brier_skill_vs_baseline": 0.0935513330234593,
+          "log_loss": 0.4845092128162289,
+          "baseline_log_loss": 0.5319237067493787,
+          "log_loss_improvement_vs_baseline": 0.04741449393314984
+        },
+        "5": {
+          "n": 290,
+          "positive_rate": 0.24482758620689654,
+          "auc": 0.627628786417133,
+          "brier": 0.1818033234894229,
+          "baseline_brier": 0.1872462409421124,
+          "brier_skill_vs_baseline": 0.029068233494589535,
+          "log_loss": 0.5437201676639765,
+          "baseline_log_loss": 0.5636372637164658,
+          "log_loss_improvement_vs_baseline": 0.01991709605248937
+        }
+      }
+    },
+    {
+      "name": "two_more__plus_stock_memory__logistic",
+      "target": "two_more",
+      "feature_stage": "plus_stock_memory",
+      "model": "logistic",
+      "feature_count": 58,
+      "overall": {
+        "n": 5902,
+        "positive_rate": 0.1870552355133853,
+        "auc": 0.676060866242577,
+        "brier": 0.14348793563534085,
+        "baseline_brier": 0.15235615051521784,
+        "brier_skill_vs_baseline": 0.05820713407294442,
+        "log_loss": 0.4527296683231833,
+        "baseline_log_loss": 0.48283493271740763,
+        "log_loss_improvement_vs_baseline": 0.03010526439422434
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.2275775356244761,
+          "auc": 0.6223188831565157,
+          "brier": 0.17092150884150223,
+          "baseline_brier": 0.17650838137914135,
+          "brier_skill_vs_baseline": 0.03165216571579388,
+          "log_loss": 0.5220692746881754,
+          "baseline_log_loss": 0.5385316542751423,
+          "log_loss_improvement_vs_baseline": 0.016462379586966835
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.1881081081081081,
+          "auc": 0.6760392273902995,
+          "brier": 0.14444883960740243,
+          "baseline_brier": 0.15327329674665136,
+          "brier_skill_vs_baseline": 0.05757334986951479,
+          "log_loss": 0.4563295973424671,
+          "baseline_log_loss": 0.48516330993616136,
+          "log_loss_improvement_vs_baseline": 0.028833712593694272
+        },
+        {
+          "fold": 3,
+          "n": 1666,
+          "positive_rate": 0.12785114045618248,
+          "auc": 0.7159155898917248,
+          "brier": 0.10313128616462353,
+          "baseline_brier": 0.11674754104974759,
+          "brier_skill_vs_baseline": 0.11662990725707878,
+          "log_loss": 0.3494258451103705,
+          "baseline_log_loss": 0.4004820662759615,
+          "log_loss_improvement_vs_baseline": 0.051056221165591
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3544,
+        "positive_rate": 0.17014672686230248,
+        "auc": 0.6760643117857388,
+        "brier": 0.13426174858305986,
+        "baseline_brier": 0.14246927720906608,
+        "brier_skill_vs_baseline": 0.057609112552470476,
+        "log_loss": 0.4302484130776909,
+        "baseline_log_loss": 0.46017375567068064,
+        "log_loss_improvement_vs_baseline": 0.029925342592989734
+      },
+      "by_board": {
+        "2": {
+          "n": 3708,
+          "positive_rate": 0.16477885652642935,
+          "auc": 0.6675067524826043,
+          "brier": 0.1311257070907019,
+          "baseline_brier": 0.13905855678133017,
+          "brier_skill_vs_baseline": 0.05704682886291346,
+          "log_loss": 0.4237072920124035,
+          "baseline_log_loss": 0.4521472488946874,
+          "log_loss_improvement_vs_baseline": 0.0284399568822839
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.2211764705882353,
+          "auc": 0.663413397327391,
+          "brier": 0.16327287720182948,
+          "baseline_brier": 0.172607149349003,
+          "brier_skill_vs_baseline": 0.05407813165548603,
+          "log_loss": 0.49927616525872315,
+          "baseline_log_loss": 0.5294862399792196,
+          "log_loss_improvement_vs_baseline": 0.03021007472049647
+        },
+        "4": {
+          "n": 629,
+          "positive_rate": 0.22257551669316375,
+          "auc": 0.7025708442886358,
+          "brier": 0.158715559582645,
+          "baseline_brier": 0.17361104372408895,
+          "brier_skill_vs_baseline": 0.0857980219571548,
+          "log_loss": 0.48782513209935885,
+          "baseline_log_loss": 0.5319237067493787,
+          "log_loss_improvement_vs_baseline": 0.04409857465001987
+        },
+        "5": {
+          "n": 290,
+          "positive_rate": 0.24482758620689654,
+          "auc": 0.6260209659785196,
+          "brier": 0.18154023730221577,
+          "baseline_brier": 0.1872462409421124,
+          "brier_skill_vs_baseline": 0.030473261365287718,
+          "log_loss": 0.5430508443657485,
+          "baseline_log_loss": 0.5636372637164658,
+          "log_loss_improvement_vs_baseline": 0.020586419350717367
+        }
+      }
+    },
+    {
+      "name": "two_more__plus_stock_memory__hist_gb",
+      "target": "two_more",
+      "feature_stage": "plus_stock_memory",
+      "model": "hist_gb",
+      "feature_count": 58,
+      "overall": {
+        "n": 5902,
+        "positive_rate": 0.1870552355133853,
+        "auc": 0.6814272137847291,
+        "brier": 0.14226708128101506,
+        "baseline_brier": 0.15235615051521784,
+        "brier_skill_vs_baseline": 0.06622029501326265,
+        "log_loss": 0.45029627974561043,
+        "baseline_log_loss": 0.48283493271740763,
+        "log_loss_improvement_vs_baseline": 0.0325386529717972
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 2386,
+          "positive_rate": 0.2275775356244761,
+          "auc": 0.6346726301999802,
+          "brier": 0.16971581277823455,
+          "baseline_brier": 0.17650838137914135,
+          "brier_skill_vs_baseline": 0.03848298051250221,
+          "log_loss": 0.5206239359803593,
+          "baseline_log_loss": 0.5385316542751423,
+          "log_loss_improvement_vs_baseline": 0.017907718294782993
+        },
+        {
+          "fold": 2,
+          "n": 1850,
+          "positive_rate": 0.1881081081081081,
+          "auc": 0.6720512496747632,
+          "brier": 0.1442905198850292,
+          "baseline_brier": 0.15327329674665136,
+          "brier_skill_vs_baseline": 0.05860627423229492,
+          "log_loss": 0.4567485260230502,
+          "baseline_log_loss": 0.48516330993616136,
+          "log_loss_improvement_vs_baseline": 0.02841478391311114
+        },
+        {
+          "fold": 3,
+          "n": 1666,
+          "positive_rate": 0.12785114045618248,
+          "auc": 0.729298941157844,
+          "brier": 0.10070883712147612,
+          "baseline_brier": 0.11674754104974759,
+          "brier_skill_vs_baseline": 0.13737937248234788,
+          "log_loss": 0.34241005922377726,
+          "baseline_log_loss": 0.4004820662759615,
+          "log_loss_improvement_vs_baseline": 0.05807200705218424
+        }
+      ],
+      "stability_gate": true,
+      "active": {
+        "n": 3544,
+        "positive_rate": 0.17014672686230248,
+        "auc": 0.6820036731225432,
+        "brier": 0.13238836910302298,
+        "baseline_brier": 0.14246927720906608,
+        "brier_skill_vs_baseline": 0.0707584702016133,
+        "log_loss": 0.4264452466044258,
+        "baseline_log_loss": 0.46017375567068064,
+        "log_loss_improvement_vs_baseline": 0.03372850906625485
+      },
+      "by_board": {
+        "2": {
+          "n": 3708,
+          "positive_rate": 0.16477885652642935,
+          "auc": 0.6798356151642448,
+          "brier": 0.12910615035751524,
+          "baseline_brier": 0.13905855678133017,
+          "brier_skill_vs_baseline": 0.07156989583506967,
+          "log_loss": 0.41840912850264256,
+          "baseline_log_loss": 0.4521472488946874,
+          "log_loss_improvement_vs_baseline": 0.033738120392044824
+        },
+        "3": {
+          "n": 1275,
+          "positive_rate": 0.2211764705882353,
+          "auc": 0.6577067843700228,
+          "brier": 0.16446412263713944,
+          "baseline_brier": 0.172607149349003,
+          "brier_skill_vs_baseline": 0.04717664791160403,
+          "log_loss": 0.5033281210870086,
+          "baseline_log_loss": 0.5294862399792196,
+          "log_loss_improvement_vs_baseline": 0.02615811889221098
+        },
+        "4": {
+          "n": 629,
+          "positive_rate": 0.22257551669316375,
+          "auc": 0.6907391177329828,
+          "brier": 0.15865656498001682,
+          "baseline_brier": 0.17361104372408895,
+          "brier_skill_vs_baseline": 0.08613783100018979,
+          "log_loss": 0.4894381020402272,
+          "baseline_log_loss": 0.5319237067493787,
+          "log_loss_improvement_vs_baseline": 0.042485604709151525
+        },
+        "5": {
+          "n": 290,
+          "positive_rate": 0.24482758620689654,
+          "auc": 0.64885201620683,
+          "brier": 0.17740680158655517,
+          "baseline_brier": 0.1872462409421124,
+          "brier_skill_vs_baseline": 0.05254812756748006,
+          "log_loss": 0.5399574965570901,
+          "baseline_log_loss": 0.5636372637164658,
+          "log_loss_improvement_vs_baseline": 0.023679767159375698
+        }
+      }
+    },
+    {
+      "name": "large_loss__structure__logistic",
+      "target": "large_loss",
+      "feature_stage": "structure",
+      "model": "logistic",
+      "feature_count": 34,
+      "overall": {
+        "n": 2612,
+        "positive_rate": 0.37480857580398164,
+        "auc": 0.5426785521049198,
+        "brier": 0.23294861871487993,
+        "baseline_brier": 0.2385354034208179,
+        "brier_skill_vs_baseline": 0.023421197129727123,
+        "log_loss": 0.658372865684328,
+        "baseline_log_loss": 0.6700946749390633,
+        "log_loss_improvement_vs_baseline": 0.011721809254735316
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 1157,
+          "positive_rate": 0.42350907519446845,
+          "auc": 0.467584065110302,
+          "brier": 0.245995263501079,
+          "baseline_brier": 0.2464718784730901,
+          "brier_skill_vs_baseline": 0.0019337499067388908,
+          "log_loss": 0.6852044933336074,
+          "baseline_log_loss": 0.6860819269589686,
+          "log_loss_improvement_vs_baseline": 0.0008774336253611903
+        },
+        {
+          "fold": 2,
+          "n": 834,
+          "positive_rate": 0.37170263788968827,
+          "auc": 0.5044878108840187,
+          "brier": 0.23394716543855404,
+          "baseline_brier": 0.23895080964366408,
+          "brier_skill_vs_baseline": 0.020940059640608633,
+          "log_loss": 0.6606344783828306,
+          "baseline_log_loss": 0.6709692475682537,
+          "log_loss_improvement_vs_baseline": 0.010334769185423087
+        },
+        {
+          "fold": 3,
+          "n": 621,
+          "positive_rate": 0.2882447665056361,
+          "auc": 0.5218344750878434,
+          "brier": 0.20730005835227658,
+          "baseline_brier": 0.22319087777615976,
+          "brier_skill_vs_baseline": 0.07119833741511705,
+          "log_loss": 0.6053448814962964,
+          "baseline_log_loss": 0.6391338952936924,
+          "log_loss_improvement_vs_baseline": 0.03378901379739596
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 1585,
+        "positive_rate": 0.3936908517350158,
+        "auc": 0.545483804263721,
+        "brier": 0.23703362592364025,
+        "baseline_brier": 0.23975257433210398,
+        "brier_skill_vs_baseline": 0.011340643227869873,
+        "log_loss": 0.6666763954807835,
+        "baseline_log_loss": 0.6725351657112235,
+        "log_loss_improvement_vs_baseline": 0.0058587702304400135
+      },
+      "by_board": {
+        "2": {
+          "n": 1490,
+          "positive_rate": 0.3697986577181208,
+          "auc": 0.5511713623598491,
+          "brier": 0.2314667761166674,
+          "baseline_brier": 0.2376309516235838,
+          "brier_skill_vs_baseline": 0.025940120446433568,
+          "log_loss": 0.6553692163274515,
+          "baseline_log_loss": 0.6682770598807368,
+          "log_loss_improvement_vs_baseline": 0.012907843553285336
+        },
+        "3": {
+          "n": 638,
+          "positive_rate": 0.35266457680250785,
+          "auc": 0.5422114608555286,
+          "brier": 0.2275190417735021,
+          "baseline_brier": 0.2366986715183128,
+          "brier_skill_vs_baseline": 0.03878192338777242,
+          "log_loss": 0.6470612745564465,
+          "baseline_log_loss": 0.6663940898865545,
+          "log_loss_improvement_vs_baseline": 0.019332815330108
+        },
+        "4": {
+          "n": 319,
+          "positive_rate": 0.4043887147335423,
+          "auc": 0.5087515299877601,
+          "brier": 0.2418104112067423,
+          "baseline_brier": 0.2438969219699551,
+          "brier_skill_vs_baseline": 0.008554887640073838,
+          "log_loss": 0.6768486200194089,
+          "baseline_log_loss": 0.680905285661696,
+          "log_loss_improvement_vs_baseline": 0.004056665642287016
+        },
+        "5": {
+          "n": 165,
+          "positive_rate": 0.4484848484848485,
+          "auc": 0.48908523908523904,
+          "brier": 0.2501916717756765,
+          "baseline_brier": 0.2434393047208317,
+          "brier_skill_vs_baseline": -0.027737374055468278,
+          "log_loss": 0.6935150902203479,
+          "baseline_log_loss": 0.6799167045141369,
+          "log_loss_improvement_vs_baseline": -0.01359838570621097
+        }
+      }
+    },
+    {
+      "name": "large_loss__plus_individual__logistic",
+      "target": "large_loss",
+      "feature_stage": "plus_individual",
+      "model": "logistic",
+      "feature_count": 41,
+      "overall": {
+        "n": 2612,
+        "positive_rate": 0.37480857580398164,
+        "auc": 0.5532646069605,
+        "brier": 0.23202050454569823,
+        "baseline_brier": 0.2385354034208179,
+        "brier_skill_vs_baseline": 0.027312083580424584,
+        "log_loss": 0.6563495306207685,
+        "baseline_log_loss": 0.6700946749390633,
+        "log_loss_improvement_vs_baseline": 0.013745144318294766
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 1157,
+          "positive_rate": 0.42350907519446845,
+          "auc": 0.46525104794541505,
+          "brier": 0.24626233651798396,
+          "baseline_brier": 0.2464718784730901,
+          "brier_skill_vs_baseline": 0.0008501657730863865,
+          "log_loss": 0.685802321699593,
+          "baseline_log_loss": 0.6860819269589686,
+          "log_loss_improvement_vs_baseline": 0.0002796052593756482
+        },
+        {
+          "fold": 2,
+          "n": 834,
+          "positive_rate": 0.37170263788968827,
+          "auc": 0.5385126816055159,
+          "brier": 0.2314337369158846,
+          "baseline_brier": 0.23895080964366408,
+          "brier_skill_vs_baseline": 0.03145866188521951,
+          "log_loss": 0.6551871105686837,
+          "baseline_log_loss": 0.6709692475682537,
+          "log_loss_improvement_vs_baseline": 0.015782136999569985
+        },
+        {
+          "fold": 3,
+          "n": 621,
+          "positive_rate": 0.2882447665056361,
+          "auc": 0.5534391668141256,
+          "brier": 0.2062742317781137,
+          "baseline_brier": 0.22319087777615976,
+          "brier_skill_vs_baseline": 0.07579452245809049,
+          "log_loss": 0.603036453398931,
+          "baseline_log_loss": 0.6391338952936924,
+          "log_loss_improvement_vs_baseline": 0.036097441894761384
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 1585,
+        "positive_rate": 0.3936908517350158,
+        "auc": 0.5606439606179461,
+        "brier": 0.2357550316241777,
+        "baseline_brier": 0.23975257433210398,
+        "brier_skill_vs_baseline": 0.01667361745358731,
+        "log_loss": 0.6639654506774822,
+        "baseline_log_loss": 0.6725351657112235,
+        "log_loss_improvement_vs_baseline": 0.008569715033741265
+      },
+      "by_board": {
+        "2": {
+          "n": 1490,
+          "positive_rate": 0.3697986577181208,
+          "auc": 0.5579341655891409,
+          "brier": 0.2302143136251536,
+          "baseline_brier": 0.2376309516235838,
+          "brier_skill_vs_baseline": 0.031210740636928636,
+          "log_loss": 0.6524999095668866,
+          "baseline_log_loss": 0.6682770598807368,
+          "log_loss_improvement_vs_baseline": 0.015777150313850186
+        },
+        "3": {
+          "n": 638,
+          "positive_rate": 0.35266457680250785,
+          "auc": 0.5593758407317729,
+          "brier": 0.2264705337266925,
+          "baseline_brier": 0.2366986715183128,
+          "brier_skill_vs_baseline": 0.04321164004010458,
+          "log_loss": 0.6448614179901911,
+          "baseline_log_loss": 0.6663940898865545,
+          "log_loss_improvement_vs_baseline": 0.02153267189636332
+        },
+        "4": {
+          "n": 319,
+          "positive_rate": 0.4043887147335423,
+          "auc": 0.5363525091799266,
+          "brier": 0.242239024527855,
+          "baseline_brier": 0.2438969219699551,
+          "brier_skill_vs_baseline": 0.006797533272290823,
+          "log_loss": 0.6783320947112058,
+          "baseline_log_loss": 0.680905285661696,
+          "log_loss_improvement_vs_baseline": 0.002573190950490134
+        },
+        "5": {
+          "n": 165,
+          "positive_rate": 0.4484848484848485,
+          "auc": 0.49212949212949214,
+          "brier": 0.2500350377567843,
+          "baseline_brier": 0.2434393047208317,
+          "brier_skill_vs_baseline": -0.02709395281717719,
+          "log_loss": 0.6930338535525434,
+          "baseline_log_loss": 0.6799167045141369,
+          "log_loss_improvement_vs_baseline": -0.01311714903840655
+        }
+      }
+    },
+    {
+      "name": "large_loss__plus_cross_section__logistic",
+      "target": "large_loss",
+      "feature_stage": "plus_cross_section",
+      "model": "logistic",
+      "feature_count": 48,
+      "overall": {
+        "n": 2612,
+        "positive_rate": 0.37480857580398164,
+        "auc": 0.5432884199543756,
+        "brier": 0.2326321965021309,
+        "baseline_brier": 0.2385354034208179,
+        "brier_skill_vs_baseline": 0.024747718091442827,
+        "log_loss": 0.6576482943090113,
+        "baseline_log_loss": 0.6700946749390633,
+        "log_loss_improvement_vs_baseline": 0.01244638063005199
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 1157,
+          "positive_rate": 0.42350907519446845,
+          "auc": 0.4535507756325919,
+          "brier": 0.24701788593318258,
+          "baseline_brier": 0.2464718784730901,
+          "brier_skill_vs_baseline": -0.0022152931339471937,
+          "log_loss": 0.6873879633100479,
+          "baseline_log_loss": 0.6860819269589686,
+          "log_loss_improvement_vs_baseline": -0.0013060363510792872
+        },
+        {
+          "fold": 2,
+          "n": 834,
+          "positive_rate": 0.37170263788968827,
+          "auc": 0.5332615119428712,
+          "brier": 0.23204901402624106,
+          "baseline_brier": 0.23895080964366408,
+          "brier_skill_vs_baseline": 0.02888375070883975,
+          "log_loss": 0.6565026678892536,
+          "baseline_log_loss": 0.6709692475682537,
+          "log_loss_improvement_vs_baseline": 0.014466579679000113
+        },
+        {
+          "fold": 3,
+          "n": 621,
+          "positive_rate": 0.2882447665056361,
+          "auc": 0.5489269192851184,
+          "brier": 0.20661308460706707,
+          "baseline_brier": 0.22319087777615976,
+          "brier_skill_vs_baseline": 0.07427630257236018,
+          "log_loss": 0.6037781741799908,
+          "baseline_log_loss": 0.6391338952936924,
+          "log_loss_improvement_vs_baseline": 0.035355721113701555
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 1585,
+        "positive_rate": 0.3936908517350158,
+        "auc": 0.5484271191867447,
+        "brier": 0.23651158735558145,
+        "baseline_brier": 0.23975257433210398,
+        "brier_skill_vs_baseline": 0.013518048703131447,
+        "log_loss": 0.6655568782048338,
+        "baseline_log_loss": 0.6725351657112235,
+        "log_loss_improvement_vs_baseline": 0.006978287506389735
+      },
+      "by_board": {
+        "2": {
+          "n": 1490,
+          "positive_rate": 0.3697986577181208,
+          "auc": 0.5502262321000253,
+          "brier": 0.23071680992644908,
+          "baseline_brier": 0.2376309516235838,
+          "brier_skill_vs_baseline": 0.029096132679243603,
+          "log_loss": 0.65358404922727,
+          "baseline_log_loss": 0.6682770598807368,
+          "log_loss_improvement_vs_baseline": 0.014693010653466843
+        },
+        "3": {
+          "n": 638,
+          "positive_rate": 0.35266457680250785,
+          "auc": 0.5497767016411084,
+          "brier": 0.22697884381986352,
+          "baseline_brier": 0.2366986715183128,
+          "brier_skill_vs_baseline": 0.041064141324076986,
+          "log_loss": 0.6459881888200272,
+          "baseline_log_loss": 0.6663940898865545,
+          "log_loss_improvement_vs_baseline": 0.020405901066527288
+        },
+        "4": {
+          "n": 319,
+          "positive_rate": 0.4043887147335423,
+          "auc": 0.5195022439820481,
+          "brier": 0.2429420780183072,
+          "baseline_brier": 0.2438969219699551,
+          "brier_skill_vs_baseline": 0.00391494875759657,
+          "log_loss": 0.6796979818885915,
+          "baseline_log_loss": 0.680905285661696,
+          "log_loss_improvement_vs_baseline": 0.0012073037731044067
+        },
+        "5": {
+          "n": 165,
+          "positive_rate": 0.4484848484848485,
+          "auc": 0.47534897534897536,
+          "brier": 0.2518559104742059,
+          "baseline_brier": 0.2434393047208317,
+          "brier_skill_vs_baseline": -0.03457373394582319,
+          "log_loss": 0.6968060042234351,
+          "baseline_log_loss": 0.6799167045141369,
+          "log_loss_improvement_vs_baseline": -0.0168892997092982
+        }
+      }
+    },
+    {
+      "name": "large_loss__plus_stock_memory__logistic",
+      "target": "large_loss",
+      "feature_stage": "plus_stock_memory",
+      "model": "logistic",
+      "feature_count": 58,
+      "overall": {
+        "n": 2612,
+        "positive_rate": 0.37480857580398164,
+        "auc": 0.5426960662585452,
+        "brier": 0.23257289625343994,
+        "baseline_brier": 0.2385354034208179,
+        "brier_skill_vs_baseline": 0.024996319547832657,
+        "log_loss": 0.6574779367555948,
+        "baseline_log_loss": 0.6700946749390633,
+        "log_loss_improvement_vs_baseline": 0.012616738183468423
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 1157,
+          "positive_rate": 0.42350907519446845,
+          "auc": 0.4553315179145121,
+          "brier": 0.24740529210169201,
+          "baseline_brier": 0.2464718784730901,
+          "brier_skill_vs_baseline": -0.003787099909265512,
+          "log_loss": 0.6882554528442583,
+          "baseline_log_loss": 0.6860819269589686,
+          "log_loss_improvement_vs_baseline": -0.002173525885289629
+        },
+        {
+          "fold": 2,
+          "n": 834,
+          "positive_rate": 0.37170263788968827,
+          "auc": 0.5399162767791185,
+          "brier": 0.23131876047613315,
+          "baseline_brier": 0.23895080964366408,
+          "brier_skill_vs_baseline": 0.031939833888457,
+          "log_loss": 0.6549359655558641,
+          "baseline_log_loss": 0.6709692475682537,
+          "log_loss_improvement_vs_baseline": 0.016033282012389627
+        },
+        {
+          "fold": 3,
+          "n": 621,
+          "positive_rate": 0.2882447665056361,
+          "auc": 0.5517454940721453,
+          "brier": 0.20662260195689616,
+          "baseline_brier": 0.22319087777615976,
+          "brier_skill_vs_baseline": 0.07423366037334234,
+          "log_loss": 0.6035494631098491,
+          "baseline_log_loss": 0.6391338952936924,
+          "log_loss_improvement_vs_baseline": 0.03558443218384322
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 1585,
+        "positive_rate": 0.3936908517350158,
+        "auc": 0.5469129379118973,
+        "brier": 0.23652472805607058,
+        "baseline_brier": 0.23975257433210398,
+        "brier_skill_vs_baseline": 0.013463239279183692,
+        "log_loss": 0.6655676070271664,
+        "baseline_log_loss": 0.6725351657112235,
+        "log_loss_improvement_vs_baseline": 0.006967558684057074
+      },
+      "by_board": {
+        "2": {
+          "n": 1490,
+          "positive_rate": 0.3697986577181208,
+          "auc": 0.5496270697676217,
+          "brier": 0.2309446482881251,
+          "baseline_brier": 0.2376309516235838,
+          "brier_skill_vs_baseline": 0.028137341915164482,
+          "log_loss": 0.6541032027678215,
+          "baseline_log_loss": 0.6682770598807368,
+          "log_loss_improvement_vs_baseline": 0.0141738571129153
+        },
+        "3": {
+          "n": 638,
+          "positive_rate": 0.35266457680250785,
+          "auc": 0.5369599139090665,
+          "brier": 0.22732952392153594,
+          "baseline_brier": 0.2366986715183128,
+          "brier_skill_vs_baseline": 0.03958259476776149,
+          "log_loss": 0.6465952227305661,
+          "baseline_log_loss": 0.6663940898865545,
+          "log_loss_improvement_vs_baseline": 0.01979886715598833
+        },
+        "4": {
+          "n": 319,
+          "positive_rate": 0.4043887147335423,
+          "auc": 0.5299469604243167,
+          "brier": 0.2413474679612084,
+          "baseline_brier": 0.2438969219699551,
+          "brier_skill_vs_baseline": 0.010452997881870596,
+          "log_loss": 0.676093449985747,
+          "baseline_log_loss": 0.680905285661696,
+          "log_loss_improvement_vs_baseline": 0.0048118356759488945
+        },
+        "5": {
+          "n": 165,
+          "positive_rate": 0.4484848484848485,
+          "auc": 0.494950994950995,
+          "brier": 0.25058666983705036,
+          "baseline_brier": 0.2434393047208317,
+          "brier_skill_vs_baseline": -0.029359947131031294,
+          "log_loss": 0.694042642630334,
+          "baseline_log_loss": 0.6799167045141369,
+          "log_loss_improvement_vs_baseline": -0.014125938116197112
+        }
+      }
+    },
+    {
+      "name": "large_loss__plus_stock_memory__hist_gb",
+      "target": "large_loss",
+      "feature_stage": "plus_stock_memory",
+      "model": "hist_gb",
+      "feature_count": 58,
+      "overall": {
+        "n": 2612,
+        "positive_rate": 0.37480857580398164,
+        "auc": 0.55409402723576,
+        "brier": 0.23164271379976367,
+        "baseline_brier": 0.2385354034208179,
+        "brier_skill_vs_baseline": 0.028895876763812334,
+        "log_loss": 0.6553847665128899,
+        "baseline_log_loss": 0.6700946749390633,
+        "log_loss_improvement_vs_baseline": 0.014709908426173368
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "n": 1157,
+          "positive_rate": 0.42350907519446845,
+          "auc": 0.4871951779212434,
+          "brier": 0.24609511553228297,
+          "baseline_brier": 0.2464718784730901,
+          "brier_skill_vs_baseline": 0.0015286244546079963,
+          "log_loss": 0.6855467008522342,
+          "baseline_log_loss": 0.6860819269589686,
+          "log_loss_improvement_vs_baseline": 0.0005352261067343989
+        },
+        {
+          "fold": 2,
+          "n": 834,
+          "positive_rate": 0.37170263788968827,
+          "auc": 0.5462817040137897,
+          "brier": 0.23124358946702037,
+          "baseline_brier": 0.23895080964366408,
+          "brier_skill_vs_baseline": 0.032254421686777834,
+          "log_loss": 0.6546776894969071,
+          "baseline_log_loss": 0.6709692475682537,
+          "log_loss_improvement_vs_baseline": 0.016291558071346635
+        },
+        {
+          "fold": 3,
+          "n": 621,
+          "positive_rate": 0.2882447665056361,
+          "auc": 0.553628757046437,
+          "brier": 0.205252119418094,
+          "baseline_brier": 0.22319087777615976,
+          "brier_skill_vs_baseline": 0.08037406607655673,
+          "log_loss": 0.6001389439697472,
+          "baseline_log_loss": 0.6391338952936924,
+          "log_loss_improvement_vs_baseline": 0.03899495132394515
+        }
+      ],
+      "stability_gate": false,
+      "active": {
+        "n": 1585,
+        "positive_rate": 0.3936908517350158,
+        "auc": 0.5664638864430749,
+        "brier": 0.23467993857658412,
+        "baseline_brier": 0.23975257433210398,
+        "brier_skill_vs_baseline": 0.02115779473755841,
+        "log_loss": 0.6614469244982782,
+        "baseline_log_loss": 0.6725351657112235,
+        "log_loss_improvement_vs_baseline": 0.011088241212945271
+      },
+      "by_board": {
+        "2": {
+          "n": 1490,
+          "positive_rate": 0.3697986577181208,
+          "auc": 0.5658749992752068,
+          "brier": 0.2290889098015647,
+          "baseline_brier": 0.2376309516235838,
+          "brier_skill_vs_baseline": 0.03594667177678945,
+          "log_loss": 0.6498100178988485,
+          "baseline_log_loss": 0.6682770598807368,
+          "log_loss_improvement_vs_baseline": 0.01846704198188831
+        },
+        "3": {
+          "n": 638,
+          "positive_rate": 0.35266457680250785,
+          "auc": 0.5577347323110035,
+          "brier": 0.22669588627770704,
+          "baseline_brier": 0.2366986715183128,
+          "brier_skill_vs_baseline": 0.042259574912028475,
+          "log_loss": 0.6453676368619408,
+          "baseline_log_loss": 0.6663940898865545,
+          "log_loss_improvement_vs_baseline": 0.0210264530246137
+        },
+        "4": {
+          "n": 319,
+          "positive_rate": 0.4043887147335423,
+          "auc": 0.4792737658098735,
+          "brier": 0.24492660922249226,
+          "baseline_brier": 0.2438969219699551,
+          "brier_skill_vs_baseline": -0.004221813232493377,
+          "log_loss": 0.6836651278368293,
+          "baseline_log_loss": 0.680905285661696,
+          "log_loss_improvement_vs_baseline": -0.0027598421751333646
+        },
+        "5": {
+          "n": 165,
+          "positive_rate": 0.4484848484848485,
+          "auc": 0.5461835461835463,
+          "brier": 0.2481498730515104,
+          "baseline_brier": 0.2434393047208317,
+          "brier_skill_vs_baseline": -0.019350073054475114,
+          "log_loss": 0.6897839719061662,
+          "baseline_log_loss": 0.6799167045141369,
+          "log_loss_improvement_vs_baseline": -0.009867267392029366
+        }
+      }
+    }
+  ],
+  "stable_experiments": [
+    "promotion__structure__logistic",
+    "promotion__plus_individual__logistic",
+    "promotion__plus_cross_section__logistic",
+    "promotion__plus_stock_memory__logistic",
+    "promotion__plus_stock_memory__hist_gb",
+    "fill__plus_individual__logistic",
+    "fill__plus_cross_section__logistic",
+    "fill__plus_stock_memory__hist_gb",
+    "two_more__structure__logistic",
+    "two_more__plus_individual__logistic",
+    "two_more__plus_cross_section__logistic",
+    "two_more__plus_stock_memory__logistic",
+    "two_more__plus_stock_memory__hist_gb"
+  ],
+  "deployment_allowed": false,
+  "deployment_reason": "historical dates are reused development evidence and execution labels are inferred daily OHLC proxies",
+  "input": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v7\\point_in_time_rebuild\\leader_candidates.csv",
+    "sha256": "d2ce98fc44cfe6ba266199abaed5baa8c80b6c713dd9cfb2fc728f2a8cba059e"
+  },
+  "emotion_input": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v7\\emotion_model_lab\\prequential_predictions.csv",
+    "sha256": "b548574f77e5249e152a1d17971e9528e9d6a6b0f79b2aab7c46c7dc97ae0912"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v8\\relay_model_lab\\prequential_predictions.csv",
+    "sha256": "380fa8f9ab922cdf34a617eb848a2cbb21af0a31c2d7b8869927f12da19dbc7a"
+  }
+}

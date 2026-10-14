@@ -1,0 +1,38 @@
+{
+  "version": "v195-trading-calendar-integrity-1",
+  "status": "CALENDAR_LABEL_REBUILD_REQUIRED",
+  "range": {
+    "start": "2026-08-10",
+    "end": "2026-09-16"
+  },
+  "official_query_success_sessions": 28,
+  "provider_complete_sessions": 28,
+  "provider_expected_codes": 80,
+  "observation_signal_sessions": 25,
+  "available_pool_sessions": 679,
+  "sparse_successor_mismatch_sessions": 1,
+  "immediate_next_pool_missing_sessions": 1,
+  "affected_signal_dates": [
+    {
+      "signal_date": "2026-09-01",
+      "target_date": "2026-09-04",
+      "correct_next_session": "2026-09-02",
+      "issue": "SPARSE_OBSERVATION_CALENDAR_SKIPPED_TRADING_SESSION;IMMEDIATE_NEXT_POOL_MISSING"
+    }
+  ],
+  "governance": {
+    "daily_review_dates_may_define_trading_calendar": false,
+    "missing_pool_session_may_be_skipped_for_promotion_label": false,
+    "missing_session_may_be_skipped_for_holding_horizon": false,
+    "calendar_fix_authorizes_entry": false
+  },
+  "interpretation": "A sequence of captured review dates is not an exchange calendar.  Promotion and holding horizons must use the immediate verified trading session; if that session's pool is missing, the promotion label is unavailable rather than shifted forward.",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v2\\sse_daily_query_audit.csv": "a94f79d384d3ddbcf1b3b53c3c1daa4f26fb090f17e6f1f0cf9e786a79367c32",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v191\\current_abnormal_inputs_20260916_v1\\candidate_daily_history.csv": "85fe908f073f543f0acd4c82a2357f4ecf5525eec11fe27b8244ae69b723a068",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v4\\first_board_observations.csv": "41a64531e7c4c8ff82830f7a5026ae99e93ce55886e5b7e97586e547222a0d46",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "calendar_sha256": "62c7f16decc24c95d25f5f0fc3984a1cf972ec33cc2bbbc6ed0de2bb49fba330",
+  "successor_audit_sha256": "d71cd63caffd7686c741d295e789da554fdf3df223752df8a4a410686002d301"
+}

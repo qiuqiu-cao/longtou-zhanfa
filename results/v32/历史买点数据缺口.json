@@ -1,0 +1,32 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "audit_date": "2026-09-04",
+  "historical_entries_pending": [
+    {"code":"000017","signal_date":"2024-01-12","entry_date":"2024-01-15"},
+    {"code":"000017","signal_date":"2024-01-16","entry_date":"2024-01-17"},
+    {"code":"000759","signal_date":"2024-12-26","entry_date":"2024-12-27"},
+    {"code":"000759","signal_date":"2024-12-27","entry_date":"2024-12-30"}
+  ],
+  "required_window_local": "09:25 auction and 09:30-10:00 continuous auction, Asia/Shanghai",
+  "required_minute_fields": ["code","bar_end","open","high","low","close","volume_shares","amount_yuan","price_adjustment","timestamp_convention","source"],
+  "required_auction_fields": ["code","observed_at","matched_price","matched_amount_yuan","source"],
+  "local_findings": {
+    "data/v9/templates/minute_primitive.csv":"header_only_no_observations",
+    "data/v9/templates/auction_primitive.csv":"header_only_no_observations",
+    "data/v3/open_snapshots.csv":"header_only_no_observations",
+    "filename_search_scope":"workspace CSV, parquet, jsonl names matching minute/intraday/auction/snapshot/tick or Chinese equivalents",
+    "found_historical_entry_minute_files":0,
+    "search_is_exhaustive_content_scan":false
+  },
+  "provider_findings": {
+    "source":"https://akshare.akfamily.xyz/data/stock/stock.html",
+    "interface":"stock_zh_a_hist_min_em",
+    "one_minute_retention":"official documentation states recent five trading days only",
+    "other_periods":"recent data only; a start_date argument is not proof of historical availability",
+    "older_open_zero_warning":"documentation warns non-latest dates may have open=0; do not treat as executable price",
+    "network_history_request_attempted":false
+  },
+  "next_required_input":"User-authorized historical minute/auction export or access to a source demonstrably covering the four dates; not existing holdings or brokerage credentials.",
+  "no_trade_labels_promoted":true,
+  "limitations":["Minute bars alone do not prove queue fills or intraminute event ordering","These are selected historical case audits, not a statistically valid win-rate sample","Current-source limitation is not proof all market data providers lack this history"]
+}

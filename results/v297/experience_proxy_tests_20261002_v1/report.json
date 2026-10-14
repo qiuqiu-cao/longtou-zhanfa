@@ -1,0 +1,48 @@
+{
+  "version": "v297-fixed-experience-proxies-1",
+  "status": "SEVEN_HISTORICAL_PROXIES_TESTED_EIGHT_INPUT_GAPS_RETAINED",
+  "recorded_at": "2026-10-02T15:01:24.058307+00:00",
+  "candidate_rows": 3707,
+  "candidate_dates": 302,
+  "results": [
+    {
+      "id": "digital_height",
+      "name": "数字板高度压制",
+      "definition": "当前5板与同日4/6板比较；固定局部代理，不代表所有数字关口",
+      "status": "HISTORICAL_PROXY_TEST_COMPLETED",
+      "views": {
+        "target_original": {
+          "development": {
+            "full_candidate_rows": 1573,
+            "exposure_known_rows": 263,
+            "label_or_proxy_unknown_rows": 1310,
+            "official_sessions": 125,
+            "candidate_dates": 125,
+            "missing_entire_dates": [],
+            "unmatched_group_rows_retained_not_scored": 151,
+            "exposed": {
+              "rows": 51,
+              "dates": 36,
+              "promotions": 22,
+              "rate": 0.43137254901960786
+            },
+            "control": {
+              "rows": 61,
+              "dates": 36,
+              "promotions": 25,
+              "rate": 0.4098360655737705
+            },
+            "difference": 0.021536483445837362,
+            "block95": [
+              -0.13541736859838277,
+              0.17143578643578633
+            ],
+            "family_block_interval": [
+              -0.21258394997277968,
+              0.23241234424804388
+            ],
+            "family_tests": 7,
+            "family_interval_nominal_level": 0.9928571428571429,
+            "valid_boot_fraction": 1.0,
+            "inference": "exploratory date-block percentile bootstrap, Bonferroni interval levels; not exact simultaneous-coverage guarantee",
+            "support_sufficient": 

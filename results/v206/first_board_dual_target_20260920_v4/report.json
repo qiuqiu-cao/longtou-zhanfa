@@ -1,0 +1,62 @@
+{
+  "version": "v206-first-board-dual-target-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "sessions": 2,
+  "candidate_rows": 62,
+  "five_factor_complete_rows": 0,
+  "targets": {
+    "B_plus_2_positive": {
+      "label": "executable_positive_B_plus_2",
+      "outcome_availability": "exit_date_B_plus_2",
+      "base": {
+        "n": 6,
+        "positive_rate": 0.0,
+        "auc": null,
+        "brier": 0.3813721307362438,
+        "average_precision": null
+      },
+      "enhanced": {
+        "n": 0,
+        "positive_rate": null,
+        "auc": null,
+        "brier": null,
+        "average_precision": null
+      }
+    },
+    "B_plus_1_big_loss": {
+      "label": "big_loss_target",
+      "outcome_availability": "exit_date_B_plus_1",
+      "base": {
+        "n": 33,
+        "positive_rate": 0.2727272727272727,
+        "auc": 0.5787037037037037,
+        "brier": 0.21092771637245647,
+        "average_precision": 0.4208883862162486
+      },
+      "enhanced": {
+        "n": 0,
+        "positive_rate": null,
+        "auc": null,
+        "brier": null,
+        "average_precision": null
+      }
+    }
+  },
+  "governance": {
+    "two_targets_trained_separately": true,
+    "B_plus_1_big_loss_threshold": -0.07,
+    "outcome_availability_time_isolated": true,
+    "five_factor_missing_filled_as_zero": false,
+    "next_day_promotion_used_as_profit_target": false,
+    "probabilities_deployment_calibrated": false,
+    "entry_authorized": false
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v209\\first_board_five_factor_inputs_20260920_v4\\first_board_features_with_five_factor_evidence.csv": "a81b27602293b7ab79267f2a7f682f464bbfeca562a52d57d96be080b873ccca",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03"
+  },
+  "artifact_hashes": {
+    "dual_target_rows_LABEL_ONLY.csv": "38786843c29c3b0e266c1738a753b120d4c53aaedce8306253450f47518a5a71",
+    "prequential_dual_target_predictions.csv": "f6103cefb02d11048900f78e5932ced26d0d0b51c73fe74202241b7a4eb1a795"
+  }
+}

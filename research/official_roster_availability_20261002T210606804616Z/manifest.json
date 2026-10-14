@@ -1,0 +1,272 @@
+{
+  "sources": [
+    {
+      "id": "sse_stock_list",
+      "requested_url": "https://www.sse.com.cn/assortment/stock/list/share/",
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:06:06.805799+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Official stock-roster pages, distinct from prior market-turnover SQL/report requests.",
+      "http_status": 200,
+      "response_url": "https://www.sse.com.cn/assortment/stock/list/share/",
+      "captured_at": "2026-10-02T21:06:07.375275+00:00",
+      "bytes": 27427,
+      "sha256": "5c53a822b373ffb3db241bc8d782a9d356e0d79340332d405f603e43420f91a4",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\sse_stock_list.html",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:05:22 GMT",
+        "Content-Type": "text/html"
+      },
+      "previous_incorrect_path_metadata": "D:\\Documents\\ChatGPT\\榫欏ご鎴樻硶\\research\\official_roster_availability_20261002T210606804616Z\\raw\\sse_stock_list.html",
+      "read_result": "SOURCE_BYTES_RETAINED"
+    },
+    {
+      "id": "szse_stock_list",
+      "requested_url": "https://www.szse.cn/market/product/stock/list/index.html",
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:06:06.806314+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Official stock-roster pages, distinct from prior market-turnover SQL/report requests.",
+      "http_status": 200,
+      "response_url": "https://www.szse.cn/market/product/stock/list/index.html",
+      "captured_at": "2026-10-02T21:06:07.065917+00:00",
+      "bytes": 27632,
+      "sha256": "ce51450c3072976fb40683cc66f48eb7bb62da260b056383f2114065502579fd",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_stock_list.html",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:05:22 GMT",
+        "Last-Modified": "Sat, 29 Aug 2026 03:13:32 GMT",
+        "Content-Type": "text/html"
+      },
+      "previous_incorrect_path_metadata": "D:\\Documents\\ChatGPT\\榫欏ご鎴樻硶\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_stock_list.html",
+      "read_result": "SOURCE_BYTES_RETAINED"
+    },
+    {
+      "id": "sse_list_schema",
+      "requested_url": "https://www.sse.com.cn/xhtml/home/2021public/querySearch/search_stocksDepositoryReceipts_2021.js",
+      "parameters": null,
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:07:02.640465+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Source linked by captured official stock-list HTML; roster catalogue 1110 differs from historical turnover catalogue 1803_sczm.",
+      "http_status": 200,
+      "response_url": "https://www.sse.com.cn/xhtml/home/2021public/querySearch/search_stocksDepositoryReceipts_2021.js",
+      "captured_at": "2026-10-02T21:07:03.146381+00:00",
+      "bytes": 277193,
+      "sha256": "478fb2a72fc5a3725088adb208756e88171f79628956a9f5ca67c900d37def2f",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\sse_list_schema.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:06:17 GMT",
+        "Last-Modified": "Fri, 03 Jul 2026 08:28:25 GMT",
+        "Content-Type": "application/javascript"
+      },
+      "read_result": "SOURCE_BYTES_RETAINED"
+    },
+    {
+      "id": "szse_roster_json",
+      "requested_url": "https://www.szse.cn/api/report/ShowReport/data",
+      "parameters": {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "1110",
+        "TABKEY": "tab1",
+        "PAGENO": "1"
+      },
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:07:02.641119+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Source linked by captured official stock-list HTML; roster catalogue 1110 differs from historical turnover catalogue 1803_sczm.",
+      "http_status": 200,
+      "response_url": "https://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1110&TABKEY=tab1&PAGENO=1",
+      "captured_at": "2026-10-02T21:07:02.960648+00:00",
+      "bytes": 21476,
+      "sha256": "5385340d5d464a8f890d3d3f7f7b86697a9509841e1a05888aeb272a948ac59a",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_roster_json.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:06:18 GMT",
+        "Content-Type": "application/json"
+      },
+      "read_result": "SOURCE_BYTES_RETAINED"
+    },
+    {
+      "id": "sse_mainboard_roster_p1",
+      "requested_url": "https://query.sse.com.cn/sseQuery/commonQuery.do",
+      "parameters": {
+        "STOCK_TYPE": "1",
+        "REG_PROVINCE": "",
+        "CSRC_CODE": "",
+        "STOCK_CODE": "",
+        "sqlId": "COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L",
+        "COMPANY_STATUS": "2,4,5,7,8",
+        "type": "inParams",
+        "isPagination": "true",
+        "pageHelp.cacheSize": "1",
+        "pageHelp.beginPage": "1",
+        "pageHelp.pageSize": "25",
+        "pageHelp.pageNo": "1"
+      },
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:08:40.248842+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Parameters/schema documented in captured official stock-list page, JavaScript or JSON metadata.",
+      "http_status": 200,
+      "response_url": "https://query.sse.com.cn/sseQuery/commonQuery.do?STOCK_TYPE=1&REG_PROVINCE=&CSRC_CODE=&STOCK_CODE=&sqlId=COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L&COMPANY_STATUS=2%2C4%2C5%2C7%2C8&type=inParams&isPagination=true&pageHelp.cacheSize=1&pageHelp.beginPage=1&pageHelp.pageSize=25&pageHelp.pageNo=1",
+      "captured_at": "2026-10-02T21:08:40.623336+00:00",
+      "bytes": 130,
+      "sha256": "185f70358d1900ba50a3a1de635999d4b629d11af29ec242d8beea076a1272c0",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\sse_mainboard_roster_p1.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:07:55 GMT",
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "read_result": "APPLICATION_ERROR_NO_ROSTER"
+    },
+    {
+      "id": "szse_mainboard_roster_p1",
+      "requested_url": "https://www.szse.cn/api/report/ShowReport/data",
+      "parameters": {
+        "SHOWTYPE": "JSON",
+        "CATALOGID": "1110",
+        "TABKEY": "tab1",
+        "PAGENO": "1",
+        "selectModule": "main"
+      },
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:08:40.249461+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Parameters/schema documented in captured official stock-list page, JavaScript or JSON metadata.",
+      "http_status": 200,
+      "response_url": "https://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1110&TABKEY=tab1&PAGENO=1&selectModule=main",
+      "captured_at": "2026-10-02T21:08:40.580827+00:00",
+      "bytes": 21491,
+      "sha256": "660a13103ce3572239b6220066e59aa0ec9d9407e7b1c382f3c278b334109acc",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_mainboard_roster_p1.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:07:56 GMT",
+        "Content-Type": "application/json"
+      },
+      "read_result": "SOURCE_BYTES_RETAINED"
+    },
+    {
+      "id": "szse_report_schema",
+      "requested_url": "https://www.szse.cn/modules/report/js/report_new.js",
+      "parameters": null,
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:08:40.249664+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Parameters/schema documented in captured official stock-list page, JavaScript or JSON metadata.",
+      "http_status": 404,
+      "response_url": "https://www.szse.cn/modules/report/js/report_new.js",
+      "captured_at": "2026-10-02T21:08:40.531839+00:00",
+      "bytes": 8675,
+      "sha256": "d5086c31d9a9d3da1e5a28e3c5f516c997b4508b20dee99ccda33b1b75d3976b",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_report_schema.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:07:56 GMT",
+        "Last-Modified": "Sat, 29 Aug 2026 03:17:57 GMT",
+        "Content-Type": "text/html"
+      },
+      "read_result": "NOT_FOUND"
+    },
+    {
+      "id": "sse_mainboard_download",
+      "requested_url": "https://query.sse.com.cn/sseQuery/commonExcelDd.do",
+      "parameters": {
+        "STOCK_TYPE": "1",
+        "REG_PROVINCE": "",
+        "CSRC_CODE": "",
+        "STOCK_CODE": "",
+        "sqlId": "COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L",
+        "COMPANY_STATUS": "2,4,5,7,8",
+        "type": "inParams"
+      },
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:09:30.156440+00:00",
+      "timeout_seconds": 20,
+      "attempt": 2,
+      "followup_reason": "Official alternate Excel download linked in same list script; JSON result was an application error. No further repair will be attempted.",
+      "http_status": 200,
+      "response_url": "https://query.sse.com.cn/sseQuery/commonExcelDd.do?STOCK_TYPE=1&REG_PROVINCE=&CSRC_CODE=&STOCK_CODE=&sqlId=COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L&COMPANY_STATUS=2%2C4%2C5%2C7%2C8&type=inParams",
+      "captured_at": "2026-10-02T21:09:30.498911+00:00",
+      "bytes": 105,
+      "sha256": "1764f7597794aa433ac04699cf37d8f291f47876aae91d045694e26c86c63978",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\sse_mainboard_download.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:08:45 GMT",
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "read_result": "APPLICATION_ERROR_NO_ROSTER"
+    },
+    {
+      "id": "szse_report_schema_correct_host",
+      "requested_url": "https://res.szse.cn/modules/report/js/report_new.js",
+      "parameters": null,
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:09:30.156970+00:00",
+      "timeout_seconds": 20,
+      "attempt": 2,
+      "followup_reason": "Previous JS URL wrongly used page host; captured HTML explicitly declares resource base https://res.szse.cn. One corrected resource acquisition.",
+      "http_status": 404,
+      "response_url": "https://res.szse.cn/modules/report/js/report_new.js",
+      "captured_at": "2026-10-02T21:09:30.418455+00:00",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_report_schema_correct_host.response",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:08:46 GMT",
+        "Content-Type": "text/html"
+      },
+      "read_result": "NOT_FOUND"
+    },
+    {
+      "id": "szse_mainboard_roster_xlsx",
+      "requested_url": "https://www.szse.cn/api/report/ShowReport",
+      "parameters": {
+        "SHOWTYPE": "xlsx",
+        "CATALOGID": "1110",
+        "TABKEY": "tab1",
+        "selectModule": "main"
+      },
+      "request_method": "GET",
+      "requested_at": "2026-10-02T21:09:52.183082+00:00",
+      "timeout_seconds": 20,
+      "attempt": 1,
+      "new_source_condition": "Stock roster JSON metadata advertises excel=xlsx; catalogue1110 and selectModule=main both explicitly present in captured official metadata. Standard public report download.",
+      "http_status": 200,
+      "response_url": "https://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx&CATALOGID=1110&TABKEY=tab1&selectModule=main",
+      "captured_at": "2026-10-02T21:09:52.759720+00:00",
+      "bytes": 283074,
+      "sha256": "12f2a87347ae7148e22e07307dc8688bc62f4f6ed29f4045e6e00db9fd8a3dbb",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\raw\\szse_mainboard_roster.xlsx",
+      "response_headers": {
+        "Date": "Fri, 02 Oct 2026 21:09:08 GMT",
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=GBK",
+        "Content-Disposition": "attachment;filename=\"A¹ÉÁÐ±í.xlsx\""
+      },
+      "magic_hex": "504b030414000808",
+      "read_result": "SOURCE_BYTES_RETAINED"
+    }
+  ],
+  "created_at": "2026-10-02T21:06:07.376526+00:00",
+  "completed_at_utc": "2026-10-02T21:12:48.788310+00:00",
+  "request_count": 10,
+  "default_network_requests_only": true,
+  "no_403_received": true,
+  "no_external_code_run": true,
+  "normalized_file": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\szse_mainboard_roster_normalized.json",
+    "sha256": "b1e0f296afad69eec966c9e148f44acccbd94be3b1b73946f0ac2d31bcbed057"
+  },
+  "official_full_a_scope_claimed": false,
+  "no_historical_backfill": true,
+  "metadata_path_encoding_repair": {
+    "before_manifest_sha256": "98452c3da2981f23cc7388e050e3ce257dc34d6a5632dc17530433b8167d3fae",
+    "cause": "Two initial path metadata strings were corrupted by accidental GBK decoding while extending UTF-8 JSON. Raw bytes, date/time, capture count and hashes were unchanged. Corrected by actual existing raw file basename; all raw bytes/hashes verified."
+  }
+}

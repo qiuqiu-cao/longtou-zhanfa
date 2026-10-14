@@ -1,0 +1,3565 @@
+{
+  "formed_at": "2026-10-13T16:55:00.588719+00:00",
+  "status": "REJECTED_ARCHIVED_PHASE_PROXY_RESPONSE",
+  "comparisons": {
+    "2025H2": {
+      "ROLL252": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6559343434343434,
+        "Precision": 0.6437994722955145,
+        "complete_positive_Recall": 0.3730886850152905,
+        "F1": 0.4724104549854791,
+        "confusion": {
+          "TP": 244,
+          "TN": 795,
+          "FP": 135,
+          "FN": 410
+        },
+        "complete_positive_misses": 410,
+        "positive_support": 654,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "PHASE_PROXY_RESPONSE": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6521464646464646,
+        "Precision": 0.6388140161725068,
+        "complete_positive_Recall": 0.3623853211009174,
+        "F1": 0.46243902439024387,
+        "confusion": {
+          "TP": 237,
+          "TN": 796,
+          "FP": 134,
+          "FN": 417
+        },
+        "complete_positive_misses": 417,
+        "positive_support": 654,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "Accuracy_delta": -0.0037878787878787845,
+      "guards": {
+        "Precision": false,
+        "complete_positive_Recall": false,
+        "F1": false,
+        "same_coverage": true,
+        "positive_call_coverage": false,
+        "proxy0_complete_positive_Recall": false,
+        "proxy0_F1": false,
+        "paired_interval_lower_positive": false
+      },
+      "paired_interval": {
+        "lower": -0.01267757381832375,
+        "upper": 0.00487154423421109,
+        "undefined_draws": 0,
+        "draws": 2000,
+        "official_days": 126,
+        "block_days": 5,
+        "method": "paired circular official-session blocks; family-adjusted tails fixed before fits"
+      },
+      "passed": false,
+      "subgroups": {
+        "ROLL252": {
+          "proxy0": {
+            "original_registered_count": 1289,
+            "scoreable_count": 1289,
+            "coverage": 1.0,
+            "Accuracy": 0.6508921644685803,
+            "Precision": 0.5444444444444444,
+            "complete_positive_Recall": 0.10698689956331878,
+            "F1": 0.17883211678832117,
+            "confusion": {
+              "TP": 49,
+              "TN": 790,
+              "FP": 41,
+              "FN": 409
+            },
+            "complete_positive_misses": 409,
+            "positive_support": 458,
+            "signal_days": 126,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "proxy1": {
+            "original_registered_count": 295,
+            "scoreable_count": 295,
+            "coverage": 1.0,
+            "Accuracy": 0.6779661016949152,
+            "Precision": 0.6747404844290658,
+            "complete_positive_Recall": 0.9948979591836735,
+            "F1": 0.8041237113402062,
+            "confusion": {
+              "TP": 195,
+              "TN": 5,
+              "FP": 94,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 196,
+            "signal_days": 115,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "actual_nonword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_oneword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_identity_unknown": {
+            "original_registered_count": 1584,
+            "scoreable_count": 1584,
+            "coverage": 1.0,
+            "Accuracy": 0.6559343434343434,
+            "Precision": 0.6437994722955145,
+            "complete_positive_Recall": 0.3730886850152905,
+            "F1": 0.4724104549854791,
+            "confusion": {
+              "TP": 244,
+              "TN": 795,
+              "FP": 135,
+              "FN": 410
+            },
+            "complete_positive_misses": 410,
+            "positive_support": 654,
+            "signal_days": 126,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:一致": {
+            "original_registered_count": 66,
+            "scoreable_count": 66,
+            "coverage": 1.0,
+            "Accuracy": 0.6818181818181818,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.6,
+            "F1": 0.631578947368421,
+            "confusion": {
+              "TP": 18,
+              "TN": 27,
+              "FP": 9,
+              "FN": 12
+            },
+            "complete_positive_misses": 12,
+            "positive_support": 30,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:修复": {
+            "original_registered_count": 251,
+            "scoreable_count": 251,
+            "coverage": 1.0,
+            "Accuracy": 0.6095617529880478,
+            "Precision": 0.515625,
+            "complete_positive_Recall": 0.33,
+            "F1": 0.40243902439024387,
+            "confusion": {
+              "TP": 33,
+              "TN": 120,
+              "FP": 31,
+              "FN": 67
+            },
+            "complete_positive_misses": 67,
+            "positive_support": 100,
+            "signal_days": 22,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:加速": {
+            "original_registered_count": 405,
+            "scoreable_count": 405,
+            "coverage": 1.0,
+            "Accuracy": 0.6444444444444445,
+            "Precision": 0.6413043478260869,
+            "complete_positive_Recall": 0.34705882352941175,
+            "F1": 0.45038167938931295,
+            "confusion": {
+              "TP": 59,
+              "TN": 202,
+              "FP": 33,
+              "FN": 111
+            },
+            "complete_positive_misses": 111,
+            "positive_support": 170,
+            "signal_days": 27,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:升温": {
+            "original_registered_count": 199,
+            "scoreable_count": 199,
+            "coverage": 1.0,
+            "Accuracy": 0.6582914572864321,
+            "Precision": 0.71875,
+            "complete_positive_Recall": 0.2804878048780488,
+            "F1": 0.4035087719298246,
+            "confusion": {
+              "TP": 23,
+              "TN": 108,
+              "FP": 9,
+              "FN": 59
+            },
+            "complete_positive_misses": 59,
+            "positive_support": 82,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:启动": {
+            "original_registered_count": 25,
+            "scoreable_count": 25,
+            "coverage": 1.0,
+            "Accuracy": 0.6,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.3333333333333333,
+            "F1": 0.4444444444444444,
+            "confusion": {
+              "TP": 4,
+              "TN": 11,
+              "FP": 2,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 12,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:大分歧": {
+            "original_registered_count": 423,
+            "scoreable_count": 423,
+            "coverage": 1.0,
+            "Accuracy": 0.6879432624113475,
+            "Precision": 0.6697247706422018,
+            "complete_positive_Recall": 0.4319526627218935,
+            "F1": 0.525179856115108,
+            "confusion": {
+              "TP": 73,
+              "TN": 218,
+              "FP": 36,
+              "FN": 96
+            },
+            "complete_positive_misses": 96,
+            "positive_support": 169,
+            "signal_days": 37,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:退潮": {
+            "original_registered_count": 215,
+            "scoreable_count": 215,
+            "coverage": 1.0,
+            "Accuracy": 0.6651162790697674,
+            "Precision": 0.6938775510204082,
+            "complete_positive_Recall": 0.37362637362637363,
+            "F1": 0.48571428571428577,
+            "confusion": {
+              "TP": 34,
+              "TN": 109,
+              "FP": 15,
+              "FN": 57
+            },
+            "complete_positive_misses": 57,
+            "positive_support": 91,
+            "signal_days": 20,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:2": {
+            "original_registered_count": 932,
+            "scoreable_count": 932,
+            "coverage": 1.0,
+            "Accuracy": 0.6684549356223176,
+            "Precision": 0.6428571428571429,
+            "complete_positive_Recall": 0.2804532577903683,
+            "F1": 0.3905325443786982,
+            "confusion": {
+              "TP": 99,
+              "TN": 524,
+              "FP": 55,
+              "FN": 254
+            },
+            "complete_positive_misses": 254,
+            "positive_support": 353,
+            "signal_days": 125,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:3": {
+            "original_registered_count": 352,
+            "scoreable_count": 352,
+            "coverage": 1.0,
+            "Accuracy": 0.6335227272727273,
+            "Precision": 0.6770833333333334,
+            "complete_positive_Recall": 0.3987730061349693,
+            "F1": 0.5019305019305019,
+            "confusion": {
+              "TP": 65,
+              "TN": 158,
+              "FP": 31,
+              "FN": 98
+            },
+            "complete_positive_misses": 98,
+            "positive_support": 163,
+            "signal_days": 116,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:4": {
+            "original_registered_count": 163,
+            "scoreable_count": 163,
+            "coverage": 1.0,
+            "Accuracy": 0.6441717791411042,
+            "Precision": 0.5967741935483871,
+            "complete_positive_Recall": 0.5285714285714286,
+            "F1": 0.5606060606060607,
+            "confusion": {
+              "TP": 37,
+              "TN": 68,
+              "FP": 25,
+              "FN": 33
+            },
+            "complete_positive_misses": 33,
+            "positive_support": 70,
+            "signal_days": 85,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:5": {
+            "original_registered_count": 70,
+            "scoreable_count": 70,
+            "coverage": 1.0,
+            "Accuracy": 0.5857142857142857,
+            "Precision": 0.5925925925925926,
+            "complete_positive_Recall": 0.47058823529411764,
+            "F1": 0.5245901639344261,
+            "confusion": {
+              "TP": 16,
+              "TN": 25,
+              "FP": 11,
+              "FN": 18
+            },
+            "complete_positive_misses": 18,
+            "positive_support": 34,
+            "signal_days": 50,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:6": {
+            "original_registered_count": 33,
+            "scoreable_count": 33,
+            "coverage": 1.0,
+            "Accuracy": 0.7575757575757576,
+            "Precision": 0.75,
+            "complete_positive_Recall": 0.75,
+            "F1": 0.75,
+            "confusion": {
+              "TP": 12,
+              "TN": 13,
+              "FP": 4,
+              "FN": 4
+            },
+            "complete_positive_misses": 4,
+            "positive_support": 16,
+            "signal_days": 31,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:7": {
+            "original_registered_count": 16,
+            "scoreable_count": 16,
+            "coverage": 1.0,
+            "Accuracy": 0.6875,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.8888888888888888,
+            "F1": 0.761904761904762,
+            "confusion": {
+              "TP": 8,
+              "TN": 3,
+              "FP": 4,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 9,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:8": {
+            "original_registered_count": 9,
+            "scoreable_count": 9,
+            "coverage": 1.0,
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.8,
+            "F1": 0.7272727272727272,
+            "confusion": {
+              "TP": 4,
+              "TN": 2,
+              "FP": 2,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 5,
+            "signal_days": 9,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:9": {
+            "original_registered_count": 5,
+            "scoreable_count": 5,
+            "coverage": 1.0,
+            "Accuracy": 0.6,
+            "Precision": 0.5,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.6666666666666666,
+            "confusion": {
+              "TP": 2,
+              "TN": 1,
+              "FP": 2,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 2,
+            "signal_days": 5,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:10": {
+            "original_registered_count": 2,
+            "scoreable_count": 2,
+            "coverage": 1.0,
+            "Accuracy": 0.5,
+            "Precision": 0.5,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.6666666666666666,
+            "confusion": {
+              "TP": 1,
+              "TN": 0,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:11": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 0.0,
+            "Precision": null,
+            "complete_positive_Recall": 0.0,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 1,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:12": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 1,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:启动": {
+            "original_registered_count": 25,
+            "scoreable_count": 25,
+            "coverage": 1.0,
+            "Accuracy": 0.6,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.3333333333333333,
+            "F1": 0.4444444444444444,
+            "confusion": {
+              "TP": 4,
+              "TN": 11,
+              "FP": 2,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 12,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:升温": {
+            "original_registered_count": 199,
+            "scoreable_count": 199,
+            "coverage": 1.0,
+            "Accuracy": 0.6582914572864321,
+            "Precision": 0.71875,
+            "complete_positive_Recall": 0.2804878048780488,
+            "F1": 0.4035087719298246,
+            "confusion": {
+              "TP": 23,
+              "TN": 108,
+              "FP": 9,
+              "FN": 59
+            },
+            "complete_positive_misses": 59,
+            "positive_support": 82,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:加速": {
+            "original_registered_count": 405,
+            "scoreable_count": 405,
+            "coverage": 1.0,
+            "Accuracy": 0.6444444444444445,
+            "Precision": 0.6413043478260869,
+            "complete_positive_Recall": 0.34705882352941175,
+            "F1": 0.45038167938931295,
+            "confusion": {
+              "TP": 59,
+              "TN": 202,
+              "FP": 33,
+              "FN": 111
+            },
+            "complete_positive_misses": 111,
+            "positive_support": 170,
+            "signal_days": 27,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:一致": {
+            "original_registered_count": 66,
+            "scoreable_count": 66,
+            "coverage": 1.0,
+            "Accuracy": 0.6818181818181818,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.6,
+            "F1": 0.631578947368421,
+            "confusion": {
+              "TP": 18,
+              "TN": 27,
+              "FP": 9,
+              "FN": 12
+            },
+            "complete_positive_misses": 12,
+            "positive_support": 30,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:大分歧": {
+            "original_registered_count": 423,
+            "scoreable_count": 423,
+            "coverage": 1.0,
+            "Accuracy": 0.6879432624113475,
+            "Precision": 0.6697247706422018,
+            "complete_positive_Recall": 0.4319526627218935,
+            "F1": 0.525179856115108,
+            "confusion": {
+              "TP": 73,
+              "TN": 218,
+              "FP": 36,
+              "FN": 96
+            },
+            "complete_positive_misses": 96,
+            "positive_support": 169,
+            "signal_days": 37,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:退潮": {
+            "original_registered_count": 215,
+            "scoreable_count": 215,
+            "coverage": 1.0,
+            "Accuracy": 0.6651162790697674,
+            "Precision": 0.6938775510204082,
+            "complete_positive_Recall": 0.37362637362637363,
+            "F1": 0.48571428571428577,
+            "confusion": {
+              "TP": 34,
+              "TN": 109,
+              "FP": 15,
+              "FN": 57
+            },
+            "complete_positive_misses": 57,
+            "positive_support": 91,
+            "signal_days": 20,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:修复": {
+            "original_registered_count": 251,
+            "scoreable_count": 251,
+            "coverage": 1.0,
+            "Accuracy": 0.6095617529880478,
+            "Precision": 0.515625,
+            "complete_positive_Recall": 0.33,
+            "F1": 0.40243902439024387,
+            "confusion": {
+              "TP": 33,
+              "TN": 120,
+              "FP": 31,
+              "FN": 67
+            },
+            "complete_positive_misses": 67,
+            "positive_support": 100,
+            "signal_days": 22,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          }
+        },
+        "PHASE_PROXY_RESPONSE": {
+          "proxy0": {
+            "original_registered_count": 1289,
+            "scoreable_count": 1289,
+            "coverage": 1.0,
+            "Accuracy": 0.647788983708301,
+            "Precision": 0.5238095238095238,
+            "complete_positive_Recall": 0.09606986899563319,
+            "F1": 0.16236162361623618,
+            "confusion": {
+              "TP": 44,
+              "TN": 791,
+              "FP": 40,
+              "FN": 414
+            },
+            "complete_positive_misses": 414,
+            "positive_support": 458,
+            "signal_days": 126,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "proxy1": {
+            "original_registered_count": 295,
+            "scoreable_count": 295,
+            "coverage": 1.0,
+            "Accuracy": 0.6711864406779661,
+            "Precision": 0.6724738675958188,
+            "complete_positive_Recall": 0.9846938775510204,
+            "F1": 0.7991718426501035,
+            "confusion": {
+              "TP": 193,
+              "TN": 5,
+              "FP": 94,
+              "FN": 3
+            },
+            "complete_positive_misses": 3,
+            "positive_support": 196,
+            "signal_days": 115,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "actual_nonword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_oneword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_identity_unknown": {
+            "original_registered_count": 1584,
+            "scoreable_count": 1584,
+            "coverage": 1.0,
+            "Accuracy": 0.6521464646464646,
+            "Precision": 0.6388140161725068,
+            "complete_positive_Recall": 0.3623853211009174,
+            "F1": 0.46243902439024387,
+            "confusion": {
+              "TP": 237,
+              "TN": 796,
+              "FP": 134,
+              "FN": 417
+            },
+            "complete_positive_misses": 417,
+            "positive_support": 654,
+            "signal_days": 126,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:一致": {
+            "original_registered_count": 66,
+            "scoreable_count": 66,
+            "coverage": 1.0,
+            "Accuracy": 0.696969696969697,
+            "Precision": 0.6785714285714286,
+            "complete_positive_Recall": 0.6333333333333333,
+            "F1": 0.6551724137931035,
+            "confusion": {
+              "TP": 19,
+              "TN": 27,
+              "FP": 9,
+              "FN": 11
+            },
+            "complete_positive_misses": 11,
+            "positive_support": 30,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:修复": {
+            "original_registered_count": 251,
+            "scoreable_count": 251,
+            "coverage": 1.0,
+            "Accuracy": 0.5936254980079682,
+            "Precision": 0.48333333333333334,
+            "complete_positive_Recall": 0.29,
+            "F1": 0.3625,
+            "confusion": {
+              "TP": 29,
+              "TN": 120,
+              "FP": 31,
+              "FN": 71
+            },
+            "complete_positive_misses": 71,
+            "positive_support": 100,
+            "signal_days": 22,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:加速": {
+            "original_registered_count": 405,
+            "scoreable_count": 405,
+            "coverage": 1.0,
+            "Accuracy": 0.6444444444444445,
+            "Precision": 0.6547619047619048,
+            "complete_positive_Recall": 0.3235294117647059,
+            "F1": 0.4330708661417323,
+            "confusion": {
+              "TP": 55,
+              "TN": 206,
+              "FP": 29,
+              "FN": 115
+            },
+            "complete_positive_misses": 115,
+            "positive_support": 170,
+            "signal_days": 27,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:升温": {
+            "original_registered_count": 199,
+            "scoreable_count": 199,
+            "coverage": 1.0,
+            "Accuracy": 0.6532663316582915,
+            "Precision": 0.7096774193548387,
+            "complete_positive_Recall": 0.2682926829268293,
+            "F1": 0.3893805309734514,
+            "confusion": {
+              "TP": 22,
+              "TN": 108,
+              "FP": 9,
+              "FN": 60
+            },
+            "complete_positive_misses": 60,
+            "positive_support": 82,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:启动": {
+            "original_registered_count": 25,
+            "scoreable_count": 25,
+            "coverage": 1.0,
+            "Accuracy": 0.6,
+            "Precision": 0.625,
+            "complete_positive_Recall": 0.4166666666666667,
+            "F1": 0.5,
+            "confusion": {
+              "TP": 5,
+              "TN": 10,
+              "FP": 3,
+              "FN": 7
+            },
+            "complete_positive_misses": 7,
+            "positive_support": 12,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:大分歧": {
+            "original_registered_count": 423,
+            "scoreable_count": 423,
+            "coverage": 1.0,
+            "Accuracy": 0.6808510638297872,
+            "Precision": 0.6517857142857143,
+            "complete_positive_Recall": 0.4319526627218935,
+            "F1": 0.5195729537366549,
+            "confusion": {
+              "TP": 73,
+              "TN": 215,
+              "FP": 39,
+              "FN": 96
+            },
+            "complete_positive_misses": 96,
+            "positive_support": 169,
+            "signal_days": 37,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:退潮": {
+            "original_registered_count": 215,
+            "scoreable_count": 215,
+            "coverage": 1.0,
+            "Accuracy": 0.6697674418604651,
+            "Precision": 0.7083333333333334,
+            "complete_positive_Recall": 0.37362637362637363,
+            "F1": 0.48920863309352514,
+            "confusion": {
+              "TP": 34,
+              "TN": 110,
+              "FP": 14,
+              "FN": 57
+            },
+            "complete_positive_misses": 57,
+            "positive_support": 91,
+            "signal_days": 20,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:2": {
+            "original_registered_count": 932,
+            "scoreable_count": 932,
+            "coverage": 1.0,
+            "Accuracy": 0.6652360515021459,
+            "Precision": 0.6375838926174496,
+            "complete_positive_Recall": 0.26912181303116145,
+            "F1": 0.3784860557768924,
+            "confusion": {
+              "TP": 95,
+              "TN": 525,
+              "FP": 54,
+              "FN": 258
+            },
+            "complete_positive_misses": 258,
+            "positive_support": 353,
+            "signal_days": 125,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:3": {
+            "original_registered_count": 352,
+            "scoreable_count": 352,
+            "coverage": 1.0,
+            "Accuracy": 0.6306818181818182,
+            "Precision": 0.6736842105263158,
+            "complete_positive_Recall": 0.39263803680981596,
+            "F1": 0.49612403100775193,
+            "confusion": {
+              "TP": 64,
+              "TN": 158,
+              "FP": 31,
+              "FN": 99
+            },
+            "complete_positive_misses": 99,
+            "positive_support": 163,
+            "signal_days": 116,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:4": {
+            "original_registered_count": 163,
+            "scoreable_count": 163,
+            "coverage": 1.0,
+            "Accuracy": 0.6380368098159509,
+            "Precision": 0.5846153846153846,
+            "complete_positive_Recall": 0.5428571428571428,
+            "F1": 0.562962962962963,
+            "confusion": {
+              "TP": 38,
+              "TN": 66,
+              "FP": 27,
+              "FN": 32
+            },
+            "complete_positive_misses": 32,
+            "positive_support": 70,
+            "signal_days": 85,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:5": {
+            "original_registered_count": 70,
+            "scoreable_count": 70,
+            "coverage": 1.0,
+            "Accuracy": 0.6,
+            "Precision": 0.6153846153846154,
+            "complete_positive_Recall": 0.47058823529411764,
+            "F1": 0.5333333333333333,
+            "confusion": {
+              "TP": 16,
+              "TN": 26,
+              "FP": 10,
+              "FN": 18
+            },
+            "complete_positive_misses": 18,
+            "positive_support": 34,
+            "signal_days": 50,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:6": {
+            "original_registered_count": 33,
+            "scoreable_count": 33,
+            "coverage": 1.0,
+            "Accuracy": 0.7575757575757576,
+            "Precision": 0.7857142857142857,
+            "complete_positive_Recall": 0.6875,
+            "F1": 0.7333333333333334,
+            "confusion": {
+              "TP": 11,
+              "TN": 14,
+              "FP": 3,
+              "FN": 5
+            },
+            "complete_positive_misses": 5,
+            "positive_support": 16,
+            "signal_days": 31,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:7": {
+            "original_registered_count": 16,
+            "scoreable_count": 16,
+            "coverage": 1.0,
+            "Accuracy": 0.625,
+            "Precision": 0.6363636363636364,
+            "complete_positive_Recall": 0.7777777777777778,
+            "F1": 0.7000000000000001,
+            "confusion": {
+              "TP": 7,
+              "TN": 3,
+              "FP": 4,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 9,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:8": {
+            "original_registered_count": 9,
+            "scoreable_count": 9,
+            "coverage": 1.0,
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.8,
+            "F1": 0.7272727272727272,
+            "confusion": {
+              "TP": 4,
+              "TN": 2,
+              "FP": 2,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 5,
+            "signal_days": 9,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:9": {
+            "original_registered_count": 5,
+            "scoreable_count": 5,
+            "coverage": 1.0,
+            "Accuracy": 0.4,
+            "Precision": 0.3333333333333333,
+            "complete_positive_Recall": 0.5,
+            "F1": 0.4,
+            "confusion": {
+              "TP": 1,
+              "TN": 1,
+              "FP": 2,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 2,
+            "signal_days": 5,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:10": {
+            "original_registered_count": 2,
+            "scoreable_count": 2,
+            "coverage": 1.0,
+            "Accuracy": 0.5,
+            "Precision": 0.5,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.6666666666666666,
+            "confusion": {
+              "TP": 1,
+              "TN": 0,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:11": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 0.0,
+            "Precision": null,
+            "complete_positive_Recall": 0.0,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 1,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:12": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 1,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:启动": {
+            "original_registered_count": 25,
+            "scoreable_count": 25,
+            "coverage": 1.0,
+            "Accuracy": 0.6,
+            "Precision": 0.625,
+            "complete_positive_Recall": 0.4166666666666667,
+            "F1": 0.5,
+            "confusion": {
+              "TP": 5,
+              "TN": 10,
+              "FP": 3,
+              "FN": 7
+            },
+            "complete_positive_misses": 7,
+            "positive_support": 12,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:升温": {
+            "original_registered_count": 199,
+            "scoreable_count": 199,
+            "coverage": 1.0,
+            "Accuracy": 0.6532663316582915,
+            "Precision": 0.7096774193548387,
+            "complete_positive_Recall": 0.2682926829268293,
+            "F1": 0.3893805309734514,
+            "confusion": {
+              "TP": 22,
+              "TN": 108,
+              "FP": 9,
+              "FN": 60
+            },
+            "complete_positive_misses": 60,
+            "positive_support": 82,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:加速": {
+            "original_registered_count": 405,
+            "scoreable_count": 405,
+            "coverage": 1.0,
+            "Accuracy": 0.6444444444444445,
+            "Precision": 0.6547619047619048,
+            "complete_positive_Recall": 0.3235294117647059,
+            "F1": 0.4330708661417323,
+            "confusion": {
+              "TP": 55,
+              "TN": 206,
+              "FP": 29,
+              "FN": 115
+            },
+            "complete_positive_misses": 115,
+            "positive_support": 170,
+            "signal_days": 27,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:一致": {
+            "original_registered_count": 66,
+            "scoreable_count": 66,
+            "coverage": 1.0,
+            "Accuracy": 0.696969696969697,
+            "Precision": 0.6785714285714286,
+            "complete_positive_Recall": 0.6333333333333333,
+            "F1": 0.6551724137931035,
+            "confusion": {
+              "TP": 19,
+              "TN": 27,
+              "FP": 9,
+              "FN": 11
+            },
+            "complete_positive_misses": 11,
+            "positive_support": 30,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:大分歧": {
+            "original_registered_count": 423,
+            "scoreable_count": 423,
+            "coverage": 1.0,
+            "Accuracy": 0.6808510638297872,
+            "Precision": 0.6517857142857143,
+            "complete_positive_Recall": 0.4319526627218935,
+            "F1": 0.5195729537366549,
+            "confusion": {
+              "TP": 73,
+              "TN": 215,
+              "FP": 39,
+              "FN": 96
+            },
+            "complete_positive_misses": 96,
+            "positive_support": 169,
+            "signal_days": 37,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:退潮": {
+            "original_registered_count": 215,
+            "scoreable_count": 215,
+            "coverage": 1.0,
+            "Accuracy": 0.6697674418604651,
+            "Precision": 0.7083333333333334,
+            "complete_positive_Recall": 0.37362637362637363,
+            "F1": 0.48920863309352514,
+            "confusion": {
+              "TP": 34,
+              "TN": 110,
+              "FP": 14,
+              "FN": 57
+            },
+            "complete_positive_misses": 57,
+            "positive_support": 91,
+            "signal_days": 20,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:修复": {
+            "original_registered_count": 251,
+            "scoreable_count": 251,
+            "coverage": 1.0,
+            "Accuracy": 0.5936254980079682,
+            "Precision": 0.48333333333333334,
+            "complete_positive_Recall": 0.29,
+            "F1": 0.3625,
+            "confusion": {
+              "TP": 29,
+              "TN": 120,
+              "FP": 31,
+              "FN": 71
+            },
+            "complete_positive_misses": 71,
+            "positive_support": 100,
+            "signal_days": 22,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          }
+        }
+      }
+    },
+    "2026JanAug": {
+      "ROLL252": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7249089963598544,
+        "Precision": 0.6472222222222223,
+        "complete_positive_Recall": 0.3669291338582677,
+        "F1": 0.46834170854271356,
+        "confusion": {
+          "TP": 233,
+          "TN": 1161,
+          "FP": 127,
+          "FN": 402
+        },
+        "complete_positive_misses": 402,
+        "positive_support": 635,
+        "signal_days": 160,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "PHASE_PROXY_RESPONSE": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.717628705148206,
+        "Precision": 0.6292134831460674,
+        "complete_positive_Recall": 0.352755905511811,
+        "F1": 0.4520686175580222,
+        "confusion": {
+          "TP": 224,
+          "TN": 1156,
+          "FP": 132,
+          "FN": 411
+        },
+        "complete_positive_misses": 411,
+        "positive_support": 635,
+        "signal_days": 160,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "Accuracy_delta": -0.007280291211648415,
+      "guards": {
+        "Precision": false,
+        "complete_positive_Recall": false,
+        "F1": false,
+        "same_coverage": true,
+        "positive_call_coverage": false,
+        "proxy0_complete_positive_Recall": false,
+        "proxy0_F1": false,
+        "paired_interval_lower_positive": false
+      },
+      "paired_interval": {
+        "lower": -0.018619522220814505,
+        "upper": 0.0032706346384772595,
+        "undefined_draws": 0,
+        "draws": 2000,
+        "official_days": 160,
+        "block_days": 5,
+        "method": "paired circular official-session blocks; family-adjusted tails fixed before fits"
+      },
+      "passed": false,
+      "subgroups": {
+        "ROLL252": {
+          "proxy0": {
+            "original_registered_count": 1660,
+            "scoreable_count": 1647,
+            "coverage": 0.9921686746987952,
+            "Accuracy": 0.7273831208257437,
+            "Precision": 0.43478260869565216,
+            "complete_positive_Recall": 0.1152073732718894,
+            "F1": 0.18214936247723132,
+            "confusion": {
+              "TP": 50,
+              "TN": 1148,
+              "FP": 65,
+              "FN": 384
+            },
+            "complete_positive_misses": 384,
+            "positive_support": 434,
+            "signal_days": 160,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "proxy1": {
+            "original_registered_count": 281,
+            "scoreable_count": 276,
+            "coverage": 0.9822064056939501,
+            "Accuracy": 0.7101449275362319,
+            "Precision": 0.746938775510204,
+            "complete_positive_Recall": 0.9104477611940298,
+            "F1": 0.820627802690583,
+            "confusion": {
+              "TP": 183,
+              "TN": 13,
+              "FP": 62,
+              "FN": 18
+            },
+            "complete_positive_misses": 18,
+            "positive_support": 201,
+            "signal_days": 130,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "actual_nonword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_oneword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_identity_unknown": {
+            "original_registered_count": 1941,
+            "scoreable_count": 1923,
+            "coverage": 0.990726429675425,
+            "Accuracy": 0.7249089963598544,
+            "Precision": 0.6472222222222223,
+            "complete_positive_Recall": 0.3669291338582677,
+            "F1": 0.46834170854271356,
+            "confusion": {
+              "TP": 233,
+              "TN": 1161,
+              "FP": 127,
+              "FN": 402
+            },
+            "complete_positive_misses": 402,
+            "positive_support": 635,
+            "signal_days": 160,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:一致": {
+            "original_registered_count": 17,
+            "scoreable_count": 17,
+            "coverage": 1.0,
+            "Accuracy": 0.8235294117647058,
+            "Precision": 0.8571428571428571,
+            "complete_positive_Recall": 0.75,
+            "F1": 0.7999999999999999,
+            "confusion": {
+              "TP": 6,
+              "TN": 8,
+              "FP": 1,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 8,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:修复": {
+            "original_registered_count": 330,
+            "scoreable_count": 330,
+            "coverage": 1.0,
+            "Accuracy": 0.7303030303030303,
+            "Precision": 0.6065573770491803,
+            "complete_positive_Recall": 0.3627450980392157,
+            "F1": 0.4539877300613497,
+            "confusion": {
+              "TP": 37,
+              "TN": 204,
+              "FP": 24,
+              "FN": 65
+            },
+            "complete_positive_misses": 65,
+            "positive_support": 102,
+            "signal_days": 26,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:加速": {
+            "original_registered_count": 513,
+            "scoreable_count": 513,
+            "coverage": 1.0,
+            "Accuracy": 0.7309941520467836,
+            "Precision": 0.7473684210526316,
+            "complete_positive_Recall": 0.3837837837837838,
+            "F1": 0.5071428571428572,
+            "confusion": {
+              "TP": 71,
+              "TN": 304,
+              "FP": 24,
+              "FN": 114
+            },
+            "complete_positive_misses": 114,
+            "positive_support": 185,
+            "signal_days": 36,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:升温": {
+            "original_registered_count": 329,
+            "scoreable_count": 311,
+            "coverage": 0.9452887537993921,
+            "Accuracy": 0.7138263665594855,
+            "Precision": 0.5777777777777777,
+            "complete_positive_Recall": 0.2708333333333333,
+            "F1": 0.36879432624113473,
+            "confusion": {
+              "TP": 26,
+              "TN": 196,
+              "FP": 19,
+              "FN": 70
+            },
+            "complete_positive_misses": 70,
+            "positive_support": 96,
+            "signal_days": 23,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:启动": {
+            "original_registered_count": 40,
+            "scoreable_count": 40,
+            "coverage": 1.0,
+            "Accuracy": 0.625,
+            "Precision": 0.5714285714285714,
+            "complete_positive_Recall": 0.25,
+            "F1": 0.34782608695652173,
+            "confusion": {
+              "TP": 4,
+              "TN": 21,
+              "FP": 3,
+              "FN": 12
+            },
+            "complete_positive_misses": 12,
+            "positive_support": 16,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:大分歧": {
+            "original_registered_count": 446,
+            "scoreable_count": 446,
+            "coverage": 1.0,
+            "Accuracy": 0.7286995515695067,
+            "Precision": 0.6436781609195402,
+            "complete_positive_Recall": 0.3835616438356164,
+            "F1": 0.48068669527897,
+            "confusion": {
+              "TP": 56,
+              "TN": 269,
+              "FP": 31,
+              "FN": 90
+            },
+            "complete_positive_misses": 90,
+            "positive_support": 146,
+            "signal_days": 46,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:退潮": {
+            "original_registered_count": 266,
+            "scoreable_count": 266,
+            "coverage": 1.0,
+            "Accuracy": 0.7218045112781954,
+            "Precision": 0.5689655172413793,
+            "complete_positive_Recall": 0.4024390243902439,
+            "F1": 0.4714285714285715,
+            "confusion": {
+              "TP": 33,
+              "TN": 159,
+              "FP": 25,
+              "FN": 49
+            },
+            "complete_positive_misses": 49,
+            "positive_support": 82,
+            "signal_days": 25,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:2": {
+            "original_registered_count": 1303,
+            "scoreable_count": 1293,
+            "coverage": 0.9923254029163469,
+            "Accuracy": 0.7509667440061871,
+            "Precision": 0.6214689265536724,
+            "complete_positive_Recall": 0.3013698630136986,
+            "F1": 0.4059040590405904,
+            "confusion": {
+              "TP": 110,
+              "TN": 861,
+              "FP": 67,
+              "FN": 255
+            },
+            "complete_positive_misses": 255,
+            "positive_support": 365,
+            "signal_days": 159,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:3": {
+            "original_registered_count": 366,
+            "scoreable_count": 362,
+            "coverage": 0.9890710382513661,
+            "Accuracy": 0.6657458563535912,
+            "Precision": 0.71875,
+            "complete_positive_Recall": 0.4233128834355828,
+            "F1": 0.5328185328185328,
+            "confusion": {
+              "TP": 69,
+              "TN": 172,
+              "FP": 27,
+              "FN": 94
+            },
+            "complete_positive_misses": 94,
+            "positive_support": 163,
+            "signal_days": 146,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:4": {
+            "original_registered_count": 164,
+            "scoreable_count": 163,
+            "coverage": 0.9939024390243902,
+            "Accuracy": 0.7177914110429447,
+            "Precision": 0.6326530612244898,
+            "complete_positive_Recall": 0.5254237288135594,
+            "F1": 0.5740740740740742,
+            "confusion": {
+              "TP": 31,
+              "TN": 86,
+              "FP": 18,
+              "FN": 28
+            },
+            "complete_positive_misses": 28,
+            "positive_support": 59,
+            "signal_days": 97,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:5": {
+            "original_registered_count": 59,
+            "scoreable_count": 57,
+            "coverage": 0.9661016949152542,
+            "Accuracy": 0.543859649122807,
+            "Precision": 0.42857142857142855,
+            "complete_positive_Recall": 0.391304347826087,
+            "F1": 0.4090909090909091,
+            "confusion": {
+              "TP": 9,
+              "TN": 22,
+              "FP": 12,
+              "FN": 14
+            },
+            "complete_positive_misses": 14,
+            "positive_support": 23,
+            "signal_days": 49,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:6": {
+            "original_registered_count": 24,
+            "scoreable_count": 23,
+            "coverage": 0.9583333333333334,
+            "Accuracy": 0.6086956521739131,
+            "Precision": 0.8571428571428571,
+            "complete_positive_Recall": 0.42857142857142855,
+            "F1": 0.5714285714285714,
+            "confusion": {
+              "TP": 6,
+              "TN": 8,
+              "FP": 1,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 14,
+            "signal_days": 24,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:7": {
+            "original_registered_count": 14,
+            "scoreable_count": 14,
+            "coverage": 1.0,
+            "Accuracy": 0.7142857142857143,
+            "Precision": 0.75,
+            "complete_positive_Recall": 0.5,
+            "F1": 0.6,
+            "confusion": {
+              "TP": 3,
+              "TN": 7,
+              "FP": 1,
+              "FN": 3
+            },
+            "complete_positive_misses": 3,
+            "positive_support": 6,
+            "signal_days": 14,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:8": {
+            "original_registered_count": 6,
+            "scoreable_count": 6,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 2,
+              "TN": 4,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 2,
+            "signal_days": 6,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:9": {
+            "original_registered_count": 2,
+            "scoreable_count": 2,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 1,
+              "TN": 1,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:10": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 1,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:11": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 1,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:12": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:启动": {
+            "original_registered_count": 40,
+            "scoreable_count": 40,
+            "coverage": 1.0,
+            "Accuracy": 0.625,
+            "Precision": 0.5714285714285714,
+            "complete_positive_Recall": 0.25,
+            "F1": 0.34782608695652173,
+            "confusion": {
+              "TP": 4,
+              "TN": 21,
+              "FP": 3,
+              "FN": 12
+            },
+            "complete_positive_misses": 12,
+            "positive_support": 16,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:升温": {
+            "original_registered_count": 329,
+            "scoreable_count": 311,
+            "coverage": 0.9452887537993921,
+            "Accuracy": 0.7138263665594855,
+            "Precision": 0.5777777777777777,
+            "complete_positive_Recall": 0.2708333333333333,
+            "F1": 0.36879432624113473,
+            "confusion": {
+              "TP": 26,
+              "TN": 196,
+              "FP": 19,
+              "FN": 70
+            },
+            "complete_positive_misses": 70,
+            "positive_support": 96,
+            "signal_days": 23,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:加速": {
+            "original_registered_count": 513,
+            "scoreable_count": 513,
+            "coverage": 1.0,
+            "Accuracy": 0.7309941520467836,
+            "Precision": 0.7473684210526316,
+            "complete_positive_Recall": 0.3837837837837838,
+            "F1": 0.5071428571428572,
+            "confusion": {
+              "TP": 71,
+              "TN": 304,
+              "FP": 24,
+              "FN": 114
+            },
+            "complete_positive_misses": 114,
+            "positive_support": 185,
+            "signal_days": 36,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:一致": {
+            "original_registered_count": 17,
+            "scoreable_count": 17,
+            "coverage": 1.0,
+            "Accuracy": 0.8235294117647058,
+            "Precision": 0.8571428571428571,
+            "complete_positive_Recall": 0.75,
+            "F1": 0.7999999999999999,
+            "confusion": {
+              "TP": 6,
+              "TN": 8,
+              "FP": 1,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 8,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:大分歧": {
+            "original_registered_count": 446,
+            "scoreable_count": 446,
+            "coverage": 1.0,
+            "Accuracy": 0.7286995515695067,
+            "Precision": 0.6436781609195402,
+            "complete_positive_Recall": 0.3835616438356164,
+            "F1": 0.48068669527897,
+            "confusion": {
+              "TP": 56,
+              "TN": 269,
+              "FP": 31,
+              "FN": 90
+            },
+            "complete_positive_misses": 90,
+            "positive_support": 146,
+            "signal_days": 46,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:退潮": {
+            "original_registered_count": 266,
+            "scoreable_count": 266,
+            "coverage": 1.0,
+            "Accuracy": 0.7218045112781954,
+            "Precision": 0.5689655172413793,
+            "complete_positive_Recall": 0.4024390243902439,
+            "F1": 0.4714285714285715,
+            "confusion": {
+              "TP": 33,
+              "TN": 159,
+              "FP": 25,
+              "FN": 49
+            },
+            "complete_positive_misses": 49,
+            "positive_support": 82,
+            "signal_days": 25,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:修复": {
+            "original_registered_count": 330,
+            "scoreable_count": 330,
+            "coverage": 1.0,
+            "Accuracy": 0.7303030303030303,
+            "Precision": 0.6065573770491803,
+            "complete_positive_Recall": 0.3627450980392157,
+            "F1": 0.4539877300613497,
+            "confusion": {
+              "TP": 37,
+              "TN": 204,
+              "FP": 24,
+              "FN": 65
+            },
+            "complete_positive_misses": 65,
+            "positive_support": 102,
+            "signal_days": 26,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          }
+        },
+        "PHASE_PROXY_RESPONSE": {
+          "proxy0": {
+            "original_registered_count": 1660,
+            "scoreable_count": 1647,
+            "coverage": 0.9921686746987952,
+            "Accuracy": 0.7219186399514268,
+            "Precision": 0.39655172413793105,
+            "complete_positive_Recall": 0.10599078341013825,
+            "F1": 0.1672727272727273,
+            "confusion": {
+              "TP": 46,
+              "TN": 1143,
+              "FP": 70,
+              "FN": 388
+            },
+            "complete_positive_misses": 388,
+            "positive_support": 434,
+            "signal_days": 160,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "proxy1": {
+            "original_registered_count": 281,
+            "scoreable_count": 276,
+            "coverage": 0.9822064056939501,
+            "Accuracy": 0.6920289855072463,
+            "Precision": 0.7416666666666667,
+            "complete_positive_Recall": 0.8855721393034826,
+            "F1": 0.8072562358276645,
+            "confusion": {
+              "TP": 178,
+              "TN": 13,
+              "FP": 62,
+              "FN": 23
+            },
+            "complete_positive_misses": 23,
+            "positive_support": 201,
+            "signal_days": 130,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "actual_nonword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_oneword": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_identity_unknown": {
+            "original_registered_count": 1941,
+            "scoreable_count": 1923,
+            "coverage": 0.990726429675425,
+            "Accuracy": 0.717628705148206,
+            "Precision": 0.6292134831460674,
+            "complete_positive_Recall": 0.352755905511811,
+            "F1": 0.4520686175580222,
+            "confusion": {
+              "TP": 224,
+              "TN": 1156,
+              "FP": 132,
+              "FN": 411
+            },
+            "complete_positive_misses": 411,
+            "positive_support": 635,
+            "signal_days": 160,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:一致": {
+            "original_registered_count": 17,
+            "scoreable_count": 17,
+            "coverage": 1.0,
+            "Accuracy": 0.7058823529411765,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.75,
+            "F1": 0.7058823529411765,
+            "confusion": {
+              "TP": 6,
+              "TN": 6,
+              "FP": 3,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 8,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:修复": {
+            "original_registered_count": 330,
+            "scoreable_count": 330,
+            "coverage": 1.0,
+            "Accuracy": 0.7333333333333333,
+            "Precision": 0.6206896551724138,
+            "complete_positive_Recall": 0.35294117647058826,
+            "F1": 0.45000000000000007,
+            "confusion": {
+              "TP": 36,
+              "TN": 206,
+              "FP": 22,
+              "FN": 66
+            },
+            "complete_positive_misses": 66,
+            "positive_support": 102,
+            "signal_days": 26,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:加速": {
+            "original_registered_count": 513,
+            "scoreable_count": 513,
+            "coverage": 1.0,
+            "Accuracy": 0.723196881091618,
+            "Precision": 0.7471264367816092,
+            "complete_positive_Recall": 0.35135135135135137,
+            "F1": 0.4779411764705882,
+            "confusion": {
+              "TP": 65,
+              "TN": 306,
+              "FP": 22,
+              "FN": 120
+            },
+            "complete_positive_misses": 120,
+            "positive_support": 185,
+            "signal_days": 36,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:升温": {
+            "original_registered_count": 329,
+            "scoreable_count": 311,
+            "coverage": 0.9452887537993921,
+            "Accuracy": 0.7170418006430869,
+            "Precision": 0.5833333333333334,
+            "complete_positive_Recall": 0.2916666666666667,
+            "F1": 0.38888888888888895,
+            "confusion": {
+              "TP": 28,
+              "TN": 195,
+              "FP": 20,
+              "FN": 68
+            },
+            "complete_positive_misses": 68,
+            "positive_support": 96,
+            "signal_days": 23,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:启动": {
+            "original_registered_count": 40,
+            "scoreable_count": 40,
+            "coverage": 1.0,
+            "Accuracy": 0.5,
+            "Precision": 0.4,
+            "complete_positive_Recall": 0.5,
+            "F1": 0.4444444444444445,
+            "confusion": {
+              "TP": 8,
+              "TN": 12,
+              "FP": 12,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 16,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:大分歧": {
+            "original_registered_count": 446,
+            "scoreable_count": 446,
+            "coverage": 1.0,
+            "Accuracy": 0.7286995515695067,
+            "Precision": 0.6623376623376623,
+            "complete_positive_Recall": 0.3493150684931507,
+            "F1": 0.4573991031390135,
+            "confusion": {
+              "TP": 51,
+              "TN": 274,
+              "FP": 26,
+              "FN": 95
+            },
+            "complete_positive_misses": 95,
+            "positive_support": 146,
+            "signal_days": 46,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "emotion:退潮": {
+            "original_registered_count": 266,
+            "scoreable_count": 266,
+            "coverage": 1.0,
+            "Accuracy": 0.7030075187969925,
+            "Precision": 0.5263157894736842,
+            "complete_positive_Recall": 0.36585365853658536,
+            "F1": 0.4316546762589928,
+            "confusion": {
+              "TP": 30,
+              "TN": 157,
+              "FP": 27,
+              "FN": 52
+            },
+            "complete_positive_misses": 52,
+            "positive_support": 82,
+            "signal_days": 25,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:2": {
+            "original_registered_count": 1303,
+            "scoreable_count": 1293,
+            "coverage": 0.9923254029163469,
+            "Accuracy": 0.740139211136891,
+            "Precision": 0.5838150289017341,
+            "complete_positive_Recall": 0.27671232876712326,
+            "F1": 0.3754646840148699,
+            "confusion": {
+              "TP": 101,
+              "TN": 856,
+              "FP": 72,
+              "FN": 264
+            },
+            "complete_positive_misses": 264,
+            "positive_support": 365,
+            "signal_days": 159,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:3": {
+            "original_registered_count": 366,
+            "scoreable_count": 362,
+            "coverage": 0.9890710382513661,
+            "Accuracy": 0.6546961325966851,
+            "Precision": 0.7021276595744681,
+            "complete_positive_Recall": 0.4049079754601227,
+            "F1": 0.5136186770428015,
+            "confusion": {
+              "TP": 66,
+              "TN": 171,
+              "FP": 28,
+              "FN": 97
+            },
+            "complete_positive_misses": 97,
+            "positive_support": 163,
+            "signal_days": 146,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:4": {
+            "original_registered_count": 164,
+            "scoreable_count": 163,
+            "coverage": 0.9939024390243902,
+            "Accuracy": 0.7361963190184049,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.5423728813559322,
+            "F1": 0.5981308411214954,
+            "confusion": {
+              "TP": 32,
+              "TN": 88,
+              "FP": 16,
+              "FN": 27
+            },
+            "complete_positive_misses": 27,
+            "positive_support": 59,
+            "signal_days": 97,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:5": {
+            "original_registered_count": 59,
+            "scoreable_count": 57,
+            "coverage": 0.9661016949152542,
+            "Accuracy": 0.5614035087719298,
+            "Precision": 0.45454545454545453,
+            "complete_positive_Recall": 0.43478260869565216,
+            "F1": 0.4444444444444445,
+            "confusion": {
+              "TP": 10,
+              "TN": 22,
+              "FP": 12,
+              "FN": 13
+            },
+            "complete_positive_misses": 13,
+            "positive_support": 23,
+            "signal_days": 49,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "boards:6": {
+            "original_registered_count": 24,
+            "scoreable_count": 23,
+            "coverage": 0.9583333333333334,
+            "Accuracy": 0.6521739130434783,
+            "Precision": 0.875,
+            "complete_positive_Recall": 0.5,
+            "F1": 0.6363636363636364,
+            "confusion": {
+              "TP": 7,
+              "TN": 8,
+              "FP": 1,
+              "FN": 7
+            },
+            "complete_positive_misses": 7,
+            "positive_support": 14,
+            "signal_days": 24,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:7": {
+            "original_registered_count": 14,
+            "scoreable_count": 14,
+            "coverage": 1.0,
+            "Accuracy": 0.7142857142857143,
+            "Precision": 0.75,
+            "complete_positive_Recall": 0.5,
+            "F1": 0.6,
+            "confusion": {
+              "TP": 3,
+              "TN": 7,
+              "FP": 1,
+              "FN": 3
+            },
+            "complete_positive_misses": 3,
+            "positive_support": 6,
+            "signal_days": 14,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:8": {
+            "original_registered_count": 6,
+            "scoreable_count": 6,
+            "coverage": 1.0,
+            "Accuracy": 0.8333333333333334,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.8,
+            "confusion": {
+              "TP": 2,
+              "TN": 3,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 2,
+            "signal_days": 6,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:9": {
+            "original_registered_count": 2,
+            "scoreable_count": 2,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 1,
+              "TN": 1,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:10": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 1,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:11": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 1.0,
+            "Precision": 1.0,
+            "complete_positive_Recall": 1.0,
+            "F1": 1.0,
+            "confusion": {
+              "TP": 1,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:12": {
+            "original_registered_count": 1,
+            "scoreable_count": 1,
+            "coverage": 1.0,
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:启动": {
+            "original_registered_count": 40,
+            "scoreable_count": 40,
+            "coverage": 1.0,
+            "Accuracy": 0.5,
+            "Precision": 0.4,
+            "complete_positive_Recall": 0.5,
+            "F1": 0.4444444444444445,
+            "confusion": {
+              "TP": 8,
+              "TN": 12,
+              "FP": 12,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 16,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:升温": {
+            "original_registered_count": 329,
+            "scoreable_count": 311,
+            "coverage": 0.9452887537993921,
+            "Accuracy": 0.7170418006430869,
+            "Precision": 0.5833333333333334,
+            "complete_positive_Recall": 0.2916666666666667,
+            "F1": 0.38888888888888895,
+            "confusion": {
+              "TP": 28,
+              "TN": 195,
+              "FP": 20,
+              "FN": 68
+            },
+            "complete_positive_misses": 68,
+            "positive_support": 96,
+            "signal_days": 23,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:加速": {
+            "original_registered_count": 513,
+            "scoreable_count": 513,
+            "coverage": 1.0,
+            "Accuracy": 0.723196881091618,
+            "Precision": 0.7471264367816092,
+            "complete_positive_Recall": 0.35135135135135137,
+            "F1": 0.4779411764705882,
+            "confusion": {
+              "TP": 65,
+              "TN": 306,
+              "FP": 22,
+              "FN": 120
+            },
+            "complete_positive_misses": 120,
+            "positive_support": 185,
+            "signal_days": 36,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:一致": {
+            "original_registered_count": 17,
+            "scoreable_count": 17,
+            "coverage": 1.0,
+            "Accuracy": 0.7058823529411765,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.75,
+            "F1": 0.7058823529411765,
+            "confusion": {
+              "TP": 6,
+              "TN": 6,
+              "FP": 3,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 8,
+            "signal_days": 1,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:大分歧": {
+            "original_registered_count": 446,
+            "scoreable_count": 446,
+            "coverage": 1.0,
+            "Accuracy": 0.7286995515695067,
+            "Precision": 0.6623376623376623,
+            "complete_positive_Recall": 0.3493150684931507,
+            "F1": 0.4573991031390135,
+            "confusion": {
+              "TP": 51,
+              "TN": 274,
+              "FP": 26,
+              "FN": 95
+            },
+            "complete_positive_misses": 95,
+            "positive_support": 146,
+            "signal_days": 46,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:退潮": {
+            "original_registered_count": 266,
+            "scoreable_count": 266,
+            "coverage": 1.0,
+            "Accuracy": 0.7030075187969925,
+            "Precision": 0.5263157894736842,
+            "complete_positive_Recall": 0.36585365853658536,
+            "F1": 0.4316546762589928,
+            "confusion": {
+              "TP": 30,
+              "TN": 157,
+              "FP": 27,
+              "FN": 52
+            },
+            "complete_positive_misses": 52,
+            "positive_support": 82,
+            "signal_days": 25,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          },
+          "archived_source_phase:修复": {
+            "original_registered_count": 330,
+            "scoreable_count": 330,
+            "coverage": 1.0,
+            "Accuracy": 0.7333333333333333,
+            "Precision": 0.6206896551724138,
+            "complete_positive_Recall": 0.35294117647058826,
+            "F1": 0.45000000000000007,
+            "confusion": {
+              "TP": 36,
+              "TN": 206,
+              "FP": 22,
+              "FN": 66
+            },
+            "complete_positive_misses": 66,
+            "positive_support": 102,
+            "signal_days": 26,
+            "calibrated_Brier": null,
+            "sample_note": "仅分层描述，不自动调阈值"
+          }
+        }
+      }
+    },
+    "2026Sep": {
+      "ROLL252": {
+        "original_registered_count": 182,
+        "scoreable_count": 133,
+        "coverage": 0.7307692307692307,
+        "Accuracy": 0.6165413533834586,
+        "Precision": 0.5588235294117647,
+        "complete_positive_Recall": 0.34545454545454546,
+        "F1": 0.42696629213483145,
+        "confusion": {
+          "TP": 19,
+          "TN": 63,
+          "FP": 15,
+          "FN": 36
+        },
+        "complete_positive_misses": 36,
+        "positive_support": 55,
+        "signal_days": 16,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "PHASE_PROXY_RESPONSE": {
+        "original_registered_count": 182,
+        "scoreable_count": 133,
+        "coverage": 0.7307692307692307,
+        "Accuracy": 0.6165413533834586,
+        "Precision": 0.5588235294117647,
+        "complete_positive_Recall": 0.34545454545454546,
+        "F1": 0.42696629213483145,
+        "confusion": {
+          "TP": 19,
+          "TN": 63,
+          "FP": 15,
+          "FN": 36
+        },
+        "complete_positive_misses": 36,
+        "positive_support": 55,
+        "signal_days": 16,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "Accuracy_delta": 0.0,
+      "guards": {
+        "Precision": true,
+        "complete_positive_Recall": true,
+        "F1": true,
+        "same_coverage": true,
+        "positive_call_coverage": true,
+        "proxy0_complete_positive_Recall": true,
+        "actual_nonword_complete_positive_Recall": true,
+        "proxy0_F1": true,
+        "actual_nonword_F1": true,
+        "paired_interval_lower_positive": false
+      },
+      "paired_interval": {
+        "lower": -0.046875,
+        "upper": 0.02040816326530612,
+        "undefined_draws": 0,
+        "draws": 2000,
+        "official_days": 21,
+        "block_days": 5,
+        "method": "paired circular official-session blocks; family-adjusted tails fixed before fits"
+      },
+      "passed": false,
+      "subgroups": {
+        "ROLL252": {
+          "proxy0": {
+            "original_registered_count": 152,
+            "scoreable_count": 113,
+            "coverage": 0.743421052631579,
+            "Accuracy": 0.6283185840707964,
+            "Precision": 0.5714285714285714,
+            "complete_positive_Recall": 0.18181818181818182,
+            "F1": 0.27586206896551724,
+            "confusion": {
+              "TP": 8,
+              "TN": 63,
+              "FP": 6,
+              "FN": 36
+            },
+            "complete_positive_misses": 36,
+            "positive_support": 44,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "proxy1": {
+            "original_registered_count": 30,
+            "scoreable_count": 20,
+            "coverage": 0.6666666666666666,
+            "Accuracy": 0.55,
+            "Precision": 0.55,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.7096774193548387,
+            "confusion": {
+              "TP": 11,
+              "TN": 0,
+              "FP": 9,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 11,
+            "signal_days": 14,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_nonword": {
+            "original_registered_count": 143,
+            "scoreable_count": 107,
+            "coverage": 0.7482517482517482,
+            "Accuracy": 0.6448598130841121,
+            "Precision": 0.6,
+            "complete_positive_Recall": 0.15,
+            "F1": 0.24,
+            "confusion": {
+              "TP": 6,
+              "TN": 63,
+              "FP": 4,
+              "FN": 34
+            },
+            "complete_positive_misses": 34,
+            "positive_support": 40,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_oneword": {
+            "original_registered_count": 39,
+            "scoreable_count": 26,
+            "coverage": 0.6666666666666666,
+            "Accuracy": 0.5,
+            "Precision": 0.5416666666666666,
+            "complete_positive_Recall": 0.8666666666666667,
+            "F1": 0.6666666666666667,
+            "confusion": {
+              "TP": 13,
+              "TN": 0,
+              "FP": 11,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 15,
+            "signal_days": 15,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_identity_unknown": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:UNKNOWN": {
+            "original_registered_count": 182,
+            "scoreable_count": 133,
+            "coverage": 0.7307692307692307,
+            "Accuracy": 0.6165413533834586,
+            "Precision": 0.5588235294117647,
+            "complete_positive_Recall": 0.34545454545454546,
+            "F1": 0.42696629213483145,
+            "confusion": {
+              "TP": 19,
+              "TN": 63,
+              "FP": 15,
+              "FN": 36
+            },
+            "complete_positive_misses": 36,
+            "positive_support": 55,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:2": {
+            "original_registered_count": 113,
+            "scoreable_count": 86,
+            "coverage": 0.7610619469026548,
+            "Accuracy": 0.627906976744186,
+            "Precision": 0.5294117647058824,
+            "complete_positive_Recall": 0.2727272727272727,
+            "F1": 0.36,
+            "confusion": {
+              "TP": 9,
+              "TN": 45,
+              "FP": 8,
+              "FN": 24
+            },
+            "complete_positive_misses": 24,
+            "positive_support": 33,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:3": {
+            "original_registered_count": 41,
+            "scoreable_count": 28,
+            "coverage": 0.6829268292682927,
+            "Accuracy": 0.6071428571428571,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.42857142857142855,
+            "F1": 0.5217391304347826,
+            "confusion": {
+              "TP": 6,
+              "TN": 11,
+              "FP": 3,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 14,
+            "signal_days": 14,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:4": {
+            "original_registered_count": 15,
+            "scoreable_count": 11,
+            "coverage": 0.7333333333333333,
+            "Accuracy": 0.45454545454545453,
+            "Precision": 0.25,
+            "complete_positive_Recall": 0.25,
+            "F1": 0.25,
+            "confusion": {
+              "TP": 1,
+              "TN": 4,
+              "FP": 3,
+              "FN": 3
+            },
+            "complete_positive_misses": 3,
+            "positive_support": 4,
+            "signal_days": 11,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:5": {
+            "original_registered_count": 6,
+            "scoreable_count": 5,
+            "coverage": 0.8333333333333334,
+            "Accuracy": 0.8,
+            "Precision": 1.0,
+            "complete_positive_Recall": 0.6666666666666666,
+            "F1": 0.8,
+            "confusion": {
+              "TP": 2,
+              "TN": 2,
+              "FP": 0,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 3,
+            "signal_days": 6,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:6": {
+            "original_registered_count": 5,
+            "scoreable_count": 3,
+            "coverage": 0.6,
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.5,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.6666666666666666,
+            "confusion": {
+              "TP": 1,
+              "TN": 1,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 4,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:7": {
+            "original_registered_count": 2,
+            "scoreable_count": 0,
+            "coverage": 0.0,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:启动": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:升温": {
+            "original_registered_count": 40,
+            "scoreable_count": 40,
+            "coverage": 1.0,
+            "Accuracy": 0.575,
+            "Precision": 0.5,
+            "complete_positive_Recall": 0.17647058823529413,
+            "F1": 0.2608695652173913,
+            "confusion": {
+              "TP": 3,
+              "TN": 20,
+              "FP": 3,
+              "FN": 14
+            },
+            "complete_positive_misses": 14,
+            "positive_support": 17,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:加速": {
+            "original_registered_count": 47,
+            "scoreable_count": 9,
+            "coverage": 0.19148936170212766,
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.75,
+            "complete_positive_Recall": 0.6,
+            "F1": 0.6666666666666665,
+            "confusion": {
+              "TP": 3,
+              "TN": 3,
+              "FP": 1,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 5,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:一致": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:大分歧": {
+            "original_registered_count": 48,
+            "scoreable_count": 37,
+            "coverage": 0.7708333333333334,
+            "Accuracy": 0.5675675675675675,
+            "Precision": 0.3,
+            "complete_positive_Recall": 0.25,
+            "F1": 0.2727272727272727,
+            "confusion": {
+              "TP": 3,
+              "TN": 18,
+              "FP": 7,
+              "FN": 9
+            },
+            "complete_positive_misses": 9,
+            "positive_support": 12,
+            "signal_days": 5,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:退潮": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:修复": {
+            "original_registered_count": 47,
+            "scoreable_count": 47,
+            "coverage": 1.0,
+            "Accuracy": 0.6808510638297872,
+            "Precision": 0.7142857142857143,
+            "complete_positive_Recall": 0.47619047619047616,
+            "F1": 0.5714285714285714,
+            "confusion": {
+              "TP": 10,
+              "TN": 22,
+              "FP": 4,
+              "FN": 11
+            },
+            "complete_positive_misses": 11,
+            "positive_support": 21,
+            "signal_days": 5,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          }
+        },
+        "PHASE_PROXY_RESPONSE": {
+          "proxy0": {
+            "original_registered_count": 152,
+            "scoreable_count": 113,
+            "coverage": 0.743421052631579,
+            "Accuracy": 0.6283185840707964,
+            "Precision": 0.5714285714285714,
+            "complete_positive_Recall": 0.18181818181818182,
+            "F1": 0.27586206896551724,
+            "confusion": {
+              "TP": 8,
+              "TN": 63,
+              "FP": 6,
+              "FN": 36
+            },
+            "complete_positive_misses": 36,
+            "positive_support": 44,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "proxy1": {
+            "original_registered_count": 30,
+            "scoreable_count": 20,
+            "coverage": 0.6666666666666666,
+            "Accuracy": 0.55,
+            "Precision": 0.55,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.7096774193548387,
+            "confusion": {
+              "TP": 11,
+              "TN": 0,
+              "FP": 9,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 11,
+            "signal_days": 14,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_nonword": {
+            "original_registered_count": 143,
+            "scoreable_count": 107,
+            "coverage": 0.7482517482517482,
+            "Accuracy": 0.6448598130841121,
+            "Precision": 0.6,
+            "complete_positive_Recall": 0.15,
+            "F1": 0.24,
+            "confusion": {
+              "TP": 6,
+              "TN": 63,
+              "FP": 4,
+              "FN": 34
+            },
+            "complete_positive_misses": 34,
+            "positive_support": 40,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_oneword": {
+            "original_registered_count": 39,
+            "scoreable_count": 26,
+            "coverage": 0.6666666666666666,
+            "Accuracy": 0.5,
+            "Precision": 0.5416666666666666,
+            "complete_positive_Recall": 0.8666666666666667,
+            "F1": 0.6666666666666667,
+            "confusion": {
+              "TP": 13,
+              "TN": 0,
+              "FP": 11,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 15,
+            "signal_days": 15,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "actual_identity_unknown": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "emotion:UNKNOWN": {
+            "original_registered_count": 182,
+            "scoreable_count": 133,
+            "coverage": 0.7307692307692307,
+            "Accuracy": 0.6165413533834586,
+            "Precision": 0.5588235294117647,
+            "complete_positive_Recall": 0.34545454545454546,
+            "F1": 0.42696629213483145,
+            "confusion": {
+              "TP": 19,
+              "TN": 63,
+              "FP": 15,
+              "FN": 36
+            },
+            "complete_positive_misses": 36,
+            "positive_support": 55,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:2": {
+            "original_registered_count": 113,
+            "scoreable_count": 86,
+            "coverage": 0.7610619469026548,
+            "Accuracy": 0.627906976744186,
+            "Precision": 0.5294117647058824,
+            "complete_positive_Recall": 0.2727272727272727,
+            "F1": 0.36,
+            "confusion": {
+              "TP": 9,
+              "TN": 45,
+              "FP": 8,
+              "FN": 24
+            },
+            "complete_positive_misses": 24,
+            "positive_support": 33,
+            "signal_days": 16,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:3": {
+            "original_registered_count": 41,
+            "scoreable_count": 28,
+            "coverage": 0.6829268292682927,
+            "Accuracy": 0.6071428571428571,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.42857142857142855,
+            "F1": 0.5217391304347826,
+            "confusion": {
+              "TP": 6,
+              "TN": 11,
+              "FP": 3,
+              "FN": 8
+            },
+            "complete_positive_misses": 8,
+            "positive_support": 14,
+            "signal_days": 14,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:4": {
+            "original_registered_count": 15,
+            "scoreable_count": 11,
+            "coverage": 0.7333333333333333,
+            "Accuracy": 0.45454545454545453,
+            "Precision": 0.25,
+            "complete_positive_Recall": 0.25,
+            "F1": 0.25,
+            "confusion": {
+              "TP": 1,
+              "TN": 4,
+              "FP": 3,
+              "FN": 3
+            },
+            "complete_positive_misses": 3,
+            "positive_support": 4,
+            "signal_days": 11,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:5": {
+            "original_registered_count": 6,
+            "scoreable_count": 5,
+            "coverage": 0.8333333333333334,
+            "Accuracy": 0.8,
+            "Precision": 1.0,
+            "complete_positive_Recall": 0.6666666666666666,
+            "F1": 0.8,
+            "confusion": {
+              "TP": 2,
+              "TN": 2,
+              "FP": 0,
+              "FN": 1
+            },
+            "complete_positive_misses": 1,
+            "positive_support": 3,
+            "signal_days": 6,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:6": {
+            "original_registered_count": 5,
+            "scoreable_count": 3,
+            "coverage": 0.6,
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.5,
+            "complete_positive_Recall": 1.0,
+            "F1": 0.6666666666666666,
+            "confusion": {
+              "TP": 1,
+              "TN": 1,
+              "FP": 1,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 1,
+            "signal_days": 4,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "boards:7": {
+            "original_registered_count": 2,
+            "scoreable_count": 0,
+            "coverage": 0.0,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 2,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:启动": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:升温": {
+            "original_registered_count": 40,
+            "scoreable_count": 40,
+            "coverage": 1.0,
+            "Accuracy": 0.575,
+            "Precision": 0.5,
+            "complete_positive_Recall": 0.17647058823529413,
+            "F1": 0.2608695652173913,
+            "confusion": {
+              "TP": 3,
+              "TN": 20,
+              "FP": 3,
+              "FN": 14
+            },
+            "complete_positive_misses": 14,
+            "positive_support": 17,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:加速": {
+            "original_registered_count": 47,
+            "scoreable_count": 9,
+            "coverage": 0.19148936170212766,
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.75,
+            "complete_positive_Recall": 0.6,
+            "F1": 0.6666666666666665,
+            "confusion": {
+              "TP": 3,
+              "TN": 3,
+              "FP": 1,
+              "FN": 2
+            },
+            "complete_positive_misses": 2,
+            "positive_support": 5,
+            "signal_days": 3,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:一致": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:大分歧": {
+            "original_registered_count": 48,
+            "scoreable_count": 37,
+            "coverage": 0.7708333333333334,
+            "Accuracy": 0.5945945945945946,
+            "Precision": 0.3333333333333333,
+            "complete_positive_Recall": 0.25,
+            "F1": 0.28571428571428575,
+            "confusion": {
+              "TP": 3,
+              "TN": 19,
+              "FP": 6,
+              "FN": 9
+            },
+            "complete_positive_misses": 9,
+            "positive_support": 12,
+            "signal_days": 5,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:退潮": {
+            "original_registered_count": 0,
+            "scoreable_count": 0,
+            "coverage": null,
+            "Accuracy": null,
+            "Precision": null,
+            "complete_positive_Recall": null,
+            "F1": null,
+            "confusion": {
+              "TP": 0,
+              "TN": 0,
+              "FP": 0,
+              "FN": 0
+            },
+            "complete_positive_misses": 0,
+            "positive_support": 0,
+            "signal_days": 0,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          },
+          "archived_source_phase:修复": {
+            "original_registered_count": 47,
+            "scoreable_count": 47,
+            "coverage": 1.0,
+            "Accuracy": 0.6595744680851063,
+            "Precision": 0.6666666666666666,
+            "complete_positive_Recall": 0.47619047619047616,
+            "F1": 0.5555555555555556,
+            "confusion": {
+              "TP": 10,
+              "TN": 21,
+              "FP": 5,
+              "FN": 11
+            },
+            "complete_positive_misses": 11,
+            "positive_support": 21,
+            "signal_days": 5,
+            "calibrated_Brier": null,
+            "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+          }
+        }
+      }
+    }
+  },
+  "actual_challenger_fits": 15,
+  "fit_logs": [
+    {
+      "month": "2025-07",
+      "actual_fit_attempts": 1,
+      "full_candidates": 320,
+      "training_n": 4062,
+      "save_load_reproduction": {
+        "rows": 320,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2025-08",
+      "actual_fit_attempts": 1,
+      "full_candidates": 273,
+      "training_n": 4258,
+      "save_load_reproduction": {
+        "rows": 273,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2025-09",
+      "actual_fit_attempts": 1,
+      "full_candidates": 226,
+      "training_n": 4340,
+      "save_load_reproduction": {
+        "rows": 226,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2025-10",
+      "actual_fit_attempts": 1,
+      "full_candidates": 176,
+      "training_n": 4411,
+      "save_load_reproduction": {
+        "rows": 176,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2025-11",
+      "actual_fit_attempts": 1,
+      "full_candidates": 257,
+      "training_n": 3978,
+      "save_load_reproduction": {
+        "rows": 257,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2025-12",
+      "actual_fit_attempts": 1,
+      "full_candidates": 332,
+      "training_n": 3582,
+      "save_load_reproduction": {
+        "rows": 332,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-01",
+      "actual_fit_attempts": 1,
+      "full_candidates": 323,
+      "training_n": 3243,
+      "save_load_reproduction": {
+        "rows": 323,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-02",
+      "actual_fit_attempts": 1,
+      "full_candidates": 144,
+      "training_n": 3301,
+      "save_load_reproduction": {
+        "rows": 144,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-03",
+      "actual_fit_attempts": 1,
+      "full_candidates": 216,
+      "training_n": 3233,
+      "save_load_reproduction": {
+        "rows": 216,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-04",
+      "actual_fit_attempts": 1,
+      "full_candidates": 192,
+      "training_n": 3158,
+      "save_load_reproduction": {
+        "rows": 192,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-05",
+      "actual_fit_attempts": 1,
+      "full_candidates": 238,
+      "training_n": 3086,
+      "save_load_reproduction": {
+        "rows": 238,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-06",
+      "actual_fit_attempts": 1,
+      "full_candidates": 285,
+      "training_n": 3100,
+      "save_load_reproduction": {
+        "rows": 285,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-07",
+      "actual_fit_attempts": 1,
+      "full_candidates": 240,
+      "training_n": 3083,
+      "save_load_reproduction": {
+        "rows": 240,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-08",
+      "actual_fit_attempts": 1,
+      "full_candidates": 303,
+      "training_n": 3053,
+      "save_load_reproduction": {
+        "rows": 303,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    },
+    {
+      "month": "2026-09",
+      "actual_fit_attempts": 1,
+      "full_candidates": 182,
+      "training_n": 3059,
+      "save_load_reproduction": {
+        "rows": 182,
+        "score_column": "probability",
+        "max_abs_error": 0.0,
+        "passed": true
+      }
+    }
+  ],
+  "BASE_ROLL252_refits": 0,
+  "deployment_changed": false,
+  "new_mature_forward_samples": 0,
+  "historical_is_blind_or_forward": false,
+  "calibrated_Brier": null,
+  "research_only_survivor": null,
+  "full_paired_predictions_sha256": "f4aee4c43be4435679f9f23c6b5e5735f05c45af6a2b52c1a822029ddf3b5a06"
+}

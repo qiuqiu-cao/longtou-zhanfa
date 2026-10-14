@@ -1,0 +1,152 @@
+{
+  "version": "v175-anchor-capital-destination-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "session_rows": 461,
+  "signal_dates": 461,
+  "split_date": "2025-05-07",
+  "anchor_failure_sessions": 174,
+  "anchor_advance_sessions": 287,
+  "failure_destination_counts": {
+    "ANCHOR_FAILED_BALANCED_PROMOTION_RATES": 45,
+    "ANCHOR_FAILED_FIRST_BOARD_ONLY_NO_LOWER_INVENTORY": 1,
+    "ANCHOR_FAILED_FIRST_BOARD_RATE_DOMINANT": 12,
+    "ANCHOR_FAILED_LOWER_RELAY_RATE_DOMINANT": 116
+  },
+  "destination_summaries": {
+    "BALANCED_PROMOTION_RATES": {
+      "sessions": 45,
+      "anchor_advance_rate": 0.0,
+      "lower_relay_promotion_rate_per_session": 1.0,
+      "first_board_promotion_rate_per_session": 1.0,
+      "next_adverse_state_rate": 0.7555555555555555,
+      "next_failed_rate_mean": 0.39858452595578325,
+      "next_previous_limit_median_return_mean": 0.0019495189822307604
+    },
+    "FIRST_BOARD_ONLY_NO_LOWER_INVENTORY": {
+      "sessions": 1,
+      "anchor_advance_rate": 0.0,
+      "lower_relay_promotion_rate_per_session": 0.0,
+      "first_board_promotion_rate_per_session": 1.0,
+      "next_adverse_state_rate": 0.0,
+      "next_failed_rate_mean": 0.2473118279569892,
+      "next_previous_limit_median_return_mean": 0.046218487394958
+    },
+    "FIRST_BOARD_RATE_DOMINANT": {
+      "sessions": 12,
+      "anchor_advance_rate": 0.0,
+      "lower_relay_promotion_rate_per_session": 0.6666666666666666,
+      "first_board_promotion_rate_per_session": 1.0,
+      "next_adverse_state_rate": 0.75,
+      "next_failed_rate_mean": 0.3649693054237056,
+      "next_previous_limit_median_return_mean": 0.004503197039147682
+    },
+    "LOWER_RELAY_RATE_DOMINANT": {
+      "sessions": 116,
+      "anchor_advance_rate": 0.0,
+      "lower_relay_promotion_rate_per_session": 1.0,
+      "first_board_promotion_rate_per_session": 0.9741379310344828,
+      "next_adverse_state_rate": 0.4396551724137931,
+      "next_failed_rate_mean": 0.3835398610474321,
+      "next_previous_limit_median_return_mean": 0.0018397645043533033
+    }
+  },
+  "bootstrap_comparisons": {
+    "next_adverse_lower_minus_first_dominant": {
+      "group_a": "LOWER_RELAY_RATE_DOMINANT",
+      "group_b": "FIRST_BOARD_RATE_DOMINANT",
+      "metric": "next_adverse_state",
+      "estimate": -0.3103448275862069,
+      "ci95": [
+        -0.5459770114942528,
+        -0.02579022988505721
+      ],
+      "sessions_a": 116,
+      "sessions_b": 12
+    },
+    "next_failed_rate_lower_minus_first_dominant": {
+      "group_a": "LOWER_RELAY_RATE_DOMINANT",
+      "group_b": "FIRST_BOARD_RATE_DOMINANT",
+      "metric": "next_failed_rate",
+      "estimate": 0.018570555623726503,
+      "ci95": [
+        -0.02845435249185657,
+        0.07194395204921364
+      ],
+      "sessions_a": 116,
+      "sessions_b": 12
+    },
+    "next_previous_limit_median_lower_minus_first_dominant": {
+      "group_a": "LOWER_RELAY_RATE_DOMINANT",
+      "group_b": "FIRST_BOARD_RATE_DOMINANT",
+      "metric": "next_previous_limit_median_return",
+      "estimate": -0.002663432534794379,
+      "ci95": [
+        -0.0212533292763652,
+        0.0177171482061073
+      ],
+      "sessions_a": 116,
+      "sessions_b": 12
+    }
+  },
+  "chronological_split": {
+    "discovery_first_70pct_dates": {
+      "all_sessions": {
+        "sessions": 322,
+        "anchor_advance_rate": 0.6459627329192547,
+        "lower_relay_promotion_rate_per_session": 0.9192546583850931,
+        "first_board_promotion_rate_per_session": 0.9906832298136646,
+        "next_adverse_state_rate": 0.4906832298136646,
+        "next_failed_rate_mean": 0.3618697228347586,
+        "next_previous_limit_median_return_mean": 0.010653018742607661
+      },
+      "anchor_failure_sessions": 114,
+      "failure_destination_counts": {
+        "ANCHOR_FAILED_BALANCED_PROMOTION_RATES": 26,
+        "ANCHOR_FAILED_FIRST_BOARD_ONLY_NO_LOWER_INVENTORY": 1,
+        "ANCHOR_FAILED_FIRST_BOARD_RATE_DOMINANT": 9,
+        "ANCHOR_FAILED_LOWER_RELAY_RATE_DOMINANT": 78
+      }
+    },
+    "validation_last_30pct_dates": {
+      "all_sessions": {
+        "sessions": 139,
+        "anchor_advance_rate": 0.5683453237410072,
+        "lower_relay_promotion_rate_per_session": 0.9712230215827338,
+        "first_board_promotion_rate_per_session": 0.9928057553956835,
+        "next_adverse_state_rate": 0.4460431654676259,
+        "next_failed_rate_mean": 0.3366925117197138,
+        "next_previous_limit_median_return_mean": 0.012368595857930209
+      },
+      "anchor_failure_sessions": 60,
+      "failure_destination_counts": {
+        "ANCHOR_FAILED_BALANCED_PROMOTION_RATES": 19,
+        "ANCHOR_FAILED_FIRST_BOARD_RATE_DOMINANT": 3,
+        "ANCHOR_FAILED_LOWER_RELAY_RATE_DOMINANT": 38
+      }
+    }
+  },
+  "dominant_lane_margin_pp": 10.0,
+  "lane_dominance_and_better_environment_association_stable": false,
+  "governance": {
+    "anchor_failure_alone_implies_retreat": false,
+    "same_session_destination_as_signal_date_feature_allowed": false,
+    "automatic_high_to_low_entry_allowed": false,
+    "stock_reranking_allowed": false,
+    "historical_scenario_base_rates_allowed": true
+  },
+  "interpretation": "Failure of the height anchor is not itself the destination of capital. Because at least one first-board promotion is nearly automatic in a wide inventory, the audit compares lane promotion rates with a fixed ten-percentage-point dominance margin instead of using an any-stock flag. These are realized labels, so they explain the path after it occurs and cannot be leaked into a prior-close score or used to auto-buy a lower board.",
+  "limitations": [
+    "promotion is a closing-board outcome, not intraday capital-flow or amount-share evidence",
+    "same-theme versus cross-theme destination is unavailable without complete point-in-time themes",
+    "current-universe and candidate-inventory completeness remain unproved",
+    "historical security eligibility is incomplete",
+    "no queue, verified fill, actual exit, catalyst timing or causal flow sequence"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v3\\full_pool_eod_features.csv": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "91f4b369671b7a1398cffca73e575af409e1284f0d8beb892741ffdb5c3e9518"
+}

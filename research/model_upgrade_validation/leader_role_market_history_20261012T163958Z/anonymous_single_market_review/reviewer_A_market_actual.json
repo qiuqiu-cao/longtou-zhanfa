@@ -1,0 +1,995 @@
+{
+  "reviewer_id": "A",
+  "packet_path": "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json",
+  "packet_sha256": "a66d6b5d1cec8c8cd9decf8778e738c78c1387f9598b86455855b52c01143c9d",
+  "review_started_at": "2026-10-13T03:49:32Z",
+  "reviewed_at": "2026-10-13T03:54:25Z",
+  "timestamp_basis": "UTC clock tool实际核验开始与审阅结束；后续仅序列化保存。",
+  "model_masked": true,
+  "future_masked": true,
+  "independent_of_prediction": true,
+  "case_identity_masked": true,
+  "formal_blind_label_eligible": false,
+  "inherited_AGENTS_contains_mature_outcome_summary": true,
+  "masking_qualification": "masked指唯一事实包；仅以包内原始事实做逐例判断。继承AGENTS含模型及已成熟摘要，不能证明与匿名案例完全不重合，所以拒绝正式盲标签资格。",
+  "context_exposure_scope": {
+    "inventory_complete": true,
+    "unknown_or_undated_exposure": true,
+    "packet_sha256": "a66d6b5d1cec8c8cd9decf8778e738c78c1387f9598b86455855b52c01143c9d",
+    "basis": "已清点继承系统/开发者、用户AGENTS及任务。AGENTS有原2日21只成熟汇总、9月30日与10月9→12实名结果、模型误差及历史诊断；部分日子未明确、与匿名案例无法核定。未读取映射、模型、预测、标签、其他审阅者或其他股票资料。未识别匿名案例到已知实名/结果的联系；exposed_candidate_ids空表示未识别，非证明无重合。",
+    "exposed_candidate_ids": [],
+    "exposed_periods": [
+      {
+        "start": "2025-07-01",
+        "end": "2025-12-31",
+        "kind": "MODEL_OUTPUT",
+        "basis": "继承AGENTS有BASE/挑战2025H2表现摘要"
+      },
+      {
+        "start": "2026-01-01",
+        "end": "2026-09-30",
+        "kind": "MODEL_OUTPUT",
+        "basis": "继承AGENTS有1—8月及9月Accuracy/Recall/挑战失败摘要"
+      },
+      {
+        "start": "2026-09-30",
+        "end": "2026-10-12",
+        "kind": "FUTURE_OUTCOME",
+        "basis": "继承AGENTS有原2日21只成熟汇总和10月9→12时代、九阳、新华、华北晋级及其余失败"
+      },
+      {
+        "start": "2026-09-30",
+        "end": "2026-10-12",
+        "kind": "MODEL_OUTPUT",
+        "basis": "继承AGENTS有时代/紫竹漏判、园林误报、九阳弃判、丰元/雄韬误报等摘要"
+      },
+      {
+        "start": "2026-10-08",
+        "end": "2026-10-12",
+        "kind": "ROLE_IDENTITY",
+        "basis": "继承AGENTS有实名板位、题材/一字/转换手与核心辨别叙述，非本包11角色正式标签"
+      }
+    ],
+    "identified_link_cancellations": [],
+    "eligibility_exclusion": "无法排除匿名案例与继承暴露重合，整包只作回顾性诊断标签"
+  },
+  "scope": {
+    "candidate_count": 7,
+    "role_count": 11,
+    "row_count": 77,
+    "pool_is_full_market": false,
+    "current_pool_survivors_only": true,
+    "offsets": [
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0
+    ],
+    "past_pool_counts": [
+      7,
+      13,
+      18,
+      15,
+      9,
+      7
+    ],
+    "past_maximum_boards": [
+      5,
+      6,
+      4,
+      5,
+      4,
+      4
+    ],
+    "unknown_or_absence_not_failure": true,
+    "future_data_read": false
+  },
+  "raw_price_audit": {
+    "raw_asset_count": 15,
+    "bars_per_asset": 48,
+    "total_bars": 720,
+    "all_ohlc_internal_inequality_errors": 0,
+    "all_grid_complete": true,
+    "all_price_reconciled_in_packet": true,
+    "missing_volume_amount_assets": 7,
+    "fully_present_volume_amount_assets": 8,
+    "price_base": "PREVIOUS_OFFICIAL_CLOSE_100",
+    "validation_basis": "实际遍历包内15条完整原始路径；核对每条open/high/low/close内部界限、全路径极值/收盘、48点网格和量额缺失。未用统一110代替原涨停价，不将触板或恒价当队列承接。",
+    "asset_extrema": [
+      [
+        "asset_205abdde130cd8ce5ece89c8",
+        106.18066561014263,
+        109.98415213946117,
+        109.98415213946117
+      ],
+      [
+        "asset_e030ddf202154c35737aa758",
+        90.0126422250316,
+        100,
+        90.13906447534767
+      ],
+      [
+        "asset_08ecbe1c8fae1d6a55d56cc1",
+        89.9135446685879,
+        100.86455331412103,
+        91.35446685878962
+      ],
+      [
+        "asset_6789bb4c9e16328718dc801e",
+        91.24423963133641,
+        98.27188940092165,
+        94.00921658986175
+      ],
+      [
+        "asset_84018c0d011635633f7c8d90",
+        96.05809128630705,
+        109.95850622406638,
+        100.8298755186722
+      ],
+      [
+        "asset_eba6dc6f2bee9fcc81ba53e1",
+        90.53497942386831,
+        110.01371742112482,
+        110.01371742112482
+      ],
+      [
+        "asset_1131e606b59ca877a1acfdd9",
+        110.04728132387707,
+        110.04728132387707,
+        110.04728132387707
+      ],
+      [
+        "asset_d3e45f76896005ea443f6757",
+        92.42144177449167,
+        109.9815157116451,
+        95.19408502772644
+      ],
+      [
+        "asset_e70ead527aa9d4a0b2caa9d9",
+        110.0140383715489,
+        110.0140383715489,
+        110.0140383715489
+      ],
+      [
+        "asset_ef92d76101466e0a24d77395",
+        95.25341914722446,
+        99.19549477071601,
+        97.66693483507643
+      ],
+      [
+        "asset_1e0cc568c84a9ec1ce2e07e9",
+        97.32620320855615,
+        110.00000000000001,
+        110.00000000000001
+      ],
+      [
+        "asset_e7478c8eefec3c4d3266b148",
+        96.13095238095238,
+        110.01984126984128,
+        110.01984126984128
+      ],
+      [
+        "asset_cc8b48974e5891f5703854e5",
+        89.99999999999999,
+        96.61016949152543,
+        90.6779661016949
+      ],
+      [
+        "asset_1937af40fc58320cf0437ee3",
+        103.91908975979773,
+        109.98735777496837,
+        109.98735777496837
+      ],
+      [
+        "asset_95e1f30c35924ef8d31c393f",
+        94.3384223918575,
+        98.9821882951654,
+        97.51908396946564
+      ]
+    ],
+    "asset_extrema_columns": [
+      "asset_id",
+      "low",
+      "high",
+      "close"
+    ]
+  },
+  "stage_understanding": "-5为partial，不能当完整阶段基点。-4涨停86、跌停2、封板率0.8515、旧涨停溢价0.0513属强修复；-3高度6→4、空间反馈0，同时连板13→18/跌停0，高度受损与中层扩张共存。-2/-1/0涨停48/34/39、连板15/9/7、跌停7/11/21、溢价0.00019/-0.01040/-0.02028，承压加大；0封板率及涨停小改善不能抵消风险，不够认定新上升节点。唯一4板2→3→4及完整旧同层实际失败支持核心候选，但旧5板/4板离池不当死亡，核心交接与生态反馈未核。此阶段理解本次从原值形成，无原阶段分类。",
+  "case_review_summaries": [
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "summary": "3板，-1/0为2→3；09:35低106.180666收109.984152，此后47条OHLC恒价。与同题材另一3板共晋级。"
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "summary": "唯一4板，-2/-1/0为2→3→4；48条OHLC全110.047281，实际一字。完整旧3板唯一对手d3e45当日高109.981516收95.194085且FAILED，相对胜出可见，主动卡位未知。"
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "summary": "3板，-1/0为2→3；09:35低90.534979，10:20高110.013717，10:40及14:35跌离，14:45恢复并恒价收盘。48条量额全缺。"
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "summary": "2板，只0归档出现；日低96.130952，13:40收110.019841后恒价；同题材1937af早盘已恢复。过去归档缺席不当失败。"
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "summary": "2板，只0归档出现；低97.326203，13:05触110收109.411765，13:10回落，13:20收110并恒价。额3524506608为已存七个涨停成员最高。"
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "summary": "2板，只0归档出现；09:35低103.919090收109.987358，此后恒价，比同题材e7478早恢复；48条量额全缺。"
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "summary": "2板，只0归档出现；48条OHLC全110.014038，真实一字。已存题材还有一首板，完整旧首板竞争未知。"
+    }
+  ],
+  "minimal_missing_evidence": {
+    "THEME": "完整同题材成员及跨日梯队/反馈",
+    "TURNOVER": "可核tick/实际承接与回封；量额缺时补实际成交",
+    "CAPACITY": "完整非涨停同题材承载成员及持续反馈",
+    "TREND": "连续多日行情及同题材比较",
+    "POSITION": "完整旧同身位实际状态与主动竞争时间链",
+    "SUPPLEMENT": "旧核心身份、实际启动先后及依附",
+    "NODE": "市场转折与启动绑定、完整同期竞争及过去跨日生态延续",
+    "CYCLE": "旧核心真值/身份竞争交接与跨日生态反馈",
+    "CROSS_CYCLE": "事前压力定义与前后核心身份",
+    "EMOTION": "持续个股—生态反馈、先后链及共同催化排查"
+  },
+  "counts_by_role": {
+    "HEIGHT": {
+      "true": 1,
+      "false": 6,
+      "unknown": 0
+    },
+    "THEME": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "TURNOVER": {
+      "true": 0,
+      "false": 2,
+      "unknown": 5
+    },
+    "CAPACITY": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "TREND": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "POSITION": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "SUPPLEMENT": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "NODE": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "CYCLE": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "CROSS_CYCLE": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    },
+    "EMOTION": {
+      "true": 0,
+      "false": 0,
+      "unknown": 7
+    }
+  },
+  "rows": [
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "HEIGHT",
+      "verdict": false,
+      "basis": "完整7只归档池最高4板，本股3板与另一3板并列第二层，False。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "限定名单两只3板加三首板，本股早盘价格比另一3板稳定；全题材覆盖false，跨日反馈与完整领先对比不足，未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "TURNOVER",
+      "verdict": null,
+      "basis": "非一字，09:35从106.180666恢复109.984152，首条成交35902576股；相对强和恢复价路可见，tick/真实承接/回封均未知，不自动认证换手龙。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "本股额664912544低于另一3板831891872；缺完整非涨停同题材成员与承载反馈。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "仅-1/0两天板位2→3，无连续多日行情及同题材趋势比较。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "旧同层范围不完整；另一3板仍STRONG，e030/08ec/6789状态UNKNOWN、84018明确FAILED。部分对手弱价路不能替代完整主动胜出。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "同高度共晋级不说明依附；旧核心、实际启动先后与核心转弱后反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "市场-4修复后再承压，本股只有2→3短延续；缺启动与市场转折绑定、完整同期胜出和跨日核心生态。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "承压期晋级支持候选，但只两天板位，旧高标离池不等于死亡；阶段核心身份竞争/交接及跨日反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "压力前核心地位未知，也没有事前冻结压力事件；不能由当日强势认定穿越。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_2a3e8e623b6b90fbe94f0ff1",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "同题材另一3板与三个首板同时涨停仅是共振，持续生态反馈、先后链与共同催化排查缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "HEIGHT",
+      "verdict": true,
+      "basis": "完整7只归档池板位4/3/3/2/2/2/2，本股唯一4板，True仅指该限定池高度最高，不认证全A。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "已存本股4板及三只首板，有限范围高度领先及扩散成立；全题材不完整，跨日反馈/完整领先比较不足。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "TURNOVER",
+      "verdict": false,
+      "basis": "日级一字=1，48条OHLC均110.047281，无当日可见价格分歧；当日换手角色不符，False，不否定过去换手身份。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "本股额99158762低于已存三首板，各类非涨停同题材成员和承载反馈缺；不能认证容量。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "2→3→4为连续板位，但过去价格行情及同题材连续强弱比较缺；连板不替代趋势角色。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "旧3板范围complete=true，唯一对手d3e45=FAILED，09:35触高后走低收95.194085，本股全日恒价；确认相对胜出，但主动竞争/卡位时间链与因果未核，未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "当前最高和旧同层胜出不能单独排除补涨；旧核心身份、首次启动先后、依附关系缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "自身2→3→4与旧同层胜出确有跨日延续；但-4市场强修复时归档缺席不能当未启动，-3至0再承压无明晰新转强节点。缺启动日、节点绑定、完整同期竞争和生态延续。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "市场修复后再承压，本股2→3→4且当前最高，确为核心候选；-2旧5板/-1旧4板离池不得当死亡。缺旧核心真值、身份交接及跨日市场/题材反馈，未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "压力期板位连续是事实，但压力前-3/-4核心身份未知，没有本包事前冻结压力事件及前后完整核心比较。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_5a0584e49c0e47ed12ce479a",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "最高板及三首板扩散同日存在，市场跌停21/空间反馈0不能归因本股；持续个股—生态先后与共同催化排查缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "HEIGHT",
+      "verdict": false,
+      "basis": "当前池最高4板，本股3板与205abd并列，False。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "限定题材两3板加三首板，同层205abd早盘稳定而本股多次跌离，完整题材/跨日反馈缺，不能认证领先。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "TURNOVER",
+      "verdict": null,
+      "basis": "非一字，低90.534979至收110.013717、反复跌离后恢复仅为采样修复；48条量额缺、真实承接/回封与tick未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "额831891872高于205abd，采样量额却缺；完整非涨停同题材成员及持续承载缺，金额较大不认证容量。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "只有2→3板位和当日宽振幅，连续行情/同题材趋势对比缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "205abd仍STRONG、旧同层范围不全且3名UNKNOWN，不是完整对手淘汰，主动胜出未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "同高度、修复较晚不证明跟随；旧核心、启动先后和依附链缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "承压窗口2→3证明短延续，但启动时点与市场转折、完整同期胜出、跨日核心生态缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "两天存活及单日宽幅修复不能认证周期核心；旧高标交接与持续生态反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "压力前核心身份未知且压力事件未事前冻结，不能由修复推出穿越。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_80ea6acde90c8655aeb9bd60",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "同题材共振可见，量额/连续生态反馈、时间先后与共同催化排查缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "HEIGHT",
+      "verdict": false,
+      "basis": "最高4板，本股2板与另三只并列，False。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "名单仅两只2板无首板扩散，1937af09:35恢复而本股13:40恢复；全题材及跨日反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "TURNOVER",
+      "verdict": null,
+      "basis": "非一字，低96.130952至13:40收110.019841、量额完整，单次采样恢复不能认证真实承接与相对分歧胜出，tick缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "额1142157680高于1937af144100269，但完整非涨停成员和承载反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "过去五日own_boards=null不当失败，只当日先弱后强，连续行情及题材趋势对比缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "当前四只2板均存活；旧24首板对手范围不全、多UNKNOWN、18条路径缺，主动完整胜出未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "同题材早晚恢复不能证明依附；旧核心、启动先后、核心压力反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "当前承压中的2板候选，-1归档缺席不能认定新节点启动；实际启动、同期完整胜出与跨日延续缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "六日背景支持修复后再承压，个股连续核心身份与阶段竞争/反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "事前压力事件及压力前后核心身份均未知。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_aa0785727215be12196b9e54",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "同题材先后可见但没有持续生态反馈或共同催化排查，不能由先后认定带动。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "HEIGHT",
+      "verdict": false,
+      "basis": "最高4板，本股2板四只并列，False。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "已存本股2板加六首板，有限范围高度领先与扩散存在；完整题材/跨日成员反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "TURNOVER",
+      "verdict": null,
+      "basis": "13:05触110收109.411765，13:10收107.326203，13:20收110后恒价；量额完整仅证明成交，真实承接/回封和相对分歧勝出未核。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "额3524506608为已存七涨停成员最高，但完整非涨停同题材承载成员/持续反馈缺，金额排序不认证。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "过去归档null不当趋势断裂，单日97.326203到110缺连续行情及同题材趋势比较。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "四只当前2板共存，旧24对手范围不全且多UNKNOWN/18路径缺；下午恢复不替代主动完整胜出。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "六首板扩散不证明旧核心依附，旧核心、实际启动先后及核心转弱反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "0涨停34→39小修复同时跌停11→21/溢价更负，不能确认转强节点；启动、完整同期胜出与跨日延续缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "仅0板位可见，承压中扩散方向可观察，持续核心竞争/交接及跨日反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "压力日涨停不是压力前后核心延续，缺事前事件与身份比较。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_ad10d9a5f58311fa61add8df",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "六首板同日扩散属限定共振，持续先后链和共同催化排查缺，不能认定本股引领。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "HEIGHT",
+      "verdict": false,
+      "basis": "池最高4板，本股2板四只并列，False。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "已存同题材两2板，本股早盘比e7478的13:40恢复早；完整成员/首板扩散及跨日反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "TURNOVER",
+      "verdict": null,
+      "basis": "非一字，09:35低103.919090至收109.987358后恒价，价格相对强可见；量额48条全缺、真实承接/回封与tick未核。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "额144100269低于e7478的1142157680，但少额不能独自否定容量；完整非涨停成员和承载缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "只有当日价路/0的2板，过去null不当失败，连续行情和题材持续对比缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "早恢复不替代旧24首板完整真值，范围不全/多UNKNOWN/18路径缺，另三当前2板仍STRONG。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "早恢复不证明旧核心，也不能排除补涨；旧核心身份、启动先后、依附缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "当前承压早盘恢复仅单日事实，缺启动与转折绑定及完整同期竞争/跨日延续。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "修复后再承压背景可见，本股连续身份和阶段核心竞争/生态反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "无事前压力定义及本股前后核心身份，不由早恢复确认穿越。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_b36bf0a1f3a1d7e0f3bdd8bf",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "领先同题材恢复仅可见先后，未排除共同催化且连续生态反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "HEIGHT",
+      "verdict": false,
+      "basis": "最高4板，本股2板四只并列，False。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "THEME",
+      "verdict": null,
+      "basis": "已存本股2板加一首板，有限高度领先，扩散只见一只；完整题材、跨日反馈/竞争缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "TURNOVER",
+      "verdict": false,
+      "basis": "日级一字=1，48条OHLC全部110.014038，无当日可见价格分歧；当日换手角色不符，False，不评价过去身份。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "CAPACITY",
+      "verdict": null,
+      "basis": "额80764679低于已存首板2141328608，完整非涨停成员/承载反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "TREND",
+      "verdict": null,
+      "basis": "过去归档null不表示无行情；当日恒价不能替代连续趋势与同题材比较。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "POSITION",
+      "verdict": null,
+      "basis": "一字相对强但另三2板共存，旧24对手范围不全/多UNKNOWN/18路径缺，主动完整胜出不足。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "SUPPLEMENT",
+      "verdict": null,
+      "basis": "与首板同题材不足说明依附，旧核心/实际启动先后及转弱反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "NODE",
+      "verdict": null,
+      "basis": "仅0的2板，市场再承压未确认新转强节点，启动、完整同期胜出/跨日延续缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "CYCLE",
+      "verdict": null,
+      "basis": "压力时一字2板支持强势候选，过去阶段核心地位、跨日身份竞争/生态反馈缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "CROSS_CYCLE",
+      "verdict": null,
+      "basis": "压力前后核心身份及事前压力事件均未知，强势一字不等于穿越。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    },
+    {
+      "candidate_id": "case_fe37b1ca6daa7b187107bfb8",
+      "role": "EMOTION",
+      "verdict": null,
+      "basis": "一字与一首板同时涨停仅为共振，连续反馈、可核先后/共同催化排查缺。",
+      "evidence_refs": [
+        "D:/Documents/ChatGPT/龙头战法/research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/anonymous_single_market_review/anonymous_market_review_facts.json"
+      ]
+    }
+  ],
+  "label_formation_statement": "2026-10-13实际形成的匿名单信号日回顾性诊断；非历史原时点、非真实前向，None不作负例。"
+}

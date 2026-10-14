@@ -1,0 +1,72 @@
+{
+  "started_at": "2026-10-07T09:52:12+00:00",
+  "completed_at": "2026-10-07T10:10:16.264447+00:00",
+  "elapsed_minutes": 18.071,
+  "budget_minutes_per_stage": 30,
+  "all_three_stages_and_final_checks_within_first30min": true,
+  "stages": [
+    {
+      "stage": 1,
+      "started_at": "2026-10-07T10:03:10.507321+00:00",
+      "ended_at": "2026-10-07T10:03:13.991836+00:00",
+      "fixed_computation_seconds": 3.484515,
+      "report_sha256": "9559945bb5ad21350c68e30d17d6ecbe4f63d8bf8299a3a3ac4dc6de80199716"
+    },
+    {
+      "stage": 2,
+      "started_at": "2026-10-07T10:03:27.465502+00:00",
+      "ended_at": "2026-10-07T10:03:29.452991+00:00",
+      "fixed_computation_seconds": 1.987489,
+      "report_sha256": "aed962de8c1702997092f98f8b150ddfa9701ffad47ab289fa091ed6cb8c766c"
+    },
+    {
+      "stage": 3,
+      "started_at": "2026-10-07T10:03:38.932403+00:00",
+      "ended_at": "2026-10-07T10:03:41.015979+00:00",
+      "fixed_computation_seconds": 2.083576,
+      "report_sha256": "d823941fff04a5aefeb35e88d76c63d220ae7c8dae849c52d04224651622697c"
+    }
+  ],
+  "protocols_sha256": {
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage1\\protocol_BEFORE_RESULTS.json": "5ec95350187c75ea9b93d0ad728d602ee1076a4f4dbb39d1cc377d2607b1e67b",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage2\\protocol_BEFORE_RESULTS.json": "18842dd727017a95d86e1fee923cb2ff3187ace90c7fc7222bb6ad9e5310ab58",
+    "research\\market_direction_validation\\sequence_20261007T095212Z\\stage3\\protocol_BEFORE_RESULTS.json": "a3f569e7f61fc6ba898920fd98af57501bf443f7e3ea56d0a74c9f20cf8719ed"
+  },
+  "sequence_sha256": "301fab5f6947a8ad28557582fc26c3cbd240ad12340beb246496f2ede8a019cf",
+  "score_time_implementation_sha256": "d7003a5ccae114b0ead2e5c138b2eb05518cb27d1a492954e4dbd22db491b606",
+  "final_entry_sha256": "a85fa98e1732d88b1d5d70e7c6dc91c3f816b511088c09293872b33ff0d742ba",
+  "post_score_repairs": [
+    "Strict equality of every sequence.shared field; actual three protocols passed and no scoring inputs changed",
+    "Paired statistics marked PAIRED_ONLY with paired recall; full registered metrics remain in original summaries; no outcome change"
+  ],
+  "tests": {
+    "original_synthetic_direction_checks": 39,
+    "additional_scoring_and_fit_failure_checks": 5,
+    "shared_protocol_test_items": 3,
+    "shared_protocol_changed_field_subcases": 12,
+    "direction_test_sha256": "73d0af030211cf4f95ac170e780c3270ff12dfe4facf5ffd0351871fd0ae8ea6",
+    "protocol_test_sha256": "21ed9aba5eb9b6a038f470312779e3fe860b3d09bcfbc66aa9beb5b1fa433cc7",
+    "real_fits_repeated_after_review": false
+  },
+  "protected_files_unchanged": {
+    "data/v271/expectation_registry/2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "hypothesis_bound_daily_runner_v298.py": "46c82eff2a93707f85b8ae0efd7ca471feec393fab9120d8b5dab89502f025db",
+    "research_indicator_pipeline.py": "aeda6ab57ad62edfda8d2ceaf502ebdc987410e4bfca4844f91b49c567614db1",
+    "research/theme_same_height/protocol.json": "47857a79776cd6f29027a0b2854409e30d06a1c71588a549dd70b0d9a99be68b",
+    "research/theme_same_height/comparison_specification.json": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066",
+    "market_interval_research_v300.py": "d628a18fea9277efe0db31d9ed1a1f905a3ca4ff7b9ba4b27462fd9295d27ea5"
+  },
+  "verification_receipt_sha256": "97db0a802fa12cdb2d1f5614b3c207557714f75130f1860b53f4fe2acd5d2853",
+  "human_report_sha256": "087a194e569bcbceba291fad64f557631cdd0acb5966fdeea148822095a64381",
+  "queue_previous_sha256": "482b800289825f68ebe8e6a9777fa96cbc8b7dd86abb0b058ae06ab276536a6b",
+  "queue_final_sha256": "3398bb5eb73c7f20715b2fa858c5552d7d2c2cd2368bae537c208562449f2ab3",
+  "new_forward_samples": 0,
+  "production_model_changed": false,
+  "original_sep30_target": "2026-10-08",
+  "original_sep30_candidates": 11,
+  "original_prediction_rescored": false,
+  "all_challengers_passed_all_gates": false,
+  "overall_goal_complete": false,
+  "unique_next_research": "MARKET_COMMON_FALSE_POSITIVE_DIAGNOSIS_01",
+  "production_next_node": "2026-10-08 actual close, original11 source-bound settlement"
+}

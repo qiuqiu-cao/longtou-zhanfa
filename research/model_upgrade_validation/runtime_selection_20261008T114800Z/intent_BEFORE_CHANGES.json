@@ -1,0 +1,46 @@
+{
+  "formed_at": "2026-10-08T11:51:43.282673+00:00",
+  "batch_start": "2026-10-08T11:48:00+00:00",
+  "user_intent": "优化预测、判断、市场及情绪分析；各模块分别择优；删除无引用冗余并封存原件",
+  "same_authorization_retained": true,
+  "runtime_rule": "Only explicitly bound current champion is deserialized; no directory discovery or automatic blending",
+  "selection_rule_before_results": {
+    "primary": "same-date same-full-pool same-label Accuracy",
+    "minimum_accuracy_improvement": 0.03,
+    "complete_recall_f1_and_coverage_must_not_decline": true,
+    "old_fixed_120_session_gate_retained": true,
+    "tie_order": [
+      "keep current champion if equally accurate",
+      "complete recall",
+      "F1 or market macroF1",
+      "fewer fields",
+      "stable arm id"
+    ]
+  },
+  "cleanup_rule": "Delete only no-reference redundant artifacts; original models, immutable reports, registration dependencies and necessary rollback originals preserved in place with hashes",
+  "new_native_shadow_registration": "Oct8 sources are already acquired; original fixed three-arm predictions, real new cutoff; market partial cannot start eligible window",
+  "numeric_fit_owned_by": "M1_BALANCED_SUBSAMPLE separate preregistered batch; no numeric refit by runtime batch",
+  "protected_sha256": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\model.joblib": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\C1\\model.joblib": "c7a0767c7862448e620397b4e86ca51a7fd0c64f19e234257ad1740ba44752ee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\C2\\model.joblib": "c6a8b027095e656df0ef6114a5299f9c594affed5ce5935bce40a954a1a16d76",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\market\\BASE\\model.joblib": "9632a0f4efcf0cff6dbde56cfd996fe2337170cc5bea965f04e0032d109073f7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\market\\C1\\model.joblib": "0570f232d6893a4b622ef759e877d62ad4d3c576fb7a348b8352ab7e7c9c79cc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\market\\C2\\model.joblib": "25987e89783a3632607b085b098c85e1a640a079a7fd4ee5a2e2de0d766dfd72",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\protocol_BEFORE_EFFECTS.json": "bc10758cad773a130358a069d321dba9fc632ae87135d375b8fd6c24f19eccf6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\production_hold_20261007.json": "b56ba60afc01bc98336393597ef91b5b6f6481d89c00aeb0a5ef633fc1d51357",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\production_authorization_20261008.json": "2bcc3a19073d23812e65e5fbb68baf6c18715ad5a0c13d1ee145ba23b421f1c7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\implementation_policy_AUTHORIZATION_20261008.json": "625a504cd56b807364c774661bc45671a5dc03d7079b3489a92cf655a05b609d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_20261008_forecast_20261009_20261008T091618Z\\review.md": "53447c0798497d876b8624dd906b9a5be2c8fe692000e4c868201cc695c66aca",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_20261008_forecast_20261009_20261008T091618Z\\model\\base_predictions.json": "028a5ab120f9c4b7a314e68ab8478ee7bf8e9854447e263288ff560ff69a30d3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_20261008_forecast_20261009_20261008T091618Z\\model\\plan_unreviewed_v298.json": "d6bd356835f2052373b8a47f9803e22a656dfe8cb74372fb35ca349556ac8c22",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v298\\close_settlement_20261008T092450Z\\report.json": "08ba0a154a20602f1c41eaaea6e427f36ef2798d76a7f9501163a586e1e5f9bf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_research.py": "7635d6dbfb18c64acd50987fa47ef87ca46092f01ed7a4be04b6ef9763380675",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_inputs.py": "1fc7eee843596013132af27376c5a74dc424904afca30960207465c9c67d848b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_metrics.py": "0acf44e7f0b55a39244ab1b258a598643d45f363f1fd78f9b09e66c0b8c0e051",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_shadow.py": "f5cb2ea699d7330007b5979f26c031071b7b143421aab636e44b17ba665fe2a5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_apply.py": "91eaf61c3b3b96bc77f29c84008c75c68a5d3cab955992186b6e8c3ca25bb254",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_policy.py": "d9f59d9b9efa7bd56b54aab82e19011b43bc3f72d84cd086e271cfea2918565b"
+  }
+}

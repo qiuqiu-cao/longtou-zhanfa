@@ -1,0 +1,447 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "deployment_allowed": false,
+  "paper_trade_ready": false,
+  "challenge_target_is_guarantee": false,
+  "data_gates": [
+    {
+      "name": "historical_trading_days",
+      "passed": true,
+      "observed": 504,
+      "requirement": ">=250"
+    },
+    {
+      "name": "complete_point_in_time_universe",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "point_in_time_security_status",
+      "passed": true,
+      "observed": true,
+      "requirement": "true"
+    },
+    {
+      "name": "point_in_time_cross_theme_competition",
+      "passed": false,
+      "observed": false,
+      "requirement": "complete full-market primary specific themes and cross-theme factors"
+    },
+    {
+      "name": "point_in_time_theme_catalyst_archive",
+      "passed": false,
+      "observed": false,
+      "requirement": "at least 250 complete sessions with catalyst timing and expectation status"
+    },
+    {
+      "name": "verified_severe_abnormal_path_model",
+      "passed": false,
+      "observed": false,
+      "requirement": "officially reconciled inputs, verified labels and time-isolated calibration readiness"
+    },
+    {
+      "name": "validated_two_to_three_day_emotion_path",
+      "passed": false,
+      "observed": false,
+      "requirement": "purged time-isolated path model beats Markov and prior baselines"
+    },
+    {
+      "name": "all_observed_board_levels_reported",
+      "passed": true,
+      "observed": true,
+      "requirement": "true, including boards above five"
+    },
+    {
+      "name": "board_1_observations",
+      "passed": true,
+      "observed": 28265,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_2_observations",
+      "passed": true,
+      "observed": 5152,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_3_observations",
+      "passed": true,
+      "observed": 1742,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_4_observations",
+      "passed": true,
+      "observed": 818,
+      "requirement": ">=100"
+    },
+    {
+      "name": "board_5_observations",
+      "passed": true,
+      "observed": 381,
+      "requirement": ">=100"
+    }
+  ],
+  "blind_complete_trade_gates": [
+    {
+      "name": "complete_trade_dataset_ready",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "purged_chronological_split_ready",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "development_model_ready",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "validation_threshold_frozen",
+      "passed": false,
+      "observed": false,
+      "requirement": "true without target relaxation"
+    },
+    {
+      "name": "full_pool_ranking_scope",
+      "passed": false,
+      "observed": false,
+      "requirement": "true for first and consecutive closing-limit pool"
+    },
+    {
+      "name": "compatible_two_stage_model_stack",
+      "passed": false,
+      "observed": false,
+      "requirement": "full-pool ranker plus policy-conditional profit/risk models pass compatibility audit"
+    },
+    {
+      "name": "independent_blind_window",
+      "passed": false,
+      "observed": false,
+      "requirement": "true and never reused for tuning"
+    },
+    {
+      "name": "verified_execution_basis",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "historical_full_pool_intraday_coverage",
+      "passed": false,
+      "observed": 0.43557735176103435,
+      "requirement": "100% of the frozen first-board and consecutive-board pool"
+    },
+    {
+      "name": "incomplete_intraday_universe_fails_closed",
+      "passed": true,
+      "observed": {
+        "coverage_complete": false,
+        "selection_status": "BLOCKED_INCOMPLETE_CANDIDATE_UNIVERSE",
+        "selected_days": 0
+      },
+      "requirement": "complete pool may rank; incomplete pool must produce zero selections"
+    },
+    {
+      "name": "blind_completed_trades",
+      "passed": false,
+      "observed": 0,
+      "requirement": ">=100"
+    },
+    {
+      "name": "complete_trade_win_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": ">=70%"
+    },
+    {
+      "name": "large_loss_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": "<=10%"
+    },
+    {
+      "name": "positive_mean_net_return",
+      "passed": false,
+      "observed": null,
+      "requirement": ">0 after all costs"
+    },
+    {
+      "name": "profit_factor",
+      "passed": false,
+      "observed": null,
+      "requirement": ">1"
+    },
+    {
+      "name": "account_drawdown_budget",
+      "passed": false,
+      "observed": null,
+      "requirement": "known and within pre-frozen maximum drawdown"
+    },
+    {
+      "name": "better_than_simple_baseline",
+      "passed": false,
+      "observed": null,
+      "requirement": "true under identical scope/execution/costs"
+    },
+    {
+      "name": "first_and_relay_reported_separately",
+      "passed": false,
+      "observed": [],
+      "requirement": "both groups reported without selective deletion"
+    }
+  ],
+  "frozen_forward_gates": [
+    {
+      "name": "model_and_rules_frozen",
+      "passed": false,
+      "observed": false,
+      "requirement": "true"
+    },
+    {
+      "name": "no_forward_retuning",
+      "passed": false,
+      "observed": null,
+      "requirement": "true"
+    },
+    {
+      "name": "forward_completed_trades",
+      "passed": false,
+      "observed": 0,
+      "requirement": ">=60"
+    },
+    {
+      "name": "forward_complete_trade_win_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": ">=70%"
+    },
+    {
+      "name": "forward_large_loss_rate",
+      "passed": false,
+      "observed": null,
+      "requirement": "<=10%"
+    },
+    {
+      "name": "forward_positive_mean_net_return",
+      "passed": false,
+      "observed": null,
+      "requirement": ">0 after all costs"
+    },
+    {
+      "name": "forward_account_drawdown_budget",
+      "passed": false,
+      "observed": null,
+      "requirement": "known and within pre-frozen maximum drawdown"
+    }
+  ],
+  "failed_gates": [
+    "complete_point_in_time_universe",
+    "point_in_time_cross_theme_competition",
+    "point_in_time_theme_catalyst_archive",
+    "verified_severe_abnormal_path_model",
+    "validated_two_to_three_day_emotion_path",
+    "complete_trade_dataset_ready",
+    "purged_chronological_split_ready",
+    "development_model_ready",
+    "validation_threshold_frozen",
+    "full_pool_ranking_scope",
+    "compatible_two_stage_model_stack",
+    "independent_blind_window",
+    "verified_execution_basis",
+    "historical_full_pool_intraday_coverage",
+    "blind_completed_trades",
+    "complete_trade_win_rate",
+    "large_loss_rate",
+    "positive_mean_net_return",
+    "profit_factor",
+    "account_drawdown_budget",
+    "better_than_simple_baseline",
+    "first_and_relay_reported_separately",
+    "model_and_rules_frozen",
+    "no_forward_retuning",
+    "forward_completed_trades",
+    "forward_complete_trade_win_rate",
+    "forward_large_loss_rate",
+    "forward_positive_mean_net_return",
+    "forward_account_drawdown_budget"
+  ],
+  "scope": "all supplied Shanghai/Shenzhen main-board non-ST closing limit-ups: first and consecutive boards",
+  "note": "70% is a complete-trade challenge gate, not a forecast or return guarantee",
+  "evidence": {
+    "data": {
+      "trading_days": 504,
+      "universe_complete": false,
+      "point_in_time_status_complete": true,
+      "cross_theme_competition_ready": false,
+      "theme_catalyst_archive_ready": false,
+      "severe_abnormal_path_ready": false,
+      "emotion_path_ready": false,
+      "all_observed_board_levels_reported": true,
+      "board_observations": {
+        "1": 28265,
+        "2": 5152,
+        "3": 1742,
+        "4": 818,
+        "5": 381,
+        "6": 190,
+        "7": 96,
+        "8": 49,
+        "9": 27,
+        "10": 13,
+        "11": 7,
+        "12": 4,
+        "13": 2
+      },
+      "candidate_rows": 37325
+    },
+    "blind_complete_trades": {
+      "complete_trade_dataset_ready": false,
+      "purged_split_ready": false,
+      "development_model_ready": false,
+      "validation_threshold_frozen": false,
+      "can_rank_full_pool": false,
+      "model_stack_compatible": false,
+      "independent_blind_window": false,
+      "execution_basis_verified": false,
+      "completed_trades": 0,
+      "win_rate": null,
+      "big_loss_rate": null,
+      "mean_net_return": null,
+      "profit_factor": null,
+      "account_max_drawdown": null,
+      "frozen_max_drawdown_limit": null,
+      "outperforms_baseline": null,
+      "group_metrics": {}
+    },
+    "frozen_forward": {
+      "frozen_before_period": false,
+      "no_retuning": null,
+      "completed_trades": 0,
+      "win_rate": null,
+      "big_loss_rate": null,
+      "mean_net_return": null,
+      "account_max_drawdown": null,
+      "frozen_max_drawdown_limit": null
+    },
+    "historical_execution_replay": {
+      "status": "DIAGNOSTIC_ONLY",
+      "cohort_rows": 2243,
+      "covered_rows": 977,
+      "missing_rows": 1266,
+      "candidate_universe_coverage_complete": false,
+      "candidate_universe_coverage_rate": 0.43557735176103435,
+      "selection_coverage_status": "BLOCKED_INCOMPLETE_CANDIDATE_UNIVERSE",
+      "selected_days": 0,
+      "usable_board_group_counts": {
+        "CONSECUTIVE_BOARD": 522,
+        "FIRST_BOARD": 455
+      },
+      "missing_board_group_counts": {
+        "FIRST_BOARD": 1266
+      },
+      "actual_verified_fills": 0,
+      "remediation_request_pack": {
+        "status": "DATA_REQUEST_ONLY",
+        "requested": 2243,
+        "already_complete": 968,
+        "remaining": 1275,
+        "date_count": 26,
+        "claim": "request coverage only; no market data or fills created"
+      }
+    },
+    "research_proxy": {
+      "status": "EXPLORATORY_ONLY",
+      "deployment_authorized": false,
+      "target": "next_session_non_one_price_limit_touch_and_b2_positive_close_mark_proxy",
+      "target_coverage": {
+        "target_horizon": "B+2",
+        "identity_resolved_rows": 36674,
+        "target_unknown_rows_excluded": 24322,
+        "target_known_rows": 12352
+      },
+      "role_backtest_status": "EXPLORATORY_ONLY",
+      "role_target_coverage": {
+        "target_horizon": "B+2",
+        "target_rows_before_unknown_filter": 36674,
+        "target_unknown_rows": 24322,
+        "target_known_rows": 12352
+      },
+      "feature_rebuild": {
+        "status": "DIAGNOSTIC_ONLY",
+        "emotion_state_one_hot_reconstructed_rows": 669,
+        "emotion_state_unresolved_rows": 0,
+        "feature_complete_reconstructed_rows": 36674
+      },
+      "walkforward_status": "EXPLORATORY_ONLY",
+      "explicit_no_touch_negative_target": true,
+      "walkforward_folds": 7,
+      "walkforward_models": {
+        "height_only": {
+          "selected_sessions": 237,
+          "proxy_success_rate": 0.18565400843881857,
+          "b2_positive_rate": 0.35333333333333333,
+          "b2_large_loss_rate": 0.47333333333333333
+        },
+        "identity": {
+          "selected_sessions": 237,
+          "proxy_success_rate": 0.18565400843881857,
+          "b2_positive_rate": 0.35333333333333333,
+          "b2_large_loss_rate": 0.47333333333333333
+        },
+        "identity_plus_emotion": {
+          "selected_sessions": 237,
+          "proxy_success_rate": 0.18565400843881857,
+          "b2_positive_rate": 0.35333333333333333,
+          "b2_large_loss_rate": 0.47333333333333333
+        },
+        "identity_emotion_price_volume": {
+          "selected_sessions": 237,
+          "proxy_success_rate": 0.16455696202531644,
+          "b2_positive_rate": 0.3151515151515151,
+          "b2_large_loss_rate": 0.4666666666666667
+        },
+        "role_normalized_identity_emotion_price_volume": {
+          "selected_sessions": 237,
+          "proxy_success_rate": 0.1729957805907173,
+          "b2_positive_rate": 0.35172413793103446,
+          "b2_large_loss_rate": 0.4413793103448276
+        }
+      },
+      "complete_trade_count": 0,
+      "group_rank_governance": {
+        "status": "GROUP_RANK_UPLIFT_NOT_PROVEN",
+        "first_board_probability_improvement_claim_allowed": false,
+        "relay_probability_improvement_claim_allowed": false,
+        "deployment_allowed": false
+      },
+      "interpretation": "diagnostic proxy evidence only; never a complete-trade gate"
+    }
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\manifest.json": "c9cddad05789adc3b7cf9897a4c0f3438b69a648fd310fc9213b7423a446ac88",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\manifest.json": "cb2eacd1124cc2ed34810739530cb9cd350f6c1616196bb60c2627a171ea612d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\emotion_broken_feedback_20260905\\report.json": "faa21248a2f76ad28ea326312fd12f12902f5a396ea86bb768ccef114339940f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v10\\intraday_forward\\intraday_forward_monitor.json": "36b37933ff03019c80c748d8e29933b8386ce5cde03065606262df07d4e72a43",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v16\\full_pool_security_audit_20260906\\security_eligibility_audit.json": "ad51e40949b3c54e8e21fb08f22829369cac0e080dc939fed55d4b7ae34703bc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v3\\manifest.json": "c53b28431d909deddca7ccac78e987f0cc6b9ca8c52af612092f1a3b2ca7f277",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v16\\full_pool_proxy_backtest_inventory_cutoff_20260831_v15\\report.json": "c07f3c2270721ca4270a4480966d3dbaf0b1be64945033793c691a47b5e86bb4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v18\\full_pool_role_backtest_cutoff_20260831_v11\\report.json": "3e21363d6f4189cbf83db1dc1f453a6fdcec1b13fa3f2e6d3152bb36ebacd071",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\group_rank_walkforward_touchfixed_20260917_v4\\report.json": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v153\\group_rank_governance_touchfixed_20260917_v1.json": "2fa5f033eb86e5c4e10b77fcadd7c62c0246dbe75ca15c5f1270f6c8d6366213",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v157\\cross_theme_competition_20260914_v1\\manifest.json": "e2aabb991dff282fb3b07b3bdb670da16652b59ac7d8ccd89dfc75256d39110e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v161\\severe_abnormal_readiness_20260917_v2.json": "a5d8806f3d9893cf66692f58bec831a3cc3fcdbcc84e5ce156c07c45d1ac6eae",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v162\\emotion_path_forecast_20260917_v1\\report.json": "f24fecb5464c311f9d48eeb45067e6a85b01f6809d4884317ee154bd7faaa3bd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v164\\point_in_time_theme_archive_20260917_v1\\report.json": "643a0681a0e192d4cb4f3382c13c00d7a5e95cd86e849da7292d76b39d05bb64",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\minute_request_pack_20260907_v2\\manifest.json": "c568657f2fd168ad7c5a5076dc98f4127c8f1ac2820a7d63d05daf750cb0f345",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v48\\jan_feb_full_pool_coverage_20260907_v8\\report.json": "7023c9bcd6ba047efee282cb403fa0b3d17e9a959f054d89b88596d55179cfd6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\system_acceptance_audit.py": "2f1ce6f8a5b4ad83a4a8cd7a6a01af78d52196ad130eaaea3585804ee527097e"
+  }
+}

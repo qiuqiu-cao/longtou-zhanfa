@@ -1,0 +1,253 @@
+{
+  "version": "v154-model-evidence-registry-9",
+  "status": "DIAGNOSTIC_ONLY",
+  "target_fix": {
+    "explicit_next_session_touch_field": true,
+    "no_touch_rows_retained_as_negative": true,
+    "future_conditioned_pool_forbidden": true
+  },
+  "claim_permissions": {
+    "next_session_aggregate_emotion_risk_warning": true,
+    "next_session_damage_vector_aggregate": false,
+    "emotion_can_directly_rerank_stocks": false,
+    "first_board_probability_improvement": false,
+    "relay_probability_improvement": false,
+    "combined_leader_probability_improvement": false,
+    "severe_abnormal_counterfactual_path_rating": true,
+    "severe_abnormal_calibrated_hit_probability": false,
+    "severe_abnormal_candidate_reranking": false,
+    "two_to_three_day_emotion_path_probability": false,
+    "emotion_dynamic_path_factors_promoted": false,
+    "point_in_time_theme_factor_training": false,
+    "theme_catalyst_expectation_backlog_complete": false,
+    "complete_trade_win_rate_claim": false,
+    "paper_trade_ready": false,
+    "deployment_allowed": false
+  },
+  "current_artifacts": [
+    {
+      "path": "results/v144/emotion_actionable_risk_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "516c9eb9fff1e37b923da47aac28c54c4bef5583f7ef7777dad2707699d1aff3",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "NEXT_SESSION_AGGREGATE_RISK_WARNING"
+      ],
+      "reason": "May adjust confirmation strictness; cannot rerank stocks or promise entry."
+    },
+    {
+      "path": "results/v149/theme_factor_readiness_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "cc82b2fea5ed8d1cc86c986c7a45f98b0176a638ccd480a21f80edb52a515dd6",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "THEME_DATA_READINESS"
+      ],
+      "reason": "Audits whether point-in-time specific-theme evidence is trainable."
+    },
+    {
+      "path": "results/v155/emotion_damage_vector_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "4dd59cbe9a26322d82df7cef7f59d5627910ce557edfd442defb40ee80ae5e2b",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "NEXT_SESSION_DAMAGE_COMPONENT_RESEARCH"
+      ],
+      "reason": "Only promoted components may corroborate V144; the aggregate gate currently fails."
+    },
+    {
+      "path": "results/v156/emotion_scenario_20260916_v1.json",
+      "exists": true,
+      "sha256": "bf41aba9091e893bdfca2eb49cf470b64172bbe8ab2510b11d9d800d48d4799e",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "EMOTION_FIRST_DAILY_SCENARIO"
+      ],
+      "reason": "Explains main, support and invalidation paths without authorizing an entry."
+    },
+    {
+      "path": "results/v157/cross_theme_competition_20260914_v1/manifest.json",
+      "exists": true,
+      "sha256": "e2aabb991dff282fb3b07b3bdb670da16652b59ac7d8ccd89dfc75256d39110e",
+      "status": "CURRENT_DESCRIPTIVE_ONLY",
+      "claim_scope": [
+        "CROSS_THEME_COMPETITION_READINESS"
+      ],
+      "reason": "Separates first-board new-cycle races from relay height races; current scope is incomplete."
+    },
+    {
+      "path": "results/v158/short_term_knowledge_audit_20260917_v3.json",
+      "exists": true,
+      "sha256": "201870ef87d436db89641f771cc36978a48486babdf7783a37cd7efa3bf44804",
+      "status": "CURRENT_RESEARCH_GOVERNANCE",
+      "claim_scope": [
+        "SHORT_TERM_HYPOTHESIS_GOVERNANCE"
+      ],
+      "reason": "Seventeen sourced hypotheses have proxies and counterexamples; none is production ready."
+    },
+    {
+      "path": "results/v160/seal_speed_tradeoff_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "7855dba7add40ed507b5cdb472e57b0c6c164f11408f734d0448763a2feb5c13",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "FIRST_BOARD_SEAL_SPEED_TRADEOFF"
+      ],
+      "reason": "Fast sealing is an attention/identity clue only; neither positive ranking nor hard rejection is authorized."
+    },
+    {
+      "path": "results/v161/severe_abnormal_readiness_20260917_v2.json",
+      "exists": true,
+      "sha256": "a5d8806f3d9893cf66692f58bec831a3cc3fcdbcc84e5ce156c07c45d1ac6eae",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "SEVERE_ABNORMAL_PATH_READINESS"
+      ],
+      "reason": "Rule-distance paths may be shown diagnostically; calibrated hit probability and candidate reranking remain forbidden."
+    },
+    {
+      "path": "results/v162/emotion_path_forecast_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "f24fecb5464c311f9d48eeb45067e6a85b01f6809d4884317ee154bd7faaa3bd",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "TWO_TO_THREE_SESSION_EMOTION_PATH"
+      ],
+      "reason": "Four-class path model loses to Markov on Brier/log loss; only qualitative scenarios are authorized."
+    },
+    {
+      "path": "results/v163/emotion_path_dynamics_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "ef4cdcd005bf4e22e9c701c0a0115169336b06183aae77fde1df75b0198d99ad",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "EMOTION_PATH_DYNAMIC_FACTOR_ABLATION"
+      ],
+      "reason": "Backward-looking deltas and state duration worsen calibration and win only one of six folds."
+    },
+    {
+      "path": "results/v164/point_in_time_theme_archive_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "643a0681a0e192d4cb4f3382c13c00d7a5e95cd86e849da7292d76b39d05bb64",
+      "status": "CURRENT_DIAGNOSTIC",
+      "claim_scope": [
+        "POINT_IN_TIME_THEME_CATALYST_ARCHIVE"
+      ],
+      "reason": "Normalizes all candidates and keeps unknown themes explicit; catalyst timing and expectation fields remain incomplete."
+    },
+    {
+      "path": "results/v165/theme_catalyst_backlog_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "051791ac7d8ddd1aaa6c241603631bcc382392831922459b3d708a276889ace4",
+      "status": "CURRENT_RESEARCH_GOVERNANCE",
+      "claim_scope": [
+        "THEME_CATALYST_EXPECTATION_BACKLOG"
+      ],
+      "reason": "Creates one evidence task per known date/theme; no completed factor row is yet authorized."
+    },
+    {
+      "path": "results/v151/theme_competition_archive_20260914_v1/manifest.json",
+      "exists": true,
+      "sha256": "547b49614396dbdb88fbd88ff0438924d047f10e23216730d39afc0b353387e3",
+      "status": "CURRENT_DESCRIPTIVE_ONLY",
+      "claim_scope": [
+        "THEME_ARCHIVE_COVERAGE"
+      ],
+      "reason": "Keeps unknown themes explicit; current rows are not model eligible."
+    },
+    {
+      "path": "results/v152/full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2/manifest.json",
+      "exists": true,
+      "sha256": "cb2eacd1124cc2ed34810739530cb9cd350f6c1616196bb60c2627a171ea612d",
+      "status": "CURRENT_RESEARCH",
+      "claim_scope": [
+        "CORRECTED_LABEL_DEFINITION"
+      ],
+      "reason": "No-touch candidates are retained as negatives; path returns remain conditional proxies."
+    },
+    {
+      "path": "results/v152/group_rank_walkforward_touchfixed_20260917_v4/report.json",
+      "exists": true,
+      "sha256": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c",
+      "status": "CURRENT_RESEARCH",
+      "claim_scope": [
+        "GROUP_RANK_EXPLORATION"
+      ],
+      "reason": "Corrected group walk-forward; does not prove first-board or relay uplift."
+    },
+    {
+      "path": "results/v153/group_rank_governance_touchfixed_20260917_v1.json",
+      "exists": true,
+      "sha256": "2fa5f033eb86e5c4e10b77fcadd7c62c0246dbe75ca15c5f1270f6c8d6366213",
+      "status": "CURRENT_AUTHORITY",
+      "claim_scope": [
+        "LEADER_PROBABILITY_CLAIM_GOVERNANCE"
+      ],
+      "reason": "Authoritative switch for group probability-improvement claims."
+    },
+    {
+      "path": "results/current_acceptance_report_20260917_v164.json",
+      "exists": true,
+      "sha256": "5f8ff399aa1a2e7261f56b8b37b4338f5ac996390fb62af00a8be97edc6b7bf4",
+      "status": "CURRENT_AUTHORITY",
+      "claim_scope": [
+        "SYSTEM_DEPLOYMENT_STATUS"
+      ],
+      "reason": "Authoritative deployment and paper-trade readiness decision."
+    }
+  ],
+  "superseded_artifacts": [
+    {
+      "path": "results/full_pool_outcomes_20260905/manifest.json",
+      "exists": true,
+      "sha256": "c5af9e6dbd79496d8d80466c81f36443cad4ce07f13de410539865820d0c4659",
+      "status": "SUPERSEDED_FOR_PROBABILITY_CLAIMS",
+      "claim_scope": [],
+      "reason": "Legacy target construction did not retain explicit no-touch negatives."
+    },
+    {
+      "path": "data/v16/full_pool_outcomes_inventory_cutoff_20260831_v3/manifest.json",
+      "exists": true,
+      "sha256": "c45123c5dddd11102e17c7599148c6fff0d6aa88f1119eec0cf61013831df4cb",
+      "status": "SUPERSEDED_FOR_PROBABILITY_CLAIMS",
+      "claim_scope": [],
+      "reason": "Legacy target construction conditioned the analyzable pool on future touch evidence."
+    },
+    {
+      "path": "results/v17/full_pool_proxy_walkforward_cutoff_20260831_v6/report.json",
+      "exists": true,
+      "sha256": "e7c4e64a81cffdfd014bc91f8e3f5b4dc4cab8200efa8672d1fc80844ae9294e",
+      "status": "SUPERSEDED_FOR_PROBABILITY_CLAIMS",
+      "claim_scope": [],
+      "reason": "Walk-forward used the legacy future-conditioned target universe."
+    },
+    {
+      "path": "results/v18/full_pool_role_backtest_cutoff_20260831_v11/report.json",
+      "exists": true,
+      "sha256": "3e21363d6f4189cbf83db1dc1f453a6fdcec1b13fa3f2e6d3152bb36ebacd071",
+      "status": "SUPERSEDED_FOR_PROBABILITY_CLAIMS",
+      "claim_scope": [],
+      "reason": "Role metrics used the legacy future-conditioned opportunity label."
+    },
+    {
+      "path": "results/v132/height_anchor_joint_buy_rowfix_v2/report.json",
+      "exists": true,
+      "sha256": "63520a1d5951727fefcb0da170a9825465187ccddaf4fa012767b6ae62043110",
+      "status": "SUPERSEDED_FOR_STOCK_RANKING_CLAIMS",
+      "claim_scope": [],
+      "reason": "Selected-row audit descends from legacy opportunity evidence."
+    },
+    {
+      "path": "results/v147/emotion_leader_overlay_20260917_v1/report.json",
+      "exists": true,
+      "sha256": "2a0602f3ca6449ec083c82abb185204b31c1a6a29f1639e329d41ca35587699e",
+      "status": "SUPERSEDED_FOR_STOCK_RANKING_CLAIMS",
+      "claim_scope": [
+        "CONSERVATIVE_NO_RERANK_CONCLUSION_ONLY"
+      ],
+      "reason": "Its non-authorization conclusion remains conservative, but its stock-level rates cannot support uplift."
+    }
+  ],
+  "interpretation": "V144 may forecast aggregate next-session risk only. Leader selection probability cannot be claimed improved until V150 specific-theme factors pass a new isolated group walk-forward and complete-trade validation. V161 permits severe-abnormal rule-distance diagnostics only, not a calibrated hit probability or buy ranking. V162/V163 do not authorize a two-to-three-day emotion probability; daily output must remain main/alternative/risk scenarios with invalidation conditions. V164 keeps theme membership separate from catalyst timing and expectation saturation; current theme evidence cannot train or rerank candidates.",
+  "generated_at": "2026-09-17T03:28:34.092798+08:00"
+}

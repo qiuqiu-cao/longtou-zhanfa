@@ -1,0 +1,460 @@
+{
+  "version": "v166-cumulative-turnover-tradeoff-1",
+  "status": "EXPLORATORY_ONLY",
+  "hypothesis_id": "H020",
+  "candidate_rows": 6213,
+  "candidate_sessions": 503,
+  "feature_available_rows": 6213,
+  "feature_missing_rows": 0,
+  "missing_policy": "unavailable; never filled with zero",
+  "identity_target": "next-session close-limit promotion; no-touch rows retained as negatives",
+  "trade_target": "B+2 net close mark positive, conditional on next-session touch and non-one-price proxy",
+  "identity_walk_forward": {
+    "overall": {
+      "n": 2787,
+      "sessions": 238,
+      "baseline": {
+        "n": 2787,
+        "positive_rate": 0.40832436311446,
+        "auc": 0.642760004732058,
+        "brier": 0.23450067722723214
+      },
+      "enhanced": {
+        "n": 2787,
+        "positive_rate": 0.40832436311446,
+        "auc": 0.6497930790456165,
+        "brier": 0.23351886256266083
+      },
+      "clustered_brier_delta": {
+        "mean": -0.0006029558400183896,
+        "ci95_low": -0.0020628951332117606,
+        "ci95_high": 0.0008551406155745146,
+        "sessions": 238,
+        "interpretation": "negative favors cumulative-turnover model"
+      },
+      "fold_brier_wins": 3
+    },
+    "folds": [
+      {
+        "fold": "2025Q1",
+        "status": "COMPLETE",
+        "train_end": "2024-12-03",
+        "embargo_sessions": 20,
+        "train_n": 3045,
+        "test_n": 699,
+        "baseline": {
+          "n": 699,
+          "positive_rate": 0.4334763948497854,
+          "auc": 0.6765509884321765,
+          "brier": 0.22936324090719654
+        },
+        "enhanced": {
+          "n": 699,
+          "positive_rate": 0.4334763948497854,
+          "auc": 0.6810347701436811,
+          "brier": 0.22959135794401414
+        },
+        "brier_delta_enhanced_minus_baseline": 0.00022811703681760442,
+        "auc_delta_enhanced_minus_baseline": 0.004483781711504542,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 9.273392475923204,
+            "high": 19.939035428518697
+          },
+          "3": {
+            "low": 13.08813465618203,
+            "high": 29.492065545008874
+          },
+          "4": {
+            "low": 17.46625417873017,
+            "high": 41.201777407828615
+          },
+          "5": {
+            "low": 27.05900315908551,
+            "high": 51.757685800748455
+          },
+          "fallback": {
+            "low": 10.81449014287009,
+            "high": 24.81082293033918
+          }
+        }
+      },
+      {
+        "fold": "2025Q2",
+        "status": "COMPLETE",
+        "train_end": "2025-03-03",
+        "embargo_sessions": 20,
+        "train_n": 3882,
+        "test_n": 708,
+        "baseline": {
+          "n": 708,
+          "positive_rate": 0.4081920903954802,
+          "auc": 0.6266609409452395,
+          "brier": 0.2397270133094322
+        },
+        "enhanced": {
+          "n": 708,
+          "positive_rate": 0.4081920903954802,
+          "auc": 0.6249432245170988,
+          "brier": 0.23963467672883013
+        },
+        "brier_delta_enhanced_minus_baseline": -9.233658060206484e-05,
+        "auc_delta_enhanced_minus_baseline": -0.0017177164281406698,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 9.833053108473305,
+            "high": 21.024952542372883
+          },
+          "3": {
+            "low": 13.77874708916418,
+            "high": 32.20401872847072
+          },
+          "4": {
+            "low": 20.30056364433579,
+            "high": 44.18906316688882
+          },
+          "5": {
+            "low": 29.58749066848658,
+            "high": 52.943333718278936
+          },
+          "fallback": {
+            "low": 11.62448117346402,
+            "high": 26.580768147862113
+          }
+        }
+      },
+      {
+        "fold": "2025Q3",
+        "status": "COMPLETE",
+        "train_end": "2025-05-30",
+        "embargo_sessions": 20,
+        "train_n": 4596,
+        "test_n": 776,
+        "baseline": {
+          "n": 776,
+          "positive_rate": 0.3904639175257732,
+          "auc": 0.6252276390429741,
+          "brier": 0.2373724736575785
+        },
+        "enhanced": {
+          "n": 776,
+          "positive_rate": 0.3904639175257732,
+          "auc": 0.6378288991689867,
+          "brier": 0.23540566255230458
+        },
+        "brier_delta_enhanced_minus_baseline": -0.0019668111052739135,
+        "auc_delta_enhanced_minus_baseline": 0.012601260126012592,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 10.230860781047234,
+            "high": 21.759479777213535
+          },
+          "3": {
+            "low": 14.18749535656713,
+            "high": 32.59586101236211
+          },
+          "4": {
+            "low": 21.39908192643829,
+            "high": 45.03277750416839
+          },
+          "5": {
+            "low": 30.089515863373606,
+            "high": 54.144383621653425
+          },
+          "fallback": {
+            "low": 12.134366353274144,
+            "high": 27.255599936505366
+          }
+        }
+      },
+      {
+        "fold": "2025Q4",
+        "status": "COMPLETE",
+        "train_end": "2025-09-02",
+        "embargo_sessions": 20,
+        "train_n": 5394,
+        "test_n": 604,
+        "baseline": {
+          "n": 604,
+          "positive_rate": 0.402317880794702,
+          "auc": 0.637073515497646,
+          "brier": 0.23063032625299115
+        },
+        "enhanced": {
+          "n": 604,
+          "positive_rate": 0.402317880794702,
+          "auc": 0.6534318251769775,
+          "brier": 0.22847113492494994
+        },
+        "brier_delta_enhanced_minus_baseline": -0.00215919132804121,
+        "auc_delta_enhanced_minus_baseline": 0.016358309679331495,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 10.400078660710454,
+            "high": 22.278771349114816
+          },
+          "3": {
+            "low": 14.75832543279311,
+            "high": 32.820185723503904
+          },
+          "4": {
+            "low": 23.005759193333173,
+            "high": 45.73862452833621
+          },
+          "5": {
+            "low": 30.00327900873668,
+            "high": 54.534850101069125
+          },
+          "fallback": {
+            "low": 12.402306809218365,
+            "high": 27.667909146353956
+          }
+        }
+      }
+    ]
+  },
+  "triggered_trade_walk_forward": {
+    "overall": {
+      "n": 1222,
+      "sessions": 236,
+      "baseline": {
+        "n": 1222,
+        "positive_rate": 0.38543371522094927,
+        "auc": 0.524071231281151,
+        "brier": 0.2604611125067013
+      },
+      "enhanced": {
+        "n": 1222,
+        "positive_rate": 0.38543371522094927,
+        "auc": 0.5263442091365794,
+        "brier": 0.26077087234540924
+      },
+      "clustered_brier_delta": {
+        "mean": 1.3216411171507134e-05,
+        "ci95_low": -0.0033926856037534525,
+        "ci95_high": 0.0032778437730168076,
+        "sessions": 236,
+        "interpretation": "negative favors cumulative-turnover model"
+      },
+      "fold_brier_wins": 2
+    },
+    "folds": [
+      {
+        "fold": "2025Q1",
+        "status": "COMPLETE",
+        "train_end": "2024-12-03",
+        "embargo_sessions": 20,
+        "train_n": 1343,
+        "test_n": 317,
+        "baseline": {
+          "n": 317,
+          "positive_rate": 0.34069400630914826,
+          "auc": 0.6010544036859826,
+          "brier": 0.259733033963591
+        },
+        "enhanced": {
+          "n": 317,
+          "positive_rate": 0.34069400630914826,
+          "auc": 0.5985291511607301,
+          "brier": 0.2589441297474355
+        },
+        "brier_delta_enhanced_minus_baseline": -0.0007889042161554616,
+        "auc_delta_enhanced_minus_baseline": -0.002525252525252486,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 9.607139574715456,
+            "high": 20.62547378137508
+          },
+          "3": {
+            "low": 13.233824299272026,
+            "high": 26.895417969923464
+          },
+          "4": {
+            "low": 17.800367481750722,
+            "high": 41.88491802815327
+          },
+          "5": {
+            "low": 29.58749066848658,
+            "high": 50.25466964776033
+          },
+          "fallback": {
+            "low": 11.425755313651413,
+            "high": 25.939424656843983
+          }
+        }
+      },
+      {
+        "fold": "2025Q2",
+        "status": "COMPLETE",
+        "train_end": "2025-03-03",
+        "embargo_sessions": 20,
+        "train_n": 1768,
+        "test_n": 318,
+        "baseline": {
+          "n": 318,
+          "positive_rate": 0.44654088050314467,
+          "auc": 0.479673495518566,
+          "brier": 0.26047644194834463
+        },
+        "enhanced": {
+          "n": 318,
+          "positive_rate": 0.44654088050314467,
+          "auc": 0.48351472471190776,
+          "brier": 0.26139840492357913
+        },
+        "brier_delta_enhanced_minus_baseline": 0.0009219629752345027,
+        "auc_delta_enhanced_minus_baseline": 0.0038412291933417886,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 10.307487131367454,
+            "high": 21.863922915019515
+          },
+          "3": {
+            "low": 13.766850728841838,
+            "high": 29.384178311246437
+          },
+          "4": {
+            "low": 23.464942380451518,
+            "high": 45.203433749999995
+          },
+          "5": {
+            "low": 31.64669744988663,
+            "high": 52.262385283336904
+          },
+          "fallback": {
+            "low": 12.40259145883414,
+            "high": 27.545182748051268
+          }
+        }
+      },
+      {
+        "fold": "2025Q3",
+        "status": "COMPLETE",
+        "train_end": "2025-05-30",
+        "embargo_sessions": 20,
+        "train_n": 2086,
+        "test_n": 338,
+        "baseline": {
+          "n": 338,
+          "positive_rate": 0.39349112426035504,
+          "auc": 0.509187603154227,
+          "brier": 0.26080108717213435
+        },
+        "enhanced": {
+          "n": 338,
+          "positive_rate": 0.39349112426035504,
+          "auc": 0.5161195672107097,
+          "brier": 0.2599986472058944
+        },
+        "brier_delta_enhanced_minus_baseline": -0.000802439966239965,
+        "auc_delta_enhanced_minus_baseline": 0.006931964056482776,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 10.52903768372179,
+            "high": 22.989390053720314
+          },
+          "3": {
+            "low": 14.056978462759114,
+            "high": 30.150756076417935
+          },
+          "4": {
+            "low": 23.22854681981048,
+            "high": 45.113009688208614
+          },
+          "5": {
+            "low": 32.27617347514306,
+            "high": 52.586921350727884
+          },
+          "fallback": {
+            "low": 13.139589876564612,
+            "high": 28.41426807583231
+          }
+        }
+      },
+      {
+        "fold": "2025Q4",
+        "status": "COMPLETE",
+        "train_end": "2025-09-02",
+        "embargo_sessions": 20,
+        "train_n": 2435,
+        "test_n": 249,
+        "baseline": {
+          "n": 249,
+          "positive_rate": 0.3534136546184739,
+          "auc": 0.5191276115189158,
+          "brier": 0.2609069546705849
+        },
+        "enhanced": {
+          "n": 249,
+          "positive_rate": 0.3534136546184739,
+          "auc": 0.5236448334274422,
+          "brier": 0.26334329861390604
+        },
+        "brier_delta_enhanced_minus_baseline": 0.002436343943321151,
+        "auc_delta_enhanced_minus_baseline": 0.0045172219085263254,
+        "tier_thresholds_fit_on_train_only": {
+          "2": {
+            "low": 10.504963287713833,
+            "high": 22.92884321935511
+          },
+          "3": {
+            "low": 14.79454169895116,
+            "high": 31.39136719476685
+          },
+          "4": {
+            "low": 23.247725155023254,
+            "high": 45.42782295315653
+          },
+          "5": {
+            "low": 30.907394874705304,
+            "high": 53.637172082734374
+          },
+          "fallback": {
+            "low": 13.247515712945896,
+            "high": 28.476752467568595
+          }
+        }
+      }
+    ]
+  },
+  "point_in_time_turnover_tiers": [
+    {
+      "tier": "LOW",
+      "identity_n": 696,
+      "promotion_rate": 0.5258620689655172,
+      "trade_n": 337,
+      "b2_positive_rate": 0.3590504451038576,
+      "b2_mean_net_return": -0.04425299483244978,
+      "b2_big_loss_rate": 0.4540059347181009
+    },
+    {
+      "tier": "MID",
+      "identity_n": 943,
+      "promotion_rate": 0.4061505832449629,
+      "trade_n": 403,
+      "b2_positive_rate": 0.3970223325062035,
+      "b2_mean_net_return": -0.027612801498212512,
+      "b2_big_loss_rate": 0.40694789081885857
+    },
+    {
+      "tier": "HIGH",
+      "identity_n": 1148,
+      "promotion_rate": 0.33885017421602787,
+      "trade_n": 482,
+      "b2_positive_rate": 0.3941908713692946,
+      "b2_mean_net_return": -0.028995987146917767,
+      "b2_big_loss_rate": 0.4004149377593361
+    }
+  ],
+  "inverted_u_observed_in_both_targets": false,
+  "evidence_gate_passed": false,
+  "direct_model_use_allowed": false,
+  "reason_direct_use_forbidden": "The 2025 validation period has been repeatedly inspected and is not a fresh blind set; daily-bar entry and exit remain opportunity proxies rather than verified fills.",
+  "input_hashes": {
+    "features": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "outcomes": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "daily": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "outcome_manifest": "cb2eacd1124cc2ed34810739530cb9cd350f6c1616196bb60c2627a171ea612d",
+    "target_contract": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c"
+  }
+}

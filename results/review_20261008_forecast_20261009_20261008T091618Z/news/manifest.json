@@ -1,0 +1,85 @@
+{
+  "generated_at_utc": "2026-10-08 09:25:04 UTC",
+  "task": "2026-10-08 新闻与名称叙事有限核验",
+  "search_rounds": 4,
+  "queries_per_round_max": 4,
+  "web_tool_retrieval_interval_utc": [
+    "2026-10-08 09:19:14 UTC",
+    "2026-10-08 09:22:00 UTC"
+  ],
+  "time_note": "web 搜索原始响应按 session 区间记录取得时点；archive 时间仅表示文件生成时间。HTTP 文件均记录实际 request start/completion。",
+  "http_requests": [
+    {
+      "name": "yicai",
+      "url": "https://www.yicai.com/news/103386111.html",
+      "published": "2026-10-08 15:22:20 +08:00",
+      "retrieved": "2026-10-08T09:20:07.6891566Z",
+      "status": 200,
+      "sha256": "D85AF078444041CF9AACD554E8F0EEE895EC716DC2158EFEB00C76A6C7043380",
+      "scope": "原作者正文；板块/连板报道，不能替代独立行情封板核验"
+    },
+    {
+      "name": "tonghuashun",
+      "url": "https://news.10jqka.com.cn/20261008/c680471663.shtml",
+      "published": "2026-10-08 15:08:45 +08:00",
+      "retrieved": "2026-10-08T09:20:10.8537203Z",
+      "status": 200,
+      "sha256": "E171CC3A42883E6561D544F202E1ED23BE47AC365016AD7CB98224B31037B9C7",
+      "scope": "署名作者胡晶鑫收评；行情概括，观点不等于资金逐笔证据"
+    },
+    {
+      "name": "yangtse",
+      "url": "https://www.yangtse.com/news/yysp/202610/t20261008_400391.html",
+      "published": "2026-10-08 07:52:00 +08:00",
+      "retrieved": "2026-10-08T09:20:13.3804471Z",
+      "status": 200,
+      "sha256": "42411669D8554F1BF960396229D2011840538BEC31F4CECFD0A7911BF0318CE7",
+      "scope": "盘前背景；不作今日收盘事实；公告仍需公告原件"
+    },
+    {
+      "name": "cls_review_original_bytes",
+      "url": "https://www.cls.cn/detail/2499476",
+      "published": "2026-10-08 16:45 +08:00",
+      "retrieved": "2026-10-08T09:22:35.3472564Z",
+      "status": 200,
+      "sha256": "16CF4680BCF6E29E808861F1751F54B7215387DF2977C0323B83FC1508523252",
+      "scope": "枫林署名原作者收评。Invoke-WebRequest 返回 byte[]，cls_review.html 初保存为数字表示；保留该表示，并无网络重试从数字还原到 cls_review_original_bytes.html。"
+    },
+    {
+      "name": "cls_relay_reprint",
+      "url": "https://finance.eastmoney.com/a/202610083889608055.html",
+      "published": "2026-10-08 15:38 +08:00",
+      "retrieved": "2026-10-08T09:22:37.2214873Z",
+      "status": 200,
+      "sha256": "391E35A74BEFD9E0FC78638056C5162F2D670618CF7615558FF81664A5E2790D",
+      "scope": "已核转载正文。原站主页搜索摘录有相同线索，但原篇永久链接未核到。只确认限定转载有羊/阳叙事，不确认全市场共识/资金因果。"
+    },
+    {
+      "name": "miit_policy",
+      "url": "https://www.miit.gov.cn/zwgk/zcjd/art/2026/art_2d166bf3c90e45dfbdcd5fbaae9c9b17.html",
+      "published": "2026-09-28 15:24 +08:00",
+      "retrieved": "2026-10-08T09:23:59.9936808Z",
+      "status": 200,
+      "sha256": "03C0AB401FEBF0ABB6F52F556D89BF850EC11875BB86922EEC871FA7BF947DB4",
+      "scope": "官方政策解读，节前已发布；2030 全固态电池初步规模应用目标。"
+    }
+  ],
+  "failures": [
+    "web open 第一财经、同花顺、扬子晚报返回 Internal Error，各一次 HTTP 补采 200，正文已核。",
+    "雪球历史链接 web open Internal Error，无额外抓取。",
+    "web 单独 open 财联社/转载部分链接 Internal Error，各一次 HTTP 补采 200。",
+    "当日首字拼音 Y 广泛叙事未核到；不写市场没有讨论。",
+    "打板客等站最后更新12:21、芦苇复盘出现行情/时点缺口，不采用作收盘真值。"
+  ],
+  "name_definitions_before_comparison": [
+    "首字拼音首字母 Y：严格只看简称第一字，园林/亚邦/依依/亚联/阳光等，不把九阳、襄阳纳入这一组。",
+    "简称任一音节首字母 Y：与第一种分开，原 Sep30 帖举建业/兴业/昭衍等；通用行业后缀、多音/歧义需要在全表披露。",
+    "具体同字/同音 羊/洋/阳：延用节前已有字典；九阳/襄阳/圣阳/三羊马属于此观察口径；不将瑶/园/业自动扩成此组。"
+  ],
+  "classification": {
+    "narrative": "Sep30 淘股吧原作者正文已复核 Y 音节标记；当日已核财联社转载正文出现羊字辈。原转载源未核，今日广义Y首字母共识未知。",
+    "price_co_movement": "当日新闻将九阳、三羊马、圣阳串联，但三羊马/圣阳只写盘中一度涨停。最终涨停/失败、完整成员分母由本批行情底稿独立核验，新闻不代填。",
+    "predictive_effect": "未验证。名称只独立情绪观察，不进入原模型/分数/晋级/身份/买入条件。",
+    "learning": "节前政策在节后重复报道，事件时点与页面发布时间分开；名称叙事出现与全部同音股晋级分开，保留失败反例；技术股下跌不自动推断所有短线题材退潮。"
+  }
+}

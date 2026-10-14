@@ -1,0 +1,164 @@
+{
+  "version": "relay-proxy-evidence-fixed-1",
+  "formed_at": "2026-10-13T12:12:59.149805+00:00",
+  "status": "PRE_REGISTERED_NOT_FITTED_NEW_BATCH_REQUIRED",
+  "hypothesis": "Historical proxy observations with insufficient source atoms should be UNKNOWN rather than treated as verified0/1; preserving known false counters may reduce nonword false negatives without deleting the feature",
+  "evidence": {
+    "ambiguous_historical_cells": 551,
+    "stored0": 517,
+    "stored1": 34,
+    "qualification_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_semantics_20261013T115031Z\\proxy_evidence_qualification.json",
+    "qualification_sha256": "12e1823e91f96f32925531072b90404a5cf5f8d1c908be1139ca890b438f026f"
+  },
+  "arms": [
+    "BASE",
+    "PROXY_EVIDENCE_UNKNOWN"
+  ],
+  "baseline": "Original saved BASE predictions, no refit; all same dates/stocks/targets",
+  "prepared_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib",
+  "prepared_sha256": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+  "prepared_source_receipt": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json",
+  "prepared_source_receipt_sha256": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+  "baseline_predictions": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv",
+  "baseline_predictions_sha256": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+  "original_protocol": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\protocol_BEFORE_EFFECTS.json",
+  "original_protocol_sha256": "bc10758cad773a130358a069d321dba9fc632ae87135d375b8fd6c24f19eccf6",
+  "fields": [
+    "boards",
+    "height_gap",
+    "same_height_rivals",
+    "unique_space",
+    "height_share",
+    "is_space_leader",
+    "emotion_score",
+    "promotion_2to3",
+    "promotion_3to4",
+    "promotion_mid",
+    "previous_limit_tail_loss",
+    "failed_rate",
+    "down_limit_rate",
+    "breadth_health",
+    "ladder_health",
+    "loss_effect_health",
+    "crowding_risk",
+    "regime_fragility",
+    "turnover",
+    "signal_amount",
+    "amplitude",
+    "turnover_vs_prev",
+    "price",
+    "price_same_height_percentile",
+    "signal_amount_same_height_percentile",
+    "turnover_same_height_percentile",
+    "turnover_vs_prev_same_height_percentile",
+    "signal_one_word",
+    "log_signal_amount"
+  ],
+  "mask_policy": {
+    "historical_recipe_boundary": "date < 2026-09-01, exactly original feature-recipe boundary",
+    "atoms": [
+      "first seal <=09:25:01.2",
+      "last seal <=09:25:01.2",
+      "bomb_count ==0",
+      "provider turnover pct <3"
+    ],
+    "three_valued_AND": "If any observed atom is false, keep original proxy0. If all atoms observed and true, keep original proxy1. Otherwise mask signal_one_word toNaN, preserving all stock rows and original targets. Stored normalized seal-minute boundary tolerance1e-12 only, no learned thresholds.",
+    "new_recipe_rows": "date >=2026-09-01 original OHLC+turnover values remain exactly unchanged; do not swap six clock/OHLC disagreements or certify their identities",
+    "unknown_to_false_prohibited": true,
+    "current_models_or_old_inputs_changed": false
+  },
+  "parameters": {
+    "algorithm": "original logistic",
+    "C": 0.25,
+    "max_iter": 2500,
+    "random_state": 271,
+    "solver": "lbfgs",
+    "class_weight": null,
+    "training_window": 252,
+    "window_unit": "last252distinct original valid-labelled signal dates",
+    "daily_weight": "inverse original full training candidate rows per date",
+    "preprocess": "training-only median/add_indicator/keep_empty_features/scaler unchanged",
+    "threshold": "raw positive score strictly >0.5"
+  },
+  "folds": [
+    {
+      "id": "2025H2",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "2026JanAug",
+      "start": "2026-01-01",
+      "end": "2026-08-31"
+    },
+    {
+      "id": "2026Sep",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "original_training_members": {
+    "2025H2": {
+      "train_n": 4062,
+      "training_dates": 252,
+      "max_mature_label": "2025-06-30",
+      "original_digest_equal": true,
+      "test_n": 1584
+    },
+    "2026JanAug": {
+      "train_n": 3243,
+      "training_dates": 252,
+      "max_mature_label": "2025-12-31",
+      "original_digest_equal": true,
+      "test_n": 1941
+    },
+    "2026Sep": {
+      "train_n": 3059,
+      "training_dates": 252,
+      "max_mature_label": "2026-08-31",
+      "original_digest_equal": true,
+      "test_n": 182
+    }
+  },
+  "expected_improvement_and_fixed_screen": {
+    "Accuracy_delta_each_fold_at_least": 0.03,
+    "complete_positive_Recall_not_lower": true,
+    "Precision_and_F1_not_lower": true,
+    "complete_prediction_and_label_coverage_not_lower": true,
+    "actual_nonword_September_Recall_not_lower": true,
+    "top1_negative_stays_negative": true,
+    "unknown_real_identity_beforeSeptember_not_certified": true,
+    "calibrated_Brier": null,
+    "forward_model_selection": "Only a historical survivor may propose future source-bound original120-session gates; no retrospective deployment or window migration"
+  },
+  "execution": {
+    "budget_minutes": 30,
+    "maximum_challenger_fits": 3,
+    "fit_once_per_fold": true,
+    "BASE_refits": 0,
+    "no_parameter_or_mask_rule_search": true,
+    "on_failure_or_fixed_comparison_complete": "Stop, retain losses/unknown/full denominator; never refit this arm",
+    "prerequisites": [
+      "exact original source/cache/runtime hashes verified",
+      "one new implementation receipt before first fit",
+      "source atom eligibility and full masked cells checked against fixed rule",
+      "original members/labels/daily weights preserved",
+      "code tests and three-valued counterexamples pass"
+    ],
+    "current_fit_count": 0,
+    "current_deployment_authorized": false
+  },
+  "scope": "Previously inspected historical promotion diagnostic only; not11-role classification, independent blind or forward evidence; all-type role labels/OOF gates remain",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\complete_error_diagnostics.json": "8b424d8989dd472b260c2a0dce470cbd8bd5d6f2017144e3ccad64915db06f8d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v298\\exchange_calendar_extension_20261003_v2\\calendar.json": "2f991b34d9317dcc1ed0d4c3e4da40132eedf27ea23431415e1048172b119cdd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\outcome_review_20261013T073137Z\\complete18_error_and_learning_review.json": "8f2cb5eec8b245e7accfb28914660175b468337119dbd6a89123a24c56a364c0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_inputs.py": "1fc7eee843596013132af27376c5a74dc424904afca30960207465c9c67d848b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\manifest.json": "d857b632d895a89c7b24cf20e79fb1e3776f5e0bd96c718a918b2a3e4e73d19d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33"
+  }
+}

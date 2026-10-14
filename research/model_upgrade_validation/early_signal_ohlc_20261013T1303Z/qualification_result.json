@@ -1,0 +1,100 @@
+{
+  "formed_at": "2026-10-13T13:07:55.601033+00:00",
+  "summary": {
+    "original_candidates": 9245,
+    "observable_price_shape": 9199,
+    "word_shape": 2126,
+    "nonword_shape": 7073,
+    "unknown": 46,
+    "source_tiers": {
+      "NORMALIZED_UNADJUSTED_PROVIDER_CLAIM_ONLY": 6321,
+      "UNKNOWN_OR_CONFLICT": 46,
+      "RAW_RESPONSES_RECONSTRUCTED": 2878
+    },
+    "statuses": {
+      "SIGNAL_DAY_OHLC_QUALIFIED_RETROSPECTIVE": 9199,
+      "POOL_CLOSE_NOT_DAILY_HIGH": 46
+    },
+    "strict_original_time_qualified": 0
+  },
+  "original_training_windows": {
+    "2025H2": {
+      "original_candidates": 4062,
+      "observable_price_shape": 4034,
+      "word_shape": 1029,
+      "nonword_shape": 3005,
+      "unknown": 28,
+      "source_tiers": {
+        "NORMALIZED_UNADJUSTED_PROVIDER_CLAIM_ONLY": 4034,
+        "UNKNOWN_OR_CONFLICT": 28
+      },
+      "statuses": {
+        "SIGNAL_DAY_OHLC_QUALIFIED_RETROSPECTIVE": 4034,
+        "POOL_CLOSE_NOT_DAILY_HIGH": 28
+      },
+      "strict_original_time_qualified": 0
+    },
+    "2026JanAug": {
+      "original_candidates": 3243,
+      "observable_price_shape": 3233,
+      "word_shape": 802,
+      "nonword_shape": 2431,
+      "unknown": 10,
+      "source_tiers": {
+        "NORMALIZED_UNADJUSTED_PROVIDER_CLAIM_ONLY": 2480,
+        "UNKNOWN_OR_CONFLICT": 10,
+        "RAW_RESPONSES_RECONSTRUCTED": 753
+      },
+      "statuses": {
+        "SIGNAL_DAY_OHLC_QUALIFIED_RETROSPECTIVE": 3233,
+        "POOL_CLOSE_NOT_DAILY_HIGH": 10
+      },
+      "strict_original_time_qualified": 0
+    },
+    "2026Sep": {
+      "original_candidates": 3059,
+      "observable_price_shape": 3048,
+      "word_shape": 563,
+      "nonword_shape": 2485,
+      "unknown": 11,
+      "source_tiers": {
+        "NORMALIZED_UNADJUSTED_PROVIDER_CLAIM_ONLY": 370,
+        "UNKNOWN_OR_CONFLICT": 11,
+        "RAW_RESPONSES_RECONSTRUCTED": 2678
+      },
+      "statuses": {
+        "SIGNAL_DAY_OHLC_QUALIFIED_RETROSPECTIVE": 3048,
+        "POOL_CLOSE_NOT_DAILY_HIGH": 11
+      },
+      "strict_original_time_qualified": 0
+    }
+  },
+  "disagreement_vs_proxy": 328,
+  "disagreement_directions": {
+    "WORD_PROXY0": 318,
+    "NONWORD_PROXY1": 10
+  },
+  "normalized_missing_raw_receipt_time": 9063,
+  "non_equivalent_source_tiers_preserved": true,
+  "independent_exchange_limit_status_certified": false,
+  "training_or_comparison_qualified": false,
+  "failure_reasons": [
+    "Earlier normalized files do not bind original raw HTTP responses and actual receipt times",
+    "Old candidate pool was partly derived from the same daily bars, so provider source labels alone cannot be treated as independent upper-limit verification",
+    "Retrospective sources cannot be assigned original signal-time availability"
+  ],
+  "original_fields_labels_members_preserved": true,
+  "new_fits": 0,
+  "new_mature_forward_samples": 0,
+  "Accuracy_gain_verified": false,
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\daily_path_clues_20261002_v1\\report.json": "6eac984ba742323cab693a656b6c845fad1c29f654ac0c05fe8d6323d4b34afa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\signal_ohlc_20261013T1257Z\\actual_complete_original_cohort\\signal_day_ohlc_context.json": "75888c7bbb235e6673c2fa8f6f7a9cea1c57a8afe3864b58f96928c9eb703063",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v298\\exchange_calendar_extension_20261003_v2\\calendar.json": "2f991b34d9317dcc1ed0d4c3e4da40132eedf27ea23431415e1048172b119cdd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_signal_ohlc_context.py": "5348b2bbe6d94e4eb044d6b38e54c2bf34e52749c976efd01358ccc3cae1c3e1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\existing_normalized_signal_bars_NO_TARGETS.csv": "0e5043fe2507aa9ccb0b67f6493ece65f55d5bdcdd04a2141fbcea851cfebf6d"
+  }
+}

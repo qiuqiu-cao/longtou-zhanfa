@@ -1,0 +1,62 @@
+{
+  "version": "v206-first-board-dual-target-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "sessions": 12,
+  "candidate_rows": 518,
+  "five_factor_complete_rows": 0,
+  "targets": {
+    "B_plus_2_positive": {
+      "label": "executable_positive_B_plus_2",
+      "outcome_availability": "exit_date_B_plus_2",
+      "base": {
+        "n": 461,
+        "positive_rate": 0.351409978308026,
+        "auc": 0.5165572484413063,
+        "brier": 0.26734305086231785,
+        "average_precision": 0.34669508532879917
+      },
+      "enhanced": {
+        "n": 0,
+        "positive_rate": null,
+        "auc": null,
+        "brier": null,
+        "average_precision": null
+      }
+    },
+    "B_plus_1_big_loss": {
+      "label": "big_loss_target",
+      "outcome_availability": "exit_date_B_plus_1",
+      "base": {
+        "n": 459,
+        "positive_rate": 0.12200435729847495,
+        "auc": 0.5536600496277915,
+        "brier": 0.3038595553854672,
+        "average_precision": 0.12758506740492165
+      },
+      "enhanced": {
+        "n": 0,
+        "positive_rate": null,
+        "auc": null,
+        "brier": null,
+        "average_precision": null
+      }
+    }
+  },
+  "governance": {
+    "two_targets_trained_separately": true,
+    "B_plus_1_big_loss_threshold": -0.07,
+    "outcome_availability_time_isolated": true,
+    "five_factor_missing_filled_as_zero": false,
+    "next_day_promotion_used_as_profit_target": false,
+    "probabilities_deployment_calibrated": false,
+    "entry_authorized": false
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v209\\first_board_five_factor_inputs_20260917_v2\\first_board_features_with_five_factor_evidence.csv": "26d940e414a5f6b9f6e3d7052be4bdedd5cc56d996a1d1407ea57abaf5ac0192",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03"
+  },
+  "artifact_hashes": {
+    "dual_target_rows_LABEL_ONLY.csv": "b7f60e122f47c3e80c9a516be71b348b3d8de6223bd5c1e0dc0abfafbf2f955b",
+    "prequential_dual_target_predictions.csv": "2a6dd7ad6e05383d64f122fde67b715a73f48ef04ca0cd5a3061b2855243fbe2"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "version": "v130-height-anchor-transition-1",
+  "evaluation": {
+    "status": "DIAGNOSTIC_ONLY",
+    "scored_rows": 31333,
+    "validation_sessions": 563,
+    "model_all_top1": {
+      "sessions": 563,
+      "successes": 293,
+      "precision": 0.5204262877442274,
+      "wilson95": [
+        0.4791608584099422,
+        0.5614148610299363
+      ]
+    },
+    "current_height_baseline": {
+      "sessions": 563,
+      "successes": 263,
+      "precision": 0.46714031971580816,
+      "wilson95": [
+        0.42629025866846093,
+        0.5084357578847778
+      ]
+    },
+    "model_challenger_top1": {
+      "sessions": 563,
+      "successes": 169,
+      "precision": 0.30017761989342806,
+      "wilson95": [
+        0.26377633649310567,
+        0.3392872776819947
+      ]
+    },
+    "second_height_baseline": {
+      "sessions": 563,
+      "successes": 130,
+      "precision": 0.23090586145648312,
+      "wilson95": [
+        0.19798998663268697,
+        0.2674690137897815
+      ]
+    },
+    "model_vs_current_height_paired": {
+      "sessions": 563,
+      "precision_delta": 0.05328596802841918,
+      "bootstrap95": [
+        0.021314387211367674,
+        0.0852575488454707
+      ]
+    },
+    "model_challenger_vs_second_height_paired": {
+      "sessions": 563,
+      "precision_delta": 0.06927175843694494,
+      "bootstrap95": [
+        0.02664298401420959,
+        0.11190053285968028
+      ]
+    },
+    "embargo_sessions": 3
+  },
+  "target": "candidate becomes or remains known maximum board in next 1-3 sessions",
+  "governance": {
+    "future_window_embargoed": true,
+    "score_is_probability": false,
+    "actual_trade_profitability_target": false,
+    "deployment_authorized": false
+  },
+  "limitations": [
+    "historical reconstructed pool is not independently proven full-market complete",
+    "being a height anchor is a role label, not evidence of buyability or profit",
+    "ties at maximum board count as height anchors and are not forced into a single winner"
+  ]
+}

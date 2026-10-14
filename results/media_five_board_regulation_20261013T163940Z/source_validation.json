@@ -1,0 +1,51 @@
+{
+  "confirmed_at_utc": "2026-10-13 16:46:16 UTC",
+  "original_receipts_preserved": true,
+  "sources": [
+    {
+      "key": "current_rules",
+      "status": "VERIFIED",
+      "basis": "Downloaded and read the 2026 SSE rules, sections 5.4.2 through 5.4.6 and 7.1 through 7.2.",
+      "deferred_clause_check": "The downloaded deferral appendix covers block-trading clauses, not these abnormal-fluctuation provisions."
+    },
+    {
+      "key": "forum_tgb",
+      "status": "VERIFIED_BODY",
+      "basis": "Public HTML body was read and saved; author Zhao Daye and displayed timestamp checked.",
+      "timestamp_limitation": "Title/body reference 9.24; displayed publication is 26-09-25 20:06. Do not merge these dates."
+    },
+    {
+      "key": "forum_eastmoney",
+      "status": "VERIFIED_THROUGH_WEB_READER",
+      "basis": "Author 缠论禅心, displayed 2026-09-23 11:48; full body returned by web reader was read, including paragraphs on replacement candidates.",
+      "direct_http_status": "200 with zero bytes, not a valid body; original empty receipt retained."
+    },
+    {
+      "key": "sse_measures",
+      "status": "VERIFIED_THROUGH_WEB_READER",
+      "basis": "Official table rows saved in web_reader_source_snapshot.json.",
+      "direct_http_limitation": "Direct HTML returned a shell without case rows; that response alone does not verify the cases."
+    },
+    {
+      "key": "longban_regulatory_warning",
+      "status": "VERIFIED_ORIGINAL_DOCUMENT",
+      "basis": "Exchange-issued decision 0152 was downloaded from disclosure mirror; all three pages extracted, first two visually checked.",
+      "original_issuer": "上海证券交易所上市公司管理一部"
+    },
+    {
+      "key": "winshare_risk_notice",
+      "status": "ISSUER_TEXT_FROM_SEARCH_RESULT",
+      "basis": "Search returned the company announcement text, five-session period and issuer signing date.",
+      "limitations": [
+        "Direct Sina HTTP request timed out.",
+        "SSE attachment address returned HTML rather than a PDF; not accepted as the PDF source."
+      ]
+    },
+    {
+      "key": "jiuyangongshe_post",
+      "status": "BODY_UNAVAILABLE",
+      "url": "https://www.jiuyangongshe.com/a/11dr45tsquy",
+      "basis": "Title/metadata and search summary were visible; full body not obtained. Excluded from verified forum conclusions."
+    }
+  ]
+}

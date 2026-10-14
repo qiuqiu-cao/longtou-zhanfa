@@ -1,0 +1,252 @@
+{
+  "artifact_kind": "source_bound_prior_roster_capture_design",
+  "recorded_at": "2026-10-02T21:13:28.999548+00:00",
+  "signal_date": "2026-09-30",
+  "next_session": "2026-10-08",
+  "model_upgrade": false,
+  "prediction_generated": false,
+  "new_labels": 0,
+  "new_forward_settled_samples": 0,
+  "scope_statement": "48只仅为原供应商主板且名称非ST/退的收盘涨停池完整留存；不是交易所全A、不是完整题材成员组，也不是已核验涨停。11只原登记作为子集保留，不扩大原评分分母。",
+  "source_validation": {
+    "original_provider_raw_count": 52,
+    "original_mainboard_filtered_count": 48,
+    "original_relay_count": 11,
+    "original_first_board_count": 37,
+    "excluded_preserved_count": 4,
+    "raw_qdate": "20260930",
+    "raw_tc_matches_pool_length": true,
+    "all_original_csv_raw_codes_names_boards_match": true,
+    "derived_sep30_codes_names_boards_match_original": true,
+    "registered_11_exactly_match_original_boards_2plus": true,
+    "board_distribution": {
+      "2": 6,
+      "3": 3,
+      "7": 1,
+      "1": 37,
+      "4": 1
+    },
+    "original_csv_receipt_available_at": "2026-09-30T19:18:24+08:00",
+    "later_json_received_at": "2026-10-02T13:53:04.115262+00:00",
+    "later_json_does_not_backfill_prior_availability": true,
+    "raw_request_parameters": {
+      "ut": "7eea3edcaed734bea9cbfc24409ed989",
+      "dpt": "wz.ztzt",
+      "Pageindex": "0",
+      "pagesize": "10000",
+      "sort": "fbt:asc",
+      "date": "20260930"
+    },
+    "existing_sep30_daily_requests_cover_all_48": true
+  },
+  "source_bindings": [
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\review_20260930_eod_1911\\limit_up.csv",
+      "sha256": "d47e93b4dc5e20469e7abd10030645b5a6515f274103d4d813f4699972fdf1ab"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\review_20260930_eod_1911\\manifest.json",
+      "sha256": "48f28155554c47baa7d0fb1f87dbd05baacb62a301ed8cd21abd8c7a60e7bd9b"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\public_outcome_sources_20261002_v1\\raw\\2026-09-30_limit_up.json",
+      "sha256": "36990e3ff17883597a31a95cc6a4f3ec9b0ddf0da72466146a079c44268f7d26"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\public_outcome_sources_20261002_v1\\manifest.json",
+      "sha256": "edcab05af858438e055c81307b85d041e56301cd9e8fce22ff71ed4940681e49"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v275\\reported_seal_archive_20261002_v2\\reported_seal_rows.csv",
+      "sha256": "1d5f54ea94fd6cc8298e0dde850a30c24acad4fd17ca52f7a443fd0e505e1be0"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json",
+      "sha256": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\public_outcome_sources_v293.py",
+      "sha256": "2d7f8c05e50bae8d20c22c218337cd8e9d1c017d75dbfc7591e2dfa54d6b9c4e"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\prepare_theme_competition_inputs.py",
+      "sha256": "9ca40313ad3765d68bcecd8f5fa0816a4ebdbdc2a421d8705a61afe25f1b7ae8"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json",
+      "sha256": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2"
+    }
+  ],
+  "current_adapter_gap": {
+    "file": "prepare_theme_competition_inputs.py",
+    "function": "frames",
+    "input_roster": "ONLY_SIGNAL_DATE_CLOSING_LIMIT_POOL",
+    "prior_failed_missing_rows_are_not_currently_loaded": true,
+    "theme_missing_is_not_failure": true,
+    "historical_fixed_cutoff": "原Sep30 CSV 19:18才取得，晚于研究固定16:30；本次派生原组在实际生成时刻才可用，不得用于9/30 16:30回填。"
+  },
+  "minimum_sidecar_plan": [
+    "原组prior_roster.csv按code左连接Oct8逐代码实际行情，固定48行不删减；题材身份留UNKNOWN。原11只原登记单独沿原桥接结算，研究48只不能替换它。",
+    "仅在Oct8收盘之后调用原public_outcome_sources_v293.collect，extra_codes显式传入quote_request_minimum_codes.csv全部48只。原函数会再并入各成功原/目标池中的代码，保留新增候选。CLI --registered只保证11只，不能代替此48代码补充范围。",
+    "Oct8新原池完整响应可读时，将新代码相对原48的集合差保存为新增候选附表；原48中缺席新涨停池的只标目标池未出现，不能由此判断板、核失败或写零。新池不完整或失败时，新增覆盖未知。",
+    "每个原组代码保留Oct8未复权逐日OHLC、成交量原单位、实际报价时间、前收盘及明确涨跌停价/来源；报价位置字段只作推断，需独立不复权行情与明确价位核对。缺目标日价格、停牌或限价语义不明则UNKNOWN。",
+    "未来题材成员、驱动与预期证据各自留独立原文/发布时间/实际取得时间/哈希，实际审阅后再绑定Oct8；保留原主题版本与不知道的代码。Oct8当前分类不能给Sep30补历史题材。",
+    "所有研究派生输入按实际形成时间记录；若用于Oct8信号的固定16:30比较，整份派生记录及审阅证据必须16:30前完成。错过截止则仅留采集记录，不让迟到材料进入当日预测。"
+  ],
+  "future_request": {
+    "execute_now": false,
+    "not_before": "2026-10-08T15:00:00+08:00",
+    "collector": "public_outcome_sources_v293.collect",
+    "arguments": {
+      "signal_date": "2026-09-30",
+      "target_date": "2026-10-08",
+      "calendar": "data/v279/exchange_calendar_audit_20261002_v1/calendar.json",
+      "output": "NEW_UNIQUE_DIRECTORY_ONLY",
+      "extra_codes_file": "research\\prior_roster_capture_20261002T211328999548Z\\quote_request_minimum_codes.csv"
+    },
+    "minimum_prior_codes": [
+      "000011",
+      "000504",
+      "000678",
+      "000692",
+      "000710",
+      "001206",
+      "001266",
+      "001318",
+      "002041",
+      "002058",
+      "002164",
+      "002188",
+      "002226",
+      "002242",
+      "002316",
+      "002388",
+      "002419",
+      "002454",
+      "002755",
+      "002866",
+      "002962",
+      "600059",
+      "600072",
+      "600081",
+      "600131",
+      "600241",
+      "600356",
+      "600592",
+      "600663",
+      "600825",
+      "601118",
+      "603127",
+      "603185",
+      "603188",
+      "603200",
+      "603538",
+      "603590",
+      "603739",
+      "603906",
+      "603919",
+      "603928",
+      "603948",
+      "605011",
+      "605287",
+      "605288",
+      "605303",
+      "605388",
+      "605577"
+    ],
+    "minimum_prior_code_count": 48,
+    "include_returned_new_codes": true,
+    "source_endpoints": [
+      "https://push2ex.eastmoney.com/getTopicZTPool",
+      "https://push2ex.eastmoney.com/getTopicZBPool",
+      "https://push2ex.eastmoney.com/getTopicDTPool",
+      "https://push2ex.eastmoney.com/getYesterdayZTPool",
+      "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get"
+    ],
+    "http_connect_timeout_seconds": 5,
+    "http_read_timeout_seconds": 8,
+    "initial_attempts_per_request": 1,
+    "at_most_one_recorded_supplement_per_unchanged_gap": true,
+    "http403_no_bypass": true,
+    "request_return_date_mismatch_rejected": true
+  },
+  "required_future_fields": {
+    "row_keys": [
+      "original_pool_date",
+      "target_observation_date",
+      "code",
+      "original_boards",
+      "roster_derived_at"
+    ],
+    "quote": [
+      "requested_at",
+      "available_at",
+      "observed_at",
+      "exact_target_day_present",
+      "open",
+      "high",
+      "low",
+      "close",
+      "previous_close",
+      "volume_native",
+      "amount_if_available",
+      "currency_price_unit",
+      "volume_unit",
+      "adjusted_false",
+      "explicit_upper_price",
+      "explicit_lower_price",
+      "limit_semantics_source",
+      "independent_unadjusted_daily_source",
+      "raw_path",
+      "raw_sha256",
+      "request_parameters",
+      "missing_reason"
+    ],
+    "target_pool": [
+      "requested_date",
+      "qdate",
+      "tc",
+      "all_raw_codes",
+      "raw_path",
+      "raw_sha256",
+      "scope_filter",
+      "all_failures"
+    ],
+    "theme": [
+      "membership_source_url",
+      "membership_published_at",
+      "membership_captured_at",
+      "explicit_members_codes",
+      "membership_original_text_hash",
+      "driver_first_available_at",
+      "driver_raw_hash",
+      "expectation_assessed_at",
+      "actual_reviewer_and_time",
+      "unknown_members",
+      "classification_validity_age"
+    ]
+  },
+  "unlock_conditions": [
+    "Oct8真实收盘发生，官方日历确认目标日",
+    "全部48原代码请求留档，价格缺失保留UNKNOWN而不是false",
+    "明确限价及独立行情核验支持目标状态；原11只原桥接契约另行满足",
+    "若检验题材竞争，需同一题材原成员的历史时点证据、完整成员失败/未知保留及非本股支持；现有Sep30题材全UNKNOWN，所以当前不能直接做题材效果回测",
+    "固定C1/C2协议不改，旁路只准备数据；任何新假设须以后另批预登记"
+  ],
+  "acceptance_checks": {
+    "output_unique_directory": true,
+    "code_duplicate_count": 0,
+    "roster_count_equals_48": true,
+    "registered_subset_count_equals_11": true,
+    "unknown_theme_count": 48,
+    "target_pending_count": 48,
+    "prediction_columns_absent": true,
+    "outcome_labels_absent": true,
+    "verified_flags_not_synthesized": true
+  },
+  "artifact_hashes": {
+    "prior_roster.csv": "b10187daa9160485271b0c7711518cff0019d81af9f1535cb66774dd4c6d4b57",
+    "quote_request_minimum_codes.csv": "369b539fcde4159a0376bb671c63af4fbf725d83ea0e69fc05147cdfa4ab8746",
+    "scope_excluded_rows.csv": "bfa96b17be2d0c4271c5919fe2a231bc9f69cb40c5215f0c7afcc795ab64d63b"
+  }
+}

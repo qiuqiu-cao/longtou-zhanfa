@@ -1,0 +1,279 @@
+"""Compute separately labelled BASE scores from qualified alternative close facts.
+
+Read-only diagnostic inference. Never rewrites V293, model parameters, old
+forecasts, ranking rules, production registries, fixed shadow or upgrade policy.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+from decimal import Decimal
+import hashlib
+import json
+import re
+
+import pandas as pd
+from bs4 import BeautifulSoup
+
+import model_upgrade_compat as compat
+import public_outcome_sources_v293 as public_sources
+from model_champion_compat import runtime
+from next_session_expectation_contract_v271 import stamp
+from public_outcome_sources_v293 import parse_daily
+from model_upgrade_inputs import clean
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = Path(__file__).resolve().parent
+DAILY = OUT / "combined_daily.json"
+REVIEW = ROOT / "results/daily_review_20261014T1118Z"
+OLD = ROOT / "results/daily_review_20261013T074936Z"
+POLICY = ROOT / "research/model_upgrade_validation/shadow_compat_20261009T093237Z/compatibility_BEFORE_USE.json"
+IMPLEMENTATION = POLICY.parent / "champion_implementation_BEFORE_USE.json"
+PROTOCOL = ROOT / "research/model_upgrade_validation/fixed_20261007T112017Z/protocol_BEFORE_EFFECTS.json"
+CALENDAR = ROOT / "data/v298/exchange_calendar_extension_20261003_v2/calendar.json"
+ALT = OUT / "alternative_source_projection"
+DAY = "2026-10-14"
+MAINBOARD = public_sources.MAINBOARD
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def write_new(path, data):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("x", encoding="utf-8") as f:
+        json.dump(clean(data), f, ensure_ascii=False, indent=2, allow_nan=False)
+
+
+def raw_daily_verified():
+    saved = read(DAILY)
+    available = now()
+    data = {}
+    files = {str(DAILY): sha(DAILY)}
+    for code, item in saved.items():
+        raw_path = Path(item["raw_path"])
+        reconstructed = parse_daily(read(raw_path), code, "2026-08-31", DAY)
+        if any(reconstructed[k] != item[k] for k in ["code", "days", "quote", "adjusted"]):
+            raise ValueError("raw daily reconstruction mismatch: " + code)
+        if stamp(item["available_at"]) > stamp(available):
+            raise ValueError("future daily source: " + code)
+        data[code] = item
+        files[str(raw_path)] = sha(raw_path)
+    return data, files
+
+
+def quote_fields(code, item):
+    """Keep positional units inferred; reject a value inconsistent with OHLC."""
+    sym = ("sh" if code.startswith("6") else "sz") + code
+    block = read(item["raw_path"])["data"][sym]
+    qt = block["qt"][sym]
+    bar = item["days"].get(DAY)
+    if bar is None or item["quote"]["status"] != "POSITIONAL_FIELDS_INFERRED":
+        raise ValueError("current bar or quote unavailable: " + code)
+    quote = item["quote"]
+    if not quote["observed_at"].startswith(DAY + "T"):
+        raise ValueError("wrong quote date: " + code)
+    if stamp(quote["observed_at"]) < stamp(DAY + "T15:00:00+08:00"):
+        raise ValueError("intraday quote: " + code)
+    if any(quote["values"][k] != bar[k] for k in ["open", "close", "high", "low"]):
+        raise ValueError("daily/quote disagreement: " + code)
+    triple = str(qt[35]).split("/")
+    if len(triple) != 3 or Decimal(triple[0]) * 100 != bar["close"]:
+        raise ValueError("amount/volume tuple price disagreement: " + code)
+    volume = Decimal(str(bar["volume_native"]))
+    if Decimal(triple[1]) != volume or Decimal(str(qt[36])) != volume:
+        raise ValueError("native daily/quote volume disagreement: " + code)
+    amount = Decimal(triple[2])
+    if amount <= 0 or abs(amount - Decimal(str(qt[57])) * 10000) > Decimal(".01"):
+        raise ValueError("two amount fields disagree: " + code)
+    # Native volume is reported in rounded lots. Permit at most one lot rounding.
+    lower = Decimal(bar["low"]) / 100 * max(Decimal(0), volume - 1) * 100
+    upper = Decimal(bar["high"]) / 100 * (volume + 1) * 100
+    if not lower <= amount <= upper:
+        raise ValueError("amount/rounded-volume price interval inconsistent: " + code)
+    return float(amount), float(qt[38]), bar
+
+
+def rebuild_alternative():
+    captured = read(REVIEW / "news/alternate_manifest.json")
+    receipt = next(r for r in captured if r["key"] == "toupage")
+    html = REVIEW / "news/toupage.html"
+    if receipt["http_status"] != 200 or receipt["raw_sha256"] != sha(html):
+        raise ValueError("alternative page receipt mismatch")
+    body = BeautifulSoup(html.read_bytes(), "html.parser")
+    if DAY not in body.get_text():
+        raise ValueError("page does not identify exact current day")
+    tables = body.find_all("table")
+    if len(tables) != 3:
+        raise ValueError("complete three pools required")
+    counts = [len(t.find_all("tr")) - 1 for t in tables]
+    if counts != [36, 24, 11]:
+        raise ValueError("alternative complete pool count changed")
+    ladder = {}
+    for group in body.select("[data-ladder-height]"):
+        height = int(group["data-ladder-height"])
+        for anchor in group.select("article a"):
+            code = re.search(r"/([0-9]{6})/", anchor["href"]).group(1)
+            if code in ladder:
+                raise ValueError("duplicate alternative ladder code")
+            ladder[code] = height
+    if len(ladder) != 15:
+        raise ValueError("complete alternative relay pool changed")
+    daily, files = raw_daily_verified()
+    files[str(html)] = sha(html)
+    files[str(REVIEW / "news/alternate_manifest.json")] = sha(REVIEW / "news/alternate_manifest.json")
+    files[str(OUT / "feedback_capture_manifest.json")] = sha(OUT / "feedback_capture_manifest.json")
+    files[str(Path(__file__).resolve())] = sha(__file__)
+    obtained = max([receipt["captured_at"]] + [v["available_at"] for v in daily.values()], key=stamp)
+    pools, audit = {}, []
+    all_codes = set()
+    for kind, table in zip(["limit_up", "failed_board", "limit_down"], tables):
+        rows = []
+        for tr in table.find_all("tr")[1:]:
+            cells = tr.find_all("td")
+            anchor = cells[0].find("a")
+            code = re.search(r"/([0-9]{6})/", anchor["href"]).group(1)
+            name = anchor.get_text(strip=True)
+            if not code.startswith(MAINBOARD) or "ST" in name.upper() or "退" in name:
+                continue
+            if code in all_codes:
+                raise ValueError("three alternative pools are not disjoint")
+            all_codes.add(code)
+            if code not in daily:
+                raise ValueError("current complete page code lacks raw daily")
+            bar = daily[code]["days"].get(DAY)
+            if bar is None:
+                raise ValueError("current page member missing current day")
+            turnover = float(tr["data-sort-turnover"])
+            if kind in ["limit_up", "failed_board"]:
+                amount, quote_turnover, bar = quote_fields(code, daily[code])
+                if abs(turnover - quote_turnover) > .011:
+                    raise ValueError("cross-provider turnover inconsistent: " + code)
+                at_upper = bar["close"] == daily[code]["quote"]["values"]["upper_candidate"]
+                if at_upper != (kind == "limit_up"):
+                    raise ValueError("page pool/quote implied upper inconsistent: " + code)
+            else:
+                amount, quote_turnover = None, None
+            row = {"code": code, "name": name, "price_cents": bar["close"],
+                   "turnover_pct": turnover, "amount": amount,
+                   "industry": None, "source_semantics": "ALTERNATIVE_PAGE_PLUS_QUOTE_FIELDS_INFERRED_CROSSCHECKED"}
+            if kind == "limit_up":
+                row["boards"] = ladder.get(code, 1)
+            rows.append(row)
+            audit.append({"code": code, "pool": kind, "turnover_page": turnover,
+                          "turnover_quote_rounded": quote_turnover, "amount_inferred_cny": amount,
+                          "exact_day_prices": bar, "amount_unit_exchange_certified": False,
+                          "reported_boards": ladder.get(code), "prior_calendar_session_present":
+                          "2026-10-13" in daily[code]["days"]})
+        pools[(DAY, kind)] = {"date": DAY, "kind": kind,
+            "all_market_raw_count": len(table.find_all("tr")) - 1,
+            "rows": rows, "available_at": obtained, "raw_path": str(html),
+            "capture_complete_within_alternative_page": True,
+            "exchange_security_status_verified": False,
+            "exchange_wide_completeness_verified": False}
+    if len(pools[(DAY, "limit_up")]["rows"]) != 34 or len(pools[(DAY, "failed_board")]["rows"]) != 20:
+        raise ValueError("mainboard complete alternative denominator changed")
+    prior = read(OLD / "model/features/features.json")
+    files[str(OLD / "model/features/features.json")] = sha(OLD / "model/features/features.json")
+    feedback = []
+    for member in prior["original_pool"]["rows"]:
+        code = member["code"]
+        item = daily.get(code)
+        s = item["days"].get("2026-10-13") if item else None
+        t = item["days"].get(DAY) if item else None
+        if not s or not t or s["close"] != member["price_cents"]:
+            raise ValueError("exact old63 cohort closing feedback missing/conflicting: " + code)
+        feedback.append({"code": code, "name": member["name"], "price_cents": t["close"],
+                         "pct": (t["close"] / s["close"] - 1) * 100,
+                         "derived_from_exact_day_prices": True})
+    pools[(DAY, "previous_limit")] = {"date": DAY, "kind": "DERIVED_PREVIOUS_CLOSING_COHORT_FEEDBACK_NOT_EM_API",
+        "rows": feedback, "available_at": obtained, "raw_path": str(DAILY)}
+    manifest = {"version": "ALTERNATIVE_PUBLIC_PAGE_DAILY_DIAGNOSTIC_INPUT_NOT_V293",
+        "signal_date": "2026-10-13", "target_date": DAY, "recorded_at": obtained,
+        "requests": [], "source_hashes": files,
+        "original_raw_provider_capture_recovered": False,
+        "original_production_scoring_gate_passed": False}
+    return manifest, pools, daily, [], audit
+
+
+def main():
+    if ALT.exists() or (OUT / "supplemental_BASE_scores.json").exists():
+        raise FileExistsError("immutable supplemental inference already exists")
+    champion, proof = runtime(POLICY, IMPLEMENTATION)
+    inputs, shadow = compat.runtime(POLICY)
+    protocol_path, protocol, calendar, root = shadow._protocol(PROTOCOL)
+    if read(root / "active_modules.json").get("modules", {}).get("relay", {}).get("active_arm", "BASE") != "BASE" if (root / "active_modules.json").exists() else False:
+        raise ValueError("BASE is not current arm")
+    models = shadow._models(protocol_path, protocol, "relay", protocol_path.parent / "models", shadow.now_utc())
+    binding = models["BASE"]
+    champion._validate_binding(protocol_path, "relay", "BASE", binding)
+    manifest, pools, daily, unavailable, audit = rebuild_alternative()
+    ALT.mkdir()
+    write_new(ALT / "manifest.json", manifest)
+    write_new(ALT / "normalized.json", {"kind": "EXPLICIT_ALTERNATIVE_PROJECTION_NOT_RAW_EM_JSON",
+        "pools": {"/".join(k): v for k, v in pools.items()}, "daily_codes": sorted(daily)})
+    write_new(OUT / "alternative_quote_and_pool_checks.json", {"recorded_at": now(), "rows": audit,
+        "derived_old63_feedback": pools[(DAY, "previous_limit")]["rows"]})
+    def diagnostic_reader(directory):
+        if Path(directory).resolve() == ALT.resolve():
+            repeat = rebuild_alternative()
+            if repeat[0] != manifest:
+                raise ValueError("alternative input changed during reconstruction")
+            return repeat[:4]
+        return public_sources.reconstruct(directory)
+    diagnostic_inputs = compat.clone_module(inputs, {"reconstruct": diagnostic_reader})
+    old_manifest = read(OLD / "model/features/manifest.json")
+    history = old_manifest["history_archives"] + [old_manifest["source_archive"]]
+    cutoff = now()
+    pack = diagnostic_inputs._derive(PROTOCOL, ALT, CALENDAR, history, cutoff)
+    if pack["signal_date"] != DAY or pack["target_date"] != "2026-10-15":
+        raise ValueError("incorrect current diagnostic date")
+    if {r["code"]: r["boards"] for r in pack["relay"]} != {
+            r["code"]: r["boards"] for r in pools[(DAY, "limit_up")]["rows"] if r["boards"] >= 2}:
+        raise ValueError("current full15 roster lost")
+    write_new(OUT / "current29_feature_pack_BEFORE_INFERENCE.json", pack)
+    write_new(OUT / "inference_receipt_BEFORE_RUN.json", {"recorded_at": now(),
+        "scope": "BASE_DIAGNOSTIC_ALTERNATIVE_CURRENT_SOURCES_NOT_PRODUCTION",
+        "model_binding": binding, "feature_pack_sha256": sha(OUT / "current29_feature_pack_BEFORE_INFERENCE.json"),
+        "compatibility_sources": proof, "fits": 0, "numeric_parameters_changed": False,
+        "feature_formulas_changed": False, "strict_threshold": .5, "calibrated_probability": False})
+    forecast = champion._forecast("relay", binding, pack)
+    ranking = forecast["ranking"]
+    for row in forecast["candidates"]:
+        row["score_display"] = round(row["raw_score"] * 100, 1)
+        row["rank"] = ranking.index(row["code"]) + 1
+        row["reported_board_scope"] = "ALTERNATIVE_SOURCE_REPORTED_TRADING_STREAK"
+        row["resume_calendar_qualification_gap"] = row["code"] in {"002813", "002860"}
+        row["tradeability_confirmed"] = False
+    result = {"status": "CURRENT_BASE_SUPPLEMENTAL_SCORES_ALTERNATIVE_SOURCES_NOT_FORMAL_PRODUCTION",
+        "formed_at": now(), "knowledge_cutoff": cutoff, "signal_date": DAY, "target_date": "2026-10-15",
+        "model_version": "FIXED_20261007_BASE_RELAY_ORIGINAL29",
+        "model_binding": binding, "forecast": forecast, "source_manifest": str(ALT / "manifest.json"),
+        "feature_source_sha256": sha(OUT / "current29_feature_pack_BEFORE_INFERENCE.json"),
+        "input_completeness_as_computed_by_original_formula": pack["market"]["status"],
+        "old63_feedback_source": "DERIVED_FROM_ORIGINAL63_POOL_AND_EXACT13_14_RAW_DAY_CLOSES",
+        "original_raw_provider_capture_recovered": False,
+        "original_production_scoring_gate_passed": False,
+        "formal_registry_or_fixed_shadow_modified": False, "fit_count": 0,
+        "model_parameter_or_threshold_changed": False, "score_calibrated_probability": False,
+        "limitations": ["Alternative amount/turnover semantics inferred and crosschecked, not exchange certified.",
+                       "路畅/星帅尔 reported streak may span suspension; previous calendar session unavailable.",
+                       "Formal V293 original source path remains unavailable; these scores are supplemental.",
+                       "No Level-2, next-day opening or actual order/fill evidence."]}
+    write_new(OUT / "supplemental_BASE_scores.json", result)
+    pd.DataFrame(forecast["candidates"]).sort_values("rank").to_csv(OUT / "完整15只原BASE补充评分.csv", index=False, encoding="utf-8-sig")
+    print(json.dumps({"status": result["status"], "candidates": len(forecast["candidates"]),
+        "top5": sorted(forecast["candidates"], key=lambda r: r["rank"])[:5]}, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
+

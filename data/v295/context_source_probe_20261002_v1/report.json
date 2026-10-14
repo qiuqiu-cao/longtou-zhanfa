@@ -1,0 +1,108 @@
+{
+  "recorded_at": "2026-10-02T14:26:35.598440+00:00",
+  "requests": [
+    {
+      "key": "concept_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600825"
+      },
+      "requested_at": "2026-10-02T14:26:30.998860+00:00",
+      "available_at": "2026-10-02T14:26:31.928494+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\context_source_probe_20261002_v1\\concept_page.response",
+      "raw_sha256": "0301c244895ede0efa44792822be00c92609f7d90e3309f3796f36340788f127",
+      "status": "RAW_JSON_RECEIVED",
+      "keys": [
+        "ssbk",
+        "hxtc"
+      ],
+      "preview": "{'ssbk': [{'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '486', 'BOARD_NAME': '传媒', 'IS_PRECISE': '0', 'BOARD_RANK': 1}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '1218', 'BOARD_NAME': '出版', 'IS_PRECISE': None, 'BOARD_RANK': 2}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '1289', 'BOARD_NAME': '大众出版', 'IS_PRECISE': None, 'BOARD_RANK': 3}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '145', 'BOARD_NAME': '上海板块', 'IS_PRECISE': '0', 'BOARD_RANK': 4}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '1717', 'BOARD_NAME': '题材股', 'IS_PRECISE': None, 'BOARD_RANK': 5}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '1715', 'BOARD_NAME': '趋势股', 'IS_PRECISE': None, 'BOARD_RANK': 6}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '1676', 'BOAR"
+    },
+    {
+      "key": "concept_datacenter",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600825\")",
+        "pageSize": 100,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-02T14:26:30.999099+00:00",
+      "available_at": "2026-10-02T14:26:34.011162+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\context_source_probe_20261002_v1\\concept_datacenter.response",
+      "raw_sha256": "ae14cebc827cd1fd396d7e20e3237e39cb759c533137393fc066d5d101428442",
+      "status": "RAW_JSON_RECEIVED",
+      "keys": [
+        "version",
+        "result",
+        "success",
+        "message",
+        "code"
+      ],
+      "preview": "{'version': '45db5a0538d65bc28753c6f5eda5ed84', 'result': {'pages': 1, 'data': [{'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '835', 'BOARD_NAME': '独角兽', 'SELECTED_BOARD_REASON': '参股中译语通和时空电动等', 'IS_PRECISE': '1', 'BOARD_RANK': 18, 'BOARD_YIELD': None, 'NEW_BOARD_CODE': 'BK0835', 'DERIVE_BOARD_CODE': 'BI0835', 'BOARD_TYPE': None, 'BOARD_LEVEL': None}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '707', 'BOARD_NAME': '沪股通', 'SELECTED_BOARD_REASON': None, 'IS_PRECISE': '0', 'BOARD_RANK': 14, 'BOARD_YIELD': None, 'NEW_BOARD_CODE': 'BK0707', 'DERIVE_BOARD_CODE': 'BI0707', 'BOARD_TYPE': None, 'BOARD_LEVEL': None}, {'SECUCODE': '600825.SH', 'SECURITY_CODE': '600825', 'SECURITY_NAME_ABBR': '新华传媒', 'BOARD_CODE': '683', 'BOARD_NAME': '央国企改革', 'SELECTED_BOARD_REASON': '公司的实际控制人为上海市国有资产监督管理委员会。', 'IS_PRECISE': '1', 'BOARD_RANK': 19, 'BOARD_YIELD': None, 'NEW_BOARD_CODE': 'BK0683', 'DERIVE_BOARD_CODE': 'BI0683', 'BOARD_TYPE': None, 'BOARD_LEVEL': None}, {'SECUCODE': '600825.SH', 'SECURITY_CODE'"
+    },
+    {
+      "key": "popularity",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600825"
+      },
+      "requested_at": "2026-10-02T14:26:30.999394+00:00",
+      "available_at": "2026-10-02T14:26:35.595806+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\context_source_probe_20261002_v1\\popularity.response",
+      "raw_sha256": "a8a2893c71e0c5fb8b91ebf0cabf58136ad8ca5e7bf0dfaa07387839a14fc1e8",
+      "status": "RAW_JSON_RECEIVED",
+      "keys": [
+        "globalId",
+        "message",
+        "status",
+        "code",
+        "data",
+        "stack"
+      ],
+      "preview": "{'globalId': '786e4c21-70dc-435a-93bb-38', 'message': 'OK', 'status': 0, 'code': 0, 'data': {'marketType': '000001', 'marketAllCount': 5572, 'calcTime': '2026-10-02 22:24:00', 'innerCode': '600825', 'srcSecurityCode': 'SH600825', 'rank': 16, 'rankChange': 0, 'hisRankChange': -2, 'hisRankChange_rank': 2730, 'flag': 0}, 'stack': None}"
+    },
+    {
+      "key": "popularity_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600825",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-02T14:26:30.999551+00:00",
+      "available_at": "2026-10-02T14:26:32.687033+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\context_source_probe_20261002_v1\\popularity_history.response",
+      "raw_sha256": "a9913120f8f53e9fc13dd1637dad792b78e73d36d97ab12e540ca9dc5014b18b",
+      "status": "RAW_JSON_RECEIVED",
+      "keys": [
+        "globalId",
+        "message",
+        "status",
+        "code",
+        "data",
+        "stack"
+      ],
+      "preview": "{'globalId': '786e4c21-70dc-435a-93bb-38', 'message': 'OK', 'status': 0, 'code': 0, 'data': [{'calcTime': '2025-10-02', 'rank': 2758}, {'calcTime': '2025-10-03', 'rank': 2927}, {'calcTime': '2025-10-04', 'rank': 2722}, {'calcTime': '2025-10-05', 'rank': 2999}, {'calcTime': '2025-10-06', 'rank': 3032}, {'calcTime': '2025-10-07', 'rank': 3049}, {'calcTime': '2025-10-08', 'rank': 3035}, {'calcTime': '2025-10-09', 'rank': 3574}, {'calcTime': '2025-10-10', 'rank': 3375}, {'calcTime': '2025-10-11', 'rank': 3750}, {'calcTime': '2025-10-12', 'rank': 3588}, {'calcTime': '2025-10-13', 'rank': 3583}, {'calcTime': '2025-10-14', 'rank': 3792}, {'calcTime': '2025-10-15', 'rank': 4046}, {'calcTime': '2025-10-16', 'rank': 3042}, {'calcTime': '2025-10-17', 'rank': 3497}, {'calcTime': '2025-10-18', 'rank': 3633}, {'calcTime': '2025-10-19', 'rank': 3752}, {'calcTime': '2025-10-20', 'rank': 2667}, {'calcTime': '2025-10-21', 'rank': 3317}, {'calcTime': '2025-10-22', 'rank': 1080}, {'calcTime': '2025-10-23', 'rank': 2337}, {'calcTime': '2025-10-24', 'rank': 3291}, {'calcTime': '2025-10-25', 'rank': 3132},"
+    }
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\probe_context_sources_v295.py": "9f1f360d100d946e78c1f1107af1a9617cea3cd4acaceabddca574c7e35c5d7c"
+  }
+}

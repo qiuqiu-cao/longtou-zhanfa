@@ -1,0 +1,88 @@
+{
+  "formed_at": "2026-10-12T12:15:44.941409+00:00",
+  "status": "SOURCE_CHECKED_HYPOTHESES_NOT_VALIDATED_ROLE_LABELS",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\checked_original_forum_experiences.json": "ff023fe02a82c87393145a3446dfc55de46b34558437b4891fa1202de4ead335",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\supplement_after_break.response": "e9773f075317889e63b25927293342c0098d1119e2131af21368f5d70ec4d0e6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\supplement_divergence.response": "d9b24878620bcdb95dc83e7e519f7e1e21fa9ccb5ae1c3a8f826c952dca02b99",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\all_roles_cycle_retry.response": "1b8a0cac0d773fb4b9befaa548c9d5320e74daef7ee375c23aa2768403fc9dc6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\supplement_after_break_author_body.txt": "d5ecf0bf52d12bb263086d15d9d56f11ae71b3ca241f4f87d5879eb79b154b3d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\supplement_divergence_author_body.txt": "4169146cf8fc055e4e8772390ec7c73d212035ab37bd416896dbbc45814ccb26",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\leader_role_learning_20261012T115223Z\\forum_sources\\all_roles_cycle_author_body.txt": "7569848c45a486ebe984c7a6501d8d1866c45a44e20cbc7eeac00624597ca872"
+  },
+  "lessons": [
+    {
+      "id": "SUPPLEMENT_TIMING_DISAGREEMENT",
+      "source_ids": [
+        "supplement_after_break",
+        "supplement_divergence"
+      ],
+      "summary": "一位作者把断板作为补涨节点，另一位将主升中的分歧视为补涨启动背景；保留定义差异，不设置必须断板之后才算的硬门。",
+      "check_fields": [
+        "old_core_identity",
+        "verified_specific_theme",
+        "anchor_stage",
+        "anchor_start",
+        "own_start",
+        "anchor_break_day",
+        "complete_peer_competition"
+      ],
+      "implemented_features": [
+        "dependency_anchor_is_divergence",
+        "dependency_anchor_is_retreat",
+        "dependency_start_after_anchor_break_sessions"
+      ],
+      "unadopted_claims": [
+        "7板最低高度",
+        "固定50%-70%空间",
+        "同身位必须唯一赢家"
+      ],
+      "effect_status": "NOT_VALIDATED"
+    },
+    {
+      "id": "CROSS_CYCLE_EVENT_SEQUENCE",
+      "source_ids": [
+        "all_roles_cycle"
+      ],
+      "summary": "作者将穿越与多个周期更迭后的存活联系起来，并区分先行、容量和周期身份；必须核对事件前身份及事件后的相对领先，不能从单日抗跌倒推。",
+      "check_fields": [
+        "pre_cycle_id",
+        "post_cycle_id",
+        "pre_event_observation",
+        "post_event_observation",
+        "complete_post_event_competition"
+      ],
+      "implemented_features": [
+        "pressure_pre_event_core",
+        "pressure_survived",
+        "pressure_role_retained",
+        "pressure_rank_improvement",
+        "pressure_price_change_pct",
+        "pressure_cycle_changed"
+      ],
+      "unadopted_claims": [
+        "作者称哈药为穿越总龙直接作为历史真值",
+        "从联动认证资金带动因果"
+      ],
+      "effect_status": "NOT_VALIDATED"
+    }
+  ],
+  "all_role_checklist": {
+    "HEIGHT": "完整指定池板位、并列对象与范围；最高板不直接认证总龙",
+    "THEME": "已核具体题材成员、去自身扩散、相对强弱与竞争顺序",
+    "TURNOVER": "实际完整分歧/回封路径；日放量和首末封间隔不认证承接",
+    "CAPACITY": "同题材包含非涨停成员的成交份额、流通规模与范围",
+    "TREND": "同题材非涨停成员、连续历史行情与相对趋势",
+    "POSITION": "完整同身位竞争对象的先后实际状态；离池不等于失败",
+    "SUPPLEMENT": "已核旧核心、具体题材关系、启动先后、旧核心阶段与低位竞争",
+    "NODE": "事前市场阶段转折、题材延续与完整同期竞争",
+    "CYCLE": "连续市场阶段记录、题材核心延续与反馈",
+    "CROSS_CYCLE": "事前压力事件、事件前身份、跨事件存活与重新领先的时序",
+    "EMOTION": "个股变化领先生态反馈、市场/共同催化条件控制；联动不证明因果"
+  },
+  "automatic_learning_policy": "Use source-qualified contemporaneous numerical facts; forum text generates hypotheses and review checks, never automatic gold identities, parameter changes or original-time backfill",
+  "calibrated_probability": false,
+  "fits": 0,
+  "new_real_forward_samples": 0,
+  "production_changed": false
+}

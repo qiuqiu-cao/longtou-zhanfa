@@ -1,0 +1,58 @@
+{
+  "version": "v204-timeout-limit-pool-collector-1",
+  "date": "20261014",
+  "collected_at": "2026-10-14T12:47:07+01:00",
+  "source": "Eastmoney via AKShare parser with bounded HTTP timeout",
+  "transport": {
+    "connect_timeout_seconds": 4.0,
+    "read_timeout_seconds": 6.0,
+    "maximum_attempts": 1
+  },
+  "datasets": {
+    "limit_up": {
+      "status": "unavailable",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+        }
+      ]
+    },
+    "failed_board": {
+      "status": "unavailable",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Read timed out. (read timeout=4.0)"
+        }
+      ]
+    },
+    "limit_down": {
+      "status": "unavailable",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fund%3Aasc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+        }
+      ]
+    },
+    "previous_limit": {
+      "status": "unavailable",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Read timed out. (read timeout=4.0)"
+        }
+      ]
+    },
+    "strong": {
+      "status": "unavailable",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicQSPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=5000&sort=zdp%3Adesc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+        }
+      ]
+    }
+  }
+}

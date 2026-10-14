@@ -1,0 +1,67 @@
+{
+  "retrieved_at": "2026-09-30T23:07:24+08:00",
+  "data_range": [
+    "2026-09-01",
+    "2026-09-30"
+  ],
+  "page_count": 21,
+  "pool_rows_mainboard": 1040,
+  "daily_signals": 21,
+  "censored_signal_dates": [
+    "2026-09-29",
+    "2026-09-30"
+  ],
+  "partial_reconstruction_dates": [
+    "2026-09-02",
+    "2026-09-03"
+  ],
+  "costs": {
+    "buy": 0.00125,
+    "sell": 0.00175
+  },
+  "execution_proxy": "practical sleeve: next-session open gap 0-7%, then touch of 10% limit excluding all-day locked up; following-session close exit",
+  "source": {
+    "limit_pool": "Eastmoney getTopicZTPool; archived Eastmoney/AKShare snapshots for 9/1-9/8",
+    "ohlcv": "Tencent fqkline qfqday"
+  },
+  "fields_verified": [
+    "daily limit-up pool",
+    "code/name",
+    "consecutive-board count",
+    "daily open/high/low/close/volume"
+  ],
+  "fields_unavailable": [
+    "Level-2 queue",
+    "tick/order sequence",
+    "auction cancellation",
+    "actual fill and queue position",
+    "intraday VWAP"
+  ],
+  "execution_limit": "INFERRED_DAILY_OHLC; touch/reseal and exits are not broker-confirmed",
+  "benchmark": {
+    "trades": 7,
+    "realized_trades": 7,
+    "unresolved": 0,
+    "win_rate": 0.5714285714285714,
+    "total_return": 0.06720799299948621,
+    "avg_trade": 0.011329973623165932,
+    "median_trade": 0.015709256487551837,
+    "max_drawdown": -0.11802254401679024,
+    "profit_factor": 1.515197241188451,
+    "best_trade": 0.09670411985018701,
+    "worst_trade": -0.09294478373672022
+  },
+  "practical": {
+    "trades": 3,
+    "realized_trades": 3,
+    "unresolved": 0,
+    "win_rate": 0.6666666666666666,
+    "total_return": 0.1601237888781546,
+    "avg_trade": 0.05232066260422097,
+    "median_trade": 0.08790531414924807,
+    "max_drawdown": -0.027647446186772173,
+    "profit_factor": 6.677268951074434,
+    "best_trade": 0.09670411985018701,
+    "worst_trade": -0.027647446186772173
+  }
+}

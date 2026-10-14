@@ -1,0 +1,253 @@
+{
+  "interpreted_at_utc": "2026-10-02T20:11:12.850188+00:00",
+  "interpreted_at_shanghai": "2026-10-03 04:11:12",
+  "parent_report": "D:\\Documents\\ChatGPT\\龙头战法\\research\\experience_validation_20261002T200651724600Z\\report.json",
+  "parent_report_sha256": "94b8670f81b5637ec9af7ef4698e930664a110ca46bce9debe230478b62d661a",
+  "source_manifest": "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\source_manifest.json",
+  "source_manifest_sha256": "76bb58ec72ef986c206738d49c055e3e15e2b7e17175713309f11a20e3d6239f",
+  "experience_bank": "D:\\Documents\\ChatGPT\\龙头战法\\research\\external_experience_sources_20261002T200622516228Z\\experience_bank.md",
+  "experience_bank_sha256": "de3b09f59581c2b836495d8815c67f385c3ce3e50497a9a2d76cbd68aee8c17d",
+  "fixed_comparison_completed": true,
+  "rerun_or_parameter_search_after_result": false,
+  "primary_rank_hit_interpretation": "8/13 concerns highest internal score among all OHLC nonword candidates, including dates with no positive promotion call. It is not the accuracy of positive judgments or trade success.",
+  "positive_nonword_top1": {
+    "baseline": {
+      "known_positive_top1_calls": 5,
+      "hits": 3,
+      "precision": 0.6,
+      "descriptive_wilson95": [
+        0.2307242812760128,
+        0.882379225767352
+      ],
+      "called_dates": [
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-15",
+        "2026-09-17",
+        "2026-09-28"
+      ],
+      "failed_dates": [
+        "2026-09-07",
+        "2026-09-15"
+      ]
+    },
+    "challenger": {
+      "known_positive_top1_calls": 5,
+      "hits": 3,
+      "precision": 0.6,
+      "descriptive_wilson95": [
+        0.2307242812760128,
+        0.882379225767352
+      ],
+      "called_dates": [
+        "2026-09-04",
+        "2026-09-07",
+        "2026-09-15",
+        "2026-09-17",
+        "2026-09-28"
+      ],
+      "failed_dates": [
+        "2026-09-07",
+        "2026-09-15"
+      ]
+    }
+  },
+  "critical_counterexample": {
+    "signal_date": "2026-09-29",
+    "target_date": "2026-09-30",
+    "baseline_code": "600032",
+    "challenger_code": "002242",
+    "baseline_score": 0.44868,
+    "challenger_score": 0.455364,
+    "both_promotion_calls": false,
+    "rank_hit_difference": 1,
+    "positive_call_improvement": false,
+    "independently_exchange_certified_label": false
+  },
+  "coverage": {
+    "registered_candidates": 182,
+    "known_labels": 133,
+    "unknown_labels": 49,
+    "candidate_label_coverage": 0.7307692307692307,
+    "candidate_dates": 16,
+    "complete_matched_dates": 13,
+    "official_dates": 21,
+    "complete_of_candidate_dates": 0.8125,
+    "complete_of_official_dates": 0.6190476190476191,
+    "missing_entire_dates": [
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24"
+    ],
+    "unsettled_dates": [
+      "2026-09-01",
+      "2026-09-21",
+      "2026-09-30"
+    ]
+  },
+  "corrected_binary_metrics": {
+    "baseline": {
+      "all": {
+        "registered_rows": 182,
+        "known_rows": 133,
+        "unknown_rows": 49,
+        "coverage": 0.7307692307692307,
+        "accuracy": 0.6165413533834586,
+        "precision": 0.5588235294117647,
+        "f1": 0.42696629213483145,
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "internal class scores are not accepted calibrated probabilities",
+        "known_label_positive_recall": 0.34545454545454546,
+        "complete_registered_positive_recall": null,
+        "complete_recall_unavailable_reason": "Unknown registered labels may contain additional positives; the original report field name meant recall in known-label rows only.",
+        "metric_domain": "Accuracy, Precision, known-label Recall and F1 only in known-label rows; unknown candidates retained in registered coverage."
+      },
+      "nonword": {
+        "registered_rows": 143,
+        "known_rows": 107,
+        "unknown_rows": 36,
+        "coverage": 0.7482517482517482,
+        "accuracy": 0.6448598130841121,
+        "precision": 0.6,
+        "f1": 0.24,
+        "all_fail_accuracy": 0.6261682242990654,
+        "brier": null,
+        "brier_reason": "internal class scores are not accepted calibrated probabilities",
+        "known_label_positive_recall": 0.15,
+        "complete_registered_positive_recall": null,
+        "complete_recall_unavailable_reason": "Unknown registered labels may contain additional positives; the original report field name meant recall in known-label rows only.",
+        "metric_domain": "Accuracy, Precision, known-label Recall and F1 only in known-label rows; unknown candidates retained in registered coverage."
+      }
+    },
+    "challenger": {
+      "all": {
+        "registered_rows": 182,
+        "known_rows": 133,
+        "unknown_rows": 49,
+        "coverage": 0.7307692307692307,
+        "accuracy": 0.6090225563909775,
+        "precision": 0.5454545454545454,
+        "f1": 0.4090909090909091,
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "internal class scores are not accepted calibrated probabilities",
+        "known_label_positive_recall": 0.32727272727272727,
+        "complete_registered_positive_recall": null,
+        "complete_recall_unavailable_reason": "Unknown registered labels may contain additional positives; the original report field name meant recall in known-label rows only.",
+        "metric_domain": "Accuracy, Precision, known-label Recall and F1 only in known-label rows; unknown candidates retained in registered coverage."
+      },
+      "nonword": {
+        "registered_rows": 143,
+        "known_rows": 107,
+        "unknown_rows": 36,
+        "coverage": 0.7482517482517482,
+        "accuracy": 0.6448598130841121,
+        "precision": 0.6,
+        "f1": 0.24,
+        "all_fail_accuracy": 0.6261682242990654,
+        "brier": null,
+        "brier_reason": "internal class scores are not accepted calibrated probabilities",
+        "known_label_positive_recall": 0.15,
+        "complete_registered_positive_recall": null,
+        "complete_recall_unavailable_reason": "Unknown registered labels may contain additional positives; the original report field name meant recall in known-label rows only.",
+        "metric_domain": "Accuracy, Precision, known-label Recall and F1 only in known-label rows; unknown candidates retained in registered coverage."
+      }
+    }
+  },
+  "historical_latest20_official_sessions": {
+    "sessions": [
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "registered_candidates": 165,
+    "missing_entire_dates": [
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24"
+    ],
+    "metrics": {
+      "baseline": {
+        "registered_rows": 165,
+        "known_rows": 133,
+        "unknown_rows": 32,
+        "coverage": 0.806060606060606,
+        "accuracy": 0.6165413533834586,
+        "precision": 0.5588235294117647,
+        "f1": 0.42696629213483145,
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "internal class scores are not accepted calibrated probabilities",
+        "known_label_positive_recall": 0.34545454545454546,
+        "complete_registered_positive_recall": null,
+        "complete_recall_unavailable_reason": "Unknown registered labels may contain additional positives; the original report field name meant recall in known-label rows only.",
+        "metric_domain": "Accuracy, Precision, known-label Recall and F1 only in known-label rows; unknown candidates retained in registered coverage."
+      },
+      "challenger": {
+        "registered_rows": 165,
+        "known_rows": 133,
+        "unknown_rows": 32,
+        "coverage": 0.806060606060606,
+        "accuracy": 0.6090225563909775,
+        "precision": 0.5454545454545454,
+        "f1": 0.4090909090909091,
+        "all_fail_accuracy": 0.5864661654135338,
+        "brier": null,
+        "brier_reason": "internal class scores are not accepted calibrated probabilities",
+        "known_label_positive_recall": 0.32727272727272727,
+        "complete_registered_positive_recall": null,
+        "complete_recall_unavailable_reason": "Unknown registered labels may contain additional positives; the original report field name meant recall in known-label rows only.",
+        "metric_domain": "Accuracy, Precision, known-label Recall and F1 only in known-label rows; unknown candidates retained in registered coverage."
+      }
+    }
+  },
+  "historical_latest60": {
+    "metrics": null,
+    "reason": "Challenger evaluated only in September; earlier rows were used in fitting. Do not merge in-sample predictions or results of other models to manufacture 60 out-of-sample dates."
+  },
+  "real_forward_latest20": {
+    "metrics": null,
+    "new_forward_samples": 0,
+    "reason": "No new settled real forward predictions in this research batch"
+  },
+  "real_forward_latest60": {
+    "metrics": null,
+    "new_forward_samples": 0,
+    "reason": "No new settled real forward predictions in this research batch"
+  },
+  "brier": null,
+  "brier_reason": "No accepted calibrated probability under this experiment",
+  "prior_label_conflicts": "Six previously recorded historical positive closing-limit conflicts exist in V290; original training labels retained for exact comparison, not independently certified truth.",
+  "selection_search_history": "The same September period has already been examined in V278/V279/V288/V294 and related studies. This is one more fixed retrospective hypothesis test, not an independent unseen confirmation.",
+  "review_findings": [
+    "Source/date boundaries exclude same-day and September outcomes from new historical features",
+    "Original baseline scores reconstructed to 3.33e-16 and all 182 candidates preserved",
+    "Original report complete_positive_recall field is reinterpreted here as known-label recall; exact full registered positive Recall unavailable",
+    "Rank increment is one day, positive Top1 remains 3/5, overall binary accuracy decreases"
+  ],
+  "decision": "KEEP_EXPERIENCE_AS_UNCONFIRMED_HYPOTHESIS_NO_CORE_UPGRADE",
+  "stable_60_verified": false,
+  "next_step": "Resume the registered theme/same-height source availability task; retain the original matched challenge plan. This history-ranking proxy does not meet an upgrade gate."
+}

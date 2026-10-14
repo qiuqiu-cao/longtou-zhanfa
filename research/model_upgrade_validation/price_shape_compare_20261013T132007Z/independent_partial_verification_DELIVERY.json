@@ -1,0 +1,195 @@
+{
+  "formed_at": "2026-10-13T13:30:41.013555+00:00",
+  "status": "PARTIAL_FIXED_COMPARE_VERIFIED_NO_REFIT",
+  "actual_fit_count": 2,
+  "BASE_refits": 0,
+  "saved_complete_folds": [
+    "2025H2"
+  ],
+  "second_fold_outputs_lost_and_not_scored": true,
+  "September_unfitted": true,
+  "unknown_targets_18_both_missing_not_changed": true,
+  "fixed_first_gate_failed": true,
+  "complete_paired_saved_rows": 3168,
+  "independent_first_metrics": {
+    "BASE": {
+      "n": 1584,
+      "correct": 1025,
+      "TP": 224,
+      "TN": 801,
+      "FP": 129,
+      "FN": 430,
+      "Accuracy": 0.6470959595959596,
+      "Precision": 0.6345609065155807,
+      "complete_positive_Recall": 0.3425076452599388,
+      "F1": 0.4448857994041708
+    },
+    "SIGNAL_PRICE_SHAPE": {
+      "n": 1584,
+      "correct": 1033,
+      "TP": 243,
+      "TN": 790,
+      "FP": 140,
+      "FN": 411,
+      "Accuracy": 0.6521464646464646,
+      "Precision": 0.6344647519582245,
+      "complete_positive_Recall": 0.37155963302752293,
+      "F1": 0.4686595949855352
+    }
+  },
+  "independent_price_subgroups": {
+    "BASE": {
+      "single_price_shape": {
+        "original_registered_count": 354,
+        "scoreable_count": 354,
+        "coverage": 1.0,
+        "Accuracy": 0.6242937853107344,
+        "Precision": 0.6622950819672131,
+        "complete_positive_Recall": 0.8706896551724138,
+        "F1": 0.7523277467411545,
+        "confusion": {
+          "TP": 202,
+          "TN": 19,
+          "FP": 103,
+          "FN": 30
+        },
+        "complete_positive_misses": 30,
+        "positive_support": 232,
+        "signal_days": 119,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "non_single_price_shape": {
+        "original_registered_count": 1227,
+        "scoreable_count": 1227,
+        "coverage": 1.0,
+        "Accuracy": 0.6528117359413202,
+        "Precision": 0.4583333333333333,
+        "complete_positive_Recall": 0.052132701421800945,
+        "F1": 0.09361702127659573,
+        "confusion": {
+          "TP": 22,
+          "TN": 779,
+          "FP": 26,
+          "FN": 400
+        },
+        "complete_positive_misses": 400,
+        "positive_support": 422,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "unknown_price_shape": {
+        "original_registered_count": 3,
+        "scoreable_count": 3,
+        "coverage": 1.0,
+        "Accuracy": 1.0,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 3,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 3,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      }
+    },
+    "SIGNAL_PRICE_SHAPE": {
+      "single_price_shape": {
+        "original_registered_count": 354,
+        "scoreable_count": 354,
+        "coverage": 1.0,
+        "Accuracy": 0.6581920903954802,
+        "Precision": 0.6590257879656161,
+        "complete_positive_Recall": 0.9913793103448276,
+        "F1": 0.7917383820998279,
+        "confusion": {
+          "TP": 230,
+          "TN": 3,
+          "FP": 119,
+          "FN": 2
+        },
+        "complete_positive_misses": 2,
+        "positive_support": 232,
+        "signal_days": 119,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "non_single_price_shape": {
+        "original_registered_count": 1227,
+        "scoreable_count": 1227,
+        "coverage": 1.0,
+        "Accuracy": 0.6495517522412388,
+        "Precision": 0.38235294117647056,
+        "complete_positive_Recall": 0.030805687203791468,
+        "F1": 0.05701754385964912,
+        "confusion": {
+          "TP": 13,
+          "TN": 784,
+          "FP": 21,
+          "FN": 409
+        },
+        "complete_positive_misses": 409,
+        "positive_support": 422,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "unknown_price_shape": {
+        "original_registered_count": 3,
+        "scoreable_count": 3,
+        "coverage": 1.0,
+        "Accuracy": 1.0,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 3,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 3,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      }
+    }
+  },
+  "all_three_input_target_preflight_after_NaN_repair": [
+    {
+      "fold": "2025H2",
+      "full_candidates": 1584,
+      "canonical_missing_target_and_original_truth_equal": true,
+      "fits": 0
+    },
+    {
+      "fold": "2026JanAug",
+      "full_candidates": 1941,
+      "canonical_missing_target_and_original_truth_equal": true,
+      "fits": 0
+    },
+    {
+      "fold": "2026Sep",
+      "full_candidates": 182,
+      "canonical_missing_target_and_original_truth_equal": true,
+      "fits": 0
+    }
+  ],
+  "old_source_aliases_verified_not_old_receipt_rewritten": true,
+  "post_repair_repeated_compare_refused_before_fit": true,
+  "deployment_weights_saved": false,
+  "no_production_change": true,
+  "new_mature_forward_samples": 0,
+  "new_model_gain_accepted": false,
+  "actual_before_fit_source_hash": "f59b1f6fa6b191c6ef141a3a6535aa18b270418445ea1c86d684bcb98d74b197",
+  "repaired_current_source_hash": "ba37e607a04becbc218ba96fd9fd1b507b147eaa1ac5cf3e99187bf163e1d768",
+  "original_input_and_runtime_source_bindings_rechecked": 269
+}

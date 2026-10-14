@@ -1,0 +1,129 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "train_rows": 4793,
+  "validation_rows": 1106,
+  "validation_start": "2025-07-28",
+  "validation_exclusive_end": "2025-12-26",
+  "embargo_sessions": 30,
+  "groups": {
+    "height_only": {
+      "features": [
+        "boards"
+      ],
+      "metrics": {
+        "rows": 1106,
+        "positive_rows": 38,
+        "auc": 0.781367041198502,
+        "brier": 0.029970717744244438
+      },
+      "daily_top1": {
+        "selected_rows": 102,
+        "selected_episodes": 59,
+        "proxy_hit_rate": 0.1016949152542373,
+        "verified_hit_rate": null,
+        "actual_profit_win_rate": null
+      },
+      "top1_above_80pct": {
+        "selected_rows": 0,
+        "selected_episodes": 0,
+        "proxy_hit_rate": null,
+        "verified_hit_rate": null,
+        "actual_profit_win_rate": null
+      }
+    },
+    "identity_and_price_volume": {
+      "features": [
+        "boards",
+        "height_gap_to_known_top",
+        "same_height_known_count",
+        "sole_known_top_proxy",
+        "candidate_pool_count",
+        "unknown_height_pool_count",
+        "turnover",
+        "amount_to_float_cap",
+        "open_gap_pct",
+        "amplitude_pct",
+        "one_price_day_proxy",
+        "close"
+      ],
+      "metrics": {
+        "rows": 1106,
+        "positive_rows": 38,
+        "auc": 0.8145821013207175,
+        "brier": 0.030310834546616906
+      },
+      "daily_top1": {
+        "selected_rows": 102,
+        "selected_episodes": 58,
+        "proxy_hit_rate": 0.1206896551724138,
+        "verified_hit_rate": null,
+        "actual_profit_win_rate": null
+      },
+      "top1_above_80pct": {
+        "selected_rows": 2,
+        "selected_episodes": 2,
+        "proxy_hit_rate": 0.5,
+        "verified_hit_rate": null,
+        "actual_profit_win_rate": null
+      }
+    },
+    "plus_emotion": {
+      "features": [
+        "boards",
+        "height_gap_to_known_top",
+        "same_height_known_count",
+        "sole_known_top_proxy",
+        "candidate_pool_count",
+        "unknown_height_pool_count",
+        "turnover",
+        "amount_to_float_cap",
+        "open_gap_pct",
+        "amplitude_pct",
+        "one_price_day_proxy",
+        "close",
+        "market_limit_count",
+        "market_consecutive_count",
+        "market_max_board",
+        "market_failed_count",
+        "market_down_limit_count",
+        "market_seal_rate",
+        "market_failed_rate",
+        "market_height_change",
+        "market_limit_change",
+        "market_middle_density",
+        "market_ladder_gap_count",
+        "market_yesterday_premium",
+        "market_previous_limit_tail_loss",
+        "market_promotion_overall",
+        "market_promotion_1to2",
+        "market_promotion_2to3",
+        "market_promotion_3to4",
+        "market_promotion_4to5",
+        "market_promotion_mid",
+        "market_space_feedback",
+        "market_previous_limit_feedback_coverage"
+      ],
+      "metrics": {
+        "rows": 1106,
+        "positive_rows": 38,
+        "auc": 0.7848166765227677,
+        "brier": 0.031524848409585526
+      },
+      "daily_top1": {
+        "selected_rows": 102,
+        "selected_episodes": 58,
+        "proxy_hit_rate": 0.1206896551724138,
+        "verified_hit_rate": null,
+        "actual_profit_win_rate": null
+      },
+      "top1_above_80pct": {
+        "selected_rows": 2,
+        "selected_episodes": 2,
+        "proxy_hit_rate": 0.5,
+        "verified_hit_rate": null,
+        "actual_profit_win_rate": null
+      }
+    }
+  },
+  "limitation": "unverified event proxy; single validation segment; no proof of factor stability or profit"
+}

@@ -1,0 +1,198 @@
+{
+  "version": "v179-consensus-crowding-tradeoff-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "session_rows": 503,
+  "split_date": "2025-05-20",
+  "development_thresholds": {
+    "low_one_word_share_q30": 0.1428571428571428,
+    "high_one_word_share_q70": 0.2857142857142857,
+    "thresholds_frozen_before_validation": true
+  },
+  "bucket_summaries": {
+    "LOW": {
+      "sessions": 178,
+      "signal_one_word_share_mean": 0.07088833108904168,
+      "signal_consensus_rate": 0.0,
+      "next_adverse_state_rate": 0.4943820224719101,
+      "next_failed_rate_mean": 0.3450312997388021,
+      "next_promotion_mid_mean": 0.4114474672315919,
+      "next_previous_limit_median_return_mean": 0.011712666879805836
+    },
+    "MIDDLE": {
+      "sessions": 194,
+      "signal_one_word_share_mean": 0.21382569218209713,
+      "signal_consensus_rate": 0.0,
+      "next_adverse_state_rate": 0.4690721649484536,
+      "next_failed_rate_mean": 0.361602843360812,
+      "next_promotion_mid_mean": 0.43025279862097354,
+      "next_previous_limit_median_return_mean": 0.011431092069943206
+    },
+    "HIGH": {
+      "sessions": 131,
+      "signal_one_word_share_mean": 0.3710751582600042,
+      "signal_consensus_rate": 0.08396946564885496,
+      "next_adverse_state_rate": 0.44274809160305345,
+      "next_failed_rate_mean": 0.3549254195353512,
+      "next_promotion_mid_mean": 0.42968658306842605,
+      "next_previous_limit_median_return_mean": 0.009449892371855598
+    }
+  },
+  "development_comparisons": {
+    "next_adverse_state": {
+      "metric": "next_adverse_state",
+      "estimate_high_minus_low": -0.07501447357538665,
+      "ci95": [
+        -0.2107352576296419,
+        0.059726242659829655
+      ],
+      "high_sessions": 107,
+      "low_sessions": 113
+    },
+    "next_failed_rate": {
+      "metric": "next_failed_rate",
+      "estimate_high_minus_low": -0.0027013490976267596,
+      "ci95": [
+        -0.02654095210403565,
+        0.02058163168529185
+      ],
+      "high_sessions": 107,
+      "low_sessions": 113
+    },
+    "next_promotion_mid": {
+      "metric": "next_promotion_mid",
+      "estimate_high_minus_low": 0.010873943258952579,
+      "ci95": [
+        -0.03860478660245501,
+        0.06139965452302808
+      ],
+      "high_sessions": 107,
+      "low_sessions": 113
+    },
+    "next_previous_limit_median_return": {
+      "metric": "next_previous_limit_median_return",
+      "estimate_high_minus_low": -0.0011837866679808417,
+      "ci95": [
+        -0.008606686352636752,
+        0.006099317909816426
+      ],
+      "high_sessions": 107,
+      "low_sessions": 113
+    }
+  },
+  "validation_comparisons": {
+    "next_adverse_state": {
+      "metric": "next_adverse_state",
+      "estimate_high_minus_low": 0.049358974358974295,
+      "ci95": [
+        -0.17435897435897435,
+        0.2775641025641026
+      ],
+      "high_sessions": 24,
+      "low_sessions": 65
+    },
+    "next_failed_rate": {
+      "metric": "next_failed_rate",
+      "estimate_high_minus_low": 0.028811782569548583,
+      "ci95": [
+        -0.008610040789067928,
+        0.06674493179188229
+      ],
+      "high_sessions": 24,
+      "low_sessions": 65
+    },
+    "next_promotion_mid": {
+      "metric": "next_promotion_mid",
+      "estimate_high_minus_low": 0.022716791718618012,
+      "ci95": [
+        -0.05179319946765287,
+        0.09450510262618697
+      ],
+      "high_sessions": 24,
+      "low_sessions": 65
+    },
+    "next_previous_limit_median_return": {
+      "metric": "next_previous_limit_median_return",
+      "estimate_high_minus_low": -0.002999029237706582,
+      "ci95": [
+        -0.012776766481361378,
+        0.007321383197704867
+      ],
+      "high_sessions": 24,
+      "low_sessions": 65
+    }
+  },
+  "quartile_summaries": [
+    {
+      "sessions": 130,
+      "signal_one_word_share_mean": 0.047737542357800866,
+      "signal_consensus_rate": 0.0,
+      "next_adverse_state_rate": 0.4846153846153846,
+      "next_failed_rate_mean": 0.35006357673785443,
+      "next_promotion_mid_mean": 0.40649936406306897,
+      "next_previous_limit_median_return_mean": 0.011192914226208958,
+      "interval": "(-0.001, 0.111]"
+    },
+    {
+      "sessions": 140,
+      "signal_one_word_share_mean": 0.1648866496137119,
+      "signal_consensus_rate": 0.0,
+      "next_adverse_state_rate": 0.4928571428571429,
+      "next_failed_rate_mean": 0.3498981458493543,
+      "next_promotion_mid_mean": 0.4149936508486174,
+      "next_previous_limit_median_return_mean": 0.008940931683739998,
+      "interval": "(0.111, 0.2]"
+    },
+    {
+      "sessions": 116,
+      "signal_one_word_share_mean": 0.24836461866157308,
+      "signal_consensus_rate": 0.0,
+      "next_adverse_state_rate": 0.46551724137931033,
+      "next_failed_rate_mean": 0.36319373841968483,
+      "next_promotion_mid_mean": 0.44205845576555214,
+      "next_previous_limit_median_return_mean": 0.014543270612723425,
+      "interval": "(0.2, 0.286]"
+    },
+    {
+      "sessions": 117,
+      "signal_one_word_share_mean": 0.38128927976120136,
+      "signal_consensus_rate": 0.09401709401709402,
+      "next_adverse_state_rate": 0.4358974358974359,
+      "next_failed_rate_mean": 0.3541647339583006,
+      "next_promotion_mid_mean": 0.4339557706482616,
+      "next_previous_limit_median_return_mean": 0.00979994692889592,
+      "interval": "(0.286, 0.667]"
+    }
+  ],
+  "formal_consensus_subset": {
+    "sessions": 11,
+    "signal_one_word_share_mean": 0.38735402736858937,
+    "signal_consensus_rate": 1.0,
+    "next_adverse_state_rate": 0.2727272727272727,
+    "next_failed_rate_mean": 0.3832731224991363,
+    "next_promotion_mid_mean": 0.5319191411742563,
+    "next_previous_limit_median_return_mean": 0.019161620991621026,
+    "minimum_sessions_for_factor_claim": 50,
+    "factor_claim_sample_sufficient": false
+  },
+  "high_one_word_share_next_adverse_association_stable": false,
+  "one_word_share_monotonic_adverse_risk_supported": false,
+  "governance": {
+    "one_word_share_alone_proves_consensus_blowoff": false,
+    "formal_consensus_sample_supports_factor_claim": false,
+    "direct_emotion_gate_allowed": false,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "One-price-board share is a crowding and buyability descriptor, not a monotonic forecast of next-session deterioration. Formal consensus days must be reported separately because their sample is sparse.",
+  "limitations": [
+    "one_word_share is an aggregate close field and does not prove queue ownership or fill",
+    "formal consensus days are rare in the archived sample",
+    "no theme structure, candidate identity, entry fill, or B+1/B+2/B+3 trade path",
+    "validation dates have been inspected by earlier project research"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "20b207c444d8d97f6fa9cd5febcbb04157aeccfbb422395a4ea1302ea16b43c1"
+}

@@ -1,0 +1,118 @@
+{
+  "version": "v126-first-board-profit-link-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "metrics": {
+    "earliest_seal": {
+      "selected_sessions": 13,
+      "execution_observed_sessions": 13,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 2,
+      "filled_trades": 11,
+      "fill_rate": 0.8461538461538461,
+      "promotion_precision_all_selections": 0.07692307692307693,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 11,
+        "mean_net_return": -0.044050453645734886,
+        "positive_rate": 0.36363636363636365
+      },
+      "B_plus_2": {
+        "n": 10,
+        "mean_net_return": -0.050361993815786835,
+        "positive_rate": 0.3
+      },
+      "B_plus_3": {
+        "n": 9,
+        "mean_net_return": -0.04667906369150657,
+        "positive_rate": 0.3333333333333333
+      },
+      "big_loss_B_plus_1_rate": 0.2727272727272727
+    },
+    "speed_only": {
+      "selected_sessions": 13,
+      "execution_observed_sessions": 13,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 2,
+      "filled_trades": 11,
+      "fill_rate": 0.8461538461538461,
+      "promotion_precision_all_selections": 0.07692307692307693,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 11,
+        "mean_net_return": -0.044050453645734886,
+        "positive_rate": 0.36363636363636365
+      },
+      "B_plus_2": {
+        "n": 10,
+        "mean_net_return": -0.050361993815786835,
+        "positive_rate": 0.3
+      },
+      "B_plus_3": {
+        "n": 9,
+        "mean_net_return": -0.04667906369150657,
+        "positive_rate": 0.3333333333333333
+      },
+      "big_loss_B_plus_1_rate": 0.2727272727272727
+    },
+    "base_quality": {
+      "selected_sessions": 13,
+      "execution_observed_sessions": 13,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 3,
+      "filled_trades": 10,
+      "fill_rate": 0.7692307692307693,
+      "promotion_precision_all_selections": 0.15384615384615385,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 10,
+        "mean_net_return": -0.0244673587740104,
+        "positive_rate": 0.4
+      },
+      "B_plus_2": {
+        "n": 9,
+        "mean_net_return": -0.01042662382120939,
+        "positive_rate": 0.4444444444444444
+      },
+      "B_plus_3": {
+        "n": 8,
+        "mean_net_return": 0.0102803909222168,
+        "positive_rate": 0.625
+      },
+      "big_loss_B_plus_1_rate": 0.2
+    },
+    "emotion_challenger": {
+      "selected_sessions": 13,
+      "execution_observed_sessions": 13,
+      "missing_execution_evidence_sessions": 0,
+      "unverifiable_limit_queue_sessions": 3,
+      "filled_trades": 10,
+      "fill_rate": 0.7692307692307693,
+      "promotion_precision_all_selections": 0.15384615384615385,
+      "promotion_precision_filled": 0.0,
+      "B_plus_1": {
+        "n": 10,
+        "mean_net_return": -0.0244673587740104,
+        "positive_rate": 0.4
+      },
+      "B_plus_2": {
+        "n": 9,
+        "mean_net_return": -0.01042662382120939,
+        "positive_rate": 0.4444444444444444
+      },
+      "B_plus_3": {
+        "n": 8,
+        "mean_net_return": 0.0102803909222168,
+        "positive_rate": 0.625
+      },
+      "big_loss_B_plus_1_rate": 0.2
+    }
+  },
+  "governance": {
+    "one_selection_per_day": true,
+    "unfilled_top1_not_replaced": true,
+    "test_results_not_used_to_retune": true,
+    "missing_bar_is_unfilled_trade": false,
+    "deployment_authorized": false
+  },
+  "conclusion_rule": "A ranker is not promoted unless it improves mean net return and positive rate, does not worsen big-loss rate, and is confirmed on a larger frozen forward sample."
+}

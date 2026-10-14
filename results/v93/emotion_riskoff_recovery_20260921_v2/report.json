@@ -1,0 +1,83 @@
+{
+  "version": "v93-riskoff-recovery-challenger-1",
+  "status": "RESEARCH_ONLY",
+  "scope": "only signal dates whose state is 大分歧 or 退潮",
+  "target": "next state is 启动/升温/加速/一致/修复 versus 大分歧/退潮",
+  "features": [
+    "limit_count",
+    "limit_change",
+    "seal_rate",
+    "failed_rate",
+    "max_board",
+    "height_change",
+    "middle_density",
+    "ladder_gap_count",
+    "unique_space",
+    "one_word_share",
+    "breadth_height_divergence",
+    "promotion_overall",
+    "promotion_mid",
+    "yesterday_premium",
+    "previous_limit_tail_loss",
+    "down_limit_count",
+    "breadth_health",
+    "relay_appetite",
+    "ladder_health",
+    "loss_effect_health",
+    "regime_fragility",
+    "emotion_quality_score"
+  ],
+  "split": {
+    "method": "chronological_70_30",
+    "train_n": 224,
+    "blind_n": 96,
+    "train_end": "2025-11-07",
+    "blind_start": "2025-11-11"
+  },
+  "blind": {
+    "challenger": {
+      "n": 96,
+      "positive_rate": 0.4583333333333333,
+      "auc": 0.611451048951049,
+      "brier": 0.24349189447967343,
+      "log_loss": 0.682441187748919,
+      "accuracy_at_0_5": 0.5833333333333334,
+      "precision_at_0_5": 0.5526315789473685,
+      "recall_at_0_5": 0.4772727272727273,
+      "tp": 21,
+      "fp": 17,
+      "fn": 23,
+      "tn": 35
+    },
+    "train_prior_baseline": {
+      "n": 96,
+      "positive_rate": 0.4583333333333333,
+      "auc": 0.5,
+      "brier": 0.24837239583333334,
+      "log_loss": 0.6898889992640966,
+      "accuracy_at_0_5": 0.5416666666666666,
+      "precision_at_0_5": null,
+      "recall_at_0_5": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 44,
+      "tn": 52
+    }
+  },
+  "promotion_gate_passed": true,
+  "promotion_rule": "blind Brier and log loss improve train-prior baseline; AUC>=0.55",
+  "latest_research_prediction": {
+    "signal_date": "2026-09-21",
+    "current_state": "加速",
+    "status": "NOT_APPLICABLE_CURRENT_STATE"
+  },
+  "generated_at": "2026-09-21T18:49:43.271978+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "fde86a688443c907d80ee1b9d2f94a0e504f7a793a1f23c4f720446ad2e84f00"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v93\\emotion_riskoff_recovery_20260921_v2\\blind_predictions.csv",
+    "sha256": "3021bab16768bef6d57cc72bdf25b053317b0ccdd350d469bd6b7dab354923d8"
+  }
+}

@@ -1,0 +1,722 @@
+{
+  "version": "v131-height-anchor-profit-audit-1",
+  "source_selection_rows": 2252,
+  "audit": {
+    "status": "DIAGNOSTIC_ONLY",
+    "methods": {
+      "CURRENT_HEIGHT_BASELINE": {
+        "label": "机械当前最高板",
+        "selections": 563,
+        "joined": 563,
+        "price_path_fill_proxies": 313,
+        "queue_unverifiable": 57,
+        "no_next_day_board_touch": 191,
+        "outcome_unavailable": 2,
+        "b1": {
+          "known": 313,
+          "mean_net_close_mark": -0.04361609008650021,
+          "median_net_close_mark": -0.0417121494252873,
+          "positive_rate": 0.3961661341853035,
+          "positive_rate_wilson95": [
+            0.3435555181084662,
+            0.45129456166980997
+          ],
+          "large_loss_rate": 0.4249201277955272,
+          "large_loss_rate_wilson95": [
+            0.37139198890367336,
+            0.48026883801292636
+          ]
+        },
+        "b2": {
+          "known": 312,
+          "mean_net_close_mark": -0.05494182464549143,
+          "median_net_close_mark": -0.0427556848680903,
+          "positive_rate": 0.36217948717948717,
+          "positive_rate_wilson95": [
+            0.3108232889655136,
+            0.4168882017263309
+          ],
+          "large_loss_rate": 0.46474358974358976,
+          "large_loss_rate_wilson95": [
+            0.4101658556589516,
+            0.5201789442854738
+          ]
+        },
+        "b3": {
+          "known": 311,
+          "mean_net_close_mark": -0.06448246798556083,
+          "median_net_close_mark": -0.1011410873101952,
+          "positive_rate": 0.33762057877813506,
+          "positive_rate_wilson95": [
+            0.28732824050152717,
+            0.39187538033571256
+          ],
+          "large_loss_rate": 0.5530546623794212,
+          "large_loss_rate_wilson95": [
+            0.49748568434936746,
+            0.6073289741889601
+          ]
+        },
+        "profit_by_role_success": {
+          "0": {
+            "selections": 300,
+            "joined": 300,
+            "price_path_fill_proxies": 108,
+            "queue_unverifiable": 0,
+            "no_next_day_board_touch": 191,
+            "outcome_unavailable": 1,
+            "b1": {
+              "known": 108,
+              "mean_net_close_mark": -0.13628113991583804,
+              "median_net_close_mark": -0.1447742750512489,
+              "positive_rate": 0.1111111111111111,
+              "positive_rate_wilson95": [
+                0.06471266928983735,
+                0.18422416606859587
+              ],
+              "large_loss_rate": 0.6759259259259259,
+              "large_loss_rate_wilson95": [
+                0.5829333238469441,
+                0.7568333458718599
+              ]
+            },
+            "b2": {
+              "known": 108,
+              "mean_net_close_mark": -0.14817847087294064,
+              "median_net_close_mark": -0.19220195118583477,
+              "positive_rate": 0.21296296296296297,
+              "positive_rate_wilson95": [
+                0.14630950224163303,
+                0.29933435242768675
+              ],
+              "large_loss_rate": 0.7129629629629629,
+              "large_loss_rate_wilson95": [
+                0.6214901729048635,
+                0.7898063220178991
+              ]
+            },
+            "b3": {
+              "known": 108,
+              "mean_net_close_mark": -0.1533877023057898,
+              "median_net_close_mark": -0.2000660245988836,
+              "positive_rate": 0.18518518518518517,
+              "positive_rate_wilson95": [
+                0.12319953824741528,
+                0.26879694751893546
+              ],
+              "large_loss_rate": 0.7314814814814815,
+              "large_loss_rate_wilson95": [
+                0.6410104214214318,
+                0.8060509861033103
+              ]
+            }
+          },
+          "1": {
+            "selections": 263,
+            "joined": 263,
+            "price_path_fill_proxies": 205,
+            "queue_unverifiable": 57,
+            "no_next_day_board_touch": 0,
+            "outcome_unavailable": 1,
+            "b1": {
+              "known": 205,
+              "mean_net_close_mark": 0.005202570311394853,
+              "median_net_close_mark": 0.0324680256116207,
+              "positive_rate": 0.5463414634146342,
+              "positive_rate_wilson95": [
+                0.4779630618034625,
+                0.6130150423875877
+              ],
+              "large_loss_rate": 0.2926829268292683,
+              "large_loss_rate_wilson95": [
+                0.23467005670151575,
+                0.35832263507536544
+              ]
+            },
+            "b2": {
+              "known": 204,
+              "mean_net_close_mark": -0.005581247230959533,
+              "median_net_close_mark": -0.01734730769216285,
+              "positive_rate": 0.4411764705882353,
+              "positive_rate_wilson95": [
+                0.3747515508539653,
+                0.5097758185352915
+              ],
+              "large_loss_rate": 0.3333333333333333,
+              "large_loss_rate_wilson95": [
+                0.27225192793197844,
+                0.4005756186709159
+              ]
+            },
+            "b3": {
+              "known": 203,
+              "mean_net_close_mark": -0.017183131499921782,
+              "median_net_close_mark": -0.049069456845238,
+              "positive_rate": 0.4187192118226601,
+              "positive_rate_wilson95": [
+                0.35297862307156436,
+                0.4874788935783887
+              ],
+              "large_loss_rate": 0.458128078817734,
+              "large_loss_rate_wilson95": [
+                0.3910010678470868,
+                0.5268103801241011
+              ]
+            }
+          }
+        }
+      },
+      "MODEL_ALL_TOP1": {
+        "label": "模型全池首选",
+        "selections": 563,
+        "joined": 563,
+        "price_path_fill_proxies": 308,
+        "queue_unverifiable": 95,
+        "no_next_day_board_touch": 158,
+        "outcome_unavailable": 2,
+        "b1": {
+          "known": 308,
+          "mean_net_close_mark": -0.03906637887391534,
+          "median_net_close_mark": -0.038365192209973406,
+          "positive_rate": 0.4383116883116883,
+          "positive_rate_wilson95": [
+            0.3839956879359464,
+            0.49414751937296475
+          ],
+          "large_loss_rate": 0.42857142857142855,
+          "large_loss_rate_wilson95": [
+            0.3745188173899232,
+            0.4843838437046055
+          ]
+        },
+        "b2": {
+          "known": 307,
+          "mean_net_close_mark": -0.04437531550261983,
+          "median_net_close_mark": -0.0357908234978541,
+          "positive_rate": 0.3713355048859935,
+          "positive_rate_wilson95": [
+            0.3191900428088704,
+            0.4266611049121599
+          ],
+          "large_loss_rate": 0.43322475570032576,
+          "large_loss_rate_wilson95": [
+            0.37895786985247504,
+            0.48914209288881916
+          ]
+        },
+        "b3": {
+          "known": 306,
+          "mean_net_close_mark": -0.0468109570880286,
+          "median_net_close_mark": -0.0793078848315294,
+          "positive_rate": 0.38562091503267976,
+          "positive_rate_wilson95": [
+            0.3328232568148385,
+            0.44125474983271884
+          ],
+          "large_loss_rate": 0.5196078431372549,
+          "large_loss_rate_wilson95": [
+            0.4637335617232939,
+            0.5749959228514108
+          ]
+        },
+        "profit_by_role_success": {
+          "0": {
+            "selections": 270,
+            "joined": 270,
+            "price_path_fill_proxies": 106,
+            "queue_unverifiable": 5,
+            "no_next_day_board_touch": 158,
+            "outcome_unavailable": 1,
+            "b1": {
+              "known": 106,
+              "mean_net_close_mark": -0.13456290584503644,
+              "median_net_close_mark": -0.1426281891993921,
+              "positive_rate": 0.16981132075471697,
+              "positive_rate_wilson95": [
+                0.11019962137211899,
+                0.25251823806319285
+              ],
+              "large_loss_rate": 0.6886792452830188,
+              "large_loss_rate_wilson95": [
+                0.5952376131106485,
+                0.7689236100691732
+              ]
+            },
+            "b2": {
+              "known": 106,
+              "mean_net_close_mark": -0.14591342482598293,
+              "median_net_close_mark": -0.1736744963845584,
+              "positive_rate": 0.1792452830188679,
+              "positive_rate_wilson95": [
+                0.11786197527417633,
+                0.26306394532012656
+              ],
+              "large_loss_rate": 0.6981132075471698,
+              "large_loss_rate_wilson95": [
+                0.6050536120416237,
+                0.7773156722971892
+              ]
+            },
+            "b3": {
+              "known": 106,
+              "mean_net_close_mark": -0.1496821874074942,
+              "median_net_close_mark": -0.18221245997377014,
+              "positive_rate": 0.2169811320754717,
+              "positive_rate_wilson95": [
+                0.1491625958716791,
+                0.3045955693585882
+              ],
+              "large_loss_rate": 0.7264150943396226,
+              "large_loss_rate_wilson95": [
+                0.6347527565057559,
+                0.8022407113100302
+              ]
+            }
+          },
+          "1": {
+            "selections": 293,
+            "joined": 293,
+            "price_path_fill_proxies": 202,
+            "queue_unverifiable": 90,
+            "no_next_day_board_touch": 0,
+            "outcome_unavailable": 1,
+            "b1": {
+              "known": 202,
+              "mean_net_close_mark": 0.011045660031722465,
+              "median_net_close_mark": 0.050889785167128596,
+              "positive_rate": 0.5792079207920792,
+              "positive_rate_wilson95": [
+                0.5102711782863388,
+                0.6451882718328658
+              ],
+              "large_loss_rate": 0.29207920792079206,
+              "large_loss_rate_wilson95": [
+                0.2337194186540938,
+                0.35819952478299416
+              ]
+            },
+            "b2": {
+              "known": 201,
+              "mean_net_close_mark": 0.009172145135571663,
+              "median_net_close_mark": -0.0148576543470608,
+              "positive_rate": 0.472636815920398,
+              "positive_rate_wilson95": [
+                0.4047792595695876,
+                0.5415206737382066
+              ],
+              "large_loss_rate": 0.2935323383084577,
+              "large_loss_rate_wilson95": [
+                0.23492317560899395,
+                0.35988541207708963
+              ]
+            },
+            "b3": {
+              "known": 200,
+              "mean_net_close_mark": 0.007710794981288159,
+              "median_net_close_mark": -0.02067073783519085,
+              "positive_rate": 0.475,
+              "positive_rate_wilson95": [
+                0.4069162264657108,
+                0.5440260398531525
+              ],
+              "large_loss_rate": 0.41,
+              "large_loss_rate_wilson95": [
+                0.34415674908482885,
+                0.4792354096630791
+              ]
+            }
+          }
+        }
+      },
+      "MODEL_CHALLENGER_TOP1": {
+        "label": "模型次高挑战者首选",
+        "selections": 563,
+        "joined": 563,
+        "price_path_fill_proxies": 279,
+        "queue_unverifiable": 142,
+        "no_next_day_board_touch": 142,
+        "outcome_unavailable": 0,
+        "b1": {
+          "known": 279,
+          "mean_net_close_mark": -0.03165981345550432,
+          "median_net_close_mark": -0.0308514842293907,
+          "positive_rate": 0.43010752688172044,
+          "positive_rate_wilson95": [
+            0.37335087160830815,
+            0.48876269490131785
+          ],
+          "large_loss_rate": 0.41935483870967744,
+          "large_loss_rate_wilson95": [
+            0.36293242949334387,
+            0.4779678395562246
+          ]
+        },
+        "b2": {
+          "known": 279,
+          "mean_net_close_mark": -0.03820443560696821,
+          "median_net_close_mark": -0.0405679483240223,
+          "positive_rate": 0.3835125448028674,
+          "positive_rate_wilson95": [
+            0.32840578668466125,
+            0.44178349083138213
+          ],
+          "large_loss_rate": 0.4157706093189964,
+          "large_loss_rate_wilson95": [
+            0.35946574390777786,
+            0.47436342598843806
+          ]
+        },
+        "b3": {
+          "known": 279,
+          "mean_net_close_mark": -0.04530782543810194,
+          "median_net_close_mark": -0.0650907004341535,
+          "positive_rate": 0.37992831541218636,
+          "positive_rate_wilson95": [
+            0.3249705152792516,
+            0.4381476630834392
+          ],
+          "large_loss_rate": 0.4874551971326165,
+          "large_loss_rate_wilson95": [
+            0.4293734633816984,
+            0.5458776895815678
+          ]
+        },
+        "profit_by_role_success": {
+          "0": {
+            "selections": 394,
+            "joined": 394,
+            "price_path_fill_proxies": 196,
+            "queue_unverifiable": 56,
+            "no_next_day_board_touch": 142,
+            "outcome_unavailable": 0,
+            "b1": {
+              "known": 196,
+              "mean_net_close_mark": -0.05891577592687869,
+              "median_net_close_mark": -0.0789387318205884,
+              "positive_rate": 0.32142857142857145,
+              "positive_rate_wilson95": [
+                0.2600194183069776,
+                0.3897029145208326
+              ],
+              "large_loss_rate": 0.5153061224489796,
+              "large_loss_rate_wilson95": [
+                0.44572109152729084,
+                0.5843027085160395
+              ]
+            },
+            "b2": {
+              "known": 196,
+              "mean_net_close_mark": -0.07503762921251925,
+              "median_net_close_mark": -0.07664380097209636,
+              "positive_rate": 0.2755102040816326,
+              "positive_rate_wilson95": [
+                0.21773261553508944,
+                0.34191831716272897
+              ],
+              "large_loss_rate": 0.5102040816326531,
+              "large_loss_rate_wilson95": [
+                0.4406994205913649,
+                0.5793164461041888
+              ]
+            },
+            "b3": {
+              "known": 196,
+              "mean_net_close_mark": -0.08337565082139385,
+              "median_net_close_mark": -0.11038286074178699,
+              "positive_rate": 0.29081632653061223,
+              "positive_rate_wilson95": [
+                0.23174484814557778,
+                0.35792988459557123
+              ],
+              "large_loss_rate": 0.5714285714285714,
+              "large_loss_rate_wilson95": [
+                0.5014301440339961,
+                0.6386809228348798
+              ]
+            }
+          },
+          "1": {
+            "selections": 169,
+            "joined": 169,
+            "price_path_fill_proxies": 83,
+            "queue_unverifiable": 86,
+            "no_next_day_board_touch": 0,
+            "outcome_unavailable": 0,
+            "b1": {
+              "known": 83,
+              "mean_net_close_mark": 0.03270366418774119,
+              "median_net_close_mark": 0.0838317428774928,
+              "positive_rate": 0.6867469879518072,
+              "positive_rate_wilson95": [
+                0.5805862952746208,
+                0.7763860589554854
+              ],
+              "large_loss_rate": 0.1927710843373494,
+              "large_loss_rate_wilson95": [
+                0.12228902945885581,
+                0.2904338716464535
+              ]
+            },
+            "b2": {
+              "known": 83,
+              "mean_net_close_mark": 0.04877515411216439,
+              "median_net_close_mark": 0.0667753761290321,
+              "positive_rate": 0.6385542168674698,
+              "positive_rate_wilson95": [
+                0.5311967999353614,
+                0.7336536564289108
+              ],
+              "large_loss_rate": 0.1927710843373494,
+              "large_loss_rate_wilson95": [
+                0.12228902945885581,
+                0.2904338716464535
+              ]
+            },
+            "b3": {
+              "known": 83,
+              "mean_net_close_mark": 0.044587280286298256,
+              "median_net_close_mark": 0.0610535445783131,
+              "positive_rate": 0.5903614457831325,
+              "positive_rate_wilson95": [
+                0.48285768523824363,
+                0.6898708732601949
+              ],
+              "large_loss_rate": 0.2891566265060241,
+              "large_loss_rate_wilson95": [
+                0.20267448849174827,
+                0.3942922083452287
+              ]
+            }
+          }
+        }
+      },
+      "SECOND_HEIGHT_BASELINE": {
+        "label": "机械次高板",
+        "selections": 563,
+        "joined": 563,
+        "price_path_fill_proxies": 261,
+        "queue_unverifiable": 57,
+        "no_next_day_board_touch": 245,
+        "outcome_unavailable": 0,
+        "b1": {
+          "known": 261,
+          "mean_net_close_mark": -0.03750144265089739,
+          "median_net_close_mark": -0.0426333859649123,
+          "positive_rate": 0.40229885057471265,
+          "positive_rate_wilson95": [
+            0.34464195850429663,
+            0.4627900038965426
+          ],
+          "large_loss_rate": 0.4521072796934866,
+          "large_loss_rate_wilson95": [
+            0.3928569765292794,
+            0.5127469266083867
+          ]
+        },
+        "b2": {
+          "known": 261,
+          "mean_net_close_mark": -0.03951828941552388,
+          "median_net_close_mark": -0.0380052780799998,
+          "positive_rate": 0.367816091954023,
+          "positive_rate_wilson95": [
+            0.3116263493762279,
+            0.42784042328373106
+          ],
+          "large_loss_rate": 0.42528735632183906,
+          "large_loss_rate_wilson95": [
+            0.3668194167241952,
+            0.4859226721705641
+          ]
+        },
+        "b3": {
+          "known": 260,
+          "mean_net_close_mark": -0.04043154367425904,
+          "median_net_close_mark": -0.06274889913920705,
+          "positive_rate": 0.3730769230769231,
+          "positive_rate_wilson95": [
+            0.31653998781493886,
+            0.43330978827785693
+          ],
+          "large_loss_rate": 0.4846153846153846,
+          "large_loss_rate_wilson95": [
+            0.4245356898847019,
+            0.5451430708538187
+          ]
+        },
+        "profit_by_role_success": {
+          "0": {
+            "selections": 433,
+            "joined": 433,
+            "price_path_fill_proxies": 165,
+            "queue_unverifiable": 23,
+            "no_next_day_board_touch": 245,
+            "outcome_unavailable": 0,
+            "b1": {
+              "known": 165,
+              "mean_net_close_mark": -0.07660946284100367,
+              "median_net_close_mark": -0.0920367543978349,
+              "positive_rate": 0.23636363636363636,
+              "positive_rate_wilson95": [
+                0.1779988464839351,
+                0.30672486647336605
+              ],
+              "large_loss_rate": 0.6,
+              "large_loss_rate_wilson95": [
+                0.5237949467537109,
+                0.6716546793659335
+              ]
+            },
+            "b2": {
+              "known": 165,
+              "mean_net_close_mark": -0.08963086757182614,
+              "median_net_close_mark": -0.0906884136163983,
+              "positive_rate": 0.21212121212121213,
+              "positive_rate_wilson95": [
+                0.15666031555839638,
+                0.28068166985474857
+              ],
+              "large_loss_rate": 0.5575757575757576,
+              "large_loss_rate_wilson95": [
+                0.4813374248604851,
+                0.6311941780568859
+              ]
+            },
+            "b3": {
+              "known": 164,
+              "mean_net_close_mark": -0.09737588060708333,
+              "median_net_close_mark": -0.11430316772756995,
+              "positive_rate": 0.23170731707317074,
+              "positive_rate_wilson95": [
+                0.1737221609294149,
+                0.30197353059808285
+              ],
+              "large_loss_rate": 0.6158536585365854,
+              "large_loss_rate_wilson95": [
+                0.5395699364340087,
+                0.6868341967700262
+              ]
+            }
+          },
+          "1": {
+            "selections": 130,
+            "joined": 130,
+            "price_path_fill_proxies": 96,
+            "queue_unverifiable": 34,
+            "no_next_day_board_touch": 0,
+            "outcome_unavailable": 0,
+            "b1": {
+              "known": 96,
+              "mean_net_close_mark": 0.02971546705084782,
+              "median_net_close_mark": 0.0809798915662649,
+              "positive_rate": 0.6875,
+              "positive_rate_wilson95": [
+                0.5890812009308731,
+                0.7714904536224986
+              ],
+              "large_loss_rate": 0.19791666666666666,
+              "large_loss_rate_wilson95": [
+                0.13052733153747123,
+                0.28855166945987454
+              ]
+            },
+            "b2": {
+              "known": 96,
+              "mean_net_close_mark": 0.04661270429062065,
+              "median_net_close_mark": 0.042492222304764946,
+              "positive_rate": 0.6354166666666666,
+              "positive_rate_wilson95": [
+                0.5356522624736236,
+                0.7247605991482561
+              ],
+              "large_loss_rate": 0.19791666666666666,
+              "large_loss_rate_wilson95": [
+                0.13052733153747123,
+                0.28855166945987454
+              ]
+            },
+            "b3": {
+              "known": 96,
+              "mean_net_close_mark": 0.05684836525264913,
+              "median_net_close_mark": 0.07193892808739875,
+              "positive_rate": 0.6145833333333334,
+              "positive_rate_wilson95": [
+                0.5146070303586874,
+                0.7057423140905956
+              ],
+              "large_loss_rate": 0.2604166666666667,
+              "large_loss_rate_wilson95": [
+                0.18305899970298767,
+                0.35621055281214864
+              ]
+            }
+          }
+        }
+      }
+    },
+    "paired_common_fill_comparisons": {
+      "MODEL_ALL_TOP1_vs_CURRENT_HEIGHT_BASELINE": {
+        "b1": {
+          "paired_common_fill_dates": 277,
+          "mean_return_delta": 0.006013514800998732,
+          "bootstrap95": [
+            -2.723426416802243e-05,
+            0.012505174836201538
+          ]
+        },
+        "b2": {
+          "paired_common_fill_dates": 276,
+          "mean_return_delta": 0.008629896145188257,
+          "bootstrap95": [
+            -3.4342503595406225e-05,
+            0.017205030621310253
+          ]
+        },
+        "b3": {
+          "paired_common_fill_dates": 275,
+          "mean_return_delta": 0.013149467714818525,
+          "bootstrap95": [
+            0.002910447468289771,
+            0.02394270825185438
+          ]
+        }
+      },
+      "MODEL_CHALLENGER_TOP1_vs_SECOND_HEIGHT_BASELINE": {
+        "b1": {
+          "paired_common_fill_dates": 168,
+          "mean_return_delta": -0.004636400937902059,
+          "bootstrap95": [
+            -0.019076771750667246,
+            0.009325165295854762
+          ]
+        },
+        "b2": {
+          "paired_common_fill_dates": 168,
+          "mean_return_delta": -0.009478086881222429,
+          "bootstrap95": [
+            -0.029521263287855985,
+            0.0110530322418425
+          ]
+        },
+        "b3": {
+          "paired_common_fill_dates": 168,
+          "mean_return_delta": -0.02281630990026491,
+          "bootstrap95": [
+            -0.048285509299087814,
+            0.0020940702234756195
+          ]
+        }
+      }
+    },
+    "decision": {
+      "role_model_is_buy_model": false,
+      "deployment_authorized": false,
+      "reason": "height-anchor role accuracy and buy-after-board profitability are separate gates"
+    }
+  },
+  "assumptions": {
+    "entry": "next-session rounded upper-limit price after daily high touched it",
+    "fill": "price-path proxy only; one-price boards excluded; no runner-up substitution",
+    "exit_marks": "B+1/B+2/B+3 close after the common hypothetical entry",
+    "actual_order_or_fill_verified": false
+  }
+}

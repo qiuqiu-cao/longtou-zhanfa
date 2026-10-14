@@ -1,0 +1,60 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "cases": [
+    {
+      "code": "000017",
+      "name": "深中华A",
+      "start": "2024-01-04",
+      "end": "2024-01-17",
+      "sessions": 10,
+      "threshold_pct": 100,
+      "comparison": "greater_than",
+      "publication_date": "2024-01-20",
+      "source": "https://static.cninfo.com.cn/finalpage/2024-01-20/1218956223.PDF",
+      "announcement_id": "2024-006",
+      "pages_one_based": [
+        1,
+        2
+      ],
+      "evidence_status": "official_company_full_text_read",
+      "scope": "explicit_historical_interval_threshold_confirmation_only",
+      "result": "THRESHOLD_DIRECTION_MATCH",
+      "calculated_deviation_pct": 100.07023020995933,
+      "training_label_ready": false,
+      "reason": "matches_threshold_direction_not_an_exact_official_numeric_value"
+    },
+    {
+      "code": "000062",
+      "name": "深圳华强",
+      "start": "2024-08-26",
+      "end": "2024-09-04",
+      "sessions": 8,
+      "threshold_pct": 100,
+      "comparison": "greater_than",
+      "publication_date": "2024-09-05",
+      "source": "https://static.cninfo.com.cn/finalpage/2024-09-05/1221139205.PDF",
+      "announcement_id": "2024-050",
+      "pages_one_based": [
+        1
+      ],
+      "evidence_status": "official_company_full_text_read",
+      "also_four_same_direction_events": true,
+      "scope": "explicit_historical_interval_threshold_confirmation_only",
+      "result": "THRESHOLD_DIRECTION_MATCH",
+      "calculated_deviation_pct": 101.33243644837373,
+      "training_label_ready": false,
+      "reason": "matches_threshold_direction_not_an_exact_official_numeric_value"
+    }
+  ],
+  "sha256": {
+    "data\\v18\\official_threshold_cases.json": "a3fe796994ac20c0cca1de49169e0ef4e85d380cf6335b2b33740ed00bdf6ec0",
+    "data\\v3\\imported\\daily-bars.csv": "2dc753caafe1da97c0505b550ad2ccba050b7bd6eb691f075d0652e639a74b15",
+    "data\\v18\\benchmarks_20260904\\sz399107.csv": "ea90e3c12a41839b38ca2b98b38f65393f9f0ba8b573069cafc91c0ce4ffe4fb"
+  },
+  "unresolved": [
+    "full event/reset chronology",
+    "negative labels and failed leaders",
+    "entry executability",
+    "historical point-in-time feature data"
+  ]
+}

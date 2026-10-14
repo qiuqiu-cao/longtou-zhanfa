@@ -1,0 +1,47 @@
+{
+  "status": "EMOTION_POSITIVE_FACTOR_REJECTED",
+  "target": "next_session_non_one_price_limit_touch_and_b2_positive_close_mark_proxy",
+  "factor_scope": "reconstructed_same_day_emotion_for_full_pool_opportunity_ranking",
+  "identity_to_emotion_deltas": {
+    "candidate_auc_delta": -0.013447153830149605,
+    "candidate_brier_improvement": -0.0002737880477993032,
+    "daily_top1_success_delta": 0.0
+  },
+  "active_state_filter_windows": {
+    "calibration": {
+      "all_session_top1_proxy_rate": 0.19298245614035087,
+      "active_state_top1_proxy_rate": 0.22580645161290322,
+      "active_state_delta": 0.03282399547255235,
+      "active_state_selections": 31
+    },
+    "validation": {
+      "all_session_top1_proxy_rate": 0.17721518987341772,
+      "active_state_top1_proxy_rate": 0.16326530612244897,
+      "active_state_delta": -0.013949883750968756,
+      "active_state_selections": 49
+    },
+    "reused_research_evaluation": {
+      "all_session_top1_proxy_rate": 0.19801980198019803,
+      "active_state_top1_proxy_rate": 0.13725490196078433,
+      "active_state_delta": -0.0607649000194137,
+      "active_state_selections": 51
+    }
+  },
+  "additive_rank_uplift_stable": false,
+  "active_state_filter_uplift_stable": false,
+  "positive_buy_score_authorized": false,
+  "risk_context_use_only": true,
+  "deployment_authorized": false,
+  "interpretation": "Emotion may still control permission, sizing, and confirmation strictness, but this evidence does not authorize a positive stock-level buy-score bonus.",
+  "limitations": [
+    "reconstructed historical features are not original forward archives",
+    "the outcome is a price-opportunity proxy rather than a completed trade",
+    "the later research window has already been inspected and is not blind",
+    "risk-gating value needs a separately labeled complete-trade loss audit"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\full_pool_proxy_backtest_20260905_v3\\report.json": "b976ff9f8a78d79ba8a59d59d0574e382bb42694eee7dd26bb72f6f4072cf26e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\full_pool_selective_policy_20260905_v4\\report.json": "1612fd0d41e1a3d4ed4ea101059d42fce243b8cc22bdaf69077abed831f6bd29",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_emotion_value_audit.py": "76a2aeb76154bf5657e8e0d04e75ed5dcab93139b0d3037e0a7da56b4cb10bd4"
+  }
+}

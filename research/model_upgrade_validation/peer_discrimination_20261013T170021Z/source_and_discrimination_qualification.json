@@ -1,0 +1,336 @@
+{
+  "formed_at": "2026-10-13T17:09:23.537690+00:00",
+  "full_original_candidates": 9245,
+  "cohort_groups": 2455,
+  "same_height_rivals_consistent_original_rows": 9245,
+  "forecast_labels_in_feature_file": false,
+  "source_scope": "Archived exact date/board height; no sector completeness or全A certification",
+  "constant_derived_old_seal_fields": {
+    "first_seal_minute": {
+      "nonmissing": 2113,
+      "unique_value": 0,
+      "qualified_real_event_observations": 0
+    },
+    "last_seal_minute": {
+      "nonmissing": 2113,
+      "unique_value": 0,
+      "qualified_real_event_observations": 0
+    },
+    "bomb_count": {
+      "nonmissing": 2113,
+      "unique_value": 0,
+      "qualified_real_event_observations": 0
+    }
+  },
+  "old_signal_float_cap_formula": "supplier outstanding shares times signal close; not validated historical live depth",
+  "amount_float_cap_formula": "signal_amount/signal_float_cap; not independent net buying flow",
+  "relative_strength_formula": "same-day percentage change/10; not stock/rival or index relative return",
+  "old_one_word_streak": "Original low-turnover proxy streak; not consecutive real OHLC one-word identity",
+  "feature_discrimination_support": [
+    {
+      "field": "turnover",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.4519386271285487,
+      "recent_concordance_median": 0.45736000894154466,
+      "recent_concordance_min": 0.4129909749586882,
+      "recent_concordance_max": 0.48484848484848486,
+      "recent_field_coverage_min": 0.9952153110047847,
+      "recent_pair_coverage_min": 0.9916770186335404,
+      "September_candidate_field_coverage": 1.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "signal_amount",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.40353070682086895,
+      "recent_concordance_median": 0.4043813568794009,
+      "recent_concordance_min": 0.3719798052650559,
+      "recent_concordance_max": 0.46090129178581996,
+      "recent_field_coverage_min": 0.9952153110047847,
+      "recent_pair_coverage_min": 0.9916770186335404,
+      "September_candidate_field_coverage": 1.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "amplitude",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 13,
+      "earlier_concordance_median": 0.45420969884253615,
+      "recent_concordance_median": 0.4584761136867567,
+      "recent_concordance_min": 0.42125333672302023,
+      "recent_concordance_max": 0.5118103137396322,
+      "recent_field_coverage_min": 1.0,
+      "recent_pair_coverage_min": 1.0,
+      "September_candidate_field_coverage": 1.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "turnover_vs_prev",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 14,
+      "earlier_concordance_median": 0.44037690457097034,
+      "recent_concordance_median": 0.4444444444444444,
+      "recent_concordance_min": 0.39951377633711505,
+      "recent_concordance_max": 0.4714573539288113,
+      "recent_field_coverage_min": 0.8149920255183413,
+      "recent_pair_coverage_min": 0.569697742634868,
+      "September_candidate_field_coverage": 0.9285714285714286,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "price",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.44008967802888294,
+      "recent_concordance_median": 0.43789058217300736,
+      "recent_concordance_min": 0.3922438063063063,
+      "recent_concordance_max": 0.47629018352013797,
+      "recent_field_coverage_min": 1.0,
+      "recent_pair_coverage_min": 1.0,
+      "September_candidate_field_coverage": 1.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "float_cap_log",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.439626000570784,
+      "recent_concordance_median": 0.43944289693593314,
+      "recent_concordance_min": 0.4065993508835197,
+      "recent_concordance_max": 0.47036781382506654,
+      "recent_field_coverage_min": 0.9952153110047847,
+      "recent_pair_coverage_min": 0.9916770186335404,
+      "September_candidate_field_coverage": 0.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "amount_float_cap",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.4525501814277754,
+      "recent_concordance_median": 0.45827298050139276,
+      "recent_concordance_min": 0.414389220795729,
+      "recent_concordance_max": 0.48539122568973314,
+      "recent_field_coverage_min": 0.9952153110047847,
+      "recent_pair_coverage_min": 0.9916770186335404,
+      "September_candidate_field_coverage": 0.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "one_word_streak",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 0,
+      "earlier_concordance_median": 0.5,
+      "recent_concordance_median": 0.5,
+      "recent_concordance_min": 0.5,
+      "recent_concordance_max": 0.5,
+      "recent_field_coverage_min": 1.0,
+      "recent_pair_coverage_min": 1.0,
+      "September_candidate_field_coverage": 0.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "relative_strength",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 10,
+      "earlier_concordance_median": 0.508220025632338,
+      "recent_concordance_median": 0.5040029560290676,
+      "recent_concordance_min": 0.4702488279841327,
+      "recent_concordance_max": 0.5398367117117117,
+      "recent_field_coverage_min": 1.0,
+      "recent_pair_coverage_min": 1.0,
+      "September_candidate_field_coverage": 0.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "peer_log_cap_difference",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.4501691044054992,
+      "recent_concordance_median": 0.4400318767432594,
+      "recent_concordance_min": 0.4050321604237609,
+      "recent_concordance_max": 0.47362916479904377,
+      "recent_field_coverage_min": 0.861244019138756,
+      "recent_pair_coverage_min": 0.8535901033031501,
+      "September_candidate_field_coverage": 0.0,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "peer_amount_ratio",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.41632769345214543,
+      "recent_concordance_median": 0.4070925753752158,
+      "recent_concordance_min": 0.34298146046159667,
+      "recent_concordance_max": 0.4473583826053786,
+      "recent_field_coverage_min": 0.861244019138756,
+      "recent_pair_coverage_min": 0.8535901033031501,
+      "September_candidate_field_coverage": 0.8901098901098901,
+      "overlapping_windows_not_independent": true
+    },
+    {
+      "field": "peer_amplitude_difference",
+      "proxy0_valid_month_windows": 15,
+      "consistent_raw_direction_months": 15,
+      "earlier_concordance_median": 0.4548565987004257,
+      "recent_concordance_median": 0.45820707070707073,
+      "recent_concordance_min": 0.41555329654371187,
+      "recent_concordance_max": 0.47728365384615384,
+      "recent_field_coverage_min": 0.878125,
+      "recent_pair_coverage_min": 0.9531193653083303,
+      "September_candidate_field_coverage": 0.8901098901098901,
+      "overlapping_windows_not_independent": true
+    }
+  ],
+  "training_windows": [
+    {
+      "month": "2025-07",
+      "cutoff": "2025-07-01",
+      "original_n": 4062,
+      "original_dates": 252,
+      "latest_target": "2025-06-30",
+      "original_member_digest": "42ce437fb4e50ccb8851e49805fec2cc8bd044893f03c5e94359f3715e86a0b7"
+    },
+    {
+      "month": "2025-08",
+      "cutoff": "2025-08-01",
+      "original_n": 4258,
+      "original_dates": 252,
+      "latest_target": "2025-07-31",
+      "original_member_digest": "2e3ed75003d736f879d633e1146ee3b9ff966171c99d192c6794222ca67117cf"
+    },
+    {
+      "month": "2025-09",
+      "cutoff": "2025-09-01",
+      "original_n": 4340,
+      "original_dates": 252,
+      "latest_target": "2025-08-29",
+      "original_member_digest": "c4c7dd0e4304ae71f53f00aff9765bb33cb8262f921ab8b01794cc879469d066"
+    },
+    {
+      "month": "2025-10",
+      "cutoff": "2025-10-01",
+      "original_n": 4411,
+      "original_dates": 252,
+      "latest_target": "2025-09-30",
+      "original_member_digest": "ea49cdddd08002bce1d46d071f6879dd8a0246303e6dd6e8a1e2e6c097322452"
+    },
+    {
+      "month": "2025-11",
+      "cutoff": "2025-11-01",
+      "original_n": 3978,
+      "original_dates": 252,
+      "latest_target": "2025-10-31",
+      "original_member_digest": "32da963cb97fa7cf18eaabc0e00f3948729b139be970dfe6b8b5ff1c5e26bb0a"
+    },
+    {
+      "month": "2025-12",
+      "cutoff": "2025-12-01",
+      "original_n": 3582,
+      "original_dates": 252,
+      "latest_target": "2025-11-28",
+      "original_member_digest": "f6c98fbee96f2f37fe78e1ad2b26fc192c2df151fd25e7b1c7175647fbaf09de"
+    },
+    {
+      "month": "2026-01",
+      "cutoff": "2026-01-01",
+      "original_n": 3243,
+      "original_dates": 252,
+      "latest_target": "2025-12-31",
+      "original_member_digest": "fd67c90616818e71daaefdf6bd782c65eb5eb797cca5bae962fa7c4bf6eded2e"
+    },
+    {
+      "month": "2026-02",
+      "cutoff": "2026-02-01",
+      "original_n": 3301,
+      "original_dates": 252,
+      "latest_target": "2026-01-30",
+      "original_member_digest": "21182d8db33f64437e9a74ee01fbc915a368ab6f5df138c2f40c72ba92d63cec"
+    },
+    {
+      "month": "2026-03",
+      "cutoff": "2026-03-01",
+      "original_n": 3233,
+      "original_dates": 252,
+      "latest_target": "2026-02-27",
+      "original_member_digest": "9da943e3d6e246ccfed67e988d68be7f09c20ae4ec8be69678cb181d81fa5fcd"
+    },
+    {
+      "month": "2026-04",
+      "cutoff": "2026-04-01",
+      "original_n": 3158,
+      "original_dates": 252,
+      "latest_target": "2026-03-31",
+      "original_member_digest": "01cc836bf1fd901640c389e678f2c712fd316dac1c135b0dfe641aad2f70b2ce"
+    },
+    {
+      "month": "2026-05",
+      "cutoff": "2026-05-01",
+      "original_n": 3086,
+      "original_dates": 252,
+      "latest_target": "2026-04-30",
+      "original_member_digest": "cf02912acb7e13d79ee200fa3eed2cee112a377e7a938e1411cfb3b67e227817"
+    },
+    {
+      "month": "2026-06",
+      "cutoff": "2026-06-01",
+      "original_n": 3100,
+      "original_dates": 252,
+      "latest_target": "2026-05-29",
+      "original_member_digest": "6bbf8daa52f2153863650093f678097e3ea2469e108beb6e076e974b2b3fc41e"
+    },
+    {
+      "month": "2026-07",
+      "cutoff": "2026-07-01",
+      "original_n": 3083,
+      "original_dates": 252,
+      "latest_target": "2026-06-30",
+      "original_member_digest": "2cee83352be0fd6201d0afb0eef33b89677e4f4b3902e51663a03aa4badad3d9"
+    },
+    {
+      "month": "2026-08",
+      "cutoff": "2026-08-01",
+      "original_n": 3053,
+      "original_dates": 252,
+      "latest_target": "2026-07-31",
+      "original_member_digest": "65a6b276ae75f44cfac8ebcc03bafa1e15e8d1c6140aa441461b38459600cfbd"
+    },
+    {
+      "month": "2026-09",
+      "cutoff": "2026-09-01",
+      "original_n": 3059,
+      "original_dates": 252,
+      "latest_target": "2026-08-31",
+      "original_member_digest": "efad5d49f7ba3a26b859dcb8f7270599458e8b03806c33a4e5aaf3b02014e3fc"
+    }
+  ],
+  "no_best_feature_selected_from_effects": true,
+  "no_new_numeric_hypothesis_or_fit": true,
+  "old_V279_V294_numeric_challenges_not_rerun": true,
+  "new_fits": 0,
+  "new_mature_forward_samples": 0,
+  "gain_verified": false,
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\recency_walkforward_20261013T134351Z\\implementation_BEFORE_FITS.json": "2aaaa4210752b37f2365056e545f1f1e9f3fd1384b5e02a4cda61b0133ebe82b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\recency_walkforward_20261013T134351Z\\full_candidate_predictions.csv": "c6614bc36c32687df4d1f0f2b4f4824f13f54b73b0bae61eabf7bbd4b1be5314",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\conditional_error_20261013T163637Z\\actual_complete_WITH_SOURCE_PHASE\\source_phase_context.json": "ff7966f96b0d7920df264b08510f466d2a3705da77478b08464436010ffc8fe0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v298\\exchange_calendar_extension_20261003_v2\\calendar.json": "2f991b34d9317dcc1ed0d4c3e4da40132eedf27ea23431415e1048172b119cdd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\daily_path_clues_20261002_v1\\report.json": "6eac984ba742323cab693a656b6c845fad1c29f654ac0c05fe8d6323d4b34afa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\long_path_features_v291.py": "fc188b99ab02d151e3d84ac80393f882c04c049861174853e2e394e7727add6b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\long_path_challenger_v294.py": "371f0f66dacaf530fa232a211466eef70e4e983ffe2a1b84a419dc8c55c4b2b1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_daily_path_features_v279.py": "a2b3e9fe91735f8cd5e1ff25b8eb98f26478e46886d08ef501dfdb2095381069",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_daily_path_challenger_v279.py": "1924fa49e95546d1f889b1c7c6634a01588df1f2e6a261a81b77c864d4668a41"
+  },
+  "output_hashes": {
+    "full9245_peer_context_NO_OUTCOMES.csv": "40902b3f22e69f9585af8243eca4df5fb2ba27ec2b2a9987c1f8c9e88ad1d2b4",
+    "original_complete_height_members.json": "42ec79e5003d0513add4acd835c4d6bbcf16b7dfa4543d7e63c813a808ba2cf1",
+    "full1080_pre_month_conditional_discrimination.csv": "d60326f3407061091f2bc4c0c0999d47a64beef90129a32cf06b981d8e38dca8",
+    "all_conditional_cells.csv": "edc486e906fdb1aa37fba9dbeeff1e74cbf74ca04e6f28b9ad57901a2a3ddaa9"
+  }
+}

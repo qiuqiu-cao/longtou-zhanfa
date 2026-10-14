@@ -1,0 +1,389 @@
+{
+  "version": "v144-actionable-emotion-risk-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target": "next session emotion state is 大分歧 or 退潮",
+  "features": [
+    "limit_count",
+    "limit_change",
+    "seal_rate",
+    "failed_rate",
+    "max_board",
+    "height_change",
+    "middle_density",
+    "ladder_gap_count",
+    "unique_space",
+    "one_word_share",
+    "breadth_height_divergence",
+    "promotion_overall",
+    "promotion_mid",
+    "yesterday_premium",
+    "previous_limit_tail_loss",
+    "down_limit_count",
+    "breadth_health",
+    "relay_appetite",
+    "ladder_health",
+    "loss_effect_health",
+    "regime_fragility",
+    "emotion_quality_score"
+  ],
+  "nested_time_split": {
+    "inner_train_n": 331,
+    "inner_validation_n": 143,
+    "outer_blind_n": 204,
+    "inner_train_end": "2025-04-11",
+    "inner_validation_end": "2025-11-12",
+    "outer_blind_start": "2025-11-13",
+    "outer_blind_reused_by_prior_project_research": true
+  },
+  "inner_selection": {
+    "chosen": {
+      "specification": "unweighted",
+      "logistic_weight": 0.5,
+      "markov_weight": 0.5,
+      "brier": 0.243478018319136,
+      "log_loss": 0.6806091756086813,
+      "auc": 0.5793682526989203
+    },
+    "low_risk_cutoff": 0.3769642800388329,
+    "high_risk_cutoff": 0.5504036450204991,
+    "search": [
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.0,
+        "markov_weight": 1.0,
+        "brier": 0.24648509172388264,
+        "log_loss": 0.6878266704131829,
+        "auc": 0.5307876849260296
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.1,
+        "markov_weight": 0.9,
+        "brier": 0.2453154621619895,
+        "log_loss": 0.684948861869197,
+        "auc": 0.5599760095961616
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.2,
+        "markov_weight": 0.8,
+        "brier": 0.24442994004056814,
+        "log_loss": 0.6828060468125627,
+        "auc": 0.5717712914834066
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.3,
+        "markov_weight": 0.7,
+        "brier": 0.2438285253596188,
+        "log_loss": 0.6813731905971097,
+        "auc": 0.5741703318672531
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.4,
+        "markov_weight": 0.6,
+        "brier": 0.24351121811914145,
+        "log_loss": 0.6806400709669947,
+        "auc": 0.5783686525389844
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.5,
+        "markov_weight": 0.5,
+        "brier": 0.243478018319136,
+        "log_loss": 0.6806091756086813,
+        "auc": 0.5793682526989203
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.6,
+        "markov_weight": 0.4,
+        "brier": 0.24372892595960252,
+        "log_loss": 0.6812951347273573,
+        "auc": 0.5825669732107156
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.7,
+        "markov_weight": 0.3,
+        "brier": 0.24426394104054105,
+        "log_loss": 0.6827253641699459,
+        "auc": 0.5843662534986006
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.8,
+        "markov_weight": 0.2,
+        "brier": 0.24508306356195142,
+        "log_loss": 0.6849419453302453,
+        "auc": 0.5833666533386646
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 0.9,
+        "markov_weight": 0.1,
+        "brier": 0.24618629352383387,
+        "log_loss": 0.6880050906375187,
+        "auc": 0.5851659336265493
+      },
+      {
+        "specification": "unweighted",
+        "logistic_weight": 1.0,
+        "markov_weight": 0.0,
+        "brier": 0.24757363092618825,
+        "log_loss": 0.6919990105138928,
+        "auc": 0.5893642542982807
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.0,
+        "markov_weight": 1.0,
+        "brier": 0.24648509172388264,
+        "log_loss": 0.6878266704131829,
+        "auc": 0.5307876849260296
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.1,
+        "markov_weight": 0.9,
+        "brier": 0.24534876514494894,
+        "log_loss": 0.6850089652963597,
+        "auc": 0.5601759296281488
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.2,
+        "markov_weight": 0.8,
+        "brier": 0.24449771899453282,
+        "log_loss": 0.6829331490999561,
+        "auc": 0.5713714514194321
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.3,
+        "markov_weight": 0.7,
+        "brier": 0.24393195327263453,
+        "log_loss": 0.6815720679198161,
+        "auc": 0.5739704118352658
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.4,
+        "markov_weight": 0.6,
+        "brier": 0.24365146797925386,
+        "log_loss": 0.680913869615394,
+        "auc": 0.5783686525389844
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.5,
+        "markov_weight": 0.5,
+        "brier": 0.24365626311439098,
+        "log_loss": 0.6809596704754849,
+        "auc": 0.5791683326669331
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.6,
+        "markov_weight": 0.4,
+        "brier": 0.2439463386780458,
+        "log_loss": 0.6817228431063973,
+        "auc": 0.5823670531787285
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.7,
+        "markov_weight": 0.3,
+        "brier": 0.24452169467021834,
+        "log_loss": 0.6832295558973139,
+        "auc": 0.5849660135945622
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.8,
+        "markov_weight": 0.2,
+        "brier": 0.24538233109090854,
+        "log_loss": 0.6855205704755604,
+        "auc": 0.5833666533386646
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 0.9,
+        "markov_weight": 0.1,
+        "brier": 0.2465282479401166,
+        "log_loss": 0.688654642822547,
+        "auc": 0.584966013594562
+      },
+      {
+        "specification": "balanced",
+        "logistic_weight": 1.0,
+        "markov_weight": 0.0,
+        "brier": 0.2479594452178422,
+        "log_loss": 0.6927143658645074,
+        "auc": 0.588764494202319
+      }
+    ],
+    "outer_labels_used_for_selection": false
+  },
+  "outer_evaluation": {
+    "actionable_model": {
+      "n": 204,
+      "positive_rate": 0.44607843137254904,
+      "auc": 0.6137314013420208,
+      "brier": 0.2364174034372241,
+      "log_loss": 0.6654134352451425,
+      "high_risk": {
+        "cutoff": 0.5504036450204991,
+        "called": 29,
+        "coverage": 0.14215686274509803,
+        "precision": 0.6551724137931034,
+        "recall": 0.2087912087912088
+      },
+      "low_risk": {
+        "cutoff": 0.3769642800388329,
+        "called": 41,
+        "coverage": 0.20098039215686275,
+        "negative_precision": 0.6341463414634146,
+        "negative_recall": 0.23008849557522124
+      }
+    },
+    "markov_baseline": {
+      "n": 204,
+      "positive_rate": 0.44607843137254904,
+      "auc": 0.518525722065545,
+      "brier": 0.24471695483344444,
+      "log_loss": 0.682910019464773
+    },
+    "expanding_train_prior_baseline": {
+      "n": 204,
+      "positive_rate": 0.44607843137254904,
+      "auc": 0.5,
+      "brier": 0.24791071692256458,
+      "log_loss": 0.6889655868856933
+    },
+    "economic_separation": {
+      "failed_rate": {
+        "expected_high_minus_low": "HIGHER",
+        "high_n": 29,
+        "low_n": 41,
+        "high_mean": 0.33234021052763646,
+        "low_mean": 0.2996111428909043,
+        "difference_high_minus_low": 0.03272906763673217,
+        "circular_block_difference_ci95": [
+          -0.012427897942453579,
+          0.07476194785568865
+        ],
+        "direction_pass": true,
+        "strong_ci_pass": false
+      },
+      "previous_limit_tail_loss": {
+        "expected_high_minus_low": "LOWER",
+        "high_n": 29,
+        "low_n": 41,
+        "high_mean": -0.06096762338303459,
+        "low_mean": -0.0446515778409326,
+        "difference_high_minus_low": -0.01631604554210199,
+        "circular_block_difference_ci95": [
+          -0.02500411789459033,
+          -0.008501123768201533
+        ],
+        "direction_pass": true,
+        "strong_ci_pass": true
+      },
+      "down_limit_count": {
+        "expected_high_minus_low": "HIGHER",
+        "high_n": 29,
+        "low_n": 40,
+        "high_mean": 21.75862068965517,
+        "low_mean": 11.725,
+        "difference_high_minus_low": 10.033620689655171,
+        "circular_block_difference_ci95": [
+          2.208289473684211,
+          17.96438371009341
+        ],
+        "direction_pass": true,
+        "strong_ci_pass": true
+      },
+      "yesterday_premium": {
+        "expected_high_minus_low": "LOWER",
+        "high_n": 29,
+        "low_n": 41,
+        "high_mean": 0.0036288461037762565,
+        "low_mean": 0.010590007619896119,
+        "difference_high_minus_low": -0.0069611615161198626,
+        "circular_block_difference_ci95": [
+          -0.014059590032542325,
+          0.00014009174416622407
+        ],
+        "direction_pass": true,
+        "strong_ci_pass": false
+      },
+      "promotion_mid": {
+        "expected_high_minus_low": "LOWER",
+        "high_n": 29,
+        "low_n": 41,
+        "high_mean": 0.31860893782800476,
+        "low_mean": 0.3516423657135403,
+        "difference_high_minus_low": -0.03303342788553554,
+        "circular_block_difference_ci95": [
+          -0.12410839005635566,
+          0.05537468964647447
+        ],
+        "direction_pass": true,
+        "strong_ci_pass": false
+      }
+    },
+    "economic_direction_pass_count": 5,
+    "economic_strong_ci_pass_count": 2,
+    "risk_warning_gate_passed": true
+  },
+  "three_session_falsification": {
+    "target": "at least two of next three sessions are 大分歧/退潮",
+    "model": {
+      "n": 203,
+      "positive_rate": 0.4236453201970443,
+      "auc": 0.49970184853905786,
+      "brier": 0.25304861537814044,
+      "log_loss": 0.7002605060265262
+    },
+    "train_prior_baseline": {
+      "n": 203,
+      "positive_rate": 0.4236453201970443,
+      "auc": 0.5,
+      "brier": 0.2454039718662975,
+      "log_loss": 0.6839380810604635
+    },
+    "promotion_gate_passed": false,
+    "allowed_to_claim_reliable_two_to_three_day_regime_forecast": false
+  },
+  "latest_research_prediction": {
+    "signal_date": "2026-09-16",
+    "current_state": "修复",
+    "next_session_risk_off_probability": 0.4426779218566552,
+    "risk_band": "MIXED",
+    "main_path": "MIXED_ROTATION_OR_DIVERGENCE",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "policy": {
+    "aggregate_risk_warning_allowed": true,
+    "positive_buy_bonus_allowed": false,
+    "individual_stock_ranking_use_allowed": false,
+    "three_session_probability_claim_allowed": false,
+    "allowed_effect": "raise confirmation strictness or resolve to cash"
+  },
+  "limitations": [
+    "outer dates have been inspected by prior project research and are not untouched blind",
+    "emotion-state target is a market regime label, not an executable trade outcome",
+    "specific-theme and stock-level competition still require separate point-in-time evidence"
+  ],
+  "generated_at": "2026-09-17T01:58:17.647601+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v144\\emotion_actionable_risk_20260917_v1\\outer_predictions.csv",
+    "sha256": "c3efdaa91e3d0f0adc5c01cf81d977e575d19f395910be50b23dacc09a721678"
+  }
+}

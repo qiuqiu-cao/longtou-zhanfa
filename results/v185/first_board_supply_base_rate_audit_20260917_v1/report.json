@@ -1,0 +1,142 @@
+{
+  "version": "v185-first-board-supply-base-rate-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target_contract": {
+    "source_no_touch_rows_retained_as_negative": true,
+    "missing_promotion_labels_filled_as_zero": false,
+    "actual_fills": 0,
+    "complete_trades": 0
+  },
+  "scope": {
+    "first_board_rows": 28265,
+    "evaluable_sessions": 503,
+    "known_promotion_labels": 19685,
+    "mean_daily_known_coverage": 0.9982325331352836
+  },
+  "split": {
+    "method": "chronological_70_30_by_signal_date",
+    "split_date": "2025-05-16",
+    "development_sessions": 352,
+    "validation_sessions": 151,
+    "validation_previously_inspected": true
+  },
+  "frozen_supply_thresholds_from_development": {
+    "low_supply_max": 22.0,
+    "high_supply_strictly_above": 49.0
+  },
+  "summaries": {
+    "development": {
+      "ALL": {
+        "sessions": 352,
+        "mean_first_board_supply": 39.87215909090909,
+        "known_candidates": 14019,
+        "promotions": 2771,
+        "candidate_promotion_rate": 0.19766031813966758,
+        "daily_any_promotion_rate": 0.9914772727272727,
+        "mean_daily_promotion_rate": 0.20005249896668342
+      },
+      "LOW_SUPPLY": {
+        "sessions": 94,
+        "mean_first_board_supply": 16.21276595744681,
+        "known_candidates": 1524,
+        "promotions": 328,
+        "candidate_promotion_rate": 0.2152230971128609,
+        "daily_any_promotion_rate": 0.9787234042553191,
+        "mean_daily_promotion_rate": 0.21915644088837552
+      },
+      "HIGH_SUPPLY": {
+        "sessions": 86,
+        "mean_first_board_supply": 79.05813953488372,
+        "known_candidates": 6786,
+        "promotions": 1331,
+        "candidate_promotion_rate": 0.19613910993221337,
+        "daily_any_promotion_rate": 1.0,
+        "mean_daily_promotion_rate": 0.1842548583278321
+      }
+    },
+    "validation": {
+      "ALL": {
+        "sessions": 151,
+        "mean_first_board_supply": 37.64900662251656,
+        "known_candidates": 5666,
+        "promotions": 1079,
+        "candidate_promotion_rate": 0.19043416872573243,
+        "daily_any_promotion_rate": 0.9933774834437086,
+        "mean_daily_promotion_rate": 0.1954994240689848
+      },
+      "LOW_SUPPLY": {
+        "sessions": 14,
+        "mean_first_board_supply": 20.071428571428573,
+        "known_candidates": 278,
+        "promotions": 71,
+        "candidate_promotion_rate": 0.25539568345323743,
+        "daily_any_promotion_rate": 1.0,
+        "mean_daily_promotion_rate": 0.2627984208037282
+      },
+      "HIGH_SUPPLY": {
+        "sessions": 24,
+        "mean_first_board_supply": 58.208333333333336,
+        "known_candidates": 1395,
+        "promotions": 262,
+        "candidate_promotion_rate": 0.1878136200716846,
+        "daily_any_promotion_rate": 1.0,
+        "mean_daily_promotion_rate": 0.18437468141560845
+      }
+    }
+  },
+  "date_clustered_high_minus_low": {
+    "development": {
+      "comparison": "HIGH_SUPPLY_MINUS_LOW_SUPPLY",
+      "candidate_promotion_rate_difference": -0.01908398718064752,
+      "candidate_promotion_rate_ci95": [
+        -0.058250850746977216,
+        0.020918413784114524
+      ],
+      "daily_any_promotion_rate_difference": 0.021276595744680882,
+      "daily_any_promotion_rate_ci95": [
+        0.0,
+        0.05319148936170215
+      ],
+      "date_clustered": true
+    },
+    "validation": {
+      "comparison": "HIGH_SUPPLY_MINUS_LOW_SUPPLY",
+      "candidate_promotion_rate_difference": -0.06758206338155284,
+      "candidate_promotion_rate_ci95": [
+        -0.14310024846902508,
+        0.010298655273108291
+      ],
+      "daily_any_promotion_rate_difference": 0.0,
+      "daily_any_promotion_rate_ci95": [
+        0.0,
+        0.0
+      ],
+      "date_clustered": true
+    }
+  },
+  "daily_any_promotion_is_discriminative": false,
+  "high_first_board_supply_positive_edge_supported": false,
+  "governance": {
+    "any_first_board_promoted_may_rank_a_candidate": false,
+    "first_board_supply_positive_ranking_factor_allowed": false,
+    "high_supply_automatic_emotion_upgrade_allowed": false,
+    "high_supply_automatic_reject_allowed": false,
+    "requires_candidate_theme_identity_and_execution_confirmation": true,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "With dozens of first boards, at least one promotion is almost guaranteed and is therefore a weak discriminator. High supply does not prove better per-candidate odds; its candidate promotion rate is directionally lower in both time segments, but uncertainty remains. Breadth must be separated from candidate quality and from verified theme structure.",
+  "limitations": [
+    "current-universe survivorship bias",
+    "historical security eligibility is not independently reverified",
+    "promotion is a close-to-close identity label, not a complete executable trade",
+    "validation dates were inspected and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\group_rank_walkforward_touchfixed_20260917_v4\\report.json": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_supply_base_rate_audit_v185.py": "2eaafb561d99a55d7020b8106cbdc5a6627ab1493c50fe2839a96f487227b893"
+  },
+  "daily_observations_sha256": "abd474b7a8234d6bbaf01d131a2fc64b9a543014df7286a9fd959619b3a86fb5"
+}

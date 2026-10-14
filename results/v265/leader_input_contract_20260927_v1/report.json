@@ -1,0 +1,260 @@
+{
+  "version": "v265-leader-strategy-input-contract-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "rows": 37251,
+  "dates": 669,
+  "latest_signal_date": "2026-08-31",
+  "field_status": {
+    "basic": {
+      "amount": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "boards": {
+        "status": "AVAILABLE",
+        "known_rows": 36674,
+        "coverage": 0.9845104829400553,
+        "nonempty_rows": 36674
+      },
+      "code": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      },
+      "float_cap": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "name": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "turnover": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      }
+    },
+    "auction": {
+      "auction_0920_stable": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "auction_0925_pct": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "auction_amount": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "auction_amount_ratio": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "auction_gap": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      }
+    },
+    "intraday": {
+      "failed_seal_count": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "first_seal_time": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "last_seal_time": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "max_drawdown": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "reseal_count": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "sealed_funds": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "vwap_reclaimed": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      }
+    },
+    "theme": {
+      "theme": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "theme_evidence_status": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "theme_first_support": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "theme_group_id": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "theme_ladder_count": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "theme_middle_support": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      }
+    },
+    "emotion": {
+      "market_down_limit_count": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      },
+      "market_emotion_state": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      },
+      "market_failed_count": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      },
+      "market_limit_count": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      },
+      "market_max_board": {
+        "status": "AVAILABLE",
+        "known_rows": 37251,
+        "coverage": 1.0,
+        "nonempty_rows": 37251
+      },
+      "market_promotion_mid": {
+        "status": "AVAILABLE",
+        "known_rows": 37192,
+        "coverage": 0.9984161499020161,
+        "nonempty_rows": 37192
+      }
+    },
+    "execution": {
+      "actual_exit_price": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "data_status": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "execution_status": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "fill_price": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "fill_quantity": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      },
+      "source_timestamp": {
+        "status": "UNAVAILABLE",
+        "reason": "field_missing"
+      }
+    }
+  },
+  "identity_review": {
+    "allowed": true,
+    "coverage_rows": 8465,
+    "required_fields": [
+      "boards",
+      "code",
+      "signal_date"
+    ]
+  },
+  "conditional_relay_review": {
+    "allowed": false,
+    "missing_fields": [
+      "amount",
+      "auction_0920_stable",
+      "auction_0925_pct",
+      "auction_amount",
+      "auction_amount_ratio",
+      "auction_gap",
+      "failed_seal_count",
+      "first_seal_time",
+      "float_cap",
+      "last_seal_time",
+      "max_drawdown",
+      "name",
+      "reseal_count",
+      "sealed_funds",
+      "theme",
+      "theme_evidence_status",
+      "theme_first_support",
+      "theme_group_id",
+      "theme_ladder_count",
+      "theme_middle_support",
+      "vwap_reclaimed"
+    ],
+    "required_fields": [
+      "amount",
+      "auction_0920_stable",
+      "auction_0925_pct",
+      "auction_amount",
+      "auction_amount_ratio",
+      "auction_gap",
+      "boards",
+      "code",
+      "failed_seal_count",
+      "first_seal_time",
+      "float_cap",
+      "last_seal_time",
+      "market_down_limit_count",
+      "market_emotion_state",
+      "market_failed_count",
+      "market_limit_count",
+      "market_max_board",
+      "market_promotion_mid",
+      "max_drawdown",
+      "name",
+      "reseal_count",
+      "sealed_funds",
+      "theme",
+      "theme_evidence_status",
+      "theme_first_support",
+      "theme_group_id",
+      "theme_ladder_count",
+      "theme_middle_support",
+      "turnover",
+      "vwap_reclaimed"
+    ]
+  },
+  "trade_authorization": {
+    "allowed": false,
+    "reason": "This contract audits inputs only; actual fills and live confirmation remain separate gates."
+  },
+  "future_timestamp_rows": 0,
+  "source_quality": "MISSING_OR_UNVERIFIED_UNLESS_EACH_FIELD_HAS_SOURCE_AND_TIMESTAMP",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v3\\full_pool_eod_features.csv",
+    "sha256": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4"
+  }
+}

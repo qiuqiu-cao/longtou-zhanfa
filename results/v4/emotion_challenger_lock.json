@@ -1,0 +1,49 @@
+{
+  "lock_id": "2580844ffb6f7a49",
+  "created_at": "2026-08-31T16:38:37",
+  "version": "4.0-research",
+  "development_data_end": "2026-08-31",
+  "development_input_sha256": "46f465d5d7e607e7f8bc736d80645d0eb39dd52d959af6c3e0fae9459f380c6a",
+  "script_sha256": "c77f50f38c2a649e5dd7250594da1a95e15dafd2de0cc9a70f9bbd6ddf1a4da3",
+  "features": [
+    "breadth_health",
+    "relay_appetite",
+    "ladder_health",
+    "loss_effect_health",
+    "crowding_risk",
+    "regime_fragility",
+    "false_acceleration",
+    "promotion_mid",
+    "failed_rate",
+    "down_limit_count",
+    "previous_limit_tail_loss",
+    "yesterday_premium",
+    "height_change",
+    "limit_change",
+    "one_word_share",
+    "space_feedback",
+    "space_feedback_3d",
+    "emotion_state_age_scaled",
+    "state_start",
+    "state_warming",
+    "state_acceleration",
+    "state_consensus",
+    "state_divergence",
+    "state_retreat",
+    "state_repair"
+  ],
+  "targets": {
+    "adverse_state_next": "next emotion_state is 大分歧 or 退潮",
+    "relay_damage_next": "next loss_effect_health < 0.35 OR (next promotion_mid < 0.20 AND next down_limit_count >= 5)"
+  },
+  "locked_parameters": {
+    "initial_history": 160,
+    "retrain_every": 20,
+    "l2": 1.5,
+    "epochs": 700,
+    "learning_rate": 0.03,
+    "folds": 3
+  },
+  "first_fresh_date_rule": "forecast date must be later than 2026-08-31",
+  "status": "LOCKED_RESEARCH_CHALLENGER"
+}

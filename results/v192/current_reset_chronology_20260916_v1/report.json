@@ -1,0 +1,107 @@
+{
+  "version": "v192-current-severe-abnormal-reset-chronology-1",
+  "status": "PARTIAL_OFFICIAL_RESET_EVIDENCE",
+  "generated_at_utc": "2026-09-17T00:59:36.778415+00:00",
+  "signal_date": "2026-09-16",
+  "query_asof": "2026-09-17",
+  "rule_effective_date": "2026-07-06",
+  "candidate_count": 80,
+  "sse_candidate_count": 32,
+  "szse_candidate_count": 48,
+  "sse_exchange_sessions_expected": 53,
+  "sse_exchange_sessions_successful": 44,
+  "sse_official_severe_event_count_all_codes": 0,
+  "candidate_official_exchange_chronology_complete_count": 0,
+  "candidate_verified_no_reset_count": 0,
+  "candidate_verified_exchange_event_count": 0,
+  "szse_company_query_success_count": 48,
+  "szse_company_severe_notice_count": 0,
+  "priority_candidates": [
+    {
+      "code": "000993",
+      "name": "闽东电力",
+      "exchange": "SZSE",
+      "reset_chronology_status": "company_index_no_event_found_not_exchange_exhaustive",
+      "official_exchange_chronology_complete": false,
+      "severe_event_count_since_rule_effective": 0,
+      "latest_exchange_publication_date": null,
+      "latest_reset_effective_session": null,
+      "source_level": "CNINFO_OFFICIAL_COMPANY_DISCLOSURE_INDEX",
+      "query_coverage": "2026-07-06~2026-09-17",
+      "ranking_allowed": false,
+      "buy_signal": false
+    },
+    {
+      "code": "605058",
+      "name": "澳弘电子",
+      "exchange": "SSE",
+      "reset_chronology_status": "unavailable_incomplete_sse_daily_coverage",
+      "official_exchange_chronology_complete": false,
+      "severe_event_count_since_rule_effective": 0,
+      "latest_exchange_publication_date": null,
+      "latest_reset_effective_session": null,
+      "source_level": "SSE_OFFICIAL_EXCHANGE_DAILY_FEED",
+      "query_coverage": "2026-07-06~2026-09-16",
+      "ranking_allowed": false,
+      "buy_signal": false
+    }
+  ],
+  "official_regulatory_distance_count": 0,
+  "candidate_reranking_allowed": false,
+  "buy_signal": false,
+  "entry_authorized": false,
+  "governance": {
+    "ordinary_abnormal_notice_is_reset": false,
+    "sse_full_daily_coverage_can_verify_bounded_absence": true,
+    "cninfo_zero_result_can_verify_exchange_absence": false,
+    "company_notice_date_may_replace_exchange_publication_date": false,
+    "reset_evidence_alone_can_rank_or_buy": false
+  },
+  "interpretation": "SSE candidates may receive bounded official reset chronology when every exchange session is covered. SZSE company-notice searches remain partial: positive severe notices confirm an event, while zero results do not prove exchange-level absence. No row is an official distance or trading signal.",
+  "sources": [
+    "https://www.sse.com.cn/disclosure/diclosure/ycjyxx/main/",
+    "https://query.sse.com.cn/marketdata/tradedata/queryAllTradeOpenDate.do",
+    "https://www.cninfo.com.cn/new/index",
+    "https://www.cninfo.com.cn/new/hisAnnouncement/query"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v191\\current_abnormal_distance_20260916_v3\\candidate_unreconciled_distances.csv": "2d5d0ba8b12b09cda935f3d77a4fd80009d1a65fc2b1f2b28e73414dbead8785",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v191\\benchmarks_20260916_v1\\sh000002.csv": "12b11bc417e30257bee7103dd9771323665eee39bd5cda0c308323767835ef1b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\current_reset_chronology_v192.py": "019e05fcd970060c9ddfb4e75ed43971e3637fac812004defaee2d29e7c6298d",
+    "cninfo_stock_list_response": "9c01b8e4775369d94f6b0b3fcac8e4d816e60b1b4d2410a89fb8a5aa6cac1fb0"
+  },
+  "files": {
+    "candidate_reset_chronology.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\candidate_reset_chronology.csv",
+      "sha256": "1058b41d5255c5be6a4a49b39532f5302abea06dd40c3875720f95478593ea10"
+    },
+    "sse_official_severe_events.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\sse_official_severe_events.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295"
+    },
+    "sse_daily_query_audit.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\sse_daily_query_audit.csv",
+      "sha256": "31c6f54cef12fbf9553e670c379561d36ddf1314a10b9eefcc76ab1d431056ba"
+    },
+    "szse_company_severe_notices.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\szse_company_severe_notices.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295"
+    },
+    "szse_company_query_audit.csv": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\szse_company_query_audit.csv",
+      "sha256": "1b489343652345e023913d4fafe61a9878249b010f2385c94e42a7b0d2b3ecb6"
+    },
+    "sse_daily_raw.json": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\sse_daily_raw.json",
+      "sha256": "c2b1bc3c54418bebeee93cd321327641441290c11c021f6428d3b7369df3eb80"
+    },
+    "szse_company_query_raw.json": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\szse_company_query_raw.json",
+      "sha256": "da03cbff66800b29de2a7bc6a7e6e35685d199360543c033c32cae021876fedd"
+    },
+    "cninfo_stock_map_raw.json": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v192\\current_reset_chronology_20260916_v1\\cninfo_stock_map_raw.json",
+      "sha256": "b9370291fe49872c091e6d831420ad7743ee44e9491a429a397a850f2bb0007d"
+    }
+  }
+}

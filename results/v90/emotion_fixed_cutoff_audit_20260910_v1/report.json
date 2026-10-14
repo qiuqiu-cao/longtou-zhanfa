@@ -1,0 +1,121 @@
+{
+  "version": "v90-emotion-fixed-cutoff-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "nested_time_integrity": {
+    "inner_train_n": 329,
+    "inner_validation_n": 142,
+    "outer_blind_n": 202,
+    "cutoffs_selected_from": "inner_validation_predictions_only",
+    "outer_blind_used_for_selection": false
+  },
+  "selected_challenger_weight": 0.3,
+  "fixed_low_risk_cutoff": 0.34963291883994124,
+  "fixed_high_risk_cutoff": 0.4969478315099285,
+  "outer_blind_group_counts": {
+    "high": 34,
+    "low": 33
+  },
+  "outer_blind_risk_off_detection": {
+    "tp": 25,
+    "fp": 9,
+    "fn": 66,
+    "precision": 0.7352941176470589,
+    "recall": 0.27472527472527475
+  },
+  "outcomes": {
+    "promotion_mid": {
+      "expected_high_risk_direction": "LOWER",
+      "high_risk_n": 34,
+      "low_risk_n": 33,
+      "high_risk_mean": 0.32814269064269064,
+      "low_risk_mean": 0.3221810642512224,
+      "difference_high_minus_low": 0.005961626391468244,
+      "ci95": [
+        -0.0944463995949843,
+        0.10266582876121354
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "direction_pass": false,
+      "ci_excludes_zero_in_expected_direction": false
+    },
+    "yesterday_premium": {
+      "expected_high_risk_direction": "LOWER",
+      "high_risk_n": 34,
+      "low_risk_n": 33,
+      "high_risk_mean": 0.0046421874173115385,
+      "low_risk_mean": 0.011370777912011668,
+      "difference_high_minus_low": -0.006728590494700129,
+      "ci95": [
+        -0.013723569532542322,
+        0.0009369022615525575
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": false
+    },
+    "failed_rate": {
+      "expected_high_risk_direction": "HIGHER",
+      "high_risk_n": 34,
+      "low_risk_n": 33,
+      "high_risk_mean": 0.3543271727849501,
+      "low_risk_mean": 0.28696457614291315,
+      "difference_high_minus_low": 0.06736259664203692,
+      "ci95": [
+        0.031568011818134234,
+        0.10162260813580748
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": true
+    },
+    "previous_limit_tail_loss": {
+      "expected_high_risk_direction": "LOWER",
+      "high_risk_n": 34,
+      "low_risk_n": 33,
+      "high_risk_mean": -0.058491275010558036,
+      "low_risk_mean": -0.04531141717392336,
+      "difference_high_minus_low": -0.013179857836634674,
+      "ci95": [
+        -0.02252696367897969,
+        -0.003281692451485185
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": true
+    },
+    "down_limit_count": {
+      "expected_high_risk_direction": "HIGHER",
+      "high_risk_n": 34,
+      "low_risk_n": 33,
+      "high_risk_mean": 21.058823529411764,
+      "low_risk_mean": 10.121212121212121,
+      "difference_high_minus_low": 10.937611408199643,
+      "ci95": [
+        4.422526737967915,
+        16.75655080213904
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": true
+    }
+  },
+  "direction_pass_count": 4,
+  "strong_ci_pass_count": 3,
+  "economic_gate_passed": true,
+  "gate_rule": "fixed inner cutoff; expected direction >=4/5, CI support >=2/5, high-risk n>=20",
+  "allowed_use_if_passed": "RISK_VETO_RESEARCH_CANDIDATE_ONLY",
+  "prohibited_use": [
+    "positive buy signal",
+    "individual-stock ranking",
+    "claim of guaranteed premium"
+  ],
+  "generated_at": "2026-09-10T03:26:04.125509+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "973a62462a91b38859748f8d7b0f9a1374990cc3337d94766740f0cf5db6a120"
+  },
+  "evidence": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v90\\emotion_fixed_cutoff_audit_20260910_v1\\outer_blind_fixed_groups.csv",
+    "sha256": "afc080d9d7c94d3a4bfc48e9587341c067fb5091815582c94fb9784f450eb6fe"
+  }
+}

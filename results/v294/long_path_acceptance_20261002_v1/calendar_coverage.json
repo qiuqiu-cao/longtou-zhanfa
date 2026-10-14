@@ -1,0 +1,1170 @@
+{
+  "version": "v294-official-signal-calendar-denominators-1",
+  "recorded_at": "2026-10-02T14:22:03.119829+00:00",
+  "status": "CALENDAR_GAPS_PRESERVED_AND_KNOWN_SUCCESSORS_CHECKED",
+  "arms": {
+    "BASE": {
+      "all": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 147,
+        "start": "2026-03-02",
+        "end": "2026-09-30",
+        "candidate_dates": 142,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 138,
+        "binary": {
+          "total_frozen_rows": 1656,
+          "known": 1589,
+          "unknown": 67,
+          "called": 1656,
+          "tp": 265,
+          "fp": 265,
+          "fn": 244,
+          "tn": 815,
+          "correct": 1080,
+          "accuracy": 0.6796727501573316,
+          "accuracy_wilson95_descriptive": [
+            0.6563209259339559,
+            0.7021579401440002
+          ],
+          "precision": 0.5,
+          "recall": 0.5206286836935167,
+          "f1": 0.5101058710298364,
+          "all_fail_accuracy": 0.6796727501573316,
+          "brier": 0.20882480374829981,
+          "raw_brier": 0.20505799215637766,
+          "ece": 0.10304758680144735,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 47,
+              "mean_probability": 0.06825743138312274,
+              "actual_rate": 0.0425531914893617
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 170,
+              "mean_probability": 0.1567505058458159,
+              "actual_rate": 0.14705882352941177
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 281,
+              "mean_probability": 0.2513360147033143,
+              "actual_rate": 0.24555160142348753
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 300,
+              "mean_probability": 0.345929981150475,
+              "actual_rate": 0.24333333333333335
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 261,
+              "mean_probability": 0.4506261034781756,
+              "actual_rate": 0.28735632183908044
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 198,
+              "mean_probability": 0.5471395197141969,
+              "actual_rate": 0.3686868686868687
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 148,
+              "mean_probability": 0.644160904692037,
+              "actual_rate": 0.4594594594594595
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 101,
+              "mean_probability": 0.7480613284378049,
+              "actual_rate": 0.6237623762376238
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 67,
+              "mean_probability": 0.8475238605425688,
+              "actual_rate": 0.7014925373134329
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 16,
+              "mean_probability": 0.928835690482739,
+              "actual_rate": 0.875
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 142,
+          "scored_complete_dates": 138,
+          "unknown_dates": 4,
+          "successes": 52,
+          "rate": 0.37681159420289856,
+          "wilson95": [
+            0.30033039395000866,
+            0.45996535961397306
+          ]
+        }
+      },
+      "20": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 20,
+        "start": "2026-09-02",
+        "end": "2026-09-30",
+        "candidate_dates": 15,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 13,
+        "binary": {
+          "total_frozen_rows": 165,
+          "known": 133,
+          "unknown": 32,
+          "called": 165,
+          "tp": 35,
+          "fp": 37,
+          "fn": 20,
+          "tn": 41,
+          "correct": 76,
+          "accuracy": 0.5714285714285714,
+          "accuracy_wilson95_descriptive": [
+            0.4864844066166898,
+            0.6523624031421571
+          ],
+          "precision": 0.4861111111111111,
+          "recall": 0.6363636363636364,
+          "f1": 0.5511811023622047,
+          "all_fail_accuracy": 0.5864661654135338,
+          "brier": 0.2567521111432344,
+          "raw_brier": 0.2504377892214041,
+          "ece": 0.16488264728080657,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.0530264536491627,
+              "actual_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "mean_probability": 0.19489908493574987,
+              "actual_rate": 0.5
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 11,
+              "mean_probability": 0.25360137561069146,
+              "actual_rate": 0.18181818181818182
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 18,
+              "mean_probability": 0.3533314545897024,
+              "actual_rate": 0.4444444444444444
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 27,
+              "mean_probability": 0.45464921379099144,
+              "actual_rate": 0.2962962962962963
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 21,
+              "mean_probability": 0.5513661640554448,
+              "actual_rate": 0.42857142857142855
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 20,
+              "mean_probability": 0.6478473047008936,
+              "actual_rate": 0.45
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 18,
+              "mean_probability": 0.7400038278923495,
+              "actual_rate": 0.4444444444444444
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 12,
+              "mean_probability": 0.8364928232848122,
+              "actual_rate": 0.6666666666666666
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 1,
+              "mean_probability": 0.942834067680874,
+              "actual_rate": 1.0
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 15,
+          "scored_complete_dates": 13,
+          "unknown_dates": 2,
+          "successes": 6,
+          "rate": 0.46153846153846156,
+          "wilson95": [
+            0.23206067809538303,
+            0.7085620428549398
+          ]
+        }
+      },
+      "60": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 60,
+        "start": "2026-07-08",
+        "end": "2026-09-30",
+        "candidate_dates": 55,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 51,
+        "binary": {
+          "total_frozen_rows": 660,
+          "known": 593,
+          "unknown": 67,
+          "called": 660,
+          "tp": 143,
+          "fp": 150,
+          "fn": 76,
+          "tn": 224,
+          "correct": 367,
+          "accuracy": 0.6188870151770658,
+          "accuracy_wilson95_descriptive": [
+            0.579151418358153,
+            0.6570922237618222
+          ],
+          "precision": 0.4880546075085324,
+          "recall": 0.6529680365296804,
+          "f1": 0.55859375,
+          "all_fail_accuracy": 0.6306913996627319,
+          "brier": 0.2334782898598619,
+          "raw_brier": 0.22748635114395224,
+          "ece": 0.15188641918838394,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 5,
+              "mean_probability": 0.07271835263721302,
+              "actual_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 28,
+              "mean_probability": 0.1693820639363694,
+              "actual_rate": 0.17857142857142858
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 59,
+              "mean_probability": 0.2513110128092133,
+              "actual_rate": 0.288135593220339
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 93,
+              "mean_probability": 0.34686391732771493,
+              "actual_rate": 0.25806451612903225
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 115,
+              "mean_probability": 0.45136808862436995,
+              "actual_rate": 0.2608695652173913
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 98,
+              "mean_probability": 0.5491707538854845,
+              "actual_rate": 0.336734693877551
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 81,
+              "mean_probability": 0.6447013145463878,
+              "actual_rate": 0.43209876543209874
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 57,
+              "mean_probability": 0.7487955513458683,
+              "actual_rate": 0.5789473684210527
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 44,
+              "mean_probability": 0.8517150076264489,
+              "actual_rate": 0.6590909090909091
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 13,
+              "mean_probability": 0.9297630202388952,
+              "actual_rate": 1.0
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 55,
+          "scored_complete_dates": 51,
+          "unknown_dates": 4,
+          "successes": 21,
+          "rate": 0.4117647058823529,
+          "wilson95": [
+            0.2875439520458094,
+            0.5483466279362843
+          ]
+        }
+      }
+    },
+    "PRICE_PATH": {
+      "all": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 147,
+        "start": "2026-03-02",
+        "end": "2026-09-30",
+        "candidate_dates": 142,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 138,
+        "binary": {
+          "total_frozen_rows": 1656,
+          "known": 1589,
+          "unknown": 67,
+          "called": 1656,
+          "tp": 260,
+          "fp": 238,
+          "fn": 249,
+          "tn": 842,
+          "correct": 1102,
+          "accuracy": 0.6935179358086847,
+          "accuracy_wilson95_descriptive": [
+            0.6704055440680912,
+            0.7156969123906531
+          ],
+          "precision": 0.5220883534136547,
+          "recall": 0.5108055009823183,
+          "f1": 0.5163853028798411,
+          "all_fail_accuracy": 0.6796727501573316,
+          "brier": 0.2041954992291204,
+          "raw_brier": 0.20349948486941627,
+          "ece": 0.08822082527318195,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 104,
+              "mean_probability": 0.06255500641449971,
+              "actual_rate": 0.10576923076923077
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 225,
+              "mean_probability": 0.1561911110180043,
+              "actual_rate": 0.17333333333333334
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 261,
+              "mean_probability": 0.25244431085258584,
+              "actual_rate": 0.24904214559386972
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 259,
+              "mean_probability": 0.34980870864372265,
+              "actual_rate": 0.2625482625482625
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 242,
+              "mean_probability": 0.45107003721091954,
+              "actual_rate": 0.2727272727272727
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 197,
+              "mean_probability": 0.5493734537466654,
+              "actual_rate": 0.41624365482233505
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 142,
+              "mean_probability": 0.6438678556582749,
+              "actual_rate": 0.4859154929577465
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 95,
+              "mean_probability": 0.7453423094826028,
+              "actual_rate": 0.631578947368421
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 56,
+              "mean_probability": 0.8450572780149059,
+              "actual_rate": 0.75
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 8,
+              "mean_probability": 0.9247136834629176,
+              "actual_rate": 0.875
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 142,
+          "scored_complete_dates": 138,
+          "unknown_dates": 4,
+          "successes": 49,
+          "rate": 0.35507246376811596,
+          "wilson95": [
+            0.2801479560753849,
+            0.43784704811753483
+          ]
+        }
+      },
+      "20": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 20,
+        "start": "2026-09-02",
+        "end": "2026-09-30",
+        "candidate_dates": 15,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 13,
+        "binary": {
+          "total_frozen_rows": 165,
+          "known": 133,
+          "unknown": 32,
+          "called": 165,
+          "tp": 37,
+          "fp": 34,
+          "fn": 18,
+          "tn": 44,
+          "correct": 81,
+          "accuracy": 0.6090225563909775,
+          "accuracy_wilson95_descriptive": [
+            0.5241464887832695,
+            0.6877775892697074
+          ],
+          "precision": 0.5211267605633803,
+          "recall": 0.6727272727272727,
+          "f1": 0.5873015873015873,
+          "all_fail_accuracy": 0.5864661654135338,
+          "brier": 0.2565210183112347,
+          "raw_brier": 0.2549077812241037,
+          "ece": 0.15624905217927545,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.0520552651121713,
+              "actual_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 5,
+              "mean_probability": 0.1533360717888794,
+              "actual_rate": 0.6
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 12,
+              "mean_probability": 0.2610404808544669,
+              "actual_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 16,
+              "mean_probability": 0.3495726043322769,
+              "actual_rate": 0.25
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 28,
+              "mean_probability": 0.45224065473663716,
+              "actual_rate": 0.25
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 23,
+              "mean_probability": 0.5461394947980499,
+              "actual_rate": 0.43478260869565216
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 20,
+              "mean_probability": 0.651410837870581,
+              "actual_rate": 0.6
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 22,
+              "mean_probability": 0.7475092062983627,
+              "actual_rate": 0.45454545454545453
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 5,
+              "mean_probability": 0.8510885267023311,
+              "actual_rate": 0.8
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 1,
+              "mean_probability": 0.9177355078552092,
+              "actual_rate": 1.0
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 15,
+          "scored_complete_dates": 13,
+          "unknown_dates": 2,
+          "successes": 6,
+          "rate": 0.46153846153846156,
+          "wilson95": [
+            0.23206067809538303,
+            0.7085620428549398
+          ]
+        }
+      },
+      "60": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 60,
+        "start": "2026-07-08",
+        "end": "2026-09-30",
+        "candidate_dates": 55,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 51,
+        "binary": {
+          "total_frozen_rows": 660,
+          "known": 593,
+          "unknown": 67,
+          "called": 660,
+          "tp": 139,
+          "fp": 130,
+          "fn": 80,
+          "tn": 244,
+          "correct": 383,
+          "accuracy": 0.6458684654300169,
+          "accuracy_wilson95_descriptive": [
+            0.6065497914241754,
+            0.6833094290492693
+          ],
+          "precision": 0.516728624535316,
+          "recall": 0.634703196347032,
+          "f1": 0.569672131147541,
+          "all_fail_accuracy": 0.6306913996627319,
+          "brier": 0.22385463952559584,
+          "raw_brier": 0.22268557554949783,
+          "ece": 0.12020310510269328,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 19,
+              "mean_probability": 0.06383555517318543,
+              "actual_rate": 0.05263157894736842
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 45,
+              "mean_probability": 0.1561097673333863,
+              "actual_rate": 0.13333333333333333
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 72,
+              "mean_probability": 0.2531109915865599,
+              "actual_rate": 0.2916666666666667
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 79,
+              "mean_probability": 0.3516195011477437,
+              "actual_rate": 0.3037974683544304
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 109,
+              "mean_probability": 0.45093442661993954,
+              "actual_rate": 0.25688073394495414
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 92,
+              "mean_probability": 0.5535814119909221,
+              "actual_rate": 0.3804347826086957
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 74,
+              "mean_probability": 0.6433223572866258,
+              "actual_rate": 0.4864864864864865
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 56,
+              "mean_probability": 0.7421283977416129,
+              "actual_rate": 0.5714285714285714
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 41,
+              "mean_probability": 0.8491511119224668,
+              "actual_rate": 0.7317073170731707
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 6,
+              "mean_probability": 0.9288176091892084,
+              "actual_rate": 1.0
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 55,
+          "scored_complete_dates": 51,
+          "unknown_dates": 4,
+          "successes": 20,
+          "rate": 0.39215686274509803,
+          "wilson95": [
+            0.27027340981759806,
+            0.5291484101605165
+          ]
+        }
+      }
+    },
+    "PRICE_VOLUME_PATH": {
+      "all": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 147,
+        "start": "2026-03-02",
+        "end": "2026-09-30",
+        "candidate_dates": 142,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 138,
+        "binary": {
+          "total_frozen_rows": 1656,
+          "known": 1589,
+          "unknown": 67,
+          "called": 1656,
+          "tp": 258,
+          "fp": 242,
+          "fn": 251,
+          "tn": 838,
+          "correct": 1096,
+          "accuracy": 0.6897419760855884,
+          "accuracy_wilson95_descriptive": [
+            0.666561946731195,
+            0.7120068032600617
+          ],
+          "precision": 0.516,
+          "recall": 0.5068762278978389,
+          "f1": 0.5113974231912785,
+          "all_fail_accuracy": 0.6796727501573316,
+          "brier": 0.20450089760040205,
+          "raw_brier": 0.2038218108875538,
+          "ece": 0.08414760405205111,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 105,
+              "mean_probability": 0.06286750310636967,
+              "actual_rate": 0.09523809523809523
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 226,
+              "mean_probability": 0.15477235093454444,
+              "actual_rate": 0.168141592920354
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 258,
+              "mean_probability": 0.25063091517199687,
+              "actual_rate": 0.25193798449612403
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 268,
+              "mean_probability": 0.3494174974054168,
+              "actual_rate": 0.291044776119403
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 232,
+              "mean_probability": 0.4499935370177075,
+              "actual_rate": 0.25862068965517243
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 212,
+              "mean_probability": 0.5514625307526742,
+              "actual_rate": 0.3915094339622642
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 139,
+              "mean_probability": 0.6462191315326691,
+              "actual_rate": 0.5107913669064749
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 81,
+              "mean_probability": 0.7447638853212635,
+              "actual_rate": 0.6296296296296297
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 60,
+              "mean_probability": 0.8416055348393621,
+              "actual_rate": 0.7666666666666667
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 8,
+              "mean_probability": 0.9192306992135579,
+              "actual_rate": 0.875
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 142,
+          "scored_complete_dates": 138,
+          "unknown_dates": 4,
+          "successes": 46,
+          "rate": 0.3333333333333333,
+          "wilson95": [
+            0.2601376270880237,
+            0.41555662773383395
+          ]
+        }
+      },
+      "20": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 20,
+        "start": "2026-09-02",
+        "end": "2026-09-30",
+        "candidate_dates": 15,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 13,
+        "binary": {
+          "total_frozen_rows": 165,
+          "known": 133,
+          "unknown": 32,
+          "called": 165,
+          "tp": 35,
+          "fp": 35,
+          "fn": 20,
+          "tn": 43,
+          "correct": 78,
+          "accuracy": 0.5864661654135338,
+          "accuracy_wilson95_descriptive": [
+            0.5014913278489734,
+            0.6665863892275254
+          ],
+          "precision": 0.5,
+          "recall": 0.6363636363636364,
+          "f1": 0.56,
+          "all_fail_accuracy": 0.5864661654135338,
+          "brier": 0.25406567968777133,
+          "raw_brier": 0.2529698786274693,
+          "ece": 0.14690560037898928,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.0627822594058741,
+              "actual_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 4,
+              "mean_probability": 0.15860843728430854,
+              "actual_rate": 0.5
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 10,
+              "mean_probability": 0.24334787122185791,
+              "actual_rate": 0.4
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 23,
+              "mean_probability": 0.35017403508903633,
+              "actual_rate": 0.34782608695652173
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 25,
+              "mean_probability": 0.4518794200593487,
+              "actual_rate": 0.24
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 23,
+              "mean_probability": 0.5510240056974982,
+              "actual_rate": 0.391304347826087
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 25,
+              "mean_probability": 0.6572268555556094,
+              "actual_rate": 0.56
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 16,
+              "mean_probability": 0.7478777187478045,
+              "actual_rate": 0.4375
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 6,
+              "mean_probability": 0.8537199539877321,
+              "actual_rate": 0.8333333333333334
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 0,
+              "mean_probability": null,
+              "actual_rate": null
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 15,
+          "scored_complete_dates": 13,
+          "unknown_dates": 2,
+          "successes": 5,
+          "rate": 0.38461538461538464,
+          "wilson95": [
+            0.17709707797762575,
+            0.6447710848733431
+          ]
+        }
+      },
+      "60": {
+        "window_basis": "OFFICIAL_SIGNAL_SESSIONS; HISTORICAL_DIAGNOSTIC_NOT_FORWARD",
+        "sessions": 60,
+        "start": "2026-07-08",
+        "end": "2026-09-30",
+        "candidate_dates": 55,
+        "missing_entire_dates": [
+          "2026-09-02",
+          "2026-09-03",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24"
+        ],
+        "incomplete_candidate_dates": [
+          "2026-08-31",
+          "2026-09-01",
+          "2026-09-21",
+          "2026-09-30"
+        ],
+        "complete_label_dates": 51,
+        "binary": {
+          "total_frozen_rows": 660,
+          "known": 593,
+          "unknown": 67,
+          "called": 660,
+          "tp": 137,
+          "fp": 136,
+          "fn": 82,
+          "tn": 238,
+          "correct": 375,
+          "accuracy": 0.6323777403035413,
+          "accuracy_wilson95_descriptive": [
+            0.592834434242935,
+            0.670216997053775
+          ],
+          "precision": 0.5018315018315018,
+          "recall": 0.6255707762557078,
+          "f1": 0.556910569105691,
+          "all_fail_accuracy": 0.6306913996627319,
+          "brier": 0.22406755513017462,
+          "raw_brier": 0.2230953797684414,
+          "ece": 0.1271536453715753,
+          "calibration_bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 20,
+              "mean_probability": 0.06642527957938987,
+              "actual_rate": 0.05
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 46,
+              "mean_probability": 0.1608734915187571,
+              "actual_rate": 0.10869565217391304
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 70,
+              "mean_probability": 0.24728912438915449,
+              "actual_rate": 0.32857142857142857
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 85,
+              "mean_probability": 0.35148706658901174,
+              "actual_rate": 0.3058823529411765
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 99,
+              "mean_probability": 0.44929770647401773,
+              "actual_rate": 0.2727272727272727
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 103,
+              "mean_probability": 0.5531691760388232,
+              "actual_rate": 0.34951456310679613
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 75,
+              "mean_probability": 0.6477938681385785,
+              "actual_rate": 0.5066666666666667
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 48,
+              "mean_probability": 0.7469494393526929,
+              "actual_rate": 0.5833333333333334
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "n": 41,
+              "mean_probability": 0.8475779164759042,
+              "actual_rate": 0.7073170731707317
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "n": 6,
+              "mean_probability": 0.9230737161154846,
+              "actual_rate": 1.0
+            }
+          ],
+          "date_cluster_warning": true
+        },
+        "nonword_top1": {
+          "frozen_eligible_dates": 55,
+          "scored_complete_dates": 51,
+          "unknown_dates": 4,
+          "successes": 18,
+          "rate": 0.35294117647058826,
+          "wilson95": [
+            0.23634488451520852,
+            0.49013941545494777
+          ]
+        }
+      }
+    }
+  },
+  "missing_dates_not_assumed_zero_candidates": true,
+  "forward_samples_added": 0,
+  "stable_60_verified": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v294\\long_path_challenger_20261002_v1\\report.json": "28fc70026207944e07eaf2301a541a63272328db40651573f7be0ceac9ddcc1d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\calendar_coverage_v294.py": "1a3aaad3db409bbe22658500fd6668dc0c871a79917b25e48b30609d2246c489",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v294\\long_path_challenger_20261002_v1\\BASE_scored_LABEL_ONLY.csv": "28d2f16836f4f53badaead9619ba9a4db8360acc34574b5065a0c69d79b189cb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v294\\long_path_challenger_20261002_v1\\PRICE_PATH_scored_LABEL_ONLY.csv": "9b302e38d64f292362c4a54921f1906bd11fb57d6037bb298bf3fd3d54907e81",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v294\\long_path_challenger_20261002_v1\\PRICE_VOLUME_PATH_scored_LABEL_ONLY.csv": "76c7339336f4f6a45a7d4b561c98089bce2011b9ac4d0b717ce8ad33a04e3cab"
+  }
+}

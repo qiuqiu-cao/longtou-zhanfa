@@ -1,0 +1,114 @@
+{
+  "version": "v89-emotion-economic-value-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "generated_at": "2026-09-10T03:23:36.972781+08:00",
+  "joined_n": 202,
+  "outcome_coverage": 1.0,
+  "low_risk_cutoff_20pct": 0.3602903803143593,
+  "high_risk_cutoff_80pct": 0.48781399644594053,
+  "outcomes": {
+    "promotion_mid": {
+      "expected_high_risk_direction": "LOWER",
+      "high_risk_n": 41,
+      "low_risk_n": 41,
+      "high_risk_mean": 0.33822847206993545,
+      "low_risk_mean": 0.33562085301878514,
+      "difference_high_minus_low": 0.0026076190511503117,
+      "ci95": [
+        -0.09178663571243768,
+        0.1021741189984164
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "spearman_probability_vs_outcome": 0.019734333915128122,
+      "direction_pass": false,
+      "ci_excludes_zero_in_expected_direction": false
+    },
+    "yesterday_premium": {
+      "expected_high_risk_direction": "LOWER",
+      "high_risk_n": 41,
+      "low_risk_n": 41,
+      "high_risk_mean": 0.00585326986491049,
+      "low_risk_mean": 0.009985070941522374,
+      "difference_high_minus_low": -0.004131801076611884,
+      "ci95": [
+        -0.010102590597659371,
+        0.00189215384915634
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "spearman_probability_vs_outcome": -0.07750970190712292,
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": false
+    },
+    "failed_rate": {
+      "expected_high_risk_direction": "HIGHER",
+      "high_risk_n": 41,
+      "low_risk_n": 41,
+      "high_risk_mean": 0.34355521206933587,
+      "low_risk_mean": 0.29354280997726917,
+      "difference_high_minus_low": 0.0500124020920667,
+      "ci95": [
+        0.017911378673993162,
+        0.08614583719686074
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "spearman_probability_vs_outcome": 0.12342575689469595,
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": true
+    },
+    "previous_limit_tail_loss": {
+      "expected_high_risk_direction": "LOWER",
+      "high_risk_n": 41,
+      "low_risk_n": 41,
+      "high_risk_mean": -0.05807465779619958,
+      "low_risk_mean": -0.04604817658269047,
+      "difference_high_minus_low": -0.012026481213509112,
+      "ci95": [
+        -0.020269483616904622,
+        -0.003809823614374118
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "spearman_probability_vs_outcome": -0.20663084615938984,
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": true
+    },
+    "down_limit_count": {
+      "expected_high_risk_direction": "HIGHER",
+      "high_risk_n": 41,
+      "low_risk_n": 40,
+      "high_risk_mean": 19.48780487804878,
+      "low_risk_mean": 10.5,
+      "difference_high_minus_low": 8.987804878048781,
+      "ci95": [
+        2.9903353658536598,
+        15.355182926829267
+      ],
+      "status": "BLOCK_BOOTSTRAP_DESCRIPTIVE",
+      "spearman_probability_vs_outcome": 0.1964581323708811,
+      "direction_pass": true,
+      "ci_excludes_zero_in_expected_direction": true
+    }
+  },
+  "direction_pass_count": 4,
+  "strong_ci_pass_count": 3,
+  "economic_gate_passed": true,
+  "gate_rule": "expected direction in >=4/5 outcomes and block-bootstrap CI excludes zero in >=2/5",
+  "limitations": [
+    "outcomes are aggregate daily market measures, not executable trade returns",
+    "block-bootstrap intervals are descriptive and do not correct for all model-selection effects",
+    "a passed economic gate would still require forward prediction and complete-trade validation"
+  ],
+  "sources": {
+    "predictions": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v87\\emotion_regime_ensemble_20260910_v1\\outer_blind_predictions.csv",
+      "sha256": "3eb81b09e6f467b8a9c09592f48baa9171acbc1498effe865a7d19af2da18fa9"
+    },
+    "market": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+      "sha256": "973a62462a91b38859748f8d7b0f9a1374990cc3337d94766740f0cf5db6a120"
+    },
+    "joined": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v89\\emotion_economic_value_audit_20260910_v1\\joined_blind_outcomes.csv",
+      "sha256": "35d11f7f25fdd3ad26fffd20372c4e6b6eeb5d3c91d672ea5bd65a6f097a7a1c"
+    }
+  }
+}

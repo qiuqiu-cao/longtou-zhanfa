@@ -1,0 +1,473 @@
+{
+  "status": "NO_SELECTIVE_PROXY_THRESHOLD",
+  "target": "next_session_non_one_price_limit_touch_and_b2_positive_close_mark_proxy",
+  "model": "same_day_weighted_logistic_identity_emotion_price_volume",
+  "train_end_exclusive": "2025-01-01",
+  "training_rows": 13904,
+  "training_sessions": 263,
+  "outcome_availability_purge": true,
+  "episode_overlap_purged": true,
+  "threshold_grid_frozen": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45
+  ],
+  "calibration_requirements": {
+    "minimum_proxy_precision": 0.7,
+    "minimum_selections": 30,
+    "signals_per_active_week": [
+      3.0,
+      5.0
+    ]
+  },
+  "operational_threshold": null,
+  "default_decision": "CASH",
+  "validation_at_operational_threshold": null,
+  "windows": {
+    "calibration": {
+      "start": "2025-01-01",
+      "end_exclusive": "2025-04-01",
+      "candidate_rows": 3111,
+      "sessions": 57,
+      "emotion_active_sessions": 31,
+      "unconditional_top1": {
+        "selections": 57,
+        "proxy_successes": 6,
+        "proxy_precision": 0.10526315789473684,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 57,
+        "signals_per_active_week": 4.384615384615385
+      },
+      "emotion_active_top1": {
+        "selections": 31,
+        "proxy_successes": 4,
+        "proxy_precision": 0.12903225806451613,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 31,
+        "signals_per_active_week": 2.3846153846153846
+      },
+      "fixed_threshold_frontier": [
+        {
+          "selections": 31,
+          "proxy_successes": 4,
+          "proxy_precision": 0.12903225806451613,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 31,
+          "signals_per_active_week": 2.3846153846153846,
+          "threshold": 0.1,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 28,
+          "proxy_successes": 4,
+          "proxy_precision": 0.14285714285714285,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 28,
+          "signals_per_active_week": 2.1538461538461537,
+          "threshold": 0.15,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 21,
+          "proxy_successes": 3,
+          "proxy_precision": 0.14285714285714285,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 21,
+          "signals_per_active_week": 1.6153846153846154,
+          "threshold": 0.2,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 12,
+          "proxy_successes": 1,
+          "proxy_precision": 0.08333333333333333,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 12,
+          "signals_per_active_week": 0.9230769230769231,
+          "threshold": 0.25,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 9,
+          "proxy_successes": 1,
+          "proxy_precision": 0.1111111111111111,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 9,
+          "signals_per_active_week": 0.6923076923076923,
+          "threshold": 0.3,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 2,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 2,
+          "signals_per_active_week": 0.15384615384615385,
+          "threshold": 0.35,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 1,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 1,
+          "signals_per_active_week": 0.07692307692307693,
+          "threshold": 0.4,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "signals_per_active_week": 0.0,
+          "threshold": 0.45,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        }
+      ],
+      "best_fixed_threshold_with_minimum_sample": {
+        "selections": 31,
+        "proxy_successes": 4,
+        "proxy_precision": 0.12903225806451613,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 31,
+        "signals_per_active_week": 2.3846153846153846,
+        "threshold": 0.1,
+        "minimum_sample_pass": true,
+        "proxy_precision_pass": false,
+        "active_week_frequency_pass": false,
+        "proxy_gate_pass": false
+      }
+    },
+    "validation": {
+      "start": "2025-04-01",
+      "end_exclusive": "2025-07-28",
+      "candidate_rows": 4020,
+      "sessions": 79,
+      "emotion_active_sessions": 49,
+      "unconditional_top1": {
+        "selections": 79,
+        "proxy_successes": 14,
+        "proxy_precision": 0.17721518987341772,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 79,
+        "signals_per_active_week": 4.647058823529412
+      },
+      "emotion_active_top1": {
+        "selections": 49,
+        "proxy_successes": 8,
+        "proxy_precision": 0.16326530612244897,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 49,
+        "signals_per_active_week": 2.8823529411764706
+      },
+      "fixed_threshold_frontier": [
+        {
+          "selections": 46,
+          "proxy_successes": 8,
+          "proxy_precision": 0.17391304347826086,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 46,
+          "signals_per_active_week": 2.7058823529411766,
+          "threshold": 0.1,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 31,
+          "proxy_successes": 4,
+          "proxy_precision": 0.12903225806451613,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 31,
+          "signals_per_active_week": 1.8235294117647058,
+          "threshold": 0.15,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 21,
+          "proxy_successes": 2,
+          "proxy_precision": 0.09523809523809523,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 21,
+          "signals_per_active_week": 1.2352941176470589,
+          "threshold": 0.2,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 9,
+          "proxy_successes": 1,
+          "proxy_precision": 0.1111111111111111,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 9,
+          "signals_per_active_week": 0.5294117647058824,
+          "threshold": 0.25,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 3,
+          "proxy_successes": 1,
+          "proxy_precision": 0.3333333333333333,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 3,
+          "signals_per_active_week": 0.17647058823529413,
+          "threshold": 0.3,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 1,
+          "proxy_successes": 0,
+          "proxy_precision": 0.0,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 1,
+          "signals_per_active_week": 0.058823529411764705,
+          "threshold": 0.35,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "signals_per_active_week": 0.0,
+          "threshold": 0.4,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "signals_per_active_week": 0.0,
+          "threshold": 0.45,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        }
+      ],
+      "best_fixed_threshold_with_minimum_sample": {
+        "selections": 46,
+        "proxy_successes": 8,
+        "proxy_precision": 0.17391304347826086,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 46,
+        "signals_per_active_week": 2.7058823529411766,
+        "threshold": 0.1,
+        "minimum_sample_pass": true,
+        "proxy_precision_pass": false,
+        "active_week_frequency_pass": false,
+        "proxy_gate_pass": false
+      }
+    },
+    "reused_research_evaluation": {
+      "start": "2025-07-28",
+      "end_exclusive": "2025-12-26",
+      "candidate_rows": 5156,
+      "sessions": 103,
+      "emotion_active_sessions": 53,
+      "unconditional_top1": {
+        "selections": 103,
+        "proxy_successes": 22,
+        "proxy_precision": 0.21359223300970873,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 103,
+        "signals_per_active_week": 5.15
+      },
+      "emotion_active_top1": {
+        "selections": 53,
+        "proxy_successes": 11,
+        "proxy_precision": 0.20754716981132076,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 53,
+        "signals_per_active_week": 2.65
+      },
+      "fixed_threshold_frontier": [
+        {
+          "selections": 51,
+          "proxy_successes": 10,
+          "proxy_precision": 0.19607843137254902,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 51,
+          "signals_per_active_week": 2.55,
+          "threshold": 0.1,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 42,
+          "proxy_successes": 8,
+          "proxy_precision": 0.19047619047619047,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 42,
+          "signals_per_active_week": 2.1,
+          "threshold": 0.15,
+          "minimum_sample_pass": true,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 27,
+          "proxy_successes": 6,
+          "proxy_precision": 0.2222222222222222,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 27,
+          "signals_per_active_week": 1.35,
+          "threshold": 0.2,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 17,
+          "proxy_successes": 2,
+          "proxy_precision": 0.11764705882352941,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 17,
+          "signals_per_active_week": 0.85,
+          "threshold": 0.25,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 6,
+          "proxy_successes": 2,
+          "proxy_precision": 0.3333333333333333,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 6,
+          "signals_per_active_week": 0.3,
+          "threshold": 0.3,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 2,
+          "proxy_successes": 1,
+          "proxy_precision": 0.5,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 2,
+          "signals_per_active_week": 0.1,
+          "threshold": 0.35,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "signals_per_active_week": 0.0,
+          "threshold": 0.4,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        },
+        {
+          "selections": 0,
+          "proxy_successes": 0,
+          "proxy_precision": null,
+          "first_board_selections": 0,
+          "consecutive_board_selections": 0,
+          "signals_per_active_week": 0.0,
+          "threshold": 0.45,
+          "minimum_sample_pass": false,
+          "proxy_precision_pass": false,
+          "active_week_frequency_pass": false,
+          "proxy_gate_pass": false
+        }
+      ],
+      "best_fixed_threshold_with_minimum_sample": {
+        "selections": 51,
+        "proxy_successes": 10,
+        "proxy_precision": 0.19607843137254902,
+        "first_board_selections": 0,
+        "consecutive_board_selections": 51,
+        "signals_per_active_week": 2.55,
+        "threshold": 0.1,
+        "minimum_sample_pass": true,
+        "proxy_precision_pass": false,
+        "active_week_frequency_pass": false,
+        "proxy_gate_pass": false
+      }
+    }
+  },
+  "deployment_authorized": false,
+  "complete_trade_evidence": false,
+  "limitations": [
+    "the target is a reconstructed daily price-opportunity proxy, not a completed trade",
+    "all reported windows are historical research windows and none is a sealed future blind period",
+    "emotion-active weeks use reconstructed same-day state flags and are not original forward archives",
+    "no actual order, queue, fill, exit, announcement, or point-in-time theme evidence is present",
+    "a null threshold means cash; validation or later-window results may not be used to rescue calibration"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v2\\full_pool_eod_features.csv": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831_v3\\outcomes_LABEL_ONLY.csv": "fcf810543af341ab2aab1cc08e86a1aa06f12da9108f72bbd7f0ec6f9d550f87",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_selective_policy_experiment.py": "68701082d7b6b7bd45d727b99a41546e49a00339996d623dc07aa10143a00c1b"
+  }
+}

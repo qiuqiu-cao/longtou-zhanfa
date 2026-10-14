@@ -1,0 +1,48 @@
+{
+  "version": "v204-timeout-limit-pool-collector-1",
+  "date": "20260924",
+  "collected_at": "2026-09-27T18:29:43+08:00",
+  "source": "Eastmoney via AKShare parser with bounded HTTP timeout",
+  "transport": {
+    "connect_timeout_seconds": 5.0,
+    "read_timeout_seconds": 8.0,
+    "maximum_attempts": 1
+  },
+  "datasets": {
+    "limit_up": {
+      "status": "delayed_provider_observation",
+      "rows": 52,
+      "path": "limit_up.csv",
+      "sha256": "4afb047403b00f799a9459fdf415c512e207a041f3db729d3212916c2c54386b",
+      "attempt_errors": []
+    },
+    "failed_board": {
+      "status": "delayed_provider_observation",
+      "rows": 10,
+      "path": "failed_board.csv",
+      "sha256": "36a98fa4aa4667f9b310570268803e82cda9f26888e9587e5a9c0657a35b6b7a",
+      "attempt_errors": []
+    },
+    "limit_down": {
+      "status": "delayed_provider_observation",
+      "rows": 13,
+      "path": "limit_down.csv",
+      "sha256": "9dc10627c14501fcb15863bdb9c4eed21e58c8d69ae800efe0d4b1d684b6745d",
+      "attempt_errors": []
+    },
+    "previous_limit": {
+      "status": "delayed_provider_observation",
+      "rows": 51,
+      "path": "previous_limit.csv",
+      "sha256": "df3b794f4258f2efcad7ffae35665b4dcb93123d33c9159c3a9436a58c1ae342",
+      "attempt_errors": []
+    },
+    "strong": {
+      "status": "delayed_provider_observation",
+      "rows": 210,
+      "path": "strong.csv",
+      "sha256": "f244da5ffd50afe164783c9ca556b10879437c40aa8909684edcb2a028b43fb6",
+      "attempt_errors": []
+    }
+  }
+}

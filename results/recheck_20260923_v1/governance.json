@@ -1,0 +1,57 @@
+{
+  "version": "v153-group-rank-governance-1",
+  "status": "GROUP_RANK_UPLIFT_NOT_PROVEN",
+  "challenger": "identity_emotion_price_volume",
+  "baseline": "highest_board_baseline",
+  "target": "next-session non-one-price touch and positive B+2 close-mark proxy",
+  "target_no_touch_negative_fixed": true,
+  "groups": {
+    "FIRST_BOARD": {
+      "paired_sessions": 237,
+      "challenger_proxy_success_rate": 0.12236286919831224,
+      "baseline_proxy_success_rate": 0.08438818565400844,
+      "paired_difference": 0.0379746835443038,
+      "paired_bootstrap95": [
+        -0.016877637130801686,
+        0.09282700421940929
+      ],
+      "rank_uplift_supported": false,
+      "conditional_b2_known": 110,
+      "conditional_b2_positive_rate": 0.4,
+      "conditional_b2_large_loss_rate": 0.36363636363636365,
+      "conditional_b2_mean_return": -0.010112198877086953,
+      "conditional_path_warning": "B+2 path statistics condition on a hypothetical touch/entry path and are not a full-pool trade rate"
+    },
+    "CONSECUTIVE_BOARD": {
+      "paired_sessions": 237,
+      "challenger_proxy_success_rate": 0.16455696202531644,
+      "baseline_proxy_success_rate": 0.18565400843881857,
+      "paired_difference": -0.02109704641350211,
+      "paired_bootstrap95": [
+        -0.05485232067510549,
+        0.008438818565400843
+      ],
+      "rank_uplift_supported": false,
+      "conditional_b2_known": 165,
+      "conditional_b2_positive_rate": 0.3151515151515151,
+      "conditional_b2_large_loss_rate": 0.4666666666666667,
+      "conditional_b2_mean_return": -0.056972556185473686,
+      "conditional_path_warning": "B+2 path statistics condition on a hypothetical touch/entry path and are not a full-pool trade rate"
+    }
+  },
+  "first_board_probability_improvement_claim_allowed": false,
+  "relay_probability_improvement_claim_allowed": false,
+  "complete_trade_probability_claim_allowed": false,
+  "deployment_allowed": false,
+  "next_action": "add V150 point-in-time specific-theme and competition factors, then rerun on a new isolated period",
+  "limitations": [
+    "historical universe is not proven full-market complete",
+    "features were reconstructed after the fact",
+    "auction, queue, actual fills and frozen exits are absent",
+    "the same exploratory windows have already been inspected"
+  ],
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\recheck_20260923_v1\\rank_walkforward\\report.json",
+    "sha256": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c"
+  }
+}

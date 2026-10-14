@@ -1,0 +1,216 @@
+{
+  "version": "v217-symbolic-name-cluster-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2026-10-14",
+  "asof": "2026-10-14T19:30:15.814827+08:00",
+  "data_quality": {
+    "name_match_status": "VERIFIED_WITHIN_ARCHIVED_PROVIDER_POOL",
+    "availability_status": "VERIFIED_AVAILABLE_BY_ASOF",
+    "provider_pool_status": null,
+    "full_market_completeness": null,
+    "mainboard_closing_limit_count": 34,
+    "mainboard_failed_board_count": 20,
+    "point_in_time_security_scope_complete": false
+  },
+  "scope": {
+    "mainboard_only": true,
+    "closing_limit_and_failed_board_observed": true,
+    "token_lengths": [
+      1,
+      2
+    ],
+    "industry_diversity_required": true
+  },
+  "thresholds": {
+    "min_member_count": 4,
+    "min_member_share": 0.08,
+    "min_relay_member_count": 2,
+    "min_distinct_board_levels": 2,
+    "min_distinct_industries": 3,
+    "max_ngram_length": 2
+  },
+  "stop_tokens": [
+    "业",
+    "份",
+    "公",
+    "公司",
+    "发",
+    "发展",
+    "司",
+    "团",
+    "实",
+    "实业",
+    "展",
+    "技",
+    "控",
+    "控股",
+    "科",
+    "科技",
+    "股",
+    "股份",
+    "集",
+    "集团"
+  ],
+  "cluster_count": 0,
+  "top_cluster": null,
+  "clusters": [],
+  "candidate_records": [
+    {
+      "code": "000530",
+      "clusters": []
+    },
+    {
+      "code": "000573",
+      "clusters": []
+    },
+    {
+      "code": "000601",
+      "clusters": []
+    },
+    {
+      "code": "000668",
+      "clusters": []
+    },
+    {
+      "code": "000823",
+      "clusters": []
+    },
+    {
+      "code": "001216",
+      "clusters": []
+    },
+    {
+      "code": "001299",
+      "clusters": []
+    },
+    {
+      "code": "001318",
+      "clusters": []
+    },
+    {
+      "code": "002029",
+      "clusters": []
+    },
+    {
+      "code": "002343",
+      "clusters": []
+    },
+    {
+      "code": "002469",
+      "clusters": []
+    },
+    {
+      "code": "002552",
+      "clusters": []
+    },
+    {
+      "code": "002696",
+      "clusters": []
+    },
+    {
+      "code": "002813",
+      "clusters": []
+    },
+    {
+      "code": "002860",
+      "clusters": []
+    },
+    {
+      "code": "002917",
+      "clusters": []
+    },
+    {
+      "code": "600097",
+      "clusters": []
+    },
+    {
+      "code": "600121",
+      "clusters": []
+    },
+    {
+      "code": "600202",
+      "clusters": []
+    },
+    {
+      "code": "600252",
+      "clusters": []
+    },
+    {
+      "code": "600391",
+      "clusters": []
+    },
+    {
+      "code": "600408",
+      "clusters": []
+    },
+    {
+      "code": "600847",
+      "clusters": []
+    },
+    {
+      "code": "601188",
+      "clusters": []
+    },
+    {
+      "code": "601811",
+      "clusters": []
+    },
+    {
+      "code": "601858",
+      "clusters": []
+    },
+    {
+      "code": "603096",
+      "clusters": []
+    },
+    {
+      "code": "603258",
+      "clusters": []
+    },
+    {
+      "code": "603533",
+      "clusters": []
+    },
+    {
+      "code": "603598",
+      "clusters": []
+    },
+    {
+      "code": "603656",
+      "clusters": []
+    },
+    {
+      "code": "603968",
+      "clusters": []
+    },
+    {
+      "code": "603992",
+      "clusters": []
+    },
+    {
+      "code": "605189",
+      "clusters": []
+    }
+  ],
+  "audit": {
+    "unique_tokens_scanned": 168,
+    "minimum_members_for_this_pool": 4,
+    "rejected_counts_by_first_failed_gate": {
+      "member_count_or_share": 168,
+      "relay_count": 0,
+      "board_levels": 0,
+      "industry_diversity": 0
+    }
+  },
+  "governance": {
+    "post_hoc_rule_design_after_2026_09_18_case": true,
+    "real_theme_substitution_allowed": false,
+    "business_or_catalyst_claim_allowed": false,
+    "candidate_reranking_allowed": false,
+    "probability_uplift_claim_allowed": false,
+    "direct_entry_allowed": false,
+    "requires_forward_validation_before_model_use": true,
+    "next_session_auction_open_confirmation_still_required": true
+  },
+  "interpretation": "名称重复只证明归档涨停池内存在可观察的符号聚集。它可以提示情绪扩散，但不能替代真实题材、催化、业务归属、可买性或次日确认。"
+}

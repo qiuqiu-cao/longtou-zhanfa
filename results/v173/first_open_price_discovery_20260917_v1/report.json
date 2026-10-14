@@ -1,0 +1,215 @@
+{
+  "version": "v173-first-open-price-discovery-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "hypothesis_id": "H049",
+  "cutoff_exclusive": "2025-12-26",
+  "evaluation_rows": 5103,
+  "evaluation_sessions": 504,
+  "split_date": "2025-05-19",
+  "definitions": {
+    "ORDINARY_TURNOVER_RELAY": "current 2-5 board is non-one-price without an immediately preceding one-price board",
+    "FIRST_OPEN_AFTER_1_ONE_PRICE": "previous session was a one-price board with streak 1; current consecutive board is non-one-price",
+    "FIRST_OPEN_AFTER_2PLUS_ONE_PRICE": "previous session ended a one-price streak of at least 2; current consecutive board is non-one-price"
+  },
+  "group_summaries": {
+    "ORDINARY_TURNOVER_RELAY": {
+      "observations": 4671,
+      "signal_dates": 504,
+      "promotion_known": 4650,
+      "promotion_rate": 0.3395698924731183,
+      "next_touch_known": 4650,
+      "next_touch_rate": 0.5045161290322581,
+      "turnover_known": 4671,
+      "mean_turnover": 0.13993305669269404,
+      "b2_proxy_known_conditional_on_touch": 2321,
+      "b2_proxy_mean": -0.03238632704847316,
+      "b2_proxy_positive_rate": 0.35889702714347266,
+      "b2_proxy_big_loss_known": 2321,
+      "b2_proxy_big_loss_rate": 0.4394657475226196
+    },
+    "FIRST_OPEN_AFTER_1_ONE_PRICE": {
+      "observations": 297,
+      "signal_dates": 206,
+      "promotion_known": 296,
+      "promotion_rate": 0.42567567567567566,
+      "next_touch_known": 296,
+      "next_touch_rate": 0.597972972972973,
+      "turnover_known": 297,
+      "mean_turnover": 0.16525937819362133,
+      "b2_proxy_known_conditional_on_touch": 177,
+      "b2_proxy_mean": -0.015384946468794401,
+      "b2_proxy_positive_rate": 0.4293785310734463,
+      "b2_proxy_big_loss_known": 177,
+      "b2_proxy_big_loss_rate": 0.3615819209039548
+    },
+    "FIRST_OPEN_AFTER_2PLUS_ONE_PRICE": {
+      "observations": 135,
+      "signal_dates": 107,
+      "promotion_known": 135,
+      "promotion_rate": 0.4,
+      "next_touch_known": 135,
+      "next_touch_rate": 0.5333333333333333,
+      "turnover_known": 135,
+      "mean_turnover": 0.17386485500679547,
+      "b2_proxy_known_conditional_on_touch": 72,
+      "b2_proxy_mean": -0.04633990635538136,
+      "b2_proxy_positive_rate": 0.375,
+      "b2_proxy_big_loss_known": 72,
+      "b2_proxy_big_loss_rate": 0.3888888888888889
+    }
+  },
+  "date_clustered_comparisons": {
+    "promotion_long_vs_one_day": {
+      "left": "FIRST_OPEN_AFTER_2PLUS_ONE_PRICE",
+      "right": "FIRST_OPEN_AFTER_1_ONE_PRICE",
+      "estimate": -0.011900094434856234,
+      "ci95": [
+        -0.12008724640984716,
+        0.09368338543532298
+      ],
+      "left_dates": 107,
+      "right_dates": 205
+    },
+    "touch_long_vs_one_day": {
+      "left": "FIRST_OPEN_AFTER_2PLUS_ONE_PRICE",
+      "right": "FIRST_OPEN_AFTER_1_ONE_PRICE",
+      "estimate": -0.04879079965699529,
+      "ci95": [
+        -0.1623771668457673,
+        0.056919157793046724
+      ],
+      "left_dates": 107,
+      "right_dates": 205
+    },
+    "b2_long_vs_one_day": {
+      "left": "FIRST_OPEN_AFTER_2PLUS_ONE_PRICE",
+      "right": "FIRST_OPEN_AFTER_1_ONE_PRICE",
+      "estimate": -0.02416780885989868,
+      "ci95": [
+        -0.06724534414791868,
+        0.019569375045055497
+      ],
+      "left_dates": 63,
+      "right_dates": 139
+    },
+    "b2_loss_long_vs_one_day": {
+      "left": "FIRST_OPEN_AFTER_2PLUS_ONE_PRICE",
+      "right": "FIRST_OPEN_AFTER_1_ONE_PRICE",
+      "estimate": 0.003269765140268721,
+      "ci95": [
+        -0.13737971527539872,
+        0.14289339956606137
+      ],
+      "left_dates": 63,
+      "right_dates": 139
+    },
+    "promotion_first_open_vs_ordinary": {
+      "left": "FIRST_OPEN_COMBINED",
+      "right": "ORDINARY_TURNOVER_RELAY",
+      "estimate": 0.07100859020696076,
+      "ci95": [
+        0.01762199853088029,
+        0.12786600772729687
+      ],
+      "left_dates": 262,
+      "right_dates": 503
+    },
+    "b2_first_open_vs_ordinary": {
+      "left": "FIRST_OPEN_COMBINED",
+      "right": "ORDINARY_TURNOVER_RELAY",
+      "estimate": 0.001239608843579501,
+      "ci95": [
+        -0.021314928160124078,
+        0.022765924267679916
+      ],
+      "left_dates": 181,
+      "right_dates": 485
+    }
+  },
+  "turnover_thresholds_fit_on_discovery_only": {
+    "3": {
+      "low": 0.0950749165368393,
+      "high": 0.17208911298409474
+    },
+    "4": {
+      "low": 0.11489677444895786,
+      "high": 0.21535787590599365
+    },
+    "5": {
+      "low": 0.126803703125,
+      "high": 0.2260786602535826
+    },
+    "fallback": {
+      "low": 0.1057005245374499,
+      "high": 0.1957771088435374
+    }
+  },
+  "validation_first_open_turnover_tiers": {
+    "LOW": {
+      "observations": 35,
+      "signal_dates": 27,
+      "promotion_known": 35,
+      "promotion_rate": 0.45714285714285713,
+      "next_touch_known": 35,
+      "next_touch_rate": 0.6,
+      "turnover_known": 35,
+      "mean_turnover": 0.06542250927920297,
+      "b2_proxy_known_conditional_on_touch": 21,
+      "b2_proxy_mean": -0.025434565079105093,
+      "b2_proxy_positive_rate": 0.47619047619047616,
+      "b2_proxy_big_loss_known": 21,
+      "b2_proxy_big_loss_rate": 0.3333333333333333
+    },
+    "MID": {
+      "observations": 42,
+      "signal_dates": 37,
+      "promotion_known": 42,
+      "promotion_rate": 0.38095238095238093,
+      "next_touch_known": 42,
+      "next_touch_rate": 0.5,
+      "turnover_known": 42,
+      "mean_turnover": 0.1395551931561812,
+      "b2_proxy_known_conditional_on_touch": 21,
+      "b2_proxy_mean": 0.02171140261028215,
+      "b2_proxy_positive_rate": 0.5714285714285714,
+      "b2_proxy_big_loss_known": 21,
+      "b2_proxy_big_loss_rate": 0.19047619047619047
+    },
+    "HIGH": {
+      "observations": 39,
+      "signal_dates": 32,
+      "promotion_known": 38,
+      "promotion_rate": 0.3684210526315789,
+      "next_touch_known": 38,
+      "next_touch_rate": 0.5263157894736842,
+      "turnover_known": 39,
+      "mean_turnover": 0.27124792108212314,
+      "b2_proxy_known_conditional_on_touch": 20,
+      "b2_proxy_mean": -0.03229499175875604,
+      "b2_proxy_positive_rate": 0.3,
+      "b2_proxy_big_loss_known": 20,
+      "b2_proxy_big_loss_rate": 0.35
+    }
+  },
+  "governance": {
+    "delayed_price_discovery_factor_allowed": false,
+    "first_open_is_automatic_healthy_divergence": false,
+    "turnover_is_monotonic_positive_factor": false,
+    "stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "First-open relays can retain identity premium, but a longer prior one-price streak does not prove a safer trade. Turnover on the first open is price discovery and potential delayed supply; it must be combined with intraday absorption, theme feedback and executable B+1/B+2/B+3 evidence.",
+  "limitations": [
+    "one-price status is inferred from daily OHLC, not order queue data",
+    "historical security eligibility and theme identity are incomplete",
+    "seal-time and reopen-path fields are frequently unavailable",
+    "B+2 marks are conditional daily opportunity proxies, not realized trades",
+    "the validation period is time-split but not a pristine never-inspected blind test"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\point_in_time_rebuild\\leader_candidates.csv": "866f2b5e45dfda1f975fd9573436123feb8002a372dad678be43099ce052fe65",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "2c0f23e1d3dcf58ae2f458364b62d92f97b0dbc3c75dee62735c3ad847c92f2f"
+}

@@ -1,0 +1,171 @@
+{
+  "version": "v200-opening-information-causality-audit-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": {
+    "prequential_rows": 570,
+    "prequential_sessions": 13,
+    "known_filled_risk_rows": 507,
+    "frozen_top1_sessions": 10,
+    "frozen_top1_big_loss_cases": 3
+  },
+  "availability_contract": {
+    "prior_close_features_available_at": "signal_date_15:05_or_earlier",
+    "official_open_gap_available_at": "after_next_session_opening_call_auction_match_approximately_09:25",
+    "continuous_auction_begins_at": "09:30",
+    "opening_entry_proxy_price_time": "same_next_session_opening_call_auction_match",
+    "opening_gap_is_prior_close_feature": false,
+    "opening_gap_can_filter_same_official_open_fill": false,
+    "09_25_indicative_price_equals_official_open_claim": false,
+    "opening_gap_can_condition_later_09_30_or_09_35_entry_in_principle": true,
+    "later_entry_requires_new_price_and_return_labels": true
+  },
+  "candidate_opening_gap_bands": {
+    "LE_0": {
+      "rows": 216,
+      "sessions": 12,
+      "big_loss_count": 16,
+      "big_loss_rate": 0.07407407407407407,
+      "B_plus_1_mean_net_return": 0.002539078216392624,
+      "B_plus_2_mean_net_return": -0.0032836437233855417,
+      "mean_prior_close_balanced_risk_probability": 0.30399735921820303
+    },
+    "GT_0_LE_5": {
+      "rows": 232,
+      "sessions": 12,
+      "big_loss_count": 25,
+      "big_loss_rate": 0.10775862068965517,
+      "B_plus_1_mean_net_return": -0.007104916532157438,
+      "B_plus_2_mean_net_return": -0.015649175133773754,
+      "mean_prior_close_balanced_risk_probability": 0.4619570761877484
+    },
+    "GT_5_LE_7": {
+      "rows": 31,
+      "sessions": 12,
+      "big_loss_count": 8,
+      "big_loss_rate": 0.25806451612903225,
+      "B_plus_1_mean_net_return": -0.03307922608605925,
+      "B_plus_2_mean_net_return": -0.02049351114823368,
+      "mean_prior_close_balanced_risk_probability": 0.43046419993211876
+    },
+    "GT_7": {
+      "rows": 28,
+      "sessions": 12,
+      "big_loss_count": 7,
+      "big_loss_rate": 0.25,
+      "B_plus_1_mean_net_return": -0.014169118066374642,
+      "B_plus_2_mean_net_return": -0.016668158177614845,
+      "mean_prior_close_balanced_risk_probability": 0.36143872572957214
+    }
+  },
+  "frozen_top1_opening_gap_bands": {
+    "LE_0": {
+      "rows": 7,
+      "sessions": 7,
+      "big_loss_count": 2,
+      "big_loss_rate": 0.2857142857142857,
+      "B_plus_1_mean_net_return": -0.02297465249974264,
+      "B_plus_2_mean_net_return": -0.048775858802493174,
+      "mean_prior_close_balanced_risk_probability": 0.3920086672249638
+    },
+    "GT_0_LE_5": {
+      "rows": 1,
+      "sessions": 1,
+      "big_loss_count": 0,
+      "big_loss_rate": 0.0,
+      "B_plus_1_mean_net_return": 0.0512665673838106,
+      "B_plus_2_mean_net_return": 0.0223160250806422,
+      "mean_prior_close_balanced_risk_probability": 0.3937583100455364
+    },
+    "GT_5_LE_7": {
+      "rows": 1,
+      "sessions": 1,
+      "big_loss_count": 1,
+      "big_loss_rate": 1.0,
+      "B_plus_1_mean_net_return": -0.1001418390359719,
+      "B_plus_2_mean_net_return": -0.1901720049678091,
+      "mean_prior_close_balanced_risk_probability": 0.1908715964090847
+    },
+    "GT_7": {
+      "rows": 1,
+      "sessions": 1,
+      "big_loss_count": 0,
+      "big_loss_rate": 0.0,
+      "B_plus_1_mean_net_return": 0.1216073381360407,
+      "B_plus_2_mean_net_return": 0.1318375874888571,
+      "mean_prior_close_balanced_risk_probability": 0.4025360507467665
+    }
+  },
+  "frozen_top1_big_loss_case_details": [
+    {
+      "signal_date": "2026-08-26",
+      "code": "600272",
+      "name": "开开实业",
+      "B_open_gap_pct": 6.540284360189561,
+      "opening_gap_band": "GT_5_LE_7",
+      "risk_base_probability": 0.0899698780226089,
+      "risk_emotion_probability": 0.0658224762189872,
+      "risk_emotion_balanced_probability": 0.1908715964090847,
+      "net_return_B_plus_1": -0.1001418390359719,
+      "net_return_B_plus_2": -0.1901720049678091
+    },
+    {
+      "signal_date": "2026-08-27",
+      "code": "600721",
+      "name": "百花医药",
+      "B_open_gap_pct": -2.0983213429256597,
+      "opening_gap_band": "LE_0",
+      "risk_base_probability": 0.0689717603729229,
+      "risk_emotion_probability": 0.379226575911354,
+      "risk_emotion_balanced_probability": 0.7810691025355023,
+      "net_return_B_plus_1": -0.1513728243809775,
+      "net_return_B_plus_2": -0.1947199678838197
+    },
+    {
+      "signal_date": "2026-09-08",
+      "code": "000560",
+      "name": "我爱我家",
+      "B_open_gap_pct": -3.77906976744185,
+      "opening_gap_band": "LE_0",
+      "risk_base_probability": 0.2456317641635294,
+      "risk_emotion_probability": 0.0742090832213451,
+      "risk_emotion_balanced_probability": 0.2488267427747618,
+      "net_return_B_plus_1": -0.1174731115841288,
+      "net_return_B_plus_2": -0.1747018176588782
+    }
+  ],
+  "intraday_confirmation_readiness": {
+    "technical_complete_sequences": 0,
+    "full_complete_sequences": 0,
+    "09_35_execution_model_ready": false
+  },
+  "diagnosis": {
+    "large_losses_span_multiple_opening_gap_bands": true,
+    "opening_gap_is_safe_oracle_filter": false,
+    "same_open_gap_filter_with_same_open_fill_is_executable": false,
+    "validated_09_35_risk_reduction_demonstrated": false
+  },
+  "governance": {
+    "signal_features_timestamped_on_signal_date": true,
+    "opening_gap_allowed_in_prior_close_model": false,
+    "same_open_counterfactual_rule_allowed": false,
+    "opening_gap_direct_entry_allowed": false,
+    "09_35_entry_authorized": false,
+    "entry_authorized": false
+  },
+  "interpretation": "The official opening gap is available only after the opening call-auction match, not at the prior close. Observing it and retaining a fill at that same auction price is a same-event execution error. A valid 09:30/09:35 model must use separately timestamped evidence and a new post-confirmation fill price.",
+  "limitations": [
+    "daily official open cannot describe 09:30-09:35 absorption, VWAP or reseal",
+    "opening-gap bands are descriptive and were not selected as trading thresholds",
+    "the frozen top-one evaluation contains only ten inspected sessions",
+    "there are currently no complete forward intraday confirmation sequences"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v199\\first_board_big_loss_veto_20260917_v1\\prequential_big_loss_predictions.csv": "37cb100301b6b91b3c3cc6db12905a8fe6d597e8fb53f591ed41f358a4758dcc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v196\\first_board_profit_ranker_20260917_v2\\daily_top1_no_replacement.csv": "c3294b4778d66644ffe6fb7f322eee3da4be6cc0e1808b8fb6f1342922872a87",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v10\\intraday_readiness.json": "205336989a36930eefd8fa74f20cf82cd0b65ad65c8a80e137c0df12deb3e394"
+  },
+  "artifact_hashes": {
+    "opening_causality_rows.csv": "72f8be3226dd8bce397c39ff2b7d584a10754137770f63753b92358702ea7165"
+  }
+}

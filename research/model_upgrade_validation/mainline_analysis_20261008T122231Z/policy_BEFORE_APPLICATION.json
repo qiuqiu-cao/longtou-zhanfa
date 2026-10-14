@@ -1,0 +1,119 @@
+{
+  "version": "mainline-facts-analysis-1",
+  "defined_at": "2026-10-08T12:32:47.463639+00:00",
+  "purpose": "Current short-term ladder mainline independent of stock-promotion classifier; no numerical retraining or raw-score changes",
+  "case_status": "OCT8_ALREADY_INSPECTED_CASE_FUNCTIONAL_REPLAY_NOT_BLIND_NOT_FORWARD",
+  "budget_minutes": 30,
+  "min_relay": 2,
+  "min_first": 1,
+  "min_ladder_prefix": 3,
+  "comparison": "Pareto dominance on relay_count, first_board_count and contiguous ladder_prefix_length; do not use weighted score, highest board alone, raw model score or next-day label",
+  "candidate_scope": "Only active narratives from bounded verified original author text, matched to current provider business/event groups; generic labels excluded; unmatched groups preserved as unreviewed within checked-source scope",
+  "positive_tokens": [
+    "走强",
+    "活跃",
+    "涨幅居前",
+    "持续上涨"
+  ],
+  "negative_tokens": [
+    "走弱",
+    "下挫",
+    "下跌",
+    "回落",
+    "未走强",
+    "并未",
+    "没有",
+    "不再"
+  ],
+  "excluded_names": [
+    "小盘股",
+    "中盘股",
+    "大盘股",
+    "微盘股",
+    "融资融券",
+    "沪股通",
+    "深股通",
+    "AB股",
+    "专精特新",
+    "题材股",
+    "趋势股",
+    "东方财富热股",
+    "富时罗素",
+    "标准普尔",
+    "长江三角",
+    "央国企改革",
+    "创投"
+  ],
+  "excluded_patterns": [
+    "昨日",
+    "最近",
+    "近期",
+    "百日",
+    "新高",
+    "高振幅",
+    "中报",
+    "年报",
+    "首亏",
+    "预亏",
+    "预盈",
+    "首板",
+    "多板",
+    "热股",
+    "股通",
+    "板块",
+    "成份",
+    "指数",
+    "社保",
+    "机构",
+    "QFII"
+  ],
+  "aliases": {
+    "航运": [
+      "航运",
+      "航运港口"
+    ],
+    "航运港口": [
+      "航运",
+      "航运港口"
+    ],
+    "并购重组": [
+      "重组",
+      "并购重组"
+    ]
+  },
+  "families": {
+    "battery": {
+      "canonical": "电池",
+      "match_active_keyword": "电池",
+      "source_lane": "PROVIDER_SEMANTIC_FAMILY",
+      "group_id": "battery",
+      "children": [
+        "固态电池",
+        "锂电池",
+        "钠离子电池"
+      ],
+      "exclusions": [
+        "仅储能",
+        "仅新能源"
+      ],
+      "definition": "Existing fixed category or provider industry name contains 电池, union unique stock codes; no text-reason membership or hardcoded stock roster"
+    }
+  },
+  "missing_policy": "Unknown category is not zero/nonmember; failed membership remains unknown; inadequate closing membership coverage or multiple incomparable eligible roots yields unknown/competition",
+  "allowed_stances": [
+    "ACTIVE",
+    "WEAK",
+    "BACKGROUND",
+    "CAUTION"
+  ],
+  "mainline_claim": "INFERRED_SHORT_TERM_MAINLINE_WITHIN_ARCHIVED_MAINBOARD_POOL",
+  "forbidden_claims": [
+    "official all-A certification",
+    "broad market consensus",
+    "verified fund causal attribution",
+    "stock promotion probability",
+    "next-day sustainable trend",
+    "calibrated accuracy gain"
+  ],
+  "new_next_day_model_challenges": 0
+}

@@ -1,0 +1,111 @@
+{
+  "version": "v139-absorption-filter-uncertainty-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "fixed_filter": "10:00 completed five-minute close >= cumulative VWAP",
+  "groups": {
+    "CONSECUTIVE_BOARD": {
+      "above_vwap": {
+        "feature_rows": 287,
+        "b2_known": 191,
+        "b2_opportunity_proxy_rate": 0.6655052264808362,
+        "b2_mean": -0.015848220943445165,
+        "b2_positive_rate": 0.38219895287958117,
+        "b2_large_loss_rate": 0.36649214659685864
+      },
+      "not_above_vwap": {
+        "feature_rows": 232,
+        "b2_known": 106,
+        "b2_opportunity_proxy_rate": 0.45689655172413796,
+        "b2_mean": -0.06289822986858858,
+        "b2_positive_rate": 0.29245283018867924,
+        "b2_large_loss_rate": 0.5
+      },
+      "above_minus_not_above": {
+        "b2_opportunity_proxy_rate": 0.20860867475669825,
+        "b2_mean": 0.04705000892514341,
+        "b2_positive_rate": 0.08974612269090193,
+        "b2_large_loss_rate": -0.13350785340314136
+      },
+      "cluster_bootstrap_95": {
+        "b2_opportunity_proxy_rate": [
+          0.10575484249878438,
+          0.3356358472271347
+        ],
+        "b2_mean": [
+          0.01196288763223306,
+          0.08321856540699082
+        ],
+        "b2_positive_rate": [
+          -0.018793925336253552,
+          0.19960924426849394
+        ],
+        "b2_large_loss_rate": [
+          -0.24552731119470597,
+          -0.012780127423559693
+        ]
+      },
+      "cluster_unit": "signal_date",
+      "sessions": 37
+    },
+    "FIRST_BOARD": {
+      "above_vwap": {
+        "feature_rows": 181,
+        "b2_known": 104,
+        "b2_opportunity_proxy_rate": 0.574585635359116,
+        "b2_mean": -0.01252388044412308,
+        "b2_positive_rate": 0.34615384615384615,
+        "b2_large_loss_rate": 0.4230769230769231
+      },
+      "not_above_vwap": {
+        "feature_rows": 267,
+        "b2_known": 51,
+        "b2_opportunity_proxy_rate": 0.19101123595505617,
+        "b2_mean": -0.05780119784332804,
+        "b2_positive_rate": 0.19607843137254902,
+        "b2_large_loss_rate": 0.49019607843137253
+      },
+      "above_minus_not_above": {
+        "b2_opportunity_proxy_rate": 0.3835743994040598,
+        "b2_mean": 0.04527731739920496,
+        "b2_positive_rate": 0.15007541478129713,
+        "b2_large_loss_rate": -0.06711915535444946
+      },
+      "cluster_bootstrap_95": {
+        "b2_opportunity_proxy_rate": [
+          0.3103639413279938,
+          0.4579261598488282
+        ],
+        "b2_mean": [
+          0.006721528615358162,
+          0.07948996163595919
+        ],
+        "b2_positive_rate": [
+          -0.006415441176470565,
+          0.28671629426611545
+        ],
+        "b2_large_loss_rate": [
+          -0.22051305130513052,
+          0.06569165766321969
+        ]
+      },
+      "cluster_unit": "signal_date",
+      "sessions": 18
+    }
+  },
+  "bootstrap_repetitions": 3000,
+  "actual_verified_fills": 0,
+  "complete_trade_exit_tested": false,
+  "positive_buy_bonus_authorized": false,
+  "research_veto_authorized": false,
+  "deployment_authorized": false,
+  "limitations": [
+    "B+2 is a close-mark proxy conditional on hypothetical price-path opportunity",
+    "first-board minute coverage is incomplete and selected",
+    "historical data were already inspected; this is not a new blind test"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v48\\jan_feb_full_pool_locked\\cohort.csv": "10f26057a6337afb30ce111d783ad018ea012de0efeaf19778a47695f8ac12ef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v138\\opening_absorption_reconciled_v3\\opening_absorption_features.csv": "090619ca761f451bf826099c8dd558ec103eb882951624eb959fac1510fa25f3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_outcomes_inventory_cutoff_20260831_v3\\outcomes_LABEL_ONLY.csv": "fcf810543af341ab2aab1cc08e86a1aa06f12da9108f72bbd7f0ec6f9d550f87"
+  }
+}

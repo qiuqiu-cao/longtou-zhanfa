@@ -1,0 +1,44 @@
+{
+  "version": "v17-public-live-preflight-1",
+  "status": "COLLECTION_AND_CONDITIONAL_PLAN_READY",
+  "trade_date": "2026-09-09",
+  "signal_date": "2026-09-08",
+  "prior_session": "2026-09-08",
+  "candidate_rows": 71,
+  "first_board_rows": 52,
+  "relay_rows": 19,
+  "collection_checks": {
+    "prior_session_bound": true,
+    "candidate_review_pool_exact": true,
+    "candidate_pool_nonempty": true,
+    "public_universe_file_nonempty": true,
+    "all_candidates_in_public_universe": true
+  },
+  "plan_checks": {
+    "conditional_primary_frozen": true,
+    "maximum_acceptable_price_frozen": true,
+    "position_frozen_100_share_lot": true,
+    "holding_plan_frozen": true,
+    "auction_conditions_frozen": true,
+    "opening_conditions_frozen": true,
+    "cancel_conditions_frozen": true
+  },
+  "missing_from_public_universe": [],
+  "primary_code": "600354",
+  "collection_ready": true,
+  "conditional_plan_ready": true,
+  "monitor_effect": "capture registered points and evaluate the frozen conditional plan",
+  "direct_entry_authorized": false,
+  "guarantee_of_premium": false,
+  "created_at": "2026-09-08T21:17:31.170394+08:00",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\current_full_pool_20260908_v52\\all_closing_and_failed_candidates.csv": "54ce31347cc02f026e36fae2c766b6f8034f7f16f8e7fd0a013b54dfd8f2bbec",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v18\\shadow_plan_20260909_dunhuang_v1.json": "e635dba007cbe9854ce479879414efa9bc5d168d4a00996c87600d6d45b7fd5d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\current-universe.csv": "a6941bc20a81c32eb1dbe60ab68178d48ebb53c17ddbbc5d248185740d4c95ee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "c2bda6fd6cd9aaf9a5ad9fe895b3cdf3b3e90c26f3d40857ddfe12758a6ee02a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_live_preflight_v17.py": "9c228b0b6e7e29615c92e165fe91696b5951c574bbeae56ab16167904e53239f"
+  },
+  "report_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v18\\preflight_20260909_dunhuang_v2\\report.md",
+  "report_sha256": "53a86c85713d9a876e9a1384f1ee0cc6d016166ea904ec13ed0f8079be2e93c4",
+  "monitor_command": "python public_live_monitor_v1.py --trade-date 2026-09-09 --candidates \"D:\\Documents\\ChatGPT\\龙头战法\\results\\current_full_pool_20260908_v52\\all_closing_and_failed_candidates.csv\" --review \"D:\\Documents\\ChatGPT\\龙头战法\\results\\v18\\shadow_plan_20260909_dunhuang_v1.json\""
+}

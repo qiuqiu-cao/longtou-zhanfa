@@ -1,0 +1,34 @@
+{
+  "version": "v193-current-abnormal-distance-authority-1",
+  "status": "CURRENT_AUTHORITY",
+  "signal_date": "2026-09-16",
+  "decision_asof": "2026-09-17T09:05:00+08:00",
+  "provider_distance_report": "results/v191/current_abnormal_distance_20260916_v3/report.json",
+  "official_reset_report": "results/v192/current_reset_chronology_20260916_v2/report.json",
+  "official_reset_report_sha256": "f03c17bd4aefa457198086362e40b36818c8793e3fbb4ee27558311bbe1345c0",
+  "partial_reset_overlay_report": "results/v193/current_reset_overlay_20260916_v1/report.json",
+  "partial_reset_overlay_report_sha256": "e9ac45191feecc8f3941542b219c9a26769a35c2dbff34081c3c42c2298afbd7",
+  "current_path_role_report": "results/v171/abnormal_path_role_20260916_v4/report.json",
+  "current_path_role_report_sha256": "a35bd22bcac5c61073bf3a41745b409232f5389a21a609ca67fc91a9b7636054",
+  "current_daily_review": "results/daily_review_20260916_v31/review.json",
+  "current_daily_review_sha256": "2191bbfb703e35119b41344d9fb773725618ffbe862c18c4ae988dab6486ef99",
+  "contract": {
+    "all_mainboard_closing_candidates_attached": true,
+    "provider_aligned_research_distance_coverage": "80/80",
+    "official_sse_reset_chronology_coverage": "32/32",
+    "official_szse_exchange_reset_chronology_coverage": "0/48",
+    "official_all_candidate_reset_chronology_coverage": "32/80",
+    "official_regulatory_distance_coverage": "0/80",
+    "corporate_action_reconciliation_complete": false,
+    "historical_price_limit_eligibility_complete": false,
+    "closest_distance_defines_path_potential": false,
+    "candidate_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "supersedes_for_current_observability": [
+    "results/v191/current_abnormal_distance_20260916_authority.json",
+    "results/v171/abnormal_path_role_20260916_v3/report.json",
+    "results/daily_review_20260916_v30/review.json"
+  ],
+  "interpretation": "The SSE reset blocker is now bounded and verified for every current SSE candidate. SZSE exchange-publication absence, corporate actions, security eligibility and official benchmark reconciliation remain incomplete, so official distance and path-potential roles remain unavailable and the daily decision stays CASH."
+}

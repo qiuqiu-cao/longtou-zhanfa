@@ -1,0 +1,205 @@
+{
+  "scope": "availability only, no candidate outcome or settlement",
+  "recorded_at": "2026-10-02T21:08:45.631669+00:00",
+  "requests": [
+    {
+      "code": "000678",
+      "kind": "tencent_daily",
+      "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+      "parameters": {
+        "param": "sz000678,day,2026-09-30,2026-09-30,2,"
+      },
+      "requested_date": "2026-09-30",
+      "requested_at": "2026-10-02T21:07:34.263352+00:00",
+      "attempt": 1,
+      "http_status": 200,
+      "available_at": "2026-10-02T21:07:34.606977+00:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\closing_source_availability_20261002T210734261773Z\\raw\\000678_tencent_daily.response",
+      "raw_sha256": "ce4d4531e4b4eb44699bf09cebdc78ff7ee70bbe061db695615543d8de16dc7f",
+      "raw_bytes": 1760,
+      "status": "RAW_JSON_RECEIVED",
+      "returned_daily_dates": [
+        "2026-09-30"
+      ],
+      "unadjusted_list_present": true,
+      "adjusted_list_keys": [],
+      "exact_requested_date_present": true,
+      "daily_prices_native": [
+        [
+          "2026-09-30",
+          "10.690",
+          "12.890",
+          "12.890",
+          "10.690",
+          "903178.000"
+        ]
+      ],
+      "price_unit": "CNY per share per current V293 parser; no scaling of native decimal strings",
+      "forward_adjustment_requested": false,
+      "explicit_limit_in_daily": false,
+      "quote_time_native": "20260930161445",
+      "positional_upper_candidate_native": "12.89",
+      "limit_semantics": "positional candidate only; requires independent explicit limit reconciliation"
+    },
+    {
+      "code": "000678",
+      "kind": "eastmoney_quote",
+      "url": "https://push2.eastmoney.com/api/qt/stock/get",
+      "parameters": {
+        "secid": "0.000678",
+        "fields": "f43,f44,f45,f46,f47,f48,f51,f52,f57,f58,f59,f60,f86",
+        "fltt": "2",
+        "invt": "2"
+      },
+      "requested_date": null,
+      "requested_at": "2026-10-02T21:07:34.263664+00:00",
+      "attempt": 1,
+      "http_status": 200,
+      "available_at": "2026-10-02T21:07:34.629062+00:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\closing_source_availability_20261002T210734261773Z\\raw\\000678_eastmoney_quote.response",
+      "raw_sha256": "e35d457ae5d20675e30e41f1b8a5d7a72d4af28454092927a38c05afa8cc15a0",
+      "raw_bytes": 256,
+      "status": "RAW_JSON_RECEIVED",
+      "returned_fields": {
+        "f43": 12.89,
+        "f44": 12.89,
+        "f45": 10.69,
+        "f46": 10.69,
+        "f47": 903178,
+        "f48": 1074985689.91,
+        "f51": 12.89,
+        "f52": 10.55,
+        "f57": "000678",
+        "f58": "襄阳轴承",
+        "f59": 2,
+        "f60": 11.72,
+        "f86": 1790753667
+      },
+      "explicit_field_candidates": [
+        "f51",
+        "f52"
+      ],
+      "price_unit": "fltt=2 requests decimal price; field semantics need independent documentation and corroboration",
+      "unadjusted_flag": "quote, not adjusted historical series",
+      "returned_quote_timestamp_native": 1790753667,
+      "endpoint_date_selectable": false,
+      "requested_historical_date_not_supported": true
+    },
+    {
+      "code": "600825",
+      "kind": "tencent_daily",
+      "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+      "parameters": {
+        "param": "sh600825,day,2026-09-30,2026-09-30,2,"
+      },
+      "requested_date": "2026-09-30",
+      "requested_at": "2026-10-02T21:07:34.263865+00:00",
+      "attempt": 1,
+      "http_status": 200,
+      "available_at": "2026-10-02T21:07:34.609202+00:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\closing_source_availability_20261002T210734261773Z\\raw\\600825_tencent_daily.response",
+      "raw_sha256": "2c85e0de61905bee799dc4587f9581937f203fc6056036f14ff7d19b807f8d82",
+      "raw_bytes": 1759,
+      "status": "RAW_JSON_RECEIVED",
+      "returned_daily_dates": [
+        "2026-09-30"
+      ],
+      "unadjusted_list_present": true,
+      "adjusted_list_keys": [],
+      "exact_requested_date_present": true,
+      "daily_prices_native": [
+        [
+          "2026-09-30",
+          "10.350",
+          "10.350",
+          "10.350",
+          "10.350",
+          "139855.000"
+        ]
+      ],
+      "price_unit": "CNY per share per current V293 parser; no scaling of native decimal strings",
+      "forward_adjustment_requested": false,
+      "explicit_limit_in_daily": false,
+      "quote_time_native": "20260930161440",
+      "positional_upper_candidate_native": "10.35",
+      "limit_semantics": "positional candidate only; requires independent explicit limit reconciliation"
+    },
+    {
+      "code": "600825",
+      "kind": "eastmoney_quote",
+      "url": "https://push2.eastmoney.com/api/qt/stock/get",
+      "parameters": {
+        "secid": "1.600825",
+        "fields": "f43,f44,f45,f46,f47,f48,f51,f52,f57,f58,f59,f60,f86",
+        "fltt": "2",
+        "invt": "2"
+      },
+      "requested_date": null,
+      "requested_at": "2026-10-02T21:07:34.264252+00:00",
+      "attempt": 1,
+      "http_status": 200,
+      "available_at": "2026-10-02T21:07:34.619125+00:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\closing_source_availability_20261002T210734261773Z\\raw\\600825_eastmoney_quote.response",
+      "raw_sha256": "f36e387b6b706206f47115c09dc29f855855367e97811ee63b0ca701891e89b2",
+      "raw_bytes": 252,
+      "status": "RAW_JSON_RECEIVED",
+      "returned_fields": {
+        "f43": 10.35,
+        "f44": 10.35,
+        "f45": 10.35,
+        "f46": 10.35,
+        "f47": 139855,
+        "f48": 144750256.0,
+        "f51": 10.35,
+        "f52": 8.47,
+        "f57": "600825",
+        "f58": "新华传媒",
+        "f59": 2,
+        "f60": 9.41,
+        "f86": 1790755893
+      },
+      "explicit_field_candidates": [
+        "f51",
+        "f52"
+      ],
+      "price_unit": "fltt=2 requests decimal price; field semantics need independent documentation and corroboration",
+      "unadjusted_flag": "quote, not adjusted historical series",
+      "returned_quote_timestamp_native": 1790755893,
+      "endpoint_date_selectable": false,
+      "requested_historical_date_not_supported": true
+    },
+    {
+      "kind": "author_api_field_documentation",
+      "url": "https://api.github.com/repos/wonchermaine960/eastmoney-cli/contents/docs/API.md?ref=main",
+      "requested_at": "2026-10-02T21:08:44.970214+00:00",
+      "attempt": 1,
+      "http_status": 200,
+      "available_at": "2026-10-02T21:08:45.630991+00:00",
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\closing_source_availability_20261002T210734261773Z\\raw\\eastmoney_cli_API_doc_api.response",
+      "raw_sha256": "39a6c8f4317e9c67ae1c53c0a9f0345c4eff2aa1b58457aa29d4db3250ceeb7a",
+      "status": "AUTHOR_DOCUMENTATION_READABLE",
+      "decoded_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\closing_source_availability_20261002T210734261773Z\\raw\\eastmoney_cli_API_doc.md",
+      "decoded_sha256": "4864f17ed3bab22332f53dd0143ea6cc7e8413e6a3820120409fcc446dc7abac",
+      "git_blob_sha": "9b95b1ef9f58fbd1396384588ade10a83278c6ec",
+      "author_repository": "wonchermaine960/eastmoney-cli",
+      "provider_official_documentation": false,
+      "mapping_lines": [
+        "通用参数：`fltt=2`（返回小数而非放大整数）、`invt=2`、`ut=fa5fd1943c7b386f172d6893dbfba10b`（可选）。",
+        "4. **分时** `GET /api/qt/stock/trends2/get?secid=..&fields1=f1,f2,f3,f8&fields2=f51,f53,f56,f58&ndays=1&iscr=0`",
+        "5. **个股资金流(日)** `GET /api/qt/stock/fflow/kline/get?secid=..&fields1=f1,f2,f3,f7&fields2=f51,f52,f53,f54,f55,f56&klt=101&lmt=N`",
+        "6. **K线（仅 push2his）** `GET /api/qt/stock/kline/get?secid=..&fields1=f1,f2,f3&fields2=f51,...,f61&klt=101&fqt=1&end=20500101&lmt=N`",
+        "   - fields2: f51日期 f52开 f53收 f54高 f55低 f56量(手) f57额 f58振幅% f59涨跌幅% f60涨跌额 f61换手%",
+        "7. **北向/南向资金分时净流入** `GET /api/qt/kamtbs.rtmin/get?fields1=f1,f2,f3,f4&fields2=f51,f52,f54,f56&ut=b2884a393a59ad64002292a3e90d46a5`（专用 ut，与 QT_UT 不同）",
+        "### 常用字段（ulist/clist，fltt=2）",
+        "f43最新 f44最高 f45最低 f46今开 f47量(手) f48额 f50量比 f51涨停价 f52跌停价 f57代码 f58名称"
+      ]
+    }
+  ],
+  "code_denominator": [
+    "000678",
+    "600825"
+  ],
+  "no_outcomes_created": true,
+  "no_original_files_modified": true,
+  "retry_count": 0
+}

@@ -1,0 +1,32 @@
+{
+  "version": "v139-absorption-forward-shadow-1",
+  "status": "FROZEN_RESEARCH_ONLY",
+  "effective_for_new_records_after_freeze": true,
+  "observation_time": "10:00 Asia/Shanghai",
+  "metric": "last completed public one-minute close / cumulative session VWAP - 1",
+  "pass_rule": ">= 0",
+  "veto_rule": "< 0",
+  "missing_rule": "DATA_LIMITED",
+  "scope": "all frozen close-review focus candidates, first and consecutive boards reported separately",
+  "live_decision_effect": "NONE_SHADOW_ONLY",
+  "entry_authorized": false,
+  "automatic_order": false,
+  "retuning_before_gate": false,
+  "minimum_forward_gate": {
+    "settled_candidate_records": 100,
+    "each_board_group": 30,
+    "required_metrics": [
+      "complete-trade net win rate",
+      "mean net return",
+      "large-loss rate",
+      "profit factor",
+      "account maximum drawdown"
+    ],
+    "actual_or_conservative_fill_required": true
+  },
+  "limitations": [
+    "public one-minute OHLCV is not tick or Level-2 evidence",
+    "VWAP pass is not a buy signal",
+    "historical association is not causal proof"
+  ]
+}

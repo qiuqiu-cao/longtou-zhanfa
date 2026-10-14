@@ -1,0 +1,113 @@
+{
+  "recorded_at": "2026-10-07T09:56:10.914807+00:00",
+  "human_request": "按照顺序依次补充；现有基础已经够了；停止题材时点专项采集",
+  "target": "next official session previous-limit-pool return median >0; finite <=0 is nonpositive; missing remains unknown",
+  "input_channels": [
+    "sh_a_return_pct",
+    "sz_a_return_pct",
+    "limit_count",
+    "down_limit_count",
+    "failed_rate",
+    "max_board",
+    "relay_promotion_rate",
+    "yesterday_premium"
+  ],
+  "preprocessing": "training-only median+missing indicators+StandardScaler; all-empty training columns dropped and recorded; at least one known original level per feature row",
+  "training": "exact official prior signal feature/next target pair; target end-date<=current signal; last120 or252 official end-dates as specified; min60 finite target pairs",
+  "LR": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "random_state": 20261007,
+    "threshold": "raw positive class score >0.5; tie nonpositive"
+  },
+  "one_class_LR": "explicit Laplace TRAIN_PRIOR (positive_count+1)/(n+2), no pretend fitted classifier; not calibrated; retain ONE_CLASS_TRAIN_PRIOR status",
+  "nonconvergence": "unknown; never substitute failed fitting with a successful forecast",
+  "KNN": {
+    "neighbors": 21,
+    "weights": "uniform",
+    "distance": "squared Euclidean on same training-only transformed8levels plus missing indicators",
+    "distance_ties": "ascending training target date, deterministic",
+    "cutoff": "positive neighbor fraction >0.5"
+  },
+  "current_all_missing": "unknown for all challengers; every original date retained",
+  "parameters_selected_from_new_results": false,
+  "chronology": [
+    "direct direction classification and analog days",
+    "false-positive cost",
+    "window stability"
+  ],
+  "periods": {
+    "DEVELOPMENT_DIAGNOSTIC": [
+      "2026-01-01",
+      "2026-02-28"
+    ],
+    "EVALUATION_DIAGNOSTIC": [
+      "2026-03-01",
+      "2026-09-30"
+    ],
+    "ALL_DIAGNOSTIC": [
+      "2026-01-01",
+      "2026-09-30"
+    ]
+  },
+  "signal_dates": [
+    "2026-01-01",
+    "2026-09-30"
+  ],
+  "metrics": "Accuracy,Balanced Accuracy,positive Precision/complete Recall,F1,nonpositiveRecall,FPR,full scoring coverage,positive call fraction; all-positive/nonpositive baselines; raw-score Brier and logloss only as uncalibrated diagnostics",
+  "probability_boundary": "internal raw class scores and neighbor fractions are not calibrated market probabilities; none written to production plans or watch-card scores",
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20261007,
+    "block_official_sessions": 5,
+    "sequence_primary_challenges": 4,
+    "tails": [
+      0.00625,
+      0.99375
+    ],
+    "missing_dates": "retain full official grid before circular block resampling"
+  },
+  "history_previously_viewed": true,
+  "pure_blind": false,
+  "historical_PIT_certified": false,
+  "provider_scope_exchange_certified": false,
+  "no_theme_or_new_collection": true,
+  "new_forward_samples": 0,
+  "production_upgrade_allowed": false,
+  "fixed_stages_cannot_choose_previous_winner": true,
+  "budget_minutes_per_stage": 30,
+  "ending_condition_per_stage": "one specified comparison and related checks/report; stop without changing parameters, or30min at recoverable node",
+  "expected_improvement": "test better same-target direction correctness/weak-feedback recognition; no promised percent",
+  "input_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\observations_DIAGNOSTIC.csv": "2d99fe941f1e06f3022041a1438752c607c94a26931bfb80596ff131eba77e2c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\observation_status.csv": "14e3dc982660334c9d6401c9b31b8ccc8271d566be0330de6bf56d484a61ee85",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\report.json": "1340cb12653c742fb6f43afa5c3d0b95ef980a1c94b5475b6d3f1234cca89015",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v300\\market_intervals_20261003_v1\\protocol.json": "3357e38d856cae1ca03b95d2358b7397125721823833b1d48dc46e56edd7a171",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\market_environment_validation\\conditional_levels_20261007T090923Z\\predictions_NO_LABELS_NOT_FORWARD.csv": "c60f6818c224dc9b620f7a90473b9a090d2bc29d827ef017600d29d4cd0865fb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\market_environment_validation\\conditional_levels_20261007T090923Z\\report.json": "61929e59a734faa0baaedb21ea81497ff25bca1cbf3a992cfca81b8457737af9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\market_environment_regression.py": "17cfe54a525001983b8b0c7a25380e3d594f58efb59b53c023399aaf6f6d8219"
+  },
+  "protected_sha256": {
+    "data/v271/expectation_registry/2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "hypothesis_bound_daily_runner_v298.py": "46c82eff2a93707f85b8ae0efd7ca471feec393fab9120d8b5dab89502f025db",
+    "research_indicator_pipeline.py": "aeda6ab57ad62edfda8d2ceaf502ebdc987410e4bfca4844f91b49c567614db1",
+    "research/theme_same_height/protocol.json": "47857a79776cd6f29027a0b2854409e30d06a1c71588a549dd70b0d9a99be68b",
+    "research/theme_same_height/comparison_specification.json": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066",
+    "market_interval_research_v300.py": "d628a18fea9277efe0db31d9ed1a1f905a3ca4ff7b9ba4b27462fd9295d27ea5"
+  },
+  "stage": 1,
+  "id": "DIRECTION_AND_ANALOG_FIXED",
+  "hypothesis": "Direct direction objective or historical local analogs can improve the existing Ridge120 sign forecast on identical dates",
+  "baseline": "RIDGE120_SIGN_SAVED; original RIDGE_LEVEL metric yesterday_premium",
+  "arms": [
+    "LR120",
+    "KNN120"
+  ],
+  "primary_metric": "same-date Accuracy difference challenger minus baseline",
+  "gate": "evaluation>=60; Accuracy difference family-adjusted lower>0; Balanced Accuracy and nonpositiveRecall not lower; scoring coverage not lower; development Accuracy not lower",
+  "sequence_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\market_direction_validation\\sequence_20261007T095212Z\\sequence_BEFORE_RESULTS.json",
+  "sequence_sha256": "301fab5f6947a8ad28557582fc26c3cbd240ad12340beb246496f2ede8a019cf",
+  "phase": "PREDECLARED_BEFORE_ANY_NEW_RESULT"
+}

@@ -1,0 +1,123 @@
+{
+  "version": "v259-frozen-v258-forward-check-1",
+  "status": "FORWARD_CHECK_DIAGNOSTIC_ONLY",
+  "source_audit": {
+    "source_rows": 9080,
+    "source_dates": 669,
+    "source_range": [
+      "2023-11-29",
+      "2026-09-01"
+    ],
+    "theme_available_rows": 0,
+    "complete_label_dates": 669
+  },
+  "target_date": "2026-09-01",
+  "train_rows": 7111,
+  "max_training_label_date": "2025-12-31",
+  "target_date_complete": true,
+  "selections": {
+    "two_board:non_one_price": {
+      "candidate_rows": 6,
+      "state_divergence": 0,
+      "baseline": [
+        {
+          "date": "2026-09-01",
+          "code": "001330",
+          "boards": 2,
+          "promoted_next_day": 0.0
+        }
+      ],
+      "model": [
+        {
+          "date": "2026-09-01",
+          "code": "603721",
+          "boards": 2,
+          "promoted_next_day": 0.0,
+          "score_identity_emotion_price_volume": 0.5865761785685493
+        }
+      ],
+      "regime_gated": [
+        {
+          "date": "2026-09-01",
+          "code": "603721",
+          "boards": 2,
+          "promoted_next_day": 0.0,
+          "score_identity_emotion_price_volume": 0.5865761785685493
+        }
+      ]
+    },
+    "three_plus:non_one_price": {
+      "candidate_rows": 8,
+      "state_divergence": 0,
+      "baseline": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": 0.0
+        }
+      ],
+      "model": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": 0.0,
+          "score_identity_emotion_price_volume": 0.7376213190600756
+        }
+      ],
+      "regime_gated": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": 0.0,
+          "score_identity_emotion_price_volume": 0.7376213190600756
+        }
+      ]
+    },
+    "all_boards:non_one_price": {
+      "candidate_rows": 14,
+      "state_divergence": 0,
+      "baseline": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": 0.0
+        }
+      ],
+      "model": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": 0.0,
+          "score_identity_emotion_price_volume": 0.7376213190600756
+        }
+      ],
+      "regime_gated": [
+        {
+          "date": "2026-09-01",
+          "code": "002084",
+          "boards": 7,
+          "promoted_next_day": 0.0,
+          "score_identity_emotion_price_volume": 0.7376213190600756
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "frozen_rule": "state_divergence=1 -> baseline; otherwise V258 full model",
+    "actual_fill_count": 0,
+    "theme_and_intraday_missing": true,
+    "sample_warning": "one target date; not evidence of production win rate",
+    "entry_authorized": false
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_20260906\\leader_candidates.csv": "5a5e9986bf5b6394eb1a1d582a42fffddf17e091e431e43e7e07237226985b50"
+  },
+  "artifact_hashes": {
+    "target_predictions_LABEL_ONLY.csv": "b5910535f1f14f0670ca4873c6d8c10228f6a3e4eb597b7b8eb80e50a1972235"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "version": "v174-daily-role-contract-authority-1",
+  "status": "CURRENT_AUTHORITY",
+  "signal_date": "2026-09-16",
+  "asof": "2026-09-17T04:35:00+08:00",
+  "daily_review": "results/daily_review_20260916_v15/review.json",
+  "daily_review_sha256": "1ad6e5616bda835abfbf7fc9c87ae1514e754de125130ac947602412ef5dbd6e",
+  "daily_markdown": "results/daily_review_20260916_v15/review.md",
+  "daily_markdown_sha256": "a28579e1707c1303c10521e927b2862dba94d7f5e83fbe6b602aa85fc44d0131",
+  "implementation": "current_daily_review.py",
+  "implementation_sha256": "c18569091369acd917f1ad147cef6a5f9dd57ab1263bc5c455f150e745c989bc",
+  "test_file": "tests/test_current_daily_review.py",
+  "test_file_sha256": "f10beacbfc02d5f8879ce0037b1aee51e5461d7693f463e365bf10c116c67fd3",
+  "contract": {
+    "emotion_anchor_separate": true,
+    "current_market_core_separate": true,
+    "highest_leader_potential_separate": true,
+    "hundred_percent_path_potential_separate": true,
+    "current_best_buy_separate": true,
+    "high_low_supplement_separate": true,
+    "first_board_primary_or_none": true,
+    "relay_primary_or_none": true,
+    "comprehensive_primary_or_cash": true,
+    "highest_board_cannot_auto_fill_market_core": true,
+    "highest_board_cannot_auto_fill_group_primary": true,
+    "maximum_one_comprehensive_primary": true,
+    "entry_authorized": false
+  },
+  "current_replay": {
+    "closing_candidate_count": 80,
+    "first_board_count": 69,
+    "relay_count": 11,
+    "emotion_anchor_codes": ["000993"],
+    "current_market_core": null,
+    "first_board_primary_candidate": null,
+    "relay_primary_candidate": null,
+    "comprehensive_primary_candidate": null,
+    "current_best_buy_opportunity": null,
+    "decision": "CASH"
+  },
+  "reason": "No validated threshold, calibrated candidate probabilities, complete point-in-time theme/competition evidence, or next-session auction/opening evidence exists. The report must not force a stock into any tradable role."
+}

@@ -1,0 +1,1956 @@
+{
+  "version": "v274-monthly-prequential-refit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "goal_verified": false,
+  "market": {
+    "2025H2": {
+      "all": {
+        "n": 126,
+        "correct": 81,
+        "accuracy": 0.6428571428571429,
+        "wilson95": [
+          0.556104768935823,
+          0.7211564412121205
+        ],
+        "balanced_accuracy": 0.5587606837606838,
+        "macro_f1": 0.5351526965562053,
+        "by_class": {
+          "CONTINUE": {
+            "support": 26,
+            "called": 4,
+            "recall": 0.11538461538461539
+          },
+          "IMPROVE": {
+            "support": 48,
+            "called": 60,
+            "recall": 0.7916666666666666
+          },
+          "WORSEN": {
+            "support": 52,
+            "called": 62,
+            "recall": 0.7692307692307693
+          }
+        },
+        "confidence_ece": 0.0918434890070775
+      },
+      "unresolved_dates": 0
+    },
+    "2026YTD": {
+      "all": {
+        "n": 159,
+        "correct": 99,
+        "accuracy": 0.6226415094339622,
+        "wilson95": [
+          0.545242696735383,
+          0.6942540523261884
+        ],
+        "balanced_accuracy": 0.5211693548387096,
+        "macro_f1": 0.492448995823574,
+        "by_class": {
+          "CONTINUE": {
+            "support": 31,
+            "called": 13,
+            "recall": 0.03225806451612903
+          },
+          "IMPROVE": {
+            "support": 64,
+            "called": 83,
+            "recall": 0.8125
+          },
+          "WORSEN": {
+            "support": 64,
+            "called": 63,
+            "recall": 0.71875
+          }
+        },
+        "confidence_ece": 0.09018003263961903
+      },
+      "unresolved_dates": 1
+    },
+    "combined": {
+      "all": {
+        "n": 285,
+        "correct": 180,
+        "accuracy": 0.631578947368421,
+        "wilson95": [
+          0.574172091530818,
+          0.6854859239985877
+        ],
+        "balanced_accuracy": 0.5383753925042492,
+        "macro_f1": 0.5092278023691253,
+        "by_class": {
+          "CONTINUE": {
+            "support": 57,
+            "called": 17,
+            "recall": 0.07017543859649122
+          },
+          "IMPROVE": {
+            "support": 112,
+            "called": 143,
+            "recall": 0.8035714285714286
+          },
+          "WORSEN": {
+            "support": 116,
+            "called": 125,
+            "recall": 0.7413793103448276
+          }
+        },
+        "confidence_ece": 0.07960453183708373
+      },
+      "unresolved_dates": 1
+    }
+  },
+  "relay": {
+    "2025H2": {
+      "all_candidate_binary": {
+        "n": 1584,
+        "correct": 1031,
+        "accuracy": 0.6508838383838383,
+        "wilson95": [
+          0.6270692904174142,
+          0.6739683209540732
+        ],
+        "balanced_accuracy": 0.6101164052481011,
+        "macro_f1": 0.605166472469445,
+        "by_class": {
+          "0": {
+            "support": 930,
+            "called": 1193,
+            "recall": 0.8440860215053764
+          },
+          "1": {
+            "support": 654,
+            "called": 391,
+            "recall": 0.3761467889908257
+          }
+        },
+        "brier": 0.22170869747551883,
+        "auc": 0.6657147084936371,
+        "confidence_ece": 0.008495688382852992
+      },
+      "unresolved_dates": 0,
+      "all_identity": {
+        "n": 126,
+        "successes": 88,
+        "accuracy": 0.6984126984126984,
+        "wilson95": [
+          0.6133833019085098,
+          0.7717017121858558
+        ]
+      },
+      "non_one_word": {
+        "n": 126,
+        "successes": 71,
+        "accuracy": 0.5634920634920635,
+        "wilson95": [
+          0.47628657044780054,
+          0.6469406340623964
+        ]
+      },
+      "two_board": {
+        "n": 125,
+        "successes": 60,
+        "accuracy": 0.48,
+        "wilson95": [
+          0.3943276701621969,
+          0.5668649455861363
+        ]
+      },
+      "three_plus": {
+        "n": 120,
+        "successes": 61,
+        "accuracy": 0.5083333333333333,
+        "wilson95": [
+          0.4200253978366605,
+          0.5961242827230276
+        ]
+      }
+    },
+    "2026YTD": {
+      "all_candidate_binary": {
+        "n": 1923,
+        "correct": 1399,
+        "accuracy": 0.7275091003640146,
+        "wilson95": [
+          0.7071701717383074,
+          0.7469408792744396
+        ],
+        "balanced_accuracy": 0.6345075072137722,
+        "macro_f1": 0.6417171090807724,
+        "by_class": {
+          "0": {
+            "support": 1288,
+            "called": 1576,
+            "recall": 0.9083850931677019
+          },
+          "1": {
+            "support": 635,
+            "called": 347,
+            "recall": 0.3606299212598425
+          }
+        },
+        "brier": 0.1954740011150569,
+        "auc": 0.6924298185552893,
+        "confidence_ece": 0.05433755403288389
+      },
+      "unresolved_dates": 1,
+      "all_identity": {
+        "n": 159,
+        "successes": 113,
+        "accuracy": 0.710691823899371,
+        "wilson95": [
+          0.6358999717910752,
+          0.7755431612121373
+        ]
+      },
+      "non_one_word": {
+        "n": 159,
+        "successes": 67,
+        "accuracy": 0.42138364779874216,
+        "wilson95": [
+          0.3473752933972585,
+          0.4991011495119907
+        ]
+      },
+      "two_board": {
+        "n": 158,
+        "successes": 61,
+        "accuracy": 0.3860759493670886,
+        "wilson95": [
+          0.31372516201843204,
+          0.4638349251043319
+        ]
+      },
+      "three_plus": {
+        "n": 154,
+        "successes": 63,
+        "accuracy": 0.4090909090909091,
+        "wilson95": [
+          0.3345693052970732,
+          0.4880375040342596
+        ]
+      }
+    },
+    "combined": {
+      "all_candidate_binary": {
+        "n": 3507,
+        "correct": 2430,
+        "accuracy": 0.6928999144568007,
+        "wilson95": [
+          0.6774286833998998,
+          0.7079490147586714
+        ],
+        "balanced_accuracy": 0.6249637111131787,
+        "macro_f1": 0.626355707869568,
+        "by_class": {
+          "0": {
+            "support": 2218,
+            "called": 2769,
+            "recall": 0.8814247069431921
+          },
+          "1": {
+            "support": 1289,
+            "called": 738,
+            "recall": 0.36850271528316525
+          }
+        },
+        "brier": 0.20732337637452986,
+        "auc": 0.6845757715454553,
+        "confidence_ece": 0.02595778329249975
+      },
+      "unresolved_dates": 1,
+      "all_identity": {
+        "n": 285,
+        "successes": 201,
+        "accuracy": 0.7052631578947368,
+        "wilson95": [
+          0.6498835745154942,
+          0.7551829297103788
+        ]
+      },
+      "non_one_word": {
+        "n": 285,
+        "successes": 138,
+        "accuracy": 0.4842105263157895,
+        "wilson95": [
+          0.4267870767887569,
+          0.5420539613477146
+        ]
+      },
+      "two_board": {
+        "n": 283,
+        "successes": 121,
+        "accuracy": 0.4275618374558304,
+        "wilson95": [
+          0.37127170101748536,
+          0.48579219703767934
+        ]
+      },
+      "three_plus": {
+        "n": 274,
+        "successes": 124,
+        "accuracy": 0.45255474452554745,
+        "wilson95": [
+          0.3946801566970611,
+          0.5117412963490117
+        ]
+      }
+    }
+  },
+  "selection_logs": {
+    "market": [
+      {
+        "month": "2025-07",
+        "chosen": {
+          "kind": "forest",
+          "window": 252,
+          "validation_accuracy": 0.6666666666666666,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6507936507936508,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-03-25",
+        "validation_start": "2025-03-26",
+        "max_validation_label_date": "2025-06-30",
+        "refit_max_label_date": "2025-06-30",
+        "refit_dates": 252,
+        "test_dates": 23,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-08",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.6507936507936508,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6507936507936508,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-04-28",
+        "validation_start": "2025-04-29",
+        "max_validation_label_date": "2025-07-31",
+        "refit_max_label_date": "2025-07-31",
+        "refit_dates": 404,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-09",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.6825396825396826,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-05-30",
+        "validation_start": "2025-06-03",
+        "max_validation_label_date": "2025-08-29",
+        "refit_max_label_date": "2025-08-29",
+        "refit_dates": 425,
+        "test_dates": 22,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-10",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.5714285714285714,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.49206349206349204,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-07-02",
+        "validation_start": "2025-07-03",
+        "max_validation_label_date": "2025-09-30",
+        "refit_max_label_date": "2025-09-30",
+        "refit_dates": 252,
+        "test_dates": 17,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-11",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.5238095238095238,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.42857142857142855,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.5238095238095238,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-07-25",
+        "validation_start": "2025-07-28",
+        "max_validation_label_date": "2025-10-31",
+        "refit_max_label_date": "2025-10-31",
+        "refit_dates": 464,
+        "test_dates": 20,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-12",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.5396825396825397,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.38095238095238093,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5238095238095238,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-08-22",
+        "validation_start": "2025-08-25",
+        "max_validation_label_date": "2025-11-28",
+        "refit_max_label_date": "2025-11-28",
+        "refit_dates": 484,
+        "test_dates": 23,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-01",
+        "chosen": {
+          "kind": "boosting",
+          "window": null,
+          "validation_accuracy": 0.6666666666666666,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-09-24",
+        "validation_start": "2025-09-25",
+        "max_validation_label_date": "2025-12-31",
+        "refit_max_label_date": "2025-12-31",
+        "refit_dates": 507,
+        "test_dates": 20,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-02",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.6666666666666666,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6507936507936508,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-10-30",
+        "validation_start": "2025-10-31",
+        "max_validation_label_date": "2026-01-30",
+        "refit_max_label_date": "2026-01-30",
+        "refit_dates": 527,
+        "test_dates": 14,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-03",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.746031746031746,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.746031746031746,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-11-19",
+        "validation_start": "2025-11-20",
+        "max_validation_label_date": "2026-02-27",
+        "refit_max_label_date": "2026-02-27",
+        "refit_dates": 541,
+        "test_dates": 22,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-04",
+        "chosen": {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.7301587301587301,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.7301587301587301,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.7142857142857143,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.7301587301587301,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-12-19",
+        "validation_start": "2025-12-22",
+        "max_validation_label_date": "2026-03-31",
+        "refit_max_label_date": "2026-03-31",
+        "refit_dates": 563,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-05",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.6984126984126984,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6984126984126984,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-01-21",
+        "validation_start": "2026-01-22",
+        "max_validation_label_date": "2026-04-30",
+        "refit_max_label_date": "2026-04-30",
+        "refit_dates": 584,
+        "test_dates": 18,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-06",
+        "chosen": {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.7301587301587301,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.7301587301587301,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-02-24",
+        "validation_start": "2026-02-25",
+        "max_validation_label_date": "2026-05-29",
+        "refit_max_label_date": "2026-05-29",
+        "refit_dates": 602,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-07",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.6984126984126984,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.6825396825396826,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6984126984126984,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-03-25",
+        "validation_start": "2026-03-26",
+        "max_validation_label_date": "2026-06-30",
+        "refit_max_label_date": "2026-06-30",
+        "refit_dates": 623,
+        "test_dates": 23,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-08",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.6666666666666666,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6666666666666666,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6349206349206349,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-04-28",
+        "validation_start": "2026-04-29",
+        "max_validation_label_date": "2026-07-31",
+        "refit_max_label_date": "2026-07-31",
+        "refit_dates": 252,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      }
+    ],
+    "relay": [
+      {
+        "month": "2025-07",
+        "chosen": {
+          "kind": "forest",
+          "window": 252,
+          "validation_accuracy": 0.5238095238095238,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5238095238095238,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-03-25",
+        "validation_start": "2025-03-26",
+        "max_validation_label_date": "2025-06-30",
+        "refit_max_label_date": "2025-06-30",
+        "refit_dates": 252,
+        "test_dates": 23,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-08",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.5238095238095238,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5238095238095238,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.49206349206349204,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-04-28",
+        "validation_start": "2025-04-29",
+        "max_validation_label_date": "2025-07-31",
+        "refit_max_label_date": "2025-07-31",
+        "refit_dates": 252,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-09",
+        "chosen": {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.5079365079365079,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.42857142857142855,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-05-30",
+        "validation_start": "2025-06-03",
+        "max_validation_label_date": "2025-08-29",
+        "refit_max_label_date": "2025-08-29",
+        "refit_dates": 425,
+        "test_dates": 22,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-10",
+        "chosen": {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.5873015873015873,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5238095238095238,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5238095238095238,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-07-02",
+        "validation_start": "2025-07-03",
+        "max_validation_label_date": "2025-09-30",
+        "refit_max_label_date": "2025-09-30",
+        "refit_dates": 447,
+        "test_dates": 17,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-11",
+        "chosen": {
+          "kind": "logistic",
+          "window": null,
+          "validation_accuracy": 0.5714285714285714,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.49206349206349204,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-07-25",
+        "validation_start": "2025-07-28",
+        "max_validation_label_date": "2025-10-31",
+        "refit_max_label_date": "2025-10-31",
+        "refit_dates": 464,
+        "test_dates": 20,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2025-12",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.6190476190476191,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.5714285714285714,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-08-22",
+        "validation_start": "2025-08-25",
+        "max_validation_label_date": "2025-11-28",
+        "refit_max_label_date": "2025-11-28",
+        "refit_dates": 252,
+        "test_dates": 23,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-01",
+        "chosen": {
+          "kind": "logistic",
+          "window": 252,
+          "validation_accuracy": 0.6190476190476191,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.6190476190476191,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5873015873015873,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.6031746031746031,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-09-24",
+        "validation_start": "2025-09-25",
+        "max_validation_label_date": "2025-12-31",
+        "refit_max_label_date": "2025-12-31",
+        "refit_dates": 252,
+        "test_dates": 20,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-02",
+        "chosen": {
+          "kind": "logistic",
+          "window": 252,
+          "validation_accuracy": 0.5555555555555556,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5555555555555556,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.42857142857142855,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.5396825396825397,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.49206349206349204,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-10-30",
+        "validation_start": "2025-10-31",
+        "max_validation_label_date": "2026-01-30",
+        "refit_max_label_date": "2026-01-30",
+        "refit_dates": 252,
+        "test_dates": 14,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-03",
+        "chosen": {
+          "kind": "logistic",
+          "window": 252,
+          "validation_accuracy": 0.5079365079365079,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.4126984126984127,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.42857142857142855,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-11-19",
+        "validation_start": "2025-11-20",
+        "max_validation_label_date": "2026-02-27",
+        "refit_max_label_date": "2026-02-27",
+        "refit_dates": 252,
+        "test_dates": 22,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-04",
+        "chosen": {
+          "kind": "forest",
+          "window": 252,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.38095238095238093,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.4126984126984127,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2025-12-19",
+        "validation_start": "2025-12-22",
+        "max_validation_label_date": "2026-03-31",
+        "refit_max_label_date": "2026-03-31",
+        "refit_dates": 252,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-05",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.5079365079365079,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.42857142857142855,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.5079365079365079,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.49206349206349204,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-01-21",
+        "validation_start": "2026-01-22",
+        "max_validation_label_date": "2026-04-30",
+        "refit_max_label_date": "2026-04-30",
+        "refit_dates": 252,
+        "test_dates": 18,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-06",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.3968253968253968,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.4603174603174603,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.4444444444444444,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.47619047619047616,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-02-24",
+        "validation_start": "2026-02-25",
+        "max_validation_label_date": "2026-05-29",
+        "refit_max_label_date": "2026-05-29",
+        "refit_dates": 252,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-07",
+        "chosen": {
+          "kind": "boosting",
+          "window": 252,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.3492063492063492,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.36507936507936506,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.4126984126984127,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.3492063492063492,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.36507936507936506,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.4126984126984127,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-03-25",
+        "validation_start": "2026-03-26",
+        "max_validation_label_date": "2026-06-30",
+        "refit_max_label_date": "2026-06-30",
+        "refit_dates": 252,
+        "test_dates": 23,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      },
+      {
+        "month": "2026-08",
+        "chosen": {
+          "kind": "forest",
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        "validation_candidates": [
+          {
+            "kind": "logistic",
+            "window": 252,
+            "validation_accuracy": 0.31746031746031744,
+            "validation_dates": 63
+          },
+          {
+            "kind": "logistic",
+            "window": null,
+            "validation_accuracy": 0.3333333333333333,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": 252,
+            "validation_accuracy": 0.3492063492063492,
+            "validation_dates": 63
+          },
+          {
+            "kind": "boosting",
+            "window": null,
+            "validation_accuracy": 0.36507936507936506,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": 252,
+            "validation_accuracy": 0.25396825396825395,
+            "validation_dates": 63
+          },
+          {
+            "kind": "forest",
+            "window": null,
+            "validation_accuracy": 0.4126984126984127,
+            "validation_dates": 63
+          }
+        ],
+        "max_train_label_date": "2026-04-28",
+        "validation_start": "2026-04-29",
+        "max_validation_label_date": "2026-07-31",
+        "refit_max_label_date": "2026-07-31",
+        "refit_dates": 646,
+        "test_dates": 21,
+        "test_label_selection_allowed": false,
+        "confidence_status": "UNCALIBRATED_AFTER_REFIT"
+      }
+    ]
+  },
+  "specification": {
+    "model_families": [
+      "logistic",
+      "boosting",
+      "forest"
+    ],
+    "history_windows": [
+      252,
+      null
+    ],
+    "validation_dates": 63,
+    "update_schedule": "monthly",
+    "market_target": "quality-score change outside +/-0.05 vs continue",
+    "relay_target": "next-session closing next-board promotion; positive non-one-word Top1 precision"
+  },
+  "fields": {
+    "market": [
+      "limit_count",
+      "limit_change",
+      "seal_rate",
+      "failed_rate",
+      "max_board",
+      "height_change",
+      "middle_density",
+      "ladder_gap_count",
+      "unique_space",
+      "one_word_share",
+      "breadth_height_divergence",
+      "promotion_overall",
+      "promotion_mid",
+      "yesterday_premium",
+      "previous_limit_tail_loss",
+      "down_limit_count",
+      "breadth_health",
+      "relay_appetite",
+      "ladder_health",
+      "loss_effect_health",
+      "regime_fragility",
+      "emotion_quality_score",
+      "emotion_quality_score_delta_1",
+      "emotion_quality_score_delta_3",
+      "emotion_quality_score_mean_5",
+      "promotion_mid_delta_1",
+      "promotion_mid_delta_3",
+      "promotion_mid_mean_5",
+      "yesterday_premium_delta_1",
+      "yesterday_premium_delta_3",
+      "yesterday_premium_mean_5",
+      "failed_rate_delta_1",
+      "failed_rate_delta_3",
+      "failed_rate_mean_5",
+      "down_limit_count_delta_1",
+      "down_limit_count_delta_3",
+      "down_limit_count_mean_5",
+      "current_REPAIR",
+      "current_RISK_OFF",
+      "current_RISK_ON",
+      "sh_a_return_pct",
+      "sh_a_return_pct_lag_1",
+      "sh_a_return_pct_lag_3",
+      "sz_a_return_pct",
+      "sz_a_return_pct_lag_1",
+      "sz_a_return_pct_lag_3"
+    ],
+    "relay": [
+      "boards",
+      "height_gap",
+      "same_height_rivals",
+      "unique_space",
+      "height_share",
+      "is_space_leader",
+      "emotion_score",
+      "promotion_2to3",
+      "promotion_3to4",
+      "promotion_mid",
+      "previous_limit_tail_loss",
+      "failed_rate",
+      "down_limit_rate",
+      "breadth_health",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "turnover",
+      "signal_amount",
+      "amplitude",
+      "turnover_vs_prev",
+      "price",
+      "price_same_height_percentile",
+      "signal_amount_same_height_percentile",
+      "turnover_same_height_percentile",
+      "turnover_vs_prev_same_height_percentile",
+      "signal_one_word",
+      "log_signal_amount"
+    ]
+  },
+  "source_hashes": {
+    "rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371",
+    "next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "market_expectation_extensions_v272.py": "7177981125862b137fb51d1fc98ab5571ef8bec82bf58c4ad3d0eb76221baf11",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e"
+  },
+  "limitations": [
+    "reused historical dates; not pristine blind or forward evidence",
+    "monthly prequential validation may use completed outcomes of earlier test months, never current/future month",
+    "refitted-model scores are uncalibrated; do not display as live probabilities",
+    "historical calendar, themes, minute path and actual fills remain insufficient"
+  ],
+  "trade_authorized": false
+}

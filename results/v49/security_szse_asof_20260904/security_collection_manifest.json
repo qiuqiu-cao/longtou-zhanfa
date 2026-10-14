@@ -1,0 +1,41 @@
+{
+  "version": "v4-security-collector-1",
+  "status": "SZSE_OBSERVED_CODE_STATUS_RECONSTRUCTED",
+  "asof": "2026-09-04",
+  "coverage_start": "2023-11-28",
+  "retrieved_at_utc": "2026-09-07T03:25:50.831618+00:00",
+  "current_mainboard_codes": 1494,
+  "codes_with_name_events": 1483,
+  "latest_name_mismatches": 0,
+  "duplicate_code_date_events": 0,
+  "change_events": 7472,
+  "interval_rows": 1850,
+  "st_interval_rows": 200,
+  "no_limit_interval_rows": 66,
+  "scope_limit": "SZSE MAINBOARD only; SSE remains unverified",
+  "survivorship_limit": "current SZSE list does not recover securities absent from the original historical candidate universe",
+  "transport": "AKShare adapters over official SZSE XLSX endpoints",
+  "sources": [
+    "https://www.szse.cn/market/product/stock/list/index.html",
+    "https://www.szse.cn/www/market/stock/changename/index.html",
+    "https://www.szse.cn/www/investor/knowledge/stock/deal/t20230525_600599.html"
+  ],
+  "files": {
+    "current_list": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\security_szse_asof_20260904\\evidence\\szse_mainboard_list_20260904.csv",
+      "sha256": "cd8e1012a7474375a8f62581e777bcb7889f3894787ba02fda039b781a0ef0c8"
+    },
+    "name_changes": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\security_szse_asof_20260904\\evidence\\szse_short_name_changes_20260904.csv",
+      "sha256": "51150be4a9a4a38123a3bc2603beccc250a0905678bc84233a46e3b4bfa81123"
+    },
+    "daily_calendar_input": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv",
+      "sha256": "2dc753caafe1da97c0505b550ad2ccba050b7bd6eb691f075d0652e639a74b15"
+    },
+    "intervals": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\security_szse_asof_20260904\\security_master_szse_verified.csv",
+      "sha256": "24d15e11ad34d100737430a30a0bd75ce9f2d264f3d6c49feb1bf032c6b75e55"
+    }
+  }
+}

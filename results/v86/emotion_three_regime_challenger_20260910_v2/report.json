@@ -1,0 +1,123 @@
+{
+  "version": "v86-emotion-three-regime-challenger-1",
+  "status": "RESEARCH_ONLY",
+  "features": [
+    "limit_count",
+    "limit_change",
+    "seal_rate",
+    "failed_rate",
+    "max_board",
+    "height_change",
+    "middle_density",
+    "ladder_gap_count",
+    "unique_space",
+    "one_word_share",
+    "breadth_height_divergence",
+    "promotion_overall",
+    "promotion_mid",
+    "yesterday_premium",
+    "previous_limit_tail_loss",
+    "down_limit_count",
+    "breadth_health",
+    "relay_appetite",
+    "ladder_health",
+    "loss_effect_health",
+    "regime_fragility",
+    "emotion_quality_score"
+  ],
+  "model": "median_imputer_training_only + scaler + balanced_multinomial_logistic_C_0.5",
+  "split": {
+    "method": "frozen_chronological_70_30",
+    "train_n": 471,
+    "blind_n": 203,
+    "train_end_signal_date": "2025-11-07",
+    "blind_start_signal_date": "2025-11-10"
+  },
+  "blind": {
+    "challenger": {
+      "n": 203,
+      "accuracy": 0.43842364532019706,
+      "balanced_accuracy": 0.39130988363724933,
+      "macro_f1": 0.3875882889040784,
+      "multiclass_brier": 0.6601452250449532,
+      "log_loss": 1.0983725053122826,
+      "top_class_ece_10bin": 0.07495492995151863,
+      "by_class": {
+        "RISK_ON": {
+          "support": 77,
+          "predicted": 99,
+          "precision": 0.45454545454545453,
+          "recall": 0.5844155844155844,
+          "f1": 0.5113636363636364
+        },
+        "RISK_OFF": {
+          "support": 92,
+          "predicted": 62,
+          "precision": 0.6129032258064516,
+          "recall": 0.41304347826086957,
+          "f1": 0.49350649350649356
+        },
+        "REPAIR": {
+          "support": 34,
+          "predicted": 42,
+          "precision": 0.14285714285714285,
+          "recall": 0.17647058823529413,
+          "f1": 0.15789473684210528
+        }
+      }
+    },
+    "markov_baseline": {
+      "n": 203,
+      "accuracy": 0.46798029556650245,
+      "balanced_accuracy": 0.3554959533220403,
+      "macro_f1": 0.29774148358219155,
+      "multiclass_brier": 0.6263731604290717,
+      "log_loss": 1.0404105081565223,
+      "top_class_ece_10bin": 0.03501366571262655,
+      "by_class": {
+        "RISK_ON": {
+          "support": 77,
+          "predicted": 36,
+          "precision": 0.4444444444444444,
+          "recall": 0.2077922077922078,
+          "f1": 0.2831858407079646
+        },
+        "RISK_OFF": {
+          "support": 92,
+          "predicted": 167,
+          "precision": 0.47305389221556887,
+          "recall": 0.8586956521739131,
+          "f1": 0.61003861003861
+        },
+        "REPAIR": {
+          "support": 34,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "promotion_gate_passed": false,
+  "promotion_rule": "challenger must improve Brier, log loss, balanced accuracy and repair recall>=15%",
+  "latest_research_prediction": {
+    "signal_date": "2026-09-10",
+    "probabilities": {
+      "RISK_ON": 0.1959064978811789,
+      "RISK_OFF": 0.31458465620791703,
+      "REPAIR": 0.48950884591090416
+    },
+    "top_class": "REPAIR",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "generated_at": "2026-09-10T18:12:28.175768+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260910\\emotion_overlay_v100\\market_emotion_model_input.csv",
+    "sha256": "7cd4f1718b3ee9ccc4d36f185f8752fb900427888dc91df19565dc3caf2298ba"
+  },
+  "blind_predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v86\\emotion_three_regime_challenger_20260910_v2\\blind_predictions.csv",
+    "sha256": "70acd09895734ee59c976405c27f180d0e0d4c7317202815a48f6d9b58e29afa"
+  }
+}

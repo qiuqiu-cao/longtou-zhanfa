@@ -1,0 +1,4478 @@
+{
+  "status": "SOURCE_REBUILT_EXACT_ORIGINAL_LOGITS",
+  "formed_at": "2026-10-11T14:37:58.879115+00:00",
+  "signal_date": "2026-10-09",
+  "target_date": "2026-10-12",
+  "original_knowledge_cutoff": "2026-10-11T14:30:25.792150+00:00",
+  "full_candidate_count": 11,
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\weekend_review_20261011T142844Z\\model\\base_predictions.json": "7ec19645098525b3f75d3a8e1f2592e5feda5e7cf6560128ab5a7900dba9d23c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\manifest.json": "d857b632d895a89c7b24cf20e79fb1e3776f5e0bd96c718a918b2a3e4e73d19d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\model.joblib": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\weekend_review_20261011T142844Z\\model\\features\\manifest.json": "9d6fdbfdec333f5b86b9660539c4dbee2bd6424f9c9a7794f6cdd0d02ab35fb7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_error_20261009T045526Z\\reader_compatibility_BEFORE_REPLAY.json": "8642ebafcda5a9031e272dcebe35e81ec69155bd575a998b2c902334885d306c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_error_analysis.py": "7cd3da2c629f723f0ab352a9d0a99b2909dcbbb39bb2901589ef5406a839e1a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\weekend_review_20261011T142844Z\\mainline\\report.json": "3487b2c350ac42ebc2c7328c0e297e615230f6313f0b6998db92e7c933fa2db2"
+  },
+  "mainline_annex_actual_cutoff": "2026-10-11T14:37:55.470444+00:00",
+  "interpretation": "Terms are standardized contributions relative to the training mean plus intercept. Coefficients are conditional, correlated and not causal; they are not points to add to the score. Prior replay uses the same current frozen model, not an earlier author's amended prediction. Independent theme annex formed later does not become an original numeric feature.",
+  "production_changed": false,
+  "calibrated_probability": false,
+  "rows": [
+    {
+      "code": "600241",
+      "name": "时代万恒",
+      "boards": 5,
+      "actual_one_word_daily": 1.0,
+      "raw_score": 0.8043045753576114,
+      "predicted_positive": true,
+      "rank": 1,
+      "target_boards": 6,
+      "model_promotion_score": 80.4,
+      "promotion_call": "PROMOTE",
+      "logit": 1.4134185278319418,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.5,
+          "imputed_value": 0.5,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.0030697616518122837
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 68939072.0,
+          "imputed_value": 68939072.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0018282079974874634
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 0.18300687325570678,
+          "imputed_value": 0.18300687325570678,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.010973451420812809
+        },
+        {
+          "field": "height_share",
+          "signal_value": 0.5555555555555556,
+          "imputed_value": 0.5555555555555556,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": 0.011860085767266106
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.5,
+          "imputed_value": 0.5,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": 0.01247525102404629
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.5,
+          "imputed_value": 0.5,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.01763130837883033
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 0.5,
+          "imputed_value": 0.5,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": 0.041834075034250885
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.01991887092590332,
+          "imputed_value": 0.01991887092590332,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.049961194780110595
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "price",
+          "signal_value": 11.76,
+          "imputed_value": 11.76,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.10212085728210314
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": 0.11999968029993001
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 4.0,
+          "imputed_value": 4.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.136621129959142
+        },
+        {
+          "field": "boards",
+          "signal_value": 5.0,
+          "imputed_value": 5.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": 0.1437104871193218
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.20283797030053635
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 18.048733672487394,
+          "imputed_value": 18.048733672487394,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.5195700727502387
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": 0.6183114079340712
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2026-09-30",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.7117065964170476,
+        "original_saved_prior_score": 0.7117065964170477,
+        "logit_change": 0.5097315090241801,
+        "terms": [
+          {
+            "field": "ladder_health",
+            "logit_change": -0.10083046266948624
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.052005658676859856
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": -0.04432644112565761
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": -0.021436475489205884
+          },
+          {
+            "field": "price",
+            "logit_change": -0.01610823043401302
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": -0.015179710772695946
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.0119395594715075
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.005921899693109048
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": -8.06375516609263e-06
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.0
+          },
+          {
+            "field": "amplitude",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": 0.0012835004676856193
+          },
+          {
+            "field": "turnover",
+            "logit_change": 0.0033665218377944076
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": 0.0037322738048067485
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.004044558072374591
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.005871926765197556
+          },
+          {
+            "field": "log_signal_amount",
+            "logit_change": 0.01870088033971684
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.022910501420829087
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": 0.03639827249072217
+          },
+          {
+            "field": "height_share",
+            "logit_change": 0.0674098891900167
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.07596505958916899
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": 0.0881707487136546
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": 0.11720987038424346
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.12293355148154514
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": 0.2094904565541265
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "002058",
+      "name": "紫竹高科",
+      "boards": 4,
+      "actual_one_word_daily": 1.0,
+      "raw_score": 0.7335531322643972,
+      "predicted_positive": true,
+      "rank": 2,
+      "target_boards": 5,
+      "model_promotion_score": 73.4,
+      "promotion_call": "PROMOTE",
+      "logit": 1.0127251784537492,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.09114524834272193
+        },
+        {
+          "field": "height_share",
+          "signal_value": 0.4444444444444444,
+          "imputed_value": 0.4444444444444444,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.047123567273998475
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.04667811808878732
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": -0.03306388129404154
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 100791831.0,
+          "imputed_value": 100791831.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0017833208545987658
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "price",
+          "signal_value": 24.44,
+          "imputed_value": 24.44,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.001997150466767279
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 0.872926102626294,
+          "imputed_value": 0.872926102626294,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.007627726942311063
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.008127059762607964
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.02876593351364136,
+          "imputed_value": 0.02876593351364136,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.04514245952318065
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "boards",
+          "signal_value": 4.0,
+          "imputed_value": 4.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": 0.08224371137854923
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": 0.11999968029993001
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.2392362427912585
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 5.0,
+          "imputed_value": 5.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.24893610887476023
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 18.42856787857226,
+          "imputed_value": 18.42856787857226,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.4304882409038789
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": 0.6183114079340712
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2026-09-30",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.6790979151624001,
+        "original_saved_prior_score": 0.6790979151624001,
+        "logit_change": 0.2630959012794287,
+        "terms": [
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": -0.17730576450263041
+          },
+          {
+            "field": "log_signal_amount",
+            "logit_change": -0.15914199175161942
+          },
+          {
+            "field": "ladder_health",
+            "logit_change": -0.10083046266948624
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": -0.08574590195682354
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.052005658676859856
+          },
+          {
+            "field": "price",
+            "logit_change": -0.033479851490301596
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": -0.03035942154539189
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.0119395594715075
+          },
+          {
+            "field": "turnover",
+            "logit_change": -0.00605036591220811
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.005921899693109048
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": -0.001972688104430077
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.0
+          },
+          {
+            "field": "amplitude",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": 6.997491229781107e-05
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.004044558072374591
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.005871926765197556
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": 0.014929095219226996
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.022910501420829087
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.07596505958916899
+          },
+          {
+            "field": "height_share",
+            "logit_change": 0.08426236148752081
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": 0.0881707487136546
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": 0.11720987038424346
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.12293355148154514
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": 0.1819913624536108
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": 0.2094904565541265
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "600825",
+      "name": "新华传媒",
+      "boards": 9,
+      "actual_one_word_daily": 1.0,
+      "raw_score": 0.5656122556822425,
+      "predicted_positive": true,
+      "rank": 3,
+      "target_boards": 10,
+      "model_promotion_score": 56.6,
+      "promotion_call": "PROMOTE",
+      "logit": 0.26397122748461677,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "height_gap",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": -0.31263878570333087
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.09114524834272193
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.04667811808878732
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": -0.03306388129404154
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 8.84097766752718,
+          "imputed_value": 8.84097766752718,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": -0.031012890729664747
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 625610976.0,
+          "imputed_value": 625610976.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0010437418450586753
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 20.25423929339694,
+          "imputed_value": 20.25423929339694,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.0023168140635566464
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.008127059762607964
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.047784123420715335,
+          "imputed_value": 0.047784123420715335,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.034783809822293045
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "price",
+          "signal_value": 12.53,
+          "imputed_value": 12.53,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.09604078991240216
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": 0.11999968029993001
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": 0.13887678364003253
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": 0.15798019701490998
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.2392362427912585
+        },
+        {
+          "field": "height_share",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": 0.2477946979323243
+        },
+        {
+          "field": "boards",
+          "signal_value": 9.0,
+          "imputed_value": 9.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": 0.3895775900824121
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2026-09-30",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.7189811188242534,
+        "original_saved_prior_score": 0.7189811188242535,
+        "logit_change": -0.6754420096910784,
+        "terms": [
+          {
+            "field": "signal_one_word",
+            "logit_change": -0.7342447969217096
+          },
+          {
+            "field": "log_signal_amount",
+            "logit_change": -0.3432833425708708
+          },
+          {
+            "field": "ladder_health",
+            "logit_change": -0.10083046266948624
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.052005658676859856
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": -0.03854055282476058
+          },
+          {
+            "field": "turnover",
+            "logit_change": -0.018736345088258402
+          },
+          {
+            "field": "price",
+            "logit_change": -0.01721369722850412
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.0119395594715075
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.005921899693109048
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.0
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "height_share",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.0
+          },
+          {
+            "field": "amplitude",
+            "logit_change": 0.0
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": 0.0006776324728480223
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.004044558072374591
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.005871926765197556
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.022910501420829087
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.07596505958916899
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": 0.0881707487136546
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": 0.11720987038424346
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.12293355148154511
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": 0.2094904565541265
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "001336",
+      "name": "楚环科技",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.4571922965324162,
+      "predicted_positive": false,
+      "rank": 4,
+      "target_boards": 3,
+      "model_promotion_score": 45.7,
+      "promotion_call": "FAIL",
+      "logit": -0.17165103740257226,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.2412903594970703,
+          "imputed_value": 0.2412903594970703,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": -0.07061335595669857
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": -0.03306388129404154
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 6.876513317191284,
+          "imputed_value": 6.876513317191284,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": -0.008514580443197096
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 347765040.0,
+          "imputed_value": 347765040.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0014352843871121277
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.008127059762607964
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 0.7310003434451544,
+          "imputed_value": 0.7310003434451544,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.008315987924767636
+        },
+        {
+          "field": "price",
+          "signal_value": 22.72,
+          "imputed_value": 22.72,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.01557859965622926
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.2857142857142857,
+          "imputed_value": 0.2857142857142857,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.04519249115066647
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 0.2,
+          "imputed_value": 0.2,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": 0.12162166906043458
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 19.66703764016892,
+          "imputed_value": 19.66703764016892,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.14003215958742837
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2025-12-23",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.23961776394311857,
+        "original_saved_prior_score": 0.338919602852095,
+        "logit_change": 0.9831252081355019,
+        "terms": [
+          {
+            "field": "ladder_health",
+            "logit_change": -0.10083046266948624
+          },
+          {
+            "field": "height_share",
+            "logit_change": -0.08110252293173877
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": -0.07279654498144432
+          },
+          {
+            "field": "boards",
+            "logit_change": -0.06146677574077257
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.02468454981309564
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.02095032998034964
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.011521126720520488
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": -0.006497950709021226
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": -0.00015275844581601216
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": 0.003543703392856064
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.005338115241088686
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.019219495320022886
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.02169353875182735
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": 0.04042306806535966
+          },
+          {
+            "field": "turnover",
+            "logit_change": 0.04836242642110565
+          },
+          {
+            "field": "log_signal_amount",
+            "logit_change": 0.06363410529361464
+          },
+          {
+            "field": "price",
+            "logit_change": 0.07209222738359752
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.07273997473748416
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": 0.10580489845638551
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.15007587385384924
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.1595751880523674
+          },
+          {
+            "field": "amplitude",
+            "logit_change": 0.1665052007728251
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": 0.2094904565541265
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.22462995783123632
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "001300",
+      "name": "三柏硕",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.44504692337322893,
+      "predicted_positive": false,
+      "rank": 5,
+      "target_boards": 3,
+      "model_promotion_score": 44.5,
+      "promotion_call": "FAIL",
+      "logit": -0.22070384116397612,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 1.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": -0.18296514781005382
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 1.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": -0.18296514781005355
+        },
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.14285714285714285,
+          "imputed_value": 0.14285714285714285,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.01106749123354103
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.6666666666666666,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.002492366091406713
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 122004198.0,
+          "imputed_value": 122004198.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.00175342823058662
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.5714285714285714,
+          "imputed_value": 0.5714285714285714,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": 0.0059696606928908895
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.960718937403353,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.00720198053049031
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 5.033308660251666,
+          "imputed_value": 5.033308660251666,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": 0.025932831051330082
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.034094426631927494,
+          "imputed_value": 0.034094426631927494,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.0422401857570855
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.14285714285714285,
+          "imputed_value": 0.14285714285714285,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.06356661299855722
+        },
+        {
+          "field": "price",
+          "signal_value": 14.86,
+          "imputed_value": 14.86,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.07764266397551474
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 18.61956602013803,
+          "imputed_value": 18.61956602013803,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.3856937909639813
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": null,
+      "missing_fields": [
+        "turnover_vs_prev",
+        "turnover_vs_prev_same_height_percentile"
+      ],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "002805",
+      "name": "丰元股份",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.42672667948415144,
+      "predicted_positive": false,
+      "rank": 6,
+      "target_boards": 3,
+      "model_promotion_score": 42.7,
+      "promotion_call": "FAIL",
+      "logit": -0.29521888874632496,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.7142857142857143,
+          "imputed_value": 0.7142857142857143,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": -0.007041519969419922
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.11363971710205079,
+          "imputed_value": 0.11363971710205079,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": -0.0010857986484479323
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 607293920.0,
+          "imputed_value": 607293920.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.001069554375457448
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.7142857142857143,
+          "imputed_value": 0.7142857142857143,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.0017288760972249651
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 0.843811877551988,
+          "imputed_value": 0.843811877551988,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.0077689147384427636
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.5714285714285714,
+          "imputed_value": 0.5714285714285714,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.008444247454884956
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 20.22452345093791,
+          "imputed_value": 20.22452345093791,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.009286017043966439
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 0.6,
+          "imputed_value": 0.6,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": 0.015238210358856325
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 4.980192416525184,
+          "imputed_value": 4.980192416525184,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": 0.026925513604404632
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "price",
+          "signal_value": 19.44,
+          "imputed_value": 19.44,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.04147810741287763
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2026-06-22",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.2235038831149912,
+        "original_saved_prior_score": 0.2842136473577426,
+        "logit_change": 0.9501439650189214,
+        "terms": [
+          {
+            "field": "ladder_health",
+            "logit_change": -0.13671039354148523
+          },
+          {
+            "field": "height_share",
+            "logit_change": -0.09437384486602331
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": -0.06570743037450423
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": -0.05831812255213108
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": -0.05765848596006866
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": -0.05081946677447815
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": -0.019516770993466215
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": -0.0014662095261530964
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": -0.0014218185923073328
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": -0.000623708095747967
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": 0.0019357042010550328
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.001957308921732518
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.004070121080104742
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": 0.005103922735525222
+          },
+          {
+            "field": "turnover",
+            "logit_change": 0.011456883076298333
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": 0.011943241553996481
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": 0.015545730177278595
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": 0.016031045220664453
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": 0.06983015218470884
+          },
+          {
+            "field": "price",
+            "logit_change": 0.07998841877281956
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": 0.0857323888903885
+          },
+          {
+            "field": "log_signal_amount",
+            "logit_change": 0.12838700363367775
+          },
+          {
+            "field": "amplitude",
+            "logit_change": 0.15513738278662018
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": 0.40038099739794375
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.44925991566247275
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "002733",
+      "name": "雄韬股份",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.4265148887852976,
+      "predicted_positive": false,
+      "rank": 7,
+      "target_boards": 3,
+      "model_promotion_score": 42.7,
+      "promotion_call": "FAIL",
+      "logit": -0.29608469941836074,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.09114524834272193
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.8571428571428571,
+          "imputed_value": 0.8571428571428571,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": -0.020052700631730723
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 5.078259763019887,
+          "imputed_value": 5.078259763019887,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": -0.012765801993941579
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.2857142857142857,
+          "imputed_value": 0.2857142857142857,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.007868399400849532
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 434396752.0,
+          "imputed_value": 434396752.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.001313202339675153
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.42857142857142855,
+          "imputed_value": 0.42857142857142855,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.02681836930277571
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.05709695339202881,
+          "imputed_value": 0.05709695339202881,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.029711384745662525
+        },
+        {
+          "field": "price",
+          "signal_value": 20.78,
+          "imputed_value": 20.78,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.03089721095132006
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 3.28215987294865,
+          "imputed_value": 3.28215987294865,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": 0.05865982240156154
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 19.88946885187835,
+          "imputed_value": 19.88946885187835,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": 0.0878657683528956
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": null,
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "600400",
+      "name": "红豆股份",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.4142130291993672,
+      "predicted_positive": false,
+      "rank": 8,
+      "target_boards": 3,
+      "model_promotion_score": 41.4,
+      "promotion_call": "FAIL",
+      "logit": -0.34657578766011826,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 9.392265193370166,
+          "imputed_value": 9.392265193370166,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": -0.05553113922335521
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 20.42777073141915,
+          "imputed_value": 20.42777073141915,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": -0.038381201371361584
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.03795351899193282
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.8571428571428571,
+          "imputed_value": 0.8571428571428571,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.028303996240896558
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.5714285714285714,
+          "imputed_value": 0.5714285714285714,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.001470215735466535
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 744163056.0,
+          "imputed_value": 744163056.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0008766773796316041
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 1.8638428049937648,
+          "imputed_value": 1.8638428049937648,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.002822332156762538
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.0850883674621582,
+          "imputed_value": 0.0850883674621582,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.014465283281657458
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.2857142857142857,
+          "imputed_value": 0.2857142857142857,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": 0.0319920220175125
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "price",
+          "signal_value": 3.98,
+          "imputed_value": 3.98,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.16355322629025085
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2026-06-23",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.3268005318338533,
+        "original_saved_prior_score": 0.4222018548424548,
+        "logit_change": 0.3761158942644303,
+        "terms": [
+          {
+            "field": "log_signal_amount",
+            "logit_change": -0.1879506410259169
+          },
+          {
+            "field": "height_share",
+            "logit_change": -0.09437384486602331
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": -0.09001677274748932
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": -0.06983015218470881
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": -0.06737178010893277
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.0637965611788261
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.04576908412727301
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": -0.033682415384103645
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": -0.025191642489615595
+          },
+          {
+            "field": "turnover",
+            "logit_change": -0.021479768530058466
+          },
+          {
+            "field": "ladder_health",
+            "logit_change": -0.01967222904327124
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": -0.013878592706464861
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.006591814355963114
+          },
+          {
+            "field": "price",
+            "logit_change": -0.005685257800239929
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": -0.004450685959595288
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": 0.0005781364458782689
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.003262181536220865
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": 0.006824729243075197
+          },
+          {
+            "field": "amplitude",
+            "logit_change": 0.013883399477398022
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.020941896950724594
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.03843899064004577
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.06254112586134664
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.238940581029973
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": 0.29118617992577733
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.44925991566247275
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "600408",
+      "name": "安泰集团",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.40574890252248147,
+      "predicted_positive": false,
+      "rank": 9,
+      "target_boards": 3,
+      "model_promotion_score": 40.6,
+      "promotion_call": "FAIL",
+      "logit": -0.3815674514876428,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 13.662790697674417,
+          "imputed_value": 13.662790697674417,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": -0.13534243353122374
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.20914100646972655,
+          "imputed_value": 0.20914100646972655,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": -0.05310254721266803
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.04667811808878732
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 20.43562419167744,
+          "imputed_value": 20.43562419167744,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": -0.04022305925286232
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 750030320.0,
+          "imputed_value": 750030320.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0008684091879332425
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.8571428571428571,
+          "imputed_value": 0.8571428571428571,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.0049279679299164625
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 0.7867891262479412,
+          "imputed_value": 0.7867891262479412,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.008045443362008622
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.14285714285714285,
+          "imputed_value": 0.14285714285714285,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": 0.04500320267982331
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 0.4,
+          "imputed_value": 0.4,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": 0.06842993970964543
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "price",
+          "signal_value": 3.78,
+          "imputed_value": 3.78,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.16513246456809527
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2025-12-03",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.3480458438072467,
+        "original_saved_prior_score": 0.3014497005672016,
+        "logit_change": 0.2460725892026968,
+        "terms": [
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.27998970516954114
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": -0.10882011124095023
+          },
+          {
+            "field": "height_share",
+            "logit_change": -0.058983653041264544
+          },
+          {
+            "field": "amplitude",
+            "logit_change": -0.041965256101250056
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.0406872214404692
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": -0.03639827249072217
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": -0.03206209044132895
+          },
+          {
+            "field": "ladder_health",
+            "logit_change": -0.016970945405149915
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": -0.013966030436941772
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.008840574120485003
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": -0.003199091832691501
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": -0.0009661986191560615
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": -0.0006760412122434646
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": 0.0021685301103851334
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.003914617843465037
+          },
+          {
+            "field": "price",
+            "logit_change": 0.01429210641449194
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.02066051309697843
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.020851198786779157
+          },
+          {
+            "field": "turnover",
+            "logit_change": 0.03086911377572809
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.03843899064004577
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.05319172935078911
+          },
+          {
+            "field": "log_signal_amount",
+            "logit_change": 0.15227174884994854
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.21599429513942464
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.33694493674685455
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "600812",
+      "name": "华北制药",
+      "boards": 2,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.3346027231335863,
+      "predicted_positive": false,
+      "rank": 10,
+      "target_boards": 3,
+      "model_promotion_score": 33.5,
+      "promotion_call": "FAIL",
+      "logit": -0.687440344105756,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 1.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": -0.18296514781005382
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 1.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": -0.18296514781005355
+        },
+        {
+          "field": "height_share",
+          "signal_value": 0.2222222222222222,
+          "imputed_value": 0.2222222222222222,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": -0.16509087335652758
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "boards",
+          "signal_value": 2.0,
+          "imputed_value": 2.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": -0.04068984010299591
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 8.211678832116789,
+          "imputed_value": 8.211678832116789,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": -0.033467314656828055
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "log_signal_amount",
+          "signal_value": 20.34880588024345,
+          "imputed_value": 20.34880588024345,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": -0.019861717129242003
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 0.7142857142857143,
+          "imputed_value": 0.7142857142857143,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.009929874393005807
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 0.42857142857142855,
+          "imputed_value": 0.42857142857142855,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.004669307568158034
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.6666666666666666,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.002492366091406713
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 687660544.0,
+          "imputed_value": 687660544.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": -0.0009563011362334846
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.960718937403353,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": 0.00720198053049031
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 0.42857142857142855,
+          "imputed_value": 0.42857142857142855,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": 0.018980841355201696
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 6.0,
+          "imputed_value": 6.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.02084660784692553
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.06753522872924805,
+          "imputed_value": 0.06753522872924805,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": 0.02402596261937226
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "price",
+          "signal_value": 6.03,
+          "imputed_value": 6.03,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.1473660339423456
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 7.0,
+          "imputed_value": 7.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.47356606670599655
+        }
+      ],
+      "prior_signal_comparison": null,
+      "missing_fields": [
+        "turnover_vs_prev",
+        "turnover_vs_prev_same_height_percentile"
+      ],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    },
+    {
+      "code": "002242",
+      "name": "九阳股份",
+      "boards": 5,
+      "actual_one_word_daily": 0.0,
+      "raw_score": 0.32508667145519143,
+      "predicted_positive": false,
+      "rank": 11,
+      "target_boards": 6,
+      "model_promotion_score": 32.5,
+      "promotion_call": "FAIL",
+      "logit": -0.7304924522952654,
+      "intercept": -0.6401435662271302,
+      "terms": [
+        {
+          "field": "log_signal_amount",
+          "signal_value": 21.447289693204084,
+          "imputed_value": 21.447289693204084,
+          "training_mean": 20.264117909633693,
+          "logit_contribution": -0.2774871461835274
+        },
+        {
+          "field": "signal_one_word",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.15789473684210525,
+          "logit_contribution": -0.11593338898763836
+        },
+        {
+          "field": "turnover_vs_prev_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6572954124441538,
+          "logit_contribution": -0.09114524834272193
+        },
+        {
+          "field": "amplitude",
+          "signal_value": 11.127272727272727,
+          "imputed_value": 11.127272727272727,
+          "training_mean": 6.420916985162641,
+          "logit_contribution": -0.0879564687934748
+        },
+        {
+          "field": "turnover_vs_prev",
+          "signal_value": 12.662777319951708,
+          "imputed_value": 12.662777319951708,
+          "training_mean": 2.4458337128324783,
+          "logit_contribution": -0.04954649307716199
+        },
+        {
+          "field": "signal_amount_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": -0.04667811808878732
+        },
+        {
+          "field": "crowding_risk",
+          "signal_value": 0.2625,
+          "imputed_value": 0.2625,
+          "training_mean": 0.16345269228973053,
+          "logit_contribution": -0.04106033921199296
+        },
+        {
+          "field": "down_limit_rate",
+          "signal_value": 0.8,
+          "imputed_value": 0.8,
+          "training_mean": 0.5966001961425302,
+          "logit_contribution": -0.039092415783322135
+        },
+        {
+          "field": "turnover",
+          "signal_value": 0.1827719497680664,
+          "imputed_value": 0.1827719497680664,
+          "training_mean": 0.11164622128036492,
+          "logit_contribution": -0.03874009617763337
+        },
+        {
+          "field": "ladder_health",
+          "signal_value": 0.7,
+          "imputed_value": 0.7,
+          "training_mean": 0.7621242221146916,
+          "logit_contribution": -0.03758408435283768
+        },
+        {
+          "field": "price_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6369728669499837,
+          "logit_contribution": -0.03306388129404154
+        },
+        {
+          "field": "emotion_score",
+          "signal_value": 0.7303061619462073,
+          "imputed_value": 0.7303061619462073,
+          "training_mean": 0.5979690077838036,
+          "logit_contribution": -0.021125729305596704
+        },
+        {
+          "field": "is_space_leader",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.12716574043805165,
+          "logit_contribution": -0.0202333591145965
+        },
+        {
+          "field": "unique_space",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.06015037593984962,
+          "logit_contribution": -0.010110732608954238
+        },
+        {
+          "field": "breadth_health",
+          "signal_value": 0.7986225266362251,
+          "imputed_value": 0.7986225266362251,
+          "training_mean": 0.49015773221078024,
+          "logit_contribution": -0.0061317733744880145
+        },
+        {
+          "field": "missingindicator_promotion_3to4",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.059496567505720827,
+          "logit_contribution": -0.0015538692243626466
+        },
+        {
+          "field": "missingindicator_promotion_2to3",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.001961425302386401,
+          "logit_contribution": -0.0009655908063885962
+        },
+        {
+          "field": "previous_limit_tail_loss",
+          "signal_value": -0.04806463718414307,
+          "imputed_value": -0.04806463718414307,
+          "training_mean": -0.04823533729804767,
+          "logit_contribution": -0.0009284778511775872
+        },
+        {
+          "field": "missingindicator_turnover",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_signal_amount_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_turnover_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575446e-05
+        },
+        {
+          "field": "missingindicator_log_signal_amount",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.0006538084341288003,
+          "logit_contribution": 8.860249887575584e-05
+        },
+        {
+          "field": "signal_amount",
+          "signal_value": 2062716608.0,
+          "imputed_value": 2062716608.0,
+          "training_mean": 1366269777.3700557,
+          "logit_contribution": 0.0009814380098398076
+        },
+        {
+          "field": "promotion_2to3",
+          "signal_value": 0.0,
+          "imputed_value": 0.0,
+          "training_mean": 0.3417747330934905,
+          "logit_contribution": 0.0040137524058398355
+        },
+        {
+          "field": "regime_fragility",
+          "signal_value": 0.3238935125680547,
+          "imputed_value": 0.3238935125680547,
+          "training_mean": 0.3441941112057826,
+          "logit_contribution": 0.007858449192701594
+        },
+        {
+          "field": "turnover_same_height_percentile",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 0.6370818350223384,
+          "logit_contribution": 0.008127059762607964
+        },
+        {
+          "field": "height_share",
+          "signal_value": 0.5555555555555556,
+          "imputed_value": 0.5555555555555556,
+          "training_mean": 0.5332139873493257,
+          "logit_contribution": 0.011860085767266106
+        },
+        {
+          "field": "failed_rate",
+          "signal_value": 0.1506849315068493,
+          "imputed_value": 0.1506849315068493,
+          "training_mean": 0.30235225425065737,
+          "logit_contribution": 0.017156047775928253
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.02540804174726358
+        },
+        {
+          "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+          "signal_value": null,
+          "imputed_value": 0.0,
+          "training_mean": 0.12193527296502125,
+          "logit_contribution": 0.025408041747263622
+        },
+        {
+          "field": "promotion_mid",
+          "signal_value": 0.3333333333333333,
+          "imputed_value": 0.3333333333333333,
+          "training_mean": 0.384450382377924,
+          "logit_contribution": 0.027042170917764976
+        },
+        {
+          "field": "promotion_3to4",
+          "signal_value": 0.25,
+          "imputed_value": 0.25,
+          "training_mean": 0.4658055594472725,
+          "logit_contribution": 0.060278940234037064
+        },
+        {
+          "field": "price",
+          "signal_value": 15.13,
+          "imputed_value": 15.13,
+          "training_mean": 24.692925792742727,
+          "logit_contribution": 0.07551069230042476
+        },
+        {
+          "field": "loss_effect_health",
+          "signal_value": 0.6930976430976431,
+          "imputed_value": 0.6930976430976431,
+          "training_mean": 0.5298466274381606,
+          "logit_contribution": 0.08173100677625188
+        },
+        {
+          "field": "height_gap",
+          "signal_value": 4.0,
+          "imputed_value": 4.0,
+          "training_mean": 2.783589408303367,
+          "logit_contribution": 0.136621129959142
+        },
+        {
+          "field": "boards",
+          "signal_value": 5.0,
+          "imputed_value": 5.0,
+          "training_mean": 2.6619810395554104,
+          "logit_contribution": 0.1437104871193218
+        },
+        {
+          "field": "same_height_rivals",
+          "signal_value": 1.0,
+          "imputed_value": 1.0,
+          "training_mean": 6.572736188296829,
+          "logit_contribution": 0.20283797030053635
+        }
+      ],
+      "prior_signal_comparison": {
+        "prior_signal_date": "2026-09-30",
+        "replayed_with_same_frozen_model": true,
+        "same_model_prior_score": 0.37220449751008733,
+        "original_saved_prior_score": 0.3722044975100874,
+        "logit_change": -0.20772139955431712,
+        "terms": [
+          {
+            "field": "log_signal_amount",
+            "logit_change": -0.36413265161490344
+          },
+          {
+            "field": "amplitude",
+            "logit_change": -0.15366629899954695
+          },
+          {
+            "field": "ladder_health",
+            "logit_change": -0.10083046266948624
+          },
+          {
+            "field": "turnover_vs_prev_same_height_percentile",
+            "logit_change": -0.08865288225131522
+          },
+          {
+            "field": "turnover",
+            "logit_change": -0.07455314981856578
+          },
+          {
+            "field": "turnover_vs_prev",
+            "logit_change": -0.052539731271316926
+          },
+          {
+            "field": "previous_limit_tail_loss",
+            "logit_change": -0.052005658676859856
+          },
+          {
+            "field": "signal_amount_same_height_percentile",
+            "logit_change": -0.042872950978411775
+          },
+          {
+            "field": "price",
+            "logit_change": -0.020766983353654053
+          },
+          {
+            "field": "emotion_score",
+            "logit_change": -0.0119395594715075
+          },
+          {
+            "field": "breadth_health",
+            "logit_change": -0.005921899693109048
+          },
+          {
+            "field": "height_gap",
+            "logit_change": 0.0
+          },
+          {
+            "field": "unique_space",
+            "logit_change": 0.0
+          },
+          {
+            "field": "is_space_leader",
+            "logit_change": 0.0
+          },
+          {
+            "field": "down_limit_rate",
+            "logit_change": 0.0
+          },
+          {
+            "field": "price_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_one_word",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_2to3",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_promotion_3to4",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_signal_amount_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_turnover_vs_prev_same_height_percentile",
+            "logit_change": 0.0
+          },
+          {
+            "field": "missingindicator_log_signal_amount",
+            "logit_change": 0.0
+          },
+          {
+            "field": "signal_amount",
+            "logit_change": 0.0022914469728672043
+          },
+          {
+            "field": "failed_rate",
+            "logit_change": 0.004044558072374591
+          },
+          {
+            "field": "promotion_2to3",
+            "logit_change": 0.005871926765197556
+          },
+          {
+            "field": "turnover_same_height_percentile",
+            "logit_change": 0.0074645476096135
+          },
+          {
+            "field": "regime_fragility",
+            "logit_change": 0.022910501420829087
+          },
+          {
+            "field": "same_height_rivals",
+            "logit_change": 0.03639827249072217
+          },
+          {
+            "field": "height_share",
+            "logit_change": 0.0674098891900167
+          },
+          {
+            "field": "loss_effect_health",
+            "logit_change": 0.07596505958916899
+          },
+          {
+            "field": "promotion_mid",
+            "logit_change": 0.0881707487136546
+          },
+          {
+            "field": "crowding_risk",
+            "logit_change": 0.11720987038424346
+          },
+          {
+            "field": "boards",
+            "logit_change": 0.12293355148154514
+          },
+          {
+            "field": "promotion_3to4",
+            "logit_change": 0.2094904565541265
+          }
+        ]
+      },
+      "missing_fields": [],
+      "theme_structure_conflict": false,
+      "independent_supported_themes": [],
+      "theme_used_in_original_numeric_model": false,
+      "target_truth": null
+    }
+  ]
+}

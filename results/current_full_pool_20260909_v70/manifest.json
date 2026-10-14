@@ -1,0 +1,48 @@
+{
+  "status": "RECONCILED_POOL_WITH_OFFICIAL_CURRENT_DAY_ELIGIBILITY",
+  "signal_date": "2026-09-09",
+  "available_at": "2026-09-10T02:43:14.439021+08:00",
+  "mainboard_closing_limit_rows": 48,
+  "mainboard_first_board_rows": 33,
+  "mainboard_consecutive_board_rows": 15,
+  "mainboard_board_level_counts": {
+    "1": 33,
+    "2": 10,
+    "3": 4,
+    "5": 1
+  },
+  "mainboard_failed_board_rows": 29,
+  "verified_eligible_closing_rows": 48,
+  "security_unavailable_or_ineligible_closing_rows": 0,
+  "verified_eligible_failed_board_rows": 29,
+  "security_unavailable_or_ineligible_failed_board_rows": 0,
+  "point_in_time_security_scope_complete": true,
+  "main_and_failed_pools_disjoint": true,
+  "provider_pool_status": "reconciled_two_source_with_quote_proxy",
+  "full_market_completeness": "not_proven_archived_roster_only",
+  "complete_within_archived_roster": true,
+  "entry_authorized": false,
+  "unavailable_fields": [
+    "Level-2 queue",
+    "auction cancellation sequence",
+    "tick execution",
+    "last seal/open count for quote-only rows",
+    "float cap for quote-only rows"
+  ],
+  "limitations": [
+    "Tencent scan uses an archived official roster and cannot prove full-market completeness",
+    "failed-board classification is inferred from daily high equaling the 10% limit price",
+    "SSE/SZSE official current roster was collected after close for next-session planning",
+    "no next-session auction or opening confirmation exists at closing-plan stage"
+  ],
+  "created_at": "2026-09-10T02:43:26.526463+08:00",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260909\\reconciled_pool_v69\\closing_candidates.csv": "f7cfd494d93556c6e214cd5b92f189916fa6b247985dddf5943bdf4f7799f625",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260909\\reconciled_pool_v69\\failed_board_observations.csv": "5d409bb49e2e0a90bd9969cdb6587f9319dbf0cc5b99fd3a818e6cc1e32d70d6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260909\\reconciled_pool_v69\\manifest.json": "745152af321b7ac0bc4ef9a3010f378709c62ee2a8cbebec1672a17dfe9fd492",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260909\\failed_board.csv": "6c261df33268a73608f87293027f169c28e4bdea6d3206502444608321754ab1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v5\\security_evidence\\sse_current\\sse_current_mainboard.csv": "597558ae80415474f52cbc1c5dbab35b5b0ec13d402f06973fab592bcb5721e1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\security_master_szse_verified.csv": "c2fc0db1646994dea4ae5b016183682ca41bec7e3c038012f00bbe274dd453e2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\build_current_review_snapshot_v52.py": "0530ff776152f4fcc6d24d6bbecdea7a91b0718c4d1e0b8c37b4e597f63aaeb2"
+  }
+}

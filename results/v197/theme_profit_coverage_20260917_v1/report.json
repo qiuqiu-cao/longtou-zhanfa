@@ -1,0 +1,159 @@
+{
+  "version": "v197-theme-profit-coverage-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "sessions": 10,
+  "candidate_rows": 456,
+  "point_in_time_theme_roster_rows": 56,
+  "theme_unknown_or_unavailable_rows": 400,
+  "theme_factor_model_eligible_rows": 0,
+  "full_market_complete_sessions": 0,
+  "daily_coverage": [
+    {
+      "signal_date": "2026-08-26",
+      "candidates": 36,
+      "theme_roster_available": 0,
+      "model_eligible": 0,
+      "coverage": 0.0
+    },
+    {
+      "signal_date": "2026-08-27",
+      "candidates": 52,
+      "theme_roster_available": 0,
+      "model_eligible": 0,
+      "coverage": 0.0
+    },
+    {
+      "signal_date": "2026-08-28",
+      "candidates": 61,
+      "theme_roster_available": 0,
+      "model_eligible": 0,
+      "coverage": 0.0
+    },
+    {
+      "signal_date": "2026-08-31",
+      "candidates": 61,
+      "theme_roster_available": 0,
+      "model_eligible": 0,
+      "coverage": 0.0
+    },
+    {
+      "signal_date": "2026-09-04",
+      "candidates": 31,
+      "theme_roster_available": 0,
+      "model_eligible": 0,
+      "coverage": 0.0
+    },
+    {
+      "signal_date": "2026-09-07",
+      "candidates": 73,
+      "theme_roster_available": 0,
+      "model_eligible": 0,
+      "coverage": 0.0
+    },
+    {
+      "signal_date": "2026-09-08",
+      "candidates": 52,
+      "theme_roster_available": 14,
+      "model_eligible": 0,
+      "coverage": 0.2692307692307692
+    },
+    {
+      "signal_date": "2026-09-09",
+      "candidates": 33,
+      "theme_roster_available": 5,
+      "model_eligible": 0,
+      "coverage": 0.15151515151515152
+    },
+    {
+      "signal_date": "2026-09-10",
+      "candidates": 25,
+      "theme_roster_available": 15,
+      "model_eligible": 0,
+      "coverage": 0.6
+    },
+    {
+      "signal_date": "2026-09-11",
+      "candidates": 32,
+      "theme_roster_available": 22,
+      "model_eligible": 0,
+      "coverage": 0.6875
+    }
+  ],
+  "groups": {
+    "point_in_time_theme_roster": {
+      "candidate_n": 56,
+      "session_n": 4,
+      "promotion_rate": 0.16071428571428573,
+      "profit_target_observed_n": 56,
+      "executable_B_plus_2_positive_rate": 0.32142857142857145,
+      "filled_n": 53,
+      "B_plus_2_known_n": 53,
+      "B_plus_2_mean_net_return": -0.017749320574039162,
+      "B_plus_2_positive_rate_filled": 0.33962264150943394,
+      "B_plus_1_big_loss_known_n": 53,
+      "B_plus_1_big_loss_rate": 0.1320754716981132
+    },
+    "unknown_or_unavailable_theme": {
+      "candidate_n": 400,
+      "session_n": 10,
+      "promotion_rate": 0.185,
+      "profit_target_observed_n": 399,
+      "executable_B_plus_2_positive_rate": 0.3609022556390977,
+      "filled_n": 373,
+      "B_plus_2_known_n": 373,
+      "B_plus_2_mean_net_return": -0.014437744886920442,
+      "B_plus_2_positive_rate_filled": 0.38605898123324395,
+      "B_plus_1_big_loss_known_n": 373,
+      "B_plus_1_big_loss_rate": 0.10723860589812333
+    }
+  },
+  "roster_minus_unknown": {
+    "promotion_rate": -0.02428571428571427,
+    "executable_B_plus_2_positive_rate": -0.03947368421052627,
+    "B_plus_2_mean_net_return": -0.00331157568711872,
+    "B_plus_1_big_loss_rate": 0.02483686579998988
+  },
+  "date_cluster_bootstrap95": {
+    "mixed_sessions": 4,
+    "intervals": {
+      "promotion_rate": [
+        -0.14414923685698133,
+        0.006617647058823534
+      ],
+      "executable_B_plus_2_positive_rate": [
+        -0.189792663476874,
+        0.175
+      ],
+      "B_plus_2_mean_net_return": [
+        -0.03187940908559418,
+        0.05425151723809639
+      ],
+      "B_plus_1_big_loss_rate": [
+        -0.2498533724340176,
+        0.06277630415561453
+      ]
+    }
+  },
+  "governance": {
+    "theme_evidence_availability_is_theme_strength": false,
+    "unknown_theme_is_weak_theme": false,
+    "theme_roster_direct_profit_factor_allowed": false,
+    "theme_driver_factor_allowed": false,
+    "expectation_saturation_factor_allowed": false,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "A name being covered by an archived roster may reflect attention and evidence availability rather than a verified active driver. Membership, catalyst timing, expectation saturation and payoff must remain separate.",
+  "limitations": [
+    "theme coverage exists on only part of the later profit evaluation window",
+    "no row has a complete model-eligible driver and expectation schema",
+    "no session is independently certified as full-market theme complete",
+    "available rosters are selected evidence and cannot define an unbiased control group",
+    "daily-open execution remains a proxy rather than a verified intraday fill"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v196\\first_board_profit_ranker_20260917_v2\\prequential_profit_predictions.csv": "c4884b386e4f944135f9add65989a781921da0f17947622b51be68a59f21f4d8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v164\\point_in_time_theme_archive_20260917_v1\\candidate_theme_archive.csv": "17e39c44906200bfe549c7c4cf7ee1fec0be261eaa864b70c5525157ec336899"
+  },
+  "rows_sha256": "5e0e1caec5a080e0f0d9788b9e9fa0c48ea7272740a4e60ef582952a674aa972"
+}

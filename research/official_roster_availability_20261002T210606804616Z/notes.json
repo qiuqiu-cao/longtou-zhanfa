@@ -1,0 +1,76 @@
+{
+  "research_id": "THEME_SAME_HEIGHT_PIT_01",
+  "task": "Current official security-roster source availability check; future capture preparation only",
+  "recorded_at_utc": "2026-10-02T21:12:48.790099+00:00",
+  "directory": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z",
+  "status": "SZSE_MAINBOARD_COMPLETE_CURRENT_ROSTER_AVAILABLE_SSE_APPLICATION_ERROR",
+  "changes_to_model_or_prediction": false,
+  "new_forward_samples": 0,
+  "accuracy_change": null,
+  "comparison_started": false,
+  "existing_gates_reviewed": {
+    "prepare_theme_competition_inputs.py": "Defaults stock/risk/identity status to unverified and full-market coverage false; cannot synthesize verified from vendor names.",
+    "theme_competition_archive_v151.py": "Every candidate needs actual mainboard/non-ST/non-delisting status, security_status and identity_status verified, independent close-limit status and available timestamps. Leader-factor training also requires full-market completeness.",
+    "readiness_20261003.json": "Historical Sep30 categories/roles unavailable by original cutoff; Oct2 current evidence cannot fill those."
+  },
+  "SZSE": {
+    "official_page_url": "https://www.szse.cn/market/product/stock/list/index.html",
+    "data_url": "https://www.szse.cn/api/report/ShowReport?SHOWTYPE=xlsx&CATALOGID=1110&TABKEY=tab1&selectModule=main",
+    "declared_data_date": "2026-09-30",
+    "source_date_basis": "Current JSON metadata.subname, not assertion of prior availability",
+    "capture_utc": "2026-10-02T21:09:52.759720+00:00",
+    "scope": "SZSE mainboard A-share catalogue only",
+    "row_count": 1495,
+    "unique_code_count": 1495,
+    "all_rows_explicit_board_mainboard": true,
+    "official_recordcount_match": true,
+    "available_fields": [
+      "A股代码",
+      "A股简称",
+      "公司全称",
+      "A股上市日期",
+      "板块",
+      "A股总股本",
+      "A股流通股本",
+      "地区/省/市",
+      "所属行业",
+      "公司网址"
+    ],
+    "missing_fields": [
+      "explicit ST regulatory flag and effective timestamp",
+      "explicit delisting-period flag and effective timestamp",
+      "per-day suspension/trading state",
+      "precise independent nonadjusted close and limit price",
+      "historical point-in-time theme memberships",
+      "prior-day complete competition-group trading observations"
+    ],
+    "normalized_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\official_roster_availability_20261002T210606804616Z\\szse_mainboard_roster_normalized.json",
+    "parser_note": "Workbook advertises A1 dimension despite 1496 physical rows and 22 columns; read-only reset_dimensions exposed actual content. All 1495 rows and header retained.",
+    "unit_note": "XLSX total/float capital columns are absolute number of shares; JSON catalogue columns are in 100 million shares and rounded. Do not silently interchange.",
+    "v151_security_status_auto_verified": false,
+    "historical_signal_cutoff_usable": false
+  },
+  "SSE": {
+    "official_page_url": "https://www.sse.com.cn/assortment/stock/list/share/",
+    "official_script_url": "https://www.sse.com.cn/xhtml/home/2021public/querySearch/search_stocksDepositoryReceipts_2021.js",
+    "documented_mainboard_scope": "STOCK_TYPE=1; COMPANY_STATUS codes from official page schema are not independently interpreted",
+    "schema_sql_id": "COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L",
+    "potential_fields": [
+      "A_STOCK_CODE",
+      "COMPANY_CODE",
+      "SEC_NAME_CN",
+      "SEC_NAME_FULL",
+      "LIST_DATE",
+      "PRODUCT_STATUS"
+    ],
+    "primary_response": "HTTP200 JSONP success=false ExceptionInterceptor System Error; zero usable rows",
+    "one_followup": "Official same-page commonExcelDd download returned HTTP200 JSONP success=false 系统繁忙; zero usable rows",
+    "further_attempt_allowed_this_batch": false,
+    "explicit_dates_and_scope_data_available": false
+  },
+  "resource_gap": {
+    "SZSE_report_JS": "Original page-host request404; one correction to declared official res.szse.cn also404; retained and stopped. Does not invalidate successful official report JSON/XLSX."
+  },
+  "eligible_conclusion": "One official future roster source is now operational, and exact SZSE code/name/board/list-date records can be retained prospectively. This alone does not clear security-risk, independent-limit-price, cross-exchange scope or PIT-theme gates. Never label full A, V151-ready, prediction-improved or original historical complete group verified.",
+  "unique_next_step": "Bind this current official roster in future source manifests and acquire explicit regulatory status/limit price plus frozen theme membership and both competitor failures/survivors before any fixed challenge comparison."
+}

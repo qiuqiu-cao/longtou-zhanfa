@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-10-13T06:13:05+00:00",
+  "registered_at": "2026-10-13T06:33:06.913861+00:00",
+  "budget_minutes": 30,
+  "task": "ONE_FIXED_COMPLETE_HISTORICAL_AUTHOR_REHEARSAL",
+  "previous_goal_turn": "PROGRESS_PRACTICE_ENTRY_TIME_RULE_IMPLEMENTED_NO_LIVE_GAIN",
+  "signal_date": "2026-01-05",
+  "selection": "Fixed first2026official session chosen before displaying this day facts or labels",
+  "expected_pool_count_from_metadata": 13,
+  "source_dataset": "research/model_upgrade_validation/leader_role_market_history_20261012T163958Z/actual_market_history/history_with_market_context.json",
+  "candidate_filter": "all original rows on signal date, none excluded",
+  "model_arms": [
+    "ORIGINAL_BASE_SAVED_CALLS",
+    "ONE_ACTUAL_AUTHOR_DIRECTION_WITH_ENHANCED_REASONING"
+  ],
+  "readout": [
+    "Accuracy",
+    "full_known_correct_fraction",
+    "Recall",
+    "Precision",
+    "F1",
+    "coverage",
+    "actual_one_word_and_board_strata"
+  ],
+  "model_context_exposure": "Prior aggregate performance and other dates errors already seen; selected-day calls/scores/target labels not displayed in this round. Not certified blind, not true forward.",
+  "historical_source_formed_later": "DIAGNOSTIC only; no original-time backfill or live registry",
+  "retune_or_repeat_after_outcomes": false,
+  "numeric_fits": 0,
+  "new_mature_forward_samples": 0,
+  "end": "fixed13directions retained then complete same-pool labels once or budget; unknowns not deleted"
+}

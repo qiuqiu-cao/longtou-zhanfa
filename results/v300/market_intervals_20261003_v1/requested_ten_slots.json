@@ -1,0 +1,87 @@
+[
+  {
+    "slot": "index_return",
+    "channels": [
+      "sh_a_return_pct",
+      "sz_a_return_pct"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "两个A股指数分别评分；非上证综指，也非主板专属指数",
+    "live_authorized": false
+  },
+  {
+    "slot": "turnover_amount",
+    "channels": [],
+    "status": "UNAVAILABLE",
+    "definition_or_gap": "缺同范围、完整且可核验的市场成交额序列",
+    "live_authorized": false
+  },
+  {
+    "slot": "limit_up_count",
+    "channels": [
+      "limit_count"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "供应商00/60且名称非ST/退范围；非交易所全市场认证",
+    "live_authorized": false
+  },
+  {
+    "slot": "limit_down_count",
+    "channels": [
+      "down_limit_count"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "同供应商范围；旧段部分负反馈由日线重建",
+    "live_authorized": false
+  },
+  {
+    "slot": "failed_rate",
+    "channels": [
+      "failed_rate"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "炸板家数/(收盘涨停家数+炸板家数)",
+    "live_authorized": false
+  },
+  {
+    "slot": "max_boards",
+    "channels": [
+      "max_board"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "供应商收盘涨停池最高连续板位",
+    "live_authorized": false
+  },
+  {
+    "slot": "promotion_rate",
+    "channels": [
+      "relay_promotion_rate"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "昨日所有2板及以上，今日同代码板位恰好+1；两日池数量须与日表吻合",
+    "live_authorized": false
+  },
+  {
+    "slot": "previous_limit_premium",
+    "channels": [
+      "yesterday_premium"
+    ],
+    "status": "DIAGNOSTIC_ARCHIVE_CHANNELS",
+    "definition_or_gap": "昨日涨停池的收益中位数，非平均收益；反馈覆盖不足不评分",
+    "live_authorized": false
+  },
+  {
+    "slot": "high_stock_feedback",
+    "channels": [],
+    "status": "UNAVAILABLE",
+    "definition_or_gap": "缺预先固定的高位反馈状态真值，不用空间板晋级率代替",
+    "live_authorized": false
+  },
+  {
+    "slot": "theme_strength",
+    "channels": [],
+    "status": "UNAVAILABLE",
+    "definition_or_gap": "缺当时题材归属及题材状态真值",
+    "live_authorized": false
+  }
+]

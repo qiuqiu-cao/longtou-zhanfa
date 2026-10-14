@@ -1,0 +1,108 @@
+{
+  "version": "v167-failed-seal-path-tradeoff-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "first-board candidates on frozen prequential evaluation dates",
+  "definitions": {
+    "LOCKED_NO_REOPEN": "failed_seal_count = 0",
+    "QUICK_REPAIR": "failed_seal_count > 0 and last seal minus first seal <= 30 minutes",
+    "PROLONGED_CONTEST": "failed_seal_count > 0 and last seal minus first seal > 30 minutes"
+  },
+  "evaluation_sessions": 12,
+  "execution_observed_sessions": 12,
+  "complete_execution_sessions": 10,
+  "candidate_rows": 518,
+  "evaluable_rows": 518,
+  "unavailable_rows": 0,
+  "execution_observed_rows": 516,
+  "missing_execution_evidence_rows": 2,
+  "groups": {
+    "LOCKED_NO_REOPEN": {
+      "candidate_n": 225,
+      "session_n": 12,
+      "promotion_rate": 0.19111111111111112,
+      "execution_observed_n": 224,
+      "missing_execution_evidence_n": 1,
+      "unverifiable_limit_queue_n": 19,
+      "filled_n": 205,
+      "b2_known_n": 181,
+      "b2_mean_net_return": -0.007011116043841963,
+      "b2_positive_rate": 0.4143646408839779,
+      "b1_big_loss_known_n": 200,
+      "b1_big_loss_rate": 0.12
+    },
+    "QUICK_REPAIR": {
+      "candidate_n": 144,
+      "session_n": 12,
+      "promotion_rate": 0.2152777777777778,
+      "execution_observed_n": 143,
+      "missing_execution_evidence_n": 1,
+      "unverifiable_limit_queue_n": 15,
+      "filled_n": 128,
+      "b2_known_n": 114,
+      "b2_mean_net_return": -0.016902489596160367,
+      "b2_positive_rate": 0.39473684210526316,
+      "b1_big_loss_known_n": 120,
+      "b1_big_loss_rate": 0.075
+    },
+    "PROLONGED_CONTEST": {
+      "candidate_n": 149,
+      "session_n": 12,
+      "promotion_rate": 0.1342281879194631,
+      "execution_observed_n": 149,
+      "missing_execution_evidence_n": 0,
+      "unverifiable_limit_queue_n": 1,
+      "filled_n": 148,
+      "b2_known_n": 131,
+      "b2_mean_net_return": -0.023893870346165823,
+      "b2_positive_rate": 0.32061068702290074,
+      "b1_big_loss_known_n": 139,
+      "b1_big_loss_rate": 0.16546762589928057
+    }
+  },
+  "quick_repair_minus_prolonged_contest": {
+    "promotion_rate": 0.0810495898583147,
+    "b2_mean_net_return": 0.0069913807500054555,
+    "b2_positive_rate": 0.07412615508236242,
+    "b1_big_loss_rate": -0.09046762589928058
+  },
+  "date_cluster_bootstrap95": {
+    "promotion_rate": [
+      0.014484195402298844,
+      0.1368254422868952
+    ],
+    "b2_mean_net_return": [
+      -0.013286089243207237,
+      0.03055965768110456
+    ],
+    "b2_positive_rate": [
+      -0.07409469185784975,
+      0.23529411764705882
+    ],
+    "b1_big_loss_rate": [
+      -0.16054768428949343,
+      -0.022462724983696752
+    ]
+  },
+  "governance": {
+    "failed_seal_path_positive_ranking_factor_allowed": false,
+    "minimum_complete_execution_sessions_for_factor": 20,
+    "missing_bar_is_unfilled_trade": false,
+    "raw_failed_seal_count_monotonic_rule_allowed": false,
+    "stock_entry_authorized": false
+  },
+  "interpretation": "Raw reopening count is not a sufficient strength score.  The duration of the contest, later promotion, executable holding return and tail loss must agree.",
+  "limitations": [
+    "only later frozen first-board dates are evaluated",
+    "identity and execution coverage are reported separately",
+    "a missing B-session bar is unavailable evidence, never an unfilled trade",
+    "last-minus-first seal time does not reveal every intraday reopen duration",
+    "daily open fill is a proxy rather than queue-level execution",
+    "specific-theme and auction absorption are absent from this isolated test"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\first_board_observations.csv": "b326bc02c08c20aa3e1af2bd0dc5bda70a9fb86f1c99b70f82cc8f8d4bb2a808",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\prequential_predictions.csv": "5c0db4344f94bac9fd4d057f69582a8d781ec2cadbb147fa6145f9841bcf8052"
+  },
+  "rows_sha256": "405c58f9e99dd9d80e6f14802aa627341906de9826fbf6c3d66045f657a3f8b1"
+}

@@ -1,0 +1,892 @@
+{
+  "version": "v124-first-board-speed-quality-audit-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "generated_at": "2026-09-21T21:49:30.578334+08:00",
+  "target": "next_session_closing_second_board_promotion",
+  "observations": 1281,
+  "sessions": 27,
+  "latest_scored_signal_date": "2026-09-21",
+  "calendar_sessions": 684,
+  "factor_summary_full_development": {
+    "ultra_fast_le_0930": {
+      "n": 55,
+      "sessions": 23,
+      "promotion_rate": 0.2727272727272727
+    },
+    "fast_le_0935": {
+      "n": 203,
+      "sessions": 26,
+      "promotion_rate": 0.24630541871921183
+    },
+    "fast_thin_control_risk": {
+      "n": 78,
+      "sessions": 23,
+      "promotion_rate": 0.2948717948717949
+    },
+    "fast_validated_demand": {
+      "n": 57,
+      "sessions": 22,
+      "promotion_rate": 0.15789473684210525
+    },
+    "not_fast_after_0935": {
+      "n": 1078,
+      "sessions": 27,
+      "promotion_rate": 0.14656771799628943
+    },
+    "one_price_proxy": {
+      "n": 25,
+      "sessions": 15,
+      "promotion_rate": 0.4
+    }
+  },
+  "prequential_evaluation": {
+    "candidate_count": 683,
+    "sessions": 15,
+    "positive_rate": 0.17423133235724744,
+    "speed_only_auc": 0.5842049585791763,
+    "speed_only_brier": 0.1419621957475163,
+    "base_quality_auc": 0.6454049704988378,
+    "base_quality_brier": 0.14085250232328972,
+    "emotion_quality_auc": 0.6407116037904523,
+    "emotion_quality_brier": 0.140880525626841,
+    "earliest_seal_daily_top1": {
+      "sessions": 15,
+      "successes": 2,
+      "precision": 0.13333333333333333,
+      "rows": [
+        {
+          "signal_date": "2026-08-26",
+          "code": "002366",
+          "name": "融发核电",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-27",
+          "code": "002155",
+          "name": "湖南黄金",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-28",
+          "code": "002354",
+          "name": "天娱数科",
+          "earliest_score": -15.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-31",
+          "code": "000965",
+          "name": "天保基建",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-04",
+          "code": "003040",
+          "name": "楚天龙",
+          "earliest_score": -15.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-07",
+          "code": "002881",
+          "name": "美格智能",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-08",
+          "code": "000523",
+          "name": "红棉股份",
+          "earliest_score": -10.0,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-09",
+          "code": "002162",
+          "name": "悦心健康",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-10",
+          "code": "600318",
+          "name": "新力金融",
+          "earliest_score": -10.016666666666652,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-11",
+          "code": "002161",
+          "name": "远 望 谷",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-14",
+          "code": "000981",
+          "name": "山子高科",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-15",
+          "code": "002882",
+          "name": "金龙羽",
+          "earliest_score": -15.100000000000023,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-16",
+          "code": "002442",
+          "name": "龙星科技",
+          "earliest_score": -10.0,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-17",
+          "code": "002339",
+          "name": "积成电子",
+          "earliest_score": -20.049999999999955,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-18",
+          "code": "001376",
+          "name": "百通能源",
+          "earliest_score": -10.0,
+          "promotion_label": 1
+        }
+      ]
+    },
+    "speed_model_daily_top1": {
+      "sessions": 15,
+      "successes": 2,
+      "precision": 0.13333333333333333,
+      "rows": [
+        {
+          "signal_date": "2026-08-26",
+          "code": "002366",
+          "name": "融发核电",
+          "speed_probability": 0.1664441075131774,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-27",
+          "code": "002155",
+          "name": "湖南黄金",
+          "speed_probability": 0.17288505330924137,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-28",
+          "code": "002354",
+          "name": "天娱数科",
+          "speed_probability": 0.17399781574778744,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-31",
+          "code": "000965",
+          "name": "天保基建",
+          "speed_probability": 0.1765960897297539,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-04",
+          "code": "003040",
+          "name": "楚天龙",
+          "speed_probability": 0.17462082306359425,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-07",
+          "code": "002881",
+          "name": "美格智能",
+          "speed_probability": 0.18680497410089034,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-08",
+          "code": "000523",
+          "name": "红棉股份",
+          "speed_probability": 0.18789151741887072,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-09",
+          "code": "002162",
+          "name": "悦心健康",
+          "speed_probability": 0.19120182781659292,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-10",
+          "code": "600318",
+          "name": "新力金融",
+          "speed_probability": 0.1924756759239703,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-11",
+          "code": "002161",
+          "name": "远 望 谷",
+          "speed_probability": 0.1935696003960374,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-14",
+          "code": "000981",
+          "name": "山子高科",
+          "speed_probability": 0.19683508560881158,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-15",
+          "code": "002882",
+          "name": "金龙羽",
+          "speed_probability": 0.1901097028222345,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-16",
+          "code": "002442",
+          "name": "龙星科技",
+          "speed_probability": 0.20115409778981128,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-17",
+          "code": "002339",
+          "name": "积成电子",
+          "speed_probability": 0.19340800817768952,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-18",
+          "code": "001376",
+          "name": "百通能源",
+          "speed_probability": 0.20063400969827497,
+          "promotion_label": 1
+        }
+      ]
+    },
+    "base_quality_daily_top1": {
+      "sessions": 15,
+      "successes": 4,
+      "precision": 0.26666666666666666,
+      "rows": [
+        {
+          "signal_date": "2026-08-26",
+          "code": "603396",
+          "name": "金辰股份",
+          "base_quality_probability": 0.2335259890994751,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-27",
+          "code": "002155",
+          "name": "湖南黄金",
+          "base_quality_probability": 0.3668703179022275,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-28",
+          "code": "002354",
+          "name": "天娱数科",
+          "base_quality_probability": 0.22667799759375803,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-31",
+          "code": "002133",
+          "name": "广宇集团",
+          "base_quality_probability": 0.32142424234599287,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-04",
+          "code": "003040",
+          "name": "楚天龙",
+          "base_quality_probability": 0.23717447516574142,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-07",
+          "code": "002881",
+          "name": "美格智能",
+          "base_quality_probability": 0.28226217142117993,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-08",
+          "code": "000523",
+          "name": "红棉股份",
+          "base_quality_probability": 0.33837992901501607,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-09",
+          "code": "600359",
+          "name": "新农开发",
+          "base_quality_probability": 0.21554515915091216,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-10",
+          "code": "600667",
+          "name": "太极实业",
+          "base_quality_probability": 0.19868113835527415,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-11",
+          "code": "002161",
+          "name": "远 望 谷",
+          "base_quality_probability": 0.4604363345681177,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-14",
+          "code": "002212",
+          "name": "天融信",
+          "base_quality_probability": 0.353748374562509,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-15",
+          "code": "002882",
+          "name": "金龙羽",
+          "base_quality_probability": 0.28788185205289984,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-16",
+          "code": "002442",
+          "name": "龙星科技",
+          "base_quality_probability": 0.2970686323072158,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-17",
+          "code": "002836",
+          "name": "新宏泽",
+          "base_quality_probability": 0.2185964494566862,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-18",
+          "code": "001376",
+          "name": "百通能源",
+          "base_quality_probability": 0.35579209854950633,
+          "promotion_label": 1
+        }
+      ]
+    },
+    "emotion_quality_daily_top1": {
+      "sessions": 15,
+      "successes": 4,
+      "precision": 0.26666666666666666,
+      "rows": [
+        {
+          "signal_date": "2026-08-26",
+          "code": "603396",
+          "name": "金辰股份",
+          "emotion_quality_probability": 0.21492013861915077,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-27",
+          "code": "002155",
+          "name": "湖南黄金",
+          "emotion_quality_probability": 0.3917932563984002,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-28",
+          "code": "002354",
+          "name": "天娱数科",
+          "emotion_quality_probability": 0.2683720153618571,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-08-31",
+          "code": "002133",
+          "name": "广宇集团",
+          "emotion_quality_probability": 0.3153562270631331,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-04",
+          "code": "003040",
+          "name": "楚天龙",
+          "emotion_quality_probability": 0.2389423805274621,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-07",
+          "code": "002881",
+          "name": "美格智能",
+          "emotion_quality_probability": 0.3396807170035226,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-08",
+          "code": "000523",
+          "name": "红棉股份",
+          "emotion_quality_probability": 0.3198440428120133,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-09",
+          "code": "600359",
+          "name": "新农开发",
+          "emotion_quality_probability": 0.23733689244793468,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-10",
+          "code": "600667",
+          "name": "太极实业",
+          "emotion_quality_probability": 0.22049110035373914,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-11",
+          "code": "002161",
+          "name": "远 望 谷",
+          "emotion_quality_probability": 0.45617773480535917,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-14",
+          "code": "002212",
+          "name": "天融信",
+          "emotion_quality_probability": 0.36735853998212026,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-15",
+          "code": "002882",
+          "name": "金龙羽",
+          "emotion_quality_probability": 0.2924880048822942,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-16",
+          "code": "002442",
+          "name": "龙星科技",
+          "emotion_quality_probability": 0.24959185459970087,
+          "promotion_label": 0
+        },
+        {
+          "signal_date": "2026-09-17",
+          "code": "002836",
+          "name": "新宏泽",
+          "emotion_quality_probability": 0.22118371839049086,
+          "promotion_label": 1
+        },
+        {
+          "signal_date": "2026-09-18",
+          "code": "001376",
+          "name": "百通能源",
+          "emotion_quality_probability": 0.3395038517651347,
+          "promotion_label": 1
+        }
+      ]
+    }
+  },
+  "current_top10": [
+    {
+      "code": "600593",
+      "name": "大连圣亚",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 36.08333333333337,
+      "last_minus_first_minute": 279.79999999999995,
+      "failed_seal_count": 27.0,
+      "turnover": 12.058444023132324,
+      "amount_to_float_cap": 0.11757369845916184,
+      "seal_fund_to_float_cap": 0.0030372670807453416,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 0,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 1,
+      "industry_all_board_count": 1,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.25950315055824213,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002860",
+      "name": "星帅尔",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 16.899999999999977,
+      "last_minus_first_minute": 16.5,
+      "failed_seal_count": 6.0,
+      "turnover": 7.130138874053955,
+      "amount_to_float_cap": 0.07096498472220603,
+      "seal_fund_to_float_cap": 0.006556109459433973,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 1,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 1,
+      "industry_all_board_count": 1,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.22158878903867577,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "001373",
+      "name": "翔腾新材",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 34.39999999999998,
+      "last_minus_first_minute": 0.0,
+      "failed_seal_count": 0.0,
+      "turnover": 6.374006748199463,
+      "amount_to_float_cap": 0.06225649079251205,
+      "seal_fund_to_float_cap": 0.03989720566773447,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 0,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 2,
+      "industry_all_board_count": 2,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.21814677542544977,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002303",
+      "name": "美盈森",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 15.25,
+      "last_minus_first_minute": 0.0,
+      "failed_seal_count": 0.0,
+      "turnover": 3.210078477859497,
+      "amount_to_float_cap": 0.03193877450010225,
+      "seal_fund_to_float_cap": 0.016069876474371747,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 1,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 1,
+      "industry_all_board_count": 1,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.21807835851775537,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002388",
+      "name": "新亚制程",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 43.299999999999955,
+      "last_minus_first_minute": 19.600000000000023,
+      "failed_seal_count": 1.0,
+      "turnover": 10.425138473510742,
+      "amount_to_float_cap": 0.10153564346492214,
+      "seal_fund_to_float_cap": 0.030792920822452146,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 0,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 1,
+      "industry_all_board_count": 1,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.20517696839970892,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "600281",
+      "name": "华阳新材",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 26.649999999999977,
+      "last_minus_first_minute": 0.0,
+      "failed_seal_count": 0.0,
+      "turnover": 2.9042956829071045,
+      "amount_to_float_cap": 0.02834008709971755,
+      "seal_fund_to_float_cap": 0.028416684401660355,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 0,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 2,
+      "industry_all_board_count": 2,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.19868333510184433,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002367",
+      "name": "康力电梯",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 19.600000000000023,
+      "last_minus_first_minute": 0.9499999999999318,
+      "failed_seal_count": 1.0,
+      "turnover": 3.552574396133423,
+      "amount_to_float_cap": 0.03481434170769037,
+      "seal_fund_to_float_cap": 0.009788709009766113,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 1,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 3,
+      "industry_all_board_count": 3,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.1841489240749095,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002178",
+      "name": "延华智能",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 18.799999999999955,
+      "last_minus_first_minute": 0.0,
+      "failed_seal_count": 0.0,
+      "turnover": 6.604944705963135,
+      "amount_to_float_cap": 0.06571711487684169,
+      "seal_fund_to_float_cap": 0.0020062348147491926,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 1,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 1,
+      "industry_all_board_count": 1,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.18248526634372547,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002724",
+      "name": "海洋王",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 46.299999999999955,
+      "last_minus_first_minute": 10.150000000000091,
+      "failed_seal_count": 1.0,
+      "turnover": 6.8791584968566895,
+      "amount_to_float_cap": 0.06631721998108642,
+      "seal_fund_to_float_cap": 0.017730105624505554,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 0,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 1,
+      "industry_all_board_count": 1,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.18038261565469849,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "603580",
+      "name": "艾艾精工",
+      "signal_date": "2026-09-21",
+      "first_seal_minute": 16.41666666666663,
+      "last_minus_first_minute": 11.100000000000023,
+      "failed_seal_count": 1.0,
+      "turnover": 5.668410301208496,
+      "amount_to_float_cap": 0.05606824313032459,
+      "seal_fund_to_float_cap": 0.003286825454645635,
+      "one_price_proxy": 0,
+      "ultra_fast": 0,
+      "fast_seal": 1,
+      "thin_control_risk": 0,
+      "validated_fast_seal": 0,
+      "industry_first_board_count": 2,
+      "industry_all_board_count": 2,
+      "industry_higher_board_count": 0,
+      "market_first_board_count": 72,
+      "market_relay_count": 21,
+      "emotion_score": 0.8046968877221558,
+      "failed_rate": 0.1982758620689655,
+      "down_limit_count": 2.0,
+      "promotion_1to2": 0.2131147540983606,
+      "relay_appetite": 0.6102479866730474,
+      "crowding_risk": 0.20625,
+      "regime_fragility": 0.1920126258784394,
+      "emotion_adverse_next_probability": 0.4341637010676157,
+      "emotion_supportive_regime": 1,
+      "research_score_not_probability": 0.17992584629785174,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    }
+  ],
+  "governance": {
+    "early_seal_is_ambiguous": true,
+    "thin_control_risk_never_positive_by_itself": true,
+    "industry_fields_are_proxy_not_verified_theme": true,
+    "rank_score_named_probability": false,
+    "deployment_authorized": false,
+    "ranking_champion": "base_quality_without_emotion",
+    "emotion_challenger_promoted": false,
+    "emotion_challenger_rule": "must improve both prequential AUC and Brier before promotion",
+    "minimum_forward_predictions_before_use": 60,
+    "minimum_forward_promotions_before_use": 20,
+    "trading_calendar_separate_from_observation_dates": true,
+    "missing_immediate_next_pool_is_unavailable_not_negative": true
+  },
+  "skipped_pairs": [
+    {
+      "signal_date": "2026-09-01",
+      "reason": "IMMEDIATE_NEXT_SESSION_POOL_MISSING"
+    },
+    {
+      "signal_date": "2026-09-21",
+      "reason": "IMMEDIATE_NEXT_SESSION_POOL_MISSING"
+    }
+  ],
+  "limitations": [
+    "promotion is a closing-board label, not complete-trade profitability",
+    "limit-up close does not prove queue access or a fill",
+    "industry co-movement is not a verified real-theme roster",
+    "available seal-time history is short and may not cover delisted names",
+    "thresholds are predeclared hypotheses and must not be tuned on these results"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260803.csv": "994a6037db23cc11205306b04d6f29a3642c587924f0bca77f77159b32f3d14e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260804.csv": "250c008dc2b6bcca813d6f58954c706169fd9d590bcf667df68d84fc5aa32042",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260805.csv": "a14761933de7a8562522eca3c8e22096b97b7e232beeabdcd2b66ad6fecf97b0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260806.csv": "f8d87a59feeecadb36a25bab9c39c7c4f75fed16e13ce0ec6bc2ae328399f0fd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260807.csv": "226442f2abb32b2261767df2f1175733fd8c722a2475d6ac4960a29964cb1658",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260810.csv": "4ae92c729319584163910a448a1e841244aa0f266350d580fb57c460ba487bca",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260811.csv": "f43b66d82f5ed38773dd2dbab4a611fb9877457fd11f184ea66f16e54b05cea4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260812.csv": "ef0d073c6232abbcccb54d8c3bd4d419d52ca3aa94ae46b1c95c7155ac28fe0c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260813.csv": "77bdf7b90e2aceac8e848d7f896e5180735b00ee97ebf0c923fa8b309e9bf75c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260814.csv": "c7209725acd6ba630b0ac43bb3ca830954d03e35983a44f4b4e82da6e2334443",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260817.csv": "c3281f69cae1d70694e8ae1107256330083756575ecafef0c38f5a1c16658a5a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260818.csv": "9773c630e8afb95c8423911801723eaa91661e9244262a55e8c1cda99e9dc8ef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260819.csv": "26b24963b008b04c939dcb484e3b7c782890bfc9da51d7ea30a67ead8b77cd22",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260820.csv": "fc6d4d431983d9c87f61c6eeba5cf948dc1e125259748aa6e9d3b565210b5d0e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260821.csv": "17243cc9bf888892533aedb2498963535a8e59e0c4a3e240efc5cf6cc9135c81",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260824.csv": "82233b1f329a6a887000872384b8fe5a47b0febd62eafd5c9db12f42f28faf7a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260825.csv": "7543d1aadf86e358b9fc37dc67747b1e440609465da630a5b2287f5fe73a0b6f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260826.csv": "d56bc07aebfef6234251b970ab05028a86aca0b709d8b4b8c5522d0fea4a9289",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\2026-08\\zt_pool_20260827.csv": "753fcc04d49365ac381037dd0645fe903892588428cdd6c0c3cd5c22cad85833",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260828\\limit_up.csv": "9d9021ccbf73fd3e920099ed8277e5ba038e53ce556b2c11bdb4ddd170b106e0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260831\\limit_up.csv": "7afa1c01ae53cdb1357474641a437a4533f341af7765a44970e85cba794d60e0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260901\\limit_up.csv": "635e1411e702ac037cb8f5f44d5f9cddd1909a2c1c14476fce330377a07c52bf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260904\\limit_up.csv": "ff786233c1927ccd8705463677bab640139b8f08c175654c7bd9d6ee44f6e621",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260907\\limit_up.csv": "bf62a95ec98f0b9ca2d476219edfd4e331139ac89019b2452c89a63e72f7d432",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260908\\limit_up.csv": "586c12b430a4504bccb11f2e40043b3f986850873a70bcc04d2d06ad964ac968",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260909\\limit_up.csv": "0c00857aa6f240a8299cb6252544817badbb0d9119689af95f87b8a607006007",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260910\\limit_up.csv": "ab15d62debe31bdfac75dbbf57281c27337316cf373569f4b5795508c6f8fb75",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260911\\limit_up.csv": "296f9efa91131d2ac47f41c67405a3f956e6f796223463802fcd31ea7e7c71f5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260914\\limit_up.csv": "a8e0136f0c94641b0d119880fa742c6514fea5b0d07a70787fb4293a0111b1d8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260915\\limit_up.csv": "fa1c6e019422e68fcd05353279ef7b73add1568965f1e7372aac429b569eaeef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260916\\limit_up.csv": "db795eea11ef1a83a390e1f0a4b3756672bd99f2c72070de55ecbb53319be8cc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260917\\limit_up.csv": "e032ce9edd065e0e63bfb18873e7a29c019a3bb6ba4f8a5ee30216734f6a2426",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260918\\limit_up.csv": "4e86936d05d37d3b8ce8e7e418b93d8362efe41a666d3e7ba7c693fea3225398",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\raw\\20260921\\limit_up.csv": "42ac4619c35b6842cc48f4e01f42544990fc6f662b0b088a280b346f2f5681a0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "fde86a688443c907d80ee1b9d2f94a0e504f7a793a1f23c4f720446ad2e84f00",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_promotion_v124.py": "b1bfbf0b30bba7f4877055e5d6bb55accc19656d35f4c347ff472d0725da117a"
+  }
+}

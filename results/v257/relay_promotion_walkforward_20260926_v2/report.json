@@ -1,0 +1,2907 @@
+{
+  "version": "v257-multi-window-walkforward-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target": "next_session_closing_next_board_promotion",
+  "folds": [
+    {
+      "name": "2024H2",
+      "train_end_exclusive": "2024-07-01",
+      "test_start": "2024-07-01",
+      "test_end_inclusive": "2024-12-31"
+    },
+    {
+      "name": "2025",
+      "train_end_exclusive": "2025-01-01",
+      "test_start": "2025-01-01",
+      "test_end_inclusive": "2025-12-31"
+    },
+    {
+      "name": "2026YTD",
+      "train_end_exclusive": "2026-01-01",
+      "test_start": "2026-01-05",
+      "test_end_inclusive": "2026-08-31"
+    }
+  ],
+  "fold_reports": {
+    "2024H2": {
+      "fold": {
+        "name": "2024H2",
+        "train_end_exclusive": "2024-07-01",
+        "test_start": "2024-07-01",
+        "test_end_inclusive": "2024-12-31"
+      },
+      "train_rows": 1516,
+      "train_dates": 139,
+      "max_training_label_date": "2024-06-28",
+      "test_rows_all_candidates": 2467,
+      "test_rows_complete_dates": 2467,
+      "test_dates_complete": 125,
+      "test_days_dropped_for_incomplete_labels": 0,
+      "pools": {
+        "two_board:non_one_price": {
+          "pool_rows": 1186,
+          "pool_dates": 125,
+          "baseline": {
+            "selected_days": 125,
+            "successes": 39,
+            "promotion_rate": 0.312,
+            "wilson95": [
+              0.23740883229426024,
+              0.3978017557400706
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 48,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 48,
+            "mean_proxy_net_observed_only": -0.035572978589808034,
+            "proxy_positive_observed_only": 0.4166666666666667,
+            "proxy_big_loss_observed_only": 0.49019607843137253
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 125,
+            "successes": 39,
+            "promotion_rate": 0.312,
+            "wilson95": [
+              0.23740883229426024,
+              0.3978017557400706
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 48,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 48,
+            "mean_proxy_net_observed_only": -0.035572978589808034,
+            "proxy_positive_observed_only": 0.4166666666666667,
+            "proxy_big_loss_observed_only": 0.49019607843137253
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 125,
+                "successes": 39,
+                "promotion_rate": 0.312,
+                "wilson95": [
+                  0.23740883229426024,
+                  0.3978017557400706
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 48,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 48,
+                "mean_proxy_net_observed_only": -0.035572978589808034,
+                "proxy_positive_observed_only": 0.4166666666666667,
+                "proxy_big_loss_observed_only": 0.49019607843137253,
+                "selected_score_brier": 0.2283187939069162,
+                "selected_score_auc": 0.4259093619558736
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 125,
+                "model_successes": 39,
+                "baseline_successes": 39,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 125,
+                "model_successes": 39,
+                "baseline_successes": 39,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 48,
+                  "mean_net_observed_only": -0.035572978589808034,
+                  "positive_rate_observed_only": 0.4166666666666667,
+                  "big_loss_rate_observed_only": 0.49019607843137253
+                },
+                "baseline": {
+                  "known_net_rows": 48,
+                  "mean_net_observed_only": -0.035572978589808034,
+                  "positive_rate_observed_only": 0.4166666666666667,
+                  "big_loss_rate_observed_only": 0.49019607843137253
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 125,
+                "successes": 39,
+                "promotion_rate": 0.312,
+                "wilson95": [
+                  0.23740883229426024,
+                  0.3978017557400706
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 48,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 48,
+                "mean_proxy_net_observed_only": -0.035572978589808034,
+                "proxy_positive_observed_only": 0.4166666666666667,
+                "proxy_big_loss_observed_only": 0.49019607843137253,
+                "selected_score_brier": 0.23196108490210465,
+                "selected_score_auc": 0.4692903995229577
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 125,
+                "model_successes": 39,
+                "baseline_successes": 39,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 125,
+                "model_successes": 39,
+                "baseline_successes": 39,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 48,
+                  "mean_net_observed_only": -0.035572978589808034,
+                  "positive_rate_observed_only": 0.4166666666666667,
+                  "big_loss_rate_observed_only": 0.49019607843137253
+                },
+                "baseline": {
+                  "known_net_rows": 48,
+                  "mean_net_observed_only": -0.035572978589808034,
+                  "positive_rate_observed_only": 0.4166666666666667,
+                  "big_loss_rate_observed_only": 0.49019607843137253
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 125,
+                "successes": 38,
+                "promotion_rate": 0.304,
+                "wilson95": [
+                  0.23020330949980428,
+                  0.38948432483385975
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 47,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 47,
+                "mean_proxy_net_observed_only": -0.049754196564485396,
+                "proxy_positive_observed_only": 0.3191489361702128,
+                "proxy_big_loss_observed_only": 0.52,
+                "selected_score_brier": 0.23862670310073378,
+                "selected_score_auc": 0.4643073200241984
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 125,
+                "model_successes": 38,
+                "baseline_successes": 39,
+                "difference": -0.008,
+                "bootstrap95": [
+                  -0.104,
+                  0.088
+                ],
+                "circular_5_date_block95": [
+                  -0.104,
+                  0.08
+                ],
+                "model_only_wins": 20,
+                "baseline_only_wins": 21
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 125,
+                "model_successes": 38,
+                "baseline_successes": 39,
+                "difference": -0.008,
+                "bootstrap95": [
+                  -0.104,
+                  0.088
+                ],
+                "circular_5_date_block95": [
+                  -0.104,
+                  0.08
+                ],
+                "model_only_wins": 20,
+                "baseline_only_wins": 21
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 47,
+                  "mean_net_observed_only": -0.049754196564485396,
+                  "positive_rate_observed_only": 0.3191489361702128,
+                  "big_loss_rate_observed_only": 0.52
+                },
+                "baseline": {
+                  "known_net_rows": 48,
+                  "mean_net_observed_only": -0.035572978589808034,
+                  "positive_rate_observed_only": 0.4166666666666667,
+                  "big_loss_rate_observed_only": 0.49019607843137253
+                },
+                "mean_net_difference": -0.014181217974677363,
+                "positive_rate_difference": -0.0975177304964539,
+                "big_loss_rate_difference": 0.02980392156862749,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        },
+        "three_plus:non_one_price": {
+          "pool_rows": 728,
+          "pool_dates": 115,
+          "baseline": {
+            "selected_days": 115,
+            "successes": 54,
+            "promotion_rate": 0.46956521739130436,
+            "wilson95": [
+              0.3808155902568531,
+              0.5602824064400617
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 62,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 62,
+            "mean_proxy_net_observed_only": -0.03933816483372445,
+            "proxy_positive_observed_only": 0.46774193548387094,
+            "proxy_big_loss_observed_only": 0.48484848484848486
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 115,
+            "successes": 54,
+            "promotion_rate": 0.46956521739130436,
+            "wilson95": [
+              0.3808155902568531,
+              0.5602824064400617
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 62,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 62,
+            "mean_proxy_net_observed_only": -0.03933816483372445,
+            "proxy_positive_observed_only": 0.46774193548387094,
+            "proxy_big_loss_observed_only": 0.48484848484848486
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 115,
+                "successes": 54,
+                "promotion_rate": 0.46956521739130436,
+                "wilson95": [
+                  0.3808155902568531,
+                  0.5602824064400617
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 62,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 62,
+                "mean_proxy_net_observed_only": -0.03933816483372445,
+                "proxy_positive_observed_only": 0.46774193548387094,
+                "proxy_big_loss_observed_only": 0.48484848484848486,
+                "selected_score_brier": 0.251812162260736,
+                "selected_score_auc": 0.6193078324225865
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 115,
+                "model_successes": 54,
+                "baseline_successes": 54,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 115,
+                "model_successes": 54,
+                "baseline_successes": 54,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 62,
+                  "mean_net_observed_only": -0.03933816483372445,
+                  "positive_rate_observed_only": 0.46774193548387094,
+                  "big_loss_rate_observed_only": 0.48484848484848486
+                },
+                "baseline": {
+                  "known_net_rows": 62,
+                  "mean_net_observed_only": -0.03933816483372445,
+                  "positive_rate_observed_only": 0.46774193548387094,
+                  "big_loss_rate_observed_only": 0.48484848484848486
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 115,
+                "successes": 54,
+                "promotion_rate": 0.46956521739130436,
+                "wilson95": [
+                  0.3808155902568531,
+                  0.5602824064400617
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 63,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 63,
+                "mean_proxy_net_observed_only": -0.0385685789000486,
+                "proxy_positive_observed_only": 0.47619047619047616,
+                "proxy_big_loss_observed_only": 0.47761194029850745,
+                "selected_score_brier": 0.2574524078870555,
+                "selected_score_auc": 0.6001821493624772
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 115,
+                "model_successes": 54,
+                "baseline_successes": 54,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 115,
+                "model_successes": 54,
+                "baseline_successes": 54,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 63,
+                  "mean_net_observed_only": -0.0385685789000486,
+                  "positive_rate_observed_only": 0.47619047619047616,
+                  "big_loss_rate_observed_only": 0.47761194029850745
+                },
+                "baseline": {
+                  "known_net_rows": 62,
+                  "mean_net_observed_only": -0.03933816483372445,
+                  "positive_rate_observed_only": 0.46774193548387094,
+                  "big_loss_rate_observed_only": 0.48484848484848486
+                },
+                "mean_net_difference": 0.0007695859336758551,
+                "positive_rate_difference": 0.008448540706605223,
+                "big_loss_rate_difference": -0.007236544549977408,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 115,
+                "successes": 62,
+                "promotion_rate": 0.5391304347826087,
+                "wilson95": [
+                  0.4482376584453216,
+                  0.6274934886586452
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 62,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 62,
+                "mean_proxy_net_observed_only": -0.03048791862774927,
+                "proxy_positive_observed_only": 0.4838709677419355,
+                "proxy_big_loss_observed_only": 0.4461538461538462,
+                "selected_score_brier": 0.25180987673857574,
+                "selected_score_auc": 0.5562994522215459
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 115,
+                "model_successes": 62,
+                "baseline_successes": 54,
+                "difference": 0.06956521739130435,
+                "bootstrap95": [
+                  -0.008695652173913044,
+                  0.14782608695652175
+                ],
+                "circular_5_date_block95": [
+                  -0.02608695652173913,
+                  0.1565217391304348
+                ],
+                "model_only_wins": 14,
+                "baseline_only_wins": 6
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 115,
+                "model_successes": 62,
+                "baseline_successes": 54,
+                "difference": 0.06956521739130435,
+                "bootstrap95": [
+                  -0.008695652173913044,
+                  0.14782608695652175
+                ],
+                "circular_5_date_block95": [
+                  -0.02608695652173913,
+                  0.1565217391304348
+                ],
+                "model_only_wins": 14,
+                "baseline_only_wins": 6
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 62,
+                  "mean_net_observed_only": -0.03048791862774927,
+                  "positive_rate_observed_only": 0.4838709677419355,
+                  "big_loss_rate_observed_only": 0.4461538461538462
+                },
+                "baseline": {
+                  "known_net_rows": 62,
+                  "mean_net_observed_only": -0.03933816483372445,
+                  "positive_rate_observed_only": 0.46774193548387094,
+                  "big_loss_rate_observed_only": 0.48484848484848486
+                },
+                "mean_net_difference": 0.008850246205975184,
+                "positive_rate_difference": 0.016129032258064557,
+                "big_loss_rate_difference": -0.03869463869463868,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        },
+        "all_boards:non_one_price": {
+          "pool_rows": 1914,
+          "pool_dates": 125,
+          "baseline": {
+            "selected_days": 125,
+            "successes": 55,
+            "promotion_rate": 0.44,
+            "wilson95": [
+              0.3560584549578599,
+              0.5275193922871394
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 64,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 64,
+            "mean_proxy_net_observed_only": -0.036909949358167944,
+            "proxy_positive_observed_only": 0.46875,
+            "proxy_big_loss_observed_only": 0.47058823529411764
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 125,
+            "successes": 55,
+            "promotion_rate": 0.44,
+            "wilson95": [
+              0.3560584549578599,
+              0.5275193922871394
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 64,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 64,
+            "mean_proxy_net_observed_only": -0.036909949358167944,
+            "proxy_positive_observed_only": 0.46875,
+            "proxy_big_loss_observed_only": 0.47058823529411764
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 125,
+                "successes": 55,
+                "promotion_rate": 0.44,
+                "wilson95": [
+                  0.3560584549578599,
+                  0.5275193922871394
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 64,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 64,
+                "mean_proxy_net_observed_only": -0.036909949358167944,
+                "proxy_positive_observed_only": 0.46875,
+                "proxy_big_loss_observed_only": 0.47058823529411764,
+                "selected_score_brier": 0.24755541493762387,
+                "selected_score_auc": 0.6555844155844155
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 125,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 125,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 64,
+                  "mean_net_observed_only": -0.036909949358167944,
+                  "positive_rate_observed_only": 0.46875,
+                  "big_loss_rate_observed_only": 0.47058823529411764
+                },
+                "baseline": {
+                  "known_net_rows": 64,
+                  "mean_net_observed_only": -0.036909949358167944,
+                  "positive_rate_observed_only": 0.46875,
+                  "big_loss_rate_observed_only": 0.47058823529411764
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 125,
+                "successes": 55,
+                "promotion_rate": 0.44,
+                "wilson95": [
+                  0.3560584549578599,
+                  0.5275193922871394
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 65,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 65,
+                "mean_proxy_net_observed_only": -0.03620140015284453,
+                "proxy_positive_observed_only": 0.47692307692307695,
+                "proxy_big_loss_observed_only": 0.463768115942029,
+                "selected_score_brier": 0.25362933680565863,
+                "selected_score_auc": 0.6296103896103896
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 125,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 125,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 65,
+                  "mean_net_observed_only": -0.03620140015284453,
+                  "positive_rate_observed_only": 0.47692307692307695,
+                  "big_loss_rate_observed_only": 0.463768115942029
+                },
+                "baseline": {
+                  "known_net_rows": 64,
+                  "mean_net_observed_only": -0.036909949358167944,
+                  "positive_rate_observed_only": 0.46875,
+                  "big_loss_rate_observed_only": 0.47058823529411764
+                },
+                "mean_net_difference": 0.0007085492053234138,
+                "positive_rate_difference": 0.00817307692307695,
+                "big_loss_rate_difference": -0.006820119352088649,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 125,
+                "successes": 62,
+                "promotion_rate": 0.496,
+                "wilson95": [
+                  0.40978626901633625,
+                  0.5824522541333303
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 61,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 61,
+                "mean_proxy_net_observed_only": -0.0368465463783413,
+                "proxy_positive_observed_only": 0.4426229508196721,
+                "proxy_big_loss_observed_only": 0.453125,
+                "selected_score_brier": 0.2542293004227487,
+                "selected_score_auc": 0.5657962109575013
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 125,
+                "model_successes": 62,
+                "baseline_successes": 55,
+                "difference": 0.056,
+                "bootstrap95": [
+                  -0.024,
+                  0.136
+                ],
+                "circular_5_date_block95": [
+                  -0.032,
+                  0.144
+                ],
+                "model_only_wins": 17,
+                "baseline_only_wins": 10
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 125,
+                "model_successes": 62,
+                "baseline_successes": 55,
+                "difference": 0.056,
+                "bootstrap95": [
+                  -0.024,
+                  0.136
+                ],
+                "circular_5_date_block95": [
+                  -0.032,
+                  0.144
+                ],
+                "model_only_wins": 17,
+                "baseline_only_wins": 10
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 61,
+                  "mean_net_observed_only": -0.0368465463783413,
+                  "positive_rate_observed_only": 0.4426229508196721,
+                  "big_loss_rate_observed_only": 0.453125
+                },
+                "baseline": {
+                  "known_net_rows": 64,
+                  "mean_net_observed_only": -0.036909949358167944,
+                  "positive_rate_observed_only": 0.46875,
+                  "big_loss_rate_observed_only": 0.47058823529411764
+                },
+                "mean_net_difference": 6.34029798266475e-05,
+                "positive_rate_difference": -0.026127049180327877,
+                "big_loss_rate_difference": -0.01746323529411764,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        }
+      }
+    },
+    "2025": {
+      "fold": {
+        "name": "2025",
+        "train_end_exclusive": "2025-01-01",
+        "test_start": "2025-01-01",
+        "test_end_inclusive": "2025-12-31"
+      },
+      "train_rows": 3978,
+      "train_dates": 264,
+      "max_training_label_date": "2024-12-31",
+      "test_rows_all_candidates": 3135,
+      "test_rows_complete_dates": 3135,
+      "test_dates_complete": 243,
+      "test_days_dropped_for_incomplete_labels": 0,
+      "pools": {
+        "two_board:non_one_price": {
+          "pool_rows": 1520,
+          "pool_dates": 242,
+          "baseline": {
+            "selected_days": 242,
+            "successes": 76,
+            "promotion_rate": 0.3140495867768595,
+            "wilson95": [
+              0.25886405622855974,
+              0.37504634915330054
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 88,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 88,
+            "mean_proxy_net_observed_only": -0.03254903029653349,
+            "proxy_positive_observed_only": 0.42045454545454547,
+            "proxy_big_loss_observed_only": 0.4318181818181818
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 242,
+            "successes": 76,
+            "promotion_rate": 0.3140495867768595,
+            "wilson95": [
+              0.25886405622855974,
+              0.37504634915330054
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 88,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 88,
+            "mean_proxy_net_observed_only": -0.03254903029653349,
+            "proxy_positive_observed_only": 0.42045454545454547,
+            "proxy_big_loss_observed_only": 0.4318181818181818
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 242,
+                "successes": 76,
+                "promotion_rate": 0.3140495867768595,
+                "wilson95": [
+                  0.25886405622855974,
+                  0.37504634915330054
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 88,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 88,
+                "mean_proxy_net_observed_only": -0.03254903029653349,
+                "proxy_positive_observed_only": 0.42045454545454547,
+                "proxy_big_loss_observed_only": 0.4318181818181818,
+                "selected_score_brier": 0.22376620915823137,
+                "selected_score_auc": 0.4564838300570704
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 242,
+                "model_successes": 76,
+                "baseline_successes": 76,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 242,
+                "model_successes": 76,
+                "baseline_successes": 76,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 88,
+                  "mean_net_observed_only": -0.03254903029653349,
+                  "positive_rate_observed_only": 0.42045454545454547,
+                  "big_loss_rate_observed_only": 0.4318181818181818
+                },
+                "baseline": {
+                  "known_net_rows": 88,
+                  "mean_net_observed_only": -0.03254903029653349,
+                  "positive_rate_observed_only": 0.42045454545454547,
+                  "big_loss_rate_observed_only": 0.4318181818181818
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 242,
+                "successes": 76,
+                "promotion_rate": 0.3140495867768595,
+                "wilson95": [
+                  0.25886405622855974,
+                  0.37504634915330054
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 88,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 88,
+                "mean_proxy_net_observed_only": -0.03254903029653349,
+                "proxy_positive_observed_only": 0.42045454545454547,
+                "proxy_big_loss_observed_only": 0.4318181818181818,
+                "selected_score_brier": 0.22710577039126142,
+                "selected_score_auc": 0.4390456563094483
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 242,
+                "model_successes": 76,
+                "baseline_successes": 76,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 242,
+                "model_successes": 76,
+                "baseline_successes": 76,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 88,
+                  "mean_net_observed_only": -0.03254903029653349,
+                  "positive_rate_observed_only": 0.42045454545454547,
+                  "big_loss_rate_observed_only": 0.4318181818181818
+                },
+                "baseline": {
+                  "known_net_rows": 88,
+                  "mean_net_observed_only": -0.03254903029653349,
+                  "positive_rate_observed_only": 0.42045454545454547,
+                  "big_loss_rate_observed_only": 0.4318181818181818
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 242,
+                "successes": 109,
+                "promotion_rate": 0.45041322314049587,
+                "wilson95": [
+                  0.38898983728513764,
+                  0.5133862708166917
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 109,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 109,
+                "mean_proxy_net_observed_only": -0.025268096214504453,
+                "proxy_positive_observed_only": 0.46788990825688076,
+                "proxy_big_loss_observed_only": 0.3944954128440367,
+                "selected_score_brier": 0.24224147333041068,
+                "selected_score_auc": 0.5856384079464717
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 242,
+                "model_successes": 109,
+                "baseline_successes": 76,
+                "difference": 0.13636363636363635,
+                "bootstrap95": [
+                  0.06198347107438017,
+                  0.21487603305785125
+                ],
+                "circular_5_date_block95": [
+                  0.06611570247933884,
+                  0.2066115702479339
+                ],
+                "model_only_wins": 63,
+                "baseline_only_wins": 30
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 242,
+                "model_successes": 109,
+                "baseline_successes": 76,
+                "difference": 0.13636363636363635,
+                "bootstrap95": [
+                  0.06198347107438017,
+                  0.21487603305785125
+                ],
+                "circular_5_date_block95": [
+                  0.06611570247933884,
+                  0.2066115702479339
+                ],
+                "model_only_wins": 63,
+                "baseline_only_wins": 30
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 109,
+                  "mean_net_observed_only": -0.025268096214504453,
+                  "positive_rate_observed_only": 0.46788990825688076,
+                  "big_loss_rate_observed_only": 0.3944954128440367
+                },
+                "baseline": {
+                  "known_net_rows": 88,
+                  "mean_net_observed_only": -0.03254903029653349,
+                  "positive_rate_observed_only": 0.42045454545454547,
+                  "big_loss_rate_observed_only": 0.4318181818181818
+                },
+                "mean_net_difference": 0.007280934082029039,
+                "positive_rate_difference": 0.04743536280233529,
+                "big_loss_rate_difference": -0.037322768974145104,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        },
+        "three_plus:non_one_price": {
+          "pool_rows": 999,
+          "pool_dates": 237,
+          "baseline": {
+            "selected_days": 237,
+            "successes": 99,
+            "promotion_rate": 0.4177215189873418,
+            "wilson95": [
+              0.35673393207983206,
+              0.48133381509722095
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 124,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 124,
+            "mean_proxy_net_observed_only": -0.0320899105051051,
+            "proxy_positive_observed_only": 0.3870967741935484,
+            "proxy_big_loss_observed_only": 0.376
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 237,
+            "successes": 99,
+            "promotion_rate": 0.4177215189873418,
+            "wilson95": [
+              0.35673393207983206,
+              0.48133381509722095
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 124,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 124,
+            "mean_proxy_net_observed_only": -0.0320899105051051,
+            "proxy_positive_observed_only": 0.3870967741935484,
+            "proxy_big_loss_observed_only": 0.376
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 237,
+                "successes": 99,
+                "promotion_rate": 0.4177215189873418,
+                "wilson95": [
+                  0.35673393207983206,
+                  0.48133381509722095
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 124,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 124,
+                "mean_proxy_net_observed_only": -0.0320899105051051,
+                "proxy_positive_observed_only": 0.3870967741935484,
+                "proxy_big_loss_observed_only": 0.376,
+                "selected_score_brier": 0.27350704105721624,
+                "selected_score_auc": 0.44671351193090325
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 237,
+                "model_successes": 99,
+                "baseline_successes": 99,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 237,
+                "model_successes": 99,
+                "baseline_successes": 99,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "baseline": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 237,
+                "successes": 99,
+                "promotion_rate": 0.4177215189873418,
+                "wilson95": [
+                  0.35673393207983206,
+                  0.48133381509722095
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 124,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 124,
+                "mean_proxy_net_observed_only": -0.0320899105051051,
+                "proxy_positive_observed_only": 0.3870967741935484,
+                "proxy_big_loss_observed_only": 0.376,
+                "selected_score_brier": 0.2799207113202382,
+                "selected_score_auc": 0.418825940565071
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 237,
+                "model_successes": 99,
+                "baseline_successes": 99,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 237,
+                "model_successes": 99,
+                "baseline_successes": 99,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "baseline": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 237,
+                "successes": 120,
+                "promotion_rate": 0.5063291139240507,
+                "wilson95": [
+                  0.44308617876439027,
+                  0.5693701483758364
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 134,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 134,
+                "mean_proxy_net_observed_only": -0.01607861301086699,
+                "proxy_positive_observed_only": 0.4925373134328358,
+                "proxy_big_loss_observed_only": 0.3235294117647059,
+                "selected_score_brier": 0.2506092374564814,
+                "selected_score_auc": 0.5517094017094017
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 237,
+                "model_successes": 120,
+                "baseline_successes": 99,
+                "difference": 0.08860759493670886,
+                "bootstrap95": [
+                  0.029535864978902954,
+                  0.1518987341772152
+                ],
+                "circular_5_date_block95": [
+                  0.029535864978902954,
+                  0.1518987341772152
+                ],
+                "model_only_wins": 39,
+                "baseline_only_wins": 18
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 237,
+                "model_successes": 120,
+                "baseline_successes": 99,
+                "difference": 0.08860759493670886,
+                "bootstrap95": [
+                  0.029535864978902954,
+                  0.1518987341772152
+                ],
+                "circular_5_date_block95": [
+                  0.029535864978902954,
+                  0.1518987341772152
+                ],
+                "model_only_wins": 39,
+                "baseline_only_wins": 18
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 134,
+                  "mean_net_observed_only": -0.01607861301086699,
+                  "positive_rate_observed_only": 0.4925373134328358,
+                  "big_loss_rate_observed_only": 0.3235294117647059
+                },
+                "baseline": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "mean_net_difference": 0.016011297494238113,
+                "positive_rate_difference": 0.10544053923928742,
+                "big_loss_rate_difference": -0.0524705882352941,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        },
+        "all_boards:non_one_price": {
+          "pool_rows": 2519,
+          "pool_dates": 243,
+          "baseline": {
+            "selected_days": 243,
+            "successes": 100,
+            "promotion_rate": 0.411522633744856,
+            "wilson95": [
+              0.3514936737569599,
+              0.4743054435978145
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 124,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 124,
+            "mean_proxy_net_observed_only": -0.0320899105051051,
+            "proxy_positive_observed_only": 0.3870967741935484,
+            "proxy_big_loss_observed_only": 0.376
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 243,
+            "successes": 100,
+            "promotion_rate": 0.411522633744856,
+            "wilson95": [
+              0.3514936737569599,
+              0.4743054435978145
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 124,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 124,
+            "mean_proxy_net_observed_only": -0.0320899105051051,
+            "proxy_positive_observed_only": 0.3870967741935484,
+            "proxy_big_loss_observed_only": 0.376
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 243,
+                "successes": 100,
+                "promotion_rate": 0.411522633744856,
+                "wilson95": [
+                  0.3514936737569599,
+                  0.4743054435978145
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 124,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 124,
+                "mean_proxy_net_observed_only": -0.0320899105051051,
+                "proxy_positive_observed_only": 0.3870967741935484,
+                "proxy_big_loss_observed_only": 0.376,
+                "selected_score_brier": 0.271060936554131,
+                "selected_score_auc": 0.46174825174825174
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 243,
+                "model_successes": 100,
+                "baseline_successes": 100,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 243,
+                "model_successes": 100,
+                "baseline_successes": 100,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "baseline": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 243,
+                "successes": 100,
+                "promotion_rate": 0.411522633744856,
+                "wilson95": [
+                  0.3514936737569599,
+                  0.4743054435978145
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 124,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 124,
+                "mean_proxy_net_observed_only": -0.0320899105051051,
+                "proxy_positive_observed_only": 0.3870967741935484,
+                "proxy_big_loss_observed_only": 0.376,
+                "selected_score_brier": 0.27739471131961174,
+                "selected_score_auc": 0.4346853146853147
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 243,
+                "model_successes": 100,
+                "baseline_successes": 100,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 243,
+                "model_successes": 100,
+                "baseline_successes": 100,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "baseline": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 243,
+                "successes": 133,
+                "promotion_rate": 0.5473251028806584,
+                "wilson95": [
+                  0.4844894840998521,
+                  0.6086877321987567
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 135,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 135,
+                "mean_proxy_net_observed_only": -0.00920505580733052,
+                "proxy_positive_observed_only": 0.5259259259259259,
+                "proxy_big_loss_observed_only": 0.29927007299270075,
+                "selected_score_brier": 0.2566158851747533,
+                "selected_score_auc": 0.4932330827067669
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 243,
+                "model_successes": 133,
+                "baseline_successes": 100,
+                "difference": 0.13580246913580246,
+                "bootstrap95": [
+                  0.06995884773662552,
+                  0.20164609053497942
+                ],
+                "circular_5_date_block95": [
+                  0.07818930041152264,
+                  0.1934156378600823
+                ],
+                "model_only_wins": 50,
+                "baseline_only_wins": 17
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 243,
+                "model_successes": 133,
+                "baseline_successes": 100,
+                "difference": 0.13580246913580246,
+                "bootstrap95": [
+                  0.06995884773662552,
+                  0.20164609053497942
+                ],
+                "circular_5_date_block95": [
+                  0.07818930041152264,
+                  0.1934156378600823
+                ],
+                "model_only_wins": 50,
+                "baseline_only_wins": 17
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 135,
+                  "mean_net_observed_only": -0.00920505580733052,
+                  "positive_rate_observed_only": 0.5259259259259259,
+                  "big_loss_rate_observed_only": 0.29927007299270075
+                },
+                "baseline": {
+                  "known_net_rows": 124,
+                  "mean_net_observed_only": -0.0320899105051051,
+                  "positive_rate_observed_only": 0.3870967741935484,
+                  "big_loss_rate_observed_only": 0.376
+                },
+                "mean_net_difference": 0.022884854697774584,
+                "positive_rate_difference": 0.13882915173237753,
+                "big_loss_rate_difference": -0.07672992700729925,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        }
+      }
+    },
+    "2026YTD": {
+      "fold": {
+        "name": "2026YTD",
+        "train_end_exclusive": "2026-01-01",
+        "test_start": "2026-01-05",
+        "test_end_inclusive": "2026-08-31"
+      },
+      "train_rows": 7111,
+      "train_dates": 507,
+      "max_training_label_date": "2025-12-31",
+      "test_rows_all_candidates": 1941,
+      "test_rows_complete_dates": 1923,
+      "test_dates_complete": 159,
+      "test_days_dropped_for_incomplete_labels": 1,
+      "pools": {
+        "two_board:non_one_price": {
+          "pool_rows": 1156,
+          "pool_dates": 158,
+          "baseline": {
+            "selected_days": 158,
+            "successes": 40,
+            "promotion_rate": 0.25316455696202533,
+            "wilson95": [
+              0.19177661448256408,
+              0.32627024095009105
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 57,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 57,
+            "mean_proxy_net_observed_only": -0.01925836617915968,
+            "proxy_positive_observed_only": 0.38596491228070173,
+            "proxy_big_loss_observed_only": 0.288135593220339
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 158,
+            "successes": 40,
+            "promotion_rate": 0.25316455696202533,
+            "wilson95": [
+              0.19177661448256408,
+              0.32627024095009105
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 57,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 57,
+            "mean_proxy_net_observed_only": -0.01925836617915968,
+            "proxy_positive_observed_only": 0.38596491228070173,
+            "proxy_big_loss_observed_only": 0.288135593220339
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 158,
+                "successes": 40,
+                "promotion_rate": 0.25316455696202533,
+                "wilson95": [
+                  0.19177661448256408,
+                  0.32627024095009105
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 57,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 57,
+                "mean_proxy_net_observed_only": -0.01925836617915968,
+                "proxy_positive_observed_only": 0.38596491228070173,
+                "proxy_big_loss_observed_only": 0.288135593220339,
+                "selected_score_brier": 0.2070007657649789,
+                "selected_score_auc": 0.5617584745762711
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 158,
+                "model_successes": 40,
+                "baseline_successes": 40,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 158,
+                "model_successes": 40,
+                "baseline_successes": 40,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 57,
+                  "mean_net_observed_only": -0.01925836617915968,
+                  "positive_rate_observed_only": 0.38596491228070173,
+                  "big_loss_rate_observed_only": 0.288135593220339
+                },
+                "baseline": {
+                  "known_net_rows": 57,
+                  "mean_net_observed_only": -0.01925836617915968,
+                  "positive_rate_observed_only": 0.38596491228070173,
+                  "big_loss_rate_observed_only": 0.288135593220339
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 158,
+                "successes": 40,
+                "promotion_rate": 0.25316455696202533,
+                "wilson95": [
+                  0.19177661448256408,
+                  0.32627024095009105
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 57,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 57,
+                "mean_proxy_net_observed_only": -0.01925836617915968,
+                "proxy_positive_observed_only": 0.38596491228070173,
+                "proxy_big_loss_observed_only": 0.288135593220339,
+                "selected_score_brier": 0.21004809667194055,
+                "selected_score_auc": 0.49322033898305084
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 158,
+                "model_successes": 40,
+                "baseline_successes": 40,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 158,
+                "model_successes": 40,
+                "baseline_successes": 40,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 57,
+                  "mean_net_observed_only": -0.01925836617915968,
+                  "positive_rate_observed_only": 0.38596491228070173,
+                  "big_loss_rate_observed_only": 0.288135593220339
+                },
+                "baseline": {
+                  "known_net_rows": 57,
+                  "mean_net_observed_only": -0.01925836617915968,
+                  "positive_rate_observed_only": 0.38596491228070173,
+                  "big_loss_rate_observed_only": 0.288135593220339
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 158,
+                "successes": 64,
+                "promotion_rate": 0.4050632911392405,
+                "wilson95": [
+                  0.33165210857864863,
+                  0.48298129735698797
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 77,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 77,
+                "mean_proxy_net_observed_only": -0.030435240110281876,
+                "proxy_positive_observed_only": 0.35064935064935066,
+                "proxy_big_loss_observed_only": 0.3246753246753247,
+                "selected_score_brier": 0.23726819058734944,
+                "selected_score_auc": 0.6053856382978723
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 158,
+                "model_successes": 64,
+                "baseline_successes": 40,
+                "difference": 0.1518987341772152,
+                "bootstrap95": [
+                  0.06962025316455696,
+                  0.24050632911392406
+                ],
+                "circular_5_date_block95": [
+                  0.06962025316455696,
+                  0.23417721518987342
+                ],
+                "model_only_wins": 37,
+                "baseline_only_wins": 13
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 158,
+                "model_successes": 64,
+                "baseline_successes": 40,
+                "difference": 0.1518987341772152,
+                "bootstrap95": [
+                  0.06962025316455696,
+                  0.24050632911392406
+                ],
+                "circular_5_date_block95": [
+                  0.06962025316455696,
+                  0.23417721518987342
+                ],
+                "model_only_wins": 37,
+                "baseline_only_wins": 13
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 77,
+                  "mean_net_observed_only": -0.030435240110281876,
+                  "positive_rate_observed_only": 0.35064935064935066,
+                  "big_loss_rate_observed_only": 0.3246753246753247
+                },
+                "baseline": {
+                  "known_net_rows": 57,
+                  "mean_net_observed_only": -0.01925836617915968,
+                  "positive_rate_observed_only": 0.38596491228070173,
+                  "big_loss_rate_observed_only": 0.288135593220339
+                },
+                "mean_net_difference": -0.011176873931122197,
+                "positive_rate_difference": -0.03531556163135108,
+                "big_loss_rate_difference": 0.03653973145498568,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        },
+        "three_plus:non_one_price": {
+          "pool_rows": 491,
+          "pool_dates": 154,
+          "baseline": {
+            "selected_days": 154,
+            "successes": 55,
+            "promotion_rate": 0.35714285714285715,
+            "wilson95": [
+              0.2857880373562984,
+              0.43545123445008155
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 86,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 86,
+            "mean_proxy_net_observed_only": -0.011027836565088607,
+            "proxy_positive_observed_only": 0.47674418604651164,
+            "proxy_big_loss_observed_only": 0.28735632183908044
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 154,
+            "successes": 55,
+            "promotion_rate": 0.35714285714285715,
+            "wilson95": [
+              0.2857880373562984,
+              0.43545123445008155
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 86,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 86,
+            "mean_proxy_net_observed_only": -0.011027836565088607,
+            "proxy_positive_observed_only": 0.47674418604651164,
+            "proxy_big_loss_observed_only": 0.28735632183908044
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 154,
+                "successes": 55,
+                "promotion_rate": 0.35714285714285715,
+                "wilson95": [
+                  0.2857880373562984,
+                  0.43545123445008155
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 86,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 86,
+                "mean_proxy_net_observed_only": -0.011027836565088607,
+                "proxy_positive_observed_only": 0.47674418604651164,
+                "proxy_big_loss_observed_only": 0.28735632183908044,
+                "selected_score_brier": 0.2574991539901129,
+                "selected_score_auc": 0.4986225895316804
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 154,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 154,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.28735632183908044
+                },
+                "baseline": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.28735632183908044
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 154,
+                "successes": 55,
+                "promotion_rate": 0.35714285714285715,
+                "wilson95": [
+                  0.2857880373562984,
+                  0.43545123445008155
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 86,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 86,
+                "mean_proxy_net_observed_only": -0.011027836565088607,
+                "proxy_positive_observed_only": 0.47674418604651164,
+                "proxy_big_loss_observed_only": 0.28735632183908044,
+                "selected_score_brier": 0.2655013607125991,
+                "selected_score_auc": 0.4415059687786961
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 154,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 154,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.28735632183908044
+                },
+                "baseline": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.28735632183908044
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 154,
+                "successes": 58,
+                "promotion_rate": 0.37662337662337664,
+                "wilson95": [
+                  0.3039760705318012,
+                  0.45527602784643606
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 89,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 89,
+                "mean_proxy_net_observed_only": -0.013501220257771231,
+                "proxy_positive_observed_only": 0.4606741573033708,
+                "proxy_big_loss_observed_only": 0.2808988764044944,
+                "selected_score_brier": 0.25772466895980667,
+                "selected_score_auc": 0.579382183908046
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 154,
+                "model_successes": 58,
+                "baseline_successes": 55,
+                "difference": 0.01948051948051948,
+                "bootstrap95": [
+                  -0.05194805194805195,
+                  0.09090909090909091
+                ],
+                "circular_5_date_block95": [
+                  -0.06493506493506493,
+                  0.1038961038961039
+                ],
+                "model_only_wins": 18,
+                "baseline_only_wins": 15
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 154,
+                "model_successes": 58,
+                "baseline_successes": 55,
+                "difference": 0.01948051948051948,
+                "bootstrap95": [
+                  -0.05194805194805195,
+                  0.09090909090909091
+                ],
+                "circular_5_date_block95": [
+                  -0.06493506493506493,
+                  0.1038961038961039
+                ],
+                "model_only_wins": 18,
+                "baseline_only_wins": 15
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 89,
+                  "mean_net_observed_only": -0.013501220257771231,
+                  "positive_rate_observed_only": 0.4606741573033708,
+                  "big_loss_rate_observed_only": 0.2808988764044944
+                },
+                "baseline": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.28735632183908044
+                },
+                "mean_net_difference": -0.002473383692682624,
+                "positive_rate_difference": -0.01607002874314084,
+                "big_loss_rate_difference": -0.00645744543458604,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        },
+        "all_boards:non_one_price": {
+          "pool_rows": 1647,
+          "pool_dates": 159,
+          "baseline": {
+            "selected_days": 159,
+            "successes": 55,
+            "promotion_rate": 0.34591194968553457,
+            "wilson95": [
+              0.2763987587797403,
+              0.422695069322388
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 86,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 86,
+            "mean_proxy_net_observed_only": -0.011027836565088607,
+            "proxy_positive_observed_only": 0.47674418604651164,
+            "proxy_big_loss_observed_only": 0.29545454545454547
+          },
+          "same_height_identity_baseline": {
+            "selected_days": 159,
+            "successes": 55,
+            "promotion_rate": 0.34591194968553457,
+            "wilson95": [
+              0.2763987587797403,
+              0.422695069322388
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 86,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 86,
+            "mean_proxy_net_observed_only": -0.011027836565088607,
+            "proxy_positive_observed_only": 0.47674418604651164,
+            "proxy_big_loss_observed_only": 0.29545454545454547
+          },
+          "same_height_warning": "shared fields within height; not an independent strong comparator",
+          "models": {
+            "identity": {
+              "summary": {
+                "selected_days": 159,
+                "successes": 55,
+                "promotion_rate": 0.34591194968553457,
+                "wilson95": [
+                  0.2763987587797403,
+                  0.422695069322388
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 86,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 86,
+                "mean_proxy_net_observed_only": -0.011027836565088607,
+                "proxy_positive_observed_only": 0.47674418604651164,
+                "proxy_big_loss_observed_only": 0.29545454545454547,
+                "selected_score_brier": 0.2546680645240582,
+                "selected_score_auc": 0.5216783216783216
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 159,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 159,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.29545454545454547
+                },
+                "baseline": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.29545454545454547
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion": {
+              "summary": {
+                "selected_days": 159,
+                "successes": 55,
+                "promotion_rate": 0.34591194968553457,
+                "wilson95": [
+                  0.2763987587797403,
+                  0.422695069322388
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 86,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 86,
+                "mean_proxy_net_observed_only": -0.011027836565088607,
+                "proxy_positive_observed_only": 0.47674418604651164,
+                "proxy_big_loss_observed_only": 0.29545454545454547,
+                "selected_score_brier": 0.26224583851665245,
+                "selected_score_auc": 0.46765734265734266
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 159,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 159,
+                "model_successes": 55,
+                "baseline_successes": 55,
+                "difference": 0.0,
+                "bootstrap95": [
+                  0.0,
+                  0.0
+                ],
+                "circular_5_date_block95": [
+                  0.0,
+                  0.0
+                ],
+                "model_only_wins": 0,
+                "baseline_only_wins": 0
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.29545454545454547
+                },
+                "baseline": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.29545454545454547
+                },
+                "mean_net_difference": 0.0,
+                "positive_rate_difference": 0.0,
+                "big_loss_rate_difference": 0.0,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            },
+            "identity_emotion_price_volume": {
+              "summary": {
+                "selected_days": 159,
+                "successes": 66,
+                "promotion_rate": 0.41509433962264153,
+                "wilson95": [
+                  0.34139064083926335,
+                  0.49280391750272573
+                ],
+                "one_word_signal_rows": 0,
+                "inferred_touch_fill_rows": 102,
+                "actual_fill_rows": 0,
+                "known_proxy_net_rows": 102,
+                "mean_proxy_net_observed_only": -0.021941257898900907,
+                "proxy_positive_observed_only": 0.4117647058823529,
+                "proxy_big_loss_observed_only": 0.3235294117647059,
+                "selected_score_brier": 0.2598113212714259,
+                "selected_score_auc": 0.5500162919517758
+              },
+              "paired_vs_same_pool_height": {
+                "paired_days": 159,
+                "model_successes": 66,
+                "baseline_successes": 55,
+                "difference": 0.06918238993710692,
+                "bootstrap95": [
+                  -0.012578616352201259,
+                  0.1509433962264151
+                ],
+                "circular_5_date_block95": [
+                  -0.01902515723270426,
+                  0.15723270440251572
+                ],
+                "model_only_wins": 28,
+                "baseline_only_wins": 17
+              },
+              "paired_vs_same_height_identity": {
+                "paired_days": 159,
+                "model_successes": 66,
+                "baseline_successes": 55,
+                "difference": 0.06918238993710692,
+                "bootstrap95": [
+                  -0.012578616352201259,
+                  0.1509433962264151
+                ],
+                "circular_5_date_block95": [
+                  -0.01902515723270426,
+                  0.15723270440251572
+                ],
+                "model_only_wins": 28,
+                "baseline_only_wins": 17
+              },
+              "proxy_trade_outcome_vs_same_pool_height": {
+                "model": {
+                  "known_net_rows": 102,
+                  "mean_net_observed_only": -0.021941257898900907,
+                  "positive_rate_observed_only": 0.4117647058823529,
+                  "big_loss_rate_observed_only": 0.3235294117647059
+                },
+                "baseline": {
+                  "known_net_rows": 86,
+                  "mean_net_observed_only": -0.011027836565088607,
+                  "positive_rate_observed_only": 0.47674418604651164,
+                  "big_loss_rate_observed_only": 0.29545454545454547
+                },
+                "mean_net_difference": -0.0109134213338123,
+                "positive_rate_difference": -0.06497948016415872,
+                "big_loss_rate_difference": 0.02807486631016043,
+                "warning": "inferred daily-OHLC proxy; no actual fills"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "combined_reports": {
+    "two_board:non_one_price": {
+      "pool_dates": 525,
+      "models": {
+        "identity": {
+          "summary": {
+            "selected_days": 525,
+            "successes": 155,
+            "promotion_rate": 0.29523809523809524,
+            "wilson95": [
+              0.2578200256007635,
+              0.3356309105655391
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 193,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 193,
+            "mean_proxy_net_observed_only": -0.029375878293356656,
+            "proxy_positive_observed_only": 0.40932642487046633,
+            "proxy_big_loss_observed_only": 0.40404040404040403,
+            "selected_score_brier": 0.21980455780099653,
+            "selected_score_auc": 0.47093286835222314
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 525,
+            "model_successes": 155,
+            "baseline_successes": 155,
+            "difference": 0.0,
+            "bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "circular_5_date_block95": [
+              0.0,
+              0.0
+            ],
+            "model_only_wins": 0,
+            "baseline_only_wins": 0
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 193,
+              "mean_net_observed_only": -0.029375878293356656,
+              "positive_rate_observed_only": 0.40932642487046633,
+              "big_loss_rate_observed_only": 0.40404040404040403
+            },
+            "baseline": {
+              "known_net_rows": 193,
+              "mean_net_observed_only": -0.029375878293356656,
+              "positive_rate_observed_only": 0.40932642487046633,
+              "big_loss_rate_observed_only": 0.40404040404040403
+            },
+            "mean_net_difference": 0.0,
+            "positive_rate_difference": 0.0,
+            "big_loss_rate_difference": 0.0,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        },
+        "identity_emotion": {
+          "summary": {
+            "selected_days": 525,
+            "successes": 155,
+            "promotion_rate": 0.29523809523809524,
+            "wilson95": [
+              0.2578200256007635,
+              0.3356309105655391
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 193,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 193,
+            "mean_proxy_net_observed_only": -0.029375878293356656,
+            "proxy_positive_observed_only": 0.40932642487046633,
+            "proxy_big_loss_observed_only": 0.40404040404040403,
+            "selected_score_brier": 0.22312825013640944,
+            "selected_score_auc": 0.4621447253705318
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 525,
+            "model_successes": 155,
+            "baseline_successes": 155,
+            "difference": 0.0,
+            "bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "circular_5_date_block95": [
+              0.0,
+              0.0
+            ],
+            "model_only_wins": 0,
+            "baseline_only_wins": 0
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 193,
+              "mean_net_observed_only": -0.029375878293356656,
+              "positive_rate_observed_only": 0.40932642487046633,
+              "big_loss_rate_observed_only": 0.40404040404040403
+            },
+            "baseline": {
+              "known_net_rows": 193,
+              "mean_net_observed_only": -0.029375878293356656,
+              "positive_rate_observed_only": 0.40932642487046633,
+              "big_loss_rate_observed_only": 0.40404040404040403
+            },
+            "mean_net_difference": 0.0,
+            "positive_rate_difference": 0.0,
+            "big_loss_rate_difference": 0.0,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        },
+        "identity_emotion_price_volume": {
+          "summary": {
+            "selected_days": 525,
+            "successes": 211,
+            "promotion_rate": 0.40190476190476193,
+            "wilson95": [
+              0.36082511798638467,
+              0.44440951654909994
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 233,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 233,
+            "mean_proxy_net_observed_only": -0.031914949418040794,
+            "proxy_positive_observed_only": 0.39914163090128757,
+            "proxy_big_loss_observed_only": 0.3983050847457627,
+            "selected_score_brier": 0.23988409246924253,
+            "selected_score_auc": 0.5672261297431099
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 525,
+            "model_successes": 211,
+            "baseline_successes": 155,
+            "difference": 0.10666666666666667,
+            "bootstrap95": [
+              0.05714285714285714,
+              0.1580952380952381
+            ],
+            "circular_5_date_block95": [
+              0.05904761904761905,
+              0.15428571428571428
+            ],
+            "model_only_wins": 120,
+            "baseline_only_wins": 64
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 233,
+              "mean_net_observed_only": -0.031914949418040794,
+              "positive_rate_observed_only": 0.39914163090128757,
+              "big_loss_rate_observed_only": 0.3983050847457627
+            },
+            "baseline": {
+              "known_net_rows": 193,
+              "mean_net_observed_only": -0.029375878293356656,
+              "positive_rate_observed_only": 0.40932642487046633,
+              "big_loss_rate_observed_only": 0.40404040404040403
+            },
+            "mean_net_difference": -0.0025390711246841384,
+            "positive_rate_difference": -0.010184793969178763,
+            "big_loss_rate_difference": -0.005735319294641328,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        }
+      }
+    },
+    "three_plus:non_one_price": {
+      "pool_dates": 506,
+      "models": {
+        "identity": {
+          "summary": {
+            "selected_days": 506,
+            "successes": 208,
+            "promotion_rate": 0.41106719367588934,
+            "wilson95": [
+              0.36902297289195946,
+              0.4544515632742883
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 272,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 272,
+            "mean_proxy_net_observed_only": -0.02708275392250577,
+            "proxy_positive_observed_only": 0.4338235294117647,
+            "proxy_big_loss_observed_only": 0.37410071942446044,
+            "selected_score_brier": 0.2637044211561705,
+            "selected_score_auc": 0.5164397263810016
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 506,
+            "model_successes": 208,
+            "baseline_successes": 208,
+            "difference": 0.0,
+            "bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "circular_5_date_block95": [
+              0.0,
+              0.0
+            ],
+            "model_only_wins": 0,
+            "baseline_only_wins": 0
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 272,
+              "mean_net_observed_only": -0.02708275392250577,
+              "positive_rate_observed_only": 0.4338235294117647,
+              "big_loss_rate_observed_only": 0.37410071942446044
+            },
+            "baseline": {
+              "known_net_rows": 272,
+              "mean_net_observed_only": -0.02708275392250577,
+              "positive_rate_observed_only": 0.4338235294117647,
+              "big_loss_rate_observed_only": 0.37410071942446044
+            },
+            "mean_net_difference": 0.0,
+            "positive_rate_difference": 0.0,
+            "big_loss_rate_difference": 0.0,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        },
+        "identity_emotion": {
+          "summary": {
+            "selected_days": 506,
+            "successes": 208,
+            "promotion_rate": 0.41106719367588934,
+            "wilson95": [
+              0.36902297289195946,
+              0.4544515632742883
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 273,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 273,
+            "mean_proxy_net_observed_only": -0.02695004878363998,
+            "proxy_positive_observed_only": 0.4358974358974359,
+            "proxy_big_loss_observed_only": 0.3727598566308244,
+            "selected_score_brier": 0.27042578071076695,
+            "selected_score_auc": 0.4871257098606092
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 506,
+            "model_successes": 208,
+            "baseline_successes": 208,
+            "difference": 0.0,
+            "bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "circular_5_date_block95": [
+              0.0,
+              0.0
+            ],
+            "model_only_wins": 0,
+            "baseline_only_wins": 0
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 273,
+              "mean_net_observed_only": -0.02695004878363998,
+              "positive_rate_observed_only": 0.4358974358974359,
+              "big_loss_rate_observed_only": 0.3727598566308244
+            },
+            "baseline": {
+              "known_net_rows": 272,
+              "mean_net_observed_only": -0.02708275392250577,
+              "positive_rate_observed_only": 0.4338235294117647,
+              "big_loss_rate_observed_only": 0.37410071942446044
+            },
+            "mean_net_difference": 0.00013270513886579072,
+            "positive_rate_difference": 0.002073906485671184,
+            "big_loss_rate_difference": -0.001340862793636044,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        },
+        "identity_emotion_price_volume": {
+          "summary": {
+            "selected_days": 506,
+            "successes": 240,
+            "promotion_rate": 0.4743083003952569,
+            "wilson95": [
+              0.43115769952026084,
+              0.5178460553722107
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 285,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 285,
+            "mean_proxy_net_observed_only": -0.01840839895199393,
+            "proxy_positive_observed_only": 0.4807017543859649,
+            "proxy_big_loss_observed_only": 0.33793103448275863,
+            "selected_score_brier": 0.2530476761303015,
+            "selected_score_auc": 0.5643327067669173
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 506,
+            "model_successes": 240,
+            "baseline_successes": 208,
+            "difference": 0.06324110671936758,
+            "bootstrap95": [
+              0.023715415019762844,
+              0.10276679841897234
+            ],
+            "circular_5_date_block95": [
+              0.017786561264822136,
+              0.10869565217391304
+            ],
+            "model_only_wins": 71,
+            "baseline_only_wins": 39
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 285,
+              "mean_net_observed_only": -0.01840839895199393,
+              "positive_rate_observed_only": 0.4807017543859649,
+              "big_loss_rate_observed_only": 0.33793103448275863
+            },
+            "baseline": {
+              "known_net_rows": 272,
+              "mean_net_observed_only": -0.02708275392250577,
+              "positive_rate_observed_only": 0.4338235294117647,
+              "big_loss_rate_observed_only": 0.37410071942446044
+            },
+            "mean_net_difference": 0.00867435497051184,
+            "positive_rate_difference": 0.04687822497420019,
+            "big_loss_rate_difference": -0.03616968494170181,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        }
+      }
+    },
+    "all_boards:non_one_price": {
+      "pool_dates": 527,
+      "models": {
+        "identity": {
+          "summary": {
+            "selected_days": 527,
+            "successes": 210,
+            "promotion_rate": 0.3984819734345351,
+            "wilson95": [
+              0.3575621167068107,
+              0.440871109971247
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 274,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 274,
+            "mean_proxy_net_observed_only": -0.02660503505895402,
+            "proxy_positive_observed_only": 0.4343065693430657,
+            "proxy_big_loss_observed_only": 0.3736654804270463,
+            "selected_score_brier": 0.26053976605157886,
+            "selected_score_auc": 0.539312002403485
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 527,
+            "model_successes": 210,
+            "baseline_successes": 210,
+            "difference": 0.0,
+            "bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "circular_5_date_block95": [
+              0.0,
+              0.0
+            ],
+            "model_only_wins": 0,
+            "baseline_only_wins": 0
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 274,
+              "mean_net_observed_only": -0.02660503505895402,
+              "positive_rate_observed_only": 0.4343065693430657,
+              "big_loss_rate_observed_only": 0.3736654804270463
+            },
+            "baseline": {
+              "known_net_rows": 274,
+              "mean_net_observed_only": -0.02660503505895402,
+              "positive_rate_observed_only": 0.4343065693430657,
+              "big_loss_rate_observed_only": 0.3736654804270463
+            },
+            "mean_net_difference": 0.0,
+            "positive_rate_difference": 0.0,
+            "big_loss_rate_difference": 0.0,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        },
+        "identity_emotion": {
+          "summary": {
+            "selected_days": 527,
+            "successes": 210,
+            "promotion_rate": 0.3984819734345351,
+            "wilson95": [
+              0.3575621167068107,
+              0.440871109971247
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 275,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 275,
+            "mean_proxy_net_observed_only": -0.02647503220787472,
+            "proxy_positive_observed_only": 0.43636363636363634,
+            "proxy_big_loss_observed_only": 0.3723404255319149,
+            "selected_score_brier": 0.26718723012432777,
+            "selected_score_auc": 0.5090581342947273
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 527,
+            "model_successes": 210,
+            "baseline_successes": 210,
+            "difference": 0.0,
+            "bootstrap95": [
+              0.0,
+              0.0
+            ],
+            "circular_5_date_block95": [
+              0.0,
+              0.0
+            ],
+            "model_only_wins": 0,
+            "baseline_only_wins": 0
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 275,
+              "mean_net_observed_only": -0.02647503220787472,
+              "positive_rate_observed_only": 0.43636363636363634,
+              "big_loss_rate_observed_only": 0.3723404255319149
+            },
+            "baseline": {
+              "known_net_rows": 274,
+              "mean_net_observed_only": -0.02660503505895402,
+              "positive_rate_observed_only": 0.4343065693430657,
+              "big_loss_rate_observed_only": 0.3736654804270463
+            },
+            "mean_net_difference": 0.00013000285107930137,
+            "positive_rate_difference": 0.0020570670205706243,
+            "big_loss_rate_difference": -0.0013250548951314056,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        },
+        "identity_emotion_price_volume": {
+          "summary": {
+            "selected_days": 527,
+            "successes": 261,
+            "promotion_rate": 0.4952561669829222,
+            "wilson95": [
+              0.4527584502104955,
+              0.5378225416903482
+            ],
+            "one_word_signal_rows": 0,
+            "inferred_touch_fill_rows": 298,
+            "actual_fill_rows": 0,
+            "known_proxy_net_rows": 298,
+            "mean_proxy_net_observed_only": -0.019222584458913866,
+            "proxy_positive_observed_only": 0.4697986577181208,
+            "proxy_big_loss_observed_only": 0.33993399339933994,
+            "selected_score_brier": 0.2570138951280178,
+            "selected_score_auc": 0.5336617405582922
+          },
+          "paired_vs_same_pool_height": {
+            "paired_days": 527,
+            "model_successes": 261,
+            "baseline_successes": 210,
+            "difference": 0.0967741935483871,
+            "bootstrap95": [
+              0.05313092979127135,
+              0.13851992409867173
+            ],
+            "circular_5_date_block95": [
+              0.05313092979127135,
+              0.14041745730550284
+            ],
+            "model_only_wins": 95,
+            "baseline_only_wins": 44
+          },
+          "proxy_trade_outcome_vs_same_pool_height": {
+            "model": {
+              "known_net_rows": 298,
+              "mean_net_observed_only": -0.019222584458913866,
+              "positive_rate_observed_only": 0.4697986577181208,
+              "big_loss_rate_observed_only": 0.33993399339933994
+            },
+            "baseline": {
+              "known_net_rows": 274,
+              "mean_net_observed_only": -0.02660503505895402,
+              "positive_rate_observed_only": 0.4343065693430657,
+              "big_loss_rate_observed_only": 0.3736654804270463
+            },
+            "mean_net_difference": 0.007382450600040155,
+            "positive_rate_difference": 0.035492088375055075,
+            "big_loss_rate_difference": -0.03373148702770634,
+            "warning": "inferred daily-OHLC proxy; no actual fills"
+          }
+        }
+      }
+    }
+  },
+  "source_audit": {
+    "source_rows": 9063,
+    "source_dates": 668,
+    "source_range": [
+      "2023-11-29",
+      "2026-08-31"
+    ],
+    "theme_available_rows": 0,
+    "complete_label_dates": 667
+  },
+  "model_features": {
+    "identity": [
+      "boards",
+      "height_gap",
+      "same_height_rivals",
+      "unique_space",
+      "height_share",
+      "is_space_leader"
+    ],
+    "identity_emotion": [
+      "boards",
+      "height_gap",
+      "same_height_rivals",
+      "unique_space",
+      "height_share",
+      "is_space_leader",
+      "emotion_score",
+      "promotion_2to3",
+      "promotion_3to4",
+      "promotion_mid",
+      "previous_limit_tail_loss",
+      "failed_rate",
+      "down_limit_rate",
+      "breadth_health",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility"
+    ],
+    "identity_emotion_price_volume": [
+      "boards",
+      "height_gap",
+      "same_height_rivals",
+      "unique_space",
+      "height_share",
+      "is_space_leader",
+      "emotion_score",
+      "promotion_2to3",
+      "promotion_3to4",
+      "promotion_mid",
+      "previous_limit_tail_loss",
+      "failed_rate",
+      "down_limit_rate",
+      "breadth_health",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "turnover",
+      "signal_amount",
+      "amplitude",
+      "turnover_vs_prev",
+      "price"
+    ]
+  },
+  "interpretation": {
+    "is_pristine_blind_test": false,
+    "reason": "historical archive was already used by earlier project iterations",
+    "theme_and_intraday_missing": true,
+    "actual_fill_count": 0,
+    "promotion_is_eventual_leader": false,
+    "entry_authorized": false,
+    "decision_contract": {
+      "identity_channel": "LEADER_IDENTITY_DIAGNOSTIC",
+      "trade_authorization": "CASH",
+      "reason": "theme_intraday_actual_fill_evidence_missing"
+    }
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_promotion_walkforward_v257.py": "32c8157a6b6e404fa8822e8e539d22d0067950094e80cb06c416d2c3e05b8eb5"
+  },
+  "artifact_hashes": {
+    "all_fold_predictions_LABEL_ONLY.csv": "a9dcce8b7cb0f83b335e0f875b2cd2f03f34fa3dcdf3857a172c10133e444cd8"
+  }
+}

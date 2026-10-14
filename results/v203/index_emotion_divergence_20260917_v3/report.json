@@ -1,0 +1,875 @@
+{
+  "version": "v203-index-emotion-divergence-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "data_quality": {
+    "dual_index_calendar_sessions": 681,
+    "emotion_rows_available": 679,
+    "emotion_rows_missing_on_index_calendar": 2,
+    "missing_emotion_dates": [
+      "2026-09-02",
+      "2026-09-03"
+    ],
+    "index_providers": {
+      "sh000002": "tencent",
+      "sz399107": "tencent"
+    },
+    "index_status": "DELAYED_PROVIDER_OBSERVED_NOT_OFFICIAL_RECONCILED",
+    "emotion_status": "MIXED_VERIFIED_AND_SPARSE_HISTORICAL_ROWS",
+    "missing_emotion_rows_imputed": false,
+    "sparse_review_dates_used_as_calendar": false
+  },
+  "definition": {
+    "broad_index_up": "both 上证A股指数 and 深证A股指数 daily returns > 0",
+    "short_positive": "same-day previous-limit median return > 0",
+    "short_loss": "same-day previous-limit median return <= 0",
+    "divergence": "BOTH_UP_SHORT_LOSS",
+    "thresholds_selected_on_outcomes": false
+  },
+  "latest_context": {
+    "date": "2026-09-16",
+    "sh_a_return_pct": 0.7085879577068521,
+    "sz_a_return_pct": 1.3279423150617475,
+    "previous_limit_median_return": 0.0096195888519287,
+    "divergence_category": "BOTH_UP_SHORT_POSITIVE",
+    "emotion_state": "修复",
+    "broad_index_may_override_short_ecology": false
+  },
+  "full_group_summary": {
+    "BOTH_UP_SHORT_POSITIVE": {
+      "sessions": 259,
+      "first_date": "2023-12-01",
+      "last_date": "2026-09-16",
+      "next_adverse_state": {
+        "known": 258,
+        "mean": 0.35271317829457366
+      },
+      "next_supportive_state": {
+        "known": 258,
+        "mean": 0.6162790697674418
+      },
+      "next_three_any_adverse": {
+        "known": 258,
+        "mean": 0.8062015503875969
+      },
+      "next_previous_limit_median_return": {
+        "known": 258,
+        "mean": 0.014050141990637241
+      },
+      "next_failed_rate": {
+        "known": 258,
+        "mean": 0.33737419025126186
+      },
+      "next_down_limit_count": {
+        "known": 257,
+        "mean": 13.45136186770428
+      },
+      "next_promotion_mid": {
+        "known": 258,
+        "mean": 0.4162775537443541
+      }
+    },
+    "BOTH_UP_SHORT_LOSS": {
+      "sessions": 47,
+      "first_date": "2023-12-19",
+      "last_date": "2026-08-31",
+      "next_adverse_state": {
+        "known": 47,
+        "mean": 0.425531914893617
+      },
+      "next_supportive_state": {
+        "known": 47,
+        "mean": 0.5531914893617021
+      },
+      "next_three_any_adverse": {
+        "known": 46,
+        "mean": 0.7608695652173914
+      },
+      "next_previous_limit_median_return": {
+        "known": 47,
+        "mean": 0.006437652825287432
+      },
+      "next_failed_rate": {
+        "known": 47,
+        "mean": 0.3553985366081721
+      },
+      "next_down_limit_count": {
+        "known": 47,
+        "mean": 9.53191489361702
+      },
+      "next_promotion_mid": {
+        "known": 47,
+        "mean": 0.43212045047151426
+      }
+    },
+    "BOTH_DOWN_SHORT_POSITIVE": {
+      "sessions": 119,
+      "first_date": "2023-12-04",
+      "last_date": "2026-09-14",
+      "next_adverse_state": {
+        "known": 119,
+        "mean": 0.5630252100840336
+      },
+      "next_supportive_state": {
+        "known": 119,
+        "mean": 0.42016806722689076
+      },
+      "next_three_any_adverse": {
+        "known": 117,
+        "mean": 0.8547008547008547
+      },
+      "next_previous_limit_median_return": {
+        "known": 119,
+        "mean": 0.008255906265674467
+      },
+      "next_failed_rate": {
+        "known": 119,
+        "mean": 0.34041089371062694
+      },
+      "next_down_limit_count": {
+        "known": 119,
+        "mean": 44.0
+      },
+      "next_promotion_mid": {
+        "known": 119,
+        "mean": 0.3880037561848057
+      }
+    },
+    "BOTH_DOWN_SHORT_LOSS": {
+      "sessions": 136,
+      "first_date": "2023-11-29",
+      "last_date": "2026-09-15",
+      "next_adverse_state": {
+        "known": 135,
+        "mean": 0.6
+      },
+      "next_supportive_state": {
+        "known": 135,
+        "mean": 0.3925925925925926
+      },
+      "next_three_any_adverse": {
+        "known": 134,
+        "mean": 0.8507462686567164
+      },
+      "next_previous_limit_median_return": {
+        "known": 135,
+        "mean": 0.008401608427217619
+      },
+      "next_failed_rate": {
+        "known": 135,
+        "mean": 0.3425486241203997
+      },
+      "next_down_limit_count": {
+        "known": 135,
+        "mean": 19.925925925925927
+      },
+      "next_promotion_mid": {
+        "known": 135,
+        "mean": 0.37827797255991563
+      }
+    },
+    "MIXED_INDEX": {
+      "sessions": 117,
+      "first_date": "2023-11-30",
+      "last_date": "2026-09-09",
+      "next_adverse_state": {
+        "known": 117,
+        "mean": 0.4700854700854701
+      },
+      "next_supportive_state": {
+        "known": 117,
+        "mean": 0.5299145299145299
+      },
+      "next_three_any_adverse": {
+        "known": 117,
+        "mean": 0.8034188034188035
+      },
+      "next_previous_limit_median_return": {
+        "known": 117,
+        "mean": 0.006886260469505041
+      },
+      "next_failed_rate": {
+        "known": 117,
+        "mean": 0.3306843047439579
+      },
+      "next_down_limit_count": {
+        "known": 117,
+        "mean": 17.88888888888889
+      },
+      "next_promotion_mid": {
+        "known": 117,
+        "mean": 0.4077254251890902
+      }
+    }
+  },
+  "discovery_group_summary": {
+    "BOTH_UP_SHORT_POSITIVE": {
+      "sessions": 180,
+      "first_date": "2023-12-01",
+      "last_date": "2025-11-13",
+      "next_adverse_state": {
+        "known": 180,
+        "mean": 0.36666666666666664
+      },
+      "next_supportive_state": {
+        "known": 180,
+        "mean": 0.5944444444444444
+      },
+      "next_three_any_adverse": {
+        "known": 180,
+        "mean": 0.8388888888888889
+      },
+      "next_previous_limit_median_return": {
+        "known": 180,
+        "mean": 0.014926969447885045
+      },
+      "next_failed_rate": {
+        "known": 180,
+        "mean": 0.3569499133772154
+      },
+      "next_down_limit_count": {
+        "known": 180,
+        "mean": 14.466666666666667
+      },
+      "next_promotion_mid": {
+        "known": 180,
+        "mean": 0.4339525592120875
+      }
+    },
+    "BOTH_UP_SHORT_LOSS": {
+      "sessions": 33,
+      "first_date": "2023-12-19",
+      "last_date": "2025-10-24",
+      "next_adverse_state": {
+        "known": 33,
+        "mean": 0.45454545454545453
+      },
+      "next_supportive_state": {
+        "known": 33,
+        "mean": 0.5151515151515151
+      },
+      "next_three_any_adverse": {
+        "known": 33,
+        "mean": 0.8181818181818182
+      },
+      "next_previous_limit_median_return": {
+        "known": 33,
+        "mean": 0.00713277700017978
+      },
+      "next_failed_rate": {
+        "known": 33,
+        "mean": 0.36837476639823363
+      },
+      "next_down_limit_count": {
+        "known": 33,
+        "mean": 7.696969696969697
+      },
+      "next_promotion_mid": {
+        "known": 33,
+        "mean": 0.43073778073778074
+      }
+    },
+    "BOTH_DOWN_SHORT_POSITIVE": {
+      "sessions": 89,
+      "first_date": "2023-12-04",
+      "last_date": "2025-11-12",
+      "next_adverse_state": {
+        "known": 89,
+        "mean": 0.5393258426966292
+      },
+      "next_supportive_state": {
+        "known": 89,
+        "mean": 0.449438202247191
+      },
+      "next_three_any_adverse": {
+        "known": 89,
+        "mean": 0.8426966292134831
+      },
+      "next_previous_limit_median_return": {
+        "known": 89,
+        "mean": 0.01048463057567166
+      },
+      "next_failed_rate": {
+        "known": 89,
+        "mean": 0.3506204925138468
+      },
+      "next_down_limit_count": {
+        "known": 89,
+        "mean": 52.03370786516854
+      },
+      "next_promotion_mid": {
+        "known": 89,
+        "mean": 0.41236700240683255
+      }
+    },
+    "BOTH_DOWN_SHORT_LOSS": {
+      "sessions": 88,
+      "first_date": "2023-11-29",
+      "last_date": "2025-09-26",
+      "next_adverse_state": {
+        "known": 88,
+        "mean": 0.6363636363636364
+      },
+      "next_supportive_state": {
+        "known": 88,
+        "mean": 0.3522727272727273
+      },
+      "next_three_any_adverse": {
+        "known": 88,
+        "mean": 0.8295454545454546
+      },
+      "next_previous_limit_median_return": {
+        "known": 88,
+        "mean": 0.008260901245566441
+      },
+      "next_failed_rate": {
+        "known": 88,
+        "mean": 0.36074924962366206
+      },
+      "next_down_limit_count": {
+        "known": 88,
+        "mean": 16.488636363636363
+      },
+      "next_promotion_mid": {
+        "known": 88,
+        "mean": 0.39331931038329254
+      }
+    },
+    "MIXED_INDEX": {
+      "sessions": 84,
+      "first_date": "2023-11-30",
+      "last_date": "2025-10-16",
+      "next_adverse_state": {
+        "known": 84,
+        "mean": 0.4642857142857143
+      },
+      "next_supportive_state": {
+        "known": 84,
+        "mean": 0.5357142857142857
+      },
+      "next_three_any_adverse": {
+        "known": 84,
+        "mean": 0.7976190476190477
+      },
+      "next_previous_limit_median_return": {
+        "known": 84,
+        "mean": 0.00709618771608013
+      },
+      "next_failed_rate": {
+        "known": 84,
+        "mean": 0.3453919225618297
+      },
+      "next_down_limit_count": {
+        "known": 84,
+        "mean": 18.88095238095238
+      },
+      "next_promotion_mid": {
+        "known": 84,
+        "mean": 0.4299712098628272
+      }
+    }
+  },
+  "validation_group_summary": {
+    "BOTH_UP_SHORT_POSITIVE": {
+      "sessions": 79,
+      "first_date": "2025-11-24",
+      "last_date": "2026-09-16",
+      "next_adverse_state": {
+        "known": 78,
+        "mean": 0.32051282051282054
+      },
+      "next_supportive_state": {
+        "known": 78,
+        "mean": 0.6666666666666666
+      },
+      "next_three_any_adverse": {
+        "known": 78,
+        "mean": 0.7307692307692307
+      },
+      "next_previous_limit_median_return": {
+        "known": 78,
+        "mean": 0.01202669401237307
+      },
+      "next_failed_rate": {
+        "known": 78,
+        "mean": 0.2921994445759844
+      },
+      "next_down_limit_count": {
+        "known": 77,
+        "mean": 11.077922077922079
+      },
+      "next_promotion_mid": {
+        "known": 78,
+        "mean": 0.3754890795880461
+      }
+    },
+    "BOTH_UP_SHORT_LOSS": {
+      "sessions": 14,
+      "first_date": "2025-12-17",
+      "last_date": "2026-08-31",
+      "next_adverse_state": {
+        "known": 14,
+        "mean": 0.35714285714285715
+      },
+      "next_supportive_state": {
+        "known": 14,
+        "mean": 0.6428571428571429
+      },
+      "next_three_any_adverse": {
+        "known": 13,
+        "mean": 0.6153846153846154
+      },
+      "next_previous_limit_median_return": {
+        "known": 14,
+        "mean": 0.004799145841612615
+      },
+      "next_failed_rate": {
+        "known": 14,
+        "mean": 0.32481170924588426
+      },
+      "next_down_limit_count": {
+        "known": 14,
+        "mean": 13.857142857142858
+      },
+      "next_promotion_mid": {
+        "known": 14,
+        "mean": 0.435379600558172
+      }
+    },
+    "BOTH_DOWN_SHORT_POSITIVE": {
+      "sessions": 30,
+      "first_date": "2025-11-14",
+      "last_date": "2026-09-14",
+      "next_adverse_state": {
+        "known": 30,
+        "mean": 0.6333333333333333
+      },
+      "next_supportive_state": {
+        "known": 30,
+        "mean": 0.3333333333333333
+      },
+      "next_three_any_adverse": {
+        "known": 28,
+        "mean": 0.8928571428571429
+      },
+      "next_previous_limit_median_return": {
+        "known": 30,
+        "mean": 0.00164402414601613
+      },
+      "next_failed_rate": {
+        "known": 30,
+        "mean": 0.3101224172610746
+      },
+      "next_down_limit_count": {
+        "known": 30,
+        "mean": 20.166666666666668
+      },
+      "next_promotion_mid": {
+        "known": 30,
+        "mean": 0.31572612572612574
+      }
+    },
+    "BOTH_DOWN_SHORT_LOSS": {
+      "sessions": 48,
+      "first_date": "2025-11-18",
+      "last_date": "2026-09-15",
+      "next_adverse_state": {
+        "known": 47,
+        "mean": 0.5319148936170213
+      },
+      "next_supportive_state": {
+        "known": 47,
+        "mean": 0.46808510638297873
+      },
+      "next_three_any_adverse": {
+        "known": 46,
+        "mean": 0.8913043478260869
+      },
+      "next_previous_limit_median_return": {
+        "known": 47,
+        "mean": 0.008665060171585779
+      },
+      "next_failed_rate": {
+        "known": 47,
+        "mean": 0.3084708572206744
+      },
+      "next_down_limit_count": {
+        "known": 47,
+        "mean": 26.361702127659573
+      },
+      "next_promotion_mid": {
+        "known": 47,
+        "mean": 0.3501154676991249
+      }
+    },
+    "MIXED_INDEX": {
+      "sessions": 33,
+      "first_date": "2025-11-17",
+      "last_date": "2026-09-09",
+      "next_adverse_state": {
+        "known": 33,
+        "mean": 0.48484848484848486
+      },
+      "next_supportive_state": {
+        "known": 33,
+        "mean": 0.5151515151515151
+      },
+      "next_three_any_adverse": {
+        "known": 33,
+        "mean": 0.8181818181818182
+      },
+      "next_previous_limit_median_return": {
+        "known": 33,
+        "mean": 0.006351900205495716
+      },
+      "next_failed_rate": {
+        "known": 33,
+        "mean": 0.29324673211664726
+      },
+      "next_down_limit_count": {
+        "known": 33,
+        "mean": 15.363636363636363
+      },
+      "next_promotion_mid": {
+        "known": 33,
+        "mean": 0.351099791474123
+      }
+    }
+  },
+  "weekly_clustered_comparisons": {
+    "full": {
+      "next_adverse_state": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 47,
+        "group_b_n": 258,
+        "observed_mean_difference_a_minus_b": 0.07281873659904337,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.06545520187962044,
+          0.2207119407252511
+        ]
+      },
+      "next_three_any_adverse": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 46,
+        "group_b_n": 258,
+        "observed_mean_difference_a_minus_b": -0.045331985170205535,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.19812033884863353,
+          0.09405625316929705
+        ]
+      },
+      "next_previous_limit_median_return": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 47,
+        "group_b_n": 258,
+        "observed_mean_difference_a_minus_b": -0.007612489165349809,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.01422438143745282,
+          -0.0005089914162073475
+        ]
+      },
+      "next_failed_rate": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 47,
+        "group_b_n": 258,
+        "observed_mean_difference_a_minus_b": 0.018024346356910248,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.008534858631595973,
+          0.04407000005170975
+        ]
+      },
+      "next_down_limit_count": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 47,
+        "group_b_n": 257,
+        "observed_mean_difference_a_minus_b": -3.9194469740872595,
+        "weekly_cluster_bootstrap_ci95": [
+          -13.858805079678685,
+          2.6580789321789267
+        ]
+      },
+      "next_promotion_mid": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 47,
+        "group_b_n": 258,
+        "observed_mean_difference_a_minus_b": 0.01584289672716016,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.04323142675782224,
+          0.07508380829470188
+        ]
+      }
+    },
+    "discovery_first_70pct": {
+      "next_adverse_state": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 33,
+        "group_b_n": 180,
+        "observed_mean_difference_a_minus_b": 0.08787878787878789,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.08130226592170609,
+          0.2531339180795699
+        ]
+      },
+      "next_three_any_adverse": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 33,
+        "group_b_n": 180,
+        "observed_mean_difference_a_minus_b": -0.020707070707070674,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.18716827895611765,
+          0.1178650034842382
+        ]
+      },
+      "next_previous_limit_median_return": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 33,
+        "group_b_n": 180,
+        "observed_mean_difference_a_minus_b": -0.007794192447705265,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.016689336054332843,
+          0.0008417539849493368
+        ]
+      },
+      "next_failed_rate": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 33,
+        "group_b_n": 180,
+        "observed_mean_difference_a_minus_b": 0.011424853021018255,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.010312556574501454,
+          0.037375433245098566
+        ]
+      },
+      "next_down_limit_count": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 33,
+        "group_b_n": 180,
+        "observed_mean_difference_a_minus_b": -6.7696969696969695,
+        "weekly_cluster_bootstrap_ci95": [
+          -19.557119647593787,
+          1.56060656397865
+        ]
+      },
+      "next_promotion_mid": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 33,
+        "group_b_n": 180,
+        "observed_mean_difference_a_minus_b": -0.0032147784743067342,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.07739813924525181,
+          0.06803763177706848
+        ]
+      }
+    },
+    "validation_last_30pct": {
+      "next_adverse_state": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 14,
+        "group_b_n": 78,
+        "observed_mean_difference_a_minus_b": 0.03663003663003661,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.21389880952380952,
+          0.3206591253791708
+        ]
+      },
+      "next_three_any_adverse": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 13,
+        "group_b_n": 78,
+        "observed_mean_difference_a_minus_b": -0.11538461538461531,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.4136667883655835,
+          0.2217797432452605
+        ]
+      },
+      "next_previous_limit_median_return": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 14,
+        "group_b_n": 78,
+        "observed_mean_difference_a_minus_b": -0.0072275481707604556,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.017363455633176955,
+          0.003629783717415232
+        ]
+      },
+      "next_failed_rate": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 14,
+        "group_b_n": 78,
+        "observed_mean_difference_a_minus_b": 0.03261226466989986,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.03384176191492855,
+          0.09581073716173101
+        ]
+      },
+      "next_down_limit_count": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 14,
+        "group_b_n": 77,
+        "observed_mean_difference_a_minus_b": 2.779220779220779,
+        "weekly_cluster_bootstrap_ci95": [
+          -5.912611888435878,
+          13.681523724337675
+        ]
+      },
+      "next_promotion_mid": {
+        "group_a": "BOTH_UP_SHORT_LOSS",
+        "group_b": "BOTH_UP_SHORT_POSITIVE",
+        "group_a_n": 14,
+        "group_b_n": 78,
+        "observed_mean_difference_a_minus_b": 0.05989052097012587,
+        "weekly_cluster_bootstrap_ci95": [
+          -0.03976648093191637,
+          0.16198431246448003
+        ]
+      }
+    }
+  },
+  "discovery_validation_point_estimate_sign_consistent": {
+    "next_adverse_state": true,
+    "next_three_any_adverse": true,
+    "next_previous_limit_median_return": true,
+    "next_failed_rate": true,
+    "next_down_limit_count": false,
+    "next_promotion_mid": false
+  },
+  "replication_gate": {
+    "next_adverse_state": {
+      "point_estimate_sign_consistent": true,
+      "discovery_ci_excludes_zero": false,
+      "validation_ci_excludes_zero": false,
+      "minimum_group_n": 30,
+      "minimum_group_n_passed": false,
+      "replication_gate_passed": false
+    },
+    "next_three_any_adverse": {
+      "point_estimate_sign_consistent": true,
+      "discovery_ci_excludes_zero": false,
+      "validation_ci_excludes_zero": false,
+      "minimum_group_n": 30,
+      "minimum_group_n_passed": false,
+      "replication_gate_passed": false
+    },
+    "next_previous_limit_median_return": {
+      "point_estimate_sign_consistent": true,
+      "discovery_ci_excludes_zero": false,
+      "validation_ci_excludes_zero": false,
+      "minimum_group_n": 30,
+      "minimum_group_n_passed": false,
+      "replication_gate_passed": false
+    },
+    "next_failed_rate": {
+      "point_estimate_sign_consistent": true,
+      "discovery_ci_excludes_zero": false,
+      "validation_ci_excludes_zero": false,
+      "minimum_group_n": 30,
+      "minimum_group_n_passed": false,
+      "replication_gate_passed": false
+    },
+    "next_down_limit_count": {
+      "point_estimate_sign_consistent": false,
+      "discovery_ci_excludes_zero": false,
+      "validation_ci_excludes_zero": false,
+      "minimum_group_n": 30,
+      "minimum_group_n_passed": false,
+      "replication_gate_passed": false
+    },
+    "next_promotion_mid": {
+      "point_estimate_sign_consistent": false,
+      "discovery_ci_excludes_zero": false,
+      "validation_ci_excludes_zero": false,
+      "minimum_group_n": 30,
+      "minimum_group_n_passed": false,
+      "replication_gate_passed": false
+    }
+  },
+  "recent_first_board_payoff_context": {
+    "BOTH_UP_SHORT_POSITIVE": {
+      "signal_sessions": 6,
+      "filled_rows": 371,
+      "B_plus_1_known": 371,
+      "B_plus_1_mean_net_return": -0.016753804228840655,
+      "B_plus_1_big_loss_rate": 0.20754716981132076,
+      "B_plus_2_known": 371,
+      "B_plus_2_mean_net_return": -0.019533380690447008
+    },
+    "BOTH_UP_SHORT_LOSS": {
+      "signal_sessions": 5,
+      "filled_rows": 234,
+      "B_plus_1_known": 234,
+      "B_plus_1_mean_net_return": -0.006650591022871853,
+      "B_plus_1_big_loss_rate": 0.14102564102564102,
+      "B_plus_2_known": 234,
+      "B_plus_2_mean_net_return": -0.008794193487056562
+    },
+    "BOTH_DOWN_SHORT_POSITIVE": {
+      "signal_sessions": 2,
+      "filled_rows": 88,
+      "B_plus_1_known": 88,
+      "B_plus_1_mean_net_return": 0.0026269787949560613,
+      "B_plus_1_big_loss_rate": 0.10227272727272728,
+      "B_plus_2_known": 55,
+      "B_plus_2_mean_net_return": 0.011707594023269138
+    },
+    "BOTH_DOWN_SHORT_LOSS": {
+      "signal_sessions": 8,
+      "filled_rows": 226,
+      "B_plus_1_known": 204,
+      "B_plus_1_mean_net_return": -0.005211757707456859,
+      "B_plus_1_big_loss_rate": 0.12745098039215685,
+      "B_plus_2_known": 204,
+      "B_plus_2_mean_net_return": -0.008976696116064315
+    },
+    "MIXED_INDEX": {
+      "signal_sessions": 3,
+      "filled_rows": 129,
+      "B_plus_1_known": 129,
+      "B_plus_1_mean_net_return": -0.03978323917157606,
+      "B_plus_1_big_loss_rate": 0.27906976744186046,
+      "B_plus_2_known": 129,
+      "B_plus_2_mean_net_return": -0.05748345860207379
+    }
+  },
+  "governance": {
+    "broad_index_direction_equals_short_term_emotion": false,
+    "index_up_may_override_short_loss_effect": false,
+    "divergence_may_be_displayed_as_context": true,
+    "divergence_direct_emotion_gate_allowed": false,
+    "divergence_direct_stock_reranking_allowed": false,
+    "divergence_entry_authorized": false
+  },
+  "interpretation": "Broad-index direction and board-relay ecology are separate evidence layers. An index-up day with a non-positive median return among prior limit-up names must not be called supportive solely because the indexes are green. Any forward warning remains descriptive until it replicates in isolated data.",
+  "limitations": [
+    "index series are provider observations and are not officially reconciled",
+    "two index-calendar sessions lack emotion rows and remain unavailable",
+    "the sign-based divergence is intentionally simple and may omit distribution tails",
+    "recent first-board payoff context covers only a short inspected sample",
+    "validation dates have already been inspected and are not a sealed final blind test"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v203\\broad_a_share_indexes_20260917_v1\\sh000002.csv": "fa73d1ef92a3eec1d7b26b47f38fe8fde4bc74c093699d2a7d85fa1737180f1d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v203\\broad_a_share_indexes_20260917_v1\\sz399107.csv": "4b4bbd75dc931fe92a792702e2c17c7a2adb5d4b3c2958cff2b58dbbdee15869",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v203\\broad_a_share_indexes_20260917_v1\\manifest.json": "e5254d66b84b22c5464a8748c589b4566905e8ce77218be16fab6903f9370592",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03"
+  },
+  "artifact_hashes": {
+    "index_emotion_calendar_rows.csv": "11e528164d47400b2b412cf730d55c6ee12cc77537eb3224437dbb862033037e"
+  }
+}

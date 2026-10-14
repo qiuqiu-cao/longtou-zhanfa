@@ -1,0 +1,224 @@
+{
+  "version": "v196-first-board-profit-ranker-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target": "observable_and_executable_open_proxy_with_positive_net_return_at_B_plus_2",
+  "evaluation_sessions": 12,
+  "candidate_rows": 518,
+  "candidate_metrics": {
+    "profit_base_probability": {
+      "known_rows": 461,
+      "positive_rate": 0.351409978308026,
+      "auc": 0.4407902886163756,
+      "brier": 0.2531875794928008
+    },
+    "profit_emotion_probability": {
+      "known_rows": 461,
+      "positive_rate": 0.351409978308026,
+      "auc": 0.5165572484413063,
+      "brier": 0.2673430508623198
+    },
+    "profit_risk_adjusted_score": {
+      "known_rows": 461,
+      "positive_rate": 0.351409978308026,
+      "auc": 0.5261158594491928,
+      "brier": 0.2774463269001815
+    },
+    "base_quality_probability": {
+      "known_rows": 461,
+      "positive_rate": 0.351409978308026,
+      "auc": 0.4683925843346132,
+      "brier": 0.27385898626044425
+    }
+  },
+  "daily_top1": {
+    "profit_base_probability": {
+      "selected_sessions": 12,
+      "target_observed_sessions": 10,
+      "target_unavailable_sessions": 2,
+      "executable_positive_B_plus_2_count": 3,
+      "executable_positive_B_plus_2_precision": 0.3,
+      "unverifiable_limit_queue_sessions": 0,
+      "filled_trades": 12,
+      "B_plus_1_mean_net_return": -0.026062111210575323,
+      "B_plus_1_positive_rate": 0.36363636363636365,
+      "B_plus_2_mean_net_return": -0.05317370827631359,
+      "B_plus_2_positive_rate_filled": 0.3,
+      "B_plus_1_big_loss_rate": 0.2727272727272727
+    },
+    "profit_emotion_probability": {
+      "selected_sessions": 12,
+      "target_observed_sessions": 10,
+      "target_unavailable_sessions": 2,
+      "executable_positive_B_plus_2_count": 4,
+      "executable_positive_B_plus_2_precision": 0.4,
+      "unverifiable_limit_queue_sessions": 0,
+      "filled_trades": 12,
+      "B_plus_1_mean_net_return": -0.030000268871940315,
+      "B_plus_1_positive_rate": 0.45454545454545453,
+      "B_plus_2_mean_net_return": -0.0377449404015762,
+      "B_plus_2_positive_rate_filled": 0.4,
+      "B_plus_1_big_loss_rate": 0.36363636363636365
+    },
+    "profit_risk_adjusted_score": {
+      "selected_sessions": 12,
+      "target_observed_sessions": 10,
+      "target_unavailable_sessions": 2,
+      "executable_positive_B_plus_2_count": 2,
+      "executable_positive_B_plus_2_precision": 0.2,
+      "unverifiable_limit_queue_sessions": 0,
+      "filled_trades": 12,
+      "B_plus_1_mean_net_return": -0.05484914303566921,
+      "B_plus_1_positive_rate": 0.2727272727272727,
+      "B_plus_2_mean_net_return": -0.0711961589576992,
+      "B_plus_2_positive_rate_filled": 0.2,
+      "B_plus_1_big_loss_rate": 0.45454545454545453
+    },
+    "base_quality_probability": {
+      "selected_sessions": 12,
+      "target_observed_sessions": 11,
+      "target_unavailable_sessions": 1,
+      "executable_positive_B_plus_2_count": 2,
+      "executable_positive_B_plus_2_precision": 0.18181818181818182,
+      "unverifiable_limit_queue_sessions": 3,
+      "filled_trades": 9,
+      "B_plus_1_mean_net_return": -0.025922150502267267,
+      "B_plus_1_positive_rate": 0.3333333333333333,
+      "B_plus_2_mean_net_return": -0.03242451356500918,
+      "B_plus_2_positive_rate_filled": 0.25,
+      "B_plus_1_big_loss_rate": 0.2222222222222222
+    }
+  },
+  "governance": {
+    "time_isolated_by_outcome_availability": true,
+    "unverifiable_limit_queue_is_negative_for_executable_target": true,
+    "missing_B_bar_is_negative": false,
+    "right_censored_B_plus_2_is_negative": false,
+    "unfilled_top1_replaced": false,
+    "emotion_factor_promoted": false,
+    "risk_adjusted_ranker_promoted": false,
+    "threshold_selected": false,
+    "stock_entry_authorized": false
+  },
+  "limitations": [
+    "the evaluation window is short and has been inspected",
+    "daily open is an execution proxy, not verified auction or intraday fill",
+    "industry fields are proxies and do not yet encode verified specific themes",
+    "cross-theme leader competition is not yet represented in this isolated model",
+    "reported probabilities are diagnostic and not deployment-calibrated"
+  ],
+  "current_signal_date": "2026-09-16",
+  "current_top10_research_only": [
+    {
+      "code": "001326",
+      "name": "联域股份",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.3701110153827107,
+      "profit_emotion_probability": 0.21536338499699526,
+      "big_loss_probability": 0.15445074470327702,
+      "profit_risk_adjusted_score": 0.1821003498023908,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002161",
+      "name": "远 望 谷",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.3990500819880339,
+      "profit_emotion_probability": 0.24140722705792486,
+      "big_loss_probability": 0.294050134684857,
+      "profit_risk_adjusted_score": 0.1704213994276442,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "603155",
+      "name": "新亚强",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.37642901743478496,
+      "profit_emotion_probability": 0.23133214687807463,
+      "big_loss_probability": 0.30073435029668,
+      "profit_risk_adjusted_score": 0.1617626239839607,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "605566",
+      "name": "福莱蒽特",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.3720563292985435,
+      "profit_emotion_probability": 0.2214123206485293,
+      "big_loss_probability": 0.28238380792360135,
+      "profit_risk_adjusted_score": 0.15888906642259618,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "603276",
+      "name": "恒兴新材",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.3362358024539246,
+      "profit_emotion_probability": 0.20795890846384799,
+      "big_loss_probability": 0.23802976160012415,
+      "profit_risk_adjusted_score": 0.1584584990595762,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "600135",
+      "name": "乐凯胶片",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.35697947120788015,
+      "profit_emotion_probability": 0.2061563931178084,
+      "big_loss_probability": 0.2899789220519723,
+      "profit_risk_adjusted_score": 0.14637538446738368,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "600500",
+      "name": "中化国际",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.3257952146284929,
+      "profit_emotion_probability": 0.19458203899128287,
+      "big_loss_probability": 0.25613190651426,
+      "profit_risk_adjusted_score": 0.1447433703710135,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "603255",
+      "name": "鼎际得",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.32554704217099734,
+      "profit_emotion_probability": 0.19261411747496832,
+      "big_loss_probability": 0.2500034172751304,
+      "profit_risk_adjusted_score": 0.14445992989079282,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002388",
+      "name": "新亚制程",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.3462593252205529,
+      "profit_emotion_probability": 0.20063968607066507,
+      "big_loss_probability": 0.2805869626365351,
+      "profit_risk_adjusted_score": 0.14434280597174923,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    },
+    {
+      "code": "002806",
+      "name": "华锋股份",
+      "signal_date": "2026-09-16",
+      "profit_base_probability": 0.36776878924829853,
+      "profit_emotion_probability": 0.21086872273935914,
+      "big_loss_probability": 0.31832903477177493,
+      "profit_risk_adjusted_score": 0.14374308576618192,
+      "execution_gate": "RESEARCH_ONLY_NO_ENTRY_AUTHORIZATION"
+    }
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\first_board_observations.csv": "b326bc02c08c20aa3e1af2bd0dc5bda70a9fb86f1c99b70f82cc8f8d4bb2a808",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\prequential_predictions.csv": "5c0db4344f94bac9fd4d057f69582a8d781ec2cadbb147fa6145f9841bcf8052",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\current_scores_RESEARCH_ONLY.csv": "8ebb43b41df69fe9c48fc81ed508324f102791060a736ea4ce6137306a8d62f9"
+  },
+  "artifact_hashes": {
+    "profit_target_rows_LABEL_ONLY.csv": "2d7ce6289f5640e92bb67279888e0bd6f117bb0306a5afa4406d38008db6d1d3",
+    "prequential_profit_predictions.csv": "92ce67de15099396c297e5da9bd3af87271007ae3f5954d8468ae7674fc5d51d",
+    "daily_top1_no_replacement.csv": "cb1d14c8d9e8ebd99399e2944ca65a0d86c1ccb9ee58212efe65501cf156efca",
+    "current_profit_scores_RESEARCH_ONLY.csv": "b3e0a938b5dbee182182cce8d4ade50e23757f570408d5cc0c5f11e01c89f23c"
+  }
+}

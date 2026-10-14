@@ -1,0 +1,20 @@
+{
+  "version": "v48-causal-reseal-replay-5",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_rule": "first completed 5-minute close at limit after an earlier completed below-limit close, by 10:00",
+  "entry_label_rule": "only next 5-minute bar low below limit creates an opportunity proxy",
+  "selection_baseline": "EARLIEST_CONFIRMATION_THEN_HEIGHT_THEN_CODE",
+  "cutoff_selection_baseline": "STILL_SEALED_AT_1000_THEN_HEIGHT_THEN_CODE",
+  "holding_evaluation": "independent B+1/B+2/B+3 close marks after stated costs",
+  "cost_assumptions": {
+    "shares": 100,
+    "commission": 0.0003,
+    "minimum": 5.0,
+    "sell_tax": 0.0005,
+    "slippage": 0.001
+  },
+  "threshold_tuning": false,
+  "actual_fill_claim": false,
+  "complete_trade_claim": false,
+  "allow_incomplete_development": false
+}

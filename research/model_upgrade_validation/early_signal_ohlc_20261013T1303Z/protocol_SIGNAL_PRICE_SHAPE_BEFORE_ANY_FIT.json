@@ -1,0 +1,159 @@
+{
+  "version": "relay-signal-price-shape-fixed-1",
+  "formed_at": "2026-10-13T13:15:46.175118+00:00",
+  "hypothesis_id": "SIGNAL_PRICE_SHAPE_REPLACEMENT",
+  "hypothesis": "Within the original cohort and original labels, using signal-day exact price shape in place of the low-turnover/seal-time proxy can reduce source-regime inconsistency without sacrificing full Accuracy or positive capture. This is diagnostic and unverified.",
+  "arms": [
+    "BASE",
+    "SIGNAL_PRICE_SHAPE"
+  ],
+  "knowledge_mode": "CURRENT_RETROSPECTIVE_DIAGNOSTIC_NOT_BLIND_OR_FORWARD",
+  "source_policy": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\retrospective_price_feature_policy_BEFORE_FIT.json",
+  "context_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\complete9245_provisional_price_context_DELIVERY.json",
+  "prepared_source_receipt": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json",
+  "prepared_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib",
+  "prepared_sha256": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+  "baseline_predictions": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\complete9245_provisional_price_context_DELIVERY.json": "607c2ce7d99858c0243ad32c781ba33a13d7724a5a9605f073085f48d45c8d05",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\qualification_result.json": "92bcf558d637d92ae055890fd698d9e21b5769cb85a85f6a289d4a58414b306c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\independent_source_qualification_DELIVERY.json": "8d789241d19cf771b7ef462e7f532daa7d302cf2027cf6be42fa15cbece9048f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\daily_path_clues_20261002_v1\\report.json": "6eac984ba742323cab693a656b6c845fad1c29f654ac0c05fe8d6323d4b34afa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v298\\exchange_calendar_extension_20261003_v2\\calendar.json": "2f991b34d9317dcc1ed0d4c3e4da40132eedf27ea23431415e1048172b119cdd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_context_research.py": "f0eab1a895aed6a8e795921f7d7d6a758cdaa8c81df77659eb12a7e3aeaed151",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_class_balance_research.py": "9e09255f8e200de1c0e73c30edc5c4a95ba90881a551a45a4fdaa98f1452c527",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\early_signal_ohlc_20261013T1303Z\\retrospective_price_feature_policy_BEFORE_FIT.json": "3acccdf76c45847fb51fbe97920e9edfb29737f9fe3a7382862bab97080376b0"
+  },
+  "fields": [
+    "boards",
+    "height_gap",
+    "same_height_rivals",
+    "unique_space",
+    "height_share",
+    "is_space_leader",
+    "emotion_score",
+    "promotion_2to3",
+    "promotion_3to4",
+    "promotion_mid",
+    "previous_limit_tail_loss",
+    "failed_rate",
+    "down_limit_rate",
+    "breadth_health",
+    "ladder_health",
+    "loss_effect_health",
+    "crowding_risk",
+    "regime_fragility",
+    "turnover",
+    "signal_amount",
+    "amplitude",
+    "turnover_vs_prev",
+    "price",
+    "price_same_height_percentile",
+    "signal_amount_same_height_percentile",
+    "turnover_same_height_percentile",
+    "turnover_vs_prev_same_height_percentile",
+    "signal_one_word",
+    "log_signal_amount"
+  ],
+  "folds": [
+    {
+      "id": "2025H2",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "2026JanAug",
+      "start": "2026-01-01",
+      "end": "2026-08-31"
+    },
+    {
+      "id": "2026Sep",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "training_checks": [
+    {
+      "fold": "2025H2",
+      "training_digest": "42ce437fb4e50ccb8851e49805fec2cc8bd044893f03c5e94359f3715e86a0b7",
+      "train_n": 4062,
+      "training_dates": 252,
+      "training_max_label_date": "2025-06-30",
+      "candidate_price_shape_known": 4034,
+      "candidate_price_shape_unknown": 28,
+      "challenger_digest": "1b34d6076b50880fc47b44458e5e1d058745cee3397c52ed3a2135926b09e066",
+      "members_labels_and_all_other_fields_equal": true
+    },
+    {
+      "fold": "2026JanAug",
+      "training_digest": "fd67c90616818e71daaefdf6bd782c65eb5eb797cca5bae962fa7c4bf6eded2e",
+      "train_n": 3243,
+      "training_dates": 252,
+      "training_max_label_date": "2025-12-31",
+      "candidate_price_shape_known": 3233,
+      "candidate_price_shape_unknown": 10,
+      "challenger_digest": "5eda98e297536be43411c5e29a5f79a9e3a9ffd13070a43eb5f9038236eb5f0a",
+      "members_labels_and_all_other_fields_equal": true
+    },
+    {
+      "fold": "2026Sep",
+      "training_digest": "efad5d49f7ba3a26b859dcb8f7270599458e8b03806c33a4e5aaf3b02014e3fc",
+      "train_n": 3059,
+      "training_dates": 252,
+      "training_max_label_date": "2026-08-31",
+      "candidate_price_shape_known": 3048,
+      "candidate_price_shape_unknown": 11,
+      "challenger_digest": "fdd0c73e8b74d0e8c090862964741bc48c879a7181318cd45e4d50877f669090",
+      "members_labels_and_all_other_fields_equal": true
+    }
+  ],
+  "parameters": {
+    "algorithm": "original logistic",
+    "C": 0.25,
+    "max_iter": 2500,
+    "random_state": 271,
+    "solver": "lbfgs",
+    "class_weight": null,
+    "training_window": 252,
+    "window_unit": "last252distinct original valid-labelled signal dates",
+    "daily_weight": "inverse original full training candidate rows per date",
+    "preprocess": "training-only median/add_indicator/keep_empty_features/scaler unchanged",
+    "threshold": "raw positive score strictly >0.5"
+  },
+  "fixed_screen_before_effects": {
+    "Accuracy_delta_each_fold_at_least": 0.03,
+    "complete_positive_Recall_each_fold_not_lower": true,
+    "Precision_each_fold_not_lower": true,
+    "F1_each_fold_not_lower": true,
+    "original_prediction_and_label_scoring_coverage_unchanged": true,
+    "price_shape_nonword_Recall_and_F1_each_defined_fold_not_lower": true,
+    "positive_call_coverage_all_original_fold_not_lower": true,
+    "unknowns_remain_in_full_original_denominator": true,
+    "all_fold_conditions_required": true,
+    "undefined_required_metric_cannot_certify_pass": true
+  },
+  "execution": {
+    "next_batch_budget_minutes": 30,
+    "maximum_challenger_fits": 3,
+    "one_fit_per_original_fold": true,
+    "BASE_refits": 0,
+    "shared_hypothesis_lock_before_any_fit": true,
+    "repeat_attempt_or_retuning_forbidden": true,
+    "fit_receipts_before_each_fit_required": true,
+    "no_deployable_weights_for_failed_challenge": true,
+    "if_budget_or_fixed_compare_ends_stop": true
+  },
+  "effects_not_yet_observed": true,
+  "production_application": {
+    "allowed": false,
+    "reason": "Even successful diagnostic screens require independent prospective source/120-day/coverage/Recall/F1 and original module acceptance gates; STRICT source availability and leader roles are unqualified"
+  },
+  "old_original_forecasts_and_failed_experiments_preserved": true
+}

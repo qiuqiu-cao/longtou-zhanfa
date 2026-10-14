@@ -1,0 +1,143 @@
+{
+  "version": "v202-exit-information-causality-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "all_candidates": {
+    "rows": 1116,
+    "open_exit_proxy_status_rows": 1017,
+    "comparable_open_and_close_rows": 1017,
+    "registered_pre_open_exit_plan_rows": 0,
+    "fixed_precommitted_B_plus_1_open_proxy": {
+      "n": 1017,
+      "mean_net_return": -0.011057797435261644,
+      "median_net_return": -0.0189674482436763,
+      "positive_rate": 0.35398230088495575,
+      "big_loss_rate": 0.10816125860373647
+    },
+    "fixed_B_plus_1_close_mark": {
+      "n": 1017,
+      "mean_net_return": -0.01254674577955093,
+      "median_net_return": -0.0214510600220078,
+      "positive_rate": 0.3824975417895772,
+      "big_loss_rate": 0.1720747295968535
+    },
+    "hindsight_choose_better_open_or_close": {
+      "n": 1017,
+      "mean_net_return": 0.004720200887323903,
+      "median_net_return": -0.0030156994346305,
+      "positive_rate": 0.48180924287118976,
+      "big_loss_rate": 0.07669616519174041
+    },
+    "hindsight_choose_worse_open_or_close": {
+      "n": 1017,
+      "mean_net_return": -0.028324744102136475,
+      "median_net_return": -0.0306548681631753,
+      "positive_rate": 0.25467059980334317,
+      "big_loss_rate": 0.20353982300884957
+    },
+    "hindsight_timing_choice_mean_optimism_vs_better_fixed_rule": 0.015777998322585546,
+    "timing_winner_counts": {
+      "open_better": 528,
+      "close_better": 467,
+      "equal": 22
+    },
+    "big_loss_transition_counts": {
+      "big_at_open_and_close": 78,
+      "big_at_open_not_close": 32,
+      "not_big_at_open_big_at_close": 97,
+      "not_big_at_either": 810
+    },
+    "unresolved_exit_status_counts": {
+      "NOT_APPLICABLE_UNFILLED": 68,
+      "MISSING_B_PLUS_1_BAR": 22,
+      "OPEN_DOWN_LIMIT_QUEUE_UNVERIFIABLE": 5,
+      "ONE_PRICE_DOWN_LIMIT_UNSELLABLE": 4
+    }
+  },
+  "frozen_emotion_top1": {
+    "rows": 10,
+    "open_exit_proxy_status_rows": 9,
+    "comparable_open_and_close_rows": 9,
+    "registered_pre_open_exit_plan_rows": 0,
+    "fixed_precommitted_B_plus_1_open_proxy": {
+      "n": 9,
+      "mean_net_return": -0.002346480282521831,
+      "median_net_return": -0.0170330533968851,
+      "positive_rate": 0.4444444444444444,
+      "big_loss_rate": 0.3333333333333333
+    },
+    "fixed_B_plus_1_close_mark": {
+      "n": 9,
+      "mean_net_return": 0.007031369262962043,
+      "median_net_return": 0.0393340761646063,
+      "positive_rate": 0.5555555555555556,
+      "big_loss_rate": 0.2222222222222222
+    },
+    "hindsight_choose_better_open_or_close": {
+      "n": 9,
+      "mean_net_return": 0.028754685932335322,
+      "median_net_return": 0.0393340761646063,
+      "positive_rate": 0.5555555555555556,
+      "big_loss_rate": 0.1111111111111111
+    },
+    "hindsight_choose_worse_open_or_close": {
+      "n": 9,
+      "mean_net_return": -0.024069796951895112,
+      "median_net_return": -0.0363069150949854,
+      "positive_rate": 0.4444444444444444,
+      "big_loss_rate": 0.4444444444444444
+    },
+    "hindsight_timing_choice_mean_optimism_vs_better_fixed_rule": 0.02172331666937328,
+    "timing_winner_counts": {
+      "open_better": 5,
+      "close_better": 4,
+      "equal": 0
+    },
+    "big_loss_transition_counts": {
+      "big_at_open_and_close": 1,
+      "big_at_open_not_close": 2,
+      "not_big_at_open_big_at_close": 1,
+      "not_big_at_either": 5
+    },
+    "unresolved_exit_status_counts": {
+      "OPEN_DOWN_LIMIT_QUEUE_UNVERIFIABLE": 1
+    }
+  },
+  "exit_information_contract": {
+    "B_plus_1_open_known_before_opening_match": false,
+    "official_open_can_fill_precommitted_exit_proxy": true,
+    "official_open_can_condition_same_open_exit": false,
+    "post_open_conditional_exit_requires_new_price": true,
+    "B_plus_1_close_mark_is_verified_execution": false,
+    "choose_open_or_close_after_seeing_both_allowed": false,
+    "unmonitored_user_requires_pre_frozen_instruction": true
+  },
+  "intraday_exit_readiness": {
+    "technical_complete_sequences": 0,
+    "full_complete_sequences": 0,
+    "post_open_exit_model_ready": false
+  },
+  "official_basis": {
+    "sse_rule": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml",
+    "szse_rule": "https://docs.static.szse.cn/www/lawrules/rule/trade/current/W020260424690713155663.pdf",
+    "timing_summary": "Opening call auction is 09:15-09:25 and continuous auction begins at 09:30; an official opening result cannot retroactively determine an order filled in that same opening match."
+  },
+  "governance": {
+    "same_open_conditional_exit_fill_allowed": false,
+    "hindsight_open_close_timing_oracle_allowed": false,
+    "historical_open_proxy_is_broker_confirmed_exit": false,
+    "post_open_exit_rule_authorized": false,
+    "entry_or_exit_policy_promoted": false
+  },
+  "interpretation": "For a user who may not monitor the open, an opening-auction exit must be frozen before the official open is known. Observing the opening result and retaining that same opening price is non-causal. Choosing afterward between open and close is a hindsight timing oracle and may not be reported as a strategy result.",
+  "limitations": [
+    "historical rows contain no broker order timestamp or registered exit plan",
+    "the close field is a valuation mark, not a verified closing-auction fill",
+    "no complete minute sequence exists for a causal 09:30/09:35 exit model",
+    "lower-limit queue and partial-fill states remain unresolved without order evidence"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v201\\t1_unexitable_loss_audit_20260917_v2\\t1_unexitable_loss_rows.csv": "85509045fe5e1b4ba2d9341ecfc90fb3cc72bb48d9e1abc4fb7699357ed25b89",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v196\\first_board_profit_ranker_20260917_v2\\daily_top1_no_replacement.csv": "c3294b4778d66644ffe6fb7f322eee3da4be6cc0e1808b8fb6f1342922872a87",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v10\\intraday_readiness.json": "205336989a36930eefd8fa74f20cf82cd0b65ad65c8a80e137c0df12deb3e394"
+  }
+}

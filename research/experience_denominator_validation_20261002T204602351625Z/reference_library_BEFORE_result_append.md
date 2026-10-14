@@ -1,0 +1,245 @@
+# 龙头战法外部经验参考库
+
+实际形成时间：2026-10-02T20:31:58.098460+00:00（UTC；北京时间为UTC+8）。本批筛选9项参考，未运行新数值比较。
+
+这些条目用于补充已有规则的观测定义、反例和采集条件。作者摘要与本项目拟定定义分别标明；论坛案例未独立核验，源码可读也不证明策略有效或行情接口可用。原18项目标、15项假设等级、生产模型和固定C1/C2协议保持。
+
+按当前错选或证据缺口只查一条；已有原则不重复加权。资料完整后，另批预登记一个假设、固定基准、至多两个挑战方案；无改善不升级。每次生产无需重读全库。
+
+|参考|值得补的细节|当前用途|
+|---|---|---|
+|REF01 高标负反馈与低位切换分开观察|V248/V273已有分歧与退潮，不新增情绪因子。|复盘证据与环境描述；新增统计输入须另批固定比较。|
+|REF02 中位出清和同身位淘汰保留完整原竞争组|V248卡位/中位、V297及当前题材同身位研究已有；补原组生命周期，不新增核心规则。|优先用于既有研究的采集字段和失败诊断；不改当前C1/C2协议或历史角色。|
+|REF03 题材支持先剔除候选本股并说明成员范围|当前C2已有题材/同身位计数；剔除自身属于定义核验，不重复加权。|事实字段核验；仓库2/7/2等权重及宽标签折扣不引入模型。|
+|REF04 一字后开板的量比基数容易失真|已有一字/非一字分层和弱转强原则；补分母边界。|数据解释和分层记录；不采纳40%换手或容量阈值。|
+|REF05 回封质量拆成回落深度、离板时间和再封持续|V248已有首次分歧须承接与梯队；补路径定义和失败例。|承接诊断和采集定义；不新增分数，不直接推买点或胜率。|
+|REF06 弱转强须相对事先记录的预期确认|V273已有相对昨日预期定义；不把旧原则再当新因子。|既有观察卡确认字段；不照搬5%—10%竞价比例或价格线。|
+|REF07 外部作者的卡位用法与内部固定角色做映射|V248卡位/补涨已有固定定义；新增来源术语映射。|阅读与研究术语规范；不改分、角色表或历史验收。|
+|REF08 竞价统计对齐目标日和前交易日，未知与零分开|现时间/未知契约已有；补具体统计字段映射和单位审查。|未来采集合同参考；不使用仓库固定涨跌幅补价、价格容差或封单排名。|
+|REF09 触板、封住、开板、回封必须按证据分别记录|现明确涨停价与成交证据约束已有；补分钟事件分辨率。|来源审查和采集语义；该仓库错误sealed逻辑不采用。|
+
+## 逐条参考
+
+### REF01　高标负反馈与低位切换分开观察
+
+作者/源码摘要：大峥哥区分高位走弱后的全面负反馈与低位继续活跃；easy-stock把昨日不同板位的反馈分开统计。
+
+已有覆盖：V248/V273已有分歧与退潮，不新增情绪因子。
+
+本项目拟定的观测定义：先固定上一交易日完整高、中、低板位组，保留各股今日晋级、断板、负收益及未知；全市场涨停扩散与昨日高位亏损分别描述。高/中组定义须预先固定，不能照抄仓库的前三个占用板位当情绪核心。
+
+拟留字段：previous_group_codes、original_streak、is_one_word、actual_return、promotion_status、negative_feedback、n_registered、n_scored、coverage、limit_up_breadth。
+
+反例与边界：低位几个公告一字并不能证明整体切换成功；高位报价缺失会把亏损组变成存活者均值。
+
+时点：T盘后仅使用已发生并留档的T-1→T反馈。T+1结果或开盘状态不能回填T分数。
+
+缺口与解锁：需完整原板池、明确涨停价及独立不复权行情；原高位角色还需要题材/带动证据。
+
+用途与验证：复盘证据与环境描述；新增统计输入须另批固定比较。 先核对每组原分母及行情覆盖；现C1/C2不增加第三方案。
+
+来源：
+- [FORUM_01 大峥哥](https://www.tgb.cn/a/1Mj41xQ90RJ)；发布日期/固定commit：2022-02-14 23:14；读取范围：PUBLIC_PREFIX_ONLY_LOGIN_REQUIRED_AFTER_PREFIX。
+- [GH_FEEDBACK jundizhou/easy-stock](https://github.com/jundizhou/easy-stock/blob/37a8c1bb3e2e9cabeb11f94dbef50a8b955f1948/backend/internal/httpapi/market_emotion.go#L505-L794)；发布日期/固定commit：37a8c1bb3e2e9cabeb11f94dbef50a8b955f1948；读取范围：SELECTED_PINNED_SOURCE_FILE_AND_RELEVANT_LINES。
+
+### REF02　中位出清和同身位淘汰保留完整原竞争组
+
+作者/源码摘要：锦鲤踏阳线讨论中位出清，并保留自己预判大分歧未兑现的反例；财來bbi244的搜索提取提到回封后后排未响应。后者全文失败，案例不能当核验事实。
+
+已有覆盖：V248卡位/中位、V297及当前题材同身位研究已有；补原组生命周期，不新增核心规则。
+
+本项目拟定的观测定义：在事件发生前固定完整代码组、板位和当时题材，逐真实交易日保留原组存活、淘汰、反包、无响应和未知；今日仍涨停名单不能替代昨日完整竞争组。若研究事件带动，必须在取结果前固定事件窗口和全部响应对象。
+
+拟留字段：group_frozen_at、group_asof_source、original_group_codes、original_streak、same_height_group、later_failure_codes、unknown_codes、continuous_vs_rebound、event_time、peer_response_window。
+
+反例与边界：对手断板但整个题材都弱，不证明新龙产生；中位清空可能是全面下跌。同涨也可能来自共同消息，不能证明因果带动。
+
+时点：组和题材须在各自真实截止前形成。现取得旧帖只用于研究设计，不能补成历史当时已经留档。
+
+缺口与解锁：当前固定C2的当日涨停同伴数不能证明原竞争组真实淘汰；需补以后真实时点原组留档。FORUM_03正文仍缺失，保持条件来源。
+
+用途与验证：优先用于既有研究的采集字段和失败诊断；不改当前C1/C2协议或历史角色。 下一步仅核对原竞争组能否完整留档；具备资料后另批预登记一个假设再比较。
+
+来源：
+- [FORUM_05 锦鲤踏阳线](https://caifuhao.eastmoney.com/news/20260809203458522052630)；发布日期/固定commit：2026-08-09 20:34；读取范围：PUBLIC_BODY_AVAILABLE_IMAGES_NOT_USED。
+- [FORUM_03 财來bbi244](https://guba.eastmoney.com/news,002584,1372435296.html)；发布日期/固定commit：2023-11-21 19:34:34；读取范围：SEARCH_TOOL_AUTHOR_TEXT_EXTRACT_ONLY_FULL_OPEN_FAILED_AFTER_ONE_FOLLOWUP。
+
+### REF03　题材支持先剔除候选本股并说明成员范围
+
+作者/源码摘要：easy-stock的其他涨停股计数、连板数和其他最高高度均排除候选自身，还考虑宽泛概念的成员范围。
+
+已有覆盖：当前C2已有题材/同身位计数；剔除自身属于定义核验，不重复加权。
+
+本项目拟定的观测定义：统计其他成员的首板、中位、较高板及同高度数量，显式排除本股；另留题材全成员范围、非涨停和下跌成员。国企/融资融券等宽标签与具体事件题材分别标识，不主观补强支持。
+
+拟留字段：theme_source_asof、theme_evidence_timestamp、theme_member_scope、peer_count_excluding_self、peer_max_streak_excluding_self、same_height_peers、non_limit_members、negative_members、theme_missingness。
+
+反例与边界：只有本股涨停却被记为题材支持；多个宽标签把无关股票连成主线；事后挑次日胜出的题材会泄漏。
+
+时点：只用截止前取得且符合现契约时效的事实分类；当前题材不能覆盖昨日输入。
+
+缺口与解锁：必须核验题材生效/采集时点及完整成员范围，当前分类并非历史PIT认证。
+
+用途与验证：事实字段核验；仓库2/7/2等权重及宽标签折扣不引入模型。 与既有C2逐字段去重，先检查自包含和缺失，不改现分数。
+
+来源：
+- [GH_PEER jundizhou/easy-stock](https://github.com/jundizhou/easy-stock/blob/37a8c1bb3e2e9cabeb11f94dbef50a8b955f1948/backend/internal/httpapi/concept_attribution.go#L132-L190)；发布日期/固定commit：37a8c1bb3e2e9cabeb11f94dbef50a8b955f1948；读取范围：SELECTED_PINNED_SOURCE_FILE_AND_RELEVANT_LINES。
+
+### REF04　一字后开板的量比基数容易失真
+
+作者/源码摘要：小新擒龙日记用正反案例提醒：昨日一字成交很少，次日量能放大不能直接等同有效弱转强。其实际换手率换算未完整定义。
+
+已有覆盖：已有一字/非一字分层和弱转强原则；补分母边界。
+
+本项目拟定的观测定义：单列昨日一字、首次开板及昨日实际成交量/额；量比标注分母值、时间范围和零/极小基数。标准换手率须绑定实际股本口径和时点，自由流通口径不明就未知，不估算所谓实际换手。
+
+拟留字段：previous_one_word、first_open_after_one_word、previous_actual_volume、previous_amount、ratio_denominator、ratio_validity、standard_turnover_denominator、free_float_source_asof。
+
+反例与边界：极小分母制造巨大量比；后排高开爆量可能是兑现。作者同时给失败案例，角色和结果尚未独立核验。
+
+时点：T成交事实可供T盘后；T+1竞价成交和走势仅写带真实时间的确认。
+
+缺口与解锁：缺自由流通股本生效口径时不算实际换手；需独立行情及原全候选验证。
+
+用途与验证：数据解释和分层记录；不采纳40%换手或容量阈值。 先判断已有量比是否缺分母/混一字；不能用作者成功例挑样本。
+
+来源：
+- [FORUM_06 小新擒龙日记](https://m.tgb.cn/a/2rhlKB6gyXA)；发布日期/固定commit：2026-04-25 12:00；读取范围：PUBLIC_AUTHOR_BODY_AND_COUNTEREXAMPLES_VISIBLE_DESPITE_LOGIN_UI。
+
+### REF05　回封质量拆成回落深度、离板时间和再封持续
+
+作者/源码摘要：kremaes区分封单意图与卖压后的承接；汤力力对不同冲板、回落及再封路径作比较。两者均未证明完整候选的次日优势。
+
+已有覆盖：V248已有首次分歧须承接与梯队；补路径定义和失败例。
+
+本项目拟定的观测定义：用明确涨停价计算离板最大回落，记录每次/累计离板时长、再封后维持时长、再开板和同期题材响应；成交与委托量分开。没有L2证据时不把红盘成交或大单推成主动资金，也不猜庄家成本。
+
+拟留字段：limit_price_verified、touch_time、open_board_time、drawdown_from_limit、off_limit_duration、cumulative_off_limit_duration、reseal_time、reseal_sustained_duration、trade_amount、queue_amount、peer_response、event_resolution。
+
+反例与边界：尾盘回封不保证次日晋级；一分钟内多次炸封可能不可见；一字没有回落过程也可能晋级。
+
+时点：T完整路径必须在实际知识截止前取得并留档；窗口预测只能看窗口前数据。T+1路径不能补成T事实。
+
+缺口与解锁：现无较长可靠分钟历史；先准备未来路径留档。分钟只能保留其分辨率，精确秒级事件未知。
+
+用途与验证：承接诊断和采集定义；不新增分数，不直接推买点或胜率。 先核验能否真实区分触板/封板及事件分辨率，再决定独立固定比较。
+
+来源：
+- [FORUM_07 kremaes](https://tgb.cn/a/2v8JORQFxWs)；发布日期/固定commit：2026-09-16 17:35；读取范围：PUBLIC_SELECTED_CHAPTER_AND_AUTHOR_REPLIES_THREAD_PAGE_1_OF_2。
+- [TANG_RELAY 汤力力](https://m.tgb.cn/a/1QyPAjRkJZ8-1?type=hot)；发布日期/固定commit：['2022-07-29 17:19', '2022-07-31 22:49']；读取范围：Public main article and selected authored comments; entire thousands-comment thread not verified。
+
+### REF06　弱转强须相对事先记录的预期确认
+
+作者/源码摘要：风翻红叶信将昨日分歧、竞价成交和开盘承接分开，高开本身不能代替确认；部分内容来自当日后续追加段落。
+
+已有覆盖：V273已有相对昨日预期定义；不把旧原则再当新因子。
+
+本项目拟定的观测定义：T盘后先记录市场状态、原强/正常/弱路径及预期范围，再分别留09:25真实竞价价格/成交与09:35承接状态；实际竞价成交和未成交封单分开。未事先记录预期，就不事后给超预期标签。
+
+拟留字段：expectation_frozen_at、expected_market_path、expected_open_range、auction_quote_time、auction_price、auction_actual_amount、auction_queue_amount、relative_market_theme_change、confirmation_0935、cancel_condition。
+
+反例与边界：高开爆量可能兑现；低成交可能无人交易。事后用成功结果定义修复环境会污染判断。
+
+时点：目标日09:25/09:35属于独立新信息，不能混入盘后准确率或回填冻结分数。追加段落按各自显示发布时间标识。
+
+缺口与解锁：需真实竞价来源、时间、成交/委托定义和事先预期登记。
+
+用途与验证：既有观察卡确认字段；不照搬5%—10%竞价比例或价格线。 若要评价开盘确认效果，另定义09:25决策任务、全样本及标签；现盘后指标保持。
+
+来源：
+- [FORUM_04 风翻红叶信](https://caifuhao.eastmoney.com/news/20260610024407592796560)；发布日期/固定commit：2026-06-10 02:44；读取范围：PUBLIC_AUTHOR_TEXT_SELECTED_SECTIONS_WITH_LATER_APPENDS。
+
+### REF07　外部作者的卡位用法与内部固定角色做映射
+
+作者/源码摘要：汤力力的一种卡位解释包含帮助龙头或题材从分歧转一致，与本项目的同身位竞争淘汰定义有差异。
+
+已有覆盖：V248卡位/补涨已有固定定义；新增来源术语映射。
+
+本项目拟定的观测定义：同时保存外部原用词、作者语境和本项目角色。助攻/套利式用法单独标注，不能直接改成同高度替代；固定角色必须仍由原条件和证据确认。
+
+拟留字段：author_original_term、source_context、internal_role_definition、mapping_status、same_height_failure_evidence、theme_response_evidence、role_unknown。
+
+反例与边界：帮助板块修复未必淘汰同高度对手；对手淘汰未必有真实带动。名称、热度和作者称龙头不能替代身份。
+
+时点：本次取得仅是当前术语参考，不回写旧预测及旧角色。
+
+缺口与解锁：对应事件的原题材、竞争对象和真实异动时点不全时，角色仍未知。
+
+用途与验证：阅读与研究术语规范；不改分、角色表或历史验收。 每次引用先核对内部定义；没有新增性能试验。
+
+来源：
+- [TANG_RELAY 汤力力](https://m.tgb.cn/a/1QyPAjRkJZ8-1?type=hot)；发布日期/固定commit：['2022-07-29 17:19', '2022-07-31 22:49']；读取范围：Public main article and selected authored comments; entire thousands-comment thread not verified。
+
+### REF08　竞价统计对齐目标日和前交易日，未知与零分开
+
+作者/源码摘要：eltdx对同日统计读取prev字段，对前交易日统计读取该日原字段，缺分母返回None。09:25门控依赖TDX握手server_datetime与目标日期，不能独立证明竞价真实完成或报价新鲜。
+
+已有覆盖：现时间/未知契约已有；补具体统计字段映射和单位审查。
+
+本项目拟定的观测定义：记录实际取得时间、供应商行情时间、目标交易日、官方前交易日、统计文件日期、字段映射及单位；统计日期既不为目标日也不为官方前交易日，或行情时间与目标日不符时拒绝使用。同日用prev_*，前日用该日字段只是该仓库的格式，换供应商须重验。分母缺失或为0保持未知。
+
+拟留字段：captured_at_real、provider_quote_time、target_trade_date、previous_trade_date、stats_date、alignment_status、field_mapping、amount_unit、volume_unit、denominator_source、ratio_validity。
+
+反例与边界：休市缓存错日；把万元当元或手当股；封单/竞价成交量混用；五档封单不能证明排队可成交。
+
+时点：只能目标日09:25完成后形成确认记录，真实资料留档不晚于该确认截止，不改T盘后分数。
+
+缺口与解锁：源码可读未证明本机接口可用；需未来真实返回日期/单位和独立源核验。
+
+用途与验证：未来采集合同参考；不使用仓库固定涨跌幅补价、价格容差或封单排名。 先检验覆盖率、日期/单位和NULL语义；开盘任务效果另批定义。
+
+来源：
+- [GH_AUCTION electkismet/eltdx](https://github.com/electkismet/eltdx/blob/d19ac86f2bae7565660a89baf94a3fcc531fac93/src/eltdx/helpers/shortline.py#L435-L463)，另见[握手门控](https://github.com/electkismet/eltdx/blob/d19ac86f2bae7565660a89baf94a3fcc531fac93/src/eltdx/helpers/shortline.py#L194-L227)与[缺分母处理](https://github.com/electkismet/eltdx/blob/d19ac86f2bae7565660a89baf94a3fcc531fac93/src/eltdx/helpers/shortline.py#L632-L640)；发布日期/固定commit：d19ac86f2bae7565660a89baf94a3fcc531fac93；读取范围：SELECTED_PINNED_SOURCE_FILE_AND_RELEVANT_LINES。
+
+### REF09　触板、封住、开板、回封必须按证据分别记录
+
+作者/源码摘要：B6区分分钟和日线代理来源，但具体实现把分钟high触板当sealed。该实现提供了应避免的事件混淆反例。
+
+已有覆盖：现明确涨停价与成交证据约束已有；补分钟事件分辨率。
+
+本项目拟定的观测定义：保存touch/seal/open/reseal事件类别、观测时间、分辨率和证据。分钟high等于涨停价只能证明该分钟触板；分钟收在板价至多证明采样末状态，不能证明整分钟封住。日线未知开板次数不得记0。
+
+拟留字段：event_kind、observed_time、event_resolution、source_kind、explicit_limit_price、seal_evidence、unknown_intraminute_events、event_coverage、fill_evidence_status。
+
+反例与边界：同一分钟触板后回落却被标封死；多次炸封漏计；最后触板时间不能代替最终持续封板时间。
+
+时点：T路径仅限T截止前取得数据；目标日路径只作新记录，不能充作此前输入。
+
+缺口与解锁：精确封板与撤单序列可能需要真实Tick/盘口，分钟数据的不可辨识部分保持未知。
+
+用途与验证：来源审查和采集语义；该仓库错误sealed逻辑不采用。 先核验事件证据与代理身份，不以代理事件重跑既有失败规则。
+
+来源：
+- [GH_EVENTS quantskills/skill-b6-limitup-pool](https://github.com/quantskills/skill-b6-limitup-pool/blob/54568d9aeec73057e9f9ecd6f35870bc5b42d97a/%E5%BC%80%E5%8F%91%E4%BA%A7%E7%89%A9/scripts/build.py#L374-L451)；发布日期/固定commit：54568d9aeec73057e9f9ecd6f35870bc5b42d97a；读取范围：SELECTED_PINNED_SOURCE_FILE_AND_RELEVANT_LINES。
+
+## 条件来源与暂缓条目
+
+- [FORUM_03](https://guba.eastmoney.com/news,002584,1372435296.html)：全文打开一次补采后仍失败；仅作为REF02的附属作者失败例，不独立确认行情或升级规则。
+- [FORUM_02](https://guba.eastmoney.com/news,cfhpl,1359867272.html)：仅搜索提取，与现断板方式原则重复。
+- [FORUM_08](https://www.tgb.cn/a/2vvLfNPjtpc)：仅搜索提取，与原事件锚/交易对象分离原则重复，旧帖不能回填历史。
+
+## 不直接搬入的做法
+
+- [GH_PEER 今日权威题材覆盖昨日显示](https://github.com/jundizhou/easy-stock/blob/37a8c1bb3e2e9cabeb11f94dbef50a8b955f1948/backend/internal/httpapi/concept_attribution.go#L251-L302)：若用于昨日历史特征，会产生未来泄漏。
+- [GH_KPL_MISSING 请求失败写0.0后覆盖旧记录](https://github.com/HJ2916/kpl-dashboard-public/blob/b2ca64099bbe6e8dbea7b353dbca82f0f8aa6591/scripts/kpl_data_collector.py#L151-L161)：缺失不等于强度为零，不能填充事实。
+- [GH_EVENTS 分钟high触板标sealed、固定涨幅补涨停价、未知入题材日期放行](https://github.com/quantskills/skill-b6-limitup-pool/blob/54568d9aeec73057e9f9ecd6f35870bc5b42d97a/%E5%BC%80%E5%8F%91%E4%BA%A7%E7%89%A9/scripts/build.py#L374-L451)：触板不等于封住；明确价格和PIT时点须独立核验。
+- [GH_PLANK 30自然日每日比例平均及三板定龙头概率](https://github.com/SingleDogCherry/plank/blob/e9450a938aea96d090df978d12082cea7e7b21d3/src/main/java/com/mistra/plank/job/AnalyzeProcessor.java#L74-L224)：与原交易日/全候选汇总分母不同；一字成交、稀疏高板和六板以上状态存在范围限制，未独立核验胜率。
+- [FORUM_06 实际换手40%及市值硬阈值](https://m.tgb.cn/a/2rhlKB6gyXA)：公式/分母未完整定义，未全候选对照。
+- [FORUM_04 竞价5%—10%等固定阈值](https://caifuhao.eastmoney.com/news/20260610024407592796560)：经验阈值不是已验证用户模型参数。
+- [TANG_RELAY 从分时断言主控资金/庄家成本、旧监管条件](https://m.tgb.cn/a/1QyPAjRkJZ8-1?type=hot)：资金身份缺证据；旧制度需要当期官方核验，不作为新规则。
+
+## 来源时间与档案绑定
+
+以下哈希绑定的是本次真实取得的原响应、解码源码或工具提取，不能把网页发布日期当成本项目历史留档时间。论坛工具提取不冒充HTTP原始字节。
+
+完整字段、每个来源时间和哈希见 [龙头战法外部经验参考库.json](D:/Documents/ChatGPT/龙头战法/research/龙头战法外部经验参考库.json)。
+
+- 股吧：实际取得窗口 2026-10-02 20:16:06 UTC 至 2026-10-02 20:18:06 UTC，仅声称窗口，不编逐调用时间。[source_manifest.json](D:/Documents/ChatGPT/龙头战法/research/forum_reference_scan_20261002T201606Z/source_manifest.json)；SHA256 `dc26eb283b6149497c9a174798aeddb6d170531cccaff83ec30509f7f2e41a7a`。作者追加时间另见 [notes.json](D:/Documents/ChatGPT/龙头战法/research/forum_reference_scan_20261002T201606Z/notes.json)；未读取的隐藏正文/图像和失败均保留。
+- GitHub：每份固定commit源码的真实取得时间、原Blob响应与解码文件哈希见 [manifest.json](D:/Documents/ChatGPT/龙头战法/research/github_reference_scan_20261002T201722Z/manifest.json)；SHA256 `cf90390eca1e7451e7239b1d3675796cbaf8dbb75dd56aba35d69526e7e6fd4b`。完整仓库筛选及失败见 [notes.json](D:/Documents/ChatGPT/龙头战法/research/github_reference_scan_20261002T201722Z/notes.json)。本次只读取，未安装/执行外部代码。
+- 汤力力：2026-10-02T20:19:59.068665+00:00取得公开HTML，仅读主文及2022-07-29/31指定作者评论，不声称读完全部3279条评论。[root_source_manifest.json](D:/Documents/ChatGPT/龙头战法/research/external_reference_intake_20261002T201958289339Z/root_source_manifest.json)；原HTML SHA256 `323e62b2871ffc3143fbde48fe2346fe5ee3257e5f78c02079088c77986591eb`。
+
+## 与之前经验验证的关系
+
+先前股性一致性比较另见 [经验检索与固定验证.md](D:/Documents/ChatGPT/龙头战法/research/经验检索与固定验证.md)。已有排名改善没有带来完整二分类指标改善，不因这次找到更多来源重调参数或宣称稳定60%。本库新增来源不是新盲测，也不是新前向样本。
+
+本批真实前向新增0；Accuracy、Precision、完整正例Recall、F1和Brier未产生新比较值。唯一下一步：继续既有题材/同身位队列，核对完整原竞争组的未来采集范围、日期及失败/未知留档。

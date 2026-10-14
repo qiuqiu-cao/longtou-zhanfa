@@ -1,0 +1,234 @@
+{
+  "version": "v172-ladder-gap-tradeoff-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "height_anchor_observations": 708,
+  "signal_dates": 503,
+  "split_date": "2025-05-19",
+  "group_summaries": {
+    "GAP_1": {
+      "observations": 169,
+      "signal_dates": 132,
+      "promotion_known": 169,
+      "promotion_rate": 0.44970414201183434,
+      "next_touch_known": 169,
+      "next_touch_rate": 0.6331360946745562,
+      "b2_proxy_known_conditional_on_touch": 106,
+      "b2_proxy_mean": -0.0104478900888553,
+      "b2_proxy_positive_rate": 0.4811320754716981,
+      "b2_proxy_big_loss_known": 106,
+      "b2_proxy_big_loss_rate": 0.37735849056603776
+    },
+    "GAP_2PLUS_DAMAGED": {
+      "observations": 56,
+      "signal_dates": 54,
+      "promotion_known": 55,
+      "promotion_rate": 0.6,
+      "next_touch_known": 55,
+      "next_touch_rate": 0.7818181818181819,
+      "b2_proxy_known_conditional_on_touch": 43,
+      "b2_proxy_mean": 0.029243124455981394,
+      "b2_proxy_positive_rate": 0.627906976744186,
+      "b2_proxy_big_loss_known": 43,
+      "b2_proxy_big_loss_rate": 0.23255813953488372
+    },
+    "GAP_2PLUS_HEALTHY": {
+      "observations": 99,
+      "signal_dates": 95,
+      "promotion_known": 98,
+      "promotion_rate": 0.6326530612244898,
+      "next_touch_known": 98,
+      "next_touch_rate": 0.7551020408163265,
+      "b2_proxy_known_conditional_on_touch": 71,
+      "b2_proxy_mean": 0.006228865744071467,
+      "b2_proxy_positive_rate": 0.43661971830985913,
+      "b2_proxy_big_loss_known": 71,
+      "b2_proxy_big_loss_rate": 0.352112676056338
+    },
+    "NO_GAP": {
+      "observations": 384,
+      "signal_dates": 222,
+      "promotion_known": 384,
+      "promotion_rate": 0.5286458333333334,
+      "next_touch_known": 384,
+      "next_touch_rate": 0.7057291666666666,
+      "b2_proxy_known_conditional_on_touch": 271,
+      "b2_proxy_mean": -0.04265261584159311,
+      "b2_proxy_positive_rate": 0.34686346863468637,
+      "b2_proxy_big_loss_known": 271,
+      "b2_proxy_big_loss_rate": 0.4612546125461255
+    }
+  },
+  "date_clustered_comparisons": {
+    "promotion_damaged_vs_healthy_gap": {
+      "group_a": "GAP_2PLUS_DAMAGED",
+      "group_b": "GAP_2PLUS_HEALTHY",
+      "estimate": -0.01977117623444402,
+      "ci95": [
+        -0.17245584102769976,
+        0.13037685668406257
+      ],
+      "cluster_dates_a": 53,
+      "cluster_dates_b": 94
+    },
+    "touch_damaged_vs_healthy_gap": {
+      "group_a": "GAP_2PLUS_DAMAGED",
+      "group_b": "GAP_2PLUS_HEALTHY",
+      "estimate": 0.03301886792452835,
+      "ci95": [
+        -0.11044008430349256,
+        0.17544409875551983
+      ],
+      "cluster_dates_a": 53,
+      "cluster_dates_b": 94
+    },
+    "b2_proxy_damaged_vs_healthy_gap": {
+      "group_a": "GAP_2PLUS_DAMAGED",
+      "group_b": "GAP_2PLUS_HEALTHY",
+      "estimate": 0.01531346732568046,
+      "ci95": [
+        -0.05032736328971941,
+        0.07463419494780879
+      ],
+      "cluster_dates_a": 42,
+      "cluster_dates_b": 68
+    },
+    "promotion_all_gap2_vs_no_gap": {
+      "group_a": "ALL_GAP_2PLUS",
+      "group_b": "NO_GAP",
+      "estimate": 0.09917366345937784,
+      "ci95": [
+        0.0040216108966109314,
+        0.19457969449040868
+      ],
+      "cluster_dates_a": 147,
+      "cluster_dates_b": 222
+    }
+  },
+  "chronological_split": {
+    "discovery_first_70pct_dates": {
+      "GAP_1": {
+        "observations": 111,
+        "signal_dates": 89,
+        "promotion_known": 111,
+        "promotion_rate": 0.45045045045045046,
+        "next_touch_known": 111,
+        "next_touch_rate": 0.6396396396396397,
+        "b2_proxy_known_conditional_on_touch": 71,
+        "b2_proxy_mean": 0.0023904046433400757,
+        "b2_proxy_positive_rate": 0.5352112676056338,
+        "b2_proxy_big_loss_known": 71,
+        "b2_proxy_big_loss_rate": 0.352112676056338
+      },
+      "GAP_2PLUS_DAMAGED": {
+        "observations": 40,
+        "signal_dates": 39,
+        "promotion_known": 40,
+        "promotion_rate": 0.625,
+        "next_touch_known": 40,
+        "next_touch_rate": 0.825,
+        "b2_proxy_known_conditional_on_touch": 33,
+        "b2_proxy_mean": 0.015185087832264273,
+        "b2_proxy_positive_rate": 0.5757575757575758,
+        "b2_proxy_big_loss_known": 33,
+        "b2_proxy_big_loss_rate": 0.2727272727272727
+      },
+      "GAP_2PLUS_HEALTHY": {
+        "observations": 80,
+        "signal_dates": 76,
+        "promotion_known": 80,
+        "promotion_rate": 0.65,
+        "next_touch_known": 80,
+        "next_touch_rate": 0.775,
+        "b2_proxy_known_conditional_on_touch": 62,
+        "b2_proxy_mean": 0.003367328874187811,
+        "b2_proxy_positive_rate": 0.43548387096774194,
+        "b2_proxy_big_loss_known": 62,
+        "b2_proxy_big_loss_rate": 0.3709677419354839
+      },
+      "NO_GAP": {
+        "observations": 243,
+        "signal_dates": 148,
+        "promotion_known": 243,
+        "promotion_rate": 0.5473251028806584,
+        "next_touch_known": 243,
+        "next_touch_rate": 0.7037037037037037,
+        "b2_proxy_known_conditional_on_touch": 171,
+        "b2_proxy_mean": -0.04279462450996687,
+        "b2_proxy_positive_rate": 0.3157894736842105,
+        "b2_proxy_big_loss_known": 171,
+        "b2_proxy_big_loss_rate": 0.4619883040935672
+      }
+    },
+    "validation_last_30pct_dates": {
+      "GAP_1": {
+        "observations": 58,
+        "signal_dates": 43,
+        "promotion_known": 58,
+        "promotion_rate": 0.4482758620689655,
+        "next_touch_known": 58,
+        "next_touch_rate": 0.6206896551724138,
+        "b2_proxy_known_conditional_on_touch": 35,
+        "b2_proxy_mean": -0.036491287974165926,
+        "b2_proxy_positive_rate": 0.37142857142857144,
+        "b2_proxy_big_loss_known": 35,
+        "b2_proxy_big_loss_rate": 0.42857142857142855
+      },
+      "GAP_2PLUS_DAMAGED": {
+        "observations": 16,
+        "signal_dates": 15,
+        "promotion_known": 15,
+        "promotion_rate": 0.5333333333333333,
+        "next_touch_known": 15,
+        "next_touch_rate": 0.6666666666666666,
+        "b2_proxy_known_conditional_on_touch": 10,
+        "b2_proxy_mean": 0.0756346453142479,
+        "b2_proxy_positive_rate": 0.8,
+        "b2_proxy_big_loss_known": 10,
+        "b2_proxy_big_loss_rate": 0.1
+      },
+      "GAP_2PLUS_HEALTHY": {
+        "observations": 19,
+        "signal_dates": 19,
+        "promotion_known": 18,
+        "promotion_rate": 0.5555555555555556,
+        "next_touch_known": 18,
+        "next_touch_rate": 0.6666666666666666,
+        "b2_proxy_known_conditional_on_touch": 9,
+        "b2_proxy_mean": 0.02594167529215884,
+        "b2_proxy_positive_rate": 0.4444444444444444,
+        "b2_proxy_big_loss_known": 9,
+        "b2_proxy_big_loss_rate": 0.2222222222222222
+      },
+      "NO_GAP": {
+        "observations": 141,
+        "signal_dates": 74,
+        "promotion_known": 141,
+        "promotion_rate": 0.49645390070921985,
+        "next_touch_known": 141,
+        "next_touch_rate": 0.7092198581560284,
+        "b2_proxy_known_conditional_on_touch": 100,
+        "b2_proxy_mean": -0.042409781018673966,
+        "b2_proxy_positive_rate": 0.4,
+        "b2_proxy_big_loss_known": 100,
+        "b2_proxy_big_loss_rate": 0.46
+      }
+    }
+  },
+  "promotion_difference_stable": false,
+  "conditional_b2_difference_stable": false,
+  "ladder_gap_positive_ranking_factor_allowed": false,
+  "interpretation": "A ladder gap is not a monotonic positive factor. It may indicate scarcity only when middle-board promotion and tail-loss evidence remain healthy. Conditional B+2 marks are opportunity proxies after next-session touch, not executable returns.",
+  "limitations": [
+    "current-universe survivorship bias remains",
+    "historical security status is not independently complete",
+    "candidate inventory valid_identity is unavailable and cannot establish historical eligibility",
+    "B+2 proxy is conditional on a next-session price opportunity",
+    "no queue, verified fill, actual exit, theme identity or catalyst timing"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v20\\episode_inventory_20260904_strict\\candidate_observations.csv": "99132a7e728ca439a5a2f0666edfc68fe76f06d49fb96fa91d51d1cd0c87a13a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  }
+}

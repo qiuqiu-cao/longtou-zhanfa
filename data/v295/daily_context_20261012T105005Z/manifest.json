@@ -1,0 +1,2905 @@
+{
+  "version": "v295-point-context-1",
+  "scope": {
+    "codes": [
+      "000892",
+      "001231",
+      "001330",
+      "002242",
+      "002264",
+      "002343",
+      "002441",
+      "002531",
+      "002576",
+      "002591",
+      "002692",
+      "002696",
+      "002908",
+      "002990",
+      "600192",
+      "600241",
+      "600560",
+      "600693",
+      "600812",
+      "600825",
+      "600831",
+      "600851",
+      "601127",
+      "601595",
+      "601811",
+      "601929",
+      "603032",
+      "603096",
+      "603230",
+      "603232",
+      "603336",
+      "603500",
+      "603528",
+      "603533",
+      "603968",
+      "603992",
+      "605136",
+      "605287",
+      "605577"
+    ],
+    "price_signal_date": "2026-10-12",
+    "kind": "FULL_PROVIDER_MAINBOARD_NAME_NON_ST_LIMIT_POOL",
+    "source_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\daily_signal_reuse_20261012T105005Z",
+    "manifest_sha256": "6a48d2fb55d9c21fde35a76ac180557cb6c9fb39cc14d75441efb5ed7848b206",
+    "official_full_market": false
+  },
+  "recorded_at": "2026-10-12T10:50:40.286764+00:00",
+  "requests": [
+    {
+      "code": "000892",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ000892"
+      },
+      "requested_at": "2026-10-12T10:50:28.644822+00:00",
+      "available_at": "2026-10-12T10:50:28.907677+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\000892_category_page.response",
+      "raw_sha256": "b245a0efee40d4bba2e47698b55bf6b34a83a749338d28494267f0c40abceefd",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "000892",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"000892\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:28.909500+00:00",
+      "available_at": "2026-10-12T10:50:29.369089+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\000892_category_table.response",
+      "raw_sha256": "b707cc97731cdb275b2678a48c4f5abe01450e5fa6eb99ded440cc242930d27d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "000892",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ000892"
+      },
+      "requested_at": "2026-10-12T10:50:29.370365+00:00",
+      "available_at": "2026-10-12T10:50:29.653478+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\000892_attention_latest.response",
+      "raw_sha256": "d039b24d2a7ef6af18fe933c65c808d18036dc84b5cc69a4d33983082845e5af",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "000892",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ000892",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:29.654992+00:00",
+      "available_at": "2026-10-12T10:50:29.926202+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\000892_attention_history.response",
+      "raw_sha256": "f7231911fc6bccbbbaa6663082811424f5f080e3eb0962ba1bbad8c846e44698",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001231",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ001231"
+      },
+      "requested_at": "2026-10-12T10:50:28.645127+00:00",
+      "available_at": "2026-10-12T10:50:28.924373+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001231_category_page.response",
+      "raw_sha256": "90da640c222214de36dbebcdd4ed22fa0f78f44e90456452d5dbe74ef363b4e7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001231",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"001231\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:28.925679+00:00",
+      "available_at": "2026-10-12T10:50:29.329127+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001231_category_table.response",
+      "raw_sha256": "99c7234dd8dcb1cd2ea7345496567d545926cbcb502b55f54a946b17cf74432c",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001231",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ001231"
+      },
+      "requested_at": "2026-10-12T10:50:29.330504+00:00",
+      "available_at": "2026-10-12T10:50:29.601929+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001231_attention_latest.response",
+      "raw_sha256": "2295ebc5db1cbaa8c6844d4e4a1e6c7a1021ea19aa713e59620303a35b1af9da",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001231",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ001231",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:29.602698+00:00",
+      "available_at": "2026-10-12T10:50:29.883820+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001231_attention_history.response",
+      "raw_sha256": "476466c843e9a26285a5ce0519ce4b2fcbd8927e53f1ddfbc4b842cc37f184c3",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001330",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ001330"
+      },
+      "requested_at": "2026-10-12T10:50:28.645309+00:00",
+      "available_at": "2026-10-12T10:50:28.912605+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001330_category_page.response",
+      "raw_sha256": "e496ffcd1faad3c3ae05cafcb4a430e58ecfad53e7e33b6423c47dec5e1f6f51",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001330",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"001330\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:28.913511+00:00",
+      "available_at": "2026-10-12T10:50:29.326016+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001330_category_table.response",
+      "raw_sha256": "edf8e3da8e202bbb7fc39dcaa4a3370b2a3be3771191a8df897263dd1ee0d956",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001330",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ001330"
+      },
+      "requested_at": "2026-10-12T10:50:29.326860+00:00",
+      "available_at": "2026-10-12T10:50:29.605547+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001330_attention_latest.response",
+      "raw_sha256": "c48f258c59e5aab2708509d0abb6b0960e992f7dfc0eb21fed1325e827874c91",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "001330",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ001330",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:29.606786+00:00",
+      "available_at": "2026-10-12T10:50:29.894175+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\001330_attention_history.response",
+      "raw_sha256": "b495d12b644ddbd1e965764029eb4198f5bd4825d7322721eb0b532b76b6a897",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002242",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002242"
+      },
+      "requested_at": "2026-10-12T10:50:28.645448+00:00",
+      "available_at": "2026-10-12T10:50:28.907491+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002242_category_page.response",
+      "raw_sha256": "23c16fe33afe8d1d470b9556a51c367813700d114ad87d54b93d6b2779ea109b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002242",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002242\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:28.908446+00:00",
+      "available_at": "2026-10-12T10:50:29.331195+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002242_category_table.response",
+      "raw_sha256": "396474eabc5226ecdae6e25328e0a8c862fb90956e65690874815406dbc5c7c9",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002242",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002242"
+      },
+      "requested_at": "2026-10-12T10:50:29.332248+00:00",
+      "available_at": "2026-10-12T10:50:29.606128+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002242_attention_latest.response",
+      "raw_sha256": "a101201cd710f80c3d30e65cae502fff798ac0f9ca16298e6ce6c0718ea486c3",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002242",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002242",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:29.608254+00:00",
+      "available_at": "2026-10-12T10:50:29.905161+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002242_attention_history.response",
+      "raw_sha256": "1027881c46e31335b0c6b7063097916b64f6a9f9c009583ad724f3d4150184f4",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002264",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002264"
+      },
+      "requested_at": "2026-10-12T10:50:29.884776+00:00",
+      "available_at": "2026-10-12T10:50:30.245003+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002264_category_page.response",
+      "raw_sha256": "362f786d43f0b29dc8d8607cab55ae09d2273606a0c0617cb42a763fe5041acc",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002264",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002264\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:30.245860+00:00",
+      "available_at": "2026-10-12T10:50:30.600767+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002264_category_table.response",
+      "raw_sha256": "44cbdf87d559e2c5ad612a3bb37b008902230456b37c1795f11f33e4be333eba",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002264",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002264"
+      },
+      "requested_at": "2026-10-12T10:50:30.601964+00:00",
+      "available_at": "2026-10-12T10:50:30.886552+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002264_attention_latest.response",
+      "raw_sha256": "6147e75c521ac5302df4d3ddd4ca7e104a4297c2d86e9e39dc8169f51c083558",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002264",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002264",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:30.887369+00:00",
+      "available_at": "2026-10-12T10:50:31.175098+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002264_attention_history.response",
+      "raw_sha256": "e8b00c5c3a0d16070211de9a44fc165215d11f1aeab4deaaac6bfcc677ba6138",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002343",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002343"
+      },
+      "requested_at": "2026-10-12T10:50:29.895227+00:00",
+      "available_at": "2026-10-12T10:50:30.247839+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002343_category_page.response",
+      "raw_sha256": "15a08c4b1dbf639077191dafc47a5683998d826947a10f5130aafd459acf781a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002343",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002343\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:30.248902+00:00",
+      "available_at": "2026-10-12T10:50:30.582935+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002343_category_table.response",
+      "raw_sha256": "cd85bae32678f6008dba95cbe0a8fa558cd0d735ce4ff78ef03f2ea7d1d84a9e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002343",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002343"
+      },
+      "requested_at": "2026-10-12T10:50:30.583754+00:00",
+      "available_at": "2026-10-12T10:50:30.841217+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002343_attention_latest.response",
+      "raw_sha256": "81af4fc6f9ea3d3fe503ae68994d20f9bc46a5222ca0aa76843ae66aec2fafe4",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002343",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002343",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:30.841983+00:00",
+      "available_at": "2026-10-12T10:50:31.117950+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002343_attention_history.response",
+      "raw_sha256": "a8ae6769751cbe8b7bb9128fb7f8e6887bd0c10acdc5a0de195663462f760980",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002441",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002441"
+      },
+      "requested_at": "2026-10-12T10:50:29.906046+00:00",
+      "available_at": "2026-10-12T10:50:30.191696+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002441_category_page.response",
+      "raw_sha256": "421b6cad1f3a9456771fe712c4d7d6fab0efa9d1cc33c52723c745bdbbd9bec4",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002441",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002441\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:30.192651+00:00",
+      "available_at": "2026-10-12T10:50:30.591010+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002441_category_table.response",
+      "raw_sha256": "1aa7e64aaeda73bbf0f0452afd407bcdea7a65216d908a8046ab6d621cc22262",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002441",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002441"
+      },
+      "requested_at": "2026-10-12T10:50:30.591991+00:00",
+      "available_at": "2026-10-12T10:50:30.855304+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002441_attention_latest.response",
+      "raw_sha256": "25d3dd134b9aa01f411caf0f94826eefed9b6d51ab649e8017430b614506f99d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002441",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002441",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:30.856143+00:00",
+      "available_at": "2026-10-12T10:50:31.097405+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002441_attention_history.response",
+      "raw_sha256": "5b38415a4505483ed5cd2d94b157efdb242df166f80984f7e402e494bfc65a2c",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002531",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002531"
+      },
+      "requested_at": "2026-10-12T10:50:29.927558+00:00",
+      "available_at": "2026-10-12T10:50:30.152468+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002531_category_page.response",
+      "raw_sha256": "f388ed3c76def08d2124cfbe01d837586450a079cdea728f6c2e138113c36a59",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002531",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002531\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:30.153416+00:00",
+      "available_at": "2026-10-12T10:50:30.490178+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002531_category_table.response",
+      "raw_sha256": "eac5f147d167efaa46ae1dda75c73eebd60c3da41b60f783825781a230501ad8",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002531",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002531"
+      },
+      "requested_at": "2026-10-12T10:50:30.491390+00:00",
+      "available_at": "2026-10-12T10:50:30.679836+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002531_attention_latest.response",
+      "raw_sha256": "d7bbb9a325a1c87ee21ba8fae0c948a7a670c01e6d74353a306c956ddca446df",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002531",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002531",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:30.680650+00:00",
+      "available_at": "2026-10-12T10:50:30.919300+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002531_attention_history.response",
+      "raw_sha256": "ddcb073a02db78962db216b244873b181d479d6e0c13afad248874787e486bb2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002576",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002576"
+      },
+      "requested_at": "2026-10-12T10:50:30.920662+00:00",
+      "available_at": "2026-10-12T10:50:31.259698+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002576_category_page.response",
+      "raw_sha256": "7bcb3aa663cd1fe0a72a359fea5a296fa594048bc4ec094500b075a3e4f6a48a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002576",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002576\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:31.260602+00:00",
+      "available_at": "2026-10-12T10:50:31.549464+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002576_category_table.response",
+      "raw_sha256": "b92e1645216e6ada2f753cf058429bf9c6d204b19ba90f4fafc14c2d0378083d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002576",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002576"
+      },
+      "requested_at": "2026-10-12T10:50:31.550294+00:00",
+      "available_at": "2026-10-12T10:50:31.769970+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002576_attention_latest.response",
+      "raw_sha256": "2b53c7be978adccd04ffebf6521191a97c40520f638ec82e78ac33b9076113e7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002576",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002576",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:31.770768+00:00",
+      "available_at": "2026-10-12T10:50:32.019913+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002576_attention_history.response",
+      "raw_sha256": "6ea644a2f6474a7e82ba4823b32636fe67e05b7bc2c71a5f990a9d88fd5da0b5",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002591",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002591"
+      },
+      "requested_at": "2026-10-12T10:50:31.098304+00:00",
+      "available_at": "2026-10-12T10:50:31.332114+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002591_category_page.response",
+      "raw_sha256": "3945fff3d2c0d515d4de85a99dac1da64f3af82d1ee472fcb239f076abf9c3d7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002591",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002591\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:31.332965+00:00",
+      "available_at": "2026-10-12T10:50:31.647668+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002591_category_table.response",
+      "raw_sha256": "e0163c80c7fc054cfe3137000b32fd9763d53c4db710909325f34e4c266e2a63",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002591",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002591"
+      },
+      "requested_at": "2026-10-12T10:50:31.648506+00:00",
+      "available_at": "2026-10-12T10:50:31.841330+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002591_attention_latest.response",
+      "raw_sha256": "7e24bc46c7aefc919ba66ef63c8f9449430b3ae8d041f1690c4e2db961c10e05",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002591",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002591",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:31.842294+00:00",
+      "available_at": "2026-10-12T10:50:32.104142+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002591_attention_history.response",
+      "raw_sha256": "25b9a62858010f3c68149526d81ec023301a7c6763d2b3e8b3db672a848455b6",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002692",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002692"
+      },
+      "requested_at": "2026-10-12T10:50:31.119074+00:00",
+      "available_at": "2026-10-12T10:50:31.418920+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002692_category_page.response",
+      "raw_sha256": "e8fddf90fea1eeadc0876e57109050a6d16e0932388f64d65cecdfeeacf841dc",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002692",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002692\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:31.419781+00:00",
+      "available_at": "2026-10-12T10:50:31.785667+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002692_category_table.response",
+      "raw_sha256": "09c718c9e6d09c6f9e895438e13e819f52dc74cc6889aa5ad0ca861a08fd153d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002692",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002692"
+      },
+      "requested_at": "2026-10-12T10:50:31.786815+00:00",
+      "available_at": "2026-10-12T10:50:32.041965+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002692_attention_latest.response",
+      "raw_sha256": "f7dedf04742956b891f1971a5d510e0be37aac56be917be951f91d404f861efc",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002692",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002692",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:32.042886+00:00",
+      "available_at": "2026-10-12T10:50:32.300755+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002692_attention_history.response",
+      "raw_sha256": "550e0f73615f2b07b9d3b6f8128422b2b81772ff2491f0bdab4bb7db71de7cc8",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002696",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002696"
+      },
+      "requested_at": "2026-10-12T10:50:31.176009+00:00",
+      "available_at": "2026-10-12T10:50:31.476025+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002696_category_page.response",
+      "raw_sha256": "b4494be8c6b62ae70b98f60446f63388c7eed67123f08e4da890fbfaff9c9c8d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002696",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002696\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:31.476913+00:00",
+      "available_at": "2026-10-12T10:50:31.822202+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002696_category_table.response",
+      "raw_sha256": "bd40a6df6c7006644c8aede86288ed150e4701867171c653b4b33d2bf50fec85",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002696",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002696"
+      },
+      "requested_at": "2026-10-12T10:50:31.823319+00:00",
+      "available_at": "2026-10-12T10:50:32.102212+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002696_attention_latest.response",
+      "raw_sha256": "5c9c348c38655398ad7acae12f0b5f1909815ef668aadb1c1813370d74c2da43",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002696",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002696",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:32.102980+00:00",
+      "available_at": "2026-10-12T10:50:32.380400+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002696_attention_history.response",
+      "raw_sha256": "4529f4ac2ac1f5c9685f594030cc85268502d65fb151e77d75e8f709ba770bc8",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002908",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002908"
+      },
+      "requested_at": "2026-10-12T10:50:32.020921+00:00",
+      "available_at": "2026-10-12T10:50:32.336271+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002908_category_page.response",
+      "raw_sha256": "d1499d294ef220fcc304e611f37e8e4442df0e2d728d04f0089bbb4adca07692",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002908",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002908\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:32.337451+00:00",
+      "available_at": "2026-10-12T10:50:32.722528+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002908_category_table.response",
+      "raw_sha256": "826271ee6fd434ae2438559bffc012a216b30b8c1d943c7e44aca06ca9a7b28e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002908",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002908"
+      },
+      "requested_at": "2026-10-12T10:50:32.723430+00:00",
+      "available_at": "2026-10-12T10:50:32.943721+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002908_attention_latest.response",
+      "raw_sha256": "39dc30231ecf4b39c6f35ee17a20724d678d5516a07c07ddc56d300c0a34572a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002908",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002908",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:32.944958+00:00",
+      "available_at": "2026-10-12T10:50:33.180168+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002908_attention_history.response",
+      "raw_sha256": "499a011660607bd6d29a4694311e5516bea59012ee00bacadf2a2d3b5b5ac977",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002990",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SZ002990"
+      },
+      "requested_at": "2026-10-12T10:50:32.105287+00:00",
+      "available_at": "2026-10-12T10:50:32.416116+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002990_category_page.response",
+      "raw_sha256": "61fa25d951d31d72648fffb1675e806097a70e4b31e454d39c080a13374ab92e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002990",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"002990\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:32.416992+00:00",
+      "available_at": "2026-10-12T10:50:32.800790+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002990_category_table.response",
+      "raw_sha256": "90e1f09dd20ea7c1b2247cad31af71cefb9796253608b7ad91a844c1e126d7a9",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002990",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002990"
+      },
+      "requested_at": "2026-10-12T10:50:32.801759+00:00",
+      "available_at": "2026-10-12T10:50:33.009736+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002990_attention_latest.response",
+      "raw_sha256": "53dd6f14402ff4528efa78e9f350de3c19fde80350ed7c8ee05bbaaeb614bf8a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "002990",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SZ002990",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:33.010499+00:00",
+      "available_at": "2026-10-12T10:50:33.241246+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\002990_attention_history.response",
+      "raw_sha256": "d60e451348e6fcd936003fb00fdd1b88bcc5f9069869a907ebbf4a70e40f9a00",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600192",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600192"
+      },
+      "requested_at": "2026-10-12T10:50:32.301710+00:00",
+      "available_at": "2026-10-12T10:50:32.626424+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600192_category_page.response",
+      "raw_sha256": "278e8ec23cd022533db5f57f118bfbf4e8326158a59c86c4fa9a2d5bd77a29e3",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600192",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600192\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:32.627555+00:00",
+      "available_at": "2026-10-12T10:50:33.102733+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600192_category_table.response",
+      "raw_sha256": "decef44d5d9b6a8594ab1d319ac065ed9bc3229cb47156634cc0ad92fd860e51",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600192",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600192"
+      },
+      "requested_at": "2026-10-12T10:50:33.103585+00:00",
+      "available_at": "2026-10-12T10:50:33.322104+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600192_attention_latest.response",
+      "raw_sha256": "a5e8d16e8f7b133edff89965aabf3b17eb687e681b4b3c7be5c57f2e85cf2f17",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600192",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600192",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:33.322854+00:00",
+      "available_at": "2026-10-12T10:50:33.536154+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600192_attention_history.response",
+      "raw_sha256": "bff688f02f3112b876b0592b7aabbd3c058feb7f28a1341b0a42d2b08b180f3d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600241",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600241"
+      },
+      "requested_at": "2026-10-12T10:50:32.381305+00:00",
+      "available_at": "2026-10-12T10:50:32.630716+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600241_category_page.response",
+      "raw_sha256": "97f2680b642408d797a25c5e551777599293858f098591510f7602aa9b02e093",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600241",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600241\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:32.631718+00:00",
+      "available_at": "2026-10-12T10:50:32.945543+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600241_category_table.response",
+      "raw_sha256": "aca4ee920429c459770061578bb7003b8055dd7f925cdff36c6c9a3d2358ed1a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600241",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600241"
+      },
+      "requested_at": "2026-10-12T10:50:32.946561+00:00",
+      "available_at": "2026-10-12T10:50:33.191456+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600241_attention_latest.response",
+      "raw_sha256": "ddae8292237b878fd8d3098e7631ba9403a653f7f87ea6e1610fb64a37273ac9",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600241",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600241",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:33.192434+00:00",
+      "available_at": "2026-10-12T10:50:33.447707+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600241_attention_history.response",
+      "raw_sha256": "05d4dc67b57c511229c6090f5954bda07f091294f7c8ea1edd88d7916666c882",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600560",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600560"
+      },
+      "requested_at": "2026-10-12T10:50:33.181070+00:00",
+      "available_at": "2026-10-12T10:50:33.520341+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600560_category_page.response",
+      "raw_sha256": "bd28cfbd47bd63d19a338f56c9c819424bea967d2f4e32d5a997ca303c690831",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600560",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600560\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:33.521156+00:00",
+      "available_at": "2026-10-12T10:50:33.906416+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600560_category_table.response",
+      "raw_sha256": "c01868791636a810cd9cfbfda1c92283a31d205a9fef4ef1a02584ce8d1d527f",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600560",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600560"
+      },
+      "requested_at": "2026-10-12T10:50:33.907287+00:00",
+      "available_at": "2026-10-12T10:50:34.123548+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600560_attention_latest.response",
+      "raw_sha256": "b952b666ba0ed54df72d75084a5fd49e9fa2a83139fa7842f66c36978c418df5",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600560",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600560",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:34.124473+00:00",
+      "available_at": "2026-10-12T10:50:34.386921+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600560_attention_history.response",
+      "raw_sha256": "844c06231183106acf157028e0d246236ea8bb2def4a296720219093ecd71541",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600693",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600693"
+      },
+      "requested_at": "2026-10-12T10:50:33.242134+00:00",
+      "available_at": "2026-10-12T10:50:33.542065+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600693_category_page.response",
+      "raw_sha256": "ba6b6f74e59f3ad2c6b318b639f88a842fb5c72896597b59a80e9d0ec4a4ccc2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600693",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600693\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:33.542966+00:00",
+      "available_at": "2026-10-12T10:50:33.929897+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600693_category_table.response",
+      "raw_sha256": "ea9ae2c740c89fb8d90740d115fb97711778504fdffff9ed17adcd5d7a3a95d1",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600693",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600693"
+      },
+      "requested_at": "2026-10-12T10:50:33.930755+00:00",
+      "available_at": "2026-10-12T10:50:34.150988+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600693_attention_latest.response",
+      "raw_sha256": "ce6fab50e1b24a2f981701312487ce5cdaca50ad7f5d5cf6b310a0c4b3f7164b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600693",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600693",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:34.151762+00:00",
+      "available_at": "2026-10-12T10:50:34.404225+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600693_attention_history.response",
+      "raw_sha256": "7478b3cdea5299b2ed7482018821c986b594c478b18771494529c2467ffdc4a2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600812",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600812"
+      },
+      "requested_at": "2026-10-12T10:50:33.448621+00:00",
+      "available_at": "2026-10-12T10:50:33.737440+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600812_category_page.response",
+      "raw_sha256": "60c2cc20b4f57e1d9371dbe84f41354f9a0b4a873f80441ac0b498b015fcddf4",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600812",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600812\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:33.738284+00:00",
+      "available_at": "2026-10-12T10:50:34.065442+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600812_category_table.response",
+      "raw_sha256": "322f9eaad7d2ed6cca372e7de2f1835b0fab221951e6d38a143dbefb595f4231",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600812",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600812"
+      },
+      "requested_at": "2026-10-12T10:50:34.066290+00:00",
+      "available_at": "2026-10-12T10:50:34.296015+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600812_attention_latest.response",
+      "raw_sha256": "a0e4bc1aa635238d64c9131bf952d58acda1da876a065e3de5897141cbe97358",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600812",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600812",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:34.296790+00:00",
+      "available_at": "2026-10-12T10:50:34.511569+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600812_attention_history.response",
+      "raw_sha256": "a33a30f0a62cfe2d481998643f006b9d04abf1835da9f7302ba3601de5ca840c",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600825",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600825"
+      },
+      "requested_at": "2026-10-12T10:50:33.537223+00:00",
+      "available_at": "2026-10-12T10:50:33.740154+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600825_category_page.response",
+      "raw_sha256": "0301c244895ede0efa44792822be00c92609f7d90e3309f3796f36340788f127",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600825",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600825\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:33.740994+00:00",
+      "available_at": "2026-10-12T10:50:34.115575+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600825_category_table.response",
+      "raw_sha256": "ae14cebc827cd1fd396d7e20e3237e39cb759c533137393fc066d5d101428442",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600825",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600825"
+      },
+      "requested_at": "2026-10-12T10:50:34.116409+00:00",
+      "available_at": "2026-10-12T10:50:34.380215+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600825_attention_latest.response",
+      "raw_sha256": "d3adbb70db0d8fafd53ac45f7613b3d02f584255aa9827bbd9ddde1cfa1f6b79",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600825",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600825",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:34.380975+00:00",
+      "available_at": "2026-10-12T10:50:34.641641+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600825_attention_history.response",
+      "raw_sha256": "aa0f833e3d0b6dcebf2309b5a7dd8925081f9dcf180e509ba937ee917c205dc9",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600831",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600831"
+      },
+      "requested_at": "2026-10-12T10:50:34.387891+00:00",
+      "available_at": "2026-10-12T10:50:34.870865+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600831_category_page.response",
+      "raw_sha256": "80e611ff959dd2059a2ca94ca3ed57cebbbe504b07bfe18a1239561392f7a8e2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600831",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600831\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:34.871865+00:00",
+      "available_at": "2026-10-12T10:50:35.367814+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600831_category_table.response",
+      "raw_sha256": "4199ddb16afcc2e035988a9bc0ead52cf02faabf72d2c69f749b89e04b9b8c5e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600831",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600831"
+      },
+      "requested_at": "2026-10-12T10:50:35.368719+00:00",
+      "available_at": "2026-10-12T10:50:35.576694+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600831_attention_latest.response",
+      "raw_sha256": "40cb6a1df4a5f97f55111bcd618b51c55f50cf89fcef4db9e0c9ceb498b003b2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600831",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600831",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:35.577467+00:00",
+      "available_at": "2026-10-12T10:50:35.793760+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600831_attention_history.response",
+      "raw_sha256": "406f49e9800e92abf820a7f60d6c6563e3a16c4f35876bcd25bd2e013359f956",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600851",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH600851"
+      },
+      "requested_at": "2026-10-12T10:50:34.405408+00:00",
+      "available_at": "2026-10-12T10:50:34.655549+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600851_category_page.response",
+      "raw_sha256": "cefa884d2bb418e0de8e4b68942ac2456cecf4ca9fcd1cead584fe9a7612d2ab",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600851",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"600851\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:34.656370+00:00",
+      "available_at": "2026-10-12T10:50:35.001676+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600851_category_table.response",
+      "raw_sha256": "bd61012463134cb2146be12022f46eb65d2b91309cd42e8bf6277c8814d9a859",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600851",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600851"
+      },
+      "requested_at": "2026-10-12T10:50:35.002460+00:00",
+      "available_at": "2026-10-12T10:50:35.194326+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600851_attention_latest.response",
+      "raw_sha256": "e3c4b4eb52fbeabf409c5c8a63fee4e4b86fffb7d0350c0650e38f127d908d02",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "600851",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH600851",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:35.195209+00:00",
+      "available_at": "2026-10-12T10:50:35.430344+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\600851_attention_history.response",
+      "raw_sha256": "5b5754a7a31c3efed46d18e8703540b334cf4ebef83715e1eeac0314259ffb39",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601127",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH601127"
+      },
+      "requested_at": "2026-10-12T10:50:34.512486+00:00",
+      "available_at": "2026-10-12T10:50:34.790766+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601127_category_page.response",
+      "raw_sha256": "36f7bb3aa0e1e09d2f655eb4e45247b7cd4f0cb356bd3b9edeb6499de72c8c3d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601127",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"601127\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:34.791613+00:00",
+      "available_at": "2026-10-12T10:50:35.217248+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601127_category_table.response",
+      "raw_sha256": "710d2685c99c3cbe902835528edf8c4a1e7f7286236fcff9e757f9f126d14a75",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601127",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601127"
+      },
+      "requested_at": "2026-10-12T10:50:35.218447+00:00",
+      "available_at": "2026-10-12T10:50:35.474457+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601127_attention_latest.response",
+      "raw_sha256": "6614fff7eca502c0c8b3b87911a658bade85e52f2883ff6aa20749b385a7b950",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601127",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601127",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:35.475385+00:00",
+      "available_at": "2026-10-12T10:50:35.736898+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601127_attention_history.response",
+      "raw_sha256": "4117bbe0b5a2b23cd629f70dfc399583b6f2bfe5cf59391b45b5ff2c8911ac75",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601595",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH601595"
+      },
+      "requested_at": "2026-10-12T10:50:34.642523+00:00",
+      "available_at": "2026-10-12T10:50:34.830793+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601595_category_page.response",
+      "raw_sha256": "a2a55c63d357a11948818c516d861c7f8586e7ab51250d53bec5ee4b4925b8dd",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601595",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"601595\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:34.831649+00:00",
+      "available_at": "2026-10-12T10:50:35.205073+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601595_category_table.response",
+      "raw_sha256": "9b0ad3f7e05a98293a3fbb38b1e8b95d521b9585d23196d10f55dcdc1f5687f2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601595",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601595"
+      },
+      "requested_at": "2026-10-12T10:50:35.205918+00:00",
+      "available_at": "2026-10-12T10:50:35.449667+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601595_attention_latest.response",
+      "raw_sha256": "0f0f1eca45742be7e69000d2661e8a74b4ad1440d1a44745a7e29138b2996831",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601595",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601595",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:35.450423+00:00",
+      "available_at": "2026-10-12T10:50:35.710233+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601595_attention_history.response",
+      "raw_sha256": "64ae79c64598fa74602638f7ae645ed3c2d2f7774b42ea85e8a4fbc7717dd3c4",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601811",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH601811"
+      },
+      "requested_at": "2026-10-12T10:50:35.431206+00:00",
+      "available_at": "2026-10-12T10:50:35.754259+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601811_category_page.response",
+      "raw_sha256": "e66d201a28b352b446afbbc529f025dc1b5f0be0ea180a92ffc4a960f311b446",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601811",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"601811\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:35.755264+00:00",
+      "available_at": "2026-10-12T10:50:36.174963+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601811_category_table.response",
+      "raw_sha256": "a1e25cdd86d023ebcc5bce94ee2b61b41fa14802177eeb46df4692ca8c881596",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601811",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601811"
+      },
+      "requested_at": "2026-10-12T10:50:36.175815+00:00",
+      "available_at": "2026-10-12T10:50:36.394242+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601811_attention_latest.response",
+      "raw_sha256": "8778cc9c21e996d5fe7faba4896e6064fc8fc7667987954f7abb5d36ee897444",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601811",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601811",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:36.395000+00:00",
+      "available_at": "2026-10-12T10:50:36.606506+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601811_attention_history.response",
+      "raw_sha256": "addf22164edd0a9fdd9f7eac99c99c58eec2961b126ac92f33bab0d29b74e676",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601929",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH601929"
+      },
+      "requested_at": "2026-10-12T10:50:35.711180+00:00",
+      "available_at": "2026-10-12T10:50:35.925003+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601929_category_page.response",
+      "raw_sha256": "eb8ce83f82e5f5f22cdbfaf5cfb7eee6f652d26a048399868d72b9eb945f084f",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601929",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"601929\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:35.925823+00:00",
+      "available_at": "2026-10-12T10:50:36.288840+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601929_category_table.response",
+      "raw_sha256": "4053f9b602c20d5dbbfa7f91a4ae52765bf2f3193a05548d922413c13ef88033",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601929",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601929"
+      },
+      "requested_at": "2026-10-12T10:50:36.289724+00:00",
+      "available_at": "2026-10-12T10:50:36.496562+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601929_attention_latest.response",
+      "raw_sha256": "5fce9ca08c60b49e11e27c8a967fa19ebeac645e20162dc0cef42ec821618cb7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "601929",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH601929",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:36.497329+00:00",
+      "available_at": "2026-10-12T10:50:36.707997+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\601929_attention_history.response",
+      "raw_sha256": "4aa8709adddb11d9d8ccc2674b2866858b5086d0f18ab5a50cf04cb362d61aa0",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603032",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603032"
+      },
+      "requested_at": "2026-10-12T10:50:35.737796+00:00",
+      "available_at": "2026-10-12T10:50:36.073205+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603032_category_page.response",
+      "raw_sha256": "163d3d64d5be5d5a481d526e49a7383c07f65ac7c6b8d3732b7f42416b9be001",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603032",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603032\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:36.074322+00:00",
+      "available_at": "2026-10-12T10:50:36.334974+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603032_category_table.response",
+      "raw_sha256": "52ef362d23c0799a119468387e476fe8f98aa3dcedcdaded0d3f26b09d868ff3",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603032",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603032"
+      },
+      "requested_at": "2026-10-12T10:50:36.335955+00:00",
+      "available_at": "2026-10-12T10:50:36.555456+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603032_attention_latest.response",
+      "raw_sha256": "1bc7a3a8709354bd75469517af01bee5fb6a92f1ba7bf063f203bd613682575e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603032",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603032",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:36.556280+00:00",
+      "available_at": "2026-10-12T10:50:36.813616+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603032_attention_history.response",
+      "raw_sha256": "4901b2a7a99573b43c3eeb74eafb1f14fe6bc71027f205eea4617404ef5c744d",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603096",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603096"
+      },
+      "requested_at": "2026-10-12T10:50:35.794733+00:00",
+      "available_at": "2026-10-12T10:50:36.159488+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603096_category_page.response",
+      "raw_sha256": "4736ba478f28e106de6e3d14ee79098d1289808de1b3b66bc88bc6c17eff0396",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603096",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603096\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:36.160388+00:00",
+      "available_at": "2026-10-12T10:50:36.687205+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603096_category_table.response",
+      "raw_sha256": "b016424db1e1dea2930956783d600e25de314338ad642b6cc6068ddf4da02266",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603096",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603096"
+      },
+      "requested_at": "2026-10-12T10:50:36.688436+00:00",
+      "available_at": "2026-10-12T10:50:36.924988+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603096_attention_latest.response",
+      "raw_sha256": "23ef8a3abfe3defa88806c285bbb8160c08068699089d0a39198284fc44a5f1b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603096",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603096",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:36.925758+00:00",
+      "available_at": "2026-10-12T10:50:37.150261+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603096_attention_history.response",
+      "raw_sha256": "0b6640f864caa7ada245d86364300e5523238c7ab639af6c461a6d541f540778",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603230",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603230"
+      },
+      "requested_at": "2026-10-12T10:50:36.607509+00:00",
+      "available_at": "2026-10-12T10:50:37.135547+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603230_category_page.response",
+      "raw_sha256": "2d85e1c2566cc7becd2aa5172d69ecbaab7ab45f7e4fd3d6ebcf786aaf487325",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603230",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603230\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:37.136366+00:00",
+      "available_at": "2026-10-12T10:50:37.559012+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603230_category_table.response",
+      "raw_sha256": "08425b2a8b4b2ba2054878285e36594c53bd03f03513929c0430cdb1d5ce3f89",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603230",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603230"
+      },
+      "requested_at": "2026-10-12T10:50:37.559819+00:00",
+      "available_at": "2026-10-12T10:50:37.785443+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603230_attention_latest.response",
+      "raw_sha256": "3a169ab1179bf962d6275074a6df92e22c159ede3148e6defa45bcd60fd53914",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603230",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603230",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:37.786221+00:00",
+      "available_at": "2026-10-12T10:50:38.037593+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603230_attention_history.response",
+      "raw_sha256": "af1d17c35ec8fd50793d74e77370030af0b59c1370c27cc59463c916a7a677b3",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603232",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603232"
+      },
+      "requested_at": "2026-10-12T10:50:36.708896+00:00",
+      "available_at": "2026-10-12T10:50:36.931585+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603232_category_page.response",
+      "raw_sha256": "44b8fc59a6b907e7d074acaccb1a352394256a13b274310403b8fc1a7408fb6a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603232",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603232\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:36.932474+00:00",
+      "available_at": "2026-10-12T10:50:37.346028+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603232_category_table.response",
+      "raw_sha256": "036fe2ac38546096ca3573ca185b56a89b37b68cced8f6e7821018616a408588",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603232",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603232"
+      },
+      "requested_at": "2026-10-12T10:50:37.346894+00:00",
+      "available_at": "2026-10-12T10:50:37.605780+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603232_attention_latest.response",
+      "raw_sha256": "cfdf080b8f3feb68635ff3023ff594d95725eef6724bf04ba61692689e53e003",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603232",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603232",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:37.606529+00:00",
+      "available_at": "2026-10-12T10:50:37.837099+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603232_attention_history.response",
+      "raw_sha256": "a797c0972826412b91e2bdcc024cc155562318413864fe7c898a0666ebba6943",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603336",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603336"
+      },
+      "requested_at": "2026-10-12T10:50:36.814475+00:00",
+      "available_at": "2026-10-12T10:50:37.079604+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603336_category_page.response",
+      "raw_sha256": "5a587c117f7be82e0375054dc74d8028d21ba726ee373c1bdeeb9033aadd32c3",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603336",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603336\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:37.080452+00:00",
+      "available_at": "2026-10-12T10:50:37.365013+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603336_category_table.response",
+      "raw_sha256": "1caede73685c538d482bb55998f5ad507f5b43c1fb165b5c41c9ee27cdb7309e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603336",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603336"
+      },
+      "requested_at": "2026-10-12T10:50:37.365890+00:00",
+      "available_at": "2026-10-12T10:50:37.625613+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603336_attention_latest.response",
+      "raw_sha256": "8d8336770b3cd4f54a341e4e1e64aaa0740d3ce75d495022ef19de6017a88148",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603336",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603336",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:37.626571+00:00",
+      "available_at": "2026-10-12T10:50:37.859641+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603336_attention_history.response",
+      "raw_sha256": "5589cb1d07e162992276356a17182afe8fefdd509bb067c99e369c525aa0705c",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603500",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603500"
+      },
+      "requested_at": "2026-10-12T10:50:37.151289+00:00",
+      "available_at": "2026-10-12T10:50:37.376649+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603500_category_page.response",
+      "raw_sha256": "f15ebd8b7c9484cc8228c4c2628b3886ec56555607eef2d7029f01fedbc8f613",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603500",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603500\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:37.378032+00:00",
+      "available_at": "2026-10-12T10:50:37.739858+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603500_category_table.response",
+      "raw_sha256": "85e01a079726781757e286ce4c570f18eb0daae4aa34efd0786aa7c1b9a31dd7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603500",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603500"
+      },
+      "requested_at": "2026-10-12T10:50:37.740720+00:00",
+      "available_at": "2026-10-12T10:50:37.988842+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603500_attention_latest.response",
+      "raw_sha256": "52798b3404ef0c1c34f89f76eb5ece832be5ad1a510d70e591b9fe7c0e72a3c2",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603500",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603500",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:37.989957+00:00",
+      "available_at": "2026-10-12T10:50:38.224094+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603500_attention_history.response",
+      "raw_sha256": "690cf30ccf6a71ea04972c6cf82c190ed6c90e506a86675d1cc552da3843252a",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603528",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603528"
+      },
+      "requested_at": "2026-10-12T10:50:37.838042+00:00",
+      "available_at": "2026-10-12T10:50:38.149062+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603528_category_page.response",
+      "raw_sha256": "7f5e415033921feb13374acc85fb7ffb76624a39547f8ee4fe62c3530ac63223",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603528",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603528\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:38.149929+00:00",
+      "available_at": "2026-10-12T10:50:38.589758+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603528_category_table.response",
+      "raw_sha256": "0c4b5c18776f241e253fcac2212f450d529c11e3af194a5a9f66006f4e089763",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603528",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603528"
+      },
+      "requested_at": "2026-10-12T10:50:38.591113+00:00",
+      "available_at": "2026-10-12T10:50:38.847120+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603528_attention_latest.response",
+      "raw_sha256": "3c7d19a3291e8184eac051ab1e63e60cccb7a3c2487e7ee327c3bb045e5713b6",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603528",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603528",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:38.847961+00:00",
+      "available_at": "2026-10-12T10:50:39.089748+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603528_attention_history.response",
+      "raw_sha256": "c4c355d8d74a47a26c8548c432ad4b7e0a8bdcd3513113022a817241466525c7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603533",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603533"
+      },
+      "requested_at": "2026-10-12T10:50:37.860810+00:00",
+      "available_at": "2026-10-12T10:50:38.119363+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603533_category_page.response",
+      "raw_sha256": "aa70dac29fb8868801bb6d7a276eff18316ac7ccfc1334a9b1678ae43098ad90",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603533",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603533\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:38.120294+00:00",
+      "available_at": "2026-10-12T10:50:38.425297+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603533_category_table.response",
+      "raw_sha256": "b100cf25e127b0c00ca96baff43a117b2fcc40511c271123ce514bdd45dc5806",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603533",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603533"
+      },
+      "requested_at": "2026-10-12T10:50:38.426434+00:00",
+      "available_at": "2026-10-12T10:50:38.656937+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603533_attention_latest.response",
+      "raw_sha256": "4b08f52c866ae0205286ad9bab4455d2199e73f31a8288f63615cdd702f3c3b7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603533",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603533",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:38.657785+00:00",
+      "available_at": "2026-10-12T10:50:38.896515+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603533_attention_history.response",
+      "raw_sha256": "a2aac95ae0edee827b8c315c57aa3dc36ec2bf03d99e7de32bae2919fa8ea55f",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603968",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603968"
+      },
+      "requested_at": "2026-10-12T10:50:38.038463+00:00",
+      "available_at": "2026-10-12T10:50:38.326410+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603968_category_page.response",
+      "raw_sha256": "c2b2070f2cbacc8262a9c43d2c7487e0bb2e8d793e3c8eb1a8d636474cfd9152",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603968",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603968\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:38.327233+00:00",
+      "available_at": "2026-10-12T10:50:38.739112+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603968_category_table.response",
+      "raw_sha256": "81c9aa7d9d71a27911daaad349975f9a3abd07b976b7a3fe7479d83740b2c4fc",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603968",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603968"
+      },
+      "requested_at": "2026-10-12T10:50:38.740187+00:00",
+      "available_at": "2026-10-12T10:50:38.963934+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603968_attention_latest.response",
+      "raw_sha256": "c9ddb1b24658722c5ddca86561e60b4efe5afe4b4c5ed543a97be62460493a5b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603968",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603968",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:38.964786+00:00",
+      "available_at": "2026-10-12T10:50:39.235115+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603968_attention_history.response",
+      "raw_sha256": "3c5dd07549d5426190b6fff023a5b8459a8775c83966c0932b0dc250511bb498",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603992",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH603992"
+      },
+      "requested_at": "2026-10-12T10:50:38.225137+00:00",
+      "available_at": "2026-10-12T10:50:38.486740+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603992_category_page.response",
+      "raw_sha256": "9070b4b6f2e807d13d88747fefcaf6e536cda49a70801e9148299ee486e3599e",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603992",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"603992\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:38.487669+00:00",
+      "available_at": "2026-10-12T10:50:39.036371+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603992_category_table.response",
+      "raw_sha256": "ac245f084cb5384617e9bc51c36889b18a603fde6233e18a3d11b232c852fe2b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603992",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603992"
+      },
+      "requested_at": "2026-10-12T10:50:39.037399+00:00",
+      "available_at": "2026-10-12T10:50:39.301658+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603992_attention_latest.response",
+      "raw_sha256": "169b2c77f8e88de41e2d9e9ceee06c08aa0377ddd858c3db0f090b2fd852357c",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "603992",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH603992",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:39.302830+00:00",
+      "available_at": "2026-10-12T10:50:39.582640+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\603992_attention_history.response",
+      "raw_sha256": "6eb34ed3414e62737994bb6ba762c2fbd9a4b964ef6fd0016a2956f9ccf5d9f7",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605136",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH605136"
+      },
+      "requested_at": "2026-10-12T10:50:38.897811+00:00",
+      "available_at": "2026-10-12T10:50:39.148121+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605136_category_page.response",
+      "raw_sha256": "38411264e780a0f93ba8410f24cf79c003cbbaab308c51df345f174d5d4a2692",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605136",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"605136\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:39.150068+00:00",
+      "available_at": "2026-10-12T10:50:39.538455+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605136_category_table.response",
+      "raw_sha256": "6081527219062b6709ea5aafd1d9a899b67ba8997ee04950246db90df2c3ed7b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605136",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH605136"
+      },
+      "requested_at": "2026-10-12T10:50:39.539663+00:00",
+      "available_at": "2026-10-12T10:50:39.758259+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605136_attention_latest.response",
+      "raw_sha256": "cbb155182a93fcb8862baeacb82a542c2e81a2b49bc8c64c7c16694a0d7959d9",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605136",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH605136",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:39.759698+00:00",
+      "available_at": "2026-10-12T10:50:40.002493+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605136_attention_history.response",
+      "raw_sha256": "aeb43542b49c46a97117993ad0a3c1eb21485d3a5063ec826b1f3460200c3eca",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605287",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH605287"
+      },
+      "requested_at": "2026-10-12T10:50:39.091173+00:00",
+      "available_at": "2026-10-12T10:50:39.339896+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605287_category_page.response",
+      "raw_sha256": "a9a35834bb8519cffafcbd4e638cf952d4734d2d69b997434349d97ecde1e868",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605287",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"605287\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:39.341505+00:00",
+      "available_at": "2026-10-12T10:50:39.736607+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605287_category_table.response",
+      "raw_sha256": "52a03de2a29375bfcca90c83b7db8409363af41900d60b793c2a0d421c2a9e0f",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605287",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH605287"
+      },
+      "requested_at": "2026-10-12T10:50:39.737572+00:00",
+      "available_at": "2026-10-12T10:50:39.981055+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605287_attention_latest.response",
+      "raw_sha256": "0ac4e654e81eb65e2380600d78128c723318a1f6b37a54eb7573ab5f9d363ccc",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605287",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH605287",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:39.981868+00:00",
+      "available_at": "2026-10-12T10:50:40.227693+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605287_attention_history.response",
+      "raw_sha256": "9997e8c4eec3309960613f75747876ba7899ad6b7bc2bba130776cdc023267e8",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605577",
+      "kind": "category_page",
+      "method": "GET",
+      "url": "https://emweb.securities.eastmoney.com/PC_HSF10/CoreConception/PageAjax",
+      "query": {
+        "code": "SH605577"
+      },
+      "requested_at": "2026-10-12T10:50:39.236867+00:00",
+      "available_at": "2026-10-12T10:50:39.450861+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605577_category_page.response",
+      "raw_sha256": "bd1fa9e3163d5373e2c8b0d915903145fbb2780e2e2a16007d1425fb78460f18",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605577",
+      "kind": "category_table",
+      "method": "GET",
+      "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+      "query": {
+        "reportName": "RPT_F10_CORETHEME_BOARDTYPE",
+        "columns": "ALL",
+        "filter": "(SECURITY_CODE=\"605577\")",
+        "pageSize": 1000,
+        "pageNumber": 1,
+        "source": "WEB",
+        "client": "WEB"
+      },
+      "requested_at": "2026-10-12T10:50:39.451879+00:00",
+      "available_at": "2026-10-12T10:50:39.803771+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605577_category_table.response",
+      "raw_sha256": "2d6f7b97fbb603ea0ad8b2ee32fa6c8043dc7c9851f1c3e4774814e5673a031b",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605577",
+      "kind": "attention_latest",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getCurrentLatest",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH605577"
+      },
+      "requested_at": "2026-10-12T10:50:39.804617+00:00",
+      "available_at": "2026-10-12T10:50:40.036719+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605577_attention_latest.response",
+      "raw_sha256": "e182cc94e6982f3982f3d561e9f7aa583a2170264790e5b3774be17b2639bd66",
+      "status": "RAW_JSON_RECEIVED"
+    },
+    {
+      "code": "605577",
+      "kind": "attention_history",
+      "method": "POST",
+      "url": "https://emappdata.eastmoney.com/stockrank/getHisList",
+      "query": {
+        "appId": "appId01",
+        "globalId": "786e4c21-70dc-435a-93bb-38",
+        "marketType": "",
+        "srcSecurityCode": "SH605577",
+        "yearType": "5"
+      },
+      "requested_at": "2026-10-12T10:50:40.037981+00:00",
+      "available_at": "2026-10-12T10:50:40.284814+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v295\\daily_context_20261012T105005Z\\raw\\605577_attention_history.response",
+      "raw_sha256": "92235364b9690085dbf53f1f6bab4dd6b7513239c740eb11a34861bfb726512a",
+      "status": "RAW_JSON_RECEIVED"
+    }
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\point_context_v295.py": "acbfaba0277cf0feb29badfabb2155c80fdae9491ebba4907eb52f6cd0040c41"
+  },
+  "no_old_forecast_update": true
+}

@@ -1,0 +1,158 @@
+{
+  "BASE": {
+    "registered_rows": 21,
+    "known_outcome_rows": 8,
+    "predicted_rows": 16,
+    "scored_rows": 8,
+    "unknown_outcome_rows": 13,
+    "unknown_prediction_rows": 5,
+    "label_coverage": 0.38095238095238093,
+    "scoring_coverage": 0.38095238095238093,
+    "valid_label_scoring_coverage": 1.0,
+    "correct": 6,
+    "accuracy": 0.75,
+    "confusion_matrix": {
+      "IMPROVE": {
+        "IMPROVE": 3,
+        "CONTINUE": 0,
+        "WORSEN": 1
+      },
+      "CONTINUE": {
+        "IMPROVE": 0,
+        "CONTINUE": 0,
+        "WORSEN": 0
+      },
+      "WORSEN": {
+        "IMPROVE": 1,
+        "CONTINUE": 0,
+        "WORSEN": 3
+      }
+    },
+    "by_class": {
+      "IMPROVE": {
+        "known_outcome_support": 4,
+        "scored_support": 4,
+        "scored_calls": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "scored_recall": 0.75,
+        "complete_recall": 0.75,
+        "F1": 0.75
+      },
+      "CONTINUE": {
+        "known_outcome_support": 0,
+        "scored_support": 0,
+        "scored_calls": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "scored_recall": null,
+        "complete_recall": null,
+        "F1": null
+      },
+      "WORSEN": {
+        "known_outcome_support": 4,
+        "scored_support": 4,
+        "scored_calls": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "scored_recall": 0.75,
+        "complete_recall": 0.75,
+        "F1": 0.75
+      }
+    },
+    "all_registered_classes_scored": false,
+    "macro_f1": null,
+    "balanced_accuracy": null
+  },
+  "M1_BALANCED_SUBSAMPLE": {
+    "registered_rows": 21,
+    "known_outcome_rows": 8,
+    "predicted_rows": 16,
+    "scored_rows": 8,
+    "unknown_outcome_rows": 13,
+    "unknown_prediction_rows": 5,
+    "label_coverage": 0.38095238095238093,
+    "scoring_coverage": 0.38095238095238093,
+    "valid_label_scoring_coverage": 1.0,
+    "correct": 6,
+    "accuracy": 0.75,
+    "confusion_matrix": {
+      "IMPROVE": {
+        "IMPROVE": 3,
+        "CONTINUE": 0,
+        "WORSEN": 1
+      },
+      "CONTINUE": {
+        "IMPROVE": 0,
+        "CONTINUE": 0,
+        "WORSEN": 0
+      },
+      "WORSEN": {
+        "IMPROVE": 1,
+        "CONTINUE": 0,
+        "WORSEN": 3
+      }
+    },
+    "by_class": {
+      "IMPROVE": {
+        "known_outcome_support": 4,
+        "scored_support": 4,
+        "scored_calls": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "scored_recall": 0.75,
+        "complete_recall": 0.75,
+        "F1": 0.75
+      },
+      "CONTINUE": {
+        "known_outcome_support": 0,
+        "scored_support": 0,
+        "scored_calls": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "scored_recall": null,
+        "complete_recall": null,
+        "F1": null
+      },
+      "WORSEN": {
+        "known_outcome_support": 4,
+        "scored_support": 4,
+        "scored_calls": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "scored_recall": 0.75,
+        "complete_recall": 0.75,
+        "F1": 0.75
+      }
+    },
+    "all_registered_classes_scored": false,
+    "macro_f1": null,
+    "balanced_accuracy": null
+  },
+  "diagnostic_gate": {
+    "checks": {
+      "accuracy_improves_at_least3pp": false,
+      "label_coverage_at_least90pct": false,
+      "scoring_coverage_not_lower": true,
+      "macro_f1_not_lower": false,
+      "IMPROVE_complete_recall_not_lower": true,
+      "CONTINUE_complete_recall_not_lower": false,
+      "WORSEN_complete_recall_not_lower": true,
+      "CONTINUE_recall_strictly_improves": false
+    },
+    "passed": false
+  },
+  "accuracy_difference": 0.0
+}

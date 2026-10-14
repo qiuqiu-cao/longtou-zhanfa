@@ -1,0 +1,88 @@
+{
+  "created_at": "2026-10-02T21:08:45.633338+00:00",
+  "research_question": "Is an independent unadjusted closing price plus explicit cap source feasible for complete fixed prior competition group outcomes?",
+  "source_probe_only": true,
+  "no_labels_no_scoring_no_model_change": true,
+  "sample_code_denominator": [
+    "000678",
+    "600825"
+  ],
+  "previous_receipt_reference": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\public_outcome_sources_20261002_v1\\raw\\2026-09-30_previous_limit.json",
+    "raw_sha256": "831bb08ba4ccd49fed1ade6b94f40d47c895940e2a1977f84802e8c4f682695c",
+    "original_expected_sha256": "831bb08ba4ccd49fed1ade6b94f40d47c895940e2a1977f84802e8c4f682695c",
+    "hash_matches": true,
+    "requested_at": "2026-10-02T13:53:12.971888+00:00",
+    "available_at": "2026-10-02T13:53:16.858670+00:00",
+    "requested_date": "2026-09-30",
+    "returned_qdate": 20260930,
+    "not_new_capture": true
+  },
+  "codes": [
+    {
+      "code": "000678",
+      "availability": "READABLE_TWO_PROVIDERS",
+      "daily_returned_date": "2026-09-30",
+      "native_daily_prices_cny": {
+        "open": "10.690",
+        "close": "12.890",
+        "high": "12.890",
+        "low": "10.690"
+      },
+      "unadjusted_daily_requested": true,
+      "forward_adjusted": false,
+      "quote_returned_at_cst": "2026-09-30T15:34:27+08:00",
+      "quote_date_equals_requested_daily_date": true,
+      "quote_after_close": true,
+      "quote_not_after_available_time": true,
+      "quote_upper_field_f51": 12.89,
+      "existing_previous_limit_ztp_native": 12890,
+      "existing_previous_limit_ztp_cny": "12.89",
+      "existing_previous_limit_qdate": "2026-09-30",
+      "explicit_ztp_equals_f51_exactly": true,
+      "quote_ohlc_equals_independent_daily_exactly": true,
+      "upper_price_matches_tencent_positional_candidate_exactly": true,
+      "price_comparison_tolerance_cny": "0",
+      "price_limit_not_computed_from_percentage": true,
+      "provider_independence": "Eastmoney explicit ztp/f51 vs Tencent unadjusted daily; two Eastmoney fields are same provider and not independent of each other",
+      "production_outcome": null
+    },
+    {
+      "code": "600825",
+      "availability": "READABLE_TWO_PROVIDERS",
+      "daily_returned_date": "2026-09-30",
+      "native_daily_prices_cny": {
+        "open": "10.350",
+        "close": "10.350",
+        "high": "10.350",
+        "low": "10.350"
+      },
+      "unadjusted_daily_requested": true,
+      "forward_adjusted": false,
+      "quote_returned_at_cst": "2026-09-30T16:11:33+08:00",
+      "quote_date_equals_requested_daily_date": true,
+      "quote_after_close": true,
+      "quote_not_after_available_time": true,
+      "quote_upper_field_f51": 10.35,
+      "existing_previous_limit_ztp_native": 10350,
+      "existing_previous_limit_ztp_cny": "10.35",
+      "existing_previous_limit_qdate": "2026-09-30",
+      "explicit_ztp_equals_f51_exactly": true,
+      "quote_ohlc_equals_independent_daily_exactly": true,
+      "upper_price_matches_tencent_positional_candidate_exactly": true,
+      "price_comparison_tolerance_cny": "0",
+      "price_limit_not_computed_from_percentage": true,
+      "provider_independence": "Eastmoney explicit ztp/f51 vs Tencent unadjusted daily; two Eastmoney fields are same provider and not independent of each other",
+      "production_outcome": null
+    }
+  ],
+  "limitations": [
+    "Probe uses 2 of original 11 stocks only; it does not certify all-candidate or exchange-wide coverage",
+    "Individual quote endpoint has no historical date selection; it must be captured prospectively on the relevant completed session",
+    "f51/f52 semantic mapping is author documentation and reconciliation, not exchange-certified specification",
+    "October 8 target session has not occurred; no target label or forward sample was created",
+    "Actual acquisition is October 3 Shanghai time and cannot be inserted into the original September 30 knowledge cutoff",
+    "No intraday path or order-flow evidence is obtained",
+    "The current V293 bridge does not accept this new individual quote receipt schema; production entry is unchanged"
+  ]
+}

@@ -1,0 +1,1122 @@
+{
+  "version": "v282-causal-nonword-pairwise-rank-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "specification": {
+    "version": "v282-causal-nonword-pairwise-rank-1",
+    "fields": [
+      "boards",
+      "height_gap",
+      "same_height_rivals",
+      "unique_space",
+      "height_share",
+      "is_space_leader",
+      "emotion_score",
+      "promotion_2to3",
+      "promotion_3to4",
+      "promotion_mid",
+      "previous_limit_tail_loss",
+      "failed_rate",
+      "down_limit_rate",
+      "breadth_health",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "turnover",
+      "signal_amount",
+      "amplitude",
+      "turnover_vs_prev",
+      "price",
+      "price_same_height_percentile",
+      "signal_amount_same_height_percentile",
+      "turnover_same_height_percentile",
+      "turnover_vs_prev_same_height_percentile",
+      "signal_one_word",
+      "log_signal_amount"
+    ],
+    "C_grid": [
+      0.25,
+      1.0,
+      4.0
+    ],
+    "windows": [
+      252,
+      null
+    ],
+    "validation_dates": 63,
+    "update": "monthly",
+    "domain": "signal-day true nonword",
+    "gating": "NONE",
+    "selection_metric": "every eligible date positive Top1 promotion",
+    "changed_variable": "within-date pairwise loss instead of binary classifier loss",
+    "tie_break": "prior validation accuracy, then smaller C, then expanding window"
+  },
+  "source_hashes": {
+    "nonword_pairwise_ranker_v282.py": "fd66e7b2f6bb0d7883e71dfce0c7ada83a1aa2182ccd73e4d44d10ae05208e2d",
+    "nonword_specialist_challenger_v281.py": "b930a15a1c0a0c0b2d7c77cf20429c3d0efba1bacb98a3df87c00dd29fbcb98c",
+    "next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "relay_promotion_holdout_v256.py": "604d83341387a0a7e4e12fd0871dc62a9cf50f5267b69dcd8f49c75cd6293e4f",
+    "results\\v281\\nonword_specialist_20261002_v1\\report.json": "11061159456d69ba13b02c5aff743c25e152c78724dbea60b986af90ac060c1a",
+    "results\\v281\\nonword_specialist_20261002_v1\\specialist_predictions_LABEL_ONLY.csv": "d99a8bc93773367396e45bdbcfedbffc14dcdd212a5e46764d4e2c34578c5143",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "data\\v279\\daily_path_clues_20261002_v1\\historical_relay_paths_LABEL_ONLY.csv": "b56ccae7543e5a9ba5e45d6ec31919f5bf326a2017b5ac6bf288617f11419f1c",
+    "data\\v279\\daily_path_clues_20261002_v1\\september_relay_paths_LABEL_ONLY.csv": "54191bba9a7c4cd7f27b33dea846ce8e130db16f8dcfec2acd501b435bbcc670",
+    "results\\v279\\daily_path_paired_20261002_v2\\CONTROL_predictions_LABEL_ONLY.csv": "61ceee6b53ebf1ab99a1ae83d0ff1607395e24b7954a0a06e605e23f4a0126b1"
+  },
+  "selection_logs": [
+    {
+      "cutoff": "2025-07-01",
+      "chosen": {
+        "C": 1.0,
+        "window": 252,
+        "validation_accuracy": 0.4603174603174603,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.4444444444444444,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.4444444444444444,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.4444444444444444,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.4444444444444444,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-03-26",
+      "max_train_label_date": "2025-03-25",
+      "max_validation_label_date": "2025-06-30",
+      "max_refit_label_date": "2025-06-30",
+      "training": {
+        "rows": 3033,
+        "dates": 252,
+        "mixed_dates": 232,
+        "symmetric_pair_rows": 23548,
+        "max_label_date": "2025-06-30",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2025-08-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.3968253968253968,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-04-29",
+      "max_train_label_date": "2025-04-28",
+      "max_validation_label_date": "2025-07-31",
+      "max_refit_label_date": "2025-07-31",
+      "training": {
+        "rows": 4351,
+        "dates": 404,
+        "mixed_dates": 366,
+        "symmetric_pair_rows": 30038,
+        "max_label_date": "2025-07-31",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2025-09-01",
+      "chosen": {
+        "C": 4.0,
+        "window": 252,
+        "validation_accuracy": 0.4444444444444444,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.4444444444444444,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-06-03",
+      "max_train_label_date": "2025-05-30",
+      "max_validation_label_date": "2025-08-29",
+      "max_refit_label_date": "2025-08-29",
+      "training": {
+        "rows": 3238,
+        "dates": 252,
+        "mixed_dates": 237,
+        "symmetric_pair_rows": 24922,
+        "max_label_date": "2025-08-29",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2025-10-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.42857142857142855,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-07-03",
+      "max_train_label_date": "2025-07-02",
+      "max_validation_label_date": "2025-09-30",
+      "max_refit_label_date": "2025-09-30",
+      "training": {
+        "rows": 4756,
+        "dates": 447,
+        "mixed_dates": 406,
+        "symmetric_pair_rows": 31690,
+        "max_label_date": "2025-09-30",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2025-11-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.47619047619047616,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-07-28",
+      "max_train_label_date": "2025-07-25",
+      "max_validation_label_date": "2025-10-31",
+      "max_refit_label_date": "2025-10-31",
+      "training": {
+        "rows": 4898,
+        "dates": 464,
+        "mixed_dates": 421,
+        "symmetric_pair_rows": 32112,
+        "max_label_date": "2025-10-31",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2025-12-01",
+      "chosen": {
+        "C": 1.0,
+        "window": 252,
+        "validation_accuracy": 0.49206349206349204,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.49206349206349204,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.49206349206349204,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-08-25",
+      "max_train_label_date": "2025-08-22",
+      "max_validation_label_date": "2025-11-28",
+      "max_refit_label_date": "2025-11-28",
+      "training": {
+        "rows": 2693,
+        "dates": 252,
+        "mixed_dates": 241,
+        "symmetric_pair_rows": 14462,
+        "max_label_date": "2025-11-28",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-01-01",
+      "chosen": {
+        "C": 1.0,
+        "window": 252,
+        "validation_accuracy": 0.5555555555555556,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.5238095238095238,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.5079365079365079,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.5555555555555556,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.5079365079365079,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.5396825396825397,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.5079365079365079,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-09-25",
+      "max_train_label_date": "2025-09-24",
+      "max_validation_label_date": "2025-12-31",
+      "max_refit_label_date": "2025-12-31",
+      "training": {
+        "rows": 2441,
+        "dates": 252,
+        "mixed_dates": 242,
+        "symmetric_pair_rows": 10524,
+        "max_label_date": "2025-12-31",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-02-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.47619047619047616,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.47619047619047616,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.42857142857142855,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.4444444444444444,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.4603174603174603,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-10-31",
+      "max_train_label_date": "2025-10-30",
+      "max_validation_label_date": "2026-01-30",
+      "max_refit_label_date": "2026-01-30",
+      "training": {
+        "rows": 5598,
+        "dates": 527,
+        "mixed_dates": 484,
+        "symmetric_pair_rows": 35574,
+        "max_label_date": "2026-01-30",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-03-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.4126984126984127,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.3333333333333333,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-11-20",
+      "max_train_label_date": "2025-11-19",
+      "max_validation_label_date": "2026-02-27",
+      "max_refit_label_date": "2026-02-27",
+      "training": {
+        "rows": 5707,
+        "dates": 541,
+        "mixed_dates": 497,
+        "symmetric_pair_rows": 35852,
+        "max_label_date": "2026-02-27",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-04-01",
+      "chosen": {
+        "C": 4.0,
+        "window": null,
+        "validation_accuracy": 0.4126984126984127,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2025-12-22",
+      "max_train_label_date": "2025-12-19",
+      "max_validation_label_date": "2026-03-31",
+      "max_refit_label_date": "2026-03-31",
+      "training": {
+        "rows": 5891,
+        "dates": 563,
+        "mixed_dates": 514,
+        "symmetric_pair_rows": 36284,
+        "max_label_date": "2026-03-31",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-05-01",
+      "chosen": {
+        "C": 1.0,
+        "window": null,
+        "validation_accuracy": 0.4126984126984127,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.38095238095238093,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.3968253968253968,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2026-01-22",
+      "max_train_label_date": "2026-01-21",
+      "max_validation_label_date": "2026-04-30",
+      "max_refit_label_date": "2026-04-30",
+      "training": {
+        "rows": 6053,
+        "dates": 584,
+        "mixed_dates": 534,
+        "symmetric_pair_rows": 36784,
+        "max_label_date": "2026-04-30",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-06-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.4126984126984127,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.4126984126984127,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2026-02-25",
+      "max_train_label_date": "2026-02-24",
+      "max_validation_label_date": "2026-05-29",
+      "max_refit_label_date": "2026-05-29",
+      "training": {
+        "rows": 6263,
+        "dates": 602,
+        "mixed_dates": 552,
+        "symmetric_pair_rows": 37788,
+        "max_label_date": "2026-05-29",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-07-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.3492063492063492,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.3333333333333333,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2026-03-26",
+      "max_train_label_date": "2026-03-25",
+      "max_validation_label_date": "2026-06-30",
+      "max_refit_label_date": "2026-06-30",
+      "training": {
+        "rows": 6501,
+        "dates": 623,
+        "mixed_dates": 572,
+        "symmetric_pair_rows": 38806,
+        "max_label_date": "2026-06-30",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-08-01",
+      "chosen": {
+        "C": 0.25,
+        "window": null,
+        "validation_accuracy": 0.31746031746031744,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.2698412698412698,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.31746031746031744,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.23809523809523808,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.31746031746031744,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.23809523809523808,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.31746031746031744,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2026-04-29",
+      "max_train_label_date": "2026-04-28",
+      "max_validation_label_date": "2026-07-31",
+      "max_refit_label_date": "2026-07-31",
+      "training": {
+        "rows": 6725,
+        "dates": 646,
+        "mixed_dates": 594,
+        "symmetric_pair_rows": 39500,
+        "max_label_date": "2026-07-31",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    },
+    {
+      "cutoff": "2026-09-01",
+      "chosen": {
+        "C": 1.0,
+        "window": null,
+        "validation_accuracy": 0.38095238095238093,
+        "validation_dates": 63
+      },
+      "validation_choices": [
+        {
+          "C": 0.25,
+          "window": 252,
+          "validation_accuracy": 0.3492063492063492,
+          "validation_dates": 63
+        },
+        {
+          "C": 0.25,
+          "window": null,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": 252,
+          "validation_accuracy": 0.38095238095238093,
+          "validation_dates": 63
+        },
+        {
+          "C": 1.0,
+          "window": null,
+          "validation_accuracy": 0.38095238095238093,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": 252,
+          "validation_accuracy": 0.36507936507936506,
+          "validation_dates": 63
+        },
+        {
+          "C": 4.0,
+          "window": null,
+          "validation_accuracy": 0.38095238095238093,
+          "validation_dates": 63
+        }
+      ],
+      "validation_start": "2026-06-02",
+      "max_train_label_date": "2026-06-01",
+      "max_validation_label_date": "2026-08-31",
+      "max_refit_label_date": "2026-08-31",
+      "training": {
+        "rows": 6964,
+        "dates": 667,
+        "mixed_dates": 613,
+        "symmetric_pair_rows": 40926,
+        "max_label_date": "2026-08-31",
+        "one_word_rows": 0
+      },
+      "test_labels_used": false
+    }
+  ],
+  "summaries": {
+    "2025H2": {
+      "n": 126,
+      "successes": 56,
+      "accuracy": 0.4444444444444444,
+      "wilson95": [
+        0.36060225925953826,
+        0.5315739367940392
+      ]
+    },
+    "2026YTD": {
+      "n": 159,
+      "successes": 60,
+      "accuracy": 0.37735849056603776,
+      "wilson95": [
+        0.3057459476738117,
+        0.45475730326461705
+      ]
+    },
+    "SEPTEMBER": {
+      "n": 13,
+      "successes": 7,
+      "accuracy": 0.5384615384615384,
+      "wilson95": [
+        0.29143795714506004,
+        0.7679393219046169
+      ]
+    },
+    "combined_pre_september": {
+      "n": 285,
+      "successes": 116,
+      "accuracy": 0.4070175438596491,
+      "wilson95": [
+        0.35158468619741945,
+        0.4649236494951339
+      ]
+    }
+  },
+  "paired": {
+    "2025H2": {
+      "CONTROL": {
+        "paired_days": 126,
+        "model_successes": 56,
+        "baseline_successes": 67,
+        "difference": -0.0873015873015873,
+        "bootstrap95": [
+          -0.16666666666666666,
+          -0.007936507936507936
+        ],
+        "circular_5_date_block95": [
+          -0.1746031746031746,
+          -0.007936507936507936
+        ],
+        "model_only_wins": 9,
+        "baseline_only_wins": 20
+      },
+      "NONWORD_SPECIALIST": {
+        "paired_days": 126,
+        "model_successes": 56,
+        "baseline_successes": 60,
+        "difference": -0.031746031746031744,
+        "bootstrap95": [
+          -0.12698412698412698,
+          0.05555555555555555
+        ],
+        "circular_5_date_block95": [
+          -0.12698412698412698,
+          0.06349206349206349
+        ],
+        "model_only_wins": 16,
+        "baseline_only_wins": 20
+      }
+    },
+    "2026YTD": {
+      "CONTROL": {
+        "paired_days": 159,
+        "model_successes": 60,
+        "baseline_successes": 61,
+        "difference": -0.006289308176100629,
+        "bootstrap95": [
+          -0.06918238993710692,
+          0.05660377358490566
+        ],
+        "circular_5_date_block95": [
+          -0.06289308176100629,
+          0.050314465408805034
+        ],
+        "model_only_wins": 12,
+        "baseline_only_wins": 13
+      },
+      "NONWORD_SPECIALIST": {
+        "paired_days": 159,
+        "model_successes": 60,
+        "baseline_successes": 57,
+        "difference": 0.018867924528301886,
+        "bootstrap95": [
+          -0.03773584905660377,
+          0.08176100628930817
+        ],
+        "circular_5_date_block95": [
+          -0.03773584905660377,
+          0.07547169811320754
+        ],
+        "model_only_wins": 13,
+        "baseline_only_wins": 10
+      }
+    },
+    "SEPTEMBER": {
+      "CONTROL": {
+        "paired_days": 13,
+        "model_successes": 7,
+        "baseline_successes": 7,
+        "difference": 0.0,
+        "bootstrap95": [
+          0.0,
+          0.0
+        ],
+        "circular_5_date_block95": [
+          0.0,
+          0.0
+        ],
+        "model_only_wins": 0,
+        "baseline_only_wins": 0
+      },
+      "NONWORD_SPECIALIST": {
+        "paired_days": 13,
+        "model_successes": 7,
+        "baseline_successes": 6,
+        "difference": 0.07692307692307693,
+        "bootstrap95": [
+          0.0,
+          0.23076923076923078
+        ],
+        "circular_5_date_block95": [
+          0.0,
+          0.23076923076923078
+        ],
+        "model_only_wins": 1,
+        "baseline_only_wins": 0
+      }
+    }
+  },
+  "denominator_alignment_rows": 3707,
+  "prediction_sha256": "2c2393ca40204a3dd633a40b01a6ffce71317c818832073ee3434c1f4cc6db77",
+  "goal_verified": false,
+  "trade_authorized": false,
+  "default_model_changed": false,
+  "limitations": [
+    "Reused already viewed history and September: no new blind or forward proof",
+    "Relative ranking utility is not promotion probability or leader identity verification",
+    "No theme, minute absorption/reseal, announcement completeness or fill evidence added",
+    "Dates without a nonword promoter remain failures in unfiltered daily positive Top1"
+  ]
+}

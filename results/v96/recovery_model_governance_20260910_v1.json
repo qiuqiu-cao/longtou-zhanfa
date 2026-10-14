@@ -1,0 +1,35 @@
+{
+  "version": "v96-recovery-model-governance-1",
+  "status": "REJECTED_UNCERTAINTY_GATE",
+  "governed_at": "2026-09-10T18:03:16.098300+08:00",
+  "point_estimate_gate_passed": true,
+  "uncertainty_stability_gate_passed": false,
+  "effective_historical_gate_passed": false,
+  "current_prediction_retained_for_audit": {
+    "signal_date": "2026-09-09",
+    "current_state": "大分歧",
+    "recovery_probability": 0.5268459166579498,
+    "continued_risk_off_probability": 0.4731540833420502,
+    "top_class": "RECOVERY",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "decision_authorized": false,
+  "deployment_allowed": false,
+  "forward_requirements": {
+    "minimum_applicable_predictions": 60,
+    "minimum_recovery_outcomes": 20,
+    "required_brier_gain_lower_ci": 0.0,
+    "required_log_loss_gain_lower_ci": 0.0,
+    "required_auc_lower_ci": 0.5
+  },
+  "sources": {
+    "model": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v93\\emotion_riskoff_recovery_20260910_v1\\report.json",
+      "sha256": "1670cdef67dbcb3e4d072b2e020839738dc9a2a9b9743c96f2c07c125af47be4"
+    },
+    "uncertainty": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v95\\emotion_recovery_uncertainty_20260910_v1.json",
+      "sha256": "e53e9b7a9b2cf350ad432324d69b1dc5878e5a6f15bfeb7c0bd7cbd7bda35c23"
+    }
+  }
+}

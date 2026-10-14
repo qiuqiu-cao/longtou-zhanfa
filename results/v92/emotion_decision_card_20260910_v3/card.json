@@ -1,0 +1,84 @@
+{
+  "version": "v92-emotion-decision-card-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-10",
+  "current_emotion_state": "退潮",
+  "market_evidence": {
+    "limit_count": 34,
+    "relay_count": 9,
+    "failed_count": 28,
+    "down_limit_count": 11,
+    "seal_rate": 0.5483870967741935,
+    "failed_rate": 0.4516129032258064,
+    "promotion_mid": 0.2142857142857142,
+    "yesterday_premium": -0.0104017934203147,
+    "previous_limit_tail_loss": -0.0903364753723144,
+    "max_board": 4,
+    "ladder_gap_count": 0
+  },
+  "forecasts": {
+    "seven_state_markov": {
+      "启动": 0.04716981132075472,
+      "升温": 0.0660377358490566,
+      "加速": 0.1792452830188679,
+      "一致": 0.009433962264150943,
+      "大分歧": 0.3113207547169811,
+      "退潮": 0.14150943396226415,
+      "修复": 0.24528301886792453
+    },
+    "three_regime_markov": {
+      "RISK_ON": 0.3018867924528302,
+      "RISK_OFF": 0.4528301886792453,
+      "REPAIR": 0.24528301886792453
+    },
+    "three_regime_nested_ensemble": {
+      "RISK_ON": 0.2636499981448413,
+      "RISK_OFF": 0.41535100661847263,
+      "REPAIR": 0.32099899523668585
+    },
+    "ensemble_model_gate_passed": false,
+    "riskoff_conditional_recovery": {
+      "recovery_probability": 0.5895364412537006,
+      "continued_risk_off_probability": 0.41046355874629936,
+      "top_class": "RECOVERY",
+      "historical_gate_passed": true,
+      "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+    }
+  },
+  "paper_risk_veto": {
+    "threshold": 0.4969478315099285,
+    "risk_off_probability": 0.41535100661847263,
+    "distance_to_threshold": -0.08159682489145587,
+    "triggered": false,
+    "policy_status": "FROZEN_PAPER_VALIDATION_ONLY",
+    "forward_gate_status": "NOT_STARTED",
+    "threshold_is_frozen": true,
+    "policy_reference_signal_date": "2026-09-09",
+    "current_trigger_recomputed_from_frozen_threshold": true
+  },
+  "stance": "RISK_OFF_LEAN_BELOW_VETO",
+  "trade_effect": {
+    "review_decision": "CASH",
+    "high_board_relay": "NOT_VETOED_BY_PAPER_MODEL",
+    "middle_board_relay": "NOT_VETOED_BY_PAPER_MODEL",
+    "first_board": "SEPARATE_STOCK_EVIDENCE_REQUIRED",
+    "direct_buy_authorized": false,
+    "reason": "emotion model is a risk overlay; the daily review and executable stock plan remain separate gates"
+  },
+  "interpretation": {
+    "money_effect": "ADVERSE",
+    "broken_board_loss": "ADVERSE",
+    "height_structure": "CONTINUOUS",
+    "repair_confirmation": "UNAVAILABLE_BEFORE_NEXT_SESSION_CLOSE",
+    "conditional_transition": "RECOVERY_EDGE_BUT_NOT_TRADE_SIGNAL"
+  },
+  "guarantee": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260910\\emotion_overlay_v100\\market_emotion_reconciled.csv": "d1a6373ffcfb29dd4b3494bfd956a3bf060c9c4ca3bddf4b2de054292dcd5df4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v82\\emotion_multiclass_audit_20260910_v5\\report.json": "9e1e3438e663e5c36842768268841d7776c0f49f66687925d1377a9a397699df",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v87\\emotion_regime_ensemble_20260910_v2\\report.json": "13c6506fbd715261add0eb4a5573983f97da130343375fc9114bdffab8269b9c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v91\\emotion_risk_veto_policy_20260910_v1.json": "8e0995aec68d194f372bab32a080447fdf1ed88346329f18ea22751e3685840e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20260910_v104\\review.json": "4a4698ef3b2c62e8a76595df53cd903619277a3e359228585f35b8c081fba345",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v93\\emotion_riskoff_recovery_20260910_v2\\report.json": "b308f40d36c4b83e275930fdfa3f5791637935440e6af1f10896a46c4432c8f7"
+  }
+}

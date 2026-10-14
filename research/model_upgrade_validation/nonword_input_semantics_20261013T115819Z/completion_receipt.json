@@ -1,0 +1,346 @@
+{
+  "status": "COMPLETE_FIXED_SEMANTIC_AND_COVERAGE_AUDIT_ACTUAL_FULL10_CONTEXT_NO_GAIN",
+  "started_at": "2026-10-13T11:58:19+00:00",
+  "completed_at": "2026-10-13T12:24:08.605323+00:00",
+  "elapsed_minutes": 25.82675538333333,
+  "budget_minutes": 30,
+  "previous_goal_turn_classification": "PROGRESS_actual_callable_choice_builder_full10_source_bound_explanations",
+  "report": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\非一字输入核查与解释修复.md",
+  "entry": "D:\\Documents\\ChatGPT\\龙头战法\\relay_field_context.py",
+  "final_current_context": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\actual_complete10_DELIVERY\\report.json",
+  "full_prepared_candidate_rows": 9245,
+  "original_BASE_historical_predictions": 3707,
+  "original_current_candidates": 10,
+  "ordered_fields": 29,
+  "fixed_train_window_checks": [
+    {
+      "fold": "2025H2",
+      "digest": "42ce437fb4e50ccb8851e49805fec2cc8bd044893f03c5e94359f3715e86a0b7",
+      "training_rows": 4062,
+      "training_dates": 252,
+      "latest_label": "2025-06-30",
+      "true_ohlc_identity_known": 0
+    },
+    {
+      "fold": "2026JanAug",
+      "digest": "fd67c90616818e71daaefdf6bd782c65eb5eb797cca5bae962fa7c4bf6eded2e",
+      "training_rows": 3243,
+      "training_dates": 252,
+      "latest_label": "2025-12-31",
+      "true_ohlc_identity_known": 0
+    },
+    {
+      "fold": "2026Sep",
+      "digest": "efad5d49f7ba3a26b859dcb8f7270599458e8b03806c33a4e5aaf3b02014e3fc",
+      "training_rows": 3059,
+      "training_dates": 252,
+      "latest_label": "2026-08-31",
+      "true_ohlc_identity_known": 0
+    }
+  ],
+  "descriptive_statistics_rows": 1218,
+  "final_context_source_bindings_verified": 740,
+  "related_tests": {
+    "command": "D:/python/python.exe -m unittest tests.test_relay_field_context",
+    "passed": 7,
+    "exit_code": 0
+  },
+  "input_units_or_saved_values_changed": false,
+  "scores_calls_order_changed": false,
+  "protected_programs_or_original_registry_changed": false,
+  "new_mature_forward_samples": 0,
+  "numeric_fits": 0,
+  "accuracy_gain_verified": false,
+  "original_fixed_metrics": {
+    "2025H2": {
+      "complete": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6470959595959596,
+        "Precision": 0.6345609065155807,
+        "complete_positive_Recall": 0.3425076452599388,
+        "F1": 0.4448857994041708,
+        "confusion": {
+          "TP": 224,
+          "TN": 801,
+          "FP": 129,
+          "FN": 430
+        },
+        "complete_positive_misses": 430,
+        "positive_support": 654,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "true_nonword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_oneword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "unknown_true_identity": {
+        "original_registered_count": 1584,
+        "scoreable_count": 1584,
+        "coverage": 1.0,
+        "Accuracy": 0.6470959595959596,
+        "Precision": 0.6345609065155807,
+        "complete_positive_Recall": 0.3425076452599388,
+        "F1": 0.4448857994041708,
+        "confusion": {
+          "TP": 224,
+          "TN": 801,
+          "FP": 129,
+          "FN": 430
+        },
+        "complete_positive_misses": 430,
+        "positive_support": 654,
+        "signal_days": 126,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      }
+    },
+    "2026JanAug": {
+      "complete": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7197087883515341,
+        "Precision": 0.6105990783410138,
+        "complete_positive_Recall": 0.41732283464566927,
+        "F1": 0.4957904583723105,
+        "confusion": {
+          "TP": 265,
+          "TN": 1119,
+          "FP": 169,
+          "FN": 370
+        },
+        "complete_positive_misses": 370,
+        "positive_support": 635,
+        "signal_days": 160,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      },
+      "true_nonword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_oneword": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "unknown_true_identity": {
+        "original_registered_count": 1941,
+        "scoreable_count": 1923,
+        "coverage": 0.990726429675425,
+        "Accuracy": 0.7197087883515341,
+        "Precision": 0.6105990783410138,
+        "complete_positive_Recall": 0.41732283464566927,
+        "F1": 0.4957904583723105,
+        "confusion": {
+          "TP": 265,
+          "TN": 1119,
+          "FP": 169,
+          "FN": 370
+        },
+        "complete_positive_misses": 370,
+        "positive_support": 635,
+        "signal_days": 160,
+        "calibrated_Brier": null,
+        "sample_note": "仅分层描述，不自动调阈值"
+      }
+    },
+    "2026Sep": {
+      "complete": {
+        "original_registered_count": 182,
+        "scoreable_count": 133,
+        "coverage": 0.7307692307692307,
+        "Accuracy": 0.6165413533834586,
+        "Precision": 0.5588235294117647,
+        "complete_positive_Recall": 0.34545454545454546,
+        "F1": 0.42696629213483145,
+        "confusion": {
+          "TP": 19,
+          "TN": 63,
+          "FP": 15,
+          "FN": 36
+        },
+        "complete_positive_misses": 36,
+        "positive_support": 55,
+        "signal_days": 16,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_nonword": {
+        "original_registered_count": 143,
+        "scoreable_count": 107,
+        "coverage": 0.7482517482517482,
+        "Accuracy": 0.6448598130841121,
+        "Precision": 0.6,
+        "complete_positive_Recall": 0.15,
+        "F1": 0.24,
+        "confusion": {
+          "TP": 6,
+          "TN": 63,
+          "FP": 4,
+          "FN": 34
+        },
+        "complete_positive_misses": 34,
+        "positive_support": 40,
+        "signal_days": 16,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "true_oneword": {
+        "original_registered_count": 39,
+        "scoreable_count": 26,
+        "coverage": 0.6666666666666666,
+        "Accuracy": 0.5,
+        "Precision": 0.5416666666666666,
+        "complete_positive_Recall": 0.8666666666666667,
+        "F1": 0.6666666666666667,
+        "confusion": {
+          "TP": 13,
+          "TN": 0,
+          "FP": 11,
+          "FN": 2
+        },
+        "complete_positive_misses": 2,
+        "positive_support": 15,
+        "signal_days": 15,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      },
+      "unknown_true_identity": {
+        "original_registered_count": 0,
+        "scoreable_count": 0,
+        "coverage": null,
+        "Accuracy": null,
+        "Precision": null,
+        "complete_positive_Recall": null,
+        "F1": null,
+        "confusion": {
+          "TP": 0,
+          "TN": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "complete_positive_misses": 0,
+        "positive_support": 0,
+        "signal_days": 0,
+        "calibrated_Brier": null,
+        "sample_note": "样本不足：少于20个信号日或20个已知正例；不能据此改分数门槛"
+      }
+    }
+  },
+  "current_feedback_scope": {
+    "previous_official_day": "2026-10-12",
+    "previous_pool_count": 39,
+    "feedback_supplied_count": 38,
+    "matched_previous_count": 38,
+    "previous_pool_available": true,
+    "feedback_available": true,
+    "missing_previous_codes": [
+      "600825"
+    ],
+    "invalid_return_codes": [],
+    "complete_previous_feedback": false,
+    "suspension_cause_confirmed": false
+  },
+  "first_validation_failure_preserved": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\validation_failure_00.json",
+  "initial_module_source_preserved": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\source_preimages\\relay_field_context.before_feedback.py",
+  "production_next_step": "Append actual source-bound Oct14 same-time confirmations and settle original complete10 at effective close; preserve original unknowns and independent/BASE comparison.",
+  "research_next_step": "Check whether existing signal-day unadjusted OHLC archives qualify an independent true-one-word training identity layer. Never substitute legacy proxy, target-day bars or later-source acquisition for actual signal-day source; no new collection or fit until fixed evidence qualifies.",
+  "overall_goal": "ACTIVE_NOT_ACCEPTED",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\relay_field_context.py": "3b927849cea7fd623d6fa18bd003f82dcf3efad753ac57f1b691c97be348dd9d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\tests\\test_relay_field_context.py": "c7ee31b886197579567207b10e3b82eb048d2e2af3db4b1931ba385bcf74fa85",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\analysis_source_qualification_DELIVERY.json": "9f7c7408551e3bda7180a116da77d6e197c1c06057dfaf72326ece34e0e23a5f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\actual_complete10_DELIVERY\\report.json": "968ff42e613f16f1d503900deeab5cdc66d58539809bb1e31a6cdb0c0e28efed",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\original_all3707_predictions_and_truth.csv": "a56526128df82b4f6ea630db06d57ab488c824cfcec47be84b21f47386faedcf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\complete_all29_cohort_statistics.csv": "040a692d4040685a6ae0deeca2d04f7aba18934f11df0fc2504d9e32ca6863cd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\validation_failure_00.json": "a0abccc9eb41cc9a3f5873a5704d5aa6843a1f64ad8900690150375b26828fae",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\nonword_input_semantics_20261013T115819Z\\非一字输入核查与解释修复.md": "21a31a0f47c621c552b15c61212c402e285ab170ee60e793cae9c55fff29e444"
+  },
+  "original_protocol_bindings_unchanged": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\base_predictions.json": "5beb0f5185e301d4560a2c3a2f76385dba57c9b3a90994fc18fb5ff0dfa49bfb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\features\\manifest.json": "8751cbdca8eb97ba6c2683d7685de789c9003bf0d2d28daf12a7cd6c6cb35573",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\features\\features.json": "e3f01e9573d447e4f16d44330fef7a50a2b10de222ab9e3ee9896eb63ddee1cf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\independent_source_repaired\\record_before_scores.json": "8ff2f2a474f625d4c6c1ea88d30c414a3740a5434f1f00d8be04c98c3215d38b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-13_47f5c10d3a45999a.json": "a54e814c6e948dde5319a4eb22d98517bab38f0d09cafdd9e80c56181b57d9cb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_inputs.py": "1fc7eee843596013132af27376c5a74dc424904afca30960207465c9c67d848b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b"
+  }
+}

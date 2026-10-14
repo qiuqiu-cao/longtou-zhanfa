@@ -1,0 +1,60 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "rows": 26775,
+  "outcome_end_exclusive": "2025-12-26",
+  "promotion_states": {
+    "ROUNDED_DAILY_PROXY": 26655,
+    "MISSING_OR_INVALID_ENTRY_EVIDENCE": 120
+  },
+  "price_path_states": {
+    "PRICE_OPPORTUNITY_PROXY_ONLY": 26571,
+    "MISSING_OR_INVALID_EXIT_EVIDENCE": 204
+  },
+  "verified_entries": 0,
+  "actual_T1_net_premium_rate": null,
+  "complete_trade_win_rate": null,
+  "path_proxy_summary": {
+    "b1": {
+      "known": 10062,
+      "mean_net_close_mark": -0.02432480058354734,
+      "positive_rate": 0.4196978731862453,
+      "large_loss_rate": 0.3625521765056649
+    },
+    "b2": {
+      "known": 10038,
+      "mean_net_close_mark": -0.024452683651875844,
+      "positive_rate": 0.35943415022912933,
+      "large_loss_rate": 0.4086471408647141
+    },
+    "b3": {
+      "known": 10011,
+      "mean_net_close_mark": -0.029437674441324294,
+      "positive_rate": 0.35431025871541305,
+      "large_loss_rate": 0.4779742283488163
+    },
+    "b2_b3_both_positive": {
+      "known": 10009,
+      "rate": 0.29913078229593365
+    }
+  },
+  "costs": {
+    "shares": 100,
+    "commission": 0.0003,
+    "minimum": 5.0,
+    "sell_tax": 0.0005,
+    "slippage": 0.001
+  },
+  "reserved_later_prices_used": false,
+  "limitations": [
+    "daily proxy, no queue/timing/fills",
+    "current-universe survivorship bias",
+    "historical status and calendar not independently reverified",
+    "mark returns are not executable realized profit"
+  ],
+  "source_hashes": {
+    "results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "data\\v11\\point_in_time_rebuild\\point_in_time_current_daily_bars.csv": "6204734c8449387e81a647fa848238a4a33ae90db068e6ead31dbb62dd92c70f",
+    "data\\v18\\benchmarks_20260904\\sh000002.csv": "811fca3da9259f9a684f263deb4fd3cb8258a4babb759ccd7a6fc3ac3094d775",
+    "D:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\full_pool_outcomes.py": "523612a54acce7c91128bb4b364cd080e977ba4af6376329866d185176c26b6f"
+  }
+}

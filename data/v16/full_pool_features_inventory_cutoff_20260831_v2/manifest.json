@@ -1,0 +1,42 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "input_observations": 37251,
+  "output_rows": 37251,
+  "known_identity_rows": 36674,
+  "left_censored_rows": 577,
+  "feature_complete_reconstructed_rows": 36674,
+  "board_group_counts": {
+    "FIRST_BOARD": 28209,
+    "CONSECUTIVE_BOARD": 8465,
+    "UNKNOWN_LEFT_CENSORED": 577
+  },
+  "daily_join_counts": {
+    "both": 37251,
+    "left_only": 0,
+    "right_only": 0
+  },
+  "market_join_counts": {
+    "both": 37251,
+    "left_only": 0,
+    "right_only": 0
+  },
+  "first_and_relay_rows_in_same_schema": true,
+  "original_point_in_time_capture": false,
+  "historical_universe_complete": false,
+  "model_training_authorized": false,
+  "emotion_evidence_columns": 49,
+  "limitations": [
+    "features are reconstructed after the fact, not archived contemporaneously",
+    "current-universe history remains subject to survivorship bias",
+    "security status is supplier-declared and not reaudited here",
+    "left-censored identities are preserved and excluded from known-board features"
+  ],
+  "historical_end_cutoff": "2026-08-31",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_feature_rebuild.py": "80504b2694026a5890d1e98bd7f8dbe552915514b87872130f5632545f922901"
+  },
+  "feature_file_sha256": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4"
+}

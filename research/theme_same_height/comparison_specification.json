@@ -1,0 +1,238 @@
+{
+  "research_id": "THEME_SAME_HEIGHT_PIT_01",
+  "registered_at": "2026-10-02T19:44:27.691082+00:00",
+  "status": "FIXED_PROSPECTIVE_COMPARISON_REGISTERED_NO_REAL_FIT",
+  "hypothesis": "Evidence-bound same-theme competition adds out-of-sample nonword Top1 ranking information beyond the existing frozen raw score and a matched score-only control.",
+  "full_18_section_goal_retained": true,
+  "production_model_changed": false,
+  "deployment_authorized": false,
+  "input_mode": {
+    "mode": "B_FIXED_EVENING",
+    "knowledge_cutoff": "signal_date 16:30:00 Asia/Shanghai",
+    "source_and_complete_derived_archive_required_by_cutoff": true,
+    "rolling_cutoff_extension": false
+  },
+  "scope": {
+    "registration": "All declared provider/mainboard/name-non-ST 2+ board candidates, including unknown/failed/one-word rows. This is not exchange-wide certification.",
+    "training": "Only genuinely reconstructed V151 eligible-for-leader-factor-training rows with full-market, securities, exact closing limits and V150 gates; never set flags manually. Both C1/C2 use the identical eligible indices.",
+    "primary_domain": "Verified signal-day non-one-word OHLC, never target-day buyability. All rows retained.",
+    "source_verification": "Algorithm API assumes provenance-checked inputs, not status assertions. Reconstruct original sources, re-run V151 and verify archive/baseline hashes and actual formation times before use. The current provider-only adapter output is ineligible.",
+    "first_signal_date": "2026-10-08",
+    "calendar_extension": "Current verified calendar ends 2026-10-09. Expand via official announcements into a new file before resolving later phase dates; never infer weekday sessions."
+  },
+  "baseline": {
+    "id": "B0_CURRENT_FROZEN",
+    "production_model_id": "V278_PRESEPTEMBER_FROZEN_MODEL_AND_V280_AUTHOR_CONTINGENCIES",
+    "model_choice": {
+      "kind": "logistic",
+      "window": 252,
+      "validation_accuracy": 0.4603174603174603,
+      "validation_dates": 63
+    },
+    "selection_label_cutoff_exclusive": "2026-09-01",
+    "max_existing_refit_target_date": "2026-08-31",
+    "features": [
+      "boards",
+      "height_gap",
+      "same_height_rivals",
+      "unique_space",
+      "height_share",
+      "is_space_leader",
+      "emotion_score",
+      "promotion_2to3",
+      "promotion_3to4",
+      "promotion_mid",
+      "previous_limit_tail_loss",
+      "failed_rate",
+      "down_limit_rate",
+      "breadth_health",
+      "ladder_health",
+      "loss_effect_health",
+      "crowding_risk",
+      "regime_fragility",
+      "turnover",
+      "signal_amount",
+      "amplitude",
+      "turnover_vs_prev",
+      "price",
+      "price_same_height_percentile",
+      "signal_amount_same_height_percentile",
+      "turnover_same_height_percentile",
+      "turnover_vs_prev_same_height_percentile",
+      "signal_one_word",
+      "log_signal_amount"
+    ],
+    "parameters": {
+      "kind": "logistic",
+      "C": 0.25,
+      "max_iter": 2500,
+      "random_state": 271,
+      "imputation": "median plus missing indicator, keep_empty_features",
+      "scaling": "StandardScaler",
+      "window_signal_dates": 252,
+      "fit_weights": "1/candidates_on_training_signal_date"
+    },
+    "raw_score": "predict_proba class 1; uncalibrated internal score",
+    "ranking": "raw score descending, boards descending, code ascending; stable sort",
+    "future_score_gate": "Need actual source-bound full candidate score table and frozen estimator/recipe hash before each cutoff. Missing score remains unknown, never inferred from original boolean calls. No model selection or refitting on study validation/test labels."
+  },
+  "challengers": [
+    {
+      "id": "C1_SCORE_ONLY_CONTROL",
+      "features": [
+        "baseline_logit"
+      ],
+      "algorithm": "StandardScaler fitted on registered training rows, then L2 logistic regression",
+      "parameters": {
+        "C": 0.25,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "max_iter": 2500,
+        "fit_intercept": true,
+        "class_weight": null,
+        "l1_ratio": 0.0,
+        "random_state": 20261003
+      }
+    },
+    {
+      "id": "C2_SCORE_PLUS_THEME",
+      "features": [
+        "baseline_logit",
+        "log_theme_peers",
+        "log_theme_same_height_peers",
+        "log_theme_higher_peers",
+        "theme_top_height",
+        "theme_ladder_present",
+        "theme_capacity_core"
+      ],
+      "algorithm": "Exactly C1 algorithm/training rows/weights; only six evidenced theme columns added",
+      "parameters": {
+        "C": 0.25,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "max_iter": 2500,
+        "fit_intercept": true,
+        "class_weight": null,
+        "l1_ratio": 0.0,
+        "random_state": 20261003
+      }
+    }
+  ],
+  "feature_definitions": {
+    "baseline_logit": "log(clip(raw_score,1e-6,1-1e-6)/(1-clip(raw_score,1e-6,1-1e-6)))",
+    "log_theme_peers": "log1p(V114 same_theme_peer_count), only admitted V150/V151 row",
+    "log_theme_same_height_peers": "log1p(V114 same_theme_board_peer_count)",
+    "log_theme_higher_peers": "log1p(V114 higher_theme_peer_count)",
+    "theme_top_height": "1 if admitted higher_theme_peer_count==0, else 0; not confirmation of leadership",
+    "theme_ladder_present": "Complete V114 event list contains THEME_LADDER_PRESENT_AT_CLOSE",
+    "theme_capacity_core": "Complete V114 event list contains CAPACITY_LEADER_BY_CLOSE_AMOUNT with rank 1",
+    "unknown": "All six theme fields stay NaN when evidence is ineligible. Provider categories/names/heat are never substituted."
+  },
+  "training_policy": {
+    "fit_once": true,
+    "search_grid": null,
+    "rows_sort": "date ascending, code ascending",
+    "weights": "1/full_declared_relay_candidates_on_signal_date, not inverse of surviving eligible subset",
+    "minimum_eligible_dates": 40,
+    "minimum_eligible_rows": 200,
+    "minimum_rows_each_class": 40,
+    "minimum_nonpurged_training_row_coverage": 0.8,
+    "boundary": "Training target_date strictly precedes validation first signal date; keep boundary-purged rows in registration/audit. Every used label is independent and actually available after target close, before real fit time.",
+    "no_extension_if_insufficient": "If fixed warmup gates fail, preserve evidence and declare insufficient; do not move/extend the window to obtain a better cohort."
+  },
+  "phases": {
+    "index_basis": "One-based official trading sessions beginning 2026-10-08; phase membership is independent of data availability, candidates and outcomes.",
+    "warmup_signal_indices": [
+      1,
+      60
+    ],
+    "validation_signal_indices": [
+      61,
+      80
+    ],
+    "evaluation_signal_indices": [
+      81,
+      140
+    ],
+    "confirmation_signal_indices": [
+      141,
+      200
+    ],
+    "training_boundary_purge": "Signal 60 normally targets signal 61; exclude it from fitting because its target crosses the validation boundary.",
+    "freeze_deadline": "Both models completely formed before 09:15 Asia/Shanghai on signal 61; no subsequent refit.",
+    "validation_use": "Diagnostic only. No challenger/parameter choice, threshold tuning or change of phase dates. Validation boundary-crossing labels remain separately pending and cannot enter a decision before evaluation starts.",
+    "evaluation_labels": "Use only after each exact next-session close; final phase result after its final target session. No target information supplied to prediction."
+  },
+  "forecast_policy": {
+    "selected_rows": "Exactly one research nonword Top1 for each model on a domain/score-known date with nonword candidates. This does not change any promotion/FAIL call.",
+    "tie_break": "Score descending, boards descending, code ascending",
+    "missing_theme": "If any eligible nonword candidate lacks any admitted theme feature, BOTH C1/C2 fall back to B0 for the ENTIRE day. Never delete a difficult candidate or mix incomparable score scales. Report fallback rate/intervention coverage separately.",
+    "unknown_domain_or_base_score": "No call for all models; retain date and candidates in registered coverage denominator.",
+    "no_eligible_nonword": "No selection, record genuine empty domain rather than inventing a candidate.",
+    "scores": "Uncalibrated ranking scores, not probabilities. No extra buy thresholds or upgraded opening score."
+  },
+  "evaluation": {
+    "primary": "C2 nonword Top1 next-session close promotion hit rate on all fixed-window eligible dates; retain entire registered window including unknown and no-call dates.",
+    "baseline_comparisons": [
+      "C2 minus B0",
+      "C2 minus C1"
+    ],
+    "minimum_meaningful_improvement": 0.05,
+    "paired_requirement": "Use the same registered dates, candidates, label rules and common scorable dates for each comparison; record every excluded/unknown date and reason.",
+    "uncertainty": {
+      "method": "Circular moving-block bootstrap of registered official-session slots, length 5, 10000 draws, seed 20261003. Keep missing slots in place; do not compress gaps.",
+      "paired_difference_confidence": 0.975,
+      "paired_note": "Two prespecified paired contrasts; 97.5% marginal intervals account for these two comparisons within a window. Bootstrap uncertainty is approximate.",
+      "absolute_rate_confidence": 0.95
+    },
+    "coverage": [
+      "candidate roster retention must be 100%",
+      "report reliable outcome and effective score coverage with original denominators",
+      "require at least 95% outcome and effective day coverage for upgrade consideration, plus all gates below"
+    ],
+    "selection_metrics": [
+      "wins/scorable eligible dates",
+      "selected positive precision (same denominator as Top1 hit rate)",
+      "Top1 complete-positive recall among ALL registered known nonword promotions; retain incomplete-result limitation",
+      "per-board and signal market-regime breakdown",
+      "fallback/intervention coverage",
+      "registered missing/no-call counts",
+      "worst-case rate bounds over unknown eligible dates"
+    ],
+    "binary_metrics": "C1/C2 do not predict non-selected candidates FAIL. Binary Accuracy/Recall/F1 are not estimated by these rankers; report existing production binary metrics separately.",
+    "brier": "Not computable for C1/C2 or uncalibrated baseline under this study; no probability calibration registered.",
+    "return_metrics": "No executable trading-return verification or fills; no profit claim."
+  },
+  "acceptance": {
+    "interim_60_dates": "First 60 evaluation signal sessions are a stage report, not proof of stable 60%.",
+    "no_upgrade_without_increment": "For both evaluation and subsequent fixed confirmation window: C2-minus-B0 and C2-minus-C1 point improvements each at least 5pp and each prespecified paired interval lower bound >0, without reduced coverage.",
+    "stable_60_claim": "Require both fixed windows point hit rate >=0.60 and absolute-rate 95% block interval lower bound >0.60, verified scopes/coverage, unchanged model, and complete uncertainty/limitations reporting. Otherwise no stable-60 claim.",
+    "regime_gate": "Require at least 10 common-scored dates in each of fixed signal-day RISK_ON, REPAIR, RISK_OFF regimes across the two windows; publish per-regime changes. Any regime decline >5pp or inadequate support prevents a broad stable-60/upgrade conclusion. Unknown regimes retained.",
+    "failed_comparison": "Keep all results; no retries on the same windows or new parameter search.",
+    "deployment": "Evidence eligibility alone does not change current production model or opening observation card."
+  },
+  "runtime": {
+    "sklearn": "1.9.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3"
+  },
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\protocol.json": "47857a79776cd6f29027a0b2854409e30d06a1c71588a549dd70b0d9a99be68b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\readiness_20261003.json": "0f09294033908db67b2efd78b851658dfb8bf7c925af9e602f697cef393272ec",
+    "D:\\Documents\\ChatGPT\\龙头战法\\theme_competition_matched_challengers.py": "4d0212e64ceab4858f3d3100a0f4a5cded55243c424b3f6b8d5ef182bac02d57",
+    "D:\\Documents\\ChatGPT\\龙头战法\\prepare_theme_competition_inputs.py": "9ca40313ad3765d68bcecd8f5fa0816a4ebdbdc2a421d8705a61afe25f1b7ae8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\build_specific_theme_roles_v150.py": "ba8b8379c1d1bacd06040d8a0f7ab77998c9c63f0c3a1dc3cc30d2c9907b4827",
+    "D:\\Documents\\ChatGPT\\龙头战法\\build_current_competition_snapshot_v114.py": "58c0a67c2b0a0307209930c20838db204782c2c9ac20a9df11e5cd79908297d2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\theme_competition_archive_v151.py": "a81334b4635c3c8349f4bd28996438d6ea66e649289037800fd51f90cef44202",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v278\\september_falsification_20261002_v6\\report.json": "b930e9d154c289786dd525741248ae5f35b35b19b55c3cb8cad02ac0b2ff63ef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2"
+  },
+  "real_training_started": false,
+  "real_evaluation_started": false,
+  "new_settled_forward_samples": 0,
+  "next_step": "Verify the first new-day source/score bundle and its actual clocks before any model fit; resolve full-market/securities/independent-limit source gaps without inventing verification."
+}

@@ -1,0 +1,81 @@
+{
+  "version": "v239-relay-cross-theme-expectation-1",
+  "status": "PREDECLARED_3_4_BOARD_CROSS_THEME_EXPECTATION_DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-21",
+  "full_3_4_board_denominator": 7,
+  "board_counts": {
+    "3": 5,
+    "4": 2
+  },
+  "known_theme_rows": 5,
+  "unknown_theme_rows_retained": 2,
+  "primary_expected_winner": {
+    "code": "603230",
+    "name": "内蒙新华",
+    "boards": 4,
+    "theme_group_id": "source_theme_72627bcf5cf5",
+    "theme_name": "传媒"
+  },
+  "conditional_fallback_winners": [
+    {
+      "rank": 2,
+      "code": "002285",
+      "name": "世联行",
+      "boards": 4,
+      "theme_group_id": "real_estate",
+      "theme_name": "房地产",
+      "role": "SAME_HEIGHT_FALLBACK_WINNER"
+    },
+    {
+      "rank": 3,
+      "code": "002453",
+      "name": "华软科技",
+      "boards": 3,
+      "theme_group_id": "domestic_semiconductor",
+      "theme_name": "国产芯片",
+      "role": "LOWER_HEIGHT_FALLBACK_WINNER"
+    },
+    {
+      "rank": 4,
+      "code": "600127",
+      "name": "金健米业",
+      "boards": 3,
+      "theme_group_id": "agriculture",
+      "theme_name": "大农业",
+      "role": "LOWER_HEIGHT_FALLBACK_WINNER"
+    }
+  ],
+  "no_winner_scenario": {
+    "condition": "NO_PREDECLARED_3_OR_4_BOARD_CHOICE_CONFIRMS_BY_0935",
+    "interpretation": "HEIGHT_COMPETITION_FAILED_OR_RETREAT;DO_NOT_FORCE_A_WINNER",
+    "action": "CASH_NO_REPLACEMENT_TRADE"
+  },
+  "expectation_definition": {
+    "primary_meets_expectation": "auction_not_cancelled;next_board_sealed_by_0935;above_VWAP;positive_VWAP_slope;fewer_than_two_failed_seals;ladder_passes",
+    "fallback_can_win_only_after_earlier_choice_fails": true,
+    "same_height_fallback_precedes_lower_height_fallback": true,
+    "one_price_or_unknown_theme_can_still_be_identity_outcome": true,
+    "one_price_or_unknown_theme_is_tradable_fallback": false,
+    "fallback_is_observation_not_replacement_trade": true
+  },
+  "governance": {
+    "higher_board_win_rate_claimed": false,
+    "minimum_forward_date_clusters": 60,
+    "full_denominator_required": true,
+    "unexpected_winner_is_model_miss": true,
+    "next_session_high_or_close_not_used_in_close_ranking": true,
+    "entry_authorized": false
+  },
+  "entry_authorized": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v236\\relay_leader_daily_20260921_v4\\v225_same_height\\same_height_scores.csv": "a098491ed588e5e9f63e32ceaffee709d0f123c81d2b8c1b3f99b3ce839cd785",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v236\\relay_leader_daily_20260921_v4\\v225_same_height\\report.json": "4bec6233ffb5fd61a22f4b17dbf49689ea091907e8704c4123e9767af845568c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v236\\relay_leader_daily_20260921_v4\\v235_cross_height_roles\\relay_role_candidates.csv": "90d02361f0a57fabc3e0a3051da592d6c22f74bda93944d0ea62e3cc0ec1d13b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v236\\relay_leader_daily_20260921_v4\\v235_cross_height_roles\\report.json": "ed18c4094894ef69cba4beff2738c99a1a2b700d04722331e34bb46a8c90064e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20260921_v7\\review.json": "31d084b1acfd7864980373ce5e33b5efde533a57c35f3c51777250c80e6c5b95"
+  },
+  "artifact_hashes": {
+    "three_four_board_pool.csv": "db720a64d885e020f9bd27413274949c8f05848913332141502b17f7e4895783",
+    "expectation_tree.csv": "9cd3f8c56397bc481f69e55b63e40ab2c87cd28d0684ca77e41511c126a6876f"
+  }
+}

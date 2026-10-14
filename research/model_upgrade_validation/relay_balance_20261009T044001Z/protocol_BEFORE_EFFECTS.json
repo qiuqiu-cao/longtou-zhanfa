@@ -1,0 +1,71 @@
+{
+  "version": "relay-training-class-balance-fixed-1",
+  "formed_at": "2026-10-09T04:40:01.395042+00:00",
+  "hypothesis": "原29字段个股模型的训练损失类别不平衡可能造成正例漏判；用训练期加权类别平衡检验，不能用召回增加代替Accuracy改善",
+  "arms": [
+    "BASE",
+    "R1"
+  ],
+  "baseline": "reuse immutable BASE saved predictions; no refit or re-selection",
+  "challenge": "same pipeline and 29 fields; class_weight[c]=W/(2*Wc), where Wc=sum(original inverse-date-cohort training weights for class c); all weights computed only from original same training members",
+  "parameters": {
+    "C": 0.25,
+    "max_iter": 2500,
+    "random_state": 271,
+    "solver": "lbfgs",
+    "window": 252,
+    "threshold": 0.5
+  },
+  "training": "last252 original known-label signal dates; both signal and exact official target strictly before each fixed fold start; original median imputation, indicators, scaling and daily inverse-count weights unchanged",
+  "folds": [
+    {
+      "id": "2025H2",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "2026JanAug",
+      "start": "2026-01-01",
+      "end": "2026-08-31"
+    },
+    {
+      "id": "2026Sep",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "metrics": {
+    "primary": "full original candidate same-label Accuracy",
+    "secondary": [
+      "Precision",
+      "complete-positive Recall",
+      "F1",
+      "coverage",
+      "by boards",
+      "true OHLC non-one-word rank-first promotion rate",
+      "raw score diagnostic squared loss, not probability Brier"
+    ],
+    "calibrated_Brier": null
+  },
+  "historical_screen": "all three folds Accuracy improve >=.03, full positive Recall/F1/coverage not down; true nonword top1 not down when source identity is known. Any failure rejects this fixed challenge for future use; no retuning",
+  "production_upgrade": "historical screen never grants upgrade; old source-bound120 official-day gate, complete-pool guard and real author review still required; existing three-arm/G1 protocols unchanged",
+  "one_attempt": "fit each fold once; nonconvergence/unknown inputs retained and stop challenger; no alternative weighting or threshold search",
+  "budget_minutes": 30,
+  "started_at": "2026-10-09T04:37:04+00:00",
+  "expected_effect": "test Recall improvement against possible Precision/Accuracy loss; no guaranteed gain",
+  "base_root": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z",
+  "baseline_sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\report.json": "e84637692618c7e0f9a4da5035737f70a648a046b1c52547e0f40668435cecf5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\manifest.json": "d857b632d895a89c7b24cf20e79fb1e3776f5e0bd96c718a918b2a3e4e73d19d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\model.joblib": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\protocol_BEFORE_EFFECTS.json": "bc10758cad773a130358a069d321dba9fc632ae87135d375b8fd6c24f19eccf6"
+  },
+  "production_originals": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-08_fcf1205edfbc2269.json": "2987f19f09f8e33783b88d2c856a00ba965f9e063631ca57d69d0b5edb06334b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\settlement_ledger.jsonl": "26cb8dc3419ec151563528045068a4d987fc87b5535544b5ad78cc92676e1c18"
+  },
+  "new_mature_forward_samples": 0,
+  "scope": "already-inspected retrospective diagnosis; no theme-PIT or new collection; target Oct9 not mature"
+}

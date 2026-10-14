@@ -1,0 +1,53 @@
+{
+  "version": "v125-first-board-execution-outcomes-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "summary": {
+    "observations": 1116,
+    "filled_open_proxy": 1048,
+    "unverifiable_limit_queue": 64,
+    "missing_or_invalid": 4,
+    "B_plus_1": {
+      "n": 1026,
+      "mean_net_return": -0.013387877153752713,
+      "median_net_return": -0.02183838896536694,
+      "positive_rate": 0.38011695906432746
+    },
+    "B_plus_2": {
+      "n": 993,
+      "mean_net_return": -0.018033655597373542,
+      "median_net_return": -0.028785891371699734,
+      "positive_rate": 0.3474320241691843
+    },
+    "B_plus_3": {
+      "n": 962,
+      "mean_net_return": -0.024841679106804047,
+      "median_net_return": -0.039562991885427445,
+      "positive_rate": 0.3180873180873181
+    },
+    "big_loss_B_plus_1_rate": 0.17641325536062377,
+    "positive_B_plus_1_and_2_rate": 0.28197381671701915
+  },
+  "fee_assumptions": {
+    "buy_slippage": 0.001,
+    "sell_slippage": 0.001,
+    "commission_each_side": 0.00025,
+    "transfer_fee_each_side": 1e-05,
+    "sell_stamp_tax": 0.0005
+  },
+  "rules": {
+    "B": "immediate next trading session after signal date D",
+    "upper_limit_open": "unverifiable queue; never counted as filled",
+    "other_open": "filled at official open plus 10bp buy slippage proxy",
+    "exit": "B+1/B+2/B+3 official close less 10bp sell slippage and fees"
+  },
+  "limitations": [
+    "daily bars cannot verify auction order submission, partial fill, or 09:25-10:00 confirmation",
+    "this is an opening-entry baseline, not the final intraday execution strategy",
+    "missing later bars remain missing and are never imputed as wins"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\first_board_observations.csv": "b326bc02c08c20aa3e1af2bd0dc5bda70a9fb86f1c99b70f82cc8f8d4bb2a808",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv": "25f907b16d2436688608eca063bd850c708d60d4b0630b6ccaa3c4e864b3636a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v195\\trading_calendar_integrity_20260917_v4\\verified_trading_calendar.csv": "beb652b36d39600af927e91a293ef8e8a2cbc7bdea2c156beb81bf42ab523f80"
+  }
+}

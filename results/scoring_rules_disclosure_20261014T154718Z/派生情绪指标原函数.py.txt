@@ -1,0 +1,177 @@
+def safe_float(value: Any) -> float:
+    try:
+        if value is None or value == "" or pd.isna(value):
+            return math.nan
+        return float(value)
+    except (TypeError, ValueError):
+        return math.nan
+
+
+def weighted_available(parts: Iterable[tuple[float, Any]]) -> float:
+    valid = [(w, safe_float(v)) for w, v in parts if not math.isnan(safe_float(v))]
+    if not valid:
+        return math.nan
+    total = sum(w for w, _ in valid)
+    return sum(w * v for w, v in valid) / total
+
+
+def clamp(value: Any, lo: float = 0.0, hi: float = 1.0) -> float:
+    number = safe_float(value)
+    if math.isnan(number):
+        return math.nan
+    return max(lo, min(hi, number))
+
+
+def linear_score(value: Any, bad: float, good: float) -> float:
+    """Map a market variable to [0, 1] without converting missing data to zero."""
+    number = safe_float(value)
+    if math.isnan(number):
+        return math.nan
+    if good == bad:
+        return math.nan
+    return clamp((number - bad) / (good - bad))
+
+
+def promotion_rates(previous: pd.DataFrame | None, current: pd.DataFrame) -> dict[str, float]:
+    defaults = {"promotion_overall": math.nan, "promotion_1to2": math.nan, "promotion_2to3": math.nan,
+                "promotion_3to4": math.nan, "promotion_4to5": math.nan, "promotion_mid": math.nan,
+                "space_feedback": math.nan}
+    if previous is None or previous.empty:
+        return defaults
+    current_map = dict(zip(current["code"], current["boards"]))
+
+    def rate(rows: pd.DataFrame) -> float:
+        if rows.empty:
+            return math.nan
+        values = [safe_float(current_map.get(code)) == safe_float(board) + 1 for code, board in zip(rows["code"], rows["boards"])]
+        return float(np.mean(values))
+
+    eligible = previous[previous["boards"] >= 1]
+    mid = previous[previous["boards"].between(2, 4)]
+    prev_max = previous["boards"].max()
+    space = previous[previous["boards"] == prev_max]
+    result = {"promotion_overall": rate(eligible), "promotion_mid": rate(mid), "space_feedback": rate(space)}
+    for board in range(1, 5):
+        result[f"promotion_{board}to{board+1}"] = rate(previous[previous["boards"] == board])
+    return result
+
+
+def rolling_emotion_context(previous_rows: list[dict[str, Any]], current: dict[str, Any],
+                            window: int = 60, minimum: int = 20) -> dict[str, float]:
+    """Causal empirical percentiles using only market rows before the current close."""
+    mapping = {
+        "failed_rate": "failed_rate_percentile_60d",
+        "down_limit_count": "down_limit_percentile_60d",
+        "promotion_mid": "promotion_mid_percentile_60d",
+        "yesterday_premium": "yesterday_premium_percentile_60d",
+        "previous_limit_tail_loss": "tail_loss_percentile_60d",
+    }
+    history = previous_rows[-window:]
+    result: dict[str, float] = {}
+    for source, target in mapping.items():
+        value = safe_float(current.get(source))
+        values = np.array([safe_float(row.get(source)) for row in history], dtype=float)
+        values = values[np.isfinite(values)]
+        if math.isnan(value) or len(values) < minimum:
+            result[target] = math.nan
+            continue
+        below = float((values < value).sum())
+        equal = float(np.isclose(values, value, rtol=0, atol=1e-12).sum())
+        result[target] = (below + 0.5 * equal) / len(values)
+    return result
+
+
+def emotion_dimensions(row: dict[str, Any]) -> dict[str, Any]:
+    """Separate heat from relay quality, loss effect and crowding.
+
+    All inputs are available at the signal-day close.  Missing observations stay
+    missing inside each weighted component and are exposed through completeness.
+    This prevents a busy first-board tape from masking a broken middle ladder.
+    """
+    previous_limit_tail_loss = safe_float(row.get("previous_limit_tail_loss"))
+    if math.isnan(previous_limit_tail_loss):
+        previous_limit_tail_loss = safe_float(row.get("failed_tail_loss"))
+    failed_percentile = safe_float(row.get("failed_rate_percentile_60d"))
+    down_percentile = safe_float(row.get("down_limit_percentile_60d"))
+    premium_percentile = safe_float(row.get("yesterday_premium_percentile_60d"))
+    tail_percentile = safe_float(row.get("tail_loss_percentile_60d"))
+    breadth = weighted_available([
+        (0.45, linear_score(row.get("limit_count"), 20, 80)),
+        (0.25, linear_score(row.get("limit_change"), -20, 25)),
+        (0.30, linear_score(row.get("seal_rate"), 0.65, 0.90)),
+    ])
+    relay = weighted_available([
+        (0.22, linear_score(row.get("promotion_overall"), 0.12, 0.48)),
+        (0.28, linear_score(row.get("promotion_mid"), 0.10, 0.45)),
+        (0.18, clamp(row.get("space_feedback"))),
+        (0.17, clamp(row.get("space_feedback_3d"))),
+        (0.15, linear_score(row.get("yesterday_premium"), -0.03, 0.04)),
+    ])
+    ladder = weighted_available([
+        (0.30, linear_score(row.get("promotion_mid"), 0.10, 0.45)),
+        (0.20, 1 - linear_score(row.get("ladder_gap_count"), 0, 3)),
+        (0.18, linear_score(row.get("middle_density"), 0.20, 0.60)),
+        (0.14, clamp(row.get("unique_space"))),
+        (0.18, linear_score(row.get("height_change"), -2, 1)),
+    ])
+    loss_health = weighted_available([
+        (0.30, 1 - failed_percentile if not math.isnan(failed_percentile)
+         else 1 - linear_score(row.get("failed_rate"), 0.10, 0.35)),
+        (0.25, 1 - down_percentile if not math.isnan(down_percentile)
+         else 1 - linear_score(row.get("down_limit_count"), 0, 10)),
+        (0.25, tail_percentile if not math.isnan(tail_percentile)
+         else linear_score(previous_limit_tail_loss, -0.10, 0.00)),
+        (0.20, premium_percentile if not math.isnan(premium_percentile)
+         else linear_score(row.get("yesterday_premium"), -0.03, 0.04)),
+    ])
+    crowding = weighted_available([
+        (0.55, linear_score(row.get("one_word_share"), 0.15, 0.50)),
+        (0.25, linear_score(row.get("limit_count"), 60, 100)),
+        (0.20, linear_score(row.get("max_board"), 6, 9)),
+    ])
+    divergence = clamp(row.get("breadth_height_divergence"))
+    fragility = weighted_available([
+        (0.28, 1 - relay if not math.isnan(relay) else math.nan),
+        (0.28, 1 - loss_health if not math.isnan(loss_health) else math.nan),
+        (0.18, crowding),
+        (0.14, divergence),
+        (0.12, linear_score(row.get("ladder_gap_count"), 0, 3)),
+    ])
+
+    red_flags: list[str] = []
+    checks = [
+        (safe_float(row.get("promotion_mid")) < 0.20, "中位晋级不足20%", row.get("promotion_mid")),
+        (safe_float(row.get("failed_rate")) >= 0.22
+         and (math.isnan(failed_percentile) or failed_percentile >= 0.75),
+         "炸板率处于近60日高位", row.get("failed_rate")),
+        (previous_limit_tail_loss <= -0.05, "昨日涨停股尾部亏损恶化", previous_limit_tail_loss),
+        (safe_float(row.get("ladder_gap_count")) >= 2, "梯队断层不少于2层", row.get("ladder_gap_count")),
+        (safe_float(row.get("space_feedback_3d")) < 0.40, "近期空间板反馈偏弱", row.get("space_feedback_3d")),
+        (safe_float(row.get("one_word_share")) >= 0.45, "一字拥挤", row.get("one_word_share")),
+    ]
+    for condition, label, raw in checks:
+        if not math.isnan(safe_float(raw)) and condition:
+            red_flags.append(label)
+    height_rising = safe_float(row.get("height_change")) > 0
+    false_acceleration = float(height_rising and len(red_flags) >= 2)
+
+    required = (
+        "limit_count", "limit_change", "seal_rate", "promotion_overall", "promotion_mid",
+        "space_feedback", "space_feedback_3d", "failed_rate", "down_limit_count",
+        "previous_limit_tail_loss", "yesterday_premium", "one_word_share",
+    )
+    observed = sum(not math.isnan(safe_float(row.get(name))) for name in required)
+    completeness = observed / len(required)
+    quality = weighted_available([
+        (0.15, breadth), (0.30, relay), (0.22, ladder), (0.25, loss_health),
+        (0.08, 1 - crowding if not math.isnan(crowding) else math.nan),
+    ])
+    risk_level = "HIGH" if false_acceleration or (not math.isnan(fragility) and fragility >= 0.68) else (
+        "MEDIUM" if not math.isnan(fragility) and fragility >= 0.45 else "LOW")
+    return {
+        "breadth_health": breadth, "relay_appetite": relay, "ladder_health": ladder,
+        "loss_effect_health": loss_health, "crowding_risk": crowding,
+        "regime_fragility": fragility, "false_acceleration": false_acceleration,
+        "emotion_data_completeness": completeness, "emotion_quality_score": quality,
+        "emotion_risk_level": risk_level, "emotion_warnings": "；".join(red_flags),
+    }

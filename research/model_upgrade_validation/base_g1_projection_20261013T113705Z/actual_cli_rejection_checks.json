@@ -1,0 +1,107 @@
+{
+  "formed_at": "2026-10-13T11:45:18.334272+00:00",
+  "all5_rejected_without_artifact_mutation": true,
+  "checks": [
+    {
+      "case": "native_ranking_conflict",
+      "command": [
+        "D:/python/python.exe",
+        "model_prediction_view.py",
+        "--compatibility",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/compatibility_BEFORE_USE.json",
+        "--implementation",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/champion_implementation_BEFORE_USE.json",
+        "--market-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\native_ranking_conflict_market.json",
+        "--relay-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\native_ranking_conflict_relay.json",
+        "--output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\native_ranking_conflict_SHOULD_NOT_EXIST.json"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 153, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 144, in main\n    value = project(args.market_output, args.relay_output, args.compatibility, args.implementation)\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 114, in project\n    \"market\": deepcopy(market[\"forecast\"]), \"relay\": relay_view(relay[\"forecast\"], pack[\"relay\"]),\n                                                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 44, in relay_view\n    raise ValueError(\"native fixed ranking conflict\")\nValueError: native fixed ranking conflict\n",
+      "output_unchanged_or_absent": true
+    },
+    {
+      "case": "canonical_projection_hash_conflict",
+      "command": [
+        "D:/python/python.exe",
+        "model_prediction_view.py",
+        "--compatibility",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/compatibility_BEFORE_USE.json",
+        "--implementation",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/champion_implementation_BEFORE_USE.json",
+        "--market-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\canonical_projection_hash_conflict_market.json",
+        "--relay-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\canonical_projection_hash_conflict_relay.json",
+        "--output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\canonical_projection_hash_conflict_SHOULD_NOT_EXIST.json"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 153, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 144, in main\n    value = project(args.market_output, args.relay_output, args.compatibility, args.implementation)\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 83, in project\n    raise ValueError(\"original feature/calendar projection conflict\")\nValueError: original feature/calendar projection conflict\n",
+      "output_unchanged_or_absent": true
+    },
+    {
+      "case": "wrong_official_target",
+      "command": [
+        "D:/python/python.exe",
+        "model_prediction_view.py",
+        "--compatibility",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/compatibility_BEFORE_USE.json",
+        "--implementation",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/champion_implementation_BEFORE_USE.json",
+        "--market-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\wrong_official_target_market.json",
+        "--relay-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\wrong_official_target_relay.json",
+        "--output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\wrong_official_target_SHOULD_NOT_EXIST.json"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 153, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 144, in main\n    value = project(args.market_output, args.relay_output, args.compatibility, args.implementation)\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 83, in project\n    raise ValueError(\"original feature/calendar projection conflict\")\nValueError: original feature/calendar projection conflict\n",
+      "output_unchanged_or_absent": true
+    },
+    {
+      "case": "frozen_model_binding_conflict",
+      "command": [
+        "D:/python/python.exe",
+        "model_prediction_view.py",
+        "--compatibility",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/compatibility_BEFORE_USE.json",
+        "--implementation",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/champion_implementation_BEFORE_USE.json",
+        "--market-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\frozen_model_binding_conflict_market.json",
+        "--relay-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\frozen_model_binding_conflict_relay.json",
+        "--output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\frozen_model_binding_conflict_SHOULD_NOT_EXIST.json"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 153, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 144, in main\n    value = project(args.market_output, args.relay_output, args.compatibility, args.implementation)\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 108, in project\n    raise ValueError(\"original frozen BASE model binding conflict\")\nValueError: original frozen BASE model binding conflict\n",
+      "output_unchanged_or_absent": true
+    },
+    {
+      "case": "duplicate_output",
+      "command": [
+        "D:/python/python.exe",
+        "model_prediction_view.py",
+        "--compatibility",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/compatibility_BEFORE_USE.json",
+        "--implementation",
+        "research/model_upgrade_validation/shadow_compat_20261009T093237Z/champion_implementation_BEFORE_USE.json",
+        "--market-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\duplicate_output_market.json",
+        "--relay-output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\duplicate_output_relay.json",
+        "--output",
+        "research\\model_upgrade_validation\\base_g1_projection_20261013T113705Z\\original13_BASE_rank_projection_DIAGNOSTIC_NOW.json"
+      ],
+      "exit_code": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 153, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Documents\\ChatGPT\\龙头战法\\model_prediction_view.py\", line 143, in main\n    raise ValueError(\"unique new JSON outside protocol/registry required\")\nValueError: unique new JSON outside protocol/registry required\n",
+      "output_unchanged_or_absent": true
+    }
+  ],
+  "scope": "Synthetic corruptions of saved source copies; not forecasting performance"
+}

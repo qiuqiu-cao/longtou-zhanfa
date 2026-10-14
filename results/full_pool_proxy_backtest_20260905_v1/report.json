@@ -1,0 +1,177 @@
+{
+  "status": "EXPLORATORY_ONLY",
+  "target": "next_session_non_one_price_limit_touch_and_b2_positive_close_mark_proxy",
+  "selection_scope": "available_nonst_mainboard_history_first_and_consecutive_same_day_rank",
+  "validation_start": "2025-07-28",
+  "validation_end_exclusive": "2025-12-26",
+  "training_rows": 21012,
+  "training_sessions": 399,
+  "validation_candidates": 5025,
+  "validation_sessions": 101,
+  "one_choice_per_day": true,
+  "outcome_availability_purge": true,
+  "episode_overlap_purged": true,
+  "same_day_weight_total": true,
+  "groups": {
+    "height_only": {
+      "selected_sessions": 101,
+      "proxy_successes": 23,
+      "proxy_success_rate": 0.22772277227722773,
+      "proxy_success_wilson_95": [
+        0.1568082705601503,
+        0.31859010124175163
+      ],
+      "selected_score_auc": 0.4763099219620959,
+      "selected_score_brier": 0.18290453389462685,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 101,
+      "next_session_one_price_cases": 11,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity": {
+      "selected_sessions": 101,
+      "proxy_successes": 23,
+      "proxy_success_rate": 0.22772277227722773,
+      "proxy_success_wilson_95": [
+        0.1568082705601503,
+        0.31859010124175163
+      ],
+      "selected_score_auc": 0.4930323299888517,
+      "selected_score_brier": 0.18151687147984727,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 101,
+      "next_session_one_price_cases": 11,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity_plus_emotion": {
+      "selected_sessions": 101,
+      "proxy_successes": 23,
+      "proxy_success_rate": 0.22772277227722773,
+      "proxy_success_wilson_95": [
+        0.1568082705601503,
+        0.31859010124175163
+      ],
+      "selected_score_auc": 0.4955406911928651,
+      "selected_score_brier": 0.18333688409731916,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 101,
+      "next_session_one_price_cases": 11,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity_emotion_price_volume": {
+      "selected_sessions": 101,
+      "proxy_successes": 22,
+      "proxy_success_rate": 0.21782178217821782,
+      "proxy_success_wilson_95": [
+        0.14847681268900093,
+        0.30784513626933374
+      ],
+      "selected_score_auc": 0.5,
+      "selected_score_brier": 0.17398602654527195,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 101,
+      "next_session_one_price_cases": 20,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "highest_board_baseline": {
+      "selected_sessions": 101,
+      "proxy_successes": 23,
+      "proxy_success_rate": 0.22772277227722773,
+      "proxy_success_wilson_95": [
+        0.1568082705601503,
+        0.31859010124175163
+      ],
+      "selected_score_auc": 0.4763099219620959,
+      "selected_score_brier": null,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 101,
+      "next_session_one_price_cases": 11,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    }
+  },
+  "august_2025_subgroup": {
+    "height_only": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.33333333333333326,
+      "selected_score_brier": 0.13818273372192305,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 2,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.29629629629629634,
+      "selected_score_brier": 0.13442569563286594,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 2,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity_plus_emotion": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.425925925925926,
+      "selected_score_brier": 0.13133577242474154,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 2,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    },
+    "identity_emotion_price_volume": {
+      "selected_sessions": 21,
+      "proxy_successes": 3,
+      "proxy_success_rate": 0.14285714285714285,
+      "proxy_success_wilson_95": [
+        0.04981012499725268,
+        0.34636060280620945
+      ],
+      "selected_score_auc": 0.38888888888888884,
+      "selected_score_brier": 0.13263048657154058,
+      "first_board_selections": 0,
+      "consecutive_board_selections": 21,
+      "next_session_one_price_cases": 6,
+      "actual_fills": 0,
+      "complete_trade_win_rate": null
+    }
+  },
+  "deployment_authorized": false,
+  "limitations": [
+    "reused historical validation is not a sealed blind test",
+    "current-universe historical reconstruction is not a complete point-in-time market universe",
+    "daily OHLC cannot prove order timing, queue position, fill, or a sellable exit",
+    "the target is a price-opportunity proxy and is not complete-trade win probability",
+    "themes, opening confirmation, failed-board manifests, announcements, and actual fills are absent",
+    "results cannot guarantee premium, prevent a nuclear open, or authorize a live recommendation"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\full_pool_features_20260905_v1\\full_pool_eod_features.csv": "6384d1746c551c474dbcbce8d396ae10ff6fddabc84df0c73a0d80da414570fa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\full_pool_outcomes_20260905\\outcomes_LABEL_ONLY.csv": "64c24f970a2ca7f4c49e0661f2fa155df2572a3a669f1ad46ad504d98d0fa304",
+    "D:\\Documents\\ChatGPT\\龙头战法\\full_pool_proxy_backtest.py": "051901fc2c72db9cbfd0fa97b67cb64f3293defcaef0cb9edd6af181dc60a88c"
+  }
+}

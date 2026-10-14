@@ -1,0 +1,611 @@
+{
+  "version": "v83-emotion-forecast-freeze-1",
+  "status": "FROZEN_FORWARD_DIAGNOSTIC",
+  "signal_date": "2026-09-21",
+  "target_date": "2026-09-22",
+  "frozen_at": "2026-09-21T18:45:29.007464+08:00",
+  "current_state": "加速",
+  "probabilities": {
+    "启动": 0.027777777777777776,
+    "升温": 0.11805555555555555,
+    "加速": 0.24305555555555555,
+    "一致": 0.013888888888888888,
+    "大分歧": 0.2847222222222222,
+    "退潮": 0.14583333333333334,
+    "修复": 0.16666666666666666
+  },
+  "adverse_probability": 0.4305555555555556,
+  "supportive_probability": 0.5416666666666666,
+  "direction_call": "方向不清，按分歧预案",
+  "decision_use": {
+    "high_board_relay": "CONDITIONAL",
+    "middle_board_relay": "CONDITIONAL",
+    "first_board": "CONDITIONAL",
+    "default_position": 0
+  },
+  "model_status": "DIAGNOSTIC_ONLY",
+  "model_method": "expanding_transition_matrix_laplace_alpha_1",
+  "historical_evaluation": {
+    "expanding_markov": {
+      "n": 562,
+      "accuracy": 0.3096085409252669,
+      "multiclass_brier": 0.7924216823597157,
+      "log_loss": 1.6821129038310423,
+      "adverse_binary_brier": 0.24833970074535758,
+      "adverse_base_rate": 0.4501779359430605,
+      "per_state": {
+        "启动": {
+          "support": 11,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.025066095853645123
+        },
+        "升温": {
+          "support": 60,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.08392897089771098
+        },
+        "加速": {
+          "support": 118,
+          "recall": 0.2288135593220339,
+          "mean_assigned_probability": 0.21950888873998822
+        },
+        "一致": {
+          "support": 7,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.08211074068762572
+        },
+        "大分歧": {
+          "support": 172,
+          "recall": 0.8546511627906976,
+          "mean_assigned_probability": 0.32391187923674447
+        },
+        "退潮": {
+          "support": 81,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.1425020203546505
+        },
+        "修复": {
+          "support": 113,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.21030544249927757
+        }
+      },
+      "confusion": {
+        "启动": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 2,
+          "一致": 0,
+          "大分歧": 9,
+          "退潮": 0,
+          "修复": 0
+        },
+        "升温": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 15,
+          "一致": 0,
+          "大分歧": 45,
+          "退潮": 0,
+          "修复": 0
+        },
+        "加速": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 27,
+          "一致": 0,
+          "大分歧": 91,
+          "退潮": 0,
+          "修复": 0
+        },
+        "一致": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 2,
+          "一致": 0,
+          "大分歧": 5,
+          "退潮": 0,
+          "修复": 0
+        },
+        "大分歧": {
+          "启动": 0,
+          "升温": 2,
+          "加速": 23,
+          "一致": 0,
+          "大分歧": 147,
+          "退潮": 0,
+          "修复": 0
+        },
+        "退潮": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 10,
+          "一致": 0,
+          "大分歧": 71,
+          "退潮": 0,
+          "修复": 0
+        },
+        "修复": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 15,
+          "一致": 0,
+          "大分歧": 98,
+          "退潮": 0,
+          "修复": 0
+        }
+      }
+    },
+    "expanding_marginal_baseline": {
+      "n": 562,
+      "accuracy": 0.30604982206405695,
+      "multiclass_brier": 0.7938604718953184,
+      "log_loss": 1.6809348336830885,
+      "adverse_binary_brier": 0.24986983144994723,
+      "adverse_base_rate": 0.4501779359430605,
+      "per_state": {
+        "启动": {
+          "support": 11,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.015606168256819562
+        },
+        "升温": {
+          "support": 60,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.07928486317606359
+        },
+        "加速": {
+          "support": 118,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.1873910548109866
+        },
+        "一致": {
+          "support": 7,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.02704312529878478
+        },
+        "大分歧": {
+          "support": 172,
+          "recall": 1.0,
+          "mean_assigned_probability": 0.3430816031685459
+        },
+        "退潮": {
+          "support": 81,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.14160583492408746
+        },
+        "修复": {
+          "support": 113,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.20492968388868732
+        }
+      },
+      "confusion": {
+        "启动": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 11,
+          "退潮": 0,
+          "修复": 0
+        },
+        "升温": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 60,
+          "退潮": 0,
+          "修复": 0
+        },
+        "加速": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 118,
+          "退潮": 0,
+          "修复": 0
+        },
+        "一致": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 7,
+          "退潮": 0,
+          "修复": 0
+        },
+        "大分歧": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 172,
+          "退潮": 0,
+          "修复": 0
+        },
+        "退潮": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 81,
+          "退潮": 0,
+          "修复": 0
+        },
+        "修复": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 113,
+          "退潮": 0,
+          "修复": 0
+        }
+      }
+    },
+    "recent_120_markov": {
+      "n": 120,
+      "accuracy": 0.35,
+      "multiclass_brier": 0.7938204148456242,
+      "log_loss": 1.7109264275299565,
+      "adverse_binary_brier": 0.24567993549352948,
+      "adverse_base_rate": 0.48333333333333334,
+      "per_state": {
+        "启动": {
+          "support": 3,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.015686083664629032
+        },
+        "升温": {
+          "support": 17,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.10045732157911992
+        },
+        "加速": {
+          "support": 22,
+          "recall": 0.2727272727272727,
+          "mean_assigned_probability": 0.22390363012654743
+        },
+        "一致": {
+          "support": 1,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.007042253521126761
+        },
+        "大分歧": {
+          "support": 40,
+          "recall": 0.9,
+          "mean_assigned_probability": 0.3170289967236268
+        },
+        "退潮": {
+          "support": 18,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.14598152126193417
+        },
+        "修复": {
+          "support": 19,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.19652595009393578
+        }
+      },
+      "confusion": {
+        "启动": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 3,
+          "退潮": 0,
+          "修复": 0
+        },
+        "升温": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 4,
+          "一致": 0,
+          "大分歧": 13,
+          "退潮": 0,
+          "修复": 0
+        },
+        "加速": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 6,
+          "一致": 0,
+          "大分歧": 16,
+          "退潮": 0,
+          "修复": 0
+        },
+        "一致": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 1,
+          "退潮": 0,
+          "修复": 0
+        },
+        "大分歧": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 4,
+          "一致": 0,
+          "大分歧": 36,
+          "退潮": 0,
+          "修复": 0
+        },
+        "退潮": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 2,
+          "一致": 0,
+          "大分歧": 16,
+          "退潮": 0,
+          "修复": 0
+        },
+        "修复": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 2,
+          "一致": 0,
+          "大分歧": 17,
+          "退潮": 0,
+          "修复": 0
+        }
+      }
+    },
+    "recent_120_marginal_baseline": {
+      "n": 120,
+      "accuracy": 0.3333333333333333,
+      "multiclass_brier": 0.7925486364762601,
+      "log_loss": 1.6877113669323138,
+      "adverse_binary_brier": 0.25043071388174226,
+      "adverse_base_rate": 0.48333333333333334,
+      "per_state": {
+        "启动": {
+          "support": 3,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.018597595013257664
+        },
+        "升温": {
+          "support": 17,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.0949685062300284
+        },
+        "加速": {
+          "support": 22,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.20212352290722613
+        },
+        "一致": {
+          "support": 1,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.017830609212481426
+        },
+        "大分歧": {
+          "support": 40,
+          "recall": 1.0,
+          "mean_assigned_probability": 0.3198898527607178
+        },
+        "退潮": {
+          "support": 18,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.14395141608044798
+        },
+        "修复": {
+          "support": 19,
+          "recall": 0.0,
+          "mean_assigned_probability": 0.19718571244475255
+        }
+      },
+      "confusion": {
+        "启动": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 3,
+          "退潮": 0,
+          "修复": 0
+        },
+        "升温": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 17,
+          "退潮": 0,
+          "修复": 0
+        },
+        "加速": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 22,
+          "退潮": 0,
+          "修复": 0
+        },
+        "一致": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 1,
+          "退潮": 0,
+          "修复": 0
+        },
+        "大分歧": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 40,
+          "退潮": 0,
+          "修复": 0
+        },
+        "退潮": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 18,
+          "退潮": 0,
+          "修复": 0
+        },
+        "修复": {
+          "启动": 0,
+          "升温": 0,
+          "加速": 0,
+          "一致": 0,
+          "大分歧": 19,
+          "退潮": 0,
+          "修复": 0
+        }
+      }
+    },
+    "three_regime_markov": {
+      "n": 562,
+      "accuracy": 0.4501779359430605,
+      "balanced_accuracy": 0.35479013739883297,
+      "macro_f1": 0.3061770123576015,
+      "multiclass_brier": 0.6301111177917555,
+      "log_loss": 1.0435005663821928,
+      "per_group": {
+        "RISK_ON": {
+          "support": 196,
+          "predicted": 131,
+          "precision": 0.42748091603053434,
+          "recall": 0.2857142857142857,
+          "f1": 0.3425076452599389,
+          "mean_assigned_probability": 0.37191784740538997
+        },
+        "RISK_OFF": {
+          "support": 253,
+          "predicted": 431,
+          "precision": 0.45707656612529,
+          "recall": 0.7786561264822134,
+          "f1": 0.5760233918128655,
+          "mean_assigned_probability": 0.4707480881948808
+        },
+        "REPAIR": {
+          "support": 113,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_assigned_probability": 0.21030544249927757
+        }
+      }
+    },
+    "three_regime_marginal_baseline": {
+      "n": 562,
+      "accuracy": 0.4501779359430605,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.2069529652351738,
+      "multiclass_brier": 0.639624262721739,
+      "log_loss": 1.0556676743622808,
+      "per_group": {
+        "RISK_ON": {
+          "support": 196,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_assigned_probability": 0.30918374405019544
+        },
+        "RISK_OFF": {
+          "support": 253,
+          "predicted": 562,
+          "precision": 0.4501779359430605,
+          "recall": 1.0,
+          "f1": 0.6208588957055214,
+          "mean_assigned_probability": 0.4853503583706216
+        },
+        "REPAIR": {
+          "support": 113,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_assigned_probability": 0.20492968388868732
+        }
+      }
+    },
+    "recent_120_three_regime_markov": {
+      "n": 120,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.37690457097032876,
+      "macro_f1": 0.3422318422318423,
+      "multiclass_brier": 0.6075182473422559,
+      "log_loss": 1.0136768641695941,
+      "per_group": {
+        "RISK_ON": {
+          "support": 43,
+          "predicted": 34,
+          "precision": 0.47058823529411764,
+          "recall": 0.37209302325581395,
+          "f1": 0.4155844155844156,
+          "mean_assigned_probability": 0.37622055510653885
+        },
+        "RISK_OFF": {
+          "support": 58,
+          "predicted": 86,
+          "precision": 0.5116279069767442,
+          "recall": 0.7586206896551724,
+          "f1": 0.6111111111111112,
+          "mean_assigned_probability": 0.46562468826672826
+        },
+        "REPAIR": {
+          "support": 19,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_assigned_probability": 0.19652595009393578
+        }
+      }
+    },
+    "recent_120_three_regime_marginal_baseline": {
+      "n": 120,
+      "accuracy": 0.48333333333333334,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.21722846441947563,
+      "multiclass_brier": 0.6160907020857126,
+      "log_loss": 1.0174161920028266,
+      "per_group": {
+        "RISK_ON": {
+          "support": 43,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_assigned_probability": 0.33693926928238777
+        },
+        "RISK_OFF": {
+          "support": 58,
+          "predicted": 120,
+          "precision": 0.48333333333333334,
+          "recall": 1.0,
+          "f1": 0.6516853932584269,
+          "mean_assigned_probability": 0.46463965169057964
+        },
+        "REPAIR": {
+          "support": 19,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_assigned_probability": 0.19718571244475255
+        }
+      }
+    }
+  },
+  "source_report": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v82\\emotion_multiclass_20260921_v1\\report.json",
+  "source_report_sha256": "9b500037ca2de56f4db123a9dbff17fd3cd291a3091ad61ca5b5141624bbcd2b",
+  "outcome": null,
+  "outcome_status": "UNAVAILABLE_BEFORE_TARGET_CLOSE",
+  "guarantee": false
+}

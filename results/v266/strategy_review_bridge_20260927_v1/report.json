@@ -1,0 +1,110 @@
+{
+  "version": "v266-strategy-review-bridge-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "decision": "CASH",
+  "freshness": {
+    "status": "STALE",
+    "age_days": 5.639,
+    "source_asof": "2026-09-21T23:40:00+08:00",
+    "reference_asof": "2026-09-27T15:00:00+08:00"
+  },
+  "market_snapshot": {
+    "signal_date": "2026-09-21",
+    "emotion_regime": "加速",
+    "limit_count_mainboard": 93,
+    "promotion_mid": 0.2916666666666667,
+    "failed_rate": 0.1982758620689655
+  },
+  "candidate_snapshot": {
+    "emotion_anchors": [
+      {
+        "code": "001216",
+        "name": "华瓷股份",
+        "boards": 5,
+        "role": "EMOTION_ANCHOR_NOT_BUY_CANDIDATE"
+      }
+    ],
+    "highest_leader_potential": {
+      "code": "001216",
+      "name": "华瓷股份",
+      "boards": 5,
+      "research_score_not_probability": 77.0,
+      "evidence_status": "INFERRED_EOD_RANKING_NOT_PROBABILITY"
+    },
+    "next_height_challenger": {
+      "code": "002285",
+      "name": "世联行",
+      "boards": 4,
+      "research_score_not_probability": 68.0,
+      "evidence_status": "INFERRED_EOD_RANKING_NOT_PROBABILITY"
+    },
+    "current_market_core": null,
+    "leader_identity_status": "INFERRED_EOD_RANKING_REQUIRES_NEXT_SESSION_CONFIRMATION",
+    "challenger_identity_status": "INFERRED_IF_CURRENT_ANCHOR_FAILS_NOT_PROBABILITY",
+    "buy_opportunity_status": "UNAVAILABLE_AUCTION_OPENING_AND_EXECUTION_EVIDENCE"
+  },
+  "gates": {
+    "identity_review_allowed": true,
+    "conditional_relay_review_allowed": false,
+    "trade_authorization": false,
+    "strategy_upgrade_allowed": false
+  },
+  "input_contract": {
+    "status": "DIAGNOSTIC_ONLY",
+    "latest_signal_date": "2026-08-31",
+    "missing_groups": [
+      "conditional_relay"
+    ],
+    "missing_by_group": {
+      "conditional_relay": [
+        "amount",
+        "auction_0920_stable",
+        "auction_0925_pct",
+        "auction_amount",
+        "auction_amount_ratio",
+        "auction_gap",
+        "failed_seal_count",
+        "first_seal_time",
+        "float_cap",
+        "last_seal_time",
+        "max_drawdown",
+        "name",
+        "reseal_count",
+        "sealed_funds",
+        "theme",
+        "theme_evidence_status",
+        "theme_first_support",
+        "theme_group_id",
+        "theme_ladder_count",
+        "theme_middle_support",
+        "vwap_reclaimed"
+      ]
+    }
+  },
+  "blocking_reasons": [
+    "ACTUAL_EXECUTION_AND_COMPLETE_TRADE_MODEL_UNAVAILABLE",
+    "CROSS_THEME_RACE_EVIDENCE_UNAVAILABLE",
+    "DAILY_REVIEW_STALE",
+    "FULL_MARKET_POOL_COMPLETENESS_NOT_INDEPENDENTLY_VERIFIED",
+    "LEADER_COMPETITION_EVIDENCE_UNAVAILABLE",
+    "NEXT_SESSION_AUCTION_AND_OPENING_EVIDENCE_UNAVAILABLE",
+    "NO_VALIDATED_FULL_POOL_SELECTION_THRESHOLD",
+    "POINT_IN_TIME_SECURITY_STATUS_INCOMPLETE",
+    "REAL_SPECIFIC_THEME_EVIDENCE_UNAVAILABLE",
+    "SECONDARY_THEME_NARRATIVE_NOT_BUSINESS_OR_CATALYST_VERIFIED",
+    "SEVERE_ABNORMAL_RULE_DISTANCE_INCOMPLETE",
+    "V264_STRATEGY_AUDIT_NOT_LIVE_READY",
+    "V265_MISSING_FIELDS_conditional_relay"
+  ],
+  "governance": {
+    "identity_may_be_reported_as_diagnostic": true,
+    "relay_requires_complete_auction_intraday_theme_emotion": true,
+    "no_order_submission": true,
+    "trade_authorization_requires_live_verified_fill_and_exit": true
+  },
+  "source_hashes": {
+    "results/daily_review_20260921_v7/review.json": "31d084b1acfd7864980373ce5e33b5efde533a57c35f3c51777250c80e6c5b95",
+    "results/v264/strategy_contract_audit_20260927_v3/report.json": "bb09bca89da10e51dd4b7964686efba28aaf45e8507cfe82ae6ef046280b3f56",
+    "results/v265/leader_input_contract_20260927_v1/report.json": "3ac0a463006c52dc390eb556bf740681d71f8d427fee03781dedcd4c9fdd051f"
+  }
+}

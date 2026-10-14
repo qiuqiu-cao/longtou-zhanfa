@@ -1,0 +1,238 @@
+{
+  "version": "v189-high-to-low-ecology-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "data_contract": {
+    "same_day_window_features_available_at_close": true,
+    "low_strength_threshold_frozen_from_development_only": true,
+    "next_session_fields_used_only_as_labels": true,
+    "specific_theme_alignment_available": false,
+    "stock_level_supplement_identity_available": false,
+    "actual_stock_entries": 0,
+    "complete_stock_trades": 0
+  },
+  "window_definition": {
+    "height_risk_increased": "max_board >= 3 and space_feedback <= 0",
+    "low_layer_strong": "promotion_1to2 >= frozen development median",
+    "ecology_checks": [
+      "previous-limit median return > 0",
+      "failed-board rate <= 30%",
+      "down-limit count <= 5",
+      "middle-board promotion >= 25%"
+    ],
+    "healthy_rotation_window": "at least 3 of 4 ecology checks pass",
+    "collapse_masked": "fewer than 3 ecology checks pass"
+  },
+  "frozen_development_thresholds": {
+    "promotion_1to2_median": 0.1898326898326898
+  },
+  "scope": {
+    "evaluable_market_sessions": 675,
+    "high_to_low_windows": 106
+  },
+  "split": {
+    "method": "chronological_70_30_by_all_evaluable_sessions",
+    "split_date": "2025-11-12",
+    "development_sessions": 472,
+    "validation_sessions": 203,
+    "validation_previously_inspected": true
+  },
+  "summaries": {
+    "development": {
+      "ALL_HIGH_TO_LOW_WINDOWS": {
+        "sessions": 78,
+        "next_adverse_state_rate": 0.5,
+        "next_first_board_promotion": 0.19731168141912322,
+        "next_middle_promotion": 0.38528268837631563,
+        "next_previous_limit_median_return": 0.003954730547879341,
+        "next_failed_rate": 0.3467878869891926,
+        "next_height_feedback": 0.533974358974359,
+        "mean_ecology_score": 2.2051282051282053
+      },
+      "HEALTHY_ROTATION_WINDOW": {
+        "sessions": 31,
+        "next_adverse_state_rate": 0.5161290322580645,
+        "next_first_board_promotion": 0.1976447508713007,
+        "next_middle_promotion": 0.3703103385976741,
+        "next_previous_limit_median_return": 0.003916742323529588,
+        "next_failed_rate": 0.3521004984523549,
+        "next_height_feedback": 0.5344086021505376,
+        "mean_ecology_score": 3.3225806451612905
+      },
+      "COLLAPSE_MASKED_LOW_STRENGTH": {
+        "sessions": 47,
+        "next_adverse_state_rate": 0.48936170212765956,
+        "next_first_board_promotion": 0.19709199731236793,
+        "next_middle_promotion": 0.39515806801754727,
+        "next_previous_limit_median_return": 0.003979786610748325,
+        "next_failed_rate": 0.3432838241092345,
+        "next_height_feedback": 0.5336879432624113,
+        "mean_ecology_score": 1.4680851063829787
+      }
+    },
+    "validation": {
+      "ALL_HIGH_TO_LOW_WINDOWS": {
+        "sessions": 28,
+        "next_adverse_state_rate": 0.5357142857142857,
+        "next_first_board_promotion": 0.14914077746528914,
+        "next_middle_promotion": 0.3389187289134767,
+        "next_previous_limit_median_return": 0.005829281685133955,
+        "next_failed_rate": 0.30799431760411006,
+        "next_height_feedback": 0.5089285714285714,
+        "mean_ecology_score": 2.2857142857142856
+      },
+      "HEALTHY_ROTATION_WINDOW": {
+        "sessions": 12,
+        "next_adverse_state_rate": 0.3333333333333333,
+        "next_first_board_promotion": 0.17963256382681828,
+        "next_middle_promotion": 0.3165801790801791,
+        "next_previous_limit_median_return": 0.013360790975673964,
+        "next_failed_rate": 0.2738547690110726,
+        "next_height_feedback": 0.45138888888888884,
+        "mean_ecology_score": 3.3333333333333335
+      },
+      "COLLAPSE_MASKED_LOW_STRENGTH": {
+        "sessions": 16,
+        "next_adverse_state_rate": 0.6875,
+        "next_first_board_promotion": 0.1262719376941423,
+        "next_middle_promotion": 0.3556726412884501,
+        "next_previous_limit_median_return": 0.00018064971722894438,
+        "next_failed_rate": 0.33359897904888813,
+        "next_height_feedback": 0.5520833333333333,
+        "mean_ecology_score": 1.5
+      }
+    }
+  },
+  "session_clustered_healthy_minus_collapse_masked": {
+    "development": {
+      "comparison": "HEALTHY_ROTATION_WINDOW_MINUS_COLLAPSE_MASKED",
+      "session_clustered": true,
+      "minimum_group_sessions": 31,
+      "metrics": {
+        "next_adverse_state_rate": {
+          "estimate": 0.026767330130404943,
+          "ci95": [
+            -0.19766643788606725,
+            0.24183253260123413
+          ]
+        },
+        "next_first_board_promotion": {
+          "estimate": 0.0005527535589327781,
+          "ci95": [
+            -0.04689990934568943,
+            0.043162668680140036
+          ]
+        },
+        "next_middle_promotion": {
+          "estimate": -0.024847729419873177,
+          "ci95": [
+            -0.10087728687356269,
+            0.04887455813784709
+          ]
+        },
+        "next_median": {
+          "estimate": -6.304428721873746e-05,
+          "ci95": [
+            -0.011858195770587195,
+            0.012027827576169546
+          ]
+        },
+        "next_failed_rate": {
+          "estimate": 0.00881667434312039,
+          "ci95": [
+            -0.03311313768195676,
+            0.05020519144055492
+          ]
+        },
+        "next_height_feedback": {
+          "estimate": 0.0007206588881263354,
+          "ci95": [
+            -0.19078872111644932,
+            0.19821379547014417
+          ]
+        }
+      }
+    },
+    "validation": {
+      "comparison": "HEALTHY_ROTATION_WINDOW_MINUS_COLLAPSE_MASKED",
+      "session_clustered": true,
+      "minimum_group_sessions": 12,
+      "metrics": {
+        "next_adverse_state_rate": {
+          "estimate": -0.3541666666666667,
+          "ci95": [
+            -0.7083333333333334,
+            0.0
+          ]
+        },
+        "next_first_board_promotion": {
+          "estimate": 0.053360626132675976,
+          "ci95": [
+            -0.009602625765362275,
+            0.12464305602142942
+          ]
+        },
+        "next_middle_promotion": {
+          "estimate": -0.039092462208271006,
+          "ci95": [
+            -0.15438540468756454,
+            0.07737500300115192
+          ]
+        },
+        "next_median": {
+          "estimate": 0.01318014125844502,
+          "ci95": [
+            -0.0040952798552430815,
+            0.03176944311564602
+          ]
+        },
+        "next_failed_rate": {
+          "estimate": -0.05974421003781555,
+          "ci95": [
+            -0.11960152405666954,
+            0.0029164476620082013
+          ]
+        },
+        "next_height_feedback": {
+          "estimate": -0.10069444444444442,
+          "ci95": [
+            -0.4131944444444444,
+            0.22230902777777728
+          ]
+        }
+      }
+    }
+  },
+  "healthy_high_to_low_lower_adverse_stable_across_time": false,
+  "latest_market_context": {
+    "signal_date": "2026-09-15",
+    "height_risk_increased": false,
+    "low_layer_strong": false,
+    "ecology_score": 1,
+    "high_to_low_window_active": false,
+    "ecology_class": "NOT_ACTIVE",
+    "status": "HISTORICAL_MARKET_WINDOW_CONTEXT_ONLY"
+  },
+  "governance": {
+    "historical_high_to_low_market_scenario_allowed": true,
+    "calibrated_high_to_low_window_probability_allowed": false,
+    "high_to_low_window_direct_emotion_gate_allowed": false,
+    "high_to_low_window_direct_stock_reranking_allowed": false,
+    "high_to_low_stock_selection_allowed": false,
+    "same_theme_supplement_mapping_allowed": false,
+    "position_size_increase_allowed": false,
+    "entry_authorized": false,
+    "requires_specific_theme_candidate_auction_and_open_confirmation": true
+  },
+  "interpretation": "Healthy ecology around height weakness is materially better in the recent segment, but development shows no adverse-state separation. The aggregate window may frame a high-to-low scenario only; without specific-theme identity and live confirmation it cannot select a supplement stock or authorize entry.",
+  "limitations": [
+    "the audit is aggregate market-level and cannot identify a same-theme supplement",
+    "specific-theme membership, catalyst persistence and propagation order are absent",
+    "validation dates were inspected and are not sealed blind",
+    "next-session lane metrics are labels and cannot be used at the signal close"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803",
+    "D:\\Documents\\ChatGPT\\龙头战法\\high_to_low_ecology_audit_v189.py": "bd056f80f36020925648c03deffae36ded24868b3ec37672e575229e2e8a8d63"
+  },
+  "observations_sha256": "cdab4f5b09e7f22002dbe2a4e1a26e3a16961707f9c03b21cd3adef04fcc5835"
+}

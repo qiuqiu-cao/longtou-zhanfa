@@ -1,0 +1,232 @@
+{
+  "version": "v178-breadth-quality-emotion-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "session_rows": 248,
+  "split_date": "2025-05-26",
+  "definition": {
+    "breadth_expansion": "signal limit-up count change > 0",
+    "fragile_expansion": "breadth expansion and failed-board rate change > 0 versus the immediately preceding verified session",
+    "clean_expansion": "breadth expansion and failed-board rate change <= 0 versus the immediately preceding verified session",
+    "low_only_warning": "breadth expands while relay count and maximum board do not rise; descriptive only and not part of the primary split"
+  },
+  "state_summaries": {
+    "FRAGILE_EXPANSION": {
+      "sessions": 61,
+      "signal_limit_count_change_mean": 15.868852459016393,
+      "signal_failed_rate_change_mean": 0.06427149440020004,
+      "signal_relay_count_change_mean": 1.4426229508196722,
+      "signal_height_change_mean": 0.26229508196721313,
+      "signal_first_board_share_mean": 0.7759838513911668,
+      "next_adverse_state_rate": 0.5573770491803278,
+      "next_failed_rate_mean": 0.3639793786934251,
+      "next_promotion_mid_mean": 0.3766618916703929,
+      "next_previous_limit_median_return_mean": 0.008675034974915997,
+      "next_down_limit_count_mean": 15.262295081967213
+    },
+    "CLEAN_EXPANSION": {
+      "sessions": 187,
+      "signal_limit_count_change_mean": 23.44385026737968,
+      "signal_failed_rate_change_mean": -0.11717858519187005,
+      "signal_relay_count_change_mean": 1.0588235294117647,
+      "signal_height_change_mean": 0.21390374331550802,
+      "signal_first_board_share_mean": 0.7913846707717727,
+      "next_adverse_state_rate": 0.39037433155080214,
+      "next_failed_rate_mean": 0.3571072419525077,
+      "next_promotion_mid_mean": 0.446265281609376,
+      "next_previous_limit_median_return_mean": 0.010396641281716598,
+      "next_down_limit_count_mean": 21.475935828877006
+    }
+  },
+  "bootstrap_comparisons": {
+    "next_adverse_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_adverse_state",
+      "estimate": 0.16700271762952568,
+      "ci95": [
+        0.020855614973262025,
+        0.31350048216007714
+      ],
+      "sessions_left": 61,
+      "sessions_right": 187
+    },
+    "next_failed_rate_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_failed_rate",
+      "estimate": 0.006872136740917412,
+      "ci95": [
+        -0.01479534521986617,
+        0.029877657892273736
+      ],
+      "sessions_left": 61,
+      "sessions_right": 187
+    },
+    "next_promotion_mid_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_promotion_mid",
+      "estimate": -0.06960338993898313,
+      "ci95": [
+        -0.12617785299827888,
+        -0.009212893688456951
+      ],
+      "sessions_left": 61,
+      "sessions_right": 187
+    },
+    "next_median_premium_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_previous_limit_median_return",
+      "estimate": -0.001721606306800601,
+      "ci95": [
+        -0.008421629205458143,
+        0.005165479765689967
+      ],
+      "sessions_left": 61,
+      "sessions_right": 187
+    },
+    "next_down_limits_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_down_limit_count",
+      "estimate": -6.2136407469097925,
+      "ci95": [
+        -36.404687910931884,
+        13.873522836854566
+      ],
+      "sessions_left": 61,
+      "sessions_right": 187
+    }
+  },
+  "chronological_split_bootstrap_comparisons": {
+    "discovery_next_adverse_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_adverse_state",
+      "estimate": 0.1023727516264829,
+      "ci95": [
+        -0.07807118254879447,
+        0.2796211251435134
+      ],
+      "sessions_left": 39,
+      "sessions_right": 134
+    },
+    "validation_next_adverse_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_adverse_state",
+      "estimate": 0.2967409948542024,
+      "ci95": [
+        0.058319039451114885,
+        0.5274442538593482
+      ],
+      "sessions_left": 22,
+      "sessions_right": 53
+    },
+    "discovery_next_failed_rate_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_failed_rate",
+      "estimate": 0.00725410251978742,
+      "ci95": [
+        -0.019482183588010314,
+        0.03500505879200361
+      ],
+      "sessions_left": 39,
+      "sessions_right": 134
+    },
+    "validation_next_failed_rate_fragile_minus_clean": {
+      "left": "FRAGILE_EXPANSION",
+      "right": "CLEAN_EXPANSION",
+      "metric": "next_failed_rate",
+      "estimate": 0.015082950356893055,
+      "ci95": [
+        -0.019703249781676202,
+        0.04933337340031839
+      ],
+      "sessions_left": 22,
+      "sessions_right": 53
+    }
+  },
+  "chronological_split": {
+    "discovery_first_70pct_dates": {
+      "FRAGILE_EXPANSION": {
+        "sessions": 39,
+        "signal_limit_count_change_mean": 20.41025641025641,
+        "signal_failed_rate_change_mean": 0.07143744678825499,
+        "signal_relay_count_change_mean": 1.2564102564102564,
+        "signal_height_change_mean": 0.2564102564102564,
+        "signal_first_board_share_mean": 0.7837144776167355,
+        "next_adverse_state_rate": 0.5128205128205128,
+        "next_failed_rate_mean": 0.37612449083001576,
+        "next_promotion_mid_mean": 0.40172723545848094,
+        "next_previous_limit_median_return_mean": 0.006235175774545221,
+        "next_down_limit_count_mean": 20.384615384615383
+      },
+      "CLEAN_EXPANSION": {
+        "sessions": 134,
+        "signal_limit_count_change_mean": 26.53731343283582,
+        "signal_failed_rate_change_mean": -0.11668150186220302,
+        "signal_relay_count_change_mean": 1.4477611940298507,
+        "signal_height_change_mean": 0.27611940298507465,
+        "signal_first_board_share_mean": 0.7898799046246002,
+        "next_adverse_state_rate": 0.41044776119402987,
+        "next_failed_rate_mean": 0.36887038831022834,
+        "next_promotion_mid_mean": 0.4535022468555726,
+        "next_previous_limit_median_return_mean": 0.009557919726108031,
+        "next_down_limit_count_mean": 27.604477611940297
+      }
+    },
+    "validation_last_30pct_dates": {
+      "FRAGILE_EXPANSION": {
+        "sessions": 22,
+        "signal_limit_count_change_mean": 7.818181818181818,
+        "signal_failed_rate_change_mean": 0.051568215166829925,
+        "signal_relay_count_change_mean": 1.7727272727272727,
+        "signal_height_change_mean": 0.2727272727272727,
+        "signal_first_board_share_mean": 0.7622795594458407,
+        "next_adverse_state_rate": 0.6363636363636364,
+        "next_failed_rate_mean": 0.34244940717855976,
+        "next_promotion_mid_mean": 0.33222787313696406,
+        "next_previous_limit_median_return_mean": 0.013000239921027836,
+        "next_down_limit_count_mean": 6.181818181818182
+      },
+      "CLEAN_EXPANSION": {
+        "sessions": 53,
+        "signal_limit_count_change_mean": 15.622641509433961,
+        "signal_failed_rate_change_mean": -0.1184353619121603,
+        "signal_relay_count_change_mean": 0.07547169811320754,
+        "signal_height_change_mean": 0.05660377358490566,
+        "signal_first_board_share_mean": 0.79518917386085,
+        "next_adverse_state_rate": 0.33962264150943394,
+        "next_failed_rate_mean": 0.3273664568216667,
+        "next_promotion_mid_mean": 0.4279680487227657,
+        "next_previous_limit_median_return_mean": 0.012517182573255244,
+        "next_down_limit_count_mean": 5.981132075471698
+      }
+    }
+  },
+  "fragile_expansion_adverse_association_stable": false,
+  "fragile_expansion_failed_rate_association_stable": false,
+  "validation_next_adverse_difference_fragile_minus_clean": 0.2967409948542024,
+  "governance": {
+    "limit_count_growth_alone_sufficient_for_repair": false,
+    "failed_board_rate_direction_required": true,
+    "historical_emotion_scenario_use_allowed": true,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "More closing limit-ups do not by themselves prove a healthy repair. When breadth expands while the failed-board rate also rises, the new breadth coexists with worsening rejection pressure and must be separated from a clean expansion.",
+  "limitations": [
+    "aggregate provider pool completeness is not independently proven",
+    "failed-rate changes are close-of-session diagnostics, not intraday entry signals",
+    "single chronological split is not a sealed blind test",
+    "no candidate-level theme attribution, fill, cost, or B+1/B+2/B+3 trade path"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "b45b5cff32751f429c8f57c01b2bc37f553a179d9d8eee9eb851c035ae80cbca"
+}

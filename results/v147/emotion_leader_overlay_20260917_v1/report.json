@@ -1,0 +1,122 @@
+{
+  "version": "v147-emotion-leader-overlay-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "overlap": {
+    "sessions": 193,
+    "start": "2025-11-13",
+    "end": "2026-08-27",
+    "risk_band_counts": {
+      "MIXED": 130,
+      "LOW": 36,
+      "HIGH": 27
+    }
+  },
+  "groups": {
+    "all": {
+      "sessions": 193,
+      "known_fill_proxy": 191,
+      "fill_proxy_rate": 0.5130890052356021,
+      "known_b2_return_among_fill_proxy": 97,
+      "b2_mean_return_among_fill_proxy": -0.03338969638082786,
+      "known_b2_large_loss_among_fill_proxy": 97,
+      "b2_large_loss_rate_among_fill_proxy": 0.3917525773195876
+    },
+    "high": {
+      "sessions": 27,
+      "known_fill_proxy": 26,
+      "fill_proxy_rate": 0.38461538461538464,
+      "known_b2_return_among_fill_proxy": 10,
+      "b2_mean_return_among_fill_proxy": -0.03037730867691175,
+      "known_b2_large_loss_among_fill_proxy": 10,
+      "b2_large_loss_rate_among_fill_proxy": 0.4
+    },
+    "non_high": {
+      "sessions": 166,
+      "known_fill_proxy": 165,
+      "fill_proxy_rate": 0.5333333333333333,
+      "known_b2_return_among_fill_proxy": 87,
+      "b2_mean_return_among_fill_proxy": -0.0337359478410481,
+      "known_b2_large_loss_among_fill_proxy": 87,
+      "b2_large_loss_rate_among_fill_proxy": 0.39080459770114945
+    },
+    "low": {
+      "sessions": 36,
+      "known_fill_proxy": 36,
+      "fill_proxy_rate": 0.6111111111111112,
+      "known_b2_return_among_fill_proxy": 21,
+      "b2_mean_return_among_fill_proxy": -0.02472074586793239,
+      "known_b2_large_loss_among_fill_proxy": 21,
+      "b2_large_loss_rate_among_fill_proxy": 0.3333333333333333
+    },
+    "non_low": {
+      "sessions": 157,
+      "known_fill_proxy": 155,
+      "fill_proxy_rate": 0.49032258064516127,
+      "known_b2_return_among_fill_proxy": 76,
+      "b2_mean_return_among_fill_proxy": -0.03578506428570688,
+      "known_b2_large_loss_among_fill_proxy": 76,
+      "b2_large_loss_rate_among_fill_proxy": 0.40789473684210525
+    }
+  },
+  "contrasts_left_minus_right": {
+    "high_minus_non_high_b2_return": {
+      "difference": 0.0033586391641363504,
+      "bootstrap95": [
+        -0.09796533965046204,
+        0.10210633615239564
+      ],
+      "left_n": 10,
+      "right_n": 87
+    },
+    "high_minus_non_high_b2_large_loss": {
+      "difference": 0.009195402298850575,
+      "bootstrap95": [
+        -0.2942528735632184,
+        0.33218390804597697
+      ],
+      "left_n": 10,
+      "right_n": 87
+    },
+    "low_minus_non_low_b2_return": {
+      "difference": 0.011064318417774489,
+      "bootstrap95": [
+        -0.057097896923667096,
+        0.07679566693392166
+      ],
+      "left_n": 21,
+      "right_n": 76
+    },
+    "low_minus_non_low_b2_large_loss": {
+      "difference": -0.07456140350877194,
+      "bootstrap95": [
+        -0.2995457393483709,
+        0.16353383458646614
+      ],
+      "left_n": 21,
+      "right_n": 76
+    }
+  },
+  "policy_evidence": {
+    "high_risk_top1_veto_supported": false,
+    "low_risk_positive_rank_bonus_supported": false,
+    "allowed_use": "context_and_confirmation_strictness_only",
+    "stock_reranking_allowed": false
+  },
+  "governance": {
+    "emotion_forecast_retrained": false,
+    "stock_top1_reranked": false,
+    "filled_trade_claimed": false,
+    "complete_exit_claimed": false,
+    "untouched_blind_test_claimed": false
+  },
+  "limitations": [
+    "overlap reuses historical dates already touched by project research",
+    "fill_proxy_target is not broker-confirmed execution",
+    "B+2 close mark is not a frozen complete-trade exit",
+    "conditional-on-fill results can differ from aggregate market damage"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v132\\height_anchor_joint_buy_rowfix_v2\\prequential_daily_top1.csv": "49c07480af6ed06429faca7b8bb3dffe9d4d25ef088beb33ba5b3128de8d3c9e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v144\\emotion_actionable_risk_20260917_v1\\outer_predictions.csv": "c3efdaa91e3d0f0adc5c01cf81d977e575d19f395910be50b23dacc09a721678"
+  }
+}

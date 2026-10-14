@@ -1,0 +1,50 @@
+{
+  "plan_id": "替换为事前冻结的唯一计划ID",
+  "code": "600000",
+  "kind": "user_confirmed",
+  "frozen_at": "2026-09-07T09:35:10+08:00",
+  "available_at": "2026-09-07T09:35:11+08:00",
+  "maximum_holding_session_offset": 3,
+  "allow_beyond_b3": false,
+  "cost_policy": {
+    "sell_commission_rate": null,
+    "sell_min_commission_cash": null,
+    "sell_stamp_tax_rate": null,
+    "sell_transfer_fee_rate": null,
+    "sell_other_fee_rate": null,
+    "currency": "CNY",
+    "policy_id": "按账户与生效日期填写并在买入前冻结"
+  },
+  "exit_rules": [
+    {
+      "rule_id": "hold-strong",
+      "effect": "HOLD",
+      "trigger_mode": "NUMERIC",
+      "earliest_session_offset": 1,
+      "latest_session_offset": 3,
+      "condition_rule": {"metric": "close_vs_vwap", "unit": "ratio", "window_seconds": 300, "definition_id": "exit-v1", "operator": ">", "threshold": 0.01, "max_age_seconds": 60}
+    },
+    {
+      "rule_id": "hold-divergence",
+      "effect": "HOLD",
+      "trigger_mode": "NUMERIC",
+      "earliest_session_offset": 1,
+      "latest_session_offset": 3,
+      "condition_rule": {"metric": "close_vs_vwap", "unit": "ratio", "window_seconds": 300, "definition_id": "exit-v1", "operator": ">=", "threshold": 0.0, "max_age_seconds": 60}
+    },
+    {
+      "rule_id": "trend-invalid",
+      "effect": "SELL_ALL",
+      "trigger_mode": "NUMERIC",
+      "earliest_session_offset": 1,
+      "latest_session_offset": 3,
+      "condition_rule": {"metric": "close_vs_vwap", "unit": "ratio", "window_seconds": 300, "definition_id": "exit-v1", "operator": "<=", "threshold": -0.01, "max_age_seconds": 60}
+    },
+    {"rule_id": "b3-time-stop", "effect": "SELL_ALL", "trigger_mode": "TIME_STOP", "earliest_session_offset": 3, "latest_session_offset": 3}
+  ],
+  "holding_scenarios": {
+    "strong_continuation": {"action": "HOLD_TO_NEXT_REVIEW", "rule_ids": ["hold-strong"]},
+    "normal_divergence": {"action": "HOLD_IF_RULES_PASS", "rule_ids": ["hold-divergence"]},
+    "trend_invalidation": {"action": "SELL_ALL", "rule_ids": ["trend-invalid"]}
+  }
+}

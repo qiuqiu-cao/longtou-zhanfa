@@ -1,0 +1,111 @@
+{
+  "version": "v235-relay-leader-role-gate-1",
+  "status": "CASE_DERIVED_CROSS_HEIGHT_ROLE_CHALLENGER_DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-21",
+  "relay_candidate_rows": 21,
+  "maximum_board": 5,
+  "height_emotion_anchor": {
+    "code": "001216",
+    "name": "华瓷股份",
+    "boards": 5,
+    "height_gap_to_anchor": 0,
+    "relay_role": "HEIGHT_EMOTION_ANCHOR_NOT_CLOSE_ENTRY",
+    "board_path_status": "ONE_PRICE_BUYABILITY_UNPROVEN",
+    "repair_span_minutes": 0.0,
+    "turnover": 0.8624439835548401,
+    "amount": 51219505.0,
+    "symbolic_tags": "华",
+    "announcement_risk_tier": "NO_ACTIVE_RISK_IN_COVERED_INDEX",
+    "security_eligibility_status": "SECURITY_STATUS_UNAVAILABLE_OR_INELIGIBLE",
+    "theme_evidence_status": "INFERRED_OR_LIMITED",
+    "close_relay_challenger_eligible": false,
+    "official_primary_gate_passed": false,
+    "entry_authorized": false
+  },
+  "close_relay_challenger": {
+    "code": "603230",
+    "name": "内蒙新华",
+    "boards": 4,
+    "height_gap_to_anchor": 1,
+    "relay_role": "DIVERGENCE_ABSORBED_RELAY_CHALLENGER",
+    "board_path_status": "QUICK_REPAIR",
+    "repair_span_minutes": 12.15,
+    "turnover": 10.628140449523926,
+    "amount": 557005248.0,
+    "symbolic_tags": "华|新",
+    "announcement_risk_tier": "RETROSPECTIVE_FULLTEXT_NOT_APPLIED_TITLE_ONLY",
+    "security_eligibility_status": "SECURITY_STATUS_UNAVAILABLE_OR_INELIGIBLE",
+    "theme_evidence_status": "INFERRED_OR_LIMITED",
+    "close_relay_challenger_eligible": true,
+    "official_primary_gate_passed": false,
+    "entry_authorized": false
+  },
+  "current_market_core": null,
+  "official_relay_primary": null,
+  "role_separation": {
+    "highest_board_equals_automatic_buy_candidate": false,
+    "height_anchor_and_tradable_core_may_differ": true,
+    "candidate_search_depth_below_maximum_boards": 1,
+    "quick_repair_preferred_to_locked_board_at_same_height": true,
+    "prolonged_contest_is_close_candidate": false,
+    "one_price_board_is_close_entry": false,
+    "replacement_after_next_session_failure": false
+  },
+  "next_session_contract": {
+    "scope": "FROZEN_CLOSE_RELAY_CHALLENGER_ONLY",
+    "ideal_auction_gap_pct": [
+      0,
+      5
+    ],
+    "strict_confirmation_gap_pct": [
+      5,
+      7
+    ],
+    "above_7_pct_default": "CANCEL_UNLESS_REAL_ABSORPTION_AND_RESEAL_WITH_THEME_CONFIRMATION",
+    "required": [
+      "security_scope_verified",
+      "no_new_hard_announcement_risk",
+      "auction_not_overheated",
+      "first_pullback_absorbed",
+      "VWAP_reclaimed_or_held",
+      "same_theme_or_symbolic_ladder_not_collapsing"
+    ],
+    "cancel": [
+      "opens_hot_then_loses_VWAP_on_expanding_sell_volume",
+      "two_limit_attempts_without_reseal",
+      "height_anchor_severe_negative_feedback",
+      "support_ladder_batch_failure",
+      "new_hard_risk_or_regulatory_notice"
+    ],
+    "level2_queue_or_cancel_data_claimed": false
+  },
+  "governance": {
+    "case_derived_rule": true,
+    "research_score_is_probability": false,
+    "verified_real_theme_required_for_official_core": true,
+    "next_session_confirmation_required": true,
+    "minimum_forward_date_clusters_before_promotion": 60,
+    "targets": [
+      "next_session_promotion",
+      "B_plus_2_executable_payoff",
+      "B_plus_1_big_loss"
+    ],
+    "entry_authorized": false
+  },
+  "limitations": [
+    "V225 weights and this cross-height gate are frozen case-derived hypotheses",
+    "provider seal timestamps are not Level-2 queue, cancel or tick-order evidence",
+    "security eligibility and verified real-theme evidence can block an official core",
+    "auction/open confirmation is unavailable at the close"
+  ],
+  "entry_authorized": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v236\\relay_leader_daily_20260921_v4\\v225_same_height\\same_height_scores.csv": "a098491ed588e5e9f63e32ceaffee709d0f123c81d2b8c1b3f99b3ce839cd785",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v236\\relay_leader_daily_20260921_v4\\v225_same_height\\report.json": "4bec6233ffb5fd61a22f4b17dbf49689ea091907e8704c4123e9767af845568c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20260921_v7\\review.json": "31d084b1acfd7864980373ce5e33b5efde533a57c35f3c51777250c80e6c5b95"
+  },
+  "artifact_hashes": {
+    "relay_role_candidates.csv": "90d02361f0a57fabc3e0a3051da592d6c22f74bda93944d0ea62e3cc0ec1d13b",
+    "anchor_core_duel.csv": "ca0509864b97fbb4c8f09d1a7411a24fec8e6bb6da7f38349fe3b727f302a601"
+  }
+}

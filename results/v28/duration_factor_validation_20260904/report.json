@@ -1,0 +1,370 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "training_exclusive_cutoff": "2025-06-16",
+  "validation_start": "2025-07-28",
+  "validation_exclusive_end": "2025-12-26",
+  "pool_rows": 1227,
+  "groups_by_horizon": {
+    "1": {
+      "height": {
+        "features": [
+          "boards"
+        ],
+        "train_labeled_rows": 4983,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 83,
+          "evaluated_rows": 1144,
+          "evaluated_mean_forecast": 0.24614039806258986,
+          "evaluated_actual_rate": 0.39073426573426573,
+          "brier": 0.2628194457194503,
+          "all_candidate_rate_lower": 0.3643031784841076,
+          "all_candidate_rate_upper": 0.4319478402607987,
+          "auc": 0.5445982943840492
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 50,
+          "unresolved_episodes": 6,
+          "hits": 28,
+          "all_episode_rate_lower": 0.56,
+          "all_episode_rate_upper": 0.68,
+          "actual_profit_win_rate": null
+        }
+      },
+      "identity_proxy": {
+        "features": [
+          "boards",
+          "height_gap_to_known_top",
+          "same_height_known_count",
+          "sole_known_top_proxy",
+          "candidate_pool_count",
+          "unknown_height_pool_count"
+        ],
+        "train_labeled_rows": 4983,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 83,
+          "evaluated_rows": 1144,
+          "evaluated_mean_forecast": 0.26394640758360716,
+          "evaluated_actual_rate": 0.39073426573426573,
+          "brier": 0.25668983413110014,
+          "all_candidate_rate_lower": 0.3643031784841076,
+          "all_candidate_rate_upper": 0.4319478402607987,
+          "auc": 0.5518457178255163
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 49,
+          "unresolved_episodes": 6,
+          "hits": 28,
+          "all_episode_rate_lower": 0.5714285714285714,
+          "all_episode_rate_upper": 0.6938775510204082,
+          "actual_profit_win_rate": null
+        }
+      },
+      "identity_plus_emotion": {
+        "features": [
+          "boards",
+          "height_gap_to_known_top",
+          "same_height_known_count",
+          "sole_known_top_proxy",
+          "candidate_pool_count",
+          "unknown_height_pool_count",
+          "market_limit_count",
+          "market_consecutive_count",
+          "market_max_board",
+          "market_failed_count",
+          "market_down_limit_count",
+          "market_seal_rate",
+          "market_failed_rate",
+          "market_height_change",
+          "market_limit_change",
+          "market_middle_density",
+          "market_ladder_gap_count",
+          "market_yesterday_premium",
+          "market_previous_limit_tail_loss",
+          "market_promotion_overall",
+          "market_promotion_1to2",
+          "market_promotion_2to3",
+          "market_promotion_3to4",
+          "market_promotion_4to5",
+          "market_promotion_mid",
+          "market_space_feedback",
+          "market_previous_limit_feedback_coverage"
+        ],
+        "train_labeled_rows": 4983,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 83,
+          "evaluated_rows": 1144,
+          "evaluated_mean_forecast": 0.2583353009330881,
+          "evaluated_actual_rate": 0.39073426573426573,
+          "brier": 0.262964050358909,
+          "all_candidate_rate_lower": 0.3643031784841076,
+          "all_candidate_rate_upper": 0.4319478402607987,
+          "auc": 0.5203958158807803
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 49,
+          "unresolved_episodes": 5,
+          "hits": 29,
+          "all_episode_rate_lower": 0.5918367346938775,
+          "all_episode_rate_upper": 0.6938775510204082,
+          "actual_profit_win_rate": null
+        }
+      }
+    },
+    "3": {
+      "height": {
+        "features": [
+          "boards"
+        ],
+        "train_labeled_rows": 4977,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 96,
+          "evaluated_rows": 1131,
+          "evaluated_mean_forecast": 0.03966155865993594,
+          "evaluated_actual_rate": 0.07338638373121131,
+          "brier": 0.06979617682530456,
+          "all_candidate_rate_lower": 0.06764466177669112,
+          "all_candidate_rate_upper": 0.1458842705786471,
+          "auc": 0.5304883656764463
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 50,
+          "unresolved_episodes": 6,
+          "hits": 3,
+          "all_episode_rate_lower": 0.06,
+          "all_episode_rate_upper": 0.18,
+          "actual_profit_win_rate": null
+        }
+      },
+      "identity_proxy": {
+        "features": [
+          "boards",
+          "height_gap_to_known_top",
+          "same_height_known_count",
+          "sole_known_top_proxy",
+          "candidate_pool_count",
+          "unknown_height_pool_count"
+        ],
+        "train_labeled_rows": 4977,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 96,
+          "evaluated_rows": 1131,
+          "evaluated_mean_forecast": 0.045183192380277716,
+          "evaluated_actual_rate": 0.07338638373121131,
+          "brier": 0.06955474515115412,
+          "all_candidate_rate_lower": 0.06764466177669112,
+          "all_candidate_rate_upper": 0.1458842705786471,
+          "auc": 0.5360870964775131
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 49,
+          "unresolved_episodes": 5,
+          "hits": 3,
+          "all_episode_rate_lower": 0.061224489795918366,
+          "all_episode_rate_upper": 0.16326530612244897,
+          "actual_profit_win_rate": null
+        }
+      },
+      "identity_plus_emotion": {
+        "features": [
+          "boards",
+          "height_gap_to_known_top",
+          "same_height_known_count",
+          "sole_known_top_proxy",
+          "candidate_pool_count",
+          "unknown_height_pool_count",
+          "market_limit_count",
+          "market_consecutive_count",
+          "market_max_board",
+          "market_failed_count",
+          "market_down_limit_count",
+          "market_seal_rate",
+          "market_failed_rate",
+          "market_height_change",
+          "market_limit_change",
+          "market_middle_density",
+          "market_ladder_gap_count",
+          "market_yesterday_premium",
+          "market_previous_limit_tail_loss",
+          "market_promotion_overall",
+          "market_promotion_1to2",
+          "market_promotion_2to3",
+          "market_promotion_3to4",
+          "market_promotion_4to5",
+          "market_promotion_mid",
+          "market_space_feedback",
+          "market_previous_limit_feedback_coverage"
+        ],
+        "train_labeled_rows": 4977,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 96,
+          "evaluated_rows": 1131,
+          "evaluated_mean_forecast": 0.046506690716122165,
+          "evaluated_actual_rate": 0.07338638373121131,
+          "brier": 0.06978101782895417,
+          "all_candidate_rate_lower": 0.06764466177669112,
+          "all_candidate_rate_upper": 0.1458842705786471,
+          "auc": 0.5004426101351973
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 53,
+          "unresolved_episodes": 2,
+          "hits": 3,
+          "all_episode_rate_lower": 0.05660377358490566,
+          "all_episode_rate_upper": 0.09433962264150944,
+          "actual_profit_win_rate": null
+        }
+      }
+    },
+    "5": {
+      "height": {
+        "features": [
+          "boards"
+        ],
+        "train_labeled_rows": 4976,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 98,
+          "evaluated_rows": 1129,
+          "evaluated_mean_forecast": 0.008171517469602447,
+          "evaluated_actual_rate": 0.013286093888396812,
+          "brier": 0.01320564314999936,
+          "all_candidate_rate_lower": 0.012224938875305624,
+          "all_candidate_rate_upper": 0.09209453952730236,
+          "auc": 0.4558647516457211
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 50,
+          "unresolved_episodes": 6,
+          "hits": 0,
+          "all_episode_rate_lower": 0.0,
+          "all_episode_rate_upper": 0.12,
+          "actual_profit_win_rate": null
+        }
+      },
+      "identity_proxy": {
+        "features": [
+          "boards",
+          "height_gap_to_known_top",
+          "same_height_known_count",
+          "sole_known_top_proxy",
+          "candidate_pool_count",
+          "unknown_height_pool_count"
+        ],
+        "train_labeled_rows": 4976,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 98,
+          "evaluated_rows": 1129,
+          "evaluated_mean_forecast": 0.009888014556419059,
+          "evaluated_actual_rate": 0.013286093888396812,
+          "brier": 0.013230292785683223,
+          "all_candidate_rate_lower": 0.012224938875305624,
+          "all_candidate_rate_upper": 0.09209453952730236,
+          "auc": 0.447965290245362
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 51,
+          "unresolved_episodes": 4,
+          "hits": 0,
+          "all_episode_rate_lower": 0.0,
+          "all_episode_rate_upper": 0.0784313725490196,
+          "actual_profit_win_rate": null
+        }
+      },
+      "identity_plus_emotion": {
+        "features": [
+          "boards",
+          "height_gap_to_known_top",
+          "same_height_known_count",
+          "sole_known_top_proxy",
+          "candidate_pool_count",
+          "unknown_height_pool_count",
+          "market_limit_count",
+          "market_consecutive_count",
+          "market_max_board",
+          "market_failed_count",
+          "market_down_limit_count",
+          "market_seal_rate",
+          "market_failed_rate",
+          "market_height_change",
+          "market_limit_change",
+          "market_middle_density",
+          "market_ladder_gap_count",
+          "market_yesterday_premium",
+          "market_previous_limit_tail_loss",
+          "market_promotion_overall",
+          "market_promotion_1to2",
+          "market_promotion_2to3",
+          "market_promotion_3to4",
+          "market_promotion_4to5",
+          "market_promotion_mid",
+          "market_space_feedback",
+          "market_previous_limit_feedback_coverage"
+        ],
+        "train_labeled_rows": 4976,
+        "validation": {
+          "candidate_rows": 1227,
+          "forecast_rows": 1227,
+          "unresolved_label_rows": 98,
+          "evaluated_rows": 1129,
+          "evaluated_mean_forecast": 0.009930487467205906,
+          "evaluated_actual_rate": 0.013286093888396812,
+          "brier": 0.013267552047236326,
+          "all_candidate_rate_lower": 0.012224938875305624,
+          "all_candidate_rate_upper": 0.09209453952730236,
+          "auc": 0.37453620586475167
+        },
+        "daily_top1": {
+          "selected_days": 103,
+          "distinct_selected_episodes": 54,
+          "unresolved_episodes": 5,
+          "hits": 0,
+          "all_episode_rate_lower": 0.0,
+          "all_episode_rate_upper": 0.09259259259259259,
+          "actual_profit_win_rate": null
+        }
+      }
+    }
+  },
+  "final_blind_test": false,
+  "hyperparameter_search": false,
+  "target_100_probability": null,
+  "target_200_probability": null,
+  "actual_trades": 0,
+  "limitations": [
+    "identity factors measure height competition, not verified leader identity",
+    "retrospective EOD factors, not auction or intraday forecasts",
+    "all groups use identical candidates and per-horizon training labels",
+    "correlated observations, reused validation and informative censoring",
+    "unknown-start candidates scored using observed height lower bounds; watch only",
+    "no proof of profitability, regulatory-target success or stable improvement"
+  ],
+  "source_hashes": {
+    "data/v23/candidate_emotion_features_strict.csv": "d71d32dde617f9b116c782c7f5b0a0ebe89512db2037b92d272e1eef10997770",
+    "data/v20/episode_inventory_20260904_strict/episode_outcomes_LABEL_ONLY.csv": "5f266843dfc722da290e1d15ca895cfe937702ad3cb0294767f253293faa6257",
+    "data/v18/benchmarks_20260904/sh000002.csv": "811fca3da9259f9a684f263deb4fd3cb8258a4babb759ccd7a6fc3ac3094d775",
+    "D:\\Documents\\ChatGPT\\龙头战法\\duration_factor_ablation_v28.py": "7946670c58627e8b7b5bf9dde358eb06652a1b69f7df6b9fcbc249afd87315e9"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "artifact_kind": "WEB_TOOL_EXTRACT_SOURCE_MANIFEST",
+  "created_time_utc": "2026-10-02T20:22:50.691394+00:00",
+  "capture_window_utc": {
+    "start": "2026-10-02 20:16:06 UTC",
+    "end": "2026-10-02 20:18:06 UTC"
+  },
+  "source_timing_note": "Tools returned extracted text and search extracts, not original HTTP bytes. Per-call exact receipt timestamps were not sampled; only these actual capture bounds are asserted.",
+  "archive_time_utc": "2026-10-02 20:18:56 UTC",
+  "original_http_bytes": false,
+  "artifacts": [
+    {
+      "file": "notes.json",
+      "bytes": 19681,
+      "sha256": "1972c1dbe835f77c78064c1d6b6a8b7d4af49677962351b8bfcd74864c7eaa6b"
+    },
+    {
+      "file": "web_tool_extracts.json",
+      "bytes": 189813,
+      "sha256": "bcfeba8c349577652fede46922145342eb7fdb299cbedff80bf5c93bc3fb4f52"
+    }
+  ],
+  "sources": [
+    {
+      "id": "FORUM_01",
+      "url": "https://www.tgb.cn/a/1Mj41xQ90RJ",
+      "author": "大峥哥",
+      "published_display": "2022-02-14 23:14",
+      "publish_time_scope": "VISIBLE_PUBLIC_PREFIX",
+      "read_scope": "PUBLIC_PREFIX_ONLY_LOGIN_REQUIRED_AFTER_PREFIX",
+      "calls": "forum_search_2 / forum_open_7",
+      "selected": true,
+      "evidence_level": "AUTHOR_EXPERIENCE_NOT_DATA_VERIFIED"
+    },
+    {
+      "id": "FORUM_02",
+      "url": "https://guba.eastmoney.com/news,cfhpl,1359867272.html",
+      "author": "沐白复盘",
+      "published_display": "2023-10-17 23:05:03",
+      "publish_time_scope": "VISIBLE_SEARCH_TOOL_EXTRACT_ONLY",
+      "read_scope": "SEARCH_TOOL_AUTHOR_TEXT_EXTRACT_ONLY_FULL_OPEN_FAILED_AFTER_ONE_FOLLOWUP",
+      "calls": "forum_search_2 / forum_open_3 / forum_open_4",
+      "selected": false,
+      "evidence_level": "AUTHOR_CASE_SEARCH_EXTRACT_ONLY_NOT_VERIFIED"
+    },
+    {
+      "id": "FORUM_03",
+      "url": "https://guba.eastmoney.com/news,002584,1372435296.html",
+      "author": "财來bbi244",
+      "published_display": "2023-11-21 19:34:34",
+      "publish_time_scope": "VISIBLE_SEARCH_TOOL_EXTRACT_ONLY",
+      "read_scope": "SEARCH_TOOL_AUTHOR_TEXT_EXTRACT_ONLY_FULL_OPEN_FAILED_AFTER_ONE_FOLLOWUP",
+      "calls": "forum_search_2 / forum_open_3 / forum_open_4",
+      "selected": true,
+      "evidence_level": "AUTHOR_CASE_SEARCH_EXTRACT_ONLY_NOT_VERIFIED"
+    },
+    {
+      "id": "FORUM_04",
+      "url": "https://caifuhao.eastmoney.com/news/20260610024407592796560",
+      "author": "风翻红叶信",
+      "published_display": "2026-06-10 02:44",
+      "publish_time_scope": "VISIBLE_PUBLIC_AUTHOR_APPEND_TIMES",
+      "read_scope": "PUBLIC_AUTHOR_TEXT_SELECTED_SECTIONS_WITH_LATER_APPENDS",
+      "calls": "forum_open_3",
+      "selected": true,
+      "evidence_level": "AUTHOR_EXPERIENCE_NOT_STATISTICALLY_VERIFIED"
+    },
+    {
+      "id": "FORUM_05",
+      "url": "https://caifuhao.eastmoney.com/news/20260809203458522052630",
+      "author": "锦鲤踏阳线",
+      "published_display": "2026-08-09 20:34",
+      "publish_time_scope": "VISIBLE_PUBLIC_AUTHOR_TEXT",
+      "read_scope": "PUBLIC_BODY_AVAILABLE_IMAGES_NOT_USED",
+      "calls": "forum_open_3",
+      "selected": true,
+      "evidence_level": "AUTHOR_SELF_REPORTED_HYPOTHESIS_AND_COUNTERCASE_NOT_DATA_VERIFIED"
+    },
+    {
+      "id": "FORUM_06",
+      "url": "https://m.tgb.cn/a/2rhlKB6gyXA",
+      "author": "小新擒龙日记",
+      "published_display": "2026-04-25 12:00",
+      "publish_time_scope": "VISIBLE_PUBLIC_BODY_DATE_26_04_25",
+      "read_scope": "PUBLIC_AUTHOR_BODY_AND_COUNTEREXAMPLES_VISIBLE_DESPITE_LOGIN_UI",
+      "calls": "forum_open_6 / forum_open_8",
+      "selected": true,
+      "evidence_level": "AUTHOR_CASES_AND_EXPLICIT_COUNTERCASES_NOT_DATA_VERIFIED"
+    },
+    {
+      "id": "FORUM_07",
+      "url": "https://tgb.cn/a/2v8JORQFxWs",
+      "author": "kremaes",
+      "published_display": "2026-09-16 17:35",
+      "publish_time_scope": "VISIBLE_PUBLIC_THREAD_AND_CHAPTER_AUTHOR_TIME",
+      "read_scope": "PUBLIC_SELECTED_CHAPTER_AND_AUTHOR_REPLIES_THREAD_PAGE_1_OF_2",
+      "calls": "forum_open_6 / forum_open_7 / forum_open_8",
+      "selected": true,
+      "evidence_level": "AUTHOR_METHOD_DISCUSSION_NO_FULL_CANDIDATE_STATISTICAL_TEST"
+    },
+    {
+      "id": "FORUM_08",
+      "url": "https://www.tgb.cn/a/2vvLfNPjtpc",
+      "author": "道家通天路",
+      "published_display": "2026-09-30 14:30",
+      "publish_time_scope": "VISIBLE_SEARCH_TOOL_EXTRACT_ONLY",
+      "read_scope": "SEARCH_TOOL_AUTHOR_TEXT_EXTRACT_ONLY_FULL_OPEN_FAILED_AFTER_ONE_FOLLOWUP",
+      "calls": "forum_search_1 / forum_search_2 / forum_open_4",
+      "selected": false,
+      "evidence_level": "AUTHOR_CASE_SEARCH_EXTRACT_ONLY_NOT_VERIFIED"
+    }
+  ],
+  "failed_full_open_after_one_followup": [
+    "FORUM_02",
+    "FORUM_03",
+    "FORUM_08",
+    "excluded_孤龙"
+  ],
+  "login_prefix_only": [
+    "FORUM_01",
+    "excluded_九凤盘龙",
+    "excluded_偶特慢慢"
+  ],
+  "403_received": false,
+  "retry_policy": "Repeated line/find reads on already opened pages were scoped reading; failed full-page opens got at most one direct URL follow-up, then stopped. No login bypass or forum data API used.",
+  "forward_samples_added": 0,
+  "models_or_original_predictions_changed": false
+}

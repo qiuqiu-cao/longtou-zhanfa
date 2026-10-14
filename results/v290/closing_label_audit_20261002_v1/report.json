@@ -1,0 +1,104 @@
+{
+  "version": "v290-close-label-necessary-condition-1",
+  "recorded_at": "2026-10-02T11:39:42.163757+00:00",
+  "status": "ORIGINAL_LABELS_PRESERVED_WITH_NECESSARY_CONTRADICTION_FLAGS",
+  "candidate_rows": 2888,
+  "status_counts": {
+    "NEGATIVE_NEXT_CLOSE_NECESSARY_REJECTION_SUPPORTED": 1781,
+    "POSITIVE_NECESSARY_CONDITIONS_ONLY": 1013,
+    "ORIGINAL_LABEL_UNRESOLVED": 67,
+    "NEGATIVE_REQUIRES_LIMIT_PRICE_VERIFICATION": 21,
+    "POSITIVE_NEXT_CLOSE_CONTRADICTION": 5,
+    "POSITIVE_CONTINUATION_SIGNAL_CONTRADICTION": 1
+  },
+  "positive_contradictions": [
+    {
+      "date": "2026-01-13",
+      "code": "600676",
+      "target_date": "2026-01-14",
+      "original_target": 1.0,
+      "signal_status": "NECESSARY_CONDITION_ONLY",
+      "next_status": "CLOSE_LIMIT_CONTRADICTION",
+      "audit_status": "POSITIVE_NEXT_CLOSE_CONTRADICTION"
+    },
+    {
+      "date": "2026-04-14",
+      "code": "002980",
+      "target_date": "2026-04-15",
+      "original_target": 1.0,
+      "signal_status": "NECESSARY_CONDITION_ONLY",
+      "next_status": "CLOSE_LIMIT_CONTRADICTION",
+      "audit_status": "POSITIVE_NEXT_CLOSE_CONTRADICTION"
+    },
+    {
+      "date": "2026-04-29",
+      "code": "603629",
+      "target_date": "2026-04-30",
+      "original_target": 1.0,
+      "signal_status": "NECESSARY_CONDITION_ONLY",
+      "next_status": "CLOSE_LIMIT_CONTRADICTION",
+      "audit_status": "POSITIVE_NEXT_CLOSE_CONTRADICTION"
+    },
+    {
+      "date": "2026-04-30",
+      "code": "603629",
+      "target_date": "2026-05-06",
+      "original_target": 1.0,
+      "signal_status": "CLOSE_LIMIT_CONTRADICTION",
+      "next_status": "NECESSARY_CONDITION_ONLY",
+      "audit_status": "POSITIVE_CONTINUATION_SIGNAL_CONTRADICTION"
+    },
+    {
+      "date": "2026-06-26",
+      "code": "002674",
+      "target_date": "2026-06-29",
+      "original_target": 1.0,
+      "signal_status": "NECESSARY_CONDITION_ONLY",
+      "next_status": "CLOSE_LIMIT_CONTRADICTION",
+      "audit_status": "POSITIVE_NEXT_CLOSE_CONTRADICTION"
+    },
+    {
+      "date": "2026-08-04",
+      "code": "001229",
+      "target_date": "2026-08-05",
+      "original_target": 1.0,
+      "signal_status": "NECESSARY_CONDITION_ONLY",
+      "next_status": "CLOSE_LIMIT_CONTRADICTION",
+      "audit_status": "POSITIVE_NEXT_CLOSE_CONTRADICTION"
+    }
+  ],
+  "original_labels_rewritten": false,
+  "missing_candidates_dropped": false,
+  "original_forecast_rewritten": false,
+  "model_retrained": false,
+  "accuracy_claim_allowed": false,
+  "goal_verified": false,
+  "trade_authorized": false,
+  "limitations": [
+    "Necessary condition only; official daily limit price, ex-right reference and security-status history remain unverified",
+    "High equal to close is not sufficient evidence of a limit-up or a contiguous multi-board episode",
+    "Next-day checks are labels only; no next-day facts may enter signal features or ranking",
+    "Original unresolved labels remain unresolved; no future dates are substituted",
+    "Contradictions are retained and reported, not dropped to improve model performance"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v290\\long_interval_audit_20261002_v1\\report.json": "1e997d8e9256ca247a810df76d416fb5805c177c879650fbe3fd7cf77ae518e3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\signal_checks.json": "8290a32711e17ef2e3d25223c139e15ce59d29dc3c2a1fed001a760c142de4ae",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\candidate_scope_NO_OUTCOMES.csv": "4aba5aca18a322fbaffa4c176eb775bca41da0d6269dd70f7b02c8da5cc0a2e7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\long_interval_layers_v290.py": "e4ccf0aaf92e8c7083a9fc38e8d00d671445dac530c9875b5110da107389409f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\report.json": "8cadc1b257fd434819c9d51e0213e07038267086c352362618d7f277953662c8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\signal_checks.json": "f434e2ae4ffa642e433a2dec3032156de8a8ea85e491b79b80916d919044740d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\recovery_scope_NO_OUTCOMES.csv": "c1451abe41905d494fe9bb12470d03da472458bfa25d0e4c35c72edc59e3885b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\interval_normalized.csv": "e2abf69a4d8dedd8ae8fd0158ac6262426822fbd7016fec90dddc39402a5694f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\long_interval_recovery_20261002_v1\\daily_normalized.csv": "74b370dbbca3e49713f46673ea433c385f6c4e4c6c00fe6a7896ad84a25e108b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\thirty_minute_bars_UNRECONCILED.csv": "765cdd71370f1e816a95d9fd81f07a5222c11314d5bc8d6a9cb8f26404673542",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\unadjusted_daily_reference.csv": "8f4d79e5f793f6e518731119bb117fdd2936e197408f81c9a0bb09496401e8eb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v279\\daily_path_paired_20261002_v2\\CONTROL_predictions_LABEL_ONLY.csv": "61ceee6b53ebf1ab99a1ae83d0ff1607395e24b7954a0a06e605e23f4a0126b1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\closing_label_audit_v290.py": "6091b7c61b1ef7994df1b80e10519292c35fc40f2eead2d2200976adf4889887",
+    "D:\\Documents\\ChatGPT\\龙头战法\\archive_long_interval_v290.py": "4d03e46a6de7dfd0632eaf567fd76f6ef413bfb2ee6f4a257f5d191a5f9a26d2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\closing_board_sanity_v290.py": "01aa5d7080dda01deac85756356c3b05370b0af85c91acaf3a15c707456d7780"
+  },
+  "artifact_hashes": {
+    "closing_label_ledger_LABEL_ONLY.json": "d23bc1e4c528f26c9b5648468fe9e751279706da153658e8484032f19c3a6ee6"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "v176-intraday-flow-causality-1",
+  "status": "NO_FORWARD_OBSERVATIONS",
+  "available_automatic_public_fields": [
+    "Level-1 price/OHLC/cumulative volume/cumulative amount/provider timestamp"
+  ],
+  "broker_or_terminal_export_required": [
+    "09:20/09:24:50/09:25 indicative matched amount and price",
+    "09:31-10:00 one-minute OHLCV/amount and limit-up price",
+    "frozen verified theme-member roster with active driver evidence"
+  ],
+  "unavailable_without_level2": [
+    "gross cancellations",
+    "gross replenishment",
+    "queue ownership",
+    "participant identity",
+    "intentional control or deception"
+  ],
+  "policy": {
+    "net_matched_amount_change_is_not_cancel_or_replenishment": true,
+    "minute_sequence_is_not_causality": true,
+    "missing_values_remain_unavailable": true,
+    "direct_model_use_allowed": false,
+    "entry_authorized": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": "one-fixed-nonword-input-semantic-and-stage-audit",
+  "started_at": "2026-10-13T11:58:19+00:00",
+  "formed_at": "2026-10-13T12:00:26.233398+00:00",
+  "budget_minutes": 30,
+  "previous_goal_turn_classification": "PROGRESS_actual_callable_choice_builder_full10_source_bound_explanations",
+  "hypothesis": "Different historical/current field semantics, source coverage or stage distributions may help explain persistent non-oneword false negatives; source-backed inconsistencies warrant data/interpretation repair before another numeric hypothesis.",
+  "benchmark": "Immutable original BASE 29 fields, full original candidates and exact saved labels, original 252 labelled-day training windows.",
+  "arms": [
+    "BASE_ONLY_NO_CHALLENGER_NO_FIT"
+  ],
+  "fixed_periods": [
+    "original_training_2025H2",
+    "original_training_2026JanAug",
+    "original_training_2026Sep",
+    "original_saved_2025H2",
+    "original_saved_2026JanAug",
+    "original_saved_2026Sep",
+    "original_complete_2026-10-13_input10"
+  ],
+  "semantic_checks": [
+    "original producers for all29 fields",
+    "true OHLC one-word and legacy turnover proxy separately",
+    "turnover unit and previous-pool reference",
+    "height and competing-cohort denominator",
+    "market-source completeness and missing imputations"
+  ],
+  "statistics_fixed": [
+    "full cohort and true nonword/oneword/identity-unknown counts",
+    "exact original training input/member digest",
+    "per-field missingness and p05/p50/p95/min/max",
+    "current values against original training p05/p95 range",
+    "per-class and per-identity original prediction confusion/coverage",
+    "unchanged model terms from original current10 explanation"
+  ],
+  "limitations": [
+    "Distribution contrast is descriptive, not causal or a threshold.",
+    "Old early true OHLC identity unknown is retained.",
+    "Historical outcomes already inspected; no blind or forward performance claim.",
+    "Known target labels stay in diagnostic-only tables and out of current facts."
+  ],
+  "expected_improvement": "Find a concrete data/meaning issue or document matching semantics and source gaps; do not promise Accuracy gain.",
+  "stop": "One fixed full-cohort analysis, related data/meaning repair if demonstrated; completion or 30-minute budget. No numeric fit, threshold/weight search, re-run of rejected models or new collection.",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\source_reconstruction_BEFORE_FITS.json": "2d10828a0d6b2e772f9aecdf6a71439aa911e84fb3d43f2854e0446a7d0e2e35",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_context_20261011T151204Z\\prepared_source_reconstruction.joblib": "4f6838a74b2e92ab09abaf7a3567528ba95c8279b3a6aa19d908c579ff182a12",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\base_predictions.json": "5beb0f5185e301d4560a2c3a2f76385dba57c9b3a90994fc18fb5ff0dfa49bfb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\features\\manifest.json": "8751cbdca8eb97ba6c2683d7685de789c9003bf0d2d28daf12a7cd6c6cb35573",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\model\\features\\features.json": "e3f01e9573d447e4f16d44330fef7a50a2b10de222ab9e3ee9896eb63ddee1cf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261013T074936Z\\independent_source_repaired\\record_before_scores.json": "8ff2f2a474f625d4c6c1ea88d30c414a3740a5434f1f00d8be04c98c3215d38b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-13_47f5c10d3a45999a.json": "a54e814c6e948dde5319a4eb22d98517bab38f0d09cafdd9e80c56181b57d9cb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_inputs.py": "1fc7eee843596013132af27376c5a74dc424904afca30960207465c9c67d848b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b"
+  },
+  "scores_calls_ranks_may_change": false,
+  "new_real_forward_samples": 0,
+  "numeric_fits": 0
+}

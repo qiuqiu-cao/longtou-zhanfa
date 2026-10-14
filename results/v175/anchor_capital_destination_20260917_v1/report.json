@@ -1,0 +1,121 @@
+{
+  "version": "v175-anchor-capital-destination-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "cutoff_exclusive": "2025-12-26",
+  "session_rows": 461,
+  "signal_dates": 461,
+  "split_date": "2025-05-07",
+  "anchor_failure_sessions": 174,
+  "anchor_advance_sessions": 287,
+  "failure_destination_counts": {
+    "ANCHOR_FAILED_BOTH_LANES_PROMOTED": 166,
+    "ANCHOR_FAILED_FIRST_BOARD_ONLY": 5,
+    "ANCHOR_FAILED_LOWER_RELAY_ONLY": 3
+  },
+  "destination_summaries": {
+    "ANY_INTERNAL_DESTINATION": {
+      "sessions": 174,
+      "anchor_advance_rate": 0.0,
+      "lower_relay_promotion_rate_per_session": 0.9712643678160919,
+      "first_board_promotion_rate_per_session": 0.9827586206896551,
+      "next_adverse_state_rate": 0.5402298850574713,
+      "next_failed_rate_mean": 0.3853670749572059,
+      "next_previous_limit_median_return_mean": 0.0023068844170695273
+    }
+  },
+  "bootstrap_comparisons": {
+    "next_adverse_internal_minus_none": {
+      "group_a": "ANY_INTERNAL_DESTINATION",
+      "group_b": "NO_INTERNAL_DESTINATION",
+      "metric": "next_adverse_state",
+      "estimate": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "sessions_a": 174,
+      "sessions_b": 0
+    },
+    "next_failed_rate_internal_minus_none": {
+      "group_a": "ANY_INTERNAL_DESTINATION",
+      "group_b": "NO_INTERNAL_DESTINATION",
+      "metric": "next_failed_rate",
+      "estimate": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "sessions_a": 174,
+      "sessions_b": 0
+    },
+    "next_previous_limit_median_internal_minus_none": {
+      "group_a": "ANY_INTERNAL_DESTINATION",
+      "group_b": "NO_INTERNAL_DESTINATION",
+      "metric": "next_previous_limit_median_return",
+      "estimate": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "sessions_a": 174,
+      "sessions_b": 0
+    }
+  },
+  "chronological_split": {
+    "discovery_first_70pct_dates": {
+      "all_sessions": {
+        "sessions": 322,
+        "anchor_advance_rate": 0.6459627329192547,
+        "lower_relay_promotion_rate_per_session": 0.9192546583850931,
+        "first_board_promotion_rate_per_session": 0.9906832298136646,
+        "next_adverse_state_rate": 0.4906832298136646,
+        "next_failed_rate_mean": 0.3618697228347586,
+        "next_previous_limit_median_return_mean": 0.010653018742607661
+      },
+      "anchor_failure_sessions": 114,
+      "failure_destination_counts": {
+        "ANCHOR_FAILED_BOTH_LANES_PROMOTED": 107,
+        "ANCHOR_FAILED_FIRST_BOARD_ONLY": 5,
+        "ANCHOR_FAILED_LOWER_RELAY_ONLY": 2
+      }
+    },
+    "validation_last_30pct_dates": {
+      "all_sessions": {
+        "sessions": 139,
+        "anchor_advance_rate": 0.5683453237410072,
+        "lower_relay_promotion_rate_per_session": 0.9712230215827338,
+        "first_board_promotion_rate_per_session": 0.9928057553956835,
+        "next_adverse_state_rate": 0.4460431654676259,
+        "next_failed_rate_mean": 0.3366925117197138,
+        "next_previous_limit_median_return_mean": 0.012368595857930209
+      },
+      "anchor_failure_sessions": 60,
+      "failure_destination_counts": {
+        "ANCHOR_FAILED_BOTH_LANES_PROMOTED": 59,
+        "ANCHOR_FAILED_LOWER_RELAY_ONLY": 1
+      }
+    }
+  },
+  "internal_destination_and_better_environment_association_stable": false,
+  "governance": {
+    "anchor_failure_alone_implies_retreat": false,
+    "same_session_destination_as_signal_date_feature_allowed": false,
+    "automatic_high_to_low_entry_allowed": false,
+    "stock_reranking_allowed": false,
+    "historical_scenario_base_rates_allowed": true
+  },
+  "interpretation": "Failure of the height anchor is not itself the destination of capital. The next session must distinguish lower-relay promotion, first-board promotion, both lanes, and no observable promotion from the prior closing-limit inventory. These are realized labels, so they explain the path after it occurs and cannot be leaked into a prior-close score or used to auto-buy a lower board.",
+  "limitations": [
+    "promotion is a closing-board outcome, not intraday capital-flow or amount-share evidence",
+    "same-theme versus cross-theme destination is unavailable without complete point-in-time themes",
+    "current-universe and candidate-inventory completeness remain unproved",
+    "historical security eligibility is incomplete",
+    "no queue, verified fill, actual exit, catalyst timing or causal flow sequence"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\full_pool_features_inventory_cutoff_20260831_v3\\full_pool_eod_features.csv": "cafd9fb21679ca102ccc404c416bd879df132359835005e319936edb349139a4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "rows_sha256": "44210753071e14a2ca1eeaa4645d89c997067cc5a265dcb36a42ff0b2f1d1b35"
+}

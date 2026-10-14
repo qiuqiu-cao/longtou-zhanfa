@@ -1,0 +1,99 @@
+{
+  "recorded_at_utc": "2026-10-07T07:39:41.767779+00:00",
+  "batch_started_at_utc": "2026-10-07T07:32:34+00:00",
+  "budget_minutes": 30,
+  "deadline_utc": "2026-10-07T08:02:34+00:00",
+  "human_request": "你看看他有没有效果，再去决定是否添加",
+  "research_id": "WYCKOFF_EFFORT_RESULT_DIAGNOSTIC_01",
+  "status": "REGISTERED_BEFORE_NEW_FEATURES_OR_TEST_SCORING",
+  "one_hypothesis": "首板前已完成的高量窄幅弱收盘量价失配代理，可能在现29项模型及输入缺失信息之外改善次日晋级识别；不是完整Wyckoff或已证派发",
+  "source_method": "https://www.wyckoffanalytics.com/wyckoff-method/",
+  "expected_accuracy_change": null,
+  "feature_name": "wyckoff_preboard_effort_result_risk",
+  "feature_rule": {
+    "T": "official_session_index(signal_date)-known_contiguous_boards",
+    "window": "T-6 through T inclusive, seven exact official sessions; every OHLCV positive/valid; same provider source within window",
+    "volume_ratio": "volume(T)/mean(volume(T-5..T-1)) >= 1.5",
+    "spread_ratio": "(high(T)-low(T))/close(T-1) <= median((high(t)-low(t))/close(t-1), t=T-5..T-1)",
+    "weak_result": "close(T)<close(T-1) and (close(T)-low(T))/(high(T)-low(T))<=0.5",
+    "uptrend_background": "close(T-1)>close(T-6)",
+    "endpoint_exclusion": "event close must be strictly more than 1 cent away from both high and low, and high>low; does NOT certify absence of intraday limit-price touches",
+    "missing": "unavailable window/nonpositive volume/invalid OHLC/mixed providers/event endpoint exclusion => unknown; no evidence imputation in evidence ledger",
+    "true_false": "all conditions =>1; valid endpoint-free complete window but conjunction false =>0",
+    "forbidden": "No target-day field, future-pivot labeling, phase hindsight, historical source expansion, current theme or data-status inference"
+  },
+  "baseline": {
+    "name": "W0",
+    "features": 29,
+    "training_rows_expected": 3059,
+    "trailing_known_label_sessions": 252,
+    "signal_and_target_before": "2026-09-01",
+    "model": "logistic, original imputation/standardization, C=0.25, date-equal weights",
+    "threshold": 0.5,
+    "tie": "score desc, boards desc, code asc",
+    "reference": "original saved September V278 scores; reconstructed <=1e-9"
+  },
+  "challengers": {
+    "Wmissing": "same original29 plus explicit unknown-feature indicator only",
+    "Wrisk": "same original29 plus explicit unknown indicator and proxy risk value; risk fill zero for model representation only, ledger unknown retained; indicator controls missingness identically to Wmissing. No other tuning."
+  },
+  "evaluation": {
+    "fixed_original_candidates": 182,
+    "signal_dates": 16,
+    "calendar_slots_september": 21,
+    "labels_join": "only after feature and all-arm prediction artifacts saved; original label validity and exact successor retained",
+    "primary": "daily real-nonword rank Top1 on identical complete-label dates; Wrisk-Wmissing and Wrisk-W0",
+    "secondary": [
+      "all-candidate Accuracy",
+      "Precision",
+      "known-label Recall",
+      "complete-positive Recall if all labels known",
+      "F1",
+      "per-height and real nonword",
+      "positive nonword Top1 with own calls and matched calls",
+      "latest20 official slots, latest60 unavailable if fixed OOS coverage absent"
+    ],
+    "Brier": "not calculable: internal score uncalibrated",
+    "uncertainty": "5000 circular five-session blocks on all21 official slots, 95% two-sided; unscorable slots stay NaN; same seed20261007",
+    "keep_unknowns": true,
+    "history_status": "already-viewed retrospective replay, not pristine blind or forward"
+  },
+  "diagnostic_gate": {
+    "risk_true_test_min_rows": 10,
+    "risk_true_test_min_dates": 5,
+    "coverage_min": 0.95,
+    "Wrisk_vs_both_rank_min_pp": 5,
+    "paired_interval_lower_above_zero": true,
+    "all_accuracy_precision_F1_no_decrease": true,
+    "known_recall_max_drop_pp": 2
+  },
+  "production_admission": {
+    "minimum_independent_fully_scorable_dates": 60,
+    "requires_new_fixed_OOS_or_forward": true,
+    "price_limit_and_source_certification_required": true,
+    "stable60_claim": false,
+    "default": "DO_NOT_ADD_TO_PRODUCTION_THIS_REPLAY; any positive result only research lead"
+  },
+  "end_condition": "One frozen comparison and necessary source/causality checks completed or30min, never retune based on result",
+  "new_forward_samples": 0,
+  "input_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v278\\september_falsification_20261002_v6\\relay_predictions_LABEL_ONLY.csv": "3a5b77c41d5f3664dac2ae4ff845ade58612f0602c47d660793f6d9e3c622766",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v278\\september_falsification_20261002_v6\\report.json": "b930e9d154c289786dd525741248ae5f35b35b19b55c3cb8cad02ac0b2ff63ef",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\unadjusted_daily_reference.csv": "8f4d79e5f793f6e518731119bb117fdd2936e197408f81c9a0bb09496401e8eb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v290\\full_long_interval_20261002_v1\\report.json": "f3f396fdd8ce4c82fe56ac5c9197912bc1c2d90f4e2949294d989d4deb794fea",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2"
+  },
+  "protected_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\protocol.json": "47857a79776cd6f29027a0b2854409e30d06a1c71588a549dd70b0d9a99be68b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\theme_same_height\\comparison_specification.json": "3cbe76078f84ba27c344e6d41344230f8fd0bf7e8c102e3381c3d39a14aff066",
+    "D:\\Documents\\ChatGPT\\龙头战法\\capture_signal_theme_inputs.py": "512ea0c3048f88f12f7c38b8e3d63fcfa8d94fe95e166db27a295ccda3f870ad",
+    "D:\\Documents\\ChatGPT\\龙头战法\\next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research_queue.json": "4a008a9b42d812c4ed53d2c24a170fb9bf5c6e2309bb224019314103f752262e"
+  }
+}

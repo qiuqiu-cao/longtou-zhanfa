@@ -1,0 +1,177 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "target": "next-session touch of inferred limit AND following-session net close mark positive",
+  "validation_start": "2025-07-28",
+  "validation_end_exclusive": "2025-12-26",
+  "training": "one fixed pre-validation fit, two outcome sessions plus one purge session",
+  "costs": {
+    "shares": 100,
+    "commission": 0.0003,
+    "minimum": 5.0,
+    "sell_tax": 0.0005,
+    "slippage": 0.001
+  },
+  "parameter_search": false,
+  "C": 1,
+  "final_blind_test": false,
+  "execution_verified": false,
+  "full_observed_pool": true,
+  "train_rows": 5562,
+  "train_labeled_rows": 5553,
+  "training_exclusive_cutoff": "2025-07-23",
+  "validation_rows": 1227,
+  "validation_days": 103,
+  "groups": {
+    "height": {
+      "all_pool": {
+        "rows": 1227,
+        "labeled": 1184,
+        "unresolved": 43,
+        "price_opportunity_rate": 0.27618243243243246,
+        "auc": 0.542128326178726,
+        "brier": 0.21388603592625333,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "daily_top1": {
+        "rows": 103,
+        "labeled": 99,
+        "unresolved": 4,
+        "price_opportunity_rate": 0.31313131313131315,
+        "auc": 0.5187381404174572,
+        "brier": 0.22021138338280294,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "first_selected_episode": {
+        "rows": 50,
+        "labeled": 50,
+        "unresolved": 0,
+        "price_opportunity_rate": 0.36,
+        "auc": 0.4678819444444444,
+        "brier": 0.25237890474812735,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "top1_one_price_cases": 16,
+      "top1_down_limit_exit_cases": 25
+    },
+    "identity": {
+      "all_pool": {
+        "rows": 1227,
+        "labeled": 1184,
+        "unresolved": 43,
+        "price_opportunity_rate": 0.27618243243243246,
+        "auc": 0.5658134663626405,
+        "brier": 0.20842454772753824,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "daily_top1": {
+        "rows": 103,
+        "labeled": 99,
+        "unresolved": 4,
+        "price_opportunity_rate": 0.32323232323232326,
+        "auc": 0.5720615671641791,
+        "brier": 0.21941896994237584,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "first_selected_episode": {
+        "rows": 49,
+        "labeled": 49,
+        "unresolved": 0,
+        "price_opportunity_rate": 0.3469387755102041,
+        "auc": 0.4751838235294118,
+        "brier": 0.2531464915573961,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "top1_one_price_cases": 20,
+      "top1_down_limit_exit_cases": 25
+    },
+    "identity_emotion_additive": {
+      "all_pool": {
+        "rows": 1227,
+        "labeled": 1184,
+        "unresolved": 43,
+        "price_opportunity_rate": 0.27618243243243246,
+        "auc": 0.5732945806971906,
+        "brier": 0.20645900335950645,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "daily_top1": {
+        "rows": 103,
+        "labeled": 97,
+        "unresolved": 6,
+        "price_opportunity_rate": 0.32989690721649484,
+        "auc": 0.6153846153846154,
+        "brier": 0.21282019769535693,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "first_selected_episode": {
+        "rows": 49,
+        "labeled": 48,
+        "unresolved": 1,
+        "price_opportunity_rate": 0.3333333333333333,
+        "auc": 0.509765625,
+        "brier": 0.24075509728621522,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "top1_one_price_cases": 22,
+      "top1_down_limit_exit_cases": 21
+    },
+    "identity_emotion_interactions": {
+      "all_pool": {
+        "rows": 1227,
+        "labeled": 1184,
+        "unresolved": 43,
+        "price_opportunity_rate": 0.27618243243243246,
+        "auc": 0.5753713794297012,
+        "brier": 0.20665136742710336,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "daily_top1": {
+        "rows": 103,
+        "labeled": 97,
+        "unresolved": 6,
+        "price_opportunity_rate": 0.35051546391752575,
+        "auc": 0.5901027077497666,
+        "brier": 0.22648581368153772,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "first_selected_episode": {
+        "rows": 51,
+        "labeled": 50,
+        "unresolved": 1,
+        "price_opportunity_rate": 0.36,
+        "auc": 0.5138888888888888,
+        "brier": 0.256971217288868,
+        "verified_trades": 0,
+        "actual_profit_win_rate": null
+      },
+      "top1_one_price_cases": 22,
+      "top1_down_limit_exit_cases": 20
+    }
+  },
+  "limitations": [
+    "current-universe historical candidates are not complete historical market",
+    "reused historical validation, not fresh blind or walk-forward validation",
+    "daily high cannot prove auction timing, queue, touch order or actual entry",
+    "one-price and blocked-exit cases remain in proxy evaluation, never claimed profitable trades",
+    "retrospective EOD emotion, no actual contemporary receipt evidence or theme identity",
+    "fixed minimum fees for 100-share hypothetical marks, not a user's fee schedule",
+    "no calibrated executable-premium probability, deployed ranking, holding duration or portfolio P&L"
+  ],
+  "source_hashes": {
+    "data\\v23\\candidate_emotion_features_strict.csv": "d71d32dde617f9b116c782c7f5b0a0ebe89512db2037b92d272e1eef10997770",
+    "data\\v11\\point_in_time_rebuild\\point_in_time_current_daily_bars.csv": "6204734c8449387e81a647fa848238a4a33ae90db068e6ead31dbb62dd92c70f",
+    "data\\v18\\benchmarks_20260904\\sz399107.csv": "ea90e3c12a41839b38ca2b98b38f65393f9f0ba8b573069cafc91c0ce4ffe4fb",
+    "D:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\premium_opportunity_research.py": "c6946b20ea0145f5fdb418e70ea1979b9a0fe9d01b6cd156f6f195e67f4bce03"
+  }
+}

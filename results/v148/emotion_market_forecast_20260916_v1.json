@@ -1,0 +1,61 @@
+{
+  "version": "v148-emotion-market-forecast-card-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2026-09-16",
+  "current_state": "修复",
+  "next_session": {
+    "risk_off_probability": 0.4426779218566552,
+    "risk_band": "MIXED",
+    "primary_path": "MIXED_ROTATION_OR_DIVERGENCE",
+    "consistency_vs_divergence": "一致/分歧无法明确",
+    "alternative_path": "must_be_confirmed_by_next_session_market_and_theme_breadth"
+  },
+  "market_evidence": {
+    "limit_count": 80,
+    "consecutive_count": 11,
+    "max_board": 6,
+    "failed_count": 10,
+    "down_limit_count": 4,
+    "failed_rate": 0.1111111111111111,
+    "seal_rate": 0.8888888888888888,
+    "yesterday_premium": 0.0096195888519287,
+    "previous_limit_tail_loss": -0.0331428575515747,
+    "promotion_mid": 0.2,
+    "ladder_gap_count": 2,
+    "middle_density": 0.9090909090909092,
+    "data_status": "verified",
+    "source": "Eastmoney/AkShare pool or imported daily bars",
+    "observed_at": "2026-09-16 15:00:00"
+  },
+  "leader_selection_effect": {
+    "policy": [
+      "treat rotation and divergence as coexisting paths",
+      "prefer a unique specific-theme pioneer/core over a crowded height follower",
+      "freeze one primary and do not promote an intraday backup"
+    ],
+    "stock_reranking_allowed": false,
+    "positive_score_bonus_allowed": false,
+    "mechanical_top1_veto_allowed": false,
+    "overlay_audit": {
+      "available": true,
+      "high_risk_top1_veto_supported": false,
+      "low_risk_positive_rank_bonus_supported": false
+    }
+  },
+  "two_to_three_session_outlook": {
+    "status": "UNAVAILABLE_FAILED_HISTORICAL_GATE",
+    "probability": null,
+    "required_separate_evidence": [
+      "specific-theme catalyst persistence",
+      "theme ladder and same-height competition",
+      "candidate B+2/B+3 value and large-loss model"
+    ]
+  },
+  "guarantee": false,
+  "entry_authorized": false,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v144\\emotion_actionable_risk_20260917_v1\\report.json": "516c9eb9fff1e37b923da47aac28c54c4bef5583f7ef7777dad2707699d1aff3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v147\\emotion_leader_overlay_20260917_v1\\report.json": "2a0602f3ca6449ec083c82abb185204b31c1a6a29f1639e329d41ca35587699e"
+  }
+}

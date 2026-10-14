@@ -1,0 +1,248 @@
+{
+  "version": "v252-latest-leader-strategy-backtest-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "source_cutoff": "2026-08-31",
+  "source_rows": 9063,
+  "source_dates": 668,
+  "strict_latest": {
+    "strategy": "V246/V249/V250 strict",
+    "decision": "CASH",
+    "rows": 0,
+    "dates": 0,
+    "reason": "required auction/VWAP/theme evidence is unavailable; V249 says missing data is CASH"
+  },
+  "required_latest_fields": [
+    "auction_amount_ratio",
+    "auction_gap",
+    "below_vwap_expanding",
+    "expectation_gap",
+    "rivals_eliminated",
+    "theme_first_support",
+    "theme_middle_support",
+    "theme_support",
+    "theme_sync_open",
+    "vwap_reclaimed",
+    "vwap_slope_15m",
+    "vwap_slope_5m"
+  ],
+  "missing_required_fields_in_unavailable_audit": [
+    "auction_amount_ratio",
+    "auction_gap",
+    "below_vwap_expanding",
+    "expectation_gap",
+    "rivals_eliminated",
+    "theme_support",
+    "theme_sync_open",
+    "vwap_reclaimed",
+    "vwap_slope_15m",
+    "vwap_slope_5m"
+  ],
+  "proxy_definition": {
+    "boards_min": 3,
+    "buyable_eod": 1,
+    "one_word_proxy": 0,
+    "valid_identity": 1,
+    "announcement_risk": 0,
+    "false_acceleration": 0,
+    "emotion_risk_level": [
+      "LOW",
+      "MEDIUM"
+    ],
+    "selection": "one per date; boards, identity_score, height_share, space leadership, turnover descending",
+    "not_implemented": [
+      "auction confirmation",
+      "09:35 VWAP",
+      "theme ladder",
+      "actual fills",
+      "intraday path"
+    ]
+  },
+  "retrospective_split": {
+    "method": "fixed chronological 70/30 by date; no threshold tuning",
+    "split_date": "2025-11-05",
+    "is_blind_forward_test": false
+  },
+  "metrics": [
+    {
+      "label": "LATEST_STRUCTURAL_PROXY:ALL",
+      "rows": 399,
+      "dates": 399,
+      "promotion_known": 399,
+      "promotion_rate": 0.44360902255639095,
+      "promotion_wilson_95": [
+        0.3956293178094185,
+        0.49266420557385954
+      ],
+      "proxy_net_known": 207,
+      "proxy_net_positive_rate": 0.4251207729468599,
+      "proxy_mean_net_return": -0.024502487899496307,
+      "proxy_large_loss_rate": 0.36231884057971014,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 207
+    },
+    {
+      "label": "LATEST_STRUCTURAL_PROXY:DISCOVERY",
+      "rows": 275,
+      "dates": 275,
+      "promotion_known": 275,
+      "promotion_rate": 0.4690909090909091,
+      "promotion_wilson_95": [
+        0.4109407589757216,
+        0.5280926972689193
+      ],
+      "proxy_net_known": 142,
+      "proxy_net_positive_rate": 0.3873239436619718,
+      "proxy_mean_net_return": -0.032860453410888814,
+      "proxy_large_loss_rate": 0.4154929577464789,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 142
+    },
+    {
+      "label": "LATEST_STRUCTURAL_PROXY:VALIDATION",
+      "rows": 124,
+      "dates": 124,
+      "promotion_known": 124,
+      "promotion_rate": 0.3870967741935484,
+      "promotion_wilson_95": [
+        0.30598711359063113,
+        0.47499160600242507
+      ],
+      "proxy_net_known": 65,
+      "proxy_net_positive_rate": 0.5076923076923077,
+      "proxy_mean_net_return": -0.006243547859223451,
+      "proxy_large_loss_rate": 0.24615384615384617,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 65
+    },
+    {
+      "label": "PROXY_DENOMINATOR_HEIGHT_BASELINE:ALL",
+      "rows": 399,
+      "dates": 399,
+      "promotion_known": 399,
+      "promotion_rate": 0.45614035087719296,
+      "promotion_wilson_95": [
+        0.40791902179435735,
+        0.5051981630593033
+      ],
+      "proxy_net_known": 217,
+      "proxy_net_positive_rate": 0.423963133640553,
+      "proxy_mean_net_return": -0.02547315106830228,
+      "proxy_large_loss_rate": 0.35944700460829493,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 217
+    },
+    {
+      "label": "PROXY_DENOMINATOR_HEIGHT_BASELINE:DISCOVERY",
+      "rows": 275,
+      "dates": 275,
+      "promotion_known": 275,
+      "promotion_rate": 0.49454545454545457,
+      "promotion_wilson_95": [
+        0.43593737927961745,
+        0.5533038188812015
+      ],
+      "proxy_net_known": 150,
+      "proxy_net_positive_rate": 0.4,
+      "proxy_mean_net_return": -0.03043986573149347,
+      "proxy_large_loss_rate": 0.3933333333333333,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 150
+    },
+    {
+      "label": "PROXY_DENOMINATOR_HEIGHT_BASELINE:VALIDATION",
+      "rows": 124,
+      "dates": 124,
+      "promotion_known": 124,
+      "promotion_rate": 0.3709677419354839,
+      "promotion_wilson_95": [
+        0.2910183895329477,
+        0.4586715757162595
+      ],
+      "proxy_net_known": 67,
+      "proxy_net_positive_rate": 0.47761194029850745,
+      "proxy_mean_net_return": -0.014353640628321987,
+      "proxy_large_loss_rate": 0.2835820895522388,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 67
+    },
+    {
+      "label": "SAME_DAY_HIGHEST_BOARD_BASELINE:ALL",
+      "rows": 662,
+      "dates": 662,
+      "promotion_known": 661,
+      "promotion_rate": 0.5128593040847201,
+      "promotion_wilson_95": [
+        0.4747908995545987,
+        0.5507791063083853
+      ],
+      "proxy_net_known": 344,
+      "proxy_net_positive_rate": 0.438953488372093,
+      "proxy_mean_net_return": -0.027609732330682448,
+      "proxy_large_loss_rate": 0.38953488372093026,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 344
+    },
+    {
+      "label": "SAME_DAY_HIGHEST_BOARD_BASELINE:DISCOVERY",
+      "rows": 463,
+      "dates": 463,
+      "promotion_known": 463,
+      "promotion_rate": 0.5442764578833693,
+      "promotion_wilson_95": [
+        0.4987329785907553,
+        0.5890912692889673
+      ],
+      "proxy_net_known": 242,
+      "proxy_net_positive_rate": 0.4297520661157025,
+      "proxy_mean_net_return": -0.029976171957658317,
+      "proxy_large_loss_rate": 0.41735537190082644,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 242
+    },
+    {
+      "label": "SAME_DAY_HIGHEST_BOARD_BASELINE:VALIDATION",
+      "rows": 199,
+      "dates": 199,
+      "promotion_known": 198,
+      "promotion_rate": 0.4393939393939394,
+      "promotion_wilson_95": [
+        0.37206791899202474,
+        0.5090268761990842
+      ],
+      "proxy_net_known": 102,
+      "proxy_net_positive_rate": 0.46078431372549017,
+      "proxy_mean_net_return": -0.021995238313739708,
+      "proxy_large_loss_rate": 0.3235294117647059,
+      "actual_fill_rows": 0,
+      "inferred_touch_rows": 102
+    }
+  ],
+  "comparison": {
+    "validation_promotion_difference_proxy_minus_baseline": -0.052297165200391016,
+    "validation_promotion_difference_proxy_minus_same_denominator_height": 0.016129032258064502,
+    "proxy_uses_inferred_daily_ohlc_not_real_fill": true,
+    "actual_fill_rows_proxy": 0
+  },
+  "conclusions": {
+    "latest_strategy_fully_backtested": false,
+    "strict_rule_trade_count": 0,
+    "latest_rules_can_be_claimed_as_win_rate": false,
+    "promotion_proxy_validated": false,
+    "entry_authorized": false
+  },
+  "blocking_reasons": [
+    "历史数据的 unavailable_fields 对全部样本都包含竞价、VWAP和题材同步字段",
+    "没有真实盘口成交路径，net_return 只能作为日线触板/收盘代理",
+    "V250 的 A/B/C 龙型标签尚未落成结构化历史字段",
+    "晋级率与买后净收益不是同一个目标，不能用晋级代理替代 V249 的 B1/ANTI_NUCLEAR"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e"
+  },
+  "artifact_hashes": {
+    "highest_board_baseline_selected.csv": "1c644e9bbd63e8830cbc3c22977c0073c9c47eedffeba6329ee28e45b314a534",
+    "latest_structural_proxy_selected.csv": "8117eb013ab1588792dd8a1be866a135c6f37a1aeb92436b5ee2df2244ef92d0",
+    "proxy_denominator_height_baseline_selected.csv": "b84389ffcb7938327e17ee446e9cf636cc5385c0d6490da5a0cb88ebf56e8b87",
+    "report.json": "072f4db6191f54218a6ce76e65a4a206f505239c1979f2957bfaedf778b1d2bf"
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "version": "v162-emotion-three-session-path-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target_contract": {
+    "horizon": "next three trading sessions",
+    "classes": [
+      "RISK_OFF_DOMINANT",
+      "RISK_ON_DOMINANT",
+      "REPAIR_TO_RISK_ON",
+      "MIXED_ROTATION"
+    ],
+    "definitions": {
+      "RISK_OFF_DOMINANT": "at least two of next three sessions are RISK_OFF",
+      "RISK_ON_DOMINANT": "at least two are RISK_ON and none is RISK_OFF",
+      "REPAIR_TO_RISK_ON": "contains REPAIR, ends RISK_ON and has at most one RISK_OFF",
+      "MIXED_ROTATION": "all other three-session paths"
+    },
+    "overlapping_future_labels": true,
+    "purge_sessions_at_each_split": 3
+  },
+  "split": {
+    "train_n": 402,
+    "validation_n": 132,
+    "development_refit_n": 537,
+    "blind_n": 136,
+    "train_end": "2025-07-25",
+    "validation_start": "2025-07-31",
+    "validation_end": "2026-02-11",
+    "blind_start": "2026-02-25",
+    "blind_end": "2026-09-11",
+    "blind_reused_by_prior_project_research": true
+  },
+  "validation_selection": {
+    "chosen": {
+      "C": 0.1,
+      "class_weight": "none",
+      "model_weight": 0.5,
+      "markov_weight": 0.5,
+      "multiclass_brier": 0.6814523763416609,
+      "log_loss": 1.2376363765656904,
+      "macro_f1": 0.2025586353944563
+    },
+    "search": [
+      {
+        "C": 0.1,
+        "class_weight": "none",
+        "model_weight": 0.0,
+        "markov_weight": 1.0,
+        "multiclass_brier": 0.6893272031057168,
+        "log_loss": 1.2569482299448906,
+        "macro_f1": 0.14324324324324325
+      },
+      {
+        "C": 0.1,
+        "class_weight": "none",
+        "model_weight": 0.5,
+        "markov_weight": 0.5,
+        "multiclass_brier": 0.6814523763416609,
+        "log_loss": 1.2376363765656904,
+        "macro_f1": 0.2025586353944563
+      },
+      {
+        "C": 0.1,
+        "class_weight": "none",
+        "model_weight": 1.0,
+        "markov_weight": 0.0,
+        "multiclass_brier": 0.6858467342952025,
+        "log_loss": 1.2408767587769671,
+        "macro_f1": 0.1992797118847539
+      },
+      {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "model_weight": 0.0,
+        "markov_weight": 1.0,
+        "multiclass_brier": 0.6893272031057168,
+        "log_loss": 1.2569482299448906,
+        "macro_f1": 0.14324324324324325
+      },
+      {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "model_weight": 0.5,
+        "markov_weight": 0.5,
+        "multiclass_brier": 0.7004902360042615,
+        "log_loss": 1.2764334182280173,
+        "macro_f1": 0.1979456539531838
+      },
+      {
+        "C": 0.1,
+        "class_weight": "balanced",
+        "model_weight": 1.0,
+        "markov_weight": 0.0,
+        "multiclass_brier": 0.7723949120068381,
+        "log_loss": 1.4092196494581073,
+        "macro_f1": 0.26701964586446547
+      },
+      {
+        "C": 0.5,
+        "class_weight": "none",
+        "model_weight": 0.0,
+        "markov_weight": 1.0,
+        "multiclass_brier": 0.6893272031057168,
+        "log_loss": 1.2569482299448906,
+        "macro_f1": 0.14324324324324325
+      },
+      {
+        "C": 0.5,
+        "class_weight": "none",
+        "model_weight": 0.5,
+        "markov_weight": 0.5,
+        "multiclass_brier": 0.6867210366279782,
+        "log_loss": 1.2464770313086253,
+        "macro_f1": 0.20423563777994158
+      },
+      {
+        "C": 0.5,
+        "class_weight": "none",
+        "model_weight": 1.0,
+        "markov_weight": 0.0,
+        "multiclass_brier": 0.7047313679173404,
+        "log_loss": 1.272976402517226,
+        "macro_f1": 0.19284188034188032
+      },
+      {
+        "C": 0.5,
+        "class_weight": "balanced",
+        "model_weight": 0.0,
+        "markov_weight": 1.0,
+        "multiclass_brier": 0.6893272031057168,
+        "log_loss": 1.2569482299448906,
+        "macro_f1": 0.14324324324324325
+      },
+      {
+        "C": 0.5,
+        "class_weight": "balanced",
+        "model_weight": 0.5,
+        "markov_weight": 0.5,
+        "multiclass_brier": 0.7080662805439961,
+        "log_loss": 1.2887288770830228,
+        "macro_f1": 0.22504237988919212
+      },
+      {
+        "C": 0.5,
+        "class_weight": "balanced",
+        "model_weight": 1.0,
+        "markov_weight": 0.0,
+        "multiclass_brier": 0.7997439766632524,
+        "log_loss": 1.4611985198424953,
+        "macro_f1": 0.2626698570246957
+      },
+      {
+        "C": 1.0,
+        "class_weight": "none",
+        "model_weight": 0.0,
+        "markov_weight": 1.0,
+        "multiclass_brier": 0.6893272031057168,
+        "log_loss": 1.2569482299448906,
+        "macro_f1": 0.14324324324324325
+      },
+      {
+        "C": 1.0,
+        "class_weight": "none",
+        "model_weight": 0.5,
+        "markov_weight": 0.5,
+        "multiclass_brier": 0.6883099434363533,
+        "log_loss": 1.2495161544996425,
+        "macro_f1": 0.2071909571909572
+      },
+      {
+        "C": 1.0,
+        "class_weight": "none",
+        "model_weight": 1.0,
+        "markov_weight": 0.0,
+        "multiclass_brier": 0.7106996033485229,
+        "log_loss": 1.2846515785065264,
+        "macro_f1": 0.18657116592615292
+      },
+      {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "model_weight": 0.0,
+        "markov_weight": 1.0,
+        "multiclass_brier": 0.6893272031057168,
+        "log_loss": 1.2569482299448906,
+        "macro_f1": 0.14324324324324325
+      },
+      {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "model_weight": 0.5,
+        "markov_weight": 0.5,
+        "multiclass_brier": 0.7104866572276446,
+        "log_loss": 1.2930829129776769,
+        "macro_f1": 0.21670274351875157
+      },
+      {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "model_weight": 1.0,
+        "markov_weight": 0.0,
+        "multiclass_brier": 0.8091130342530148,
+        "log_loss": 1.4814253263686983,
+        "macro_f1": 0.2616319102891993
+      }
+    ],
+    "blind_labels_used_for_selection": false
+  },
+  "blind": {
+    "challenger": {
+      "n": 136,
+      "accuracy": 0.39705882352941174,
+      "balanced_accuracy": 0.2470453678993519,
+      "macro_f1": 0.21351674641148327,
+      "multiclass_brier": 0.6842959930632551,
+      "log_loss": 1.2263698895248745,
+      "by_class": {
+        "RISK_OFF_DOMINANT": {
+          "support": 61,
+          "predicted": 91,
+          "precision": 0.42857142857142855,
+          "recall": 0.639344262295082,
+          "f1": 0.5131578947368421
+        },
+        "RISK_ON_DOMINANT": {
+          "support": 26,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REPAIR_TO_RISK_ON": {
+          "support": 6,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MIXED_ROTATION": {
+          "support": 43,
+          "predicted": 45,
+          "precision": 0.3333333333333333,
+          "recall": 0.3488372093023256,
+          "f1": 0.3409090909090909
+        }
+      }
+    },
+    "markov_baseline": {
+      "n": 136,
+      "accuracy": 0.4485294117647059,
+      "balanced_accuracy": 0.25,
+      "macro_f1": 0.15482233502538073,
+      "multiclass_brier": 0.6591803877344701,
+      "log_loss": 1.1763107896806455,
+      "by_class": {
+        "RISK_OFF_DOMINANT": {
+          "support": 61,
+          "predicted": 136,
+          "precision": 0.4485294117647059,
+          "recall": 1.0,
+          "f1": 0.6192893401015229
+        },
+        "RISK_ON_DOMINANT": {
+          "support": 26,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REPAIR_TO_RISK_ON": {
+          "support": 6,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MIXED_ROTATION": {
+          "support": 43,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "development_prior_baseline": {
+      "n": 136,
+      "accuracy": 0.4485294117647059,
+      "balanced_accuracy": 0.25,
+      "macro_f1": 0.15482233502538073,
+      "multiclass_brier": 0.6669647058019602,
+      "log_loss": 1.2083023785877618,
+      "by_class": {
+        "RISK_OFF_DOMINANT": {
+          "support": 61,
+          "predicted": 136,
+          "precision": 0.4485294117647059,
+          "recall": 1.0,
+          "f1": 0.6192893401015229
+        },
+        "RISK_ON_DOMINANT": {
+          "support": 26,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REPAIR_TO_RISK_ON": {
+          "support": 6,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "MIXED_ROTATION": {
+          "support": 43,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "comparisons": {
+      "markov": {
+        "brier_difference": 0.025115605328784985,
+        "brier_difference_block_ci95": [
+          0.0019218224605105686,
+          0.04890454664093773
+        ],
+        "log_loss_difference": 0.05005909984422896,
+        "log_loss_difference_block_ci95": [
+          0.013999187310754812,
+          0.08642599579691658
+        ],
+        "macro_f1_difference": 0.05869441138610254
+      },
+      "development_prior": {
+        "brier_difference": 0.017331287261294848,
+        "brier_difference_block_ci95": [
+          -0.0052871135733792134,
+          0.039974308763741175
+        ],
+        "log_loss_difference": 0.018067510937112674,
+        "log_loss_difference_block_ci95": [
+          -0.018876782367436142,
+          0.05228654497858025
+        ],
+        "macro_f1_difference": 0.05869441138610254
+      }
+    },
+    "minimum_class_support_at_least_10": false,
+    "promotion_gate_passed": false
+  },
+  "latest_research_scenario": {
+    "signal_date": "2026-09-16",
+    "probabilities": {
+      "RISK_OFF_DOMINANT": 0.44633325767382165,
+      "RISK_ON_DOMINANT": 0.15843327522919998,
+      "REPAIR_TO_RISK_ON": 0.057931262717527326,
+      "MIXED_ROTATION": 0.337302204379451
+    },
+    "top_path": "RISK_OFF_DOMINANT",
+    "status": "UNAUTHORIZED_PROBABILITY_DIAGNOSTIC_ONLY"
+  },
+  "policy": {
+    "reliable_two_to_three_day_path_claim_allowed": false,
+    "stock_reranking_allowed": false,
+    "positive_buy_bonus_allowed": false,
+    "allowed_if_failed": "qualitative main/alternative/risk scenarios with explicit invalidation only"
+  },
+  "limitations": [
+    "the outer segment was previously visible to project research and is not a pristine blind set",
+    "state labels are derived market summaries, not executable trade outcomes",
+    "overlapping three-session targets require block uncertainty and split purging"
+  ],
+  "generated_at": "2026-09-17T03:14:44.861810+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v162\\emotion_path_forecast_20260917_v1\\blind_predictions.csv",
+    "sha256": "4bba5b0668bdb1d803dd64462865752bc364da66df6d69ac9ef5f23d2fd44677"
+  }
+}

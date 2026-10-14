@@ -1,0 +1,158 @@
+{
+  "BASE": {
+    "registered_rows": 126,
+    "known_outcome_rows": 126,
+    "predicted_rows": 126,
+    "scored_rows": 126,
+    "unknown_outcome_rows": 0,
+    "unknown_prediction_rows": 0,
+    "label_coverage": 1.0,
+    "scoring_coverage": 1.0,
+    "valid_label_scoring_coverage": 1.0,
+    "correct": 77,
+    "accuracy": 0.6111111111111112,
+    "confusion_matrix": {
+      "IMPROVE": {
+        "IMPROVE": 37,
+        "CONTINUE": 0,
+        "WORSEN": 11
+      },
+      "CONTINUE": {
+        "IMPROVE": 14,
+        "CONTINUE": 0,
+        "WORSEN": 12
+      },
+      "WORSEN": {
+        "IMPROVE": 12,
+        "CONTINUE": 0,
+        "WORSEN": 40
+      }
+    },
+    "by_class": {
+      "IMPROVE": {
+        "known_outcome_support": 48,
+        "scored_support": 48,
+        "scored_calls": 63,
+        "tp": 37,
+        "fp": 26,
+        "fn": 11,
+        "precision": 0.5873015873015873,
+        "scored_recall": 0.7708333333333334,
+        "complete_recall": 0.7708333333333334,
+        "F1": 0.6666666666666666
+      },
+      "CONTINUE": {
+        "known_outcome_support": 26,
+        "scored_support": 26,
+        "scored_calls": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 26,
+        "precision": null,
+        "scored_recall": 0.0,
+        "complete_recall": 0.0,
+        "F1": 0.0
+      },
+      "WORSEN": {
+        "known_outcome_support": 52,
+        "scored_support": 52,
+        "scored_calls": 63,
+        "tp": 40,
+        "fp": 23,
+        "fn": 12,
+        "precision": 0.6349206349206349,
+        "scored_recall": 0.7692307692307693,
+        "complete_recall": 0.7692307692307693,
+        "F1": 0.6956521739130435
+      }
+    },
+    "all_registered_classes_scored": true,
+    "macro_f1": 0.4541062801932367,
+    "balanced_accuracy": 0.5133547008547009
+  },
+  "M1_BALANCED_SUBSAMPLE": {
+    "registered_rows": 126,
+    "known_outcome_rows": 126,
+    "predicted_rows": 126,
+    "scored_rows": 126,
+    "unknown_outcome_rows": 0,
+    "unknown_prediction_rows": 0,
+    "label_coverage": 1.0,
+    "scoring_coverage": 1.0,
+    "valid_label_scoring_coverage": 1.0,
+    "correct": 80,
+    "accuracy": 0.6349206349206349,
+    "confusion_matrix": {
+      "IMPROVE": {
+        "IMPROVE": 35,
+        "CONTINUE": 8,
+        "WORSEN": 5
+      },
+      "CONTINUE": {
+        "IMPROVE": 8,
+        "CONTINUE": 10,
+        "WORSEN": 8
+      },
+      "WORSEN": {
+        "IMPROVE": 8,
+        "CONTINUE": 9,
+        "WORSEN": 35
+      }
+    },
+    "by_class": {
+      "IMPROVE": {
+        "known_outcome_support": 48,
+        "scored_support": 48,
+        "scored_calls": 51,
+        "tp": 35,
+        "fp": 16,
+        "fn": 13,
+        "precision": 0.6862745098039216,
+        "scored_recall": 0.7291666666666666,
+        "complete_recall": 0.7291666666666666,
+        "F1": 0.7070707070707071
+      },
+      "CONTINUE": {
+        "known_outcome_support": 26,
+        "scored_support": 26,
+        "scored_calls": 27,
+        "tp": 10,
+        "fp": 17,
+        "fn": 16,
+        "precision": 0.37037037037037035,
+        "scored_recall": 0.38461538461538464,
+        "complete_recall": 0.38461538461538464,
+        "F1": 0.37735849056603776
+      },
+      "WORSEN": {
+        "known_outcome_support": 52,
+        "scored_support": 52,
+        "scored_calls": 48,
+        "tp": 35,
+        "fp": 13,
+        "fn": 17,
+        "precision": 0.7291666666666666,
+        "scored_recall": 0.6730769230769231,
+        "complete_recall": 0.6730769230769231,
+        "F1": 0.7
+      }
+    },
+    "all_registered_classes_scored": true,
+    "macro_f1": 0.5948097325455816,
+    "balanced_accuracy": 0.5956196581196581
+  },
+  "diagnostic_gate": {
+    "checks": {
+      "accuracy_improves_at_least3pp": false,
+      "label_coverage_at_least90pct": true,
+      "scoring_coverage_not_lower": true,
+      "macro_f1_not_lower": true,
+      "IMPROVE_complete_recall_not_lower": false,
+      "CONTINUE_complete_recall_not_lower": true,
+      "WORSEN_complete_recall_not_lower": false,
+      "CONTINUE_recall_strictly_improves": true
+    },
+    "passed": false
+  },
+  "accuracy_difference": 0.023809523809523725
+}

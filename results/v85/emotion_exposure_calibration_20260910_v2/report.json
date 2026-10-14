@@ -1,0 +1,86 @@
+{
+  "version": "v85-emotion-exposure-calibration-2",
+  "status": "DIAGNOSTIC_ONLY",
+  "generated_at": "2026-09-10T03:15:19.385027+08:00",
+  "calibration": {
+    "split": {
+      "method": "chronological_70_30",
+      "development_n": 387,
+      "validation_n": 166,
+      "development_end_target_date": "2025-12-30",
+      "validation_start_target_date": "2025-12-31"
+    },
+    "loss_function": "2*false_negative_risk_off + 1*false_positive_defensive",
+    "selected_threshold": 0.43,
+    "development": {
+      "n": 387,
+      "threshold": 0.43,
+      "tp": 130,
+      "fp": 150,
+      "fn": 44,
+      "tn": 63,
+      "precision": 0.4642857142857143,
+      "recall": 0.7471264367816092,
+      "false_positive_rate": 0.704225352112676,
+      "weighted_error_2fn_plus_fp_per_observation": 0.6149870801033591,
+      "defensive_rate": 0.7235142118863049
+    },
+    "validation": {
+      "n": 166,
+      "threshold": 0.43,
+      "tp": 50,
+      "fp": 65,
+      "fn": 23,
+      "tn": 28,
+      "precision": 0.43478260869565216,
+      "recall": 0.684931506849315,
+      "false_positive_rate": 0.6989247311827957,
+      "weighted_error_2fn_plus_fp_per_observation": 0.6686746987951807,
+      "defensive_rate": 0.6927710843373494
+    },
+    "always_defensive_validation": {
+      "n": 166,
+      "threshold": 0.5,
+      "tp": 73,
+      "fp": 93,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.4397590361445783,
+      "recall": 1.0,
+      "false_positive_rate": 1.0,
+      "weighted_error_2fn_plus_fp_per_observation": 0.5602409638554217,
+      "defensive_rate": 1.0
+    },
+    "validation_weighted_error_advantage_vs_always_defensive": -0.10843373493975905,
+    "gate_accepted": false,
+    "gate_status": "REJECTED_NO_VALIDATION_ADVANTAGE"
+  },
+  "latest_decision": {
+    "signal_date": "2026-09-09",
+    "risk_off_probability": 0.5540540540540541,
+    "defensive_threshold": 0.43,
+    "gate_status": "REJECTED_NO_VALIDATION_ADVANTAGE",
+    "exposure_regime": "DIAGNOSTIC_LEAN_ONLY",
+    "diagnostic_lean": "DEFENSIVE",
+    "high_board_relay": "UNDECIDED_BY_MODEL",
+    "middle_board_relay": "UNDECIDED_BY_MODEL",
+    "first_board": "UNDECIDED_BY_MODEL",
+    "default_position": 0,
+    "direct_buy_authorized": false
+  },
+  "limitations": [
+    "the threshold is selected once on development data and evaluated once on later validation data",
+    "the gate predicts aggregate market risk, not an individual stock return",
+    "no position is authorised without a separately frozen, executable stock plan"
+  ],
+  "sources": {
+    "predictions": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v82\\emotion_multiclass_audit_20260910_v3\\walk_forward_predictions.csv",
+      "sha256": "4e1226d3b532f65bf3bedc5dc9e129ef74beb7cf4657ddeef69fbc3ed35f649f"
+    },
+    "forecast_report": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v82\\emotion_multiclass_audit_20260910_v3\\report.json",
+      "sha256": "0d9bc5e37c59c0badb16557874af96a9bdcad100d543b09fd4575c52bae7d747"
+    }
+  }
+}

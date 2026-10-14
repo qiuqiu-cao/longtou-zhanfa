@@ -1,0 +1,47 @@
+{
+  "version": "v4-historical-universe-1",
+  "status": "PARTIAL_RECOVERY",
+  "start": "2023-11-28",
+  "end": "2026-08-31",
+  "retrieved_at_utc": "2026-09-01T00:20:13.211882+00:00",
+  "official_recent_delisted_codes": 84,
+  "missing_from_current_universe_codes": 84,
+  "bars_recovered_codes": 84,
+  "bars_recovery_coverage": 1.0,
+  "point_in_time_status_verified_codes": 42,
+  "point_in_time_status_coverage": 0.5,
+  "possible_2plus_board_codes": 38,
+  "delisted_omission_bar_coverage_complete": true,
+  "candidate_universe_complete": false,
+  "point_in_time_status_complete": false,
+  "survivorship_bias_resolved": false,
+  "universe_limit": "recovered delisted omissions do not prove the original current-stock universe and all point-in-time statuses are complete",
+  "sse_status_limit": "dated SSE short-name/ST history unavailable",
+  "sources": {
+    "sse_delist": "https://www.sse.com.cn/assortment/stock/list/delisting/",
+    "szse_delist": "https://www.szse.cn/market/stock/suspend/index.html",
+    "ohlcv": "https://quote.eastmoney.com/"
+  },
+  "files": {
+    "official_delists": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\historical_universe\\official_delisted_mainboard.csv",
+      "sha256": "5fbf4bbf498bd87c05cb6ef49bd70373533b99858fe9e3ea8a59910572ea3057"
+    },
+    "window_universe": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\historical_universe\\window_universe_20231128_20260831.csv",
+      "sha256": "f3b3e4b354beef57fd9142d56bf48f9b882991a7c140438acf60dfdb712b2730"
+    },
+    "combined_bars": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\historical_universe\\delisted_daily_bars.csv",
+      "sha256": "0ef15cfc47673e26f99e8aca0b4a90dbf9e39344c200c094adb245ca8e1643e2"
+    },
+    "audit": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v4\\historical_universe\\delisted_bar_recovery_audit.csv",
+      "sha256": "28993bde8c390596d55e8df4807af754167334d4017f84c978fe685c7582c953"
+    },
+    "progress": {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v4\\historical_universe\\collection_progress.csv",
+      "sha256": "a69879f507fca56dd607a8012b1d9be815154a679208dd4dbe278be1c83eb240"
+    }
+  }
+}

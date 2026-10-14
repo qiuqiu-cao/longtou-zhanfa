@@ -1,0 +1,185 @@
+{
+  "version": "v155-emotion-damage-vector-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target": "next-session measurable short-term damage vector",
+  "split": {
+    "method": "chronological_70_30_no_outer_tuning",
+    "development_n": 474,
+    "evaluation_n": 204,
+    "development_end": "2025-11-12",
+    "evaluation_start": "2025-11-13",
+    "evaluation_reused_by_prior_project_research": true
+  },
+  "components": {
+    "failed_rate_damage": {
+      "outcome": "failed_rate",
+      "damage_direction": "HIGH",
+      "development_quantile": 0.7,
+      "frozen_development_threshold": 0.3940516273849607,
+      "development_n": 474,
+      "evaluation": {
+        "n": 204,
+        "positive_rate": 0.1568627450980392,
+        "auc": 0.5432412790697674,
+        "brier": 0.15439407144855583,
+        "log_loss": 0.49142268623232194,
+        "evaluation_prevalence_baseline_brier": 0.13225682429834676
+      },
+      "development_prior_baseline": {
+        "brier": 0.15262448514095595,
+        "log_loss": 0.4892971231809766,
+        "probability": 0.29957805907172996
+      },
+      "promotion_gate_passed": false
+    },
+    "previous_limit_tail_damage": {
+      "outcome": "previous_limit_tail_loss",
+      "damage_direction": "LOW",
+      "development_quantile": 0.3,
+      "frozen_development_threshold": -0.06530341200160127,
+      "development_n": 474,
+      "evaluation": {
+        "n": 204,
+        "positive_rate": 0.3137254901960784,
+        "auc": 0.6618303571428571,
+        "brier": 0.21539147286228355,
+        "log_loss": 0.6505143908937693,
+        "evaluation_prevalence_baseline_brier": 0.21530180699730878
+      },
+      "development_prior_baseline": {
+        "brier": 0.2155019568047269,
+        "log_loss": 0.6225218935833652,
+        "probability": 0.29957805907172996
+      },
+      "promotion_gate_passed": false
+    },
+    "down_limit_spread": {
+      "outcome": "down_limit_count",
+      "damage_direction": "HIGH",
+      "development_quantile": 0.7,
+      "frozen_development_threshold": 9.0,
+      "development_n": 474,
+      "evaluation": {
+        "n": 203,
+        "positive_rate": 0.47783251231527096,
+        "auc": 0.6781754522466448,
+        "brier": 0.258507128332312,
+        "log_loss": 0.7258266692883654,
+        "evaluation_prevalence_baseline_brier": 0.24950860248974738
+      },
+      "development_prior_baseline": {
+        "brier": 0.26978336489273613,
+        "log_loss": 0.7353136895232562,
+        "probability": 0.33544303797468356
+      },
+      "promotion_gate_passed": true
+    },
+    "premium_loss": {
+      "outcome": "yesterday_premium",
+      "damage_direction": "LOW",
+      "development_quantile": 0.3,
+      "frozen_development_threshold": -0.0018806327059512204,
+      "development_n": 474,
+      "evaluation": {
+        "n": 204,
+        "positive_rate": 0.30392156862745096,
+        "auc": 0.5323716492503408,
+        "brier": 0.21410144934932618,
+        "log_loss": 0.6214694243716198,
+        "evaluation_prevalence_baseline_brier": 0.2115532487504806
+      },
+      "development_prior_baseline": {
+        "brier": 0.2115721148257412,
+        "log_loss": 0.6141953454332159,
+        "probability": 0.29957805907172996
+      },
+      "promotion_gate_passed": false
+    },
+    "middle_promotion_damage": {
+      "outcome": "promotion_mid",
+      "damage_direction": "LOW",
+      "development_quantile": 0.3,
+      "frozen_development_threshold": 0.3125,
+      "development_n": 473,
+      "evaluation": {
+        "n": 204,
+        "positive_rate": 0.45098039215686275,
+        "auc": 0.6813858695652174,
+        "brier": 0.23066032787436225,
+        "log_loss": 0.6530413598379513,
+        "evaluation_prevalence_baseline_brier": 0.24759707804690506
+      },
+      "development_prior_baseline": {
+        "brier": 0.2696953308094465,
+        "log_loss": 0.7371341959258038,
+        "probability": 0.3023255813953488
+      },
+      "promotion_gate_passed": true
+    }
+  },
+  "validated_component_count": 2,
+  "aggregate_gate": {
+    "required_validated_components": 3,
+    "passed": false,
+    "stock_reranking_allowed": false,
+    "allowed_effect": "corroborate or weaken the V144 aggregate market scenario"
+  },
+  "latest_research_prediction": {
+    "signal_date": "2026-09-16",
+    "components": {
+      "failed_rate_damage": {
+        "probability": 0.22565415250250478,
+        "validated_for_aggregate": false,
+        "outcome": "failed_rate",
+        "damage_direction": "HIGH",
+        "current_historical_threshold": 0.3799746835443038
+      },
+      "previous_limit_tail_damage": {
+        "probability": 0.2536949306304713,
+        "validated_for_aggregate": false,
+        "outcome": "previous_limit_tail_loss",
+        "damage_direction": "LOW",
+        "current_historical_threshold": -0.06536297928043952
+      },
+      "down_limit_spread": {
+        "probability": 0.22305556225693005,
+        "validated_for_aggregate": true,
+        "outcome": "down_limit_count",
+        "damage_direction": "HIGH",
+        "current_historical_threshold": 11.0
+      },
+      "premium_loss": {
+        "probability": 0.3945636583132151,
+        "validated_for_aggregate": false,
+        "outcome": "yesterday_premium",
+        "damage_direction": "LOW",
+        "current_historical_threshold": -0.0019377852727548814
+      },
+      "middle_promotion_damage": {
+        "probability": 0.2899604778308941,
+        "validated_for_aggregate": true,
+        "outcome": "promotion_mid",
+        "damage_direction": "LOW",
+        "current_historical_threshold": 0.2857142857142857
+      }
+    },
+    "validated_damage_probability": null,
+    "damage_band": "UNAVAILABLE",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "limitations": [
+    "component thresholds describe historical tail conditions rather than fixed market laws",
+    "outer dates were already inspected by earlier project research",
+    "aggregate market damage cannot by itself rank an individual stock",
+    "specific-theme and candidate execution evidence remain separate requirements"
+  ],
+  "generated_at": "2026-09-17T02:41:54.313360+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v155\\emotion_damage_vector_20260917_v1\\outer_predictions.csv",
+    "sha256": "3b479b13718c6d799d642af71a33bf3213bfaea8d75eeab455ab719d17773a70"
+  }
+}

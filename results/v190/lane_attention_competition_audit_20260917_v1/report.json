@@ -1,0 +1,294 @@
+{
+  "version": "v190-lane-attention-competition-audit-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "target_contract": {
+    "exposure_uses_same_day_pool_only": true,
+    "next_session_fields_are_labels_only": true,
+    "no_touch_rows_retained_as_negative": true,
+    "one_price_rows_retained_as_negative": true,
+    "actual_fills": 0,
+    "complete_trades": 0
+  },
+  "scope": {
+    "rows": 25968,
+    "both_lane_sessions": 503,
+    "first_board_rows": 19755,
+    "relay_rows": 6213
+  },
+  "split": {
+    "method": "chronological_70_30_by_signal_date",
+    "split_date": "2025-05-19",
+    "development_sessions": 352,
+    "validation_sessions": 151,
+    "validation_previously_inspected": true
+  },
+  "frozen_thresholds_from_development": {
+    "low_relay_share_max": 0.1761029411764706,
+    "high_relay_share_at_least": 0.3,
+    "low_first_board_supply_max": 22.0,
+    "high_first_board_supply_at_least": 49.0
+  },
+  "summaries": {
+    "development": {
+      "FIRST_BOARD_UNDER_RELAY_PRESSURE": {
+        "LOW": {
+          "rows": 4826,
+          "sessions": 88,
+          "promotion_known_rows": 4822,
+          "promotion_rate": 0.18954790543343011,
+          "b2_target_known_rows": 4821,
+          "full_denominator_buyable_b2_positive_rate": 0.08048122796100395,
+          "b3_target_known_rows": 4821,
+          "full_denominator_buyable_b3_positive_rate": 0.0777846919726198,
+          "touchable_rate": 0.28843762950683793,
+          "touchable_b1_big_loss_known_rows": 1391,
+          "conditional_b1_big_loss_rate": 0.43565780014378147
+        },
+        "HIGH": {
+          "rows": 2934,
+          "sessions": 89,
+          "promotion_known_rows": 2930,
+          "promotion_rate": 0.22184300341296928,
+          "b2_target_known_rows": 2927,
+          "full_denominator_buyable_b2_positive_rate": 0.08575333105568841,
+          "b3_target_known_rows": 2928,
+          "full_denominator_buyable_b3_positive_rate": 0.08401639344262295,
+          "touchable_rate": 0.29822767552828905,
+          "touchable_b1_big_loss_known_rows": 873,
+          "conditional_b1_big_loss_rate": 0.413516609392898
+        }
+      },
+      "RELAY_UNDER_FIRST_BOARD_SUPPLY": {
+        "LOW": {
+          "rows": 583,
+          "sessions": 93,
+          "promotion_known_rows": 581,
+          "promotion_rate": 0.41308089500860584,
+          "b2_target_known_rows": 581,
+          "full_denominator_buyable_b2_positive_rate": 0.1342512908777969,
+          "b3_target_known_rows": 581,
+          "full_denominator_buyable_b3_positive_rate": 0.13769363166953527,
+          "touchable_rate": 0.44768439108061747,
+          "touchable_b1_big_loss_known_rows": 261,
+          "conditional_b1_big_loss_rate": 0.4559386973180077
+        },
+        "HIGH": {
+          "rows": 2142,
+          "sessions": 93,
+          "promotion_known_rows": 2142,
+          "promotion_rate": 0.40709617180205415,
+          "b2_target_known_rows": 2142,
+          "full_denominator_buyable_b2_positive_rate": 0.12791783380018673,
+          "b3_target_known_rows": 2142,
+          "full_denominator_buyable_b3_positive_rate": 0.12558356676003735,
+          "touchable_rate": 0.4523809523809524,
+          "touchable_b1_big_loss_known_rows": 969,
+          "conditional_b1_big_loss_rate": 0.4551083591331269
+        }
+      }
+    },
+    "validation": {
+      "FIRST_BOARD_UNDER_RELAY_PRESSURE": {
+        "LOW": {
+          "rows": 1665,
+          "sessions": 34,
+          "promotion_known_rows": 1662,
+          "promotion_rate": 0.18892900120336945,
+          "b2_target_known_rows": 1660,
+          "full_denominator_buyable_b2_positive_rate": 0.0783132530120482,
+          "b3_target_known_rows": 1659,
+          "full_denominator_buyable_b3_positive_rate": 0.08016877637130802,
+          "touchable_rate": 0.22522522522522523,
+          "touchable_b1_big_loss_known_rows": 374,
+          "conditional_b1_big_loss_rate": 0.28342245989304815
+        },
+        "HIGH": {
+          "rows": 1031,
+          "sessions": 36,
+          "promotion_known_rows": 1024,
+          "promotion_rate": 0.2001953125,
+          "b2_target_known_rows": 1019,
+          "full_denominator_buyable_b2_positive_rate": 0.0873405299313052,
+          "b3_target_known_rows": 1019,
+          "full_denominator_buyable_b3_positive_rate": 0.08341511285574092,
+          "touchable_rate": 0.26285160038797284,
+          "touchable_b1_big_loss_known_rows": 271,
+          "conditional_b1_big_loss_rate": 0.35424354243542433
+        }
+      },
+      "RELAY_UNDER_FIRST_BOARD_SUPPLY": {
+        "LOW": {
+          "rows": 136,
+          "sessions": 14,
+          "promotion_known_rows": 136,
+          "promotion_rate": 0.4338235294117647,
+          "b2_target_known_rows": 136,
+          "full_denominator_buyable_b2_positive_rate": 0.22794117647058823,
+          "b3_target_known_rows": 136,
+          "full_denominator_buyable_b3_positive_rate": 0.22794117647058823,
+          "touchable_rate": 0.5,
+          "touchable_b1_big_loss_known_rows": 68,
+          "conditional_b1_big_loss_rate": 0.3235294117647059
+        },
+        "HIGH": {
+          "rows": 333,
+          "sessions": 27,
+          "promotion_known_rows": 315,
+          "promotion_rate": 0.3746031746031746,
+          "b2_target_known_rows": 307,
+          "full_denominator_buyable_b2_positive_rate": 0.16286644951140064,
+          "b3_target_known_rows": 302,
+          "full_denominator_buyable_b3_positive_rate": 0.16887417218543047,
+          "touchable_rate": 0.3993993993993994,
+          "touchable_b1_big_loss_known_rows": 125,
+          "conditional_b1_big_loss_rate": 0.368
+        }
+      }
+    }
+  },
+  "date_clustered_high_minus_low": {
+    "development": {
+      "FIRST_BOARD_UNDER_RELAY_PRESSURE": {
+        "comparison": "HIGH_PRESSURE_MINUS_LOW_PRESSURE",
+        "date_clustered": true,
+        "promotion_rate_difference": 0.03229509797953917,
+        "promotion_rate_ci95": [
+          -0.01758967153751338,
+          0.08529537420257693
+        ],
+        "buyable_b2_positive_rate_difference": 0.005272103094684469,
+        "buyable_b2_positive_rate_ci95": [
+          -0.024345510003409707,
+          0.03255930879508226
+        ],
+        "buyable_b3_positive_rate_difference": 0.006231701470003154,
+        "buyable_b3_positive_rate_ci95": [
+          -0.025841084143264165,
+          0.03592011497491212
+        ],
+        "touchable_rate_difference": 0.009790046021451115,
+        "touchable_rate_ci95": [
+          -0.13042955722156743,
+          0.11425373833817148
+        ],
+        "conditional_b1_big_loss_rate_difference": -0.022141190750883444,
+        "conditional_b1_big_loss_rate_ci95": [
+          -0.21033204905596434,
+          0.2281727196283887
+        ]
+      },
+      "RELAY_UNDER_FIRST_BOARD_SUPPLY": {
+        "comparison": "HIGH_PRESSURE_MINUS_LOW_PRESSURE",
+        "date_clustered": true,
+        "promotion_rate_difference": -0.00598472320655169,
+        "promotion_rate_ci95": [
+          -0.09970174775284368,
+          0.08951880007785126
+        ],
+        "buyable_b2_positive_rate_difference": -0.006333457077610183,
+        "buyable_b2_positive_rate_ci95": [
+          -0.055016669646101156,
+          0.044276577688316124
+        ],
+        "buyable_b3_positive_rate_difference": -0.012110064909497925,
+        "buyable_b3_positive_rate_ci95": [
+          -0.057495913140521764,
+          0.0353359247876825
+        ],
+        "touchable_rate_difference": 0.004696561300334912,
+        "touchable_rate_ci95": [
+          -0.07827635383918907,
+          0.08707219367535554
+        ],
+        "conditional_b1_big_loss_rate_difference": -0.0008303381848807634,
+        "conditional_b1_big_loss_rate_ci95": [
+          -0.10315482854270284,
+          0.09903636873807024
+        ]
+      }
+    },
+    "validation": {
+      "FIRST_BOARD_UNDER_RELAY_PRESSURE": {
+        "comparison": "HIGH_PRESSURE_MINUS_LOW_PRESSURE",
+        "date_clustered": true,
+        "promotion_rate_difference": 0.011266311296630555,
+        "promotion_rate_ci95": [
+          -0.036605089983592395,
+          0.05419803279489408
+        ],
+        "buyable_b2_positive_rate_difference": 0.009027276919257005,
+        "buyable_b2_positive_rate_ci95": [
+          -0.01660756046468048,
+          0.036331497231857614
+        ],
+        "buyable_b3_positive_rate_difference": 0.003246336484432899,
+        "buyable_b3_positive_rate_ci95": [
+          -0.018071105834756077,
+          0.026944688144810984
+        ],
+        "touchable_rate_difference": 0.03762637516274761,
+        "touchable_rate_ci95": [
+          -0.0015707558374087123,
+          0.0764502799391125
+        ],
+        "conditional_b1_big_loss_rate_difference": 0.07082108254237618,
+        "conditional_b1_big_loss_rate_ci95": [
+          -0.015228115342377165,
+          0.1543827759072321
+        ]
+      },
+      "RELAY_UNDER_FIRST_BOARD_SUPPLY": {
+        "comparison": "HIGH_PRESSURE_MINUS_LOW_PRESSURE",
+        "date_clustered": true,
+        "promotion_rate_difference": -0.059220354808590114,
+        "promotion_rate_ci95": [
+          -0.1637767278903001,
+          0.055672533760240776
+        ],
+        "buyable_b2_positive_rate_difference": -0.06507472695918759,
+        "buyable_b2_positive_rate_ci95": [
+          -0.15631940140972767,
+          0.011746449402030566
+        ],
+        "buyable_b3_positive_rate_difference": -0.059067004285157765,
+        "buyable_b3_positive_rate_ci95": [
+          -0.15488403904707873,
+          0.031763583873953775
+        ],
+        "touchable_rate_difference": -0.10060060060060061,
+        "touchable_rate_ci95": [
+          -0.20315905146612856,
+          -0.0036128397590101118
+        ],
+        "conditional_b1_big_loss_rate_difference": 0.044470588235294095,
+        "conditional_b1_big_loss_rate_ci95": [
+          -0.09470027719453274,
+          0.18115491071428563
+        ]
+      }
+    }
+  },
+  "stable_first_board_b2_suppression_by_relay_pressure": false,
+  "stable_relay_b2_suppression_by_first_board_supply": false,
+  "governance": {
+    "common_first_relay_winner_score_allowed": false,
+    "market_lane_pressure_may_name_a_stock_winner": false,
+    "market_lane_pressure_may_replace_specific_theme_evidence": false,
+    "direct_stock_reranking_allowed": false,
+    "entry_authorized": false
+  },
+  "interpretation": "First boards and relays occupy different attention lanes. Same-day lane supply can describe crowding pressure, but only a stable development-and-validation effect could justify retaining it as a market context factor. It cannot identify which specific theme or stock won the race.",
+  "limitations": [
+    "no historical point-in-time specific-theme identities",
+    "daily proxy without auction queue or verified fills",
+    "current-universe survivorship bias and incomplete historical eligibility",
+    "validation dates were inspected and are not sealed blind"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\first_board_inventory_20260905\\candidate_observations.csv": "57088e5c6f54f7b192288d44e7ec7727784e9dc4f17741606736c477924e5d39",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\full_pool_outcomes_b123_touchfixed_cutoff_20251226_v2\\outcomes_LABEL_ONLY.csv": "c547338048ea89d0325cf5bc0a93adc330391a9fb679689702ab48a0e72b551e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v152\\group_rank_walkforward_touchfixed_20260917_v4\\report.json": "1365c8f7099bfd0c3f4bf5bd8a057c171b7fdfa38794538f7400198e72f9fb7c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\lane_attention_competition_audit_v190.py": "5cc5ca6e284d4193e6161c6becfee5e58d83790c5d0710141df2976b47812ab8"
+  },
+  "observations_sha256": "1456620f25bc5618affe8642117f66d0bb694188b37642f1da1792f104da4568"
+}

@@ -1,0 +1,74 @@
+{
+  "version": "relay-nonlinear-fixed-1",
+  "formed_at": "2026-10-09T05:03:05.089263+00:00",
+  "batch_started_at": "2026-10-09T04:55:26+00:00",
+  "budget_minutes": 30,
+  "hypothesis": "Fixed linear price-volume effects and one-word feature changes under-recognize turnover-board combinations; one fixed shallow forest can capture conditional interactions without class reweighting, score boost or threshold search. The missing theme ladder is a separate existing T1 limitation, not solved by this challenge.",
+  "arms": [
+    "BASE",
+    "R2"
+  ],
+  "base_root": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z",
+  "cached_receipt": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_balance_20261009T044001Z\\implementation_BEFORE_FITS.json",
+  "sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\report.json": "e84637692618c7e0f9a4da5035737f70a648a046b1c52547e0f40668435cecf5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\manifest.json": "d857b632d895a89c7b24cf20e79fb1e3776f5e0bd96c718a918b2a3e4e73d19d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\model.joblib": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\relay_balance_20261009T044001Z\\implementation_BEFORE_FITS.json": "518c5cfd18d2eb8df11f4868c24f450de2c28c5aa3a8cf2eb3a85ec3dc2c7583",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_20261008_forecast_20261009_20261008T091618Z\\model\\base_predictions.json": "028a5ab120f9c4b7a314e68ab8478ee7bf8e9854447e263288ff560ff69a30d3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-10-08_fcf1205edfbc2269.json": "2987f19f09f8e33783b88d2c856a00ba965f9e063631ca57d69d0b5edb06334b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v271\\expectation_registry\\2026-09-30_2c74dc406eef7dcf.json": "bfbaeb295637451e396850ee583fcafa3eb0ab6a99fb1b154e4c46a8c23aa40c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\settlement_ledger.jsonl": "26cb8dc3419ec151563528045068a4d987fc87b5535544b5ad78cc92676e1c18"
+  },
+  "fields": "original exact ordered 29 fields",
+  "folds": [
+    {
+      "id": "2025H2",
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "2026JanAug",
+      "start": "2026-01-01",
+      "end": "2026-08-31"
+    },
+    {
+      "id": "2026Sep",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "parameters": {
+    "n_estimators": 160,
+    "max_depth": 5,
+    "min_samples_leaf": 15,
+    "max_features": 0.75,
+    "random_state": 271,
+    "n_jobs": 2,
+    "class_weight": null,
+    "criterion": "gini",
+    "bootstrap": true,
+    "window": 252,
+    "threshold": 0.5
+  },
+  "preprocessing": "same training-only median/add_indicator/keep_empty_features and scaler as BASE",
+  "sample_weights": "same inverse complete labeled training candidate count per signal date; no class weighting",
+  "primary": "full same-candidate Accuracy, all three fixed segments",
+  "historical_screen": {
+    "minimum_accuracy_gain_each_segment": 0.03,
+    "not_decrease": [
+      "complete_positive_Recall",
+      "Precision",
+      "F1",
+      "coverage",
+      "true_nonword_rank_first_when_known"
+    ],
+    "identity_subgroup": "signal_one_word feature 0/1 is an original low-turnover proxy; actual OHLC identity only where archived; do not conflate"
+  },
+  "future_acceptance": "Historical previously inspected data are screening only; no production switch. Any surviving challenger requires an independent fixed 120-official-day protocol and original stock acceptance guards, not a retroactive Oct8 forecast.",
+  "targeted_diagnosis": "Exact source-bound BASE logit reconstruction and prior-signal differences for ALL 10 candidates; spotlight 002058/600241; current target outcome pending until official close.",
+  "stopping": "One R2 fit per original fold, no BASE refit, no parameter retries; failure retained unknown. Stop after fixed comparison or at 30 minutes.",
+  "production_change": false,
+  "calibrated_probability_Brier": null
+}

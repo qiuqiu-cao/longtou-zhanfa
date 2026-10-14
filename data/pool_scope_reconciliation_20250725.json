@@ -1,0 +1,53 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "signal_date": "2025-07-25",
+  "retrieved_date": "2026-09-04",
+  "supersedes_question_in": "data/historical_context_20250725.json:local_comparison.difference_cause",
+  "conclusion": "LOCAL_MAINBOARD_SET_MATCHES_REPORTED_ROSTER_AFTER_SCOPE_FILTER",
+  "complete_historical_market_certified": false,
+  "original_source_version_verified": false,
+  "source_roster_status": "community_report_cross_checked_in_part_with_financial_news",
+  "sources": [
+    {
+      "url": "https://wudaolu.com/t/topic/9432",
+      "kind": "community_recap",
+      "used_fields": "nine consecutive-board names and heights only",
+      "not_used": "trading instructions, industry-as-theme, seal amounts, seal times, funds intent",
+      "reported_total_limit_count": 46,
+      "total_limit_count_differs_from_cls": true
+    },
+    {
+      "url": "https://www.jiemian.com/article/13086377.html",
+      "kind": "financial_news",
+      "used_fields": "横河精密 among two-board stocks",
+      "reported_total_limit_count": 49,
+      "scope_includes_ST": true
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202507253467646483.html",
+      "kind": "exchange_data_report_secondary",
+      "used_fields": "300539 close 23.71, daily return 19.99%, two-session interval July24-July25",
+      "not_independent_exchange_raw_feed": true
+    }
+  ],
+  "reported_roster": [
+    {"code": "001226", "name": "拓山重工", "boards": 3},
+    {"code": "002826", "name": "易明医药", "boards": 2},
+    {"code": "003023", "name": "彩虹集团", "boards": 3},
+    {"code": "300539", "name": "横河精密", "boards": 2},
+    {"code": "600117", "name": "西宁特钢", "boards": 5},
+    {"code": "600288", "name": "大恒科技", "boards": 2},
+    {"code": "600326", "name": "西藏天路", "boards": 5},
+    {"code": "600749", "name": "西藏旅游", "boards": 5},
+    {"code": "603176", "name": "汇通集团", "boards": 2}
+  ],
+  "excluded_by_user_scope": [{"code": "300539", "reason": "CHINEXT_NOT_MAINBOARD"}],
+  "mainboard_reported_count": 8,
+  "local_count": 8,
+  "missing_from_local_relative_to_this_roster": [],
+  "extra_in_local_relative_to_this_roster": [],
+  "board_height_mismatches": [],
+  "model_training_changed": false,
+  "candidate_universe_expanded": false,
+  "live_feature_eligible": false
+}

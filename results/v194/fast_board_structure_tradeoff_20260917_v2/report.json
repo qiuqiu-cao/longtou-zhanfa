@@ -1,0 +1,212 @@
+{
+  "version": "v194-fast-board-structure-tradeoff-1",
+  "status": "DIAGNOSTIC_ONLY",
+  "scope": "first-board candidates on frozen prequential evaluation dates",
+  "candidate_rows": 518,
+  "identity_sessions": 12,
+  "execution_observed_rows": 516,
+  "execution_observed_sessions": 12,
+  "complete_execution_sessions": 10,
+  "missing_execution_evidence_rows": 2,
+  "groups": {
+    "THIN_LIQUIDITY_OR_ONE_PRICE_PROXY": {
+      "candidate_n": 28,
+      "session_n": 9,
+      "promotion_rate": 0.25,
+      "execution_observed_n": 27,
+      "missing_execution_evidence_n": 1,
+      "filled_n": 21,
+      "observable_fill_rate": 0.7777777777777778,
+      "unverifiable_limit_queue_rate": 0.2222222222222222,
+      "b2_known_n": 18,
+      "b2_mean_net_return": -0.008842724471663007,
+      "b2_positive_rate": 0.4444444444444444,
+      "b1_big_loss_known_n": 20,
+      "b1_big_loss_rate": 0.15
+    },
+    "TURNOVER_VALIDATED_FAST_PROXY": {
+      "candidate_n": 21,
+      "session_n": 10,
+      "promotion_rate": 0.19047619047619047,
+      "execution_observed_n": 21,
+      "missing_execution_evidence_n": 0,
+      "filled_n": 17,
+      "observable_fill_rate": 0.8095238095238095,
+      "unverifiable_limit_queue_rate": 0.19047619047619047,
+      "b2_known_n": 15,
+      "b2_mean_net_return": -0.036925067382213794,
+      "b2_positive_rate": 0.4,
+      "b1_big_loss_known_n": 16,
+      "b1_big_loss_rate": 0.25
+    },
+    "OTHER_FAST": {
+      "candidate_n": 31,
+      "session_n": 11,
+      "promotion_rate": 0.3225806451612903,
+      "execution_observed_n": 31,
+      "missing_execution_evidence_n": 0,
+      "filled_n": 26,
+      "observable_fill_rate": 0.8387096774193549,
+      "unverifiable_limit_queue_rate": 0.16129032258064516,
+      "b2_known_n": 25,
+      "b2_mean_net_return": -0.011812665868666227,
+      "b2_positive_rate": 0.48,
+      "b1_big_loss_known_n": 26,
+      "b1_big_loss_rate": 0.19230769230769232
+    },
+    "NOT_FAST": {
+      "candidate_n": 438,
+      "session_n": 12,
+      "promotion_rate": 0.16666666666666666,
+      "execution_observed_n": 437,
+      "missing_execution_evidence_n": 1,
+      "filled_n": 417,
+      "observable_fill_rate": 0.954233409610984,
+      "unverifiable_limit_queue_rate": 0.04576659038901602,
+      "b2_known_n": 368,
+      "b2_mean_net_return": -0.014450084606808702,
+      "b2_positive_rate": 0.3695652173913043,
+      "b1_big_loss_known_n": 397,
+      "b1_big_loss_rate": 0.11083123425692695
+    }
+  },
+  "comparisons": {
+    "thin_minus_turnover_validated_fast": {
+      "left": "THIN_LIQUIDITY_OR_ONE_PRICE_PROXY",
+      "right": "TURNOVER_VALIDATED_FAST_PROXY",
+      "difference": {
+        "promotion_rate": 0.059523809523809534,
+        "observable_fill_rate": -0.031746031746031744,
+        "unverifiable_limit_queue_rate": 0.031746031746031744,
+        "b2_mean_net_return": 0.028082342910550787,
+        "b2_positive_rate": 0.0444444444444444,
+        "b1_big_loss_rate": -0.1
+      },
+      "date_cluster_bootstrap95": {
+        "promotion_rate": [
+          -0.1804853041695147,
+          0.2880646135265699
+        ],
+        "observable_fill_rate": [
+          -0.2574201860231272,
+          0.20186628430049475
+        ],
+        "unverifiable_limit_queue_rate": [
+          -0.2018662843004948,
+          0.25742018602312716
+        ],
+        "b2_mean_net_return": [
+          -0.008652774031813101,
+          0.0692170468918661
+        ],
+        "b2_positive_rate": [
+          -0.272754329004329,
+          0.3333333333333333
+        ],
+        "b1_big_loss_rate": [
+          -0.31258223684210523,
+          0.12834224598930483
+        ]
+      }
+    },
+    "thin_minus_not_fast": {
+      "left": "THIN_LIQUIDITY_OR_ONE_PRICE_PROXY",
+      "right": "NOT_FAST",
+      "difference": {
+        "promotion_rate": 0.08333333333333334,
+        "observable_fill_rate": -0.17645563183320623,
+        "unverifiable_limit_queue_rate": 0.1764556318332062,
+        "b2_mean_net_return": 0.0056073601351456955,
+        "b2_positive_rate": 0.0748792270531401,
+        "b1_big_loss_rate": 0.03916876574307304
+      },
+      "date_cluster_bootstrap95": {
+        "promotion_rate": [
+          -0.07668820940086499,
+          0.23501871980676317
+        ],
+        "observable_fill_rate": [
+          -0.3466210491082552,
+          -0.01126701345431818
+        ],
+        "unverifiable_limit_queue_rate": [
+          0.011267013454317907,
+          0.3466210491082549
+        ],
+        "b2_mean_net_return": [
+          -0.04244377747214011,
+          0.047403128647376246
+        ],
+        "b2_positive_rate": [
+          -0.2185860664957034,
+          0.3441844290744888
+        ],
+        "b1_big_loss_rate": [
+          -0.12760789509911893,
+          0.33084608307610947
+        ]
+      }
+    },
+    "validated_fast_minus_not_fast": {
+      "left": "TURNOVER_VALIDATED_FAST_PROXY",
+      "right": "NOT_FAST",
+      "difference": {
+        "promotion_rate": 0.023809523809523808,
+        "observable_fill_rate": -0.14470960008717448,
+        "unverifiable_limit_queue_rate": 0.14470960008717446,
+        "b2_mean_net_return": -0.022474982775405092,
+        "b2_positive_rate": 0.0304347826086957,
+        "b1_big_loss_rate": 0.13916876574307305
+      },
+      "date_cluster_bootstrap95": {
+        "promotion_rate": [
+          -0.11763197308221003,
+          0.17989120224557661
+        ],
+        "observable_fill_rate": [
+          -0.330258651459278,
+          0.0019508690875284797
+        ],
+        "unverifiable_limit_queue_rate": [
+          -0.001950869087528524,
+          0.3302586514592779
+        ],
+        "b2_mean_net_return": [
+          -0.0546492694695777,
+          -0.00591421966678939
+        ],
+        "b2_positive_rate": [
+          -0.21140005827505828,
+          0.2103118976899226
+        ],
+        "b1_big_loss_rate": [
+          -0.030420008912655967,
+          0.34985833606288846
+        ]
+      }
+    }
+  },
+  "governance": {
+    "control_intent_inference_allowed": false,
+    "thin_proxy_is_actual_control_or_manipulation": false,
+    "missing_bar_is_unfilled_trade": false,
+    "minimum_complete_execution_sessions_for_factor": 20,
+    "fast_structure_positive_ranking_factor_allowed": false,
+    "allowed_role": "EXECUTION_RISK_AND_IDENTITY_CONTEXT_ONLY",
+    "stock_entry_authorized": false
+  },
+  "interpretation": "A fast seal can describe attention or thin price discovery, but daily pool data cannot identify who controlled the queue or why.  Promotion, observable fill, post-fill B+2 payoff and B+1 tail loss must agree before any structure becomes a ranking factor.",
+  "limitations": [
+    "thin_control_risk is renamed conceptually as a thin-liquidity/one-price proxy",
+    "no Level-2 owner, cancellation or order-event evidence is available",
+    "specific-theme membership and within-theme propagation order are absent",
+    "the evaluation block has been inspected and is not a fresh blind test",
+    "missing B-session bars are unavailable evidence rather than failed fills"
+  ],
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\first_board_observations.csv": "b326bc02c08c20aa3e1af2bd0dc5bda70a9fb86f1c99b70f82cc8f8d4bb2a808",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v125\\first_board_trade_outcomes_20260916_v3\\first_board_trade_outcomes_LABEL_ONLY.csv": "0b333f992a2ce85673a1057ec28b5b5a3ebe660d84ab65fda075919cc1b2af03",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v124\\first_board_promotion_20260916_v5\\prequential_predictions.csv": "5c0db4344f94bac9fd4d057f69582a8d781ec2cadbb147fa6145f9841bcf8052"
+  },
+  "rows_sha256": "468858323f8cbcf86f0b0bc898c9fe781508bd501b8d8807c34b2662828a253b"
+}

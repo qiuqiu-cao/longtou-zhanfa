@@ -1,0 +1,261 @@
+{
+  "version": "v282-nonword-result-audit-1",
+  "recorded_at": "2026-10-02T09:02:32.243955+00:00",
+  "status": "AUDIT_PASSED_RESEARCH_MODELS_REJECTED",
+  "unique_research_source_hashes": 14,
+  "strictly_prior_monthly_selection_logs": 30,
+  "aligned_candidate_rows": 3707,
+  "source_hashes": {
+    "nonword_specialist_challenger_v281.py": "b930a15a1c0a0c0b2d7c77cf20429c3d0efba1bacb98a3df87c00dd29fbcb98c",
+    "rolling_forecast_challenger_v274.py": "46e8656b62583ad3fb966e6e15265b031765c5f3b57d0a430b585c62c6d4e371",
+    "next_session_forecast_lab_v271.py": "ccd7d97501961f8fc3f4025e9e3d3e382d8df6b00bcd19c44edf8a5f60b365a2",
+    "relay_daily_path_challenger_v279.py": "1924fa49e95546d1f889b1c7c6634a01588df1f2e6a261a81b77c864d4668a41",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\market_emotion.csv": "78ec657b0daa3661c408d9c0e646827ae7a437df519346934995720a90a6aae9",
+    "data\\v279\\daily_path_clues_20261002_v1\\historical_relay_paths_LABEL_ONLY.csv": "b56ccae7543e5a9ba5e45d6ec31919f5bf326a2017b5ac6bf288617f11419f1c",
+    "data\\v279\\daily_path_clues_20261002_v1\\september_relay_paths_LABEL_ONLY.csv": "54191bba9a7c4cd7f27b33dea846ce8e130db16f8dcfec2acd501b435bbcc670",
+    "results\\v279\\daily_path_paired_20261002_v2\\CONTROL_predictions_LABEL_ONLY.csv": "61ceee6b53ebf1ab99a1ae83d0ff1607395e24b7954a0a06e605e23f4a0126b1",
+    "results\\v279\\daily_path_paired_20261002_v2\\CONTROL_checkpoint.json": "56522d9900e827a193a81bf9b65dda17cd7c85761e262193779b1718c52b6579",
+    "nonword_pairwise_ranker_v282.py": "fd66e7b2f6bb0d7883e71dfce0c7ada83a1aa2182ccd73e4d44d10ae05208e2d",
+    "relay_promotion_holdout_v256.py": "604d83341387a0a7e4e12fd0871dc62a9cf50f5267b69dcd8f49c75cd6293e4f",
+    "results\\v281\\nonword_specialist_20261002_v1\\report.json": "11061159456d69ba13b02c5aff743c25e152c78724dbea60b986af90ac060c1a",
+    "results\\v281\\nonword_specialist_20261002_v1\\specialist_predictions_LABEL_ONLY.csv": "d99a8bc93773367396e45bdbcfedbffc14dcdd212a5e46764d4e2c34578c5143"
+  },
+  "retrospective_diagnostics": {
+    "2025H2": {
+      "full_candidate_rows": 1584,
+      "nonword_rows": 1230,
+      "promotions": 422,
+      "all_negative_binary_baseline": 0.656910569105691,
+      "dates": 126,
+      "no_promoter_dates": 6,
+      "any_promoter_dates": 120,
+      "hindsight_oracle_upper_bound_NOT_A_FORECAST": 0.9523809523809523,
+      "specialist_wrong_despite_existing_promoter_dates": 60
+    },
+    "2026YTD": {
+      "full_candidate_rows": 1923,
+      "nonword_rows": 1607,
+      "promotions": 410,
+      "all_negative_binary_baseline": 0.744866210329807,
+      "dates": 159,
+      "no_promoter_dates": 10,
+      "any_promoter_dates": 149,
+      "hindsight_oracle_upper_bound_NOT_A_FORECAST": 0.9371069182389937,
+      "specialist_wrong_despite_existing_promoter_dates": 92
+    },
+    "SEPTEMBER": {
+      "full_candidate_rows": 133,
+      "nonword_rows": 107,
+      "promotions": 40,
+      "all_negative_binary_baseline": 0.6261682242990654,
+      "dates": 13,
+      "no_promoter_dates": 0,
+      "any_promoter_dates": 13,
+      "hindsight_oracle_upper_bound_NOT_A_FORECAST": 1.0,
+      "specialist_wrong_despite_existing_promoter_dates": 7
+    },
+    "combined_pre_september": {
+      "full_candidate_rows": 3507,
+      "nonword_rows": 2837,
+      "promotions": 832,
+      "all_negative_binary_baseline": 0.7067324638702855,
+      "dates": 285,
+      "no_promoter_dates": 16,
+      "any_promoter_dates": 269,
+      "hindsight_oracle_upper_bound_NOT_A_FORECAST": 0.9438596491228071,
+      "specialist_wrong_despite_existing_promoter_dates": 152
+    }
+  },
+  "specialist": {
+    "2025H2": {
+      "dates_total": 126,
+      "complete_dates": 126,
+      "full_nonword_top1": {
+        "n": 126,
+        "successes": 60,
+        "accuracy": 0.47619047619047616,
+        "wilson95": [
+          0.3909870103609822,
+          0.5628027879476938
+        ]
+      },
+      "gated_nonword_top1": {
+        "n": 16,
+        "successes": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.27999563610326017,
+          0.7200043638967398
+        ]
+      },
+      "gated_coverage": 0.12698412698412698,
+      "positive_binary_precision": {
+        "n": 38,
+        "successes": 22,
+        "accuracy": 0.5789473684210527,
+        "wilson95": [
+          0.42192345343670545,
+          0.7214749884224129
+        ]
+      },
+      "actual_promotions": 422,
+      "positive_binary_recall": 0.052132701421800945,
+      "nonword_binary_accuracy": 0.6617886178861788,
+      "uncertainty_rows": 354
+    },
+    "2026YTD": {
+      "dates_total": 160,
+      "complete_dates": 159,
+      "full_nonword_top1": {
+        "n": 159,
+        "successes": 57,
+        "accuracy": 0.3584905660377358,
+        "wilson95": [
+          0.28809755273467796,
+          0.4355600445019704
+        ]
+      },
+      "gated_nonword_top1": {
+        "n": 9,
+        "successes": 2,
+        "accuracy": 0.2222222222222222,
+        "wilson95": [
+          0.06322510711784671,
+          0.5474110308930111
+        ]
+      },
+      "gated_coverage": 0.05660377358490566,
+      "positive_binary_precision": {
+        "n": 37,
+        "successes": 14,
+        "accuracy": 0.3783783783783784,
+        "wilson95": [
+          0.24063999175798265,
+          0.5389956956078235
+        ]
+      },
+      "actual_promotions": 410,
+      "positive_binary_recall": 0.03414634146341464,
+      "nonword_binary_accuracy": 0.7392657125077785,
+      "uncertainty_rows": 322
+    },
+    "SEPTEMBER": {
+      "dates_total": 16,
+      "complete_dates": 13,
+      "full_nonword_top1": {
+        "n": 13,
+        "successes": 6,
+        "accuracy": 0.46153846153846156,
+        "wilson95": [
+          0.23206067809538303,
+          0.7085620428549398
+        ]
+      },
+      "gated_nonword_top1": {
+        "n": 0,
+        "successes": 0,
+        "accuracy": null,
+        "wilson95": null
+      },
+      "gated_coverage": 0.0,
+      "positive_binary_precision": {
+        "n": 2,
+        "successes": 0,
+        "accuracy": 0.0,
+        "wilson95": [
+          0.0,
+          0.6576197724933469
+        ]
+      },
+      "actual_promotions": 40,
+      "positive_binary_recall": 0.0,
+      "nonword_binary_accuracy": 0.6074766355140186,
+      "uncertainty_rows": 39
+    },
+    "combined_pre_september": {
+      "dates_total": 286,
+      "complete_dates": 285,
+      "full_nonword_top1": {
+        "n": 285,
+        "successes": 117,
+        "accuracy": 0.4105263157894737,
+        "wilson95": [
+          0.3549727179073796,
+          0.4684598315326246
+        ]
+      },
+      "gated_nonword_top1": {
+        "n": 25,
+        "successes": 10,
+        "accuracy": 0.4,
+        "wilson95": [
+          0.23403302377747973,
+          0.5926054264103301
+        ]
+      },
+      "gated_coverage": 0.08771929824561403,
+      "positive_binary_precision": {
+        "n": 75,
+        "successes": 36,
+        "accuracy": 0.48,
+        "wilson95": [
+          0.3706911114274907,
+          0.5912578422718215
+        ]
+      },
+      "actual_promotions": 832,
+      "positive_binary_recall": 0.04326923076923077,
+      "nonword_binary_accuracy": 0.7056750088121255,
+      "uncertainty_rows": 676
+    }
+  },
+  "pairwise": {
+    "2025H2": {
+      "n": 126,
+      "successes": 56,
+      "accuracy": 0.4444444444444444,
+      "wilson95": [
+        0.36060225925953826,
+        0.5315739367940392
+      ]
+    },
+    "2026YTD": {
+      "n": 159,
+      "successes": 60,
+      "accuracy": 0.37735849056603776,
+      "wilson95": [
+        0.3057459476738117,
+        0.45475730326461705
+      ]
+    },
+    "SEPTEMBER": {
+      "n": 13,
+      "successes": 7,
+      "accuracy": 0.5384615384615384,
+      "wilson95": [
+        0.29143795714506004,
+        0.7679393219046169
+      ]
+    },
+    "combined_pre_september": {
+      "n": 285,
+      "successes": 116,
+      "accuracy": 0.4070175438596491,
+      "wilson95": [
+        0.35158468619741945,
+        0.4649236494951339
+      ]
+    }
+  },
+  "frozen_forward_plan_hash": "2c74dc406eef7dcf2eff66a016b18bf1e854e70bd3c9b3222f47b829ac3518a9",
+  "frozen_forward_plan_preserved": true,
+  "decision": {
+    "default_model_changed": false,
+    "probability_display_allowed": false,
+    "goal_verified": false,
+    "reason": "Specialist and pairwise full-date Top1 do not beat the existing control consistently or reach 60%; gated specialist also fails",
+    "hindsight_diagnostics_usable_as_features": false
+  },
+  "attribution_limit": "Pairwise changes loss and logistic regularization/family grid; comparison does not isolate a causal loss-only effect"
+}

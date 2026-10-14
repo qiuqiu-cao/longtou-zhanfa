@@ -1,0 +1,160 @@
+{
+  "version": "v118-emotion-repair-quality-1",
+  "status": "RESEARCH_ONLY",
+  "scope": "only signal dates classified as 大分歧 or 退潮",
+  "target_definition": {
+    "CONTINUED_RISK_OFF": "next state remains 大分歧 or 退潮",
+    "WEAK_OR_NARROW_REPAIR": "next state exits risk-off but fewer than 3 of 4 quality checks pass",
+    "EFFECTIVE_REPAIR": "next state exits risk-off and at least 3 of 4 quality checks pass",
+    "quality_checks": [
+      "next-day previous-limit median return > 0",
+      "next-day middle-board promotion >= 25%",
+      "next-day failed-board rate <= 30%",
+      "next-day down-limit count <= 5"
+    ],
+    "threshold_selection": "predeclared economic interpretation; not optimized on blind results"
+  },
+  "features": [
+    "limit_count",
+    "limit_change",
+    "seal_rate",
+    "failed_rate",
+    "max_board",
+    "height_change",
+    "middle_density",
+    "ladder_gap_count",
+    "unique_space",
+    "one_word_share",
+    "breadth_height_divergence",
+    "promotion_overall",
+    "promotion_mid",
+    "yesterday_premium",
+    "previous_limit_tail_loss",
+    "down_limit_count",
+    "breadth_health",
+    "relay_appetite",
+    "ladder_health",
+    "loss_effect_health",
+    "regime_fragility",
+    "emotion_quality_score"
+  ],
+  "split": {
+    "method": "chronological_70_30_with_one_session_label_embargo",
+    "train_n": 220,
+    "embargoed_n": 0,
+    "blind_n": 95,
+    "train_last_target_date": "2025-11-04",
+    "blind_start_signal_date": "2025-11-05"
+  },
+  "class_count_sensitivity_by_required_quality_checks": {
+    "2": {
+      "CONTINUED_RISK_OFF": 168,
+      "WEAK_OR_NARROW_REPAIR": 10,
+      "EFFECTIVE_REPAIR": 137
+    },
+    "3": {
+      "CONTINUED_RISK_OFF": 168,
+      "WEAK_OR_NARROW_REPAIR": 42,
+      "EFFECTIVE_REPAIR": 105
+    },
+    "4": {
+      "CONTINUED_RISK_OFF": 168,
+      "WEAK_OR_NARROW_REPAIR": 98,
+      "EFFECTIVE_REPAIR": 49
+    }
+  },
+  "blind": {
+    "challenger": {
+      "n": 95,
+      "accuracy": 0.45263157894736844,
+      "balanced_accuracy": 0.4045354287289771,
+      "macro_f1": 0.3909111402845739,
+      "multiclass_brier": 0.6563632762426308,
+      "log_loss": 1.1020539960513236,
+      "by_class": {
+        "CONTINUED_RISK_OFF": {
+          "support": 52,
+          "predicted": 46,
+          "precision": 0.6304347826086957,
+          "recall": 0.5576923076923077,
+          "f1": 0.5918367346938777
+        },
+        "WEAK_OR_NARROW_REPAIR": {
+          "support": 12,
+          "predicted": 26,
+          "precision": 0.15384615384615385,
+          "recall": 0.3333333333333333,
+          "f1": 0.21052631578947367
+        },
+        "EFFECTIVE_REPAIR": {
+          "support": 31,
+          "predicted": 23,
+          "precision": 0.43478260869565216,
+          "recall": 0.3225806451612903,
+          "f1": 0.37037037037037035
+        }
+      }
+    },
+    "train_prior_baseline": {
+      "n": 95,
+      "accuracy": 0.5473684210526316,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.235827664399093,
+      "multiclass_brier": 0.5785558938668984,
+      "log_loss": 0.9575530578596658,
+      "by_class": {
+        "CONTINUED_RISK_OFF": {
+          "support": 52,
+          "predicted": 95,
+          "precision": 0.5473684210526316,
+          "recall": 1.0,
+          "f1": 0.707482993197279
+        },
+        "WEAK_OR_NARROW_REPAIR": {
+          "support": 12,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "EFFECTIVE_REPAIR": {
+          "support": 31,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "promotion_gate_passed": false,
+  "promotion_rule": "each blind class support>=10; challenger improves Brier, log loss, balanced accuracy, and macro F1 versus train-prior baseline; effective-repair recall>=15%",
+  "latest_research_prediction": {
+    "signal_date": "2026-09-11",
+    "target_date": null,
+    "current_state": "大分歧",
+    "probabilities": {
+      "CONTINUED_RISK_OFF": 0.3389950662731248,
+      "WEAK_OR_NARROW_REPAIR": 0.3947273887222801,
+      "EFFECTIVE_REPAIR": 0.2662775450045952
+    },
+    "top_class": "WEAK_OR_NARROW_REPAIR",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "decision_authorized": false,
+  "position": 0,
+  "limitations": [
+    "repair quality is known only at the target close and is not an intraday buy signal",
+    "threshold sensitivity is disclosed and the blind period is not used to choose a threshold",
+    "forward frozen validation is required even if the historical gate passes"
+  ],
+  "generated_at": "2026-09-13T23:33:05.249743+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\review_evidence_20260911\\emotion_overlay_v109\\market_emotion_model_input.csv",
+    "sha256": "29b4ab4710cdadf3d36a60e381e4c965365d0a3f2d7c89deca871af3c21d8ef1"
+  },
+  "blind_predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v118\\emotion_repair_quality_20260913_v2\\blind_predictions.csv",
+    "sha256": "a2501470004f84ceeda75eacf138f2bf2d593c24c68a59cd361fa12db17bb09d"
+  }
+}

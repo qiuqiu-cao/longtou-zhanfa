@@ -1,0 +1,225 @@
+{
+  "version": "v87-emotion-regime-ensemble-1",
+  "status": "RESEARCH_ONLY",
+  "nested_split": {
+    "outer_train_n": 474,
+    "outer_blind_n": 204,
+    "inner_train_n": 331,
+    "inner_validation_n": 143,
+    "outer_train_end": "2025-11-12",
+    "outer_blind_start": "2025-11-13"
+  },
+  "weight_selection": {
+    "scope": "inner_validation_only",
+    "selected_challenger_weight": 0.3,
+    "selected_markov_weight": 0.7,
+    "grid": [
+      {
+        "challenger_weight": 0.0,
+        "multiclass_brier": 0.6238437993910919,
+        "log_loss": 1.031990317127919,
+        "balanced_accuracy": 0.3617102866455757,
+        "repair_recall": 0.0
+      },
+      {
+        "challenger_weight": 0.1,
+        "multiclass_brier": 0.6201844168923536,
+        "log_loss": 1.025515547793941,
+        "balanced_accuracy": 0.3745566101044962,
+        "repair_recall": 0.0
+      },
+      {
+        "challenger_weight": 0.2,
+        "multiclass_brier": 0.6182510907585057,
+        "log_loss": 1.0225947464055756,
+        "balanced_accuracy": 0.4045633208704822,
+        "repair_recall": 0.0
+      },
+      {
+        "challenger_weight": 0.3,
+        "multiclass_brier": 0.6180438209895485,
+        "log_loss": 1.0226582406951688,
+        "balanced_accuracy": 0.39948231233822257,
+        "repair_recall": 0.0
+      },
+      {
+        "challenger_weight": 0.4,
+        "multiclass_brier": 0.6195626075854815,
+        "log_loss": 1.0254298099222814,
+        "balanced_accuracy": 0.4006327293643946,
+        "repair_recall": 0.0
+      },
+      {
+        "challenger_weight": 0.5,
+        "multiclass_brier": 0.6228074505463053,
+        "log_loss": 1.0308083626833746,
+        "balanced_accuracy": 0.40101620170645197,
+        "repair_recall": 0.0
+      },
+      {
+        "challenger_weight": 0.6,
+        "multiclass_brier": 0.6277783498720194,
+        "log_loss": 1.0388272526538638,
+        "balanced_accuracy": 0.40582494487585086,
+        "repair_recall": 0.08
+      },
+      {
+        "challenger_weight": 0.7,
+        "multiclass_brier": 0.634475305562624,
+        "log_loss": 1.0496520301302683,
+        "balanced_accuracy": 0.4031483079282907,
+        "repair_recall": 0.12
+      },
+      {
+        "challenger_weight": 0.8,
+        "multiclass_brier": 0.6428983176181191,
+        "log_loss": 1.0636114345664192,
+        "balanced_accuracy": 0.4033630524398428,
+        "repair_recall": 0.24
+      },
+      {
+        "challenger_weight": 0.9,
+        "multiclass_brier": 0.6530473860385047,
+        "log_loss": 1.0812788221872935,
+        "balanced_accuracy": 0.3647282139775669,
+        "repair_recall": 0.24
+      },
+      {
+        "challenger_weight": 1.0,
+        "multiclass_brier": 0.6649225108237806,
+        "log_loss": 1.103665240999832,
+        "balanced_accuracy": 0.3859303997699166,
+        "repair_recall": 0.32
+      }
+    ]
+  },
+  "outer_blind": {
+    "ensemble": {
+      "n": 204,
+      "accuracy": 0.4411764705882353,
+      "balanced_accuracy": 0.35103785103785107,
+      "macro_f1": 0.3177150192554557,
+      "multiclass_brier": 0.6228420633650671,
+      "log_loss": 1.033922770439245,
+      "top_class_ece_10bin": 0.06545632789187657,
+      "by_class": {
+        "RISK_ON": {
+          "support": 78,
+          "predicted": 86,
+          "precision": 0.4069767441860465,
+          "recall": 0.44871794871794873,
+          "f1": 0.4268292682926829
+        },
+        "RISK_OFF": {
+          "support": 91,
+          "predicted": 118,
+          "precision": 0.4661016949152542,
+          "recall": 0.6043956043956044,
+          "f1": 0.5263157894736842
+        },
+        "REPAIR": {
+          "support": 35,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "markov": {
+      "n": 204,
+      "accuracy": 0.46078431372549017,
+      "balanced_accuracy": 0.3540903540903541,
+      "macro_f1": 0.29433945223418906,
+      "multiclass_brier": 0.6291294214051939,
+      "log_loss": 1.0442501343918416,
+      "top_class_ece_10bin": 0.041654205652971496,
+      "by_class": {
+        "RISK_ON": {
+          "support": 78,
+          "predicted": 36,
+          "precision": 0.4444444444444444,
+          "recall": 0.20512820512820512,
+          "f1": 0.2807017543859649
+        },
+        "RISK_OFF": {
+          "support": 91,
+          "predicted": 168,
+          "precision": 0.4642857142857143,
+          "recall": 0.8571428571428571,
+          "f1": 0.6023166023166023
+        },
+        "REPAIR": {
+          "support": 35,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "challenger": {
+      "n": 204,
+      "accuracy": 0.4411764705882353,
+      "balanced_accuracy": 0.39816849816849814,
+      "macro_f1": 0.3953392468098351,
+      "multiclass_brier": 0.657300970152081,
+      "log_loss": 1.0919994076116353,
+      "top_class_ece_10bin": 0.06422987059720547,
+      "by_class": {
+        "RISK_ON": {
+          "support": 78,
+          "predicted": 97,
+          "precision": 0.4639175257731959,
+          "recall": 0.5769230769230769,
+          "f1": 0.5142857142857143
+        },
+        "RISK_OFF": {
+          "support": 91,
+          "predicted": 62,
+          "precision": 0.6129032258064516,
+          "recall": 0.4175824175824176,
+          "f1": 0.4967320261437909
+        },
+        "REPAIR": {
+          "support": 35,
+          "predicted": 45,
+          "precision": 0.15555555555555556,
+          "recall": 0.2,
+          "f1": 0.17500000000000002
+        }
+      }
+    }
+  },
+  "promotion_gate_passed": false,
+  "promotion_rule": "outer blind ensemble improves Markov Brier, log loss and balanced accuracy; repair recall>=15%",
+  "latest_research_prediction": {
+    "signal_date": "2026-09-16",
+    "probabilities": {
+      "RISK_ON": 0.43285067832308965,
+      "RISK_OFF": 0.4104065816821868,
+      "REPAIR": 0.15674273999472338
+    },
+    "markov_probabilities": {
+      "RISK_ON": 0.4354243542435423,
+      "RISK_OFF": 0.43542435424354237,
+      "REPAIR": 0.1291512915129151
+    },
+    "challenger_probabilities": {
+      "RISK_ON": 0.42684543450870016,
+      "RISK_OFF": 0.35203177903902383,
+      "REPAIR": 0.22112278645227607
+    },
+    "top_class": "RISK_ON",
+    "status": "RESEARCH_ONLY_NOT_FORWARD_VALIDATED"
+  },
+  "generated_at": "2026-09-16T18:45:47.282658+08:00",
+  "source": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\market_emotion.csv",
+    "sha256": "cdb1d5edcdecb5a35ec1a1afbe1e4a2f2e03aa28a49867b66a3bf4b1ee5bc803"
+  },
+  "predictions": {
+    "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\v87\\emotion_regime_ensemble_20260916_v1\\outer_blind_predictions.csv",
+    "sha256": "d015f82f9257267fceab16d47ab5b8b1b51c581a43166ece298be3a31dc7fcaf"
+  }
+}

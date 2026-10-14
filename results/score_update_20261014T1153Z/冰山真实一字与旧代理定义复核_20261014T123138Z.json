@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-14T12:31:38.861681+00:00",
+  "status": "EXISTING_ICE_ONE_WORD_PROXY_DEFINITION_RECHECKED_NO_NUMERIC_CHANGE",
+  "stock": "000530",
+  "signal_date": "2026-10-14",
+  "ohlc_cny": {
+    "open": 6.3,
+    "high": 6.3,
+    "low": 6.3,
+    "close": 6.3
+  },
+  "turnover_pct": 3.0159,
+  "quote_rounded_turnover_pct": 3.02,
+  "actual_one_word_daily": 1,
+  "legacy_proxy_formula": "actual_one_word_daily * (turnover_pct < 3)",
+  "legacy_signal_one_word": 0,
+  "interpretation": "These two fields express different conditions, not inconsistent price observations. One-price limit-up trades can occur at the same price; turnover above3 is not proof of an opened board. Proxy0 is not real non-one-word identity.",
+  "rechecked_learning": "Use low-turnover one-word proxy as the field description; do not interpret threshold crossing as confirmed price weakness or lost core role. Score remains44.7 and independent direction remainsPROMOTE.",
+  "new_fits": 0,
+  "new_current_inference_calls": 0,
+  "original_formula_threshold_score_or_prediction_changed": false,
+  "new_formal_matured_or_settled_samples": 0,
+  "numeric_accuracy_improvement_claimed": false,
+  "source_qualification": "Alternative sources crosschecked; original formal source gate remains unpassed.",
+  "next_step": "Append actual15 opening/selling-pressure observations and full15 closing comparison, retaining real-one-word and proxy flags separately.",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\score_update_20261014T1153Z\\current29_feature_pack_BEFORE_INFERENCE.json": "1930f23e00485326a87ded0a29dc3ffe9ea7e77f3334b677a11ee874356fdd81",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\score_update_20261014T1153Z\\alternative_quote_and_pool_checks.json": "ad5492cdc76dc91695783f941c05e860c97bafd7aff8336f7b84c64af8118d23",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\score_update_20261014T1153Z\\supplemental_BASE_scores.json": "7c0745ab43dd48b08bd6d82024670f60c47d783e4ec03b4aa9cd793dae4f9a00",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_inputs.py": "1fc7eee843596013132af27376c5a74dc424904afca30960207465c9c67d848b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\september_forecast_holdout_v278.py": "f33741b16b4ff55819ba04806531fd24477ff5ae6409ce3529d8b73ca9a30b94"
+  }
+}
