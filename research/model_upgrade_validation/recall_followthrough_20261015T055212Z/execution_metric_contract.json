@@ -1,0 +1,27 @@
+{
+  "status": "PROSPECTIVE_METRIC_DEFINITIONS_NO_BACKFILLED_FILLS",
+  "formed_at": "2026-10-15T06:11:47.827634+00:00",
+  "S": "signal close day",
+  "B": "actual recorded paper/confirmed entry date; usually next official session after S",
+  "earliest_regular_stock_exit": "official session after B; same-B close is a mark, not a permitted completed exit",
+  "separate_accounts": [
+    "paper",
+    "user_confirmed"
+  ],
+  "actual_broker_authenticity_not_certified": true,
+  "fillable_rate": {
+    "numerator": "recorded fills passing the original frozen-plan, confirmation/order/fill and expiry audits",
+    "denominator": "all qualifying frozen entry orders in that account; unmatched/unfilled orders retained; zero/missing denominator gives UNKNOWN"
+  },
+  "Bplus1_large_loss_rate": {
+    "definition": "B+1 close-mark loss >=7% from recorded entry price",
+    "coverage": "show all entry trades, available B+1 marks and unknown marks separately",
+    "unclosed_positions_are_marks_not_realized_returns": true
+  },
+  "Bplus1_Bplus2_net_returns": "Realized only for auditable exit fills with fees; open/blocked exits reported separately with marks, no hindsight exits or zero fees.",
+  "paper_matching_rule": "Must be frozen before entry, with price, quantity, slippage, expiry, queue conservatism and limit/suspension handling. Public open/touch snapshots alone do not prove a fill.",
+  "current_fill_rate": null,
+  "current_large_loss_rate": null,
+  "current_net_return": null,
+  "missing_record_means_CASH_or_zero": false
+}

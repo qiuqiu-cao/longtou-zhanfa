@@ -1,0 +1,33 @@
+{
+  "formed_at": "2026-10-15T09:43:06.047120+00:00",
+  "purpose": "Source qualification and descriptive discrimination audit of separate-interval pressure/recovery facts",
+  "fields": [
+    "sampled_cap_close_then_below_intervals",
+    "sampled_cap_close_recovery_transitions",
+    "sampled_negative_prior_bar_peak_drawdown",
+    "sampled_intervals_after_last_below_close",
+    "sampled_first_cap_close_progress",
+    "sampled_final_six_volume_fraction",
+    "sampled_recovery_interval_volume_fraction",
+    "sampled_final_six_cap_volume_fraction",
+    "sampled_close_above_full_day_vwap"
+  ],
+  "old_failed_arms_not_rerun": [
+    "FINAL_CAP_PRICE_RUN",
+    "CAP_PRICE_BAR_SHARE",
+    "SHALLOW_PULLBACK"
+  ],
+  "new_ranking_arms": 0,
+  "fit_calls": 0,
+  "threshold_search": false,
+  "labels_already_seen_in_past": true,
+  "blind": false,
+  "pressure_semantics": "Chronology between non-overlapping five-minute bars only; no intrabar high/low order or true reseal inference",
+  "missing_policy": "Complete grid plus OHLC match required; volume facts additionally need independent daily-volume/amount checks. All9245candidate rows retained.",
+  "interpretation": "Fixed descriptive groups, no winner selection, causal or forecasting claim; original predictions unchanged",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v289\\august_september_paths_20261002_v1\\features_NO_NEXT_SESSION_LABELS.csv": "7453f1002ef626b3443a0b2b72b96a6ea1bda24561587541bb9435cb2b00fda8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_sampled_pressure.py": "960693b4f86000533452547d69b00f7551409d9324112ab54e327d2a6c3c1e4f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\workbench_latest_20261015T091200Z\\qualify_sampled_pressure.py": "150ea88e4fd705b2efb2e77e37487b98668d42845ecca8c0f85644c1f307d95e"
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "formed_at": "2026-10-15T09:37:12.634154+00:00",
+  "maximum_attempts_per_request": 1,
+  "entries": [
+    {
+      "kind": "limit_up",
+      "code": null,
+      "url": "https://push2ex.eastmoney.com/getTopicZTPool",
+      "parameters": {
+        "ut": "7eea3edcaed734bea9cbfc24409ed989",
+        "dpt": "wz.ztzt",
+        "Pageindex": "0",
+        "pagesize": "10000",
+        "sort": "fbt:asc",
+        "date": "20261015"
+      },
+      "requested_at": "2026-10-15T09:37:08.026178+00:00",
+      "maximum_attempts": 1,
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261015 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))",
+      "completed_at": "2026-10-15T09:37:11.650898+00:00"
+    },
+    {
+      "kind": "failed_board",
+      "code": null,
+      "url": "https://push2ex.eastmoney.com/getTopicZBPool",
+      "parameters": {
+        "ut": "7eea3edcaed734bea9cbfc24409ed989",
+        "dpt": "wz.ztzt",
+        "Pageindex": "0",
+        "pagesize": "10000",
+        "sort": "fbt:asc",
+        "date": "20261015"
+      },
+      "requested_at": "2026-10-15T09:37:08.026445+00:00",
+      "maximum_attempts": 1,
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261015 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))",
+      "completed_at": "2026-10-15T09:37:11.844419+00:00"
+    },
+    {
+      "kind": "limit_down",
+      "code": null,
+      "url": "https://push2ex.eastmoney.com/getTopicDTPool",
+      "parameters": {
+        "ut": "7eea3edcaed734bea9cbfc24409ed989",
+        "dpt": "wz.ztzt",
+        "Pageindex": "0",
+        "pagesize": "10000",
+        "sort": "fund:asc",
+        "date": "20261015"
+      },
+      "requested_at": "2026-10-15T09:37:08.026610+00:00",
+      "maximum_attempts": 1,
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Read timed out. (read timeout=4)",
+      "completed_at": "2026-10-15T09:37:12.273601+00:00"
+    },
+    {
+      "kind": "previous_limit",
+      "code": null,
+      "url": "https://push2ex.eastmoney.com/getYesterdayZTPool",
+      "parameters": {
+        "ut": "7eea3edcaed734bea9cbfc24409ed989",
+        "dpt": "wz.ztzt",
+        "Pageindex": "0",
+        "pagesize": "10000",
+        "sort": "zs:desc",
+        "date": "20261015"
+      },
+      "requested_at": "2026-10-15T09:37:08.026824+00:00",
+      "maximum_attempts": 1,
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getYesterdayZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=zs%3Adesc&date=20261015 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))",
+      "completed_at": "2026-10-15T09:37:11.641876+00:00"
+    },
+    {
+      "kind": "notices",
+      "code": "000530",
+      "url": "https://np-anotice-stock.eastmoney.com/api/security/ann",
+      "parameters": {
+        "sr": "-1",
+        "page_size": "30",
+        "page_index": "1",
+        "ann_type": "A",
+        "client_source": "web",
+        "stock_list": "000530",
+        "begin_time": "2026-10-12",
+        "end_time": "2026-10-15"
+      },
+      "requested_at": "2026-10-15T09:37:08.026969+00:00",
+      "maximum_attempts": 1,
+      "received_at": "2026-10-15T09:37:09.115693+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261015T093600Z\\bounded_sources\\notices_000530.raw.json",
+      "sha256": "3a65087d3f98ea6ec4246f41fdbc4bc25e061c3312f497a65c9d81d8596aee12",
+      "status": "NOTICE_INDEX_RECEIVED_NOT_FULLTEXT_REVIEW",
+      "notices": [
+        {
+          "art_code": "AN202610141830464128",
+          "title": "冰山冷热:股票交易异常波动公告",
+          "notice_date": "2026-10-15 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "42914320414026",
+              "market_code": "0",
+              "short_name": "冰山冷热",
+              "stock_code": "000530"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "notices",
+      "code": "001318",
+      "url": "https://np-anotice-stock.eastmoney.com/api/security/ann",
+      "parameters": {
+        "sr": "-1",
+        "page_size": "30",
+        "page_index": "1",
+        "ann_type": "A",
+        "client_source": "web",
+        "stock_list": "001318",
+        "begin_time": "2026-10-12",
+        "end_time": "2026-10-15"
+      },
+      "requested_at": "2026-10-15T09:37:09.116381+00:00",
+      "maximum_attempts": 1,
+      "received_at": "2026-10-15T09:37:10.107977+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261015T093600Z\\bounded_sources\\notices_001318.raw.json",
+      "sha256": "6e6a1fae0f882817f8e8070d1277716f7af04483655ba4832bc2326e2ae07486",
+      "status": "NOTICE_INDEX_RECEIVED_NOT_FULLTEXT_REVIEW",
+      "notices": [
+        {
+          "art_code": "AN202610141830465304",
+          "title": "阳光乳业:股票交易异常波动公告",
+          "notice_date": "2026-10-15 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "14188847616870",
+              "market_code": "0",
+              "short_name": "阳光乳业",
+              "stock_code": "001318"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "notices",
+      "code": "002343",
+      "url": "https://np-anotice-stock.eastmoney.com/api/security/ann",
+      "parameters": {
+        "sr": "-1",
+        "page_size": "30",
+        "page_index": "1",
+        "ann_type": "A",
+        "client_source": "web",
+        "stock_list": "002343",
+        "begin_time": "2026-10-12",
+        "end_time": "2026-10-15"
+      },
+      "requested_at": "2026-10-15T09:37:10.109244+00:00",
+      "maximum_attempts": 1,
+      "received_at": "2026-10-15T09:37:11.170490+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261015T093600Z\\bounded_sources\\notices_002343.raw.json",
+      "sha256": "a5c0b873776ddcb5cd51d7d3a36e634d7290c023abd99ea8a9316adcea330362",
+      "status": "NOTICE_INDEX_RECEIVED_NOT_FULLTEXT_REVIEW",
+      "notices": [
+        {
+          "art_code": "AN202610141830470870",
+          "title": "慈文传媒:关于股票交易异常波动的公告",
+          "notice_date": "2026-10-15 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "11102877238006",
+              "market_code": "0",
+              "short_name": "慈文传媒",
+              "stock_code": "002343"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        },
+        {
+          "art_code": "AN202610121830372093",
+          "title": "慈文传媒:关于股票交易异常波动的公告",
+          "notice_date": "2026-10-13 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "11102877238006",
+              "market_code": "0",
+              "short_name": "慈文传媒",
+              "stock_code": "002343"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        },
+        {
+          "art_code": "AN202610121830366974",
+          "title": "慈文传媒:第九届董事会第三十八次会议决议公告",
+          "notice_date": "2026-10-13 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "11102877238006",
+              "market_code": "0",
+              "short_name": "慈文传媒",
+              "stock_code": "002343"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002005002",
+              "column_name": "高管人员任职变动"
+            },
+            {
+              "column_code": "001002009",
+              "column_name": "董事会决议公告"
+            }
+          ]
+        },
+        {
+          "art_code": "AN202610121830366981",
+          "title": "慈文传媒:关于董事会秘书变更的公告",
+          "notice_date": "2026-10-13 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "11102877238006",
+              "market_code": "0",
+              "short_name": "慈文传媒",
+              "stock_code": "002343"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002005002",
+              "column_name": "高管人员任职变动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "notices",
+      "code": "002696",
+      "url": "https://np-anotice-stock.eastmoney.com/api/security/ann",
+      "parameters": {
+        "sr": "-1",
+        "page_size": "30",
+        "page_index": "1",
+        "ann_type": "A",
+        "client_source": "web",
+        "stock_list": "002696",
+        "begin_time": "2026-10-12",
+        "end_time": "2026-10-15"
+      },
+      "requested_at": "2026-10-15T09:37:11.171128+00:00",
+      "maximum_attempts": 1,
+      "received_at": "2026-10-15T09:37:12.233098+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261015T093600Z\\bounded_sources\\notices_002696.raw.json",
+      "sha256": "3832ba6fe20b89de7c2bacb799b1e85ac6627645da627963fd2e6884b4fdc20c",
+      "status": "NOTICE_INDEX_RECEIVED_NOT_FULLTEXT_REVIEW",
+      "notices": [
+        {
+          "art_code": "AN202610141830462441",
+          "title": "百洋股份:股票交易异常波动暨风险提示公告",
+          "notice_date": "2026-10-15 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "36100975616934",
+              "market_code": "0",
+              "short_name": "百洋股份",
+              "stock_code": "002696"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        },
+        {
+          "art_code": "AN202610121830366418",
+          "title": "百洋股份:股票交易异常波动公告",
+          "notice_date": "2026-10-13 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SZA",
+              "inner_code": "36100975616934",
+              "market_code": "0",
+              "short_name": "百洋股份",
+              "stock_code": "002696"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "notices",
+      "code": "601811",
+      "url": "https://np-anotice-stock.eastmoney.com/api/security/ann",
+      "parameters": {
+        "sr": "-1",
+        "page_size": "30",
+        "page_index": "1",
+        "ann_type": "A",
+        "client_source": "web",
+        "stock_list": "601811",
+        "begin_time": "2026-10-12",
+        "end_time": "2026-10-15"
+      },
+      "requested_at": "2026-10-15T09:37:11.641901+00:00",
+      "maximum_attempts": 1,
+      "received_at": "2026-10-15T09:37:12.632838+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261015T093600Z\\bounded_sources\\notices_601811.raw.json",
+      "sha256": "b683fd10debb16161dd493dc23652887447ca538b89488961dfcec425b103d65",
+      "status": "NOTICE_INDEX_RECEIVED_NOT_FULLTEXT_REVIEW",
+      "notices": [
+        {
+          "art_code": "AN202610121830367288",
+          "title": "新华文轩:新华文轩股票交易异常波动公告",
+          "notice_date": "2026-10-13 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SHA",
+              "inner_code": "45314133568379",
+              "market_code": "1",
+              "short_name": "新华文轩",
+              "stock_code": "601811"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004007",
+              "column_name": "股票交易异常波动"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "notices",
+      "code": "605189",
+      "url": "https://np-anotice-stock.eastmoney.com/api/security/ann",
+      "parameters": {
+        "sr": "-1",
+        "page_size": "30",
+        "page_index": "1",
+        "ann_type": "A",
+        "client_source": "web",
+        "stock_list": "605189",
+        "begin_time": "2026-10-12",
+        "end_time": "2026-10-15"
+      },
+      "requested_at": "2026-10-15T09:37:11.650921+00:00",
+      "maximum_attempts": 1,
+      "received_at": "2026-10-15T09:37:12.604871+00:00",
+      "http_status": 200,
+      "raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261015T093600Z\\bounded_sources\\notices_605189.raw.json",
+      "sha256": "5d8facdcdfdc9b109979bfc5e8aa563bc6709d46f72450e07b947398886fe583",
+      "status": "NOTICE_INDEX_RECEIVED_NOT_FULLTEXT_REVIEW",
+      "notices": [
+        {
+          "art_code": "AN202610131830411651",
+          "title": "富春染织:富春染织2026年前三季度业绩预告的自愿性披露公告",
+          "notice_date": "2026-10-14 00:00:00",
+          "codes": [
+            {
+              "ann_type": "A,SHA",
+              "inner_code": "27882988553643",
+              "market_code": "1",
+              "short_name": "富春染织",
+              "stock_code": "605189"
+            }
+          ],
+          "columns": [
+            {
+              "column_code": "001002004001",
+              "column_name": "业绩预告"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unavailable_not_zero": true,
+  "new_fits": 0,
+  "old_files_modified": false
+}

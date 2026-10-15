@@ -1,0 +1,77 @@
+{
+  "audited_at": "2026-10-15T13:06:12.058624+00:00",
+  "objective_path": "C:\\Users\\Administrator\\.codex\\attachments\\fd62f217-e468-4f83-aa83-13b485abe89f\\goal-objective.md",
+  "objective_sha256": "45deb2088b46719760c64eafe0b5d8af9fa69546d2d1b7d426da1d658050613f",
+  "requirements": [
+    {
+      "id": "D1",
+      "requirement": "台账与范围",
+      "status": "PROVEN_AS_RESEARCH_DELIVERABLE_WITH_EXPLICIT_LIMITATIONS",
+      "evidence": [
+        "inventory_completion.json",
+        "inventory/all_research_protocol_fit_failure_records_NOT_FIT_COUNTS.csv",
+        "inventory/bound_source_manifest_WITH_EXPLICIT_UNKNOWN_CLOCKS.json"
+      ],
+      "limitations": "当前股票池幸存者范围、未决涨停机制/字段、未知原始时钟明示；文件数不等于拟合数"
+    },
+    {
+      "id": "D2",
+      "requirement": "完整事实/代理/角色表",
+      "status": "PROVEN_AS_RESEARCH_DELIVERABLE_WITH_EXPLICIT_LIMITATIONS",
+      "evidence": [
+        "delivery_final/完整9315只次_事实代理未知与全部冻结特征.csv",
+        "context/all_height_groups_including_no_survivors.csv",
+        "context/all_previous_members_including_no_touch_failures.csv",
+        "context/all_active_parent_relations_not_only_lag_matches.csv"
+      ],
+      "limitations": "规则候选不是身份真值；实际题材及部分交易资格未知，名称代理仅冻结旧版"
+    },
+    {
+      "id": "D3",
+      "requirement": "完整固定比较",
+      "status": "PROVEN_AS_RESEARCH_DELIVERABLE_WITH_EXPLICIT_LIMITATIONS",
+      "evidence": [
+        "evaluation_completion.json",
+        "evaluation/all_fixed_strata_classification_WITH_UNKNOWN.csv",
+        "evaluation/all_daily_sameheight_score_height_Top1_Top2.csv"
+      ],
+      "limitations": "旧比较失败保持；补充分层仅描述；原时间块区间不作全部顺序试验确认性显著性"
+    },
+    {
+      "id": "D4",
+      "requirement": "逐日工作台",
+      "status": "PROVEN_AS_RESEARCH_DELIVERABLE_WITH_EXPLICIT_LIMITATIONS",
+      "evidence": [
+        "workbench_completion.json",
+        "workbench/完整81只_可展开证据工作台.html",
+        "current_forecast/15日收盘_16日优先与2_3_5日情景_已看模型.json"
+      ],
+      "limitations": "21个原独立记录未知，15日已看模型披露；未来窗口尚未到期，不倒填"
+    },
+    {
+      "id": "D5",
+      "requirement": "执行与验收状态",
+      "status": "PROVEN_AS_RESEARCH_DELIVERABLE_WITH_EXPLICIT_LIMITATIONS",
+      "evidence": [
+        "evaluation/complete_execution_funnel_FULL_DENOMINATORS.json",
+        "forecast_completion.json",
+        "compare_current_forecast.py"
+      ],
+      "limitations": "无券商与同刻确认，真实收益/仓位/回撤未知；代理小样本未证盈利，未部署"
+    }
+  ],
+  "crosscutting": {
+    "four_layers": "fact/proxy/candidate+author/outcome+execution separated",
+    "causality": "signal allowlists, official adjacency, no target inputs, new history/current318-field replay",
+    "training": "80 previously saved relevant models remain byte-identical; no repeats, no current fits",
+    "forum": "original checked bodies/opinions and failures bound; no popularity/fund causality inference",
+    "new_dates": "original author-before-model flow retained; current old15 exposure disclosed",
+    "source_time": "unknown original/public/receipt clocks not synthesized; recovered instruction bytes do not assert old receipt",
+    "deployment": "not eligible; original source/forward gates and windows preserved, no permanent proof BASE optimal",
+    "next_windows": "66 future events pending; actual calendar comparator tested, no elapsed current event left unsettled"
+  },
+  "latest_local_instruction": "Top3+up to2observations and future2/3/5 paths delivered, probabilities unvalidated and exposure disclosed",
+  "full_research_goal_achieved": true,
+  "strategy_effectiveness_or_profitability_achieved": false,
+  "model_deployed": false
+}

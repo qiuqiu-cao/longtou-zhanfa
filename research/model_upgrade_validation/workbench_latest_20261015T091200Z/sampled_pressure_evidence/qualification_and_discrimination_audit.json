@@ -1,0 +1,1475 @@
+{
+  "formed_at": "2026-10-15T09:45:19.194999+00:00",
+  "status": "RAW_REPLAY_AND_CAUSAL_PRESSURE_FEATURES_QUALIFIED_NOT_PREDICTIVE_ACCEPTANCE",
+  "historical_rows": 9245,
+  "original_minute_scope_rows": 485,
+  "price_path_qualified": 451,
+  "volume_path_qualified": 324,
+  "raw_replays": [
+    {
+      "archive": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1",
+      "raw_symbols_replayed": 178,
+      "raw_bars_replayed": 350482
+    },
+    {
+      "archive": "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1",
+      "raw_symbols_replayed": 120,
+      "raw_bars_replayed": 122744
+    }
+  ],
+  "original_training_windows": {
+    "2025H2": {
+      "rows": 4062,
+      "price_path_rows": 0,
+      "volume_path_rows": 0,
+      "price_coverage": 0.0,
+      "volume_coverage": 0.0
+    },
+    "2026JanAug": {
+      "rows": 3243,
+      "price_path_rows": 0,
+      "volume_path_rows": 0,
+      "price_coverage": 0.0,
+      "volume_coverage": 0.0
+    },
+    "2026Sep": {
+      "rows": 3059,
+      "price_path_rows": 258,
+      "volume_path_rows": 223,
+      "price_coverage": 0.08434128800261523,
+      "volume_coverage": 0.07289964040536123
+    }
+  },
+  "descriptive_groups": [
+    {
+      "period": "2026-08",
+      "arm": "BASE",
+      "outcome_group": "FN",
+      "full_rows": 50,
+      "price_qualified": 46,
+      "volume_qualified": 40,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 46,
+          "median": 1.0,
+          "mean": 1.173913043478261
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 46,
+          "median": 1.0,
+          "mean": 0.8695652173913043
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 46,
+          "median": -0.023478057425399657,
+          "mean": -0.029133952736875225
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 46,
+          "median": 45.5,
+          "mean": 37.608695652173914
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 46,
+          "median": 0.02127659574468085,
+          "mean": 0.11239592969472709
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 40,
+          "median": 0.007947817185665746,
+          "mean": 0.017759752852348664
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 40,
+          "median": 0.07247310354660624,
+          "mean": 0.0987991184977396
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 40,
+          "median": 0.007947817185665746,
+          "mean": 0.011785033745029167
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 40,
+          "median": 0.023727248366208098,
+          "mean": 0.02514877945023618
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "BASE",
+      "outcome_group": "FP",
+      "full_rows": 16,
+      "price_qualified": 14,
+      "volume_qualified": 14,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 14,
+          "median": 0.0,
+          "mean": 0.2857142857142857
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 14,
+          "median": 0.0,
+          "mean": 0.21428571428571427
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 14,
+          "median": 0.0,
+          "mean": -0.01322001966383717
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 14,
+          "median": 48.0,
+          "mean": 47.357142857142854
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 14,
+          "median": 0.0,
+          "mean": 0.00911854103343465
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 14,
+          "median": 0.02133274517299509,
+          "mean": 0.03001343190606488
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 14,
+          "median": 0.0,
+          "mean": 0.0399811747542128
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 14,
+          "median": 0.02133274517299509,
+          "mean": 0.03001343190606488
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 14,
+          "median": 0.00455192168201235,
+          "mean": 0.008481564527436425
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "BASE",
+      "outcome_group": "TN",
+      "full_rows": 141,
+      "price_qualified": 134,
+      "volume_qualified": 111,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 134,
+          "median": 1.0,
+          "mean": 1.7835820895522387
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 134,
+          "median": 1.0,
+          "mean": 1.1044776119402986
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 134,
+          "median": -0.031523702449451296,
+          "mean": -0.03276873775576508
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 134,
+          "median": 41.5,
+          "mean": 33.843283582089555
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 134,
+          "median": 0.02127659574468085,
+          "mean": 0.15274690377897746
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 111,
+          "median": 0.011956294658389606,
+          "mean": 0.0345217639784746
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 111,
+          "median": 0.07583094266787152,
+          "mean": 0.09800738585654649
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 111,
+          "median": 0.011956294658389606,
+          "mean": 0.029664977090311274
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 111,
+          "median": 0.020185935541983557,
+          "mean": 0.023766988429486477
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "BASE",
+      "outcome_group": "TP",
+      "full_rows": 23,
+      "price_qualified": 19,
+      "volume_qualified": 18,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 19,
+          "median": 0.0,
+          "mean": 0.10526315789473684
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 19,
+          "median": 0.0,
+          "mean": 0.05263157894736842
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 19,
+          "median": 0.0,
+          "mean": -0.006913221331766761
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 19,
+          "median": 48.0,
+          "mean": 47.68421052631579
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 19,
+          "median": 0.0,
+          "mean": 0.006718924972004479
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 18,
+          "median": 0.012338734606741321,
+          "mean": 0.013823442139690539
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 18,
+          "median": 0.0,
+          "mean": 0.005803789852066386
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 18,
+          "median": 0.012338734606741321,
+          "mean": 0.013823442139690539
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 18,
+          "median": 0.0041914978379616885,
+          "mean": 0.009495478114776678
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "BASE",
+      "outcome_group": "UNKNOWN_LABEL",
+      "full_rows": 12,
+      "price_qualified": 12,
+      "volume_qualified": 5,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 12,
+          "median": 1.0,
+          "mean": 1.3333333333333333
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 12,
+          "median": 1.0,
+          "mean": 0.6666666666666666
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 12,
+          "median": -0.0332865130929309,
+          "mean": -0.03792460711249442
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 12,
+          "median": 40.0,
+          "mean": 34.5
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 12,
+          "median": 0.010638297872340425,
+          "mean": 0.2021276595744681
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 5,
+          "median": 0.010136740412808732,
+          "mean": 0.014060042828235027
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 5,
+          "median": 0.06375053080918311,
+          "mean": 0.061475070717048955
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 5,
+          "median": 0.010136740412808732,
+          "mean": 0.014060042828235027
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 5,
+          "median": 0.022585609574439447,
+          "mean": 0.03586074257993466
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "ST_DUAL",
+      "outcome_group": "FN",
+      "full_rows": 46,
+      "price_qualified": 41,
+      "volume_qualified": 36,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 41,
+          "median": 1.0,
+          "mean": 1.2195121951219512
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 41,
+          "median": 1.0,
+          "mean": 0.926829268292683
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 41,
+          "median": -0.028617585968151227,
+          "mean": -0.029694624787923188
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 41,
+          "median": 42.0,
+          "mean": 36.853658536585364
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 41,
+          "median": 0.0425531914893617,
+          "mean": 0.12817851582771148
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 36,
+          "median": 0.007264206215110088,
+          "mean": 0.017955527424080294
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 36,
+          "median": 0.07247310354660624,
+          "mean": 0.0907481189974709
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 36,
+          "median": 0.007264206215110088,
+          "mean": 0.01131695063816974
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 36,
+          "median": 0.02274608274304557,
+          "mean": 0.026396373241169255
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "ST_DUAL",
+      "outcome_group": "FP",
+      "full_rows": 27,
+      "price_qualified": 27,
+      "volume_qualified": 23,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 27,
+          "median": 0.0,
+          "mean": 1.1111111111111112
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 27,
+          "median": 0.0,
+          "mean": 0.5555555555555556
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 27,
+          "median": -0.016306743058616124,
+          "mean": -0.020871355718646817
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 27,
+          "median": 48.0,
+          "mean": 43.370370370370374
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 27,
+          "median": 0.0,
+          "mean": 0.04334121355397951
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 23,
+          "median": 0.018370601213056743,
+          "mean": 0.03410183015517444
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 23,
+          "median": 0.0,
+          "mean": 0.06407512739863197
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 23,
+          "median": 0.018370601213056743,
+          "mean": 0.03252715319061701
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 23,
+          "median": 0.0059911608225302615,
+          "mean": 0.013716522626304208
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "ST_DUAL",
+      "outcome_group": "TN",
+      "full_rows": 130,
+      "price_qualified": 121,
+      "volume_qualified": 102,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 121,
+          "median": 1.0,
+          "mean": 1.7603305785123966
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 121,
+          "median": 1.0,
+          "mean": 1.1239669421487604
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 121,
+          "median": -0.03189300411522633,
+          "mean": -0.033161690331923774
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 121,
+          "median": 41.0,
+          "mean": 33.28099173553719
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 121,
+          "median": 0.02127659574468085,
+          "mean": 0.16054158607350094
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 102,
+          "median": 0.012711158377133316,
+          "mean": 0.033997664262025266
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 102,
+          "median": 0.07521308543864177,
+          "mean": 0.09769439555359904
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 102,
+          "median": 0.012711158377133316,
+          "mean": 0.02906741157181636
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 102,
+          "median": 0.02038037670369086,
+          "mean": 0.023935270575020713
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "ST_DUAL",
+      "outcome_group": "TP",
+      "full_rows": 27,
+      "price_qualified": 24,
+      "volume_qualified": 22,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 24,
+          "median": 0.0,
+          "mean": 0.25
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 24,
+          "median": 0.0,
+          "mean": 0.125
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 24,
+          "median": 0.0,
+          "mean": -0.010584725620624088
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 24,
+          "median": 48.0,
+          "mean": 46.875
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 24,
+          "median": 0.0,
+          "mean": 0.0017730496453900709
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 22,
+          "median": 0.01183961410498455,
+          "mean": 0.01421877660643117
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 22,
+          "median": 0.0,
+          "mean": 0.03588639424262849
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 22,
+          "median": 0.01183961410498455,
+          "mean": 0.01421877660643117
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 22,
+          "median": 0.0041914978379616885,
+          "mean": 0.010300015790606102
+        }
+      }
+    },
+    {
+      "period": "2026-08",
+      "arm": "ST_DUAL",
+      "outcome_group": "UNKNOWN_LABEL",
+      "full_rows": 12,
+      "price_qualified": 12,
+      "volume_qualified": 5,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 12,
+          "median": 1.0,
+          "mean": 1.3333333333333333
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 12,
+          "median": 1.0,
+          "mean": 0.6666666666666666
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 12,
+          "median": -0.0332865130929309,
+          "mean": -0.03792460711249442
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 12,
+          "median": 40.0,
+          "mean": 34.5
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 12,
+          "median": 0.010638297872340425,
+          "mean": 0.2021276595744681
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 5,
+          "median": 0.010136740412808732,
+          "mean": 0.014060042828235027
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 5,
+          "median": 0.06375053080918311,
+          "mean": 0.061475070717048955
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 5,
+          "median": 0.010136740412808732,
+          "mean": 0.014060042828235027
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 5,
+          "median": 0.022585609574439447,
+          "mean": 0.03586074257993466
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "BASE",
+      "outcome_group": "FN",
+      "full_rows": 34,
+      "price_qualified": 34,
+      "volume_qualified": 19,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 34,
+          "median": 0.0,
+          "mean": 1.1470588235294117
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 34,
+          "median": 1.0,
+          "mean": 0.8529411764705882
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 34,
+          "median": -0.031017981027891828,
+          "mean": -0.03421297880594314
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 34,
+          "median": 46.5,
+          "mean": 36.294117647058826
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 34,
+          "median": 0.0,
+          "mean": 0.1702127659574468
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 19,
+          "median": 0.012347195817345016,
+          "mean": 0.015373682451235082
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 19,
+          "median": 0.0,
+          "mean": 0.050893226476113336
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 19,
+          "median": 0.012347195817345016,
+          "mean": 0.014311176722074607
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 19,
+          "median": 0.01761588815507964,
+          "mean": 0.024362182452439724
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "BASE",
+      "outcome_group": "FP",
+      "full_rows": 4,
+      "price_qualified": 3,
+      "volume_qualified": 2,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 3,
+          "median": 0.0,
+          "mean": 0.3333333333333333
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 3,
+          "median": 0.0,
+          "mean": 0.0
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 3,
+          "median": 0.0,
+          "mean": -0.00366300366300365
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 3,
+          "median": 48.0,
+          "mean": 48.0
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 3,
+          "median": 0.0,
+          "mean": 0.0
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 2,
+          "median": 0.022977939289860527,
+          "mean": 0.022977939289860527
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 2,
+          "median": 0.0,
+          "mean": 0.0
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 2,
+          "median": 0.022977939289860527,
+          "mean": 0.022977939289860527
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 2,
+          "median": 0.0058629332814198465,
+          "mean": 0.0058629332814198465
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "BASE",
+      "outcome_group": "TN",
+      "full_rows": 63,
+      "price_qualified": 63,
+      "volume_qualified": 37,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 63,
+          "median": 0.0,
+          "mean": 1.0158730158730158
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 63,
+          "median": 1.0,
+          "mean": 0.8888888888888888
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 63,
+          "median": -0.03169307756463724,
+          "mean": -0.034493141320070884
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 63,
+          "median": 45.0,
+          "mean": 36.74603174603175
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 63,
+          "median": 0.02127659574468085,
+          "mean": 0.11719013846673419
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 37,
+          "median": 0.011635220584203349,
+          "mean": 0.02087759761841096
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 37,
+          "median": 0.06558376546285549,
+          "mean": 0.08873569945893615
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 37,
+          "median": 0.011635220584203349,
+          "mean": 0.017253466868324185
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 37,
+          "median": 0.022039443689083615,
+          "mean": 0.025835559939315182
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "BASE",
+      "outcome_group": "TP",
+      "full_rows": 6,
+      "price_qualified": 6,
+      "volume_qualified": 3,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 6,
+          "median": 0.0,
+          "mean": 0.6666666666666666
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 6,
+          "median": 0.0,
+          "mean": 0.16666666666666666
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 6,
+          "median": -0.00514469453376204,
+          "mean": -0.023287066869130013
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 6,
+          "median": 48.0,
+          "mean": 47.833333333333336
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 6,
+          "median": 0.0,
+          "mean": 0.0035460992907801418
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 3,
+          "median": 0.025947766614159453,
+          "mean": 0.0297438328367482
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 3,
+          "median": 0.0,
+          "mean": 0.0
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 3,
+          "median": 0.025947766614159453,
+          "mean": 0.0297438328367482
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 3,
+          "median": 0.008581290416158627,
+          "mean": 0.010954817133638217
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "BASE",
+      "outcome_group": "UNKNOWN_LABEL",
+      "full_rows": 36,
+      "price_qualified": 36,
+      "volume_qualified": 11,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 36,
+          "median": 1.0,
+          "mean": 1.1666666666666667
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 36,
+          "median": 1.0,
+          "mean": 0.75
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 36,
+          "median": -0.0276914819387043,
+          "mean": -0.033182712390314645
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 36,
+          "median": 44.5,
+          "mean": 37.75
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 36,
+          "median": 0.0,
+          "mean": 0.15189125295508277
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 11,
+          "median": 0.008976321717048891,
+          "mean": 0.00980126465778518
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 11,
+          "median": 0.055547051942120534,
+          "mean": 0.06467698225745341
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 11,
+          "median": 0.008976321717048891,
+          "mean": 0.00980126465778518
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 11,
+          "median": 0.016993040593309416,
+          "mean": 0.03593470425149679
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "ST_DUAL",
+      "outcome_group": "FN",
+      "full_rows": 20,
+      "price_qualified": 20,
+      "volume_qualified": 11,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 20,
+          "median": 0.0,
+          "mean": 1.75
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 20,
+          "median": 1.0,
+          "mean": 1.1
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 20,
+          "median": -0.03425312330255298,
+          "mean": -0.035359641133978006
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 20,
+          "median": 45.5,
+          "mean": 33.85
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 20,
+          "median": 0.0,
+          "mean": 0.16702127659574467
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 11,
+          "median": 0.012571270606642015,
+          "mean": 0.016970622134369815
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 11,
+          "median": 0.0,
+          "mean": 0.04437724449931455
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 11,
+          "median": 0.012571270606642015,
+          "mean": 0.01513538496581991
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 11,
+          "median": 0.01761588815507964,
+          "mean": 0.024241792927482197
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "ST_DUAL",
+      "outcome_group": "FP",
+      "full_rows": 22,
+      "price_qualified": 21,
+      "volume_qualified": 12,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 21,
+          "median": 0.0,
+          "mean": 0.23809523809523808
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 21,
+          "median": 0.0,
+          "mean": 0.5714285714285714
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 21,
+          "median": -0.01763485477178417,
+          "mean": -0.023230164037763325
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 21,
+          "median": 48.0,
+          "mean": 42.95238095238095
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 21,
+          "median": 0.0,
+          "mean": 0.0729483282674772
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 12,
+          "median": 0.017664274026369532,
+          "mean": 0.018202282171481194
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 12,
+          "median": 0.018266911327139732,
+          "mean": 0.08735732738485773
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 12,
+          "median": 0.017664274026369532,
+          "mean": 0.018202282171481194
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 12,
+          "median": 0.010665391878257657,
+          "mean": 0.022624461876578683
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "ST_DUAL",
+      "outcome_group": "TN",
+      "full_rows": 45,
+      "price_qualified": 45,
+      "volume_qualified": 27,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 45,
+          "median": 1.0,
+          "mean": 1.3333333333333333
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 45,
+          "median": 1.0,
+          "mean": 0.9777777777777777
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 45,
+          "median": -0.03169307756463724,
+          "mean": -0.03769385487467659
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 45,
+          "median": 44.0,
+          "mean": 34.6
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 45,
+          "median": 0.0425531914893617,
+          "mean": 0.13002364066193853
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 27,
+          "median": 0.011635220584203349,
+          "mean": 0.022222207570487124
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 27,
+          "median": 0.06558376546285549,
+          "mean": 0.08277529449490167
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 27,
+          "median": 0.011635220584203349,
+          "mean": 0.01725580617222006
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 27,
+          "median": 0.023836566701677997,
+          "mean": 0.025783260807353974
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "ST_DUAL",
+      "outcome_group": "TP",
+      "full_rows": 20,
+      "price_qualified": 20,
+      "volume_qualified": 11,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 20,
+          "median": 0.0,
+          "mean": 0.4
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 20,
+          "median": 0.0,
+          "mean": 0.4
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 20,
+          "median": -0.01478324875062953,
+          "mean": -0.029788542896864317
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 20,
+          "median": 48.0,
+          "mean": 42.2
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 20,
+          "median": 0.0,
+          "mean": 0.12340425531914893
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 11,
+          "median": 0.009174169409459134,
+          "mean": 0.017695874691422104
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 11,
+          "median": 0.0,
+          "mean": 0.04352923759579031
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 11,
+          "median": 0.009174169409459134,
+          "mean": 0.017695874691422104
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 11,
+          "median": 0.012726204963763088,
+          "mean": 0.020826017799542296
+        }
+      }
+    },
+    {
+      "period": "2026-09",
+      "arm": "ST_DUAL",
+      "outcome_group": "UNKNOWN_LABEL",
+      "full_rows": 36,
+      "price_qualified": 36,
+      "volume_qualified": 11,
+      "fields": {
+        "sampled_cap_close_then_below_intervals": {
+          "known": 36,
+          "median": 1.0,
+          "mean": 1.1666666666666667
+        },
+        "sampled_cap_close_recovery_transitions": {
+          "known": 36,
+          "median": 1.0,
+          "mean": 0.75
+        },
+        "sampled_negative_prior_bar_peak_drawdown": {
+          "known": 36,
+          "median": -0.0276914819387043,
+          "mean": -0.033182712390314645
+        },
+        "sampled_intervals_after_last_below_close": {
+          "known": 36,
+          "median": 44.5,
+          "mean": 37.75
+        },
+        "sampled_first_cap_close_progress": {
+          "known": 36,
+          "median": 0.0,
+          "mean": 0.15189125295508277
+        },
+        "sampled_final_six_volume_fraction": {
+          "known": 11,
+          "median": 0.008976321717048891,
+          "mean": 0.00980126465778518
+        },
+        "sampled_recovery_interval_volume_fraction": {
+          "known": 11,
+          "median": 0.055547051942120534,
+          "mean": 0.06467698225745341
+        },
+        "sampled_final_six_cap_volume_fraction": {
+          "known": 11,
+          "median": 0.008976321717048891,
+          "mean": 0.00980126465778518
+        },
+        "sampled_close_above_full_day_vwap": {
+          "known": 11,
+          "median": 0.016993040593309416,
+          "mean": 0.03593470425149679
+        }
+      }
+    }
+  ],
+  "prior_training_coverage_sufficient_for_95pct_claim": false,
+  "strict_original_receipt_training_coverage": 0,
+  "independently_annotated_role_truth_added": 0,
+  "new_fits": 0,
+  "new_rank_or_score_comparisons": 0,
+  "original_scores_changed": false,
+  "new_mature_samples": 0,
+  "not_tick_path_or_absorption": true,
+  "not_a_new_model_or_deployment": true,
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\v289\\august_september_paths_20261002_v1\\features_NO_NEXT_SESSION_LABELS.csv": "7453f1002ef626b3443a0b2b72b96a6ea1bda24561587541bb9435cb2b00fda8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_sampled_pressure.py": "960693b4f86000533452547d69b00f7551409d9324112ab54e327d2a6c3c1e4f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\workbench_latest_20261015T091200Z\\qualify_sampled_pressure.py": "150ea88e4fd705b2efb2e77e37487b98668d42845ecca8c0f85644c1f307d95e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\daily_path_clues_20261002_v1\\historical_relay_paths_LABEL_ONLY.csv": "b56ccae7543e5a9ba5e45d6ec31919f5bf326a2017b5ac6bf288617f11419f1c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\archive_august_minutes_v289.py": "8241727f42fb5f0aee04808535475e9dd911d96f7ce3731987d7d87ddf6e8cca",
+    "D:\\Documents\\ChatGPT\\龙头战法\\public_minute_capture_v1.py": "88b21cb80c33066f9e3d83c1466c014fdba1a006055e9a440f98b75271bc903a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\archive_september_5min_v287.py": "467bc8bacccaa9c084b6409ce95a9f5829d23638945d6868dd8389c7167ee224",
+    "D:\\Documents\\ChatGPT\\龙头战法\\historical_ohlc_archive_v278.py": "0bbdf22d8225cf6480c6af4371cf669bc7f6d226dd7027c4686ed852cb1a2c2c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\august_cohort_LABEL_ONLY.csv": "4f0ec731580865fb87f7b014d740887ae95e5b6ebd22a2e957c9727b9cf59ce3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\request_scope.json": "a5b7a32316638ed331e143749fadf263eaabc113b9513e003001cb65b33e86e5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\five_minute_bars_UNRECONCILED.csv": "502f8cfe5a73722a844ccfee78b157b1ba5abb36081ac45b07cdc56b8dba7eec",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\unadjusted_daily_reference.csv": "2e192afe97c7d3ddca108829967b5b8efdc5701d266c07d283b8e1efaa32dd4d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\signal_checks.json": "7803766e6e2a907e7144bbc5b7779a9608df468b37623964040648e74e777dfa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000011.response": "5b373ec639b2eab5bab6e630186b8f3c518f1bb4d4cea25180b70a76cd7ae366",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000017.response": "08eb029c4fc2c8beb9645329c3b0f25d4f79803113ab1b1cfa810f88dc038bb2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000020.response": "dc231cc4bd116efe163fd66c867a51c64343124c4340bec738b3505854fd587e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000428.response": "b8e0bdefc3c9e4ea6291774066407903314bae4bbc2b7920028b196bacdf2255",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000505.response": "a1140604f9f1bdfd225d6d1f930688bb44efea1aac3ba64b7f7b48320638f4d0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000506.response": "fe6ed669ced964a775e8b681f74a884a3d86106b7b1dd478a9c490a86c5d5649",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000510.response": "3dda1fd3bac7abea59821b9b0fe65c8b223e06623f7ffde93e2fe95bdb77c33e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000526.response": "4b8bbcff79eea3bf92753544866343ec68633647f808e15cf27eecfd9fdaacc4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000533.response": "50ba136484148033a425ae5bb501710c47598a22a038c28977d28746ea8bb257",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000560.response": "f445f556cf95de48501463fff70c85ed00174ca59c42ba3fc0fdc8e37b3fc7ca",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000593.response": "f972531928acaef0bb21b615f88f130bf45d95ea372e11b061ce604c73377e33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000595.response": "e9cd5ff1d72a2e176640aae38e547f6d73feac9a4d46c2353a265fc30c09d7de",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000692.response": "f1df465aec1e7c6d60bdefbde05573abcd9f78003ced5be98e26baf7ee36d4f9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000710.response": "965fc8ee377aa87eac34a2c01f2aa80d4e749c7094d9aa49a09818df98b1724a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000712.response": "18cd935d84116780d45fc5df9cb1dcf4b0beb953bfb0c549d7a47b641dbc7278",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000735.response": "b572a06ecbeee9f449d48e014726740ccca1843f46e06bf2a4fa08fd80c7e5bc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000802.response": "2f734b2dd64c33a2f712015a9a1d6c121abd2b5cdf92098da5941983bc5574ce",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000811.response": "f6914e34bc8bad93f753aa8aecaa43bcae792b7939ecf50054b3ca46fda8dcd4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000815.response": "f771f0e9542f6ac55291e40120f077ec383141fcce0fa36a38ce85dea27c3973",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000820.response": "118a2c967b7b10a5f5e98c7147dd5667416561ddedf079f5f99b1a2315d93073",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000859.response": "fcbda023fa9a5fdb96fdca6061c7926a1189151b6b441c14008cb44238997e61",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000887.response": "0240f6fc6bf2201dcfbcec9829802667bfeb3cc0d9afb49cc6c538d8ff03881d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000890.response": "b21a8ff00467c4e38bef2e269382b2121b31765e458c9f0049d56e21076afd92",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000931.response": "7374c9f0721fa5a71ccd05729061d31e2a6c3e2fca2bc82fe2b4808be8003648",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000936.response": "b821ade2070bf8408322e251d37bf1f2a0fc47ded9dcd09b2c7067a5ee8386cc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000962.response": "8f85cb7e6409382dfce4a2a70ea840b7cb3e3ed94cff32660f693fd60ab64a7c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\000967.response": "baff6d2f9b844423480f6d2c6a68ad478475b75f21d7c40c6c16b44ac8f2dd9d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001223.response": "a5a86ced1000b74df0fdc8baf588f62a00d30e7c6709d580943a94e4441b03ac",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001229.response": "96404d18d80d0aae4b783cf9cebed3e10d418ea59b0e399bdb5da1214577f970",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001258.response": "509863185695523524c299f713a74932d375f03dc0388521cf94859a9dc38707",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001260.response": "19d5c2c48ccb2d013f1ee0a0e7581c92239655567d61050f334a3d857882c3ea",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001267.response": "4178c9692c5c27bcd8219300de8efddd6f36bf806b7cd69cf20dac67a25829d9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001277.response": "039e9803da8faf464f584292c4a8e0da480c5986a7832b916215377e902f5f49",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\001331.response": "8c5c5858f4cf760ac3587d9e5a255c9febdd6250a7d33e0d148f4c4de0b32c22",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002017.response": "d2145504fc7cb0bc74f3e4d2767452d4693383cd4abaec2be0a3e3b7b2054a29",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002031.response": "3038a75436da5bc78207dfa2418ff3896a298c8c8f31d131321699a5f969d24f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002038.response": "b498e4e4cd2d933115598f6ac0b24bf93d1c1b6923e992e0733d23843e91bccf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002041.response": "057045e2ced6df7f96932afe25c1d980363b1545381e31f773357f533f80d05a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002047.response": "ec772a210e0f990cf9cd3e3e21226dba78eceee2e1afae3fe36dccf7d8fc89ed",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002072.response": "1016ef29bbb0e41d947d0697cbee967c580c4cdbd38ddf8b602206560e991f00",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002080.response": "a1d4fa1a77cb63072b5c32264f0296ecc1a9b79f32dfbcb50ad765b39c855422",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002081.response": "6c663a44e9fa7262524b08c8442e6c556cd0983366958a0eb26bcb43e036a7f3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002084.response": "70801edfb1ce46bbfbdd854a90424deefd6bec3d1d677beb5c7d980b3db678cb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002094.response": "ac0207633466c3980a7b799a493e049225b7b352b3111df6930f4da1f1697eb8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002131.response": "9d5147d64bde0da1ec7092eccf1c3f7de5fd69f555a9496a9f7d952017a92b64",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002172.response": "e85fa474d91a28b47d2cd6a4bfe8bd2d396347dc382ef8e505061d0c3589022e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002194.response": "96f1bd7c8afe084e62c39aa7f638d8d6d30208cbb7dad34c06b72c247aa7f304",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002214.response": "a9cc247657969c05a283fa1dc1863abac95a4a634589c5b0e8ab2145f3c512c7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002229.response": "bcafdb4263b3b8fe3437d3d96386aa0a195a901f80d6dc9f950ab64d1815ac46",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002248.response": "27a228f7c8b8eb26c0196b1fe6ab3d80c67685b42009a87a02c801c248f70f6c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002322.response": "c5443fe6b0f1112857748931ec1d689d29ce9dffa9507b8c983d4a54df0c77f9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002329.response": "3df069209efa5df821d8018d1e7964041b45e26758ef0210446d13b19645d0a1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002348.response": "b1ab1cef08c78c90a5ae0664e66c554df5104a954c013902aa7d71adfa32f442",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002354.response": "102e5dfeb3c671386767b5759b4b740177d8e4e9abd513b649fd3b950036aa0d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002361.response": "3edce3b3809897a448b0e07e82d47c0747adb637f25dba6dea8cefdb37d61bec",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002396.response": "5b539fa0ce761452d722866f3305420d9a6bdeebe6f1c9fca18eabfade537e31",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002412.response": "c88d6ef4e03b9c541f0a1ac4ff762e9abdd0706a89c05c7d88c5ac4d90f518ce",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002418.response": "69e9087c7406ebda7bd61df63763e75546b37bdf547a887f837f64e29dd2a11d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002421.response": "337da0e43b3d682b7e82d2b6ad9897b9a286e046c847bd2e7ac0afea28e02561",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002425.response": "cc43f2a6a1b27745266a441363c9a02b110afb4ff3d5f6cf14469b6fc2d3ef72",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002428.response": "32b5220248a531dba05f1432ac24b9ecb2774e27c21738d977a5b967a5f6d113",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002437.response": "8ecac2249463e42c1bd2709febc1c2874a7e03ffa44ba53a61edf593bd5be1ea",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002445.response": "ba29786bbd1f5de68581a44ed551de3aadf127587e4b5b27194b613b4338035c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002491.response": "15849f1065b2dfb061f04627ffacd7b2a062626a6b053fc48c36b9099a24b59c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002536.response": "e462d13c9232c3bd950b74a1b8a87b190fe0c588bf58402591b80060e9ec779a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002552.response": "9c828f55967e2c03dbf80294c9341b2fbb92343c4cd67485607618a2fdf5c281",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002579.response": "2e2c974748c760331ef636cd13745bc548e34a48d9309da9d596aa308c606606",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002589.response": "2f50dc22d715ae4526d668e4a72129d09b10d83fdcdba1b08cc87ada25a7de41",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002649.response": "1c28042fdf7719fc40b1d0382c8bebdf31d5cbb484d3051bde874c98d8461cd1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002651.response": "baab5048101af90f69abb57ae6c728574bfe23311a0d6b8909d1b46f180db8e1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002655.response": "0a52d08e14ab4fe8a2b0be4427a0696b1df24cb3c314a7dc23f4eb2f1e00bbc7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002674.response": "c721d24a30c580a1f12d79d1417af586d4cb50252be557b662ac8a322bfa04c3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002679.response": "653fa8be46fd8bfa7ea63dfd9b5fe2132b203378ca5c40e90403499fef6d2fbc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002703.response": "69fcde7e63e642a1d019ffb557ae8d25644eee72b111f285ddd8ceebe445f05f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002716.response": "348f10236815c669676aec821103bb1fbf6f4332a03b6b91b1868ae8619aecf2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002721.response": "fe89884aa19a8b9ddba1af22be7d612c3bb1111ab44eb37139f07366569e993b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002724.response": "effdacbf6ce80b3b97be626d076829caa03c11756231413d73c4b46a51775df2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002742.response": "8f3d10945a3f2ccabde46dd79b110fed9e4d41a58a1e064dc2c52e6ea1a76594",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002792.response": "6914fb2078c9d5dec430e93ef9eecb193fd4e82d68904313fcaabb75a5cd2d27",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002820.response": "5b8bcc45c903b74c4c23b5993c82c01ad53afb895290ef9a1636171277618494",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002827.response": "1b1955e8765da7d0624cc3a63eb6121e3b0b330c9d9baa01d7bb5839d94457fb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002855.response": "26f4ac226e15654de68fd2676de6003866313c3f9bb5159a1fdf8b5f4923b67f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002886.response": "3df20fe71f0d3c71d091946552df44e90ffbf08fb786f4c4436826f120d4f9c9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002896.response": "75207909f140f2b9d2bfebc7991cbb6e35cedd8c19d661f41cafeca0afb97c15",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002900.response": "b77c862bca1405c73ac54a6d3966f674e9da6b4fb50d6a94121ee7cefd021972",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002903.response": "933e9aab2086fb4612b4b764275ffa20d2ab6d734995eee4d95f96b695957ee2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002907.response": "75bd1c49a980540c40fcb1668ced4d5be7380e06c24a0af7d419c393b03f4a36",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002942.response": "c436ecd7700338435befc2b8c330fb59ac58bd9e50397587028c98531942fb02",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002949.response": "adb088d6398dc3a826c11d14748ff58d7bff696a0ced1377a199f91986ab9f0c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002953.response": "6abaf45b868fd9b1257b35fde38c45aa43a66a4fcc3a248e1d3c959e768988c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002957.response": "573fd120ca209f6f7fcec55678e19f68963044b1d2b10d7bb6a7aa0b7cb9efe1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002963.response": "031642dfce3a75d820355e538e470fbdd1e81b6bf0af52350639418bdacf84e5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002971.response": "d9bd2ce387d5de3398656053aa30b5afbb86c23102a21ef98766451c329aa243",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002975.response": "66cb04d80a9935778a3d80933b1e9aaddd35d13d61f396d443ef8c4fcefa55b8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002980.response": "0540226d9a1eadc9c467604d971c538bd5a25d0599822183aad505ccf5ec20e0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\002990.response": "61c8c896775f421497a80b400356e80128b2308f95371e094376bae0d300e83d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\003001.response": "b22d426664488d477e375108067547799ca090c5815c3b71d406d148cff41592",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\003005.response": "25468b7254434693ebf056caf0b9e00210f39affae176a8321ea7a983051ea05",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\003018.response": "e3b90fb93eed520378904b25d48b7a5b73cd1c16d94fee274c2ce857be9cbdf4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\003031.response": "70a436893901a94142956d9fb7f9ac76157c44790243b45791844f9b67282779",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\003032.response": "f9d36b5f0c5e7472b022e520e4800588ee434589dd5b1f6ac69b0611b68cff8d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\003040.response": "9d66a34b8a0baaa8caa193aab83b0ee32c8650bff89f3d8097dc274baca22822",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600095.response": "09d6ddd8da2b7ef9127a648c8add30f1504780a9b2a6cac88852740816a78ee4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600103.response": "73db68909e65f313e8f8631c370e2186913f7c85f12ae21228c193c42ff3f9e0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600127.response": "6973301aa0fd545a47fea61044d8a5f01d04c6b2161ac3c3f42a321e664e8e69",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600162.response": "c40ed1f05642abe9a87e261892c7890bbe1626814517b09610207d9b6cf89c70",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600206.response": "6a0a5945611bc0c0a80361042e4a991a7e5ab30efce15ff8eb029eb93d4d12f0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600227.response": "b0f159bd1fd88d5c93433e430928c1620329c90d2ec1eefed7a5462aeee6e41c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600272.response": "821f18ae343ac27e0c3a5af7b57bc31cd5fd1867dba249634633cfbb297f5024",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600313.response": "3a8dbcf38d00a4428357bc88774a8d456f24fae783b5f43acf007ec2e817d6d2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600353.response": "27ede1a1610b1a77b04fe13b0217739af801e3353ac5e11e23d46cee24819a40",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600371.response": "53575ac0181e07274109aa8fc943ddeb7743168174050e131bc4733090123b48",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600378.response": "812720638f3faf19ab8a46ccd2f4685fe95cf90e1d4308c953d1d4e7ae3d33ee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600397.response": "a8e8e231be22f287ac8d6ac2d3b0444c0b265c4829f6f86fa9437b2959724bfa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600479.response": "02e08ea83b6f9610322819f1baf9cb1d9c8bb48a088403c66bcbe0186520a711",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600508.response": "1089c0c8d97bce6d14b45ff5558be14014bd11b240dcfe07fade0346164bd0bb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600540.response": "943718dae68be3cb79aed42831a1bcf473a4fa250e63903072703d9daab58a2c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600551.response": "3c49abac6af0bebdd0b0fff25502a068fbde518f6150bf1a357bd446dbbf32f6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600601.response": "69ae2a2d6cf2cd05fa3d3f8d55a215fe4d89ea30c92b865b70732a777377dde4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600613.response": "c58b3cc5a3c541afc73f70b349fd7c4a121b96a2107f8ef3f0ff46c051ecbb0b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600641.response": "3c8bc43ee2e3ab2d19aa5be905142ef0bd5f24805037f4f8c2cd6df3d3677c18",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600654.response": "7e993edcec2b90305331bc34794c5d4aa2b2b83f62c8b20f1970a68f75616c75",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600664.response": "36ca41ea7178c185551f3ea87f14054baea1ebfcef65836005426be630e2f2c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600683.response": "339ca597c6ddcf0bc02c15b3e453d50048fccb7860e999242c2792c0c120f2c0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600691.response": "e0fbd61cf91ccfc304d54a166122200e783f986a597ad5d9cc2499d9e919f4c5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600721.response": "96c2e092f0b574ed275b606daf398397dec51680af4af54460e843cb9b081044",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600722.response": "63201b238086dc5d275fc6b2571514801de258eda471b604f0776edb1125ad7c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600785.response": "74ac01abb234bef7873dc9e483fc776983dc87dba1865f94b0e406cabca9b1ba",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600833.response": "0814887fe77f868114f05af9684a75900f85ea545361970c8f08411e57cc6b94",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600881.response": "fc12685258b3a05b96a1bd4ac884c077adca27ca457822c00c5814f1e8ce921a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600892.response": "888be2a111fa991b57d299c6ed7a0d410942dacfa8e9bce8cc854bdb334756f9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\600969.response": "0568cff644d91103a26d84a0fdf00ac96ef38f8d987b7cc6f1772807a3c213ec",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\601086.response": "87655efd079250363a5599b72e64d1dfd61bef02da8a1d225ccec455da0b6315",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\601208.response": "746b2ca684e74dc09aee883eaec861e05c1602185dbdf06a2df6024a660fb911",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\601212.response": "d18702e6f623068fbd8b3a35bded241c2c4a60d523ee712add513bd2f8c7b845",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\601700.response": "6b5a6c547182e17194a1e4e2d070c809e77532800a1df68763f2a0cf82f888c8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\601858.response": "f77765cf1c4e6162f905bda77de5411f655a924196469aeceae0b69a60e7441f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\601886.response": "01bdfd46e99551293617b42cc360a28317c249435dad9235b5fbfb7ffdfbda7d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603011.response": "9137ea3242ab282a31cbf177a7d9e052af2016c8a1b3839e6e67f5db584dc5c4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603061.response": "57571aa13fffc7004b5cc1c9ed136d74ee4116da66bd9d6e28d8352294c42002",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603078.response": "ae233ff97ca06f41a1bf3cdb6d2336e46f0a24a0b8a27b9199a44b91c2e98590",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603079.response": "f0b46ae0cda685c9a502b5990adf47a28e91ee0db09be76c7453fc78c0d374f7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603089.response": "7ba69d9639621b9f56570912d9708b6e4f4ee2445534660bd7cdeb056a69fd92",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603095.response": "0acf79cb0e4141448ec310d1cd4228d6fe5f91498076d0ccb38c60be04235b7a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603106.response": "262260bae11b8317782ee9aa9553c426bcf0b8c609af001b2a7b9e49ae6fbef5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603115.response": "ed5c2136793105d11a70e98c4f1819dea3671f35d433c8ef2f8988487c74c3b3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603118.response": "14c8a9a3f930519559c6c660693538c35417d2bf19190abc861069ad98be7373",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603186.response": "0306872ddb1d83e2270cc363bb108e1ec966eac7b4957406f74dce674b4a4fbe",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603188.response": "60b5bdabc041c25f8bc34ec792754c52cb82dbfc63089a8169ffbd2d70cecb01",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603191.response": "d22b281f3c63ca69eacb583686392bc8a3fa94ea7c9098edca78b7090fbc0e76",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603222.response": "f2368353d2a1d0c01ad3c36844d61b8d91fb31057b232a3141dd47560d9c3e32",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603228.response": "989d634870112e0abf490b839efb42a9e14eeb2a29084663730bbe6fab1c9555",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603261.response": "96ae62fe5fc7fc34db41b219d731256356cd6e76be6fd347c40b5bcb88d3b9f4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603269.response": "356b10b0b34632f69e71c27d217ae09004889ad414cfecbf8b5c90848eb6abe7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603306.response": "0a702f71ca7f18f9ada83151cdfc7ca721872420e7a2d5906bbd43c0f93efe61",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603330.response": "71fa97aa0d45cfc0ca6d3286cb2b678823bad47bcd6f6ec33a8bb4a549e1c4a3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603395.response": "a644faf19e89cce8316f55b94613368c794507131175bdbe2c9e6cc50011861c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603466.response": "8daa248ae1991bebcca2399e6ea1244e16e7772460f631e970520bbc164e3a69",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603559.response": "3bb025d318c291f5db1c4c3cabb86ab7984bd61cceb7990dfc5e16ce431e3f36",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603580.response": "99ab9e0a15e990a44045cd0823c4de6fdf129740ba23c4ff935ee9e25a4b2e9e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603618.response": "2ec485e4f8ff7409960da0dfac9125ca66d5bf164e3f5ea1d904ab58b5acd60e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603626.response": "72914059ef7ce26c853265c40890c542c68814b3d9e3b53c5591645245bb9193",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603629.response": "388f12d87f94129b5a2e0de22dae53a42a20ff2707a277c2c214322824d0bcee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603682.response": "0929089f0cd54ebda5c4f542cdab00568646102b5775012f6c690524da3bdbfc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603758.response": "1c48f1ca68842145c3b5ffd31a6c3e03df9cdadb06fdc26ea63a20de7b8f297c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603773.response": "15cf1f5aa6708ad19b114cd7e0c5628cf8451a9aee051c1a79aa239f8089ae66",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603797.response": "351c95c83bce059e9fba61f9d8174752b518efaeb7fd3c73865002b34ca2df3e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603801.response": "ae93822f3a1bbe13253a56b4d493f2c81c5f171113d7c519400866db9a8eef18",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603823.response": "7c36bbbf33ffc29e30424d5530a03a5a3fd2db33d1c97032d52b6bb07d20ff72",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603887.response": "ceda86674165a860dcedfbfefbdf5fb925d6e50fd45672c1379d860ef61bd91b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603897.response": "516e13c35e5bd7b11d981e66cc8fa7a105647c3846d5487e5228b62fe4721ccd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603900.response": "5760c38222ef24dd3666eb66a35ed574d113477b8152c1172df23e69bfc9961e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603936.response": "f1c2213883a3b4a10bc98b3993938b251de30f311450dc60ea2b49925c991ac3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603958.response": "5d3380f6b80a6a4f84ba47d06e6c74230d1771b1a0f0861aec6e84362ac0b833",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\603988.response": "a7b155ca8e5bf69cc2417e35206ff984c54f09dd89f4df2916895da783cf89c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\605167.response": "53fc2c7762d9e9ec8cb7d1819879a340598e8c8759adf5b4211cee2c40a6d04d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\605179.response": "edae0f3221eb5a8d75bbb2e3d4a7953eeaf84a04780e46c6fd7d7553c0e094df",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\minute_raw\\605286.response": "7394391d8c4fd300e06d742bf9cd25705cd73cc7e5ad84a22465314bed53a931",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v289\\full_august_five_minute_20261002_v1\\report.json": "344a3b7f900a1d25fedeb3566688be89f11dbbab2414da3a444c6cd7fa43a1ec",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\daily_path_clues_20261002_v1\\september_relay_paths_LABEL_ONLY.csv": "54191bba9a7c4cd7f27b33dea846ce8e130db16f8dcfec2acd501b435bbcc670",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v278\\september_unadjusted_20261002_v3\\unadjusted_daily.csv": "deaa3b134e4a814d22b256feaddd35fbe063c9c8b5642d63a72975306ce7ecb7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\five_minute_bars_UNRECONCILED.csv": "2f7ea12b709777b01d60ffcbe868264764c6a6ffe9f6eebb8e6125551449120d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\signal_checks.json": "cc6fa61df14941bccae8c6af6d96b36607110ce78e9865e0281f7a9e8786c5f4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\request_scope.json": "5d04b3cfb9cf5d3cc79875a527c14cfe900c37061d30ec9a40d96ea9c57362c6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000011.response": "b95aca383e6e35363a5acfe3d1c870ca14a0102385726e3b729b881af208af7d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000428.response": "ad31e6f397562f9d5001636d1ba4a4d0ba74bf6df3b8982df3b772096fd31810",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000504.response": "20a2eaa02c0f14475feb3c1d1125b088e53503c484b2b64cb0ad186f4792bd0f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000523.response": "2915b558b4b89204d159b523f07bdc853f6dab0035399bb3c578c98067ada0a5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000532.response": "869b40d3966915cbdee07a5e573cb5884d57d127dc807a4af3021c792298a4b1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000560.response": "8fc526fc7cf0a4511907fe41fabf8521ad9061f71aa2e5910f3566778b59938c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000565.response": "2e4f65b9720af47c36f2443bcd0dfc33d5a610918bd7627be39c79543be30484",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000678.response": "7af454881378c6aa7e7c6c0417de604dd9c7b3dad1c13447a587cfd45ea0b088",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000735.response": "fe0b7714c37f0dcf2db12056e6bc5cbb22cfa007ceacb75a23240c6b18d8d83a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000759.response": "59f3bea03c82afb96236c5423325da07d2dc020023ca8fbfa19e123364b2f8ad",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000798.response": "d17aa4e7065f12cf856495f41008b0d29dc893383beb528bd3cb3de22f4ebbad",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000823.response": "e931db840d87cd1106e063c32b3bed22b496ed7eda66a50837164ba4950e928f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000892.response": "ea3c01404563bd637a5dd9b3663cb4c7037df0673ee28ce28131cd812e8e033f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000910.response": "194a0374ad79b15058c965de17f5e3b8bcb6416cf7695610a3e1c4c6edde4343",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000912.response": "34f4bf7d425a77cc678b9707ad726cdf1c1d8df19d13d1b499195ec2cf9f58dc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000930.response": "c1754b841dbcfe9fc80753738cec3f2ca270f5a8805837ff4da14078f59d837f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000978.response": "58135edf283b07c3d874a2ebf0bb990cc01fd706e20ee141b47dd42689a92793",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000980.response": "29cd0a3de4fbd43031e70f0e1ba34d1c71fe5e85220423762d8e4412e06352ea",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\000993.response": "9ca77a24b3b5c49a383920fe2dab639e4b4eb129f18a164e1a1dc0d8dc520e18",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\001216.response": "62a857d32b139b97a07d91ac30feb5c546680be1ae082509ac168ea88e429089",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\001317.response": "b55d3b7098ebd601b89752add73c43ceaa53d888e3b008b35b8820bf4529eeb9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\001330.response": "a5256a74f96685107dfd3f98062a7770e0cb134b35fe2dc9d4ca241389fa0685",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\001366.response": "5c44f11ac6fdab7084326cbffef75d883e69c52930b7a92998f175f67dba544c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\001376.response": "1ffb3e585b510c5ac324b0ece49998d35efb14220bc140d54278baee0b4ce01a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002058.response": "c5694217f6acfcc5d30629262f725c5b14d03811629e7495c99a407391b4136c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002068.response": "b16e150814a82190811e9f18e8547e026320f24cd5c993c7879821efad08cf13",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002084.response": "373eb93d89ad17ad41222c948395431ae1026135911c43662db30748ad080a0a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002172.response": "c97e33148549cc7e8ec5495487a3c27ed05e1bbc4969052a4fcacc4bf20e6933",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002201.response": "2ec6f85f66861878b22757b88c7c0d5c6cbb5f66fddd18789d36632415235102",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002232.response": "e23914ad7abc1c6e12bfbed7bf2baa84337bf65e04f0e5080025a2bb64f76a8b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002242.response": "f188904db90b37a495aec5367eeffeb1bf6346e08d5cb9a8eb55cbba3b241b4f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002285.response": "4974cfef16ce08255327e4f2606242d75e986e5f56171f9c64999435f0cfe952",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002295.response": "f687d00d2e57ce3e6cf2cbf3511c80cb52f8e1dd5a56b325fac47b4a743fb3f4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002349.response": "a6b0acaea663b90e9e246fb7cfaaf185abe35c75a955233360e4385f85f00c97",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002377.response": "b4b85ca4ee96e5d1e83a9e35b0d615165704e57af0760bd826bf2175cca66d71",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002403.response": "23dc970eff86a3f47df858c7ef4d6ef6a1b7749fd1db6d5ff291eaef480883ad",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002453.response": "c5f4baea6564474be4115a52982df90c4b6b3342dce7ba9808a8064e5c126a3b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002470.response": "df4ba70fe646dc46abb90a8f463ae2ddcaf69cf6980bb43d403b733d2b84d846",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002491.response": "29dc2849f62f483184cdb2276dd06f8110f68a9f9e0807910c323d8e3e8f7ac3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002560.response": "df9b228a411e76292c58afdb77f26c370941e924d2494b1f287cd521f414b0f8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002564.response": "91e2576bac874af0261738dc57a7f612c72e5ec3e6b42d155adcbebf70554ea2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002579.response": "c46e2e6732e1d1c5a63a812a8651889949ac5495036eccb91dd24ef7baa3cf69",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002584.response": "847ebe1eb72a9f989ed1dcf22afd8446b8d9a769c140851a818b2f247831c18e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002585.response": "b1d3651c486193771d1fa0f9c3db4f3263d57003fd27a9469803c0e03b69b038",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002589.response": "63cc869ac822fdddb33a35362717ced89c69b6bfdda9d3fa6b739e3dd8c895e9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002631.response": "fbb11fe64cb38782c9cd2d2c2772b3ad34478fe4f3af177df3ffea1c04e969b9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002655.response": "b687e7ab185797966e366ceb094b9ccc9b299715b8bcde3ac5770ccb92c89512",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002679.response": "8ec40ec38ff0ea70313bb71908fbb7eaa1f11fc31bf1bb6fbc3c853c6cecb44b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002702.response": "26c16b291800a61191acef798f49a0011902dd39fc41efa684c023a38d0ce0d1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002790.response": "2dd9786c5f599744c969cc18ace46c11c3bb954825bcb83faa8e061a9675ada1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002836.response": "46f222b3347db659ba2600c21efc2af38f4063a029f466127d6d6210f4be7a72",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002846.response": "43a4dc3314012340584b16a284738dee86d42df58545c3f5c2b5ebc894977e70",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002855.response": "e5c2483291af392043f2ea1379b76326a1f31d53a0f3561ffd4c8be17d2fb058",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002866.response": "6e95b5550254ddeb05421944a80b97c2d46b6ddd22b5569bc4130460bf12507d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002909.response": "3ebbd5b209027077afad1b2471f5d55d579ed81df191791f91950dfc5ff21fc4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002912.response": "c4215cdcaa553ad6318a6e44e8c95b6e727c1dcf58ec33f7e8da0a2a3c591142",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\002980.response": "182bcb57ca0bc70f6a170b57bd943f71144e37ca94261f7d39fe3d7ef46c48a3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\003001.response": "6a66a37c4d91bbe18e55e48d7447cfbf65b4033cf3a182a21272c2ed2d08af81",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\003005.response": "879b3d80f973960c3147d49d983bcc46486cbea3587a5a5ddf8ced1a9a25d636",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\003026.response": "08f7b1a9f46f745bfa1e8ca4598abc75f6e93a3858e71ed0a4162111886ff911",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600032.response": "bd06092dc10a17b5a08efef87e400054338a7649c09d51df4f3b8b1131edd25b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600088.response": "1be55c902e437bdf0a4f3c0e3ea78bd714f1efa7a5de57da5ec21e88fb4085e2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600108.response": "8bad96475a90aeafdb207e133a7342967f4d275d23ec4fd57d49fddf0540912a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600121.response": "ec7db6a6866604fa7f455b5c82e7e9288af2e09325eff5c210f95ee9ff27953c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600127.response": "f6e8db1ce56b928cc64fde3964f1394c2d8d953f8647c36f19a5e6bdef0d19fb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600192.response": "2eaea66e9a2a2dd9795f82187e78065883c65bc82c63174a22521d9a2937481c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600241.response": "f1278ae154c15be81d70b46483f781b84039dede8c5e85af9f9a80e39e25cfd5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600354.response": "1b30194d346ef5975ecae0db32ec078d8739839563d7ea363a056052e4bdc2b3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600359.response": "a95ef498e158d61faa90783c7b6cfcea0c3711e9e28232b4b88e034faac61a0c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600371.response": "4c7d5a51545405535dce4c76a0c58c70ef422d9e9c7dfe52b807146cd0c86e47",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600448.response": "036abec114a136677c4059883a8799241604a2be6e81144cd4de4b3d16619f33",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600488.response": "204484cd5e508571b224072c7706c5fa50b02a0b2baea80aac084fb03679a66f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600540.response": "6fc6c1950577c43556993ccac1d64b83cdb32740d23b17800e53312a4c1856b9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600551.response": "b3cd5d63e0985df6e3feb6d99072dc230a579ae15540503afeb23a8012ba3ace",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600606.response": "df7390bb3395b3d671dc7e45434601b91d683fbead60f26fe40b24e3df240017",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600630.response": "5761c791e17ee623fc175fc6d1c2abb3317d74739b7ab7c641b23de815a878a5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600792.response": "eccb567eada5c6f03649ee004b5fb95cc413ed15248bba4f1131fe3047e5fe79",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600802.response": "0da64560509acd8fd57b91e8b59d36cbd0efbf878324d863b811783a7f459c4f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600825.response": "bc3adb36a8f6f54e473f93dbf219c751b87132fa93fb858cb444bf9f57fbe4f9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600865.response": "fd02c9dd6a4e4954ce09cb67524d94a48e9a5d08ecdff703836db364104de040",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600876.response": "6f86199610d0b130eea3616bcf18bfaa845d1d3e70b353fd7a89047c7a23f40d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\600892.response": "1b26268c65d5b7412315dfed2707697fe2f664670564b2f800ce3324e3aaa992",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601086.response": "1e33c4cff110b21c8864d04502c9b95728b092b160ab98f4cf5b45e0b9a7d1a8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601123.response": "516efce14cd0c74b79af0a6c9128027755a137e601d870876651d85fc335ec1c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601218.response": "f44e675b24de407264cb128e2bf6b6ef2d8df4edfdf37e4d4b205fca579b3263",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601579.response": "4051c802c7166f3534ffb1385d0cd8ef8e0c4ff9650891fef837cf68afff6d3b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601595.response": "b340e750683d449844a5b88e1fb924a87187e4498c910c8b04cd8a46e9b10fbd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601811.response": "6e6fa4b77c1941419ce627dd59b5ea5ee79a8d5c23972cb06af6e922097b0529",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\601949.response": "2e65f8aee45a3d3459671bd6aa80fcd8dbf50491ca8445d7c1a970e032a5616c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603001.response": "924441ac7170dab21b991a0782645ab393ce74899712a313e194828b26c6ea56",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603042.response": "16ef3be9747873b92a666fa18f3f983dbfc822a0d349c0fc977632cbb2b9dca0",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603068.response": "dea62dcecaaf66f08c4c0d826f04b2e284f4e1aa6be3550e151e0ef3081477e8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603082.response": "34e1ec5e6a84b60390424fb6274db502be38f3721ef5f418eb309c33b3f7f3e5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603090.response": "d23084e0efeca5baeb05bbd1ef5284492e98021bc6778aae08bf4c580075f15c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603162.response": "9c56818c6de25b1cdef1a5ec294249bc8ac2e508c393bf1fbd43557ec9a78ead",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603188.response": "a6975250e64a279f13cbc132fed8e929d84e598fec82d2646efc7f62a4c9da95",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603200.response": "c45591c2d1e2384e9fe8d94cf35398509c19e69523db80e5a2b3615d85c7c5b7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603230.response": "9441c91bd961b45ae41da68d6ec22ceb4bdb1b5720f527bff1f118c3fbcb3e57",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603248.response": "1a4b40cf07657f01d174f72cb9cc0c7e0fc366eac9940963af6be50719191559",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603278.response": "b36ebc1d5c220bf6ab2848168fce11729564f620488c02731d716ecac93edc2a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603316.response": "de85b4a2d27ab76df9f1397ce73b672f9476c9917e6ea8ae4fd7aa2e8585990e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603396.response": "2857812bffa2930f1388c42c4d598016115754b65c43dc6ef6179a332afbed9b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603421.response": "3eec7abde7c0dd9878ae5a8fa39eb0191388679f7894db5ac87314f9044765be",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603439.response": "6bc19002ad4983c39c638fcc80a5ce69adc0223adf4983a3ebb14d0dac6f26e6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603533.response": "3c20a6e304e3e5f40e8cb7be6db5e01dd117c83f9a29587256d750a1dcfacb8c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603626.response": "84f698fb233594099872ff29854d4fd0da977e14741044f477c3e96e73d3212a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603679.response": "8ddb741660042d0c118a6dadee4f7724cfd2260449365e8e9034ca0b790a168b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603696.response": "1671f12d7a171284d0caea0748210685eca1092147ba7215f279ca77a3c24b14",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603721.response": "e0f700eccb84ebb171826723985af53c3ccb8ecc05afd398f6f418ee809e09fa",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603823.response": "b6273ae5edbeca315d12746b31bd2fb088363ed67ac88a6d15fa10a307c22797",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603949.response": "b14eb4110b02057dc0c6cf8e7581819244fc8396e1e0f2e20bedc221c39cdae4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\603999.response": "61255f5c7e3adc9f7ba5e7c31fe5c5754b45fe7aa7a4fee98aa7f7d55ec7192a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605058.response": "37ad28c3075eb6bf24aa27cd29b3e85f866d67395997fac849ce5f6ef26ba32d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605069.response": "a6d8a6d3257d26be4ab65ea2f97e9f9b3c759fdb7ec2e3bfda8a50ad7ed41224",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605077.response": "feb0843a06a557e914e04ad6d1d87ba5b356aaf536723e1a92e6f710816f3914",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605303.response": "c63e06f6d44d30dff6ac4753885356ee65947eaaa75ef18b6e6e2dd17268bfcb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605388.response": "cb5b7ffaa5e85364df7cfcb65a44bd1d65af6dd7591068c15ee071ed6912f700",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605398.response": "744b4a4686eab74295893444f121f5fdf32f59adb7ff6f4abc784c787ba5a6cf",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605577.response": "06db5ab03bbafd14ace7a41b3188597c39b00db8855199fed746bbb65fe508a6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\605580.response": "6d7e6e8f76f4afc663a067efc6e914cc21171375ddf963230c0e9f907f9cb9ea",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v287\\september_five_minute_20261002_v1\\report.json": "438e6a0659ad1e25496ad9dc11ceece0559afc213ec3f3ffd3157ec6a18528bd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\delivery\\complete_paired_predictions_VALIDATED.csv": "cfd1204bbc5237786ce701339f157339d0e6cb22c2fe08bd6df89e8ed6ad9ce1"
+  }
+}

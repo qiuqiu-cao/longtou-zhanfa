@@ -1,0 +1,24 @@
+{
+  "formed_at": "2026-10-15T12:43:45.717621+00:00",
+  "legacy_frozen_columns": {
+    "cycle_regime": "旧模型输入原件；低高度等旧规则，不能独自认证真实周期",
+    "same_height_elimination_rate": "旧候选与触板失败近似比率，非完整前池淘汰率，亦非新精确触板池比率",
+    "verified_turnover_boards": "旧日线形态/量价规则代理，不是真实回封、抛压或承接证明",
+    "parent_candidates": "旧启动滞后2–6兼容锚子集，非全部活跃父锚",
+    "primary_role": "旧因果规则角色，非独立身份真值",
+    "daily_one_word": "原固定评估日线形态标签，与新价格/连续路径资格分开"
+  },
+  "current_review_fields": {
+    "full_cohort_promotion_rate": "前一官方日完整k-1池所有成员在T日晋级k的比例；任何成员未知则null",
+    "touch_failure_rate": "T日精确价格触板池中未封住占比；无合格完整范围则null",
+    "review_cycle_state": "多字段规则状态；低高度单列、重叠为MIXED、资料不足UNKNOWN",
+    "cross_state_continuation_candidate": "连续价格路径+至少两个压力日及不同状态的延续候选，不是完整周期穿越真值",
+    "all_active_parent_relations": "过去5官方日≥4报板的全部已观察锚，排除自己；资格与缺失范围逐项保留",
+    "current_streak_start_observed": "已核连续10%价格路径及前一节点非涨停边界；否则未知",
+    "channel_review": "当日精确10%价格/形态范围内的A/B代理；不确定为UNRESOLVED，B方向为空",
+    "review_primary_role": "固定优先序结构候选，普通RELAY_CONTENDER及UNKNOWN合法",
+    "theme_core_status": "无完整已分类题材成员时保持UNKNOWN，名称/行业/叙事分层"
+  },
+  "clocks": "信号日是事件索引，不是公开/真实收件时间。晚取得用于当前知识下回顾，不称原时点已取得。",
+  "model_scores": "未校准排序分，不称可信概率。新语义层未拟合、未宣称改善。"
+}

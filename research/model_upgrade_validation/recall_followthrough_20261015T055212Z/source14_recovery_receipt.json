@@ -1,0 +1,82 @@
+{
+  "formed_at": "2026-10-15T05:58:14.819679+00:00",
+  "signal_date": "2026-10-13",
+  "target_date": "2026-10-14",
+  "bounded_one_network_attempt": true,
+  "pool_requests": [
+    {
+      "date": "2026-10-13",
+      "kind": "limit_up",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261013 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    },
+    {
+      "date": "2026-10-13",
+      "kind": "failed_board",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261013 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    },
+    {
+      "date": "2026-10-13",
+      "kind": "limit_down",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fund%3Aasc&date=20261013 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    },
+    {
+      "date": "2026-10-13",
+      "kind": "previous_limit",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Read timed out. (read timeout=5)"
+    },
+    {
+      "date": "2026-10-14",
+      "kind": "limit_up",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    },
+    {
+      "date": "2026-10-14",
+      "kind": "failed_board",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fbt%3Aasc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    },
+    {
+      "date": "2026-10-14",
+      "kind": "limit_down",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=fund%3Aasc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    },
+    {
+      "date": "2026-10-14",
+      "kind": "previous_limit",
+      "status": "UNAVAILABLE",
+      "http_status": null,
+      "error": "HTTPSConnectionPool(host='push2ex.eastmoney.com', port=443): Max retries exceeded with url: /getYesterdayZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&dpt=wz.ztzt&Pageindex=0&pagesize=10000&sort=zs%3Adesc&date=20261014 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))"
+    }
+  ],
+  "reconstructed_pools": 0,
+  "daily_codes": 10,
+  "all_original_candidate_codes": [
+    "001231",
+    "002343",
+    "002696",
+    "600693",
+    "600831",
+    "600851",
+    "603096",
+    "603968",
+    "605136",
+    "605577"
+  ],
+  "ledger_written": false,
+  "new_formal_mature_samples": 0,
+  "bridge_status": "REJECTED",
+  "bridge_error": "duplicate frozen close expectation"
+}

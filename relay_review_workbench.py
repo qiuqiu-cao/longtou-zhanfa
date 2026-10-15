@@ -15,6 +15,9 @@ from pathlib import Path
 import forum_reasoning_review as forum
 import forum_reasoning_outcome_context as feedback
 import stock_judgement_review as original
+import supplement_identity_discovery as identity
+import short_term_thinking_workbench as thinking
+import historical_symbolic_context as symbolic
 
 VERSION = "relay-review-workbench-1"
 # Only author-written prose can be replaced by a reference. Enum decisions,
@@ -34,7 +37,7 @@ def _receipt(path, status, **values):
 
 def prepare(features, theme_report, mainline_report, compatibility, bank, calendar, output_dir,
             pool, relation_bank, exposure="MODEL_OUTPUT_ALREADY_SEEN", role_evidence=None,
-            history_datasets=(), mainline_history=(), narrative_reviews=None):
+            history_datasets=(), mainline_history=(), narrative_reviews=None, identity_evidence=None, thinking_bundle=None, symbolic_context=None):
     """Forward every history input to the guarded current review pipeline."""
     out = Path(output_dir)
     if out.exists():
@@ -46,6 +49,22 @@ def prepare(features, theme_report, mainline_report, compatibility, bank, calend
             history_datasets=tuple(history_datasets), mainline_history=tuple(mainline_history),
             narrative_reviews=narrative_reviews)
         facts = out / "pipeline" / "reasoning" / "facts_with_forum_reasoning.json"
+        if identity_evidence:
+            result = identity.attach(facts, identity_evidence, out / "identity",
+                out / "pipeline" / "reasoning" / "author_draft_PENDING.json")
+            facts = out / "identity" / "facts_with_identity_discovery.json"
+        if thinking_bundle:
+            feature_path = Path(features) / "features.json" if Path(features).is_dir() else Path(features)
+            draft_path = out / "identity" / "author_identity_PENDING.json" if identity_evidence else out / "pipeline" / "reasoning" / "author_draft_PENDING.json"
+            result = thinking.attach(facts, feature_path, thinking_bundle, out / "thinking", draft_path,
+                identity_evidence=identity_evidence, history_datasets=tuple(history_datasets),
+                mainline_history=tuple(mainline_history), narrative_reviews=narrative_reviews, theme_report=theme_report)
+            facts = out / "thinking" / "facts_with_causal_thinking.json"
+        if symbolic_context:
+            if not thinking_bundle:
+                raise ValueError("symbolic context requires the masked causal thinking bundle")
+            result = symbolic.attach_review(facts, feature_path, symbolic_context, out / "symbolic", out / "thinking" / "author_draft_PENDING.json")
+            facts = out / "symbolic" / "facts_with_symbolic_context.json"
         render(facts, out / "review")
     except Exception as exc:
         _receipt(out / "prepare_failure.json", "WORKBENCH_PREPARATION_FAILED_OR_RENDER_INCOMPLETE",
@@ -56,6 +75,9 @@ def prepare(features, theme_report, mainline_report, compatibility, bank, calend
         history_datasets=[str(Path(p).resolve()) for p in history_datasets],
         mainline_history=[str(Path(p).resolve()) for p in mainline_history],
         narrative_reviews=str(Path(narrative_reviews).resolve()) if narrative_reviews else None,
+        identity_evidence=str(Path(identity_evidence).resolve()) if identity_evidence else None,
+        thinking_bundle=str(Path(thinking_bundle).resolve()) if thinking_bundle else None,
+        symbolic_context=str(Path(symbolic_context).resolve()) if symbolic_context else None,
         source_bindings=original.bind(__file__) | original.bind(facts))
     return result
 
@@ -71,11 +93,26 @@ def attach(facts_path, output_dir, draft_path=None):
 
 def freeze(facts_path, judgements_path, output):
     # This always goes through the old full role/catalyst/clock/registry checks.
+    if Path(facts_path).is_file():
+        symbolic.checked_review(original.read(facts_path))
+        thinking.checked(original.read(facts_path))
+        identity.validate_review(original.read(facts_path), original.read(judgements_path))
     return forum.freeze(facts_path, judgements_path, output)
 
 
 def review_context(facts_path, judgements_path, output):
+    if Path(facts_path).is_file():
+        symbolic.checked_review(original.read(facts_path))
+        thinking.checked(original.read(facts_path))
+        identity.validate_review(original.read(facts_path), original.read(judgements_path))
     return forum.review_context(facts_path, judgements_path, output)
+
+
+def discover(facts_path, evidence_path, draft_path, output_dir):
+    forum.checked(original.read(facts_path))
+    result = identity.attach(facts_path, evidence_path, output_dir, draft_path)
+    render(Path(output_dir) / "facts_with_identity_discovery.json", Path(output_dir) / "review")
+    return result
 
 
 def execution(facts_path, review_path, original_predictions_path, calendar_path, output_dir, *, asof, evidence_path=None):
@@ -102,6 +139,9 @@ def compare(record, baseline, outcome_archive, output, feedback_dir=None):
     if receipt.exists():
         raise FileExistsError("workbench comparison receipt already exists")
     try:
+        if Path(record).is_file():
+            saved=original.read(record)
+            identity.validate_review(original.read(saved["facts_path"]),saved)
         result = forum.compare(record, baseline, outcome_archive, output)
     except Exception as exc:
         _receipt(receipt, "ORIGINAL_COMPARISON_REJECTED", comparison_path=str(output.resolve()),
@@ -141,6 +181,7 @@ def compact(facts_path, draft_path, output):
     """Factor existing prose once; retain the whole scaffold and all decisions."""
     facts, draft = original.read(facts_path), original.read(draft_path)
     forum.checked(facts)
+    identity.checked(facts)
     _draft_binding(facts_path, facts, draft)
     bank = {}
     def compress(value, path):
@@ -183,6 +224,8 @@ def _draft_binding(facts_path, facts, draft):
 def validate_completed(facts_path, draft):
     """Read-only completed-draft checks; no simulated clock or registration."""
     facts = original.read(facts_path)
+    symbolic.checked_review(facts)
+    thinking.checked(facts)
     _draft_binding(facts_path, facts, draft)
     if draft.get("author_review_completed") is not True:
         raise ValueError("author review is still pending; templates are not decisions")
@@ -192,6 +235,7 @@ def validate_completed(facts_path, draft):
         raise ValueError("completed draft must retain all original source bindings")
     forum.validate(forum.checked(facts), draft, facts["source_bindings"])
     forum.supplement.validate_review(facts, draft)
+    identity.validate_review(facts, draft)
     if facts["supplement_context_diagnostic_only"]:
         if any(row.get("promotion_judgement") is not None for row in draft["rows"]):
             raise ValueError("diagnostic review cannot introduce a retroactive forecast")
@@ -264,6 +308,11 @@ def expand(compact_path, output):
 def review_projection(facts, draft=None):
     """Allowlisted card projection: no model role scores or baseline calls."""
     candidates = original.unique_rows(facts["rows"])
+    tc = thinking.checked(facts)
+    causal = original.unique_rows(tc["rows"]) if tc else {}
+    sc = symbolic.checked_review(facts)
+    symbolic_rows = original.unique_rows(sc["rows"]) if sc else {}
+    discovered = original.unique_rows(original.read(facts["identity_discovery_context_path"])["rows"]) if facts.get("identity_discovery_required") else {}
     def peers(codes):
         return [{"code": c, "name": candidates[c]["name"] if c in candidates else "池外锚/待核"} for c in codes]
     reviewed = original.unique_rows(draft["rows"]) if draft else {}
@@ -282,7 +331,7 @@ def review_projection(facts, draft=None):
             "support", "rebuttal", "cancel_condition", "missing", "comparison_peers", "fact_references",
             "opening_confirmation", "catalyst_assessment", "turnover_comparison_claim", "role_assessment",
             "narrative_type_assessment", "short_term_assessment", "pairwise_competition_assessment",
-            "forum_preread_assessment", "supplement_assessment", "forum_reasoning_assessment"}
+            "forum_preread_assessment", "supplement_assessment", "forum_reasoning_assessment", "identity_discovery_assessment"}
         actual_review = reviewed.get(row["code"], {})
         cards.append({"code": row["code"], "name": row["name"], "boards": row["boards"],
             "same_height_peers": peers(row.get("same_height_peers", [])),
@@ -293,6 +342,9 @@ def review_projection(facts, draft=None):
             "catalyst": deepcopy(row.get("catalyst_context", {})),
             "discussion_coverage": row.get("forum_reasoning_context", {}).get("coverage", "UNKNOWN"),
             "relations": relations, "opinions": opinions,
+            "identity_discovery": deepcopy(discovered.get(row["code"])),
+            "causal_thinking": deepcopy(causal.get(row["code"])),
+            "symbolic_context": deepcopy(symbolic_rows.get(row["code"])),
             "independent_review": {k: deepcopy(v) for k, v in actual_review.items() if k in author_fields} if draft else None})
     return {"version": VERSION, "signal_date": facts["signal_date"], "target_date": facts["target_date"],
         "pool_size": len(cards), "cards": cards,
@@ -327,6 +379,26 @@ def markdown(report):
             "同位：" + names(c["same_height_peers"]), "同父锚候选：" + names(c["same_anchor_candidate_peers"]),
             "日线价量：" + _md(json.dumps(c["daily_price_volume"], ensure_ascii=False)),
             "真实一字身份：" + str(c["actual_one_word_daily"])]
+        if c.get("causal_thinking"):
+            t = c["causal_thinking"]
+            lines += ["因果短线角色（规则候选）：" + _md(t["primary_role"]) + "；周期：" + _md(t["cycle_regime"]),
+                "父锚候选及状态：" + _md(t.get("parent_anchor_code")) + "／" + _md(t["parent_anchor_state"]),
+                "同位淘汰率：" + _md(t.get("same_height_elimination_rate")) + "；已观察分歧换手板数：" + _md(t.get("verified_turnover_boards")),
+                "自动规则标签不等于独立龙头真值；缺失、可成交性及原独立方向分别保留。"]
+        if c.get("identity_discovery"):
+            discovery=c["identity_discovery"]
+            assessment=(c.get("independent_review") or {}).get("identity_discovery_assessment",{})
+            lines += ["", "自主父锚与身份区分：" + _md(assessment.get("relative_role_hypothesis") or discovery["identity_hypothesis"]),
+                "本轮连续板核对："+str(discovery["current_streak"]["complete_closing_streak_checked"]),
+                "父锚假设："+_md("；".join(h["anchor_name"]+"："+h["identity_hypothesis"] for h in discovery["anchor_hypotheses"]) or "未知"),
+                "同周期与价量对比："+_md(json.dumps(discovery["same_cycle_signal_day_comparison"],ensure_ascii=False))]
+            for key,label in (("support","支持"),("counterevidence","反证/其他解释"),("cancel_condition","取消条件")):
+                if assessment.get(key):lines.append(label+"："+_md(assessment[key]))
+        if c.get("symbolic_context"):
+            s = c["symbolic_context"]
+            lines += ["历史名称／字辈扩散代理：" + _md(s["historical_name"]) + "／" + _md(s["primary_symbolic_token"]),
+                "扩展规则角色：" + _md(s["extended_primary_role"]) + "；首板支持：" + _md(s["symbolic_primary_first_support"]),
+                "该层为名称共现代理，未认证公司行业、活跃题材、资金带动或可成交。"]
         if c["feature_semantics"]:
             lines += ["字段语义：" + _md(json.dumps(c["feature_semantics"], ensure_ascii=False))]
         for r in c["relations"]:
@@ -361,6 +433,19 @@ def html_page(report):
         if isinstance(url, str) and url.startswith(("https://", "http://")):
             return '<a href="' + _escape(url) + '" target="_blank" rel="noopener noreferrer">核对原讨论</a>'
         return '<span>原讨论链接未知</span>'
+    def identity_panel(card):
+        context=card.get('identity_discovery')
+        if not context:return '<p class="muted">未运行自主发现</p>'
+        assessment=(card.get('independent_review') or {}).get('identity_discovery_assessment',{})
+        panel=paragraph('独立身份判断',assessment.get('relative_role_hypothesis') or '待作者逐股判断')
+        panel+=paragraph('结构候选类型',context['identity_hypothesis'])+paragraph('本轮连续板核对',context['current_streak'])
+        panel+=paragraph('父锚假设','；'.join(h['anchor_name']+' '+h['anchor_code']+'：'+h['identity_hypothesis'] for h in context['anchor_hypotheses']) or '未知')
+        panel+=paragraph('同周期竞争',context['same_cycle_signal_day_comparison'])
+        panel+=paragraph('同题材语义背景含首板','、'.join(r['name']+' '+str(r['boards'])+'板' for r in context['current_theme_context_including_first_boards']) or '未检出，题材完整性未认证')
+        for key,label in (('support','支持'),('counterevidence','反证/其他解释'),('cancel_condition','取消条件')):
+            if assessment.get(key):panel+=paragraph(label,assessment[key])
+        panel+='<details><summary>日线、逐个父锚取舍与来源详情</summary>'+paragraph('日线事实',context['daily_price_path'])+paragraph('作者父锚取舍',assessment)+paragraph('全部结构与竞争证据',context)+'</details>'
+        return panel
     cards = []
     nav = []
     for card in report["cards"]:
@@ -402,6 +487,9 @@ def html_page(report):
             paragraph('真实一字身份', card['actual_one_word_daily']) + paragraph('日线价量', card['daily_price_volume'] or '本附页未携带原行情，保持未知') + paragraph('讨论覆盖', card['discussion_coverage']) +
             '<details><summary>催化与字段语义</summary>' + paragraph('催化', card['catalyst']) + paragraph('字段语义', card['feature_semantics']) + '</details></section>' +
             '<section><h3>跨日父锚假设</h3>' + (''.join(relation_panels) or '<p class="muted">限定来源没有本股直接父锚证据；不等于无催化。</p>') + '</section></div>' +
+            '<section><h3>自主父锚与身份区分</h3>' + identity_panel(card) + '</section>' +
+            ('<section><h3>因果短线角色（规则候选）</h3>' + paragraph('角色、周期、父锚及同位状态', card['causal_thinking']) + '<p>规则标签非独立身份真值；保持原判断与可成交核验。</p></section>' if card.get('causal_thinking') else '') +
+            ('<section><h3>名称字辈扩散代理</h3>' + paragraph('历史名称、首板支持与候选角色', card['symbolic_context']) + '<p>名称共现不认证行业、活跃题材或资金因果。</p></section>' if card.get('symbolic_context') else '') +
             '<section><h3>股吧命题与独立分析</h3>' + (''.join(opinions) or '<p class="muted">限定来源未覆盖；不自动看空或转正。</p>') + '</section>' +
             '<section class="review"><h3>实际审阅与预期</h3>' + review_panel + '</section></article>')
     return ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -422,6 +510,7 @@ def html_page(report):
 def render(facts_path, output_dir, review_path=None):
     facts = original.read(facts_path)
     forum.checked(facts)
+    identity.checked(facts)
     draft = None
     if review_path:
         draft = original.read(review_path)
@@ -451,6 +540,29 @@ def parser():
     a.add_argument("--history-dataset", action="append", default=[])
     a.add_argument("--mainline-history", action="append", default=[])
     a.add_argument("--narrative-reviews")
+    a.add_argument("--identity-evidence")
+    a.add_argument("--thinking-bundle")
+    a.add_argument("--symbolic-context")
+    a = s.add_parser("symbolic")
+    for field in ("facts", "features", "artifact", "output-dir"):
+        a.add_argument("--" + field, required=True)
+    a.add_argument("--draft")
+    a = s.add_parser("symbolic-score")
+    for field in ("facts", "review", "model", "output"):
+        a.add_argument("--" + field, required=True)
+    a = s.add_parser("thinking")
+    for field in ("facts", "features", "bundle", "output-dir"):
+        a.add_argument("--" + field, required=True)
+    a.add_argument("--draft"); a.add_argument("--identity-evidence")
+    a.add_argument("--history-dataset", action="append", default=[])
+    a.add_argument("--mainline-history", action="append", default=[])
+    a.add_argument("--narrative-reviews")
+    a = s.add_parser("thinking-score")
+    for field in ("facts", "review", "model", "output"):
+        a.add_argument("--" + field, required=True)
+    a = s.add_parser("discover")
+    for field in ("facts", "evidence", "draft", "output-dir"):
+        a.add_argument("--" + field, required=True)
     a = s.add_parser("attach")
     a.add_argument("--facts", required=True); a.add_argument("--output-dir", required=True); a.add_argument("--draft")
     for name in ("freeze", "review-context"):
@@ -484,7 +596,23 @@ def main(argv=None):
         result = prepare(features=a.features, theme_report=a.theme_report, mainline_report=a.mainline_report,
             compatibility=a.compatibility, bank=a.bank, calendar=a.calendar, output_dir=a.output_dir,
             pool=a.pool, relation_bank=a.relation_bank, exposure=a.model_exposure, role_evidence=a.role_evidence,
-            history_datasets=a.history_dataset, mainline_history=a.mainline_history, narrative_reviews=a.narrative_reviews)
+            history_datasets=a.history_dataset, mainline_history=a.mainline_history, narrative_reviews=a.narrative_reviews,
+            identity_evidence=a.identity_evidence, thinking_bundle=a.thinking_bundle, symbolic_context=a.symbolic_context)
+    elif a.command == "symbolic":
+        result = symbolic.attach_review(a.facts, a.features, a.artifact, a.output_dir, a.draft)
+        render(Path(a.output_dir) / "facts_with_symbolic_context.json", Path(a.output_dir) / "review")
+    elif a.command == "symbolic-score":
+        import historical_symbolic_research
+        result = historical_symbolic_research.score_review(a.facts, a.review, a.model, a.output)
+    elif a.command == "thinking":
+        result = thinking.attach(a.facts, a.features, a.bundle, a.output_dir, a.draft,
+            identity_evidence=a.identity_evidence, history_datasets=a.history_dataset,
+            mainline_history=a.mainline_history, narrative_reviews=a.narrative_reviews)
+        render(Path(a.output_dir) / "facts_with_causal_thinking.json", Path(a.output_dir) / "review")
+    elif a.command == "thinking-score":
+        result = thinking.score_context(a.facts, a.review, a.model, a.output)
+    elif a.command == "discover":
+        result = discover(a.facts, a.evidence, a.draft, a.output_dir)
     elif a.command == "attach":
         result = attach(a.facts, a.output_dir, a.draft)
     elif a.command in {"freeze", "review-context"}:

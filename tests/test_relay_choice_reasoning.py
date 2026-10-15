@@ -59,8 +59,19 @@ class ReasoningContractTests(unittest.TestCase):
     def test_abstention_and_empty_nonword_primary_are_preserved(self):
         report = r.project(*fixture())
         self.assertIsNone(report["non_one_word_positive_first"])
+        self.assertEqual(report["non_one_word_relative_first"], "001003")
         self.assertEqual(report["rows"][-1]["independent_call"], "UNKNOWN")
         self.assertIsNone(report["trade_primary"])
+
+    def test_render_keeps_below_threshold_relative_watch_and_original_call(self):
+        report = r.project(*fixture())
+        text = r.render(report, {"sources": []})
+        self.assertIn("非一字相对首位（待证据审阅）：fixture001003 001003", text)
+        self.assertIn("非一字相对首位（待审）", text)
+        self.assertIn("同板位非一字排第1", text)
+        self.assertFalse(report["rows"][-1]["model_positive"])
+        self.assertFalse(report["score_call_order_changed"])
+        self.assertEqual(report["rows"][-1]["independent_call"], "UNKNOWN")
 
     def test_wrong_date_and_reordered_rank_are_rejected(self):
         for kind in ("date", "rank"):

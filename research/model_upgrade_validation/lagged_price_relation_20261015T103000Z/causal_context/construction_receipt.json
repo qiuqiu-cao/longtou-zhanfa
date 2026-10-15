@@ -1,0 +1,40 @@
+{
+  "formed_at": "2026-10-15T11:29:27.688920+00:00",
+  "version": "lagged-price-relation-1",
+  "candidates": 9315,
+  "pairs": 1465910,
+  "fields": [
+    "price_relation_history_fraction",
+    "price_relation_closing_pair_fraction",
+    "price_relation_failed_pair_fraction",
+    "price_relation_first_observed_mass",
+    "price_relation_relay_observed_mass",
+    "price_relation_higher_observed_mass",
+    "price_relation_same_height_mean_corr",
+    "price_relation_failed_observed_mass",
+    "price_relation_parent_max_corr",
+    "price_relation_selected_parent_corr",
+    "price_relation_parent_pair_fraction",
+    "price_relation_net_observed_mass"
+  ],
+  "policy": {
+    "window_sessions": 20,
+    "excluded_recent_prior_sessions": 5,
+    "minimum_common_sessions": 12,
+    "return_definition": "close/pre_close-1",
+    "market_component": "subtract same-date median of available archived stock returns",
+    "pair_weight": "square of positive Pearson correlation; no selected threshold",
+    "source_scope": "ARCHIVED_CURRENT_UNIVERSE_WITH_SURVIVORSHIP_AND_PROVIDER_LIMITATIONS",
+    "relation_semantics": "STATISTICAL_PRICE_COHORT_NOT_BUSINESS_THEME_OR_FUNDS_CAUSALITY",
+    "future_labels_allowed": false,
+    "missing_scope_is_zero": false,
+    "available_mass": "sum of weights of observed pairs, with separate observation fraction",
+    "parent_selection": "all prior active high anchors from causal engine; no future outcome or name selection"
+  },
+  "labels_read_by_builder": false,
+  "new_fits": 0,
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\workbench_latest_20261015T091200Z\\attempt_reclassification_correction\\corrected_engine_context_THROUGH_OCT15_RESEARCH_NOT_FITTED.joblib": "a1da6522ff0407257434cb09d8cc944bb2e7a51d4a573656767fc6757daf1f5c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\historical_price_relation.py": "c21de739afe7d624420617aee56fa3c450c70ba4a151e97048913b8ce3e866e4"
+  }
+}

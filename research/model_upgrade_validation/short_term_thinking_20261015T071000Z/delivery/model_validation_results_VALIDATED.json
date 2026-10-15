@@ -1,0 +1,2836 @@
+{
+  "version": "causal-short-term-thinking-1",
+  "formed_at": "2026-10-15T07:45:28.975558+00:00",
+  "comparisons": {
+    "2025H2": {
+      "metrics": {
+        "BASE": {
+          "full": {
+            "candidates": 1584,
+            "scored": 1584,
+            "positives": 654,
+            "positive_calls": 353,
+            "tp": 224,
+            "fp": 129,
+            "fn": 430,
+            "tn": 801,
+            "Accuracy": 0.6470959595959596,
+            "Recall": 0.3425076452599388,
+            "Precision": 0.6345609065155807,
+            "F1": 0.4448857994041708,
+            "label_coverage": 1.0
+          },
+          "observed_nonword": {
+            "candidates": 1227,
+            "scored": 1227,
+            "positives": 422,
+            "positive_calls": 48,
+            "tp": 22,
+            "fp": 26,
+            "fn": 400,
+            "tn": 779,
+            "Accuracy": 0.6528117359413202,
+            "Recall": 0.052132701421800945,
+            "Precision": 0.4583333333333333,
+            "F1": 0.09361702127659574,
+            "label_coverage": 1.0
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 354,
+            "scored": 354,
+            "positives": 232,
+            "positive_calls": 305,
+            "tp": 202,
+            "fp": 103,
+            "fn": 30,
+            "tn": 19,
+            "Accuracy": 0.6242937853107344,
+            "Recall": 0.8706896551724138,
+            "Precision": 0.6622950819672131,
+            "F1": 0.7523277467411545,
+            "label_coverage": 1.0
+          },
+          "unknown_identity": {
+            "candidates": 3,
+            "scored": 3,
+            "positives": 0,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 3,
+            "Accuracy": 1.0,
+            "Recall": null,
+            "Precision": null,
+            "F1": null,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.5158730158730159,
+            "group_any_hit_rate": 0.5158730158730159,
+            "groups_with_unresolved_truth": 0
+          },
+          "top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.45634920634920634,
+            "group_any_hit_rate": 0.6587301587301587,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top1": {
+            "selected": 380,
+            "known": 380,
+            "groups": 380,
+            "candidate_hit_rate": 0.4026315789473684,
+            "group_any_hit_rate": 0.4026315789473684,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top2": {
+            "selected": 608,
+            "known": 608,
+            "groups": 380,
+            "candidate_hit_rate": 0.39473684210526316,
+            "group_any_hit_rate": 0.531578947368421,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.38095238095238093,
+            "group_any_hit_rate": 0.38095238095238093,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.34523809523809523,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 0
+          },
+          "execution_proxy": {
+            "selected": 126,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 52,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 37,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 36,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 51,
+              "selected_coverage": 0.40476190476190477,
+              "mean_net": 0.018933475781911523,
+              "loss_ge7pct": 0.19607843137254902,
+              "marked_candidates": 51,
+              "risk_loss_ge7pct_including_blocked": 0.19607843137254902,
+              "sell_blocked": 0,
+              "median_net": 0.012409009595056312,
+              "worst": -0.24107106535517053,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 51,
+              "selected_coverage": 0.40476190476190477,
+              "mean_net": 0.010137331687270677,
+              "loss_ge7pct": 0.3137254901960784,
+              "marked_candidates": 51,
+              "risk_loss_ge7pct_including_blocked": 0.29411764705882354,
+              "sell_blocked": 0,
+              "median_net": 0.02137776509205092,
+              "worst": -0.2966479053372567,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 228,
+            "known": 228,
+            "groups": 228,
+            "candidate_hit_rate": 0.42105263157894735,
+            "group_any_hit_rate": 0.42105263157894735,
+            "groups_with_unresolved_truth": 0
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 456,
+            "known": 456,
+            "groups": 228,
+            "candidate_hit_rate": 0.40131578947368424,
+            "group_any_hit_rate": 0.6359649122807017,
+            "groups_with_unresolved_truth": 0
+          }
+        },
+        "ROLL252": {
+          "full": {
+            "candidates": 1584,
+            "scored": 1584,
+            "positives": 654,
+            "positive_calls": 379,
+            "tp": 244,
+            "fp": 135,
+            "fn": 410,
+            "tn": 795,
+            "Accuracy": 0.6559343434343434,
+            "Recall": 0.3730886850152905,
+            "Precision": 0.6437994722955145,
+            "F1": 0.4724104549854792,
+            "label_coverage": 1.0
+          },
+          "observed_nonword": {
+            "candidates": 1227,
+            "scored": 1227,
+            "positives": 422,
+            "positive_calls": 65,
+            "tp": 35,
+            "fp": 30,
+            "fn": 387,
+            "tn": 775,
+            "Accuracy": 0.6601466992665037,
+            "Recall": 0.08293838862559241,
+            "Precision": 0.5384615384615384,
+            "F1": 0.1437371663244353,
+            "label_coverage": 1.0
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 354,
+            "scored": 354,
+            "positives": 232,
+            "positive_calls": 314,
+            "tp": 209,
+            "fp": 105,
+            "fn": 23,
+            "tn": 17,
+            "Accuracy": 0.6384180790960452,
+            "Recall": 0.9008620689655172,
+            "Precision": 0.6656050955414012,
+            "F1": 0.7655677655677655,
+            "label_coverage": 1.0
+          },
+          "unknown_identity": {
+            "candidates": 3,
+            "scored": 3,
+            "positives": 0,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 3,
+            "Accuracy": 1.0,
+            "Recall": null,
+            "Precision": null,
+            "F1": null,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.5238095238095238,
+            "group_any_hit_rate": 0.5238095238095238,
+            "groups_with_unresolved_truth": 0
+          },
+          "top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.48412698412698413,
+            "group_any_hit_rate": 0.7222222222222222,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top1": {
+            "selected": 380,
+            "known": 380,
+            "groups": 380,
+            "candidate_hit_rate": 0.41578947368421054,
+            "group_any_hit_rate": 0.41578947368421054,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top2": {
+            "selected": 608,
+            "known": 608,
+            "groups": 380,
+            "candidate_hit_rate": 0.3963815789473684,
+            "group_any_hit_rate": 0.5368421052631579,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.38095238095238093,
+            "group_any_hit_rate": 0.38095238095238093,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.34523809523809523,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 0
+          },
+          "execution_proxy": {
+            "selected": 126,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 57,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 43,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 26
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 57,
+              "selected_coverage": 0.4523809523809524,
+              "mean_net": 0.012230769588546558,
+              "loss_ge7pct": 0.22807017543859648,
+              "marked_candidates": 57,
+              "risk_loss_ge7pct_including_blocked": 0.22807017543859648,
+              "sell_blocked": 0,
+              "median_net": 0.011051737735948367,
+              "worst": -0.24107106535517053,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 57,
+              "selected_coverage": 0.4523809523809524,
+              "mean_net": 0.0029973308922680536,
+              "loss_ge7pct": 0.3333333333333333,
+              "marked_candidates": 57,
+              "risk_loss_ge7pct_including_blocked": 0.3157894736842105,
+              "sell_blocked": 0,
+              "median_net": 0.005397852147852269,
+              "worst": -0.2966479053372567,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 228,
+            "known": 228,
+            "groups": 228,
+            "candidate_hit_rate": 0.44298245614035087,
+            "group_any_hit_rate": 0.44298245614035087,
+            "groups_with_unresolved_truth": 0
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 456,
+            "known": 456,
+            "groups": 228,
+            "candidate_hit_rate": 0.40350877192982454,
+            "group_any_hit_rate": 0.6447368421052632,
+            "groups_with_unresolved_truth": 0
+          }
+        },
+        "ST_B_ONLY": {
+          "full": {
+            "candidates": 1584,
+            "scored": 1584,
+            "positives": 654,
+            "positive_calls": 782,
+            "tp": 399,
+            "fp": 383,
+            "fn": 255,
+            "tn": 547,
+            "Accuracy": 0.5972222222222222,
+            "Recall": 0.6100917431192661,
+            "Precision": 0.510230179028133,
+            "F1": 0.5557103064066853,
+            "label_coverage": 1.0
+          },
+          "observed_nonword": {
+            "candidates": 1227,
+            "scored": 1227,
+            "positives": 422,
+            "positive_calls": 477,
+            "tp": 197,
+            "fp": 280,
+            "fn": 225,
+            "tn": 525,
+            "Accuracy": 0.5884270578647107,
+            "Recall": 0.466824644549763,
+            "Precision": 0.4129979035639413,
+            "F1": 0.4382647385984427,
+            "label_coverage": 1.0
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 354,
+            "scored": 354,
+            "positives": 232,
+            "positive_calls": 305,
+            "tp": 202,
+            "fp": 103,
+            "fn": 30,
+            "tn": 19,
+            "Accuracy": 0.6242937853107344,
+            "Recall": 0.8706896551724138,
+            "Precision": 0.6622950819672131,
+            "F1": 0.7523277467411545,
+            "label_coverage": 1.0
+          },
+          "unknown_identity": {
+            "candidates": 3,
+            "scored": 3,
+            "positives": 0,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 3,
+            "Accuracy": 1.0,
+            "Recall": null,
+            "Precision": null,
+            "F1": null,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.47619047619047616,
+            "group_any_hit_rate": 0.47619047619047616,
+            "groups_with_unresolved_truth": 0
+          },
+          "top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.4444444444444444,
+            "group_any_hit_rate": 0.6507936507936508,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top1": {
+            "selected": 380,
+            "known": 380,
+            "groups": 380,
+            "candidate_hit_rate": 0.4052631578947368,
+            "group_any_hit_rate": 0.4052631578947368,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top2": {
+            "selected": 608,
+            "known": 608,
+            "groups": 380,
+            "candidate_hit_rate": 0.3815789473684211,
+            "group_any_hit_rate": 0.5157894736842106,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.38095238095238093,
+            "group_any_hit_rate": 0.38095238095238093,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.34523809523809523,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 0
+          },
+          "execution_proxy": {
+            "selected": 126,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 51,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 37,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 37,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 51,
+              "selected_coverage": 0.40476190476190477,
+              "mean_net": -0.0006914924905567646,
+              "loss_ge7pct": 0.3333333333333333,
+              "marked_candidates": 51,
+              "risk_loss_ge7pct_including_blocked": 0.3333333333333333,
+              "sell_blocked": 0,
+              "median_net": -0.0024639300606289468,
+              "worst": -0.21834190389274444,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 51,
+              "selected_coverage": 0.40476190476190477,
+              "mean_net": -0.009689562419467754,
+              "loss_ge7pct": 0.4117647058823529,
+              "marked_candidates": 51,
+              "risk_loss_ge7pct_including_blocked": 0.4117647058823529,
+              "sell_blocked": 0,
+              "median_net": -0.05028256037156564,
+              "worst": -0.2966479053372567,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 228,
+            "known": 228,
+            "groups": 228,
+            "candidate_hit_rate": 0.42543859649122806,
+            "group_any_hit_rate": 0.42543859649122806,
+            "groups_with_unresolved_truth": 0
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 456,
+            "known": 456,
+            "groups": 228,
+            "candidate_hit_rate": 0.38377192982456143,
+            "group_any_hit_rate": 0.6096491228070176,
+            "groups_with_unresolved_truth": 0
+          }
+        },
+        "ST_DUAL": {
+          "full": {
+            "candidates": 1584,
+            "scored": 1584,
+            "positives": 654,
+            "positive_calls": 527,
+            "tp": 302,
+            "fp": 225,
+            "fn": 352,
+            "tn": 705,
+            "Accuracy": 0.6357323232323232,
+            "Recall": 0.4617737003058104,
+            "Precision": 0.573055028462998,
+            "F1": 0.5114309906858594,
+            "label_coverage": 1.0
+          },
+          "observed_nonword": {
+            "candidates": 1227,
+            "scored": 1227,
+            "positives": 422,
+            "positive_calls": 222,
+            "tp": 100,
+            "fp": 122,
+            "fn": 322,
+            "tn": 683,
+            "Accuracy": 0.6381418092909535,
+            "Recall": 0.23696682464454977,
+            "Precision": 0.45045045045045046,
+            "F1": 0.3105590062111801,
+            "label_coverage": 1.0
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 354,
+            "scored": 354,
+            "positives": 232,
+            "positive_calls": 305,
+            "tp": 202,
+            "fp": 103,
+            "fn": 30,
+            "tn": 19,
+            "Accuracy": 0.6242937853107344,
+            "Recall": 0.8706896551724138,
+            "Precision": 0.6622950819672131,
+            "F1": 0.7523277467411545,
+            "label_coverage": 1.0
+          },
+          "unknown_identity": {
+            "candidates": 3,
+            "scored": 3,
+            "positives": 0,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 3,
+            "Accuracy": 1.0,
+            "Recall": null,
+            "Precision": null,
+            "F1": null,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.5079365079365079,
+            "group_any_hit_rate": 0.5079365079365079,
+            "groups_with_unresolved_truth": 0
+          },
+          "top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.4722222222222222,
+            "group_any_hit_rate": 0.6825396825396826,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top1": {
+            "selected": 380,
+            "known": 380,
+            "groups": 380,
+            "candidate_hit_rate": 0.4052631578947368,
+            "group_any_hit_rate": 0.4052631578947368,
+            "groups_with_unresolved_truth": 0
+          },
+          "same_height_top2": {
+            "selected": 608,
+            "known": 608,
+            "groups": 380,
+            "candidate_hit_rate": 0.3963815789473684,
+            "group_any_hit_rate": 0.5342105263157895,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top1": {
+            "selected": 126,
+            "known": 126,
+            "groups": 126,
+            "candidate_hit_rate": 0.38095238095238093,
+            "group_any_hit_rate": 0.38095238095238093,
+            "groups_with_unresolved_truth": 0
+          },
+          "height_baseline_top2": {
+            "selected": 252,
+            "known": 252,
+            "groups": 126,
+            "candidate_hit_rate": 0.34523809523809523,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 0
+          },
+          "execution_proxy": {
+            "selected": 126,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 55,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 35,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 35,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 55,
+              "selected_coverage": 0.4365079365079365,
+              "mean_net": 0.012787370298661253,
+              "loss_ge7pct": 0.2909090909090909,
+              "marked_candidates": 55,
+              "risk_loss_ge7pct_including_blocked": 0.2909090909090909,
+              "sell_blocked": 0,
+              "median_net": 0.012404610552449905,
+              "worst": -0.24107106535517053,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 55,
+              "selected_coverage": 0.4365079365079365,
+              "mean_net": 0.01063221277103361,
+              "loss_ge7pct": 0.32727272727272727,
+              "marked_candidates": 55,
+              "risk_loss_ge7pct_including_blocked": 0.32727272727272727,
+              "sell_blocked": 0,
+              "median_net": -0.01952193959886239,
+              "worst": -0.2893427089117363,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 228,
+            "known": 228,
+            "groups": 228,
+            "candidate_hit_rate": 0.42543859649122806,
+            "group_any_hit_rate": 0.42543859649122806,
+            "groups_with_unresolved_truth": 0
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 456,
+            "known": 456,
+            "groups": 228,
+            "candidate_hit_rate": 0.40350877192982454,
+            "group_any_hit_rate": 0.6403508771929824,
+            "groups_with_unresolved_truth": 0
+          }
+        }
+      },
+      "intervals": {
+        "ST_B_ONLY": {
+          "nonword_recall": {
+            "lower": 0.35154240856334434,
+            "upper": 0.47651754669685453,
+            "pairs": 422,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.1349206349206349,
+            "upper": 0.06349206349206349,
+            "pairs": 126,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        },
+        "ST_DUAL": {
+          "nonword_recall": {
+            "lower": 0.13999763033175358,
+            "upper": 0.23544036061026355,
+            "pairs": 422,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.10317460317460317,
+            "upper": 0.0873015873015873,
+            "pairs": 126,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        }
+      }
+    },
+    "2026JanAug": {
+      "metrics": {
+        "BASE": {
+          "full": {
+            "candidates": 1941,
+            "scored": 1923,
+            "positives": 635,
+            "positive_calls": 434,
+            "tp": 265,
+            "fp": 169,
+            "fn": 370,
+            "tn": 1119,
+            "Accuracy": 0.7197087883515341,
+            "Recall": 0.41732283464566927,
+            "Precision": 0.6105990783410138,
+            "F1": 0.49579045837231056,
+            "label_coverage": 0.990726429675425
+          },
+          "observed_nonword": {
+            "candidates": 1610,
+            "scored": 1598,
+            "positives": 409,
+            "positive_calls": 171,
+            "tp": 68,
+            "fp": 103,
+            "fn": 341,
+            "tn": 1086,
+            "Accuracy": 0.7221526908635795,
+            "Recall": 0.16625916870415647,
+            "Precision": 0.39766081871345027,
+            "F1": 0.23448275862068965,
+            "label_coverage": 0.9925465838509316
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 322,
+            "scored": 316,
+            "positives": 225,
+            "positive_calls": 263,
+            "tp": 197,
+            "fp": 66,
+            "fn": 28,
+            "tn": 25,
+            "Accuracy": 0.7025316455696202,
+            "Recall": 0.8755555555555555,
+            "Precision": 0.7490494296577946,
+            "F1": 0.8073770491803278,
+            "label_coverage": 0.9813664596273292
+          },
+          "unknown_identity": {
+            "candidates": 9,
+            "scored": 9,
+            "positives": 1,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "tn": 8,
+            "Accuracy": 0.8888888888888888,
+            "Recall": 0.0,
+            "Precision": null,
+            "F1": 0.0,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.3522012578616352,
+            "group_any_hit_rate": 0.3522012578616352,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.36477987421383645,
+            "group_any_hit_rate": 0.5723270440251572,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 449,
+            "known": 445,
+            "groups": 449,
+            "candidate_hit_rate": 0.3393258426966292,
+            "group_any_hit_rate": 0.3393258426966292,
+            "groups_with_unresolved_truth": 4
+          },
+          "same_height_top2": {
+            "selected": 708,
+            "known": 702,
+            "groups": 449,
+            "candidate_hit_rate": 0.31054131054131057,
+            "group_any_hit_rate": 0.43595505617977526,
+            "groups_with_unresolved_truth": 4
+          },
+          "height_baseline_top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.3522012578616352,
+            "group_any_hit_rate": 0.3522012578616352,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.3270440251572327,
+            "group_any_hit_rate": 0.5345911949685535,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 160,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 68,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 56,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 35,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 67,
+              "selected_coverage": 0.41875,
+              "mean_net": -0.017483252122102895,
+              "loss_ge7pct": 0.2835820895522388,
+              "marked_candidates": 67,
+              "risk_loss_ge7pct_including_blocked": 0.2835820895522388,
+              "sell_blocked": 0,
+              "median_net": -0.021435681965093708,
+              "worst": -0.23204388753412752,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 66,
+              "selected_coverage": 0.4125,
+              "mean_net": -0.020026506258633545,
+              "loss_ge7pct": 0.3787878787878788,
+              "marked_candidates": 66,
+              "risk_loss_ge7pct_including_blocked": 0.3787878787878788,
+              "sell_blocked": 0,
+              "median_net": -0.033803598793493816,
+              "worst": -0.30910501952702674,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 259,
+            "known": 257,
+            "groups": 259,
+            "candidate_hit_rate": 0.33073929961089493,
+            "group_any_hit_rate": 0.33073929961089493,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 518,
+            "known": 514,
+            "groups": 259,
+            "candidate_hit_rate": 0.29571984435797666,
+            "group_any_hit_rate": 0.4980544747081712,
+            "groups_with_unresolved_truth": 2
+          }
+        },
+        "ROLL252": {
+          "full": {
+            "candidates": 1941,
+            "scored": 1923,
+            "positives": 635,
+            "positive_calls": 360,
+            "tp": 233,
+            "fp": 127,
+            "fn": 402,
+            "tn": 1161,
+            "Accuracy": 0.7249089963598544,
+            "Recall": 0.3669291338582677,
+            "Precision": 0.6472222222222223,
+            "F1": 0.46834170854271356,
+            "label_coverage": 0.990726429675425
+          },
+          "observed_nonword": {
+            "candidates": 1610,
+            "scored": 1598,
+            "positives": 409,
+            "positive_calls": 102,
+            "tp": 40,
+            "fp": 62,
+            "fn": 369,
+            "tn": 1127,
+            "Accuracy": 0.730287859824781,
+            "Recall": 0.097799511002445,
+            "Precision": 0.39215686274509803,
+            "F1": 0.15655577299412915,
+            "label_coverage": 0.9925465838509316
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 322,
+            "scored": 316,
+            "positives": 225,
+            "positive_calls": 258,
+            "tp": 193,
+            "fp": 65,
+            "fn": 32,
+            "tn": 26,
+            "Accuracy": 0.6930379746835443,
+            "Recall": 0.8577777777777778,
+            "Precision": 0.748062015503876,
+            "F1": 0.7991718426501035,
+            "label_coverage": 0.9813664596273292
+          },
+          "unknown_identity": {
+            "candidates": 9,
+            "scored": 9,
+            "positives": 1,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "tn": 8,
+            "Accuracy": 0.8888888888888888,
+            "Recall": 0.0,
+            "Precision": null,
+            "F1": 0.0,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.3836477987421384,
+            "group_any_hit_rate": 0.3836477987421384,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.36163522012578614,
+            "group_any_hit_rate": 0.5849056603773585,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 449,
+            "known": 445,
+            "groups": 449,
+            "candidate_hit_rate": 0.3393258426966292,
+            "group_any_hit_rate": 0.3393258426966292,
+            "groups_with_unresolved_truth": 4
+          },
+          "same_height_top2": {
+            "selected": 708,
+            "known": 702,
+            "groups": 449,
+            "candidate_hit_rate": 0.3076923076923077,
+            "group_any_hit_rate": 0.4314606741573034,
+            "groups_with_unresolved_truth": 4
+          },
+          "height_baseline_top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.3522012578616352,
+            "group_any_hit_rate": 0.3522012578616352,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.3270440251572327,
+            "group_any_hit_rate": 0.5345911949685535,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 160,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 66,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 57,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 36,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 65,
+              "selected_coverage": 0.40625,
+              "mean_net": -0.011208257420694355,
+              "loss_ge7pct": 0.3076923076923077,
+              "marked_candidates": 65,
+              "risk_loss_ge7pct_including_blocked": 0.3076923076923077,
+              "sell_blocked": 0,
+              "median_net": -0.019193720073030215,
+              "worst": -0.23204388753412752,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 65,
+              "selected_coverage": 0.40625,
+              "mean_net": -0.010587017055396308,
+              "loss_ge7pct": 0.35384615384615387,
+              "marked_candidates": 65,
+              "risk_loss_ge7pct_including_blocked": 0.35384615384615387,
+              "sell_blocked": 0,
+              "median_net": -0.025789710289710107,
+              "worst": -0.30910501952702674,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 259,
+            "known": 257,
+            "groups": 259,
+            "candidate_hit_rate": 0.33073929961089493,
+            "group_any_hit_rate": 0.33073929961089493,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 518,
+            "known": 514,
+            "groups": 259,
+            "candidate_hit_rate": 0.2918287937743191,
+            "group_any_hit_rate": 0.490272373540856,
+            "groups_with_unresolved_truth": 2
+          }
+        },
+        "ST_B_ONLY": {
+          "full": {
+            "candidates": 1941,
+            "scored": 1923,
+            "positives": 635,
+            "positive_calls": 854,
+            "tp": 384,
+            "fp": 470,
+            "fn": 251,
+            "tn": 818,
+            "Accuracy": 0.625065002600104,
+            "Recall": 0.6047244094488189,
+            "Precision": 0.4496487119437939,
+            "F1": 0.5157824042981867,
+            "label_coverage": 0.990726429675425
+          },
+          "observed_nonword": {
+            "candidates": 1610,
+            "scored": 1598,
+            "positives": 409,
+            "positive_calls": 589,
+            "tp": 187,
+            "fp": 402,
+            "fn": 222,
+            "tn": 787,
+            "Accuracy": 0.609511889862328,
+            "Recall": 0.4572127139364303,
+            "Precision": 0.3174872665534805,
+            "F1": 0.374749498997996,
+            "label_coverage": 0.9925465838509316
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 322,
+            "scored": 316,
+            "positives": 225,
+            "positive_calls": 263,
+            "tp": 197,
+            "fp": 66,
+            "fn": 28,
+            "tn": 25,
+            "Accuracy": 0.7025316455696202,
+            "Recall": 0.8755555555555555,
+            "Precision": 0.7490494296577946,
+            "F1": 0.8073770491803278,
+            "label_coverage": 0.9813664596273292
+          },
+          "unknown_identity": {
+            "candidates": 9,
+            "scored": 9,
+            "positives": 1,
+            "positive_calls": 2,
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "tn": 6,
+            "Accuracy": 0.6666666666666666,
+            "Recall": 0.0,
+            "Precision": 0.0,
+            "F1": 0.0,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.36477987421383645,
+            "group_any_hit_rate": 0.36477987421383645,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.31761006289308175,
+            "group_any_hit_rate": 0.5471698113207547,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 449,
+            "known": 445,
+            "groups": 449,
+            "candidate_hit_rate": 0.3235955056179775,
+            "group_any_hit_rate": 0.3235955056179775,
+            "groups_with_unresolved_truth": 4
+          },
+          "same_height_top2": {
+            "selected": 708,
+            "known": 702,
+            "groups": 449,
+            "candidate_hit_rate": 0.29772079772079774,
+            "group_any_hit_rate": 0.42696629213483145,
+            "groups_with_unresolved_truth": 4
+          },
+          "height_baseline_top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.3522012578616352,
+            "group_any_hit_rate": 0.3522012578616352,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.3270440251572327,
+            "group_any_hit_rate": 0.5345911949685535,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 160,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 71,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 56,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 32,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 71,
+              "selected_coverage": 0.44375,
+              "mean_net": 0.0004220813521516059,
+              "loss_ge7pct": 0.28169014084507044,
+              "marked_candidates": 71,
+              "risk_loss_ge7pct_including_blocked": 0.28169014084507044,
+              "sell_blocked": 0,
+              "median_net": 0.0032047541499599123,
+              "worst": -0.23204388753412752,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 69,
+              "selected_coverage": 0.43125,
+              "mean_net": 0.0061793718408225265,
+              "loss_ge7pct": 0.3333333333333333,
+              "marked_candidates": 70,
+              "risk_loss_ge7pct_including_blocked": 0.34285714285714286,
+              "sell_blocked": 1,
+              "median_net": 0.004800054083364261,
+              "worst": -0.30910501952702674,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 259,
+            "known": 257,
+            "groups": 259,
+            "candidate_hit_rate": 0.3035019455252918,
+            "group_any_hit_rate": 0.3035019455252918,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 518,
+            "known": 514,
+            "groups": 259,
+            "candidate_hit_rate": 0.2782101167315175,
+            "group_any_hit_rate": 0.48249027237354086,
+            "groups_with_unresolved_truth": 2
+          }
+        },
+        "ST_DUAL": {
+          "full": {
+            "candidates": 1941,
+            "scored": 1923,
+            "positives": 635,
+            "positive_calls": 570,
+            "tp": 310,
+            "fp": 260,
+            "fn": 325,
+            "tn": 1028,
+            "Accuracy": 0.6957878315132605,
+            "Recall": 0.4881889763779528,
+            "Precision": 0.543859649122807,
+            "F1": 0.5145228215767634,
+            "label_coverage": 0.990726429675425
+          },
+          "observed_nonword": {
+            "candidates": 1610,
+            "scored": 1598,
+            "positives": 409,
+            "positive_calls": 307,
+            "tp": 113,
+            "fp": 194,
+            "fn": 296,
+            "tn": 995,
+            "Accuracy": 0.6933667083854819,
+            "Recall": 0.2762836185819071,
+            "Precision": 0.36807817589576547,
+            "F1": 0.31564245810055863,
+            "label_coverage": 0.9925465838509316
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "oneword": {
+            "candidates": 322,
+            "scored": 316,
+            "positives": 225,
+            "positive_calls": 263,
+            "tp": 197,
+            "fp": 66,
+            "fn": 28,
+            "tn": 25,
+            "Accuracy": 0.7025316455696202,
+            "Recall": 0.8755555555555555,
+            "Precision": 0.7490494296577946,
+            "F1": 0.8073770491803278,
+            "label_coverage": 0.9813664596273292
+          },
+          "unknown_identity": {
+            "candidates": 9,
+            "scored": 9,
+            "positives": 1,
+            "positive_calls": 0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "tn": 8,
+            "Accuracy": 0.8888888888888888,
+            "Recall": 0.0,
+            "Precision": null,
+            "F1": 0.0,
+            "label_coverage": 1.0
+          },
+          "top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.36477987421383645,
+            "group_any_hit_rate": 0.36477987421383645,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.3805031446540881,
+            "group_any_hit_rate": 0.6352201257861635,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 449,
+            "known": 445,
+            "groups": 449,
+            "candidate_hit_rate": 0.3415730337078652,
+            "group_any_hit_rate": 0.3415730337078652,
+            "groups_with_unresolved_truth": 4
+          },
+          "same_height_top2": {
+            "selected": 708,
+            "known": 702,
+            "groups": 449,
+            "candidate_hit_rate": 0.32051282051282054,
+            "group_any_hit_rate": 0.451685393258427,
+            "groups_with_unresolved_truth": 4
+          },
+          "height_baseline_top1": {
+            "selected": 160,
+            "known": 159,
+            "groups": 160,
+            "candidate_hit_rate": 0.3522012578616352,
+            "group_any_hit_rate": 0.3522012578616352,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 320,
+            "known": 318,
+            "groups": 160,
+            "candidate_hit_rate": 0.3270440251572327,
+            "group_any_hit_rate": 0.5345911949685535,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 160,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 66,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 60,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 33,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 65,
+              "selected_coverage": 0.40625,
+              "mean_net": -0.010366111523709831,
+              "loss_ge7pct": 0.35384615384615387,
+              "marked_candidates": 65,
+              "risk_loss_ge7pct_including_blocked": 0.35384615384615387,
+              "sell_blocked": 0,
+              "median_net": -0.015796056402613497,
+              "worst": -0.23204388753412752,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 65,
+              "selected_coverage": 0.40625,
+              "mean_net": -0.015445058909417723,
+              "loss_ge7pct": 0.4,
+              "marked_candidates": 65,
+              "risk_loss_ge7pct_including_blocked": 0.4,
+              "sell_blocked": 0,
+              "median_net": -0.017699845608936445,
+              "worst": -0.30910501952702674,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 259,
+            "known": 257,
+            "groups": 259,
+            "candidate_hit_rate": 0.3346303501945525,
+            "group_any_hit_rate": 0.3346303501945525,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 518,
+            "known": 514,
+            "groups": 259,
+            "candidate_hit_rate": 0.3093385214007782,
+            "group_any_hit_rate": 0.5252918287937743,
+            "groups_with_unresolved_truth": 2
+          }
+        }
+      },
+      "intervals": {
+        "ST_B_ONLY": {
+          "nonword_recall": {
+            "lower": 0.21683581308245842,
+            "upper": 0.3583262366049252,
+            "pairs": 409,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.0880503144654088,
+            "upper": 0.11320754716981132,
+            "pairs": 159,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        },
+        "ST_DUAL": {
+          "nonword_recall": {
+            "lower": 0.05384271978021978,
+            "upper": 0.16290726817042606,
+            "pairs": 409,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.06289308176100629,
+            "upper": 0.0880503144654088,
+            "pairs": 159,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        }
+      }
+    },
+    "2026Sep": {
+      "metrics": {
+        "BASE": {
+          "full": {
+            "candidates": 182,
+            "scored": 133,
+            "positives": 55,
+            "positive_calls": 34,
+            "tp": 19,
+            "fp": 15,
+            "fn": 36,
+            "tn": 63,
+            "Accuracy": 0.6165413533834586,
+            "Recall": 0.34545454545454546,
+            "Precision": 0.5588235294117647,
+            "F1": 0.42696629213483145,
+            "label_coverage": 0.7307692307692307
+          },
+          "observed_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 10,
+            "tp": 6,
+            "fp": 4,
+            "fn": 34,
+            "tn": 63,
+            "Accuracy": 0.6448598130841121,
+            "Recall": 0.15,
+            "Precision": 0.6,
+            "F1": 0.24,
+            "label_coverage": 0.7482517482517482
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 10,
+            "tp": 6,
+            "fp": 4,
+            "fn": 34,
+            "tn": 63,
+            "Accuracy": 0.6448598130841121,
+            "Recall": 0.15,
+            "Precision": 0.6,
+            "F1": 0.24,
+            "label_coverage": 0.7482517482517482
+          },
+          "oneword": {
+            "candidates": 39,
+            "scored": 26,
+            "positives": 15,
+            "positive_calls": 24,
+            "tp": 13,
+            "fp": 11,
+            "fn": 2,
+            "tn": 0,
+            "Accuracy": 0.5,
+            "Recall": 0.8666666666666667,
+            "Precision": 0.5416666666666666,
+            "F1": 0.6666666666666666,
+            "label_coverage": 0.6666666666666666
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.5384615384615384,
+            "group_any_hit_rate": 0.5384615384615384,
+            "groups_with_unresolved_truth": 3
+          },
+          "top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.5769230769230769,
+            "group_any_hit_rate": 0.7692307692307693,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top1": {
+            "selected": 45,
+            "known": 35,
+            "groups": 45,
+            "candidate_hit_rate": 0.5428571428571428,
+            "group_any_hit_rate": 0.5428571428571428,
+            "groups_with_unresolved_truth": 10
+          },
+          "same_height_top2": {
+            "selected": 76,
+            "known": 58,
+            "groups": 45,
+            "candidate_hit_rate": 0.4827586206896552,
+            "group_any_hit_rate": 0.6571428571428571,
+            "groups_with_unresolved_truth": 10
+          },
+          "height_baseline_top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.46153846153846156,
+            "group_any_hit_rate": 0.46153846153846156,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.4230769230769231,
+            "group_any_hit_rate": 0.6923076923076923,
+            "groups_with_unresolved_truth": 3
+          },
+          "execution_proxy": {
+            "selected": 16,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 7,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 4,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 3,
+              "MISSING_B_DAY": 2
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 6,
+              "selected_coverage": 0.375,
+              "mean_net": 0.07673389770768703,
+              "loss_ge7pct": 0.0,
+              "marked_candidates": 6,
+              "risk_loss_ge7pct_including_blocked": 0.0,
+              "sell_blocked": 0,
+              "median_net": 0.10149652521391672,
+              "worst": -0.023479520479520507,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 4,
+              "selected_coverage": 0.25,
+              "mean_net": 0.04920632504730049,
+              "loss_ge7pct": 0.25,
+              "marked_candidates": 4,
+              "risk_loss_ge7pct_including_blocked": 0.25,
+              "sell_blocked": 0,
+              "median_net": 0.0227982017982018,
+              "worst": -0.11683085000106275,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 31,
+            "known": 23,
+            "groups": 31,
+            "candidate_hit_rate": 0.6521739130434783,
+            "group_any_hit_rate": 0.6521739130434783,
+            "groups_with_unresolved_truth": 8
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 62,
+            "known": 46,
+            "groups": 31,
+            "candidate_hit_rate": 0.5217391304347826,
+            "group_any_hit_rate": 0.8260869565217391,
+            "groups_with_unresolved_truth": 8
+          }
+        },
+        "ROLL252": {
+          "full": {
+            "candidates": 182,
+            "scored": 133,
+            "positives": 55,
+            "positive_calls": 34,
+            "tp": 19,
+            "fp": 15,
+            "fn": 36,
+            "tn": 63,
+            "Accuracy": 0.6165413533834586,
+            "Recall": 0.34545454545454546,
+            "Precision": 0.5588235294117647,
+            "F1": 0.42696629213483145,
+            "label_coverage": 0.7307692307692307
+          },
+          "observed_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 10,
+            "tp": 6,
+            "fp": 4,
+            "fn": 34,
+            "tn": 63,
+            "Accuracy": 0.6448598130841121,
+            "Recall": 0.15,
+            "Precision": 0.6,
+            "F1": 0.24,
+            "label_coverage": 0.7482517482517482
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 10,
+            "tp": 6,
+            "fp": 4,
+            "fn": 34,
+            "tn": 63,
+            "Accuracy": 0.6448598130841121,
+            "Recall": 0.15,
+            "Precision": 0.6,
+            "F1": 0.24,
+            "label_coverage": 0.7482517482517482
+          },
+          "oneword": {
+            "candidates": 39,
+            "scored": 26,
+            "positives": 15,
+            "positive_calls": 24,
+            "tp": 13,
+            "fp": 11,
+            "fn": 2,
+            "tn": 0,
+            "Accuracy": 0.5,
+            "Recall": 0.8666666666666667,
+            "Precision": 0.5416666666666666,
+            "F1": 0.6666666666666666,
+            "label_coverage": 0.6666666666666666
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.5384615384615384,
+            "group_any_hit_rate": 0.5384615384615384,
+            "groups_with_unresolved_truth": 3
+          },
+          "top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.5769230769230769,
+            "group_any_hit_rate": 0.7692307692307693,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top1": {
+            "selected": 45,
+            "known": 35,
+            "groups": 45,
+            "candidate_hit_rate": 0.5428571428571428,
+            "group_any_hit_rate": 0.5428571428571428,
+            "groups_with_unresolved_truth": 10
+          },
+          "same_height_top2": {
+            "selected": 76,
+            "known": 58,
+            "groups": 45,
+            "candidate_hit_rate": 0.4827586206896552,
+            "group_any_hit_rate": 0.6571428571428571,
+            "groups_with_unresolved_truth": 10
+          },
+          "height_baseline_top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.46153846153846156,
+            "group_any_hit_rate": 0.46153846153846156,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.4230769230769231,
+            "group_any_hit_rate": 0.6923076923076923,
+            "groups_with_unresolved_truth": 3
+          },
+          "execution_proxy": {
+            "selected": 16,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 7,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 4,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 3,
+              "MISSING_B_DAY": 2
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 6,
+              "selected_coverage": 0.375,
+              "mean_net": 0.07673389770768703,
+              "loss_ge7pct": 0.0,
+              "marked_candidates": 6,
+              "risk_loss_ge7pct_including_blocked": 0.0,
+              "sell_blocked": 0,
+              "median_net": 0.10149652521391672,
+              "worst": -0.023479520479520507,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 4,
+              "selected_coverage": 0.25,
+              "mean_net": 0.04920632504730049,
+              "loss_ge7pct": 0.25,
+              "marked_candidates": 4,
+              "risk_loss_ge7pct_including_blocked": 0.25,
+              "sell_blocked": 0,
+              "median_net": 0.0227982017982018,
+              "worst": -0.11683085000106275,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 31,
+            "known": 23,
+            "groups": 31,
+            "candidate_hit_rate": 0.6521739130434783,
+            "group_any_hit_rate": 0.6521739130434783,
+            "groups_with_unresolved_truth": 8
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 62,
+            "known": 46,
+            "groups": 31,
+            "candidate_hit_rate": 0.5217391304347826,
+            "group_any_hit_rate": 0.8260869565217391,
+            "groups_with_unresolved_truth": 8
+          }
+        },
+        "ST_B_ONLY": {
+          "full": {
+            "candidates": 182,
+            "scored": 133,
+            "positives": 55,
+            "positive_calls": 89,
+            "tp": 40,
+            "fp": 49,
+            "fn": 15,
+            "tn": 29,
+            "Accuracy": 0.518796992481203,
+            "Recall": 0.7272727272727273,
+            "Precision": 0.449438202247191,
+            "F1": 0.5555555555555556,
+            "label_coverage": 0.7307692307692307
+          },
+          "observed_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 65,
+            "tp": 27,
+            "fp": 38,
+            "fn": 13,
+            "tn": 29,
+            "Accuracy": 0.5233644859813084,
+            "Recall": 0.675,
+            "Precision": 0.4153846153846154,
+            "F1": 0.5142857142857142,
+            "label_coverage": 0.7482517482517482
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 65,
+            "tp": 27,
+            "fp": 38,
+            "fn": 13,
+            "tn": 29,
+            "Accuracy": 0.5233644859813084,
+            "Recall": 0.675,
+            "Precision": 0.4153846153846154,
+            "F1": 0.5142857142857142,
+            "label_coverage": 0.7482517482517482
+          },
+          "oneword": {
+            "candidates": 39,
+            "scored": 26,
+            "positives": 15,
+            "positive_calls": 24,
+            "tp": 13,
+            "fp": 11,
+            "fn": 2,
+            "tn": 0,
+            "Accuracy": 0.5,
+            "Recall": 0.8666666666666667,
+            "Precision": 0.5416666666666666,
+            "F1": 0.6666666666666666,
+            "label_coverage": 0.6666666666666666
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.5384615384615384,
+            "group_any_hit_rate": 0.5384615384615384,
+            "groups_with_unresolved_truth": 3
+          },
+          "top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.46153846153846156,
+            "group_any_hit_rate": 0.6153846153846154,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top1": {
+            "selected": 45,
+            "known": 35,
+            "groups": 45,
+            "candidate_hit_rate": 0.4857142857142857,
+            "group_any_hit_rate": 0.4857142857142857,
+            "groups_with_unresolved_truth": 10
+          },
+          "same_height_top2": {
+            "selected": 76,
+            "known": 58,
+            "groups": 45,
+            "candidate_hit_rate": 0.46551724137931033,
+            "group_any_hit_rate": 0.6285714285714286,
+            "groups_with_unresolved_truth": 10
+          },
+          "height_baseline_top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.46153846153846156,
+            "group_any_hit_rate": 0.46153846153846156,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.4230769230769231,
+            "group_any_hit_rate": 0.6923076923076923,
+            "groups_with_unresolved_truth": 3
+          },
+          "execution_proxy": {
+            "selected": 16,
+            "entry_status_counts": {
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 8,
+              "MISSING_B_DAY": 3,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 3,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 2
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 6,
+              "selected_coverage": 0.375,
+              "mean_net": 0.09649111733384509,
+              "loss_ge7pct": 0.0,
+              "marked_candidates": 6,
+              "risk_loss_ge7pct_including_blocked": 0.0,
+              "sell_blocked": 0,
+              "median_net": 0.10861333893754566,
+              "worst": -0.019154058707250062,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 4,
+              "selected_coverage": 0.25,
+              "mean_net": 0.08205310637868213,
+              "loss_ge7pct": 0.25,
+              "marked_candidates": 4,
+              "risk_loss_ge7pct_including_blocked": 0.25,
+              "sell_blocked": 0,
+              "median_net": 0.08849176446096507,
+              "worst": -0.11683085000106275,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 31,
+            "known": 23,
+            "groups": 31,
+            "candidate_hit_rate": 0.5652173913043478,
+            "group_any_hit_rate": 0.5652173913043478,
+            "groups_with_unresolved_truth": 8
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 62,
+            "known": 46,
+            "groups": 31,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.782608695652174,
+            "groups_with_unresolved_truth": 8
+          }
+        },
+        "ST_DUAL": {
+          "full": {
+            "candidates": 182,
+            "scored": 133,
+            "positives": 55,
+            "positive_calls": 66,
+            "tp": 33,
+            "fp": 33,
+            "fn": 22,
+            "tn": 45,
+            "Accuracy": 0.5864661654135338,
+            "Recall": 0.6,
+            "Precision": 0.5,
+            "F1": 0.5454545454545454,
+            "label_coverage": 0.7307692307692307
+          },
+          "observed_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 42,
+            "tp": 20,
+            "fp": 22,
+            "fn": 20,
+            "tn": 45,
+            "Accuracy": 0.6074766355140186,
+            "Recall": 0.5,
+            "Precision": 0.47619047619047616,
+            "F1": 0.4878048780487805,
+            "label_coverage": 0.7482517482517482
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 143,
+            "scored": 107,
+            "positives": 40,
+            "positive_calls": 42,
+            "tp": 20,
+            "fp": 22,
+            "fn": 20,
+            "tn": 45,
+            "Accuracy": 0.6074766355140186,
+            "Recall": 0.5,
+            "Precision": 0.47619047619047616,
+            "F1": 0.4878048780487805,
+            "label_coverage": 0.7482517482517482
+          },
+          "oneword": {
+            "candidates": 39,
+            "scored": 26,
+            "positives": 15,
+            "positive_calls": 24,
+            "tp": 13,
+            "fp": 11,
+            "fn": 2,
+            "tn": 0,
+            "Accuracy": 0.5,
+            "Recall": 0.8666666666666667,
+            "Precision": 0.5416666666666666,
+            "F1": 0.6666666666666666,
+            "label_coverage": 0.6666666666666666
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.6153846153846154,
+            "group_any_hit_rate": 0.6153846153846154,
+            "groups_with_unresolved_truth": 3
+          },
+          "top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.6538461538461539,
+            "group_any_hit_rate": 0.9230769230769231,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top1": {
+            "selected": 45,
+            "known": 35,
+            "groups": 45,
+            "candidate_hit_rate": 0.5714285714285714,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 10
+          },
+          "same_height_top2": {
+            "selected": 76,
+            "known": 58,
+            "groups": 45,
+            "candidate_hit_rate": 0.4827586206896552,
+            "group_any_hit_rate": 0.6285714285714286,
+            "groups_with_unresolved_truth": 10
+          },
+          "height_baseline_top1": {
+            "selected": 16,
+            "known": 13,
+            "groups": 16,
+            "candidate_hit_rate": 0.46153846153846156,
+            "group_any_hit_rate": 0.46153846153846156,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top2": {
+            "selected": 32,
+            "known": 26,
+            "groups": 16,
+            "candidate_hit_rate": 0.4230769230769231,
+            "group_any_hit_rate": 0.6923076923076923,
+            "groups_with_unresolved_truth": 3
+          },
+          "execution_proxy": {
+            "selected": 16,
+            "entry_status_counts": {
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 7,
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 6,
+              "MISSING_B_DAY": 2,
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 6,
+              "selected_coverage": 0.375,
+              "mean_net": 0.06798868817639409,
+              "loss_ge7pct": 0.0,
+              "marked_candidates": 6,
+              "risk_loss_ge7pct_including_blocked": 0.0,
+              "sell_blocked": 0,
+              "median_net": 0.08794698355379893,
+              "worst": -0.023479520479520507,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 5,
+              "selected_coverage": 0.3125,
+              "mean_net": 0.08035217541263598,
+              "loss_ge7pct": 0.2,
+              "marked_candidates": 5,
+              "risk_loss_ge7pct_including_blocked": 0.2,
+              "sell_blocked": 0,
+              "median_net": 0.07354845154845135,
+              "worst": -0.11683085000106275,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 31,
+            "known": 23,
+            "groups": 31,
+            "candidate_hit_rate": 0.6956521739130435,
+            "group_any_hit_rate": 0.6956521739130435,
+            "groups_with_unresolved_truth": 8
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 62,
+            "known": 46,
+            "groups": 31,
+            "candidate_hit_rate": 0.5217391304347826,
+            "group_any_hit_rate": 0.782608695652174,
+            "groups_with_unresolved_truth": 8
+          }
+        }
+      },
+      "intervals": {
+        "ST_B_ONLY": {
+          "nonword_recall": {
+            "lower": 0.38636363636363635,
+            "upper": 0.676586134453782,
+            "pairs": 40,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.15384615384615385,
+            "upper": 0.23076923076923078,
+            "pairs": 13,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        },
+        "ST_DUAL": {
+          "nonword_recall": {
+            "lower": 0.10416666666666667,
+            "upper": 0.6571428571428571,
+            "pairs": 40,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.23076923076923078,
+            "upper": 0.38461538461538464,
+            "pairs": 13,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        }
+      }
+    },
+    "2026Oct": {
+      "metrics": {
+        "BASE": {
+          "full": {
+            "candidates": 64,
+            "scored": 48,
+            "positives": 17,
+            "positive_calls": 12,
+            "tp": 9,
+            "fp": 3,
+            "fn": 8,
+            "tn": 28,
+            "Accuracy": 0.7708333333333334,
+            "Recall": 0.5294117647058824,
+            "Precision": 0.75,
+            "F1": 0.6206896551724138,
+            "label_coverage": 0.75
+          },
+          "observed_nonword": {
+            "candidates": 48,
+            "scored": 37,
+            "positives": 9,
+            "positive_calls": 1,
+            "tp": 1,
+            "fp": 0,
+            "fn": 8,
+            "tn": 28,
+            "Accuracy": 0.7837837837837838,
+            "Recall": 0.1111111111111111,
+            "Precision": 1.0,
+            "F1": 0.2,
+            "label_coverage": 0.7708333333333334
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 48,
+            "scored": 37,
+            "positives": 9,
+            "positive_calls": 1,
+            "tp": 1,
+            "fp": 0,
+            "fn": 8,
+            "tn": 28,
+            "Accuracy": 0.7837837837837838,
+            "Recall": 0.1111111111111111,
+            "Precision": 1.0,
+            "F1": 0.2,
+            "label_coverage": 0.7708333333333334
+          },
+          "oneword": {
+            "candidates": 16,
+            "scored": 11,
+            "positives": 8,
+            "positive_calls": 11,
+            "tp": 8,
+            "fp": 3,
+            "fn": 0,
+            "tn": 0,
+            "Accuracy": 0.7272727272727273,
+            "Recall": 1.0,
+            "Precision": 0.7272727272727273,
+            "F1": 0.8421052631578947,
+            "label_coverage": 0.6875
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 5,
+            "known": 4,
+            "groups": 5,
+            "candidate_hit_rate": 0.75,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 10,
+            "known": 8,
+            "groups": 5,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 13,
+            "known": 10,
+            "groups": 13,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.5,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top2": {
+            "selected": 22,
+            "known": 17,
+            "groups": 13,
+            "candidate_hit_rate": 0.4117647058823529,
+            "group_any_hit_rate": 0.6,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top1": {
+            "selected": 5,
+            "known": 4,
+            "groups": 5,
+            "candidate_hit_rate": 0.75,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 10,
+            "known": 8,
+            "groups": 5,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 5,
+            "entry_status_counts": {
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 2,
+              "INFERRED_OPEN_PROXY_NOT_ACTUAL_FILL": 2,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 2,
+              "selected_coverage": 0.4,
+              "mean_net": -0.045021529043964115,
+              "loss_ge7pct": 0.5,
+              "marked_candidates": 2,
+              "risk_loss_ge7pct_including_blocked": 0.5,
+              "sell_blocked": 0,
+              "median_net": -0.045021529043964115,
+              "worst": -0.22644814948365233,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 0,
+              "selected_coverage": 0.0,
+              "mean_net": null,
+              "loss_ge7pct": null,
+              "marked_candidates": 0,
+              "risk_loss_ge7pct_including_blocked": null,
+              "sell_blocked": 0,
+              "median_net": null,
+              "worst": null,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 9,
+            "known": 7,
+            "groups": 9,
+            "candidate_hit_rate": 0.42857142857142855,
+            "group_any_hit_rate": 0.42857142857142855,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 18,
+            "known": 14,
+            "groups": 9,
+            "candidate_hit_rate": 0.35714285714285715,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 2
+          }
+        },
+        "ST_B_ONLY": {
+          "full": {
+            "candidates": 64,
+            "scored": 48,
+            "positives": 17,
+            "positive_calls": 34,
+            "tp": 15,
+            "fp": 19,
+            "fn": 2,
+            "tn": 12,
+            "Accuracy": 0.5625,
+            "Recall": 0.8823529411764706,
+            "Precision": 0.4411764705882353,
+            "F1": 0.5882352941176471,
+            "label_coverage": 0.75
+          },
+          "observed_nonword": {
+            "candidates": 48,
+            "scored": 37,
+            "positives": 9,
+            "positive_calls": 23,
+            "tp": 7,
+            "fp": 16,
+            "fn": 2,
+            "tn": 12,
+            "Accuracy": 0.5135135135135135,
+            "Recall": 0.7777777777777778,
+            "Precision": 0.30434782608695654,
+            "F1": 0.4375,
+            "label_coverage": 0.7708333333333334
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 48,
+            "scored": 37,
+            "positives": 9,
+            "positive_calls": 23,
+            "tp": 7,
+            "fp": 16,
+            "fn": 2,
+            "tn": 12,
+            "Accuracy": 0.5135135135135135,
+            "Recall": 0.7777777777777778,
+            "Precision": 0.30434782608695654,
+            "F1": 0.4375,
+            "label_coverage": 0.7708333333333334
+          },
+          "oneword": {
+            "candidates": 16,
+            "scored": 11,
+            "positives": 8,
+            "positive_calls": 11,
+            "tp": 8,
+            "fp": 3,
+            "fn": 0,
+            "tn": 0,
+            "Accuracy": 0.7272727272727273,
+            "Recall": 1.0,
+            "Precision": 0.7272727272727273,
+            "F1": 0.8421052631578947,
+            "label_coverage": 0.6875
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 5,
+            "known": 4,
+            "groups": 5,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.5,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 10,
+            "known": 8,
+            "groups": 5,
+            "candidate_hit_rate": 0.375,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 13,
+            "known": 10,
+            "groups": 13,
+            "candidate_hit_rate": 0.4,
+            "group_any_hit_rate": 0.4,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top2": {
+            "selected": 22,
+            "known": 17,
+            "groups": 13,
+            "candidate_hit_rate": 0.35294117647058826,
+            "group_any_hit_rate": 0.5,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top1": {
+            "selected": 5,
+            "known": 4,
+            "groups": 5,
+            "candidate_hit_rate": 0.75,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 10,
+            "known": 8,
+            "groups": 5,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 5,
+            "entry_status_counts": {
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 2,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 2,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 0,
+              "selected_coverage": 0.0,
+              "mean_net": null,
+              "loss_ge7pct": null,
+              "marked_candidates": 0,
+              "risk_loss_ge7pct_including_blocked": null,
+              "sell_blocked": 0,
+              "median_net": null,
+              "worst": null,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 0,
+              "selected_coverage": 0.0,
+              "mean_net": null,
+              "loss_ge7pct": null,
+              "marked_candidates": 0,
+              "risk_loss_ge7pct_including_blocked": null,
+              "sell_blocked": 0,
+              "median_net": null,
+              "worst": null,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 9,
+            "known": 7,
+            "groups": 9,
+            "candidate_hit_rate": 0.2857142857142857,
+            "group_any_hit_rate": 0.2857142857142857,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 18,
+            "known": 14,
+            "groups": 9,
+            "candidate_hit_rate": 0.2857142857142857,
+            "group_any_hit_rate": 0.42857142857142855,
+            "groups_with_unresolved_truth": 2
+          }
+        },
+        "ST_DUAL": {
+          "full": {
+            "candidates": 64,
+            "scored": 48,
+            "positives": 17,
+            "positive_calls": 24,
+            "tp": 14,
+            "fp": 10,
+            "fn": 3,
+            "tn": 21,
+            "Accuracy": 0.7291666666666666,
+            "Recall": 0.8235294117647058,
+            "Precision": 0.5833333333333334,
+            "F1": 0.6829268292682927,
+            "label_coverage": 0.75
+          },
+          "observed_nonword": {
+            "candidates": 48,
+            "scored": 37,
+            "positives": 9,
+            "positive_calls": 13,
+            "tp": 6,
+            "fp": 7,
+            "fn": 3,
+            "tn": 21,
+            "Accuracy": 0.7297297297297297,
+            "Recall": 0.6666666666666666,
+            "Precision": 0.46153846153846156,
+            "F1": 0.5454545454545454,
+            "label_coverage": 0.7708333333333334
+          },
+          "original_raw_qualified_nonword": {
+            "candidates": 48,
+            "scored": 37,
+            "positives": 9,
+            "positive_calls": 13,
+            "tp": 6,
+            "fp": 7,
+            "fn": 3,
+            "tn": 21,
+            "Accuracy": 0.7297297297297297,
+            "Recall": 0.6666666666666666,
+            "Precision": 0.46153846153846156,
+            "F1": 0.5454545454545454,
+            "label_coverage": 0.7708333333333334
+          },
+          "oneword": {
+            "candidates": 16,
+            "scored": 11,
+            "positives": 8,
+            "positive_calls": 11,
+            "tp": 8,
+            "fp": 3,
+            "fn": 0,
+            "tn": 0,
+            "Accuracy": 0.7272727272727273,
+            "Recall": 1.0,
+            "Precision": 0.7272727272727273,
+            "F1": 0.8421052631578947,
+            "label_coverage": 0.6875
+          },
+          "unknown_identity": {
+            "candidates": 0,
+            "scored": 0,
+            "Accuracy": null,
+            "Recall": null,
+            "Precision": null,
+            "F1": null
+          },
+          "top1": {
+            "selected": 5,
+            "known": 4,
+            "groups": 5,
+            "candidate_hit_rate": 0.75,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "top2": {
+            "selected": 10,
+            "known": 8,
+            "groups": 5,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "same_height_top1": {
+            "selected": 13,
+            "known": 10,
+            "groups": 13,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.5,
+            "groups_with_unresolved_truth": 3
+          },
+          "same_height_top2": {
+            "selected": 22,
+            "known": 17,
+            "groups": 13,
+            "candidate_hit_rate": 0.4117647058823529,
+            "group_any_hit_rate": 0.6,
+            "groups_with_unresolved_truth": 3
+          },
+          "height_baseline_top1": {
+            "selected": 5,
+            "known": 4,
+            "groups": 5,
+            "candidate_hit_rate": 0.75,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "height_baseline_top2": {
+            "selected": 10,
+            "known": 8,
+            "groups": 5,
+            "candidate_hit_rate": 0.5,
+            "group_any_hit_rate": 0.75,
+            "groups_with_unresolved_truth": 1
+          },
+          "execution_proxy": {
+            "selected": 5,
+            "entry_status_counts": {
+              "NO_FILL_UPPER_LIMIT_OPEN_PROXY": 3,
+              "CANCEL_GAP_OUTSIDE_0_TO_7PCT": 1,
+              "MISSING_B_DAY": 1
+            },
+            "actual_fills": 0,
+            "b1": {
+              "matured": 0,
+              "selected_coverage": 0.0,
+              "mean_net": null,
+              "loss_ge7pct": null,
+              "marked_candidates": 0,
+              "risk_loss_ge7pct_including_blocked": null,
+              "sell_blocked": 0,
+              "median_net": null,
+              "worst": null,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            },
+            "b2": {
+              "matured": 0,
+              "selected_coverage": 0.0,
+              "mean_net": null,
+              "loss_ge7pct": null,
+              "marked_candidates": 0,
+              "risk_loss_ge7pct_including_blocked": null,
+              "sell_blocked": 0,
+              "median_net": null,
+              "worst": null,
+              "cumulative_return": null,
+              "portfolio_drawdown": null,
+              "note": "Equal selected-candidate scenario distribution, not an executable portfolio backtest"
+            }
+          },
+          "multiple_nonword_same_height_top1": {
+            "selected": 9,
+            "known": 7,
+            "groups": 9,
+            "candidate_hit_rate": 0.42857142857142855,
+            "group_any_hit_rate": 0.42857142857142855,
+            "groups_with_unresolved_truth": 2
+          },
+          "multiple_nonword_same_height_top2": {
+            "selected": 18,
+            "known": 14,
+            "groups": 9,
+            "candidate_hit_rate": 0.35714285714285715,
+            "group_any_hit_rate": 0.5714285714285714,
+            "groups_with_unresolved_truth": 2
+          }
+        }
+      },
+      "intervals": {
+        "ST_B_ONLY": {
+          "nonword_recall": {
+            "lower": 0.6666666666666666,
+            "upper": 0.6666666666666666,
+            "pairs": 9,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": -0.25,
+            "upper": -0.25,
+            "pairs": 4,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        },
+        "ST_DUAL": {
+          "nonword_recall": {
+            "lower": 0.5555555555555556,
+            "upper": 0.5555555555555556,
+            "pairs": 9,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          },
+          "top1": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "pairs": 4,
+            "draws": 2000,
+            "unit": "five observed signal-date circular blocks",
+            "family_multiple_testing_adjusted": true,
+            "adjustment": "two fixed arms Bonferroni tails; exploratory auxiliary metrics not confirmatory"
+          }
+        }
+      }
+    }
+  },
+  "fixed_screen": {
+    "september_nonword_recall_gain_min": 0.1,
+    "nonword_f1_not_lower_each_fold": true,
+    "top1_hit_gain_over_height_and_base_september": true,
+    "top2_hit_not_lower_september": true,
+    "precision_decline_limit": 0.05,
+    "paired_recall_interval_lower_positive": true,
+    "b1_large_loss_rate_not_higher": true,
+    "b2_mean_net_return_higher": true,
+    "execution_proxy_min_matured": 10,
+    "execution_proxy_min_coverage": 0.5,
+    "old_all_pool_accuracy_plus_3pp_veto": false,
+    "independent_role_accuracy_required_for_identity_claim": true,
+    "research_screen_is_not_live_production_promotion": true
+  },
+  "arm_verdicts": {
+    "ST_B_ONLY": {
+      "guards": {
+        "2025H2_f1": true,
+        "2025H2_precision": true,
+        "2026JanAug_f1": true,
+        "2026JanAug_precision": false,
+        "2026Sep_f1": true,
+        "2026Sep_precision": false,
+        "september_recall_gain": true,
+        "september_top1_over_base_and_height": false,
+        "september_top2": false,
+        "paired_recall_interval_lower_positive": true,
+        "execution_evidence_sufficient": false,
+        "b1_loss_not_higher": true,
+        "b2_expected_return_higher": true
+      },
+      "retrospective_research_screen_pass": false,
+      "production_deployment_authorized": false,
+      "six_role_independent_accuracy": null,
+      "role_gold_rows": 0
+    },
+    "ST_DUAL": {
+      "guards": {
+        "2025H2_f1": true,
+        "2025H2_precision": true,
+        "2026JanAug_f1": true,
+        "2026JanAug_precision": true,
+        "2026Sep_f1": true,
+        "2026Sep_precision": false,
+        "september_recall_gain": true,
+        "september_top1_over_base_and_height": true,
+        "september_top2": true,
+        "paired_recall_interval_lower_positive": true,
+        "execution_evidence_sufficient": false,
+        "b1_loss_not_higher": true,
+        "b2_expected_return_higher": true
+      },
+      "retrospective_research_screen_pass": false,
+      "production_deployment_authorized": false,
+      "six_role_independent_accuracy": null,
+      "role_gold_rows": 0
+    }
+  },
+  "actual_new_fits": 32,
+  "base_refits": 0,
+  "new_formal_forecasts": 0,
+  "new_forward_samples": 0,
+  "no_calibrated_probability_claim": true,
+  "retrospective_not_blind": true,
+  "failed_preoptimization_fit_calls": 1,
+  "total_fit_invocations": 33,
+  "models_refit_for_corrections": 0,
+  "post_fit_input_correction": "October14 complete archived failed-board pool, no known labels that day; pre14 predictions bit-identical within1e-12",
+  "october_roll252": "No saved October monthly baseline. The erroneous BASE alias is excluded, not counted as ROLL252."
+}

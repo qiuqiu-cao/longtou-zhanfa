@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-10-15T12:57:33.927190+00:00",
+  "new_fits": 0,
+  "items": [
+    {
+      "stage": "full verifier",
+      "cause": "pandas string column represents absent date with NaN; None-only assertion attempted float<=string",
+      "repair": "use pd.notna for date presence; no field or model changed"
+    },
+    {
+      "stage": "multiday unit fixture",
+      "cause": "toy 10.90->12.00 exceeds exact11.99 cap by1cent; comparator correctly left cap event unknown",
+      "repair": "toy close corrected within cap; no comparator policy changed"
+    }
+  ]
+}

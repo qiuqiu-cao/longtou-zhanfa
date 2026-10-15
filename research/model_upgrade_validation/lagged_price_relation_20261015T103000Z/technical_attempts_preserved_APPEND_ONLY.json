@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-15T11:45:09.610445+00:00",
+  "actual_prior_attempts": [
+    {
+      "stage": "source_v2_fixture_validation",
+      "result": "2 failed,4 passed",
+      "cause": "Toy pre_close was a constant10 while prior actual close varied; new cross-check correctly excluded those toy returns",
+      "repair": "Toy reference now equals its exact adjacent close; added optional-reference/missing-session/conflicting-source regression checks",
+      "new_fits": 0
+    },
+    {
+      "stage": "run_before_freeze_process_returned",
+      "result": "FileNotFoundError protocol_BEFORE_ANY_FIT.json",
+      "cause": "Protocol freeze was still running; run refused before experiment lock and every fit",
+      "repair": "Waited for completed protocol; exactly one successful experiment subsequently executed",
+      "new_fits": 0
+    }
+  ],
+  "current_tests": "71 passed",
+  "labels_or_parameters_retuned": false,
+  "original_failures_in_tool_transcript_retained": true
+}

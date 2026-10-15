@@ -1,0 +1,86 @@
+{
+  "completed_at": "2026-10-15T06:56:48.275047+00:00",
+  "status": "FULL15_PARENT_DISCOVERY_AND_INDEPENDENT_IDENTITY_REVIEW_VERIFIED",
+  "pool_size": 15,
+  "historical_pool_snapshots": 6,
+  "excluded_request_response_date_mismatches": 4,
+  "historical_anchor_candidates": 40,
+  "newly_recovered_parent": "600825 新华传媒",
+  "old_manual_coded_anchor_count": 2,
+  "parent_hypotheses": 19,
+  "candidates_with_nonempty_parent_hypotheses": 10,
+  "author_accepted_parent_hypotheses": 5,
+  "author_review_completed": 15,
+  "source_bound_candidate_daily_paths": 15,
+  "fully_qualified_current_streaks": 13,
+  "raw_daily_cells_independently_recomputed": 35,
+  "current_complete_provider_mainboard_closing_rows": 34,
+  "classification_counts": {
+    "UNKNOWN": 5,
+    "NOT_SUPPORTED": 3,
+    "OLD_FOLLOWER_RESTART": 1,
+    "THEME_RELAY_COMPETING": 3,
+    "CYCLE_SUPPLEMENT_CANDIDATE": 1,
+    "RELATED_UNRESOLVED": 2
+  },
+  "full_original_fact_rows_unchanged": true,
+  "protected_original_hash_checks": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\supplement_relation_review.py": true,
+    "D:\\Documents\\ChatGPT\\龙头战法\\supplement_role_review.py": true,
+    "D:\\Documents\\ChatGPT\\龙头战法\\forum_reasoning_review.py": true,
+    "D:\\Documents\\ChatGPT\\龙头战法\\stock_judgement_review.py": true,
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v293\\settlement_ledger.jsonl": true,
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\independent_stock_judgement\\registry.jsonl": true,
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\independent_stock_judgement\\settlement_ledger.jsonl": true
+  },
+  "source_hash_checks": 62,
+  "completed_review_validation": "DIAGNOSTIC_APPEND_ONLY_REVIEW_VALIDATED",
+  "engineering_tests_passed": 72,
+  "actual_negative_checks": [
+    {
+      "case": "full_pool_stock_removed",
+      "error_type": "ValueError",
+      "reason": "identity extension changed original facts"
+    },
+    {
+      "case": "parent_disposition_missing",
+      "error_type": "ValueError",
+      "reason": "every discovered parent needs accept/reject/pending review"
+    },
+    {
+      "case": "same_cycle_competitor_omitted",
+      "error_type": "ValueError",
+      "reason": "complete same-cycle competition review required"
+    },
+    {
+      "case": "diagnostic_cannot_create_forecast",
+      "error_type": "ValueError",
+      "reason": "diagnostic review cannot introduce a retroactive forecast"
+    },
+    {
+      "case": "rehashing_changed_projection_not_enough",
+      "error_type": "ValueError",
+      "reason": "identity discovery differs from original sources"
+    },
+    {
+      "case": "old_diagnostic_freeze_refused_by_original_gate",
+      "error_type": "ValueError",
+      "reason": "diagnostic supplement context cannot register a forecast"
+    }
+  ],
+  "previous_training_cutoff_context_counts": {
+    "2025-06-30": 0,
+    "2025-12-31": 0,
+    "2026-08-31": 0
+  },
+  "current_context_is_historical_asof_training": false,
+  "independent_role_gold_labels_created": 0,
+  "new_fits": 0,
+  "new_formal_forecasts": 0,
+  "new_formal_mature_samples": 0,
+  "new_orders_or_fills": 0,
+  "model_exposure": "MODEL_OUTPUT_ALREADY_SEEN",
+  "measured_identity_accuracy": null,
+  "measured_recall_improvement": null,
+  "final_view_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\supplement_discovery_20261015T063312Z\\delivery_final\\review_final\\review.html"
+}

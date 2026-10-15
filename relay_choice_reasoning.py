@@ -201,11 +201,13 @@ def project(base, explanations, facts, record):
             "narrative_presence": fact.get("reviewed_narrative", {}).get("current_trade_narrative_presence", "UNKNOWN"),
             "role_or_cause_certified": False, "entry_selection_authorized": False})
     positive_nonword = [c for c in ranking if model[c]["predicted_positive"] and model[c]["actual_one_word_daily"] == 0]
+    relative_nonword = [c for c in ranking if model[c]["actual_one_word_daily"] == 0]
     return {"version": VERSION, "status": "READ_ONLY_FULL_POOL_CHOICE_REASONING_NOT_NEW_FORECAST",
         "signal_date": base["signal_date"], "target_date": base["target_date"],
         "original_model_knowledge_cutoff": base["knowledge_cutoff"],
         "model_version": base["model_version"], "candidate_count": len(ranking), "ranking": ranking,
         "model_rank_first": ranking[0] if ranking else None,
+        "non_one_word_relative_first": relative_nonword[0] if relative_nonword else None,
         "non_one_word_positive_first": positive_nonword[0] if positive_nonword else None,
         "trade_primary": None, "trade_primary_reason": "No qualified original executable entry is supplied by this explanation",
         "market_model": base["market"], "model_exposure": record["model_exposure"], "blinding_verified": False,
@@ -259,7 +261,9 @@ def render(report, bank):
         + "，输入状态为" + report["market_model"].get("input_status", "未知") + "。市场方向、个股晋级、主题身份和可成交分开审阅。")
     if first:
         lines.append(f"模型首位是{first['name']}（{first['display_score']:.1f}）。先看原模型的数值偏好，再看独立判断的支持、反证和次日确认。")
+    relative_nonword = next((r for r in rows if r["actual_one_word_daily"] == 0), None)
     lines += ["分数是100×原内部原始分数；不是晋级概率或交易胜率。模型排名首位与可交易主选分别判断。",
+        "非一字相对首位（待证据审阅）：" + (relative_nonword["name"] + " " + relative_nonword["code"] if relative_nonword else "空") + "。相对观察不以0.5筛除；原模型方向、独立方向和交易主选各自保留。",
         f"非一字正向首选：{report['non_one_word_positive_first'] or '空'}；原正式交易主选：{report['trade_primary'] or '空'}。", "",
         "从限定原帖借鉴的是推理顺序：先说明环境与位置，再比较完整对手，给出支持和反解释，最后声明怎样观察会推翻判断。",
         "论坛给出的唯一赢家、固定板数上限和必然回流没有变成模型依据。", ""]
@@ -269,14 +273,19 @@ def render(report, bank):
     for row in rows:
         direction = {"PROMOTE": "偏晋级", "FAIL": "偏断板", "UNKNOWN": "未知/弃判"}[row["independent_call"]]
         lines.append(f"| {row['rank']} | {row['name']} {row['code']} | {row['boards']}→{row['boards']+1} | {row['display_score']:.1f} | {'偏晋级' if row['model_positive'] else '偏断板'} | {direction} |")
-    lines += ["", "同身位比较沿原分数排序。组内第一的原方向和非一字正向首选分别保留；同组可以共同晋级、共同失败或分化。", "",
-        "| 板位目标 | 完整组内原分数顺序 | 组内第一原方向 | 非一字正向首选 |", "| --- | --- | --- | --- |"]
+    lines += ["", "同身位比较沿原分数排序。非一字相对首位无论原方向均展示，分差单位为模型显示分；分差不是概率差。相对第一、同分的代码顺序或唯一活口均不证明主动卡位、承接或可买。同组可以共同晋级、共同失败或分化。", "",
+        "| 板位目标 | 完整组内原分数顺序 | 组内第一原方向 | 非一字相对首位（待审） | 非一字前二分差 | 非一字正向首选 |", "| --- | --- | --- | --- | ---: | --- |"]
     for group in report.get("same_height_groups", []):
         names = {r["code"]: r["name"] for r in group["members"]}
         ordering = "、".join(f"{r['name']} {r['display_score']:.1f}" for r in group["members"])
         first_call = "偏晋级" if group["rank_first_original_model_positive"] else "偏断板（组内第一仍为负向）"
         nonword = names.get(group["nonword_positive_first"], "空")
-        lines.append(f"| {group['boards']}→{group['target_boards']} | {ordering} | {first_call} | {nonword} |")
+        relative = "、".join(names[c] for c in group.get("nonword_relative_tied_first_codes", []) or
+            ([group["nonword_relative_first"]] if group.get("nonword_relative_first") else [])) or "空"
+        gap = group.get("nonword_top_two_original_display_gap")
+        gap_text = f"{gap:.1f}" if gap is not None else "无第二只/未知"
+        lines.append(f"| {group['boards']}→{group['target_boards']} | {ordering} | {first_call} | {relative} | {gap_text} | {nonword} |")
+    cohort_members = {r["code"]: r for group in report.get("same_height_groups", []) for r in group["members"]}
     for row in rows:
         direction = {"PROMOTE": "偏晋级", "FAIL": "偏断板", "UNKNOWN": "未知/弃判"}[row["independent_call"]]
         lines += ["", f"## {row['name']} {row['code']}", "",
@@ -289,6 +298,11 @@ def render(report, bank):
             if observed.get(field) is not None:
                 daily.append(FIELD_NAMES[field] + _field_value(field, observed[field]))
         lines.append("盘面先看这些事实：" + "，".join(daily) + "。")
+        cohort_row = cohort_members.get(row["code"], {})
+        if actual == 0 and cohort_row.get("same_height_nonword_rank") is not None:
+            lines.append(f"原分数在完整非一字池排第{cohort_row['full_pool_nonword_rank']}，同板位非一字排第{cohort_row['same_height_nonword_rank']}；相对组内首位分差{cohort_row['display_score_gap_to_group_first']:.1f}，相对同位非一字首位分差{cohort_row['display_score_gap_to_nonword_first']:.1f}。旧低换手代理为{_field_value('signal_one_word', row['low_turnover_proxy'])}；未触发代理不等于评分不依赖该项。")
+            if cohort_row["relative_nonword_observation"]:
+                lines.append("本股进入同位非一字相对首位观察，继续核对叙事/父锚、完整竞争时序、反证和开盘取消条件；相对观察本身不新增晋级判断。")
         if actual == 1:
             lines.append("这里的一字说明当日未呈现价格打开，首次打开后的供给和排队成交仍待核；模型高分不能提前回答这两个问题。")
         else:

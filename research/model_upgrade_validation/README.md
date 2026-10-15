@@ -1,5 +1,18 @@
 # 固定市场与个股模型研究入口
 
+## 补涨身份：自主扫描父锚与完整竞争（2026-10-15）
+
+`supplement_identity_discovery.py`读取已存在的完整涨停池/原始不复权日线/时钟收据，枚举较早高标，输出提前启动、旧跟风重起、同题材接力竞争及未知等假设。父锚不受旧手工名单限制；原文逐句主体、作者疑问、同段背景及名称线索分开。它没有训练权重，不把晋级结果作为补涨身份标签。当前完整15只和来源/边界见[实际交付](supplement_discovery_20261015T063312Z/补涨身份识别补强与完整15只结论.md)。
+
+新日期在下面的prepare命令增加`--identity-evidence <当期证据包>`；完整历史/主线/叙事参数照传。证据包schema为`supplement-discovery-evidence-1`，包含signal_date/target_date/formed_at/relation_bank_path、pool_snapshots及source_bindings；日线可选daily_archive，绑定normalized_path、原manifest_paths和codes，各原始响应也须绑定。严格核对原请求/响应日期、身份、哈希、真实收件时钟、不复权日线重建。具体完整实例为本次`existing_pool_and_daily_evidence.json`；不能沿用旧日期包冒充新日期。
+
+```powershell
+python relay_review_workbench.py discover --facts <已通过股吧阶段的完整事实> --evidence <当期证据包> --draft <绑定该事实的原作者稿> --output-dir <全新目录>
+python relay_review_workbench.py render --facts <新目录/facts_with_identity_discovery.json> --review <完成identity_discovery_assessment的作者稿> --output-dir <新审阅展示目录>
+```
+
+新增作者稿逐股必须填写身份判断、各父锚采纳/否决/待核、反证、完整同周期候选和取消条件。prepare/discover不自动填方向或身份结论。新日期freeze和到期compare重验此层，再执行原全部门；旧日期使用review-context，仅追加诊断且promotion_judgement保持空。新卡展示父锚结构、同周期日线和作者独立结论，完整机器来源保留于discovery.json。当前资料可用于当下审阅，不自动获得原历史训练时点资格或独立身份真值。
+
 ## 当前统一复盘入口（2026-10-14）
 
 按用户“不足都解决／继续”完成[本轮整改与验收](remediation_20261014/不足整改与验收.md)。下面的统一入口适用于下一次合格新日期，旧历史入口和旧待修说明保留为当时状态。原CLI丢失历史/叙事参数的问题在新入口已修；原受保护源码及冻结哈希未改。
@@ -586,3 +599,67 @@ python forum_reasoning_outcome_context.py pending --facts <诊断facts_with_foru
 project核原登记、exact事实/日期/完整池，读取原比较绑定的唯一BASE和目标来源归档，经原兼容build_outcomes只读重建真值，核方向、指标和分层后显示每观点方向兼容与误报/漏判/弃判。角色或中性观点不以晋级认证；没有独立同刻确认的条件与取消效果均UNKNOWN。原结果/预测不改、不请求数据、不拟合；原comparison未重复列出的BASE source_hashes在本页另验证并追加，不删除旧校验。
 
 实际project_audit_20261014/pending_full15已跑15股/10观点；新方向、标签、指标仍待核，误差NOT_EVALUATED而非15只弃判。15项合成契约测试通过非预测增益，真实project新到期结算尚未执行；0fit/0新正式成熟，完整旧分数/来源保持。不用旧10结果配新15观点，不把方向兼容当论坛论点真值或因果收益。
+# 非一字相对观察与原始响应采集补强（2026-10-15市场日期）
+
+本次交付见[recall_followthrough_20261015T055212Z/非一字漏判方案落实与剩余边界.md](recall_followthrough_20261015T055212Z/非一字漏判方案落实与剩余边界.md)。原模型0.5方向、评分、排序和独立登记不改；`relay_cohort_output`及`relay_choice_reasoning`现完整展示非一字相对首位/同分首位、名次和组内分差，低于0.5也进入证据审阅，不自动转为晋级、主动领先或交易主选。新日期仍须先独立冻结再展示原分数，缺证据不默认断板，一字/唯一活口不自动转正。
+
+原六点报价/分钟采集只有解析结果及响应哈希。需完整原文时使用新增`public_raw_capture_monitor.py --candidates <前一官方交易日完整CSV> --calendar <原有效官方日历> --trade-date <实际当前交易日> --output <新目录>`，在上海09:20之前启动；经原监控回调保存逐次HTTP字节、哈希、真实时钟和逐股字段位置，原监控/解析/执行模块不变。`--verify <目录/raw_capture_manifest.json>`核验原事件链与原文字段/解析产物绑定。不增加抓取范围、自动化、训练或成交授权，错过的窗口保持未知；不能复用本批旧15只为新日期候选。
+
+原10/15完整实际重建与24项相关检查通过，非预测改善。164来源核查当前幸存者比较122、完整前日竞争1，三训练截止路径上下文0/0/0，未启新拟合。两只复牌公司原公告确认14日复牌并解释13日处于停牌期，但原供应商板数与严格相邻官方交易日口径仍分栏。13→14一次补采8池仍失败且原桥重复冻结保护拒绝，正式新增0；当前15只执行和六点已错过收据仍无已核成交或净收益。详细分母、前像、失败、来源及实际时间见本批收据。
+
+## 全周期因果规则与非一字双通道（2026-10-15新授权）
+
+本次明确授权用<=信号日的历史序列推导规则角色及动态特征，并采用B通道Recall/F1/相对排序和执行证据评价。规则不是独立身份金标准；不再用缺人工角色真值阻止合法晋级训练，也不套旧全池Accuracy+3pp研究否决。交付见[完整结果](short_term_thinking_20261015T071000Z/delivery/全周期短线思维重建与模型验证交付_定稿.md)及[75只次总表](short_term_thinking_20261015T071000Z/delivery/短线思维周期演进与个股龙头角色总表.md)。正式BASE、原账本及旧失败未改。
+
+`short_term_thinking_dataset_builder.py`统一`causal_features` API，信号字段白名单隔离目标/交易结果，官方相邻日维护父锚、切换记忆、同位竞争及本轮日线检验。主角色规则输出覆盖9245/9245，无规则者为RELAY_CONTENDER；逐字段缺失保留，历史题材/行业仍0，不包装成100%事实覆盖。V215精确检查保留55646/58772，来源仍有当前股票池偏差。完整炸板范围须由适配器显式声明；只有收盘池不能把未知炸板数填0。
+
+本固定实验ST_B_ONLY/ST_DUAL各16个月实际32模型；另1次全空列分箱在优化前失败，技术修复及原协议/源码保留，无效果后调参。9月真实非一字Recall15%→67.5%/50%，Precision60%→41.54%/47.62%；双通道F1 24%→48.78%，误报4→22。两方案整体均不通过，研究分不进入原正式前5或生产替换。训练同时改变特征、估计器及训练权重，不能把差异单独归因于动态关系。收益代理小样本和六类独立身份准确率未验收。
+
+新日期原工作台`prepare`参数全部保留，追加：
+
+```powershell
+python relay_review_workbench.py prepare <原完整来源参数> --history-dataset <此前角色历史> --mainline-history <此前主线历史> --narrative-reviews <当期叙事审阅> --identity-evidence <当期父锚证据> --thinking-bundle research/model_upgrade_validation/short_term_thinking_20261015T071000Z/scope_correction/engine_context.joblib
+```
+
+该bundle含历史及已存10月的市场、首板/炸板和逐股价格链，新日期仍由同一`causal_features`计算。新增输入须为准确新日期、完整原池、实际取得；当期`theme_report`的完整炸板事实同时传入。历史/主线/叙事仍由原前置层消费并绑定，不用晚到股吧正文填历史数值。`prepare`先生成`thinking/context.json`与遮蔽分数事实卡，再沿原完整作者审阅和freeze/compare/execution。新增角色不自动填写独立方向或认证11类角色。
+
+已有日期仅追加观察卡可用：
+
+```powershell
+python relay_review_workbench.py thinking --facts <原facts.json> --features <原features.json> --bundle <已重建current_extension.joblib> --output-dir <新目录>
+python relay_review_workbench.py thinking-score --facts <新增facts_with_causal_thinking.json> --review <原已完成完整独立审阅> --model <已存2026-10_ST_DUAL_model.joblib> --output <新研究分数JSON>
+```
+
+`thinking-score`拒绝未完成审阅；原独立记录须在registry、绑定其原事实，或通过原完整诊断审阅门。它只加载已存权重，一字只监测；不注册新预测或成交。当前完整15已实跑在`delivery/workbench_verified/`，研究分见`delivery/current15_scores_final.json`；新日期API与历史API所有动态字段及主角色实跑完全一致。替代来源的行业家族归一方式一致，不因入口改变而丢失题材代理角色。
+
+最终数据在`scope_correction/`，模型及原提前保存预测在`execution_after_binning_repair/`；修正版对照为`delivery/complete_paired_predictions_VALIDATED.csv`（15020行）、验证JSON及`independent_verification.json`。原当前14日炸板未传入、10月ROLL252误标BASE别名两处输入/展示修正已保留原件；全部9245历史特征及标签相同，32模型14日前分数复现，没有重训。不要重跑本固定比较。当前最新完整归档信号日14日；15日一次请求失败，旧15池不冒充新日期。
+
+
+## 2026-10-15续批：日期名称、首板字辈扩散与最新15日来源
+
+本批交付在[历史短线补层与10月15日续接](historical_symbolic_context_20261015T081200Z/delivery_final/历史短线补层与10月15日续接交付.md)，完整总表更新为[81只次HTML](historical_symbolic_context_20261015T081200Z/delivery_final/完整81只周期角色与原判断对照.html)及同名CSV。原75行、旧目标标签、模型与正式账本均保留。
+
+`historical_symbolic_context.py build_causal`只用当日完整收盘池、日期有效简称与此前官方交易日计算17项字辈扩散输入。三个原训练窗口计算及日期名称区间覆盖均100%；已知完整池中没有合格群可以是0，缺来源不能填0。历史主线代理435、先锋代理352；它们是名称共现规则，不是公司行业、活跃题材或独立角色金标准。行业同日期证据仍仅35只次，9月超名称区间的182行使用归档名称并降低等级。
+
+只新增ST_DUAL_SYMBOLIC_DIFFUSION一个挑战，16个月各一次实际拟合，不重训BASE/ST_DUAL。9月Recall/Precision/F1为47.5%/43.18%/45.24%，比原双通道50%/47.62%/48.78%下降；Top1升9/13但Top2降16/26，整体失败，不部署、不换阈值重跑。固定协议、提前预测、模型及独立重放收据均在该批目录。
+
+新日期原完整`prepare`可在`--thinking-bundle`后追加：
+
+```powershell
+python relay_review_workbench.py prepare <原完整来源及历史参数> --thinking-bundle <含最新已核市场/首板/炸板/价量的engine_context.joblib> --symbolic-context research/model_upgrade_validation/historical_symbolic_context_20261015T081200Z/qualified_final/symbolic_context.joblib
+```
+
+已有事实另附图层与已审阅后的研究评分：
+
+```powershell
+python relay_review_workbench.py symbolic --facts <原facts_with_causal_thinking.json> --features <原features.json> --artifact research/model_upgrade_validation/historical_symbolic_context_20261015T081200Z/qualified_final/symbolic_context.joblib --output-dir <新目录>
+python relay_review_workbench.py symbolic-score --facts <新增facts_with_symbolic_context.json> --review <原已完成完整独立审阅> --model research/model_upgrade_validation/historical_symbolic_context_20261015T081200Z/fixed_comparison/2026-10_model.joblib --output <新研究分数JSON>
+```
+
+原历史、主线历史、叙事、父锚参数仍全部传递；新增上下文独立绑定，原事实行不动。待审阅先显示模型、重哈希伪造群计数、缺原因果层仍拒绝。14日完整15只实际已通过CLI评分与强制新日期引擎重算的一致性验证，不把已见模型的旧日期当新盲测。
+
+15日原完整池请求失败记录继续保留；另一来源实际收盘后取得完整替代页36/7/26，主板范围34/5/25，连板6只。68股日线请求每股一次，新华传媒缺15日不当断板；原页AI业务文案不当公司事实。`short_term_thinking_latest.py`是此次固定15日来源的只读投影/同引擎校验，不能用它冒充未来日期的采集器或原V293生产适配器。完整来源与状态机胶囊在`latest15_prepared_v2/`；v1空值表示比较失败及源码前像保留。
+
+14→15完整15只追加结果4晋级11未续板；不写回已冻结训练标签，不计正式新增成熟。当前15→16完整6只已做角色、全部40父锚与旧文观点审阅；原完整prepare/freeze未完成，所以正式方向和模型分数保持隐藏，当前6只不算新正式预测。新来源条件具备时沿原完整流程继续，不能绕过原11角色及冻结门。
+
+`historical_execution_context.py`只补评估日线144个原缺格，不改变选股/分数。B+1/B+2的B为假设入场日，成本/滑点/跌停卖出受阻及未知分开；字辈挑战9月B+2只有3场景，不能认证收益优势。独立复核16模型、11313行、620源哈希、38受保护哈希、84组指标及745笔代理退出算式通过；这是工程与复算验证，不是预测验收。
