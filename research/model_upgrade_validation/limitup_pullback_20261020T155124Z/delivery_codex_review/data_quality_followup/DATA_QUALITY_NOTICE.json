@@ -1,0 +1,51 @@
+{
+  "at": "2026-10-20T16:57:42.957789+00:00",
+  "status": "DATA_NOT_FULLY_CORRECT_OR_VALIDATED",
+  "supersedes_interpretation_of": "Earlier verification PASS certifies reproducibility, not ground-truth correctness. Prior68.5440% is original-label arithmetic only.",
+  "source_logic_file": "D:\\Documents\\ChatGPT\\龙头战法\\leader_system_v3.py",
+  "source_logic_sha256": "79842821a7004922b1b2b84a713d0a01bddfc326ebb54e9572bffcc67dfa3f0b",
+  "legacy_tolerance_evidence": [
+    {
+      "line": 752,
+      "text": "if \"limit_price\" not in bars:"
+    },
+    {
+      "line": 753,
+      "text": "bars[\"limit_price\"] = bars[\"pre_close\"].map(round_limit_price)"
+    },
+    {
+      "line": 755,
+      "text": "bars[\"limit_price\"] = pd.to_numeric(bars[\"limit_price\"], errors=\"coerce\")"
+    },
+    {
+      "line": 756,
+      "text": "bars[\"down_limit_price\"] = bars[\"pre_close\"].map(lambda value: round_limit_price(value, -0.10))"
+    },
+    {
+      "line": 757,
+      "text": "bars[\"is_limit\"] = (pd.to_numeric(bars[\"close\"], errors=\"coerce\") - bars[\"limit_price\"]).abs() <= 0.011"
+    },
+    {
+      "line": 758,
+      "text": "bars[\"touched_limit\"] = bars[\"high\"] >= bars[\"limit_price\"] - 0.011"
+    },
+    {
+      "line": 760,
+      "text": "bars[\"is_limit_down\"] = (bars[\"close\"] - bars[\"down_limit_price\"]).abs() <= 0.011"
+    },
+    {
+      "line": 762,
+      "text": "bars[[\"open\", \"high\", \"low\", \"close\"]].sub(bars[\"limit_price\"], axis=0).abs().le(0.011).all(axis=1)"
+    }
+  ],
+  "full_prepared_label_conflicts": 12,
+  "evaluation_label_conflicts": 7,
+  "evaluation_7_all_one_cent_below_limit": true,
+  "signal_pool_identity_conflicts_and_missing_values_remain": true,
+  "action": "Retain originals, append all-row qualification flags and quarantine label conflicts. No new performance claims, fits or deployment.",
+  "root_core_edited": false,
+  "source_data_edited": false,
+  "original_labels_changed": false,
+  "new_fits": 0,
+  "next_action": "Trace the12conflicts and15signal-limit mismatches to original price-level sources and affected training windows before corrected-data comparison; independent source gaps stay unknown."
+}

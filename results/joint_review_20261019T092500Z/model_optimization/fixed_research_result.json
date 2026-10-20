@@ -1,0 +1,743 @@
+{
+  "formed_at": "2026-10-19T09:50:25.309275+00:00",
+  "actual_new_research_fits": 47,
+  "skipped_windows": [
+    {
+      "horizon": 5,
+      "month": "2026-10",
+      "cutoff": "2026-10-01",
+      "full_signal_days": 252,
+      "known_label_days": 251,
+      "qualified": false,
+      "status": "SKIPPED_INPUT_GAP",
+      "missing_label_dates": [
+        "2026-09-10"
+      ],
+      "training_rows": 2931,
+      "max_training_target": "2026-09-29",
+      "training_digest": "f40ec5079e411fb50d65e20272ff1fa1bfdc7d57395fa480fe3ccb386acfd931"
+    }
+  ],
+  "production_refits": 0,
+  "old_failed_trials_repeated": 0,
+  "next_day_accuracy_improved": false,
+  "direct_multiday_acceptance": [
+    {
+      "horizon": 2,
+      "passed": false,
+      "accuracy_vs_proxy_interval": {
+        "difference": 0.05200553250345782,
+        "lower": 0.011386846161319046,
+        "upper": 0.09481346915847959,
+        "draws": 2000,
+        "three_horizon_adjusted": true
+      },
+      "accuracy_vs_always_up_interval": {
+        "difference": 0.017427385892116183,
+        "lower": -0.018517132971523693,
+        "upper": 0.05413375489861809,
+        "draws": 2000,
+        "three_horizon_adjusted": true
+      },
+      "Top3_direct": {
+        "slots": 906,
+        "known": 883,
+        "unknown": 23,
+        "hits": 573,
+        "hit_fraction_known": 0.6489241223103058
+      },
+      "Top3_proxy": {
+        "slots": 906,
+        "known": 885,
+        "unknown": 21,
+        "hits": 572,
+        "hit_fraction_known": 0.6463276836158192
+      }
+    },
+    {
+      "horizon": 3,
+      "passed": false,
+      "accuracy_vs_proxy_interval": {
+        "difference": 0.033426183844011144,
+        "lower": -0.012828310751608342,
+        "upper": 0.0803362282749302,
+        "draws": 2000,
+        "three_horizon_adjusted": true
+      },
+      "accuracy_vs_always_up_interval": {
+        "difference": 0.020612813370473538,
+        "lower": -0.019185391462432012,
+        "upper": 0.06335650584026097,
+        "draws": 2000,
+        "three_horizon_adjusted": true
+      },
+      "Top3_direct": {
+        "slots": 906,
+        "known": 871,
+        "unknown": 35,
+        "hits": 535,
+        "hit_fraction_known": 0.6142365097588978
+      },
+      "Top3_proxy": {
+        "slots": 906,
+        "known": 875,
+        "unknown": 31,
+        "hits": 531,
+        "hit_fraction_known": 0.6068571428571429
+      }
+    },
+    {
+      "horizon": 5,
+      "passed": false,
+      "accuracy_vs_proxy_interval": {
+        "difference": 0.0056179775280898875,
+        "lower": -0.03299969928450338,
+        "upper": 0.04443867451192033,
+        "draws": 2000,
+        "three_horizon_adjusted": true
+      },
+      "accuracy_vs_always_up_interval": {
+        "difference": 0.0800561797752809,
+        "lower": 0.006997637138758952,
+        "upper": 0.1545214291250097,
+        "draws": 2000,
+        "three_horizon_adjusted": true
+      },
+      "Top3_direct": {
+        "slots": 906,
+        "known": 865,
+        "unknown": 41,
+        "hits": 476,
+        "hit_fraction_known": 0.5502890173410404
+      },
+      "Top3_proxy": {
+        "slots": 906,
+        "known": 856,
+        "unknown": 50,
+        "hits": 463,
+        "hit_fraction_known": 0.5408878504672897
+      }
+    }
+  ],
+  "fold_metrics": [
+    {
+      "horizon": 2,
+      "fold": "2025H2",
+      "direct": {
+        "full": 1584,
+        "known": 1571,
+        "unknown": 13,
+        "TP": 564,
+        "FP": 436,
+        "FN": 259,
+        "TN": 312,
+        "accuracy": 0.5576066199872692,
+        "precision": 0.564,
+        "recall": 0.6852976913730255,
+        "F1": 0.6187602852441031,
+        "balanced_accuracy": 0.5512049954191331
+      },
+      "proxy_nextlimit_direction": {
+        "full": 1584,
+        "known": 1571,
+        "unknown": 13,
+        "TP": 236,
+        "FP": 140,
+        "FN": 587,
+        "TN": 608,
+        "accuracy": 0.5372374283895608,
+        "precision": 0.6276595744680851,
+        "recall": 0.2867557715674362,
+        "F1": 0.39366138448707255,
+        "balanced_accuracy": 0.5497949980831833
+      },
+      "always_up": {
+        "full": 1584,
+        "known": 1571,
+        "unknown": 13,
+        "TP": 823,
+        "FP": 748,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.5238701464035647,
+        "precision": 0.5238701464035647,
+        "recall": 1.0,
+        "F1": 0.6875522138680034,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 378,
+        "known": 374,
+        "unknown": 4,
+        "hits": 234,
+        "hit_fraction_known": 0.6256684491978609
+      },
+      "Top3_proxy": {
+        "slots": 378,
+        "known": 375,
+        "unknown": 3,
+        "hits": 236,
+        "hit_fraction_known": 0.6293333333333333
+      },
+      "Top3_height": {
+        "slots": 378,
+        "known": 373,
+        "unknown": 5,
+        "hits": 209,
+        "hit_fraction_known": 0.5603217158176944
+      },
+      "fold_pass": false
+    },
+    {
+      "horizon": 2,
+      "fold": "2026JanAug",
+      "direct": {
+        "full": 1941,
+        "known": 1918,
+        "unknown": 23,
+        "TP": 804,
+        "FP": 531,
+        "FN": 290,
+        "TN": 293,
+        "accuracy": 0.5719499478623566,
+        "precision": 0.6022471910112359,
+        "recall": 0.7349177330895795,
+        "F1": 0.6620008233841087,
+        "balanced_accuracy": 0.5452501286807121
+      },
+      "proxy_nextlimit_direction": {
+        "full": 1941,
+        "known": 1918,
+        "unknown": 23,
+        "TP": 243,
+        "FP": 115,
+        "FN": 851,
+        "TN": 709,
+        "accuracy": 0.49635036496350365,
+        "precision": 0.6787709497206704,
+        "recall": 0.22212065813528337,
+        "F1": 0.3347107438016529,
+        "balanced_accuracy": 0.5412787756695834
+      },
+      "always_up": {
+        "full": 1941,
+        "known": 1918,
+        "unknown": 23,
+        "TP": 1094,
+        "FP": 824,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.570385818561001,
+        "precision": 0.570385818561001,
+        "recall": 1.0,
+        "F1": 0.7264276228419655,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 480,
+        "known": 471,
+        "unknown": 9,
+        "hits": 315,
+        "hit_fraction_known": 0.6687898089171974
+      },
+      "Top3_proxy": {
+        "slots": 480,
+        "known": 471,
+        "unknown": 9,
+        "hits": 310,
+        "hit_fraction_known": 0.6581740976645435
+      },
+      "Top3_height": {
+        "slots": 480,
+        "known": 470,
+        "unknown": 10,
+        "hits": 275,
+        "hit_fraction_known": 0.5851063829787234
+      },
+      "fold_pass": false
+    },
+    {
+      "horizon": 2,
+      "fold": "2026Sep",
+      "direct": {
+        "full": 182,
+        "known": 126,
+        "unknown": 56,
+        "TP": 54,
+        "FP": 39,
+        "FN": 13,
+        "TN": 20,
+        "accuracy": 0.5873015873015873,
+        "precision": 0.5806451612903226,
+        "recall": 0.8059701492537313,
+        "F1": 0.675,
+        "balanced_accuracy": 0.5724766000505945
+      },
+      "proxy_nextlimit_direction": {
+        "full": 182,
+        "known": 126,
+        "unknown": 56,
+        "TP": 21,
+        "FP": 17,
+        "FN": 46,
+        "TN": 42,
+        "accuracy": 0.5,
+        "precision": 0.5526315789473685,
+        "recall": 0.31343283582089554,
+        "F1": 0.4,
+        "balanced_accuracy": 0.5126486213002783
+      },
+      "always_up": {
+        "full": 182,
+        "known": 126,
+        "unknown": 56,
+        "TP": 67,
+        "FP": 59,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.5317460317460317,
+        "precision": 0.5317460317460317,
+        "recall": 1.0,
+        "F1": 0.694300518134715,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 48,
+        "known": 38,
+        "unknown": 10,
+        "hits": 24,
+        "hit_fraction_known": 0.631578947368421
+      },
+      "Top3_proxy": {
+        "slots": 48,
+        "known": 39,
+        "unknown": 9,
+        "hits": 26,
+        "hit_fraction_known": 0.6666666666666666
+      },
+      "Top3_height": {
+        "slots": 48,
+        "known": 33,
+        "unknown": 15,
+        "hits": 19,
+        "hit_fraction_known": 0.5757575757575758
+      },
+      "fold_pass": true
+    },
+    {
+      "horizon": 3,
+      "fold": "2025H2",
+      "direct": {
+        "full": 1584,
+        "known": 1567,
+        "unknown": 17,
+        "TP": 531,
+        "FP": 432,
+        "FN": 278,
+        "TN": 326,
+        "accuracy": 0.5469049138481175,
+        "precision": 0.5514018691588785,
+        "recall": 0.6563658838071693,
+        "F1": 0.5993227990970654,
+        "balanced_accuracy": 0.5432225197399962
+      },
+      "proxy_nextlimit_direction": {
+        "full": 1584,
+        "known": 1567,
+        "unknown": 17,
+        "TP": 222,
+        "FP": 152,
+        "FN": 587,
+        "TN": 606,
+        "accuracy": 0.5283982131461391,
+        "precision": 0.5935828877005348,
+        "recall": 0.27441285537700866,
+        "F1": 0.37531699070160607,
+        "balanced_accuracy": 0.5369425754457602
+      },
+      "always_up": {
+        "full": 1584,
+        "known": 1567,
+        "unknown": 17,
+        "TP": 809,
+        "FP": 758,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.5162731333758774,
+        "precision": 0.5162731333758774,
+        "recall": 1.0,
+        "F1": 0.680976430976431,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 378,
+        "known": 371,
+        "unknown": 7,
+        "hits": 220,
+        "hit_fraction_known": 0.5929919137466307
+      },
+      "Top3_proxy": {
+        "slots": 378,
+        "known": 374,
+        "unknown": 4,
+        "hits": 218,
+        "hit_fraction_known": 0.5828877005347594
+      },
+      "Top3_height": {
+        "slots": 378,
+        "known": 371,
+        "unknown": 7,
+        "hits": 206,
+        "hit_fraction_known": 0.555256064690027
+      },
+      "fold_pass": false
+    },
+    {
+      "horizon": 3,
+      "fold": "2026JanAug",
+      "direct": {
+        "full": 1941,
+        "known": 1909,
+        "unknown": 32,
+        "TP": 758,
+        "FP": 576,
+        "FN": 277,
+        "TN": 298,
+        "accuracy": 0.5531691985332635,
+        "precision": 0.568215892053973,
+        "recall": 0.7323671497584541,
+        "F1": 0.639932460953989,
+        "balanced_accuracy": 0.5366641240783117
+      },
+      "proxy_nextlimit_direction": {
+        "full": 1941,
+        "known": 1909,
+        "unknown": 32,
+        "TP": 229,
+        "FP": 125,
+        "FN": 806,
+        "TN": 749,
+        "accuracy": 0.5123101100052383,
+        "precision": 0.6468926553672316,
+        "recall": 0.221256038647343,
+        "F1": 0.32973362131029516,
+        "balanced_accuracy": 0.539117721840834
+      },
+      "always_up": {
+        "full": 1941,
+        "known": 1909,
+        "unknown": 32,
+        "TP": 1035,
+        "FP": 874,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.5421686746987951,
+        "precision": 0.5421686746987951,
+        "recall": 1.0,
+        "F1": 0.703125,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 480,
+        "known": 468,
+        "unknown": 12,
+        "hits": 295,
+        "hit_fraction_known": 0.6303418803418803
+      },
+      "Top3_proxy": {
+        "slots": 480,
+        "known": 467,
+        "unknown": 13,
+        "hits": 292,
+        "hit_fraction_known": 0.6252676659528907
+      },
+      "Top3_height": {
+        "slots": 480,
+        "known": 464,
+        "unknown": 16,
+        "hits": 261,
+        "hit_fraction_known": 0.5625
+      },
+      "fold_pass": false
+    },
+    {
+      "horizon": 3,
+      "fold": "2026Sep",
+      "direct": {
+        "full": 182,
+        "known": 114,
+        "unknown": 68,
+        "TP": 45,
+        "FP": 30,
+        "FN": 17,
+        "TN": 22,
+        "accuracy": 0.5877192982456141,
+        "precision": 0.6,
+        "recall": 0.7258064516129032,
+        "F1": 0.656934306569343,
+        "balanced_accuracy": 0.5744416873449132
+      },
+      "proxy_nextlimit_direction": {
+        "full": 182,
+        "known": 114,
+        "unknown": 68,
+        "TP": 18,
+        "FP": 16,
+        "FN": 44,
+        "TN": 36,
+        "accuracy": 0.47368421052631576,
+        "precision": 0.5294117647058824,
+        "recall": 0.2903225806451613,
+        "F1": 0.375,
+        "balanced_accuracy": 0.4913151364764268
+      },
+      "always_up": {
+        "full": 182,
+        "known": 114,
+        "unknown": 68,
+        "TP": 62,
+        "FP": 52,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.543859649122807,
+        "precision": 0.543859649122807,
+        "recall": 1.0,
+        "F1": 0.7045454545454546,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 48,
+        "known": 32,
+        "unknown": 16,
+        "hits": 20,
+        "hit_fraction_known": 0.625
+      },
+      "Top3_proxy": {
+        "slots": 48,
+        "known": 34,
+        "unknown": 14,
+        "hits": 21,
+        "hit_fraction_known": 0.6176470588235294
+      },
+      "Top3_height": {
+        "slots": 48,
+        "known": 28,
+        "unknown": 20,
+        "hits": 18,
+        "hit_fraction_known": 0.6428571428571429
+      },
+      "fold_pass": true
+    },
+    {
+      "horizon": 5,
+      "fold": "2025H2",
+      "direct": {
+        "full": 1584,
+        "known": 1569,
+        "unknown": 15,
+        "TP": 159,
+        "FP": 163,
+        "FN": 550,
+        "TN": 697,
+        "accuracy": 0.5455704270235819,
+        "precision": 0.4937888198757764,
+        "recall": 0.22425952045133993,
+        "F1": 0.3084384093113482,
+        "balanced_accuracy": 0.5173623183652049
+      },
+      "proxy_nextlimit_direction": {
+        "full": 1584,
+        "known": 1569,
+        "unknown": 15,
+        "TP": 188,
+        "FP": 183,
+        "FN": 521,
+        "TN": 677,
+        "accuracy": 0.5513065646908859,
+        "precision": 0.5067385444743935,
+        "recall": 0.2651622002820874,
+        "F1": 0.34814814814814815,
+        "balanced_accuracy": 0.5261857513038344
+      },
+      "always_up": {
+        "full": 1584,
+        "known": 1569,
+        "unknown": 15,
+        "TP": 709,
+        "FP": 860,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.4518801784576163,
+        "precision": 0.4518801784576163,
+        "recall": 1.0,
+        "F1": 0.6224758560140474,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 378,
+        "known": 372,
+        "unknown": 6,
+        "hits": 191,
+        "hit_fraction_known": 0.5134408602150538
+      },
+      "Top3_proxy": {
+        "slots": 378,
+        "known": 371,
+        "unknown": 7,
+        "hits": 189,
+        "hit_fraction_known": 0.5094339622641509
+      },
+      "Top3_height": {
+        "slots": 378,
+        "known": 369,
+        "unknown": 9,
+        "hits": 168,
+        "hit_fraction_known": 0.45528455284552843
+      },
+      "fold_pass": false
+    },
+    {
+      "horizon": 5,
+      "fold": "2026JanAug",
+      "direct": {
+        "full": 1941,
+        "known": 1896,
+        "unknown": 45,
+        "TP": 436,
+        "FP": 341,
+        "FN": 490,
+        "TN": 629,
+        "accuracy": 0.5617088607594937,
+        "precision": 0.5611325611325612,
+        "recall": 0.4708423326133909,
+        "F1": 0.5120375807398708,
+        "balanced_accuracy": 0.5596479704304068
+      },
+      "proxy_nextlimit_direction": {
+        "full": 1941,
+        "known": 1896,
+        "unknown": 45,
+        "TP": 204,
+        "FP": 142,
+        "FN": 722,
+        "TN": 828,
+        "accuracy": 0.5443037974683544,
+        "precision": 0.5895953757225434,
+        "recall": 0.2203023758099352,
+        "F1": 0.32075471698113206,
+        "balanced_accuracy": 0.5369553116163078
+      },
+      "always_up": {
+        "full": 1941,
+        "known": 1896,
+        "unknown": 45,
+        "TP": 926,
+        "FP": 970,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.4883966244725738,
+        "precision": 0.4883966244725738,
+        "recall": 1.0,
+        "F1": 0.6562721474131822,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 480,
+        "known": 467,
+        "unknown": 13,
+        "hits": 272,
+        "hit_fraction_known": 0.582441113490364
+      },
+      "Top3_proxy": {
+        "slots": 480,
+        "known": 459,
+        "unknown": 21,
+        "hits": 261,
+        "hit_fraction_known": 0.5686274509803921
+      },
+      "Top3_height": {
+        "slots": 480,
+        "known": 460,
+        "unknown": 20,
+        "hits": 237,
+        "hit_fraction_known": 0.5152173913043478
+      },
+      "fold_pass": false
+    },
+    {
+      "horizon": 5,
+      "fold": "2026Sep",
+      "direct": {
+        "full": 182,
+        "known": 95,
+        "unknown": 87,
+        "TP": 23,
+        "FP": 31,
+        "FN": 21,
+        "TN": 20,
+        "accuracy": 0.45263157894736844,
+        "precision": 0.42592592592592593,
+        "recall": 0.5227272727272727,
+        "F1": 0.46938775510204084,
+        "balanced_accuracy": 0.45744206773618534
+      },
+      "proxy_nextlimit_direction": {
+        "full": 182,
+        "known": 95,
+        "unknown": 87,
+        "TP": 12,
+        "FP": 16,
+        "FN": 32,
+        "TN": 35,
+        "accuracy": 0.49473684210526314,
+        "precision": 0.42857142857142855,
+        "recall": 0.2727272727272727,
+        "F1": 0.3333333333333333,
+        "balanced_accuracy": 0.47950089126559714
+      },
+      "always_up": {
+        "full": 182,
+        "known": 95,
+        "unknown": 87,
+        "TP": 44,
+        "FP": 51,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.4631578947368421,
+        "precision": 0.4631578947368421,
+        "recall": 1.0,
+        "F1": 0.6330935251798561,
+        "balanced_accuracy": 0.5
+      },
+      "Top3_direct": {
+        "slots": 48,
+        "known": 26,
+        "unknown": 22,
+        "hits": 13,
+        "hit_fraction_known": 0.5
+      },
+      "Top3_proxy": {
+        "slots": 48,
+        "known": 26,
+        "unknown": 22,
+        "hits": 13,
+        "hit_fraction_known": 0.5
+      },
+      "Top3_height": {
+        "slots": 48,
+        "known": 21,
+        "unknown": 27,
+        "hits": 12,
+        "hit_fraction_known": 0.5714285714285714
+      },
+      "fold_pass": false
+    }
+  ],
+  "original_historical_row_count": 3707,
+  "predictions_with_unknown": 11121,
+  "new_forward_outcomes": 0,
+  "deployed": false,
+  "probability_calibrated": false,
+  "source_scope": "late source, previously seen history, survivor scope; endpoint cash-price event only; no fee-adjusted tradable return",
+  "current_inference_after_independent_archive": true
+}

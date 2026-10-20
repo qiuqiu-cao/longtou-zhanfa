@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-10-20T13:29:15.641236+00:00",
+  "scope": "Independent verification script only",
+  "failure": "pandas copy-on-write returned a read-only NumPy view; loc[~valid]=NaN failed before the feature comparison",
+  "preserved_source": "verify_saved_structure_run_BEFORE_ARRAY_COPY_REPAIR.py",
+  "fix": "Request an explicit writable NumPy copy in the independent verifier",
+  "training_source_changed": false,
+  "retrained_models": 0,
+  "new_parameter_or_threshold": false,
+  "source_before": "8c12670a146cff8874469caf2ad10a7c1dae4d043de077f9de467472b761a2a5",
+  "source_after": "ca5df090179ddfbf09167595a48bb0c74a1d918ac5f34e5e1861638b9817e11b"
+}

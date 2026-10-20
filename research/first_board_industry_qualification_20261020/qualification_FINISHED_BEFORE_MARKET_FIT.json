@@ -1,0 +1,82 @@
+{
+  "formed_at": "2026-10-20T13:43:11.523452+00:00",
+  "status": "NO_QUALIFIED_COMPLETE_DATED_INDUSTRY_MAP",
+  "existing_archive": "Only35candidate-specific rows on2026-08-28/31;not a complete historical membership file",
+  "baostock_probe": "Single2024-12-31 anonymous process hard-timeout;empty parsed fields and rows;no dated snapshot;no further dates queried",
+  "primary_sources": {
+    "capco_2023h2_http_receipt": {
+      "source_url": "https://capcofile.oss-cn-beijing.aliyuncs.com/2024/file/GwFj/2023%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C%EF%BC%88%E6%8C%89%E8%A1%8C%E4%B8%9A%E6%8E%92%E5%BA%8F%EF%BC%89.pdf",
+      "requested_at": "2026-10-20T13:39:59.782003+00:00",
+      "one_attempt": true,
+      "timeout": [
+        6,
+        12
+      ],
+      "completed_at": "2026-10-20T13:40:05.958835+00:00",
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='capcofile.oss-cn-beijing.aliyuncs.com', port=443): Read timed out. (read timeout=6)\"))"
+    },
+    "capco_index_http_receipt": {
+      "source_url": "https://www.capco.org.cn/pub/zgssgsxh/xhgg/hyfl/hyfljg/index.html",
+      "requested_at": "2026-10-20T13:39:59.781750+00:00",
+      "one_attempt": true,
+      "timeout": [
+        6,
+        12
+      ],
+      "received_at": "2026-10-20T13:40:01.607269+00:00",
+      "status_code": 200,
+      "final_url": "https://www.capco.org.cn/pub/zgssgsxh/xhgg/hyfl/hyfljg/index.html",
+      "bytes": 2371,
+      "sha256": "ab310b76535f69befb35a343b4c3b0195bd7445d45e3a7248b8b16dc0ba96ced",
+      "content_type": "text/html",
+      "raw_file": "capco_index.response",
+      "http_last_modified": "Tue, 20 Oct 2026 08:59:02 GMT"
+    },
+    "csrc_2020q4_http_receipt": {
+      "source_url": "https://www.csrc.gov.cn/csrc/c100103/c1447170/1447170/files/1616066671097_61196.pdf",
+      "requested_at": "2026-10-20T13:40:31.939066+00:00",
+      "one_attempt": true,
+      "timeout": [
+        6,
+        12
+      ],
+      "completed_at": "2026-10-20T13:40:36.462857+00:00",
+      "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='www.csrc.gov.cn', port=443): Max retries exceeded with url: /csrc/c100103/c1447170/1447170/files/1616066671097_61196.pdf (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))\"))"
+    },
+    "csrc_2021q3_landing_http_receipt": {
+      "source_url": "https://www.csrc.gov.cn/csrc/c100103/c1558619/content.shtml",
+      "requested_at": "2026-10-20T13:40:31.938941+00:00",
+      "one_attempt": true,
+      "timeout": [
+        6,
+        12
+      ],
+      "completed_at": "2026-10-20T13:40:36.007933+00:00",
+      "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='www.csrc.gov.cn', port=443): Max retries exceeded with url: /csrc/c100103/c1558619/content.shtml (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))\"))"
+    },
+    "csrc_classification_index_http_receipt": {
+      "source_url": "https://www.csrc.gov.cn/csrc/c100103/common_list_2.shtml",
+      "requested_at": "2026-10-20T13:39:59.782182+00:00",
+      "one_attempt": true,
+      "timeout": [
+        6,
+        12
+      ],
+      "completed_at": "2026-10-20T13:40:04.632568+00:00",
+      "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='www.csrc.gov.cn', port=443): Max retries exceeded with url: /csrc/c100103/common_list_2.shtml (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))\"))"
+    }
+  },
+  "capco_index_meaning": "HTTP200is a JavaScript app shell,not an industry table or publication-date proof",
+  "web_tool_notes": [
+    "Official CSRC category page confirms2020Q4publication2021-01-25 and2021Q3publication2021-11-10;this is index metadata,not a parsed complete classification.",
+    "CAPCO2023H2PDFwebopen403anddirectGETtimeout;no workaround or retries.",
+    "No PDF bytes acquired,so PDF extraction/rendering not performed."
+  ],
+  "dated_memberships_accepted": 0,
+  "industry_fits": 0,
+  "current_membership_backfill": false,
+  "retrieval_dates_not_backdated": true,
+  "branch_finished": true,
+  "existing_daily_archive_independent_fallback": "first_board_market_residual.py;fixed beta/correlation/residual20and60official days;not industry/theme/fund identity",
+  "wheel_sha256": "0bf71c6069ab5890ff3596632f9c3f8f1fbc6bfcac582c2f9d6a5c11ab2cfaf8"
+}

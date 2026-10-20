@@ -1,0 +1,12 @@
+{
+  "formed_at": "2026-10-15T17:09:40.854496+00:00",
+  "error": "live/historical projection source mismatch: full_cohort_promotion_upper_bound 001318",
+  "actual_source_values": [
+    "pandas.NA",
+    "JSON null"
+  ],
+  "reason": "Equivalent missing-value representations were compared as unequal; not a numeric feature disagreement",
+  "repair": "Normalize pandas.NA and NaT to null only inside new read-only view comparison; do not fill missing evidence or change trained features/scores",
+  "new_fits": 0,
+  "original_validation_failure_retained": true
+}

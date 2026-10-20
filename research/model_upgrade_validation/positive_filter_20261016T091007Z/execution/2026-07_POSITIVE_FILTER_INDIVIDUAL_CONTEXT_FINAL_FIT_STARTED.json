@@ -1,0 +1,49 @@
+{
+  "formed_at": "2026-10-16T09:20:12.217490+00:00",
+  "month": "2026-07",
+  "arm": "POSITIVE_FILTER_INDIVIDUAL_CONTEXT",
+  "phase": "FINAL",
+  "features": [
+    "base_score_logit",
+    "boards",
+    "height_gap",
+    "same_height_rivals",
+    "turnover",
+    "amplitude",
+    "log_signal_amount",
+    "price_same_height_percentile",
+    "signal_amount_same_height_percentile",
+    "turnover_same_height_percentile"
+  ],
+  "estimator": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": null,
+    "random_state": 20261016
+  },
+  "weights": "Every row weight1; no class balancing",
+  "training_digest": "006a714ad9add2148fea17c7aae134c207379e7ee80872cf5fc6e36d1a6bd70d",
+  "training_dtypes": {
+    "date": "str",
+    "code": "str",
+    "target_date": "str",
+    "target": "float64",
+    "base_score_logit": "float64",
+    "boards": "float64",
+    "height_gap": "float64",
+    "same_height_rivals": "float64",
+    "turnover": "float64",
+    "amplitude": "float64",
+    "log_signal_amount": "float64",
+    "price_same_height_percentile": "float64",
+    "signal_amount_same_height_percentile": "float64",
+    "turnover_same_height_percentile": "float64"
+  },
+  "max_training_target": "2026-06-30",
+  "rows": 372,
+  "positives": 136,
+  "negatives": 236,
+  "signal_days": 150,
+  "qualified": true
+}

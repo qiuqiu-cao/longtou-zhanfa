@@ -1,0 +1,23 @@
+{
+  "formed_at": "2026-10-15T17:36:39.938658+00:00",
+  "signal_count": 35,
+  "unique_current_and_adjacent_keys": 63,
+  "pipeline_key_counts": {
+    "IMPORTED_KEY_ABSENT_OHLC_ONLY_SIGNAL_INJECTION": 24,
+    "IMPORTED_KEY_ABSENT_AND_NO_CURRENT_KEY": 21,
+    "ORIGINAL_IMPORTED_KEY_REMOVED_BY_LATER_DAILY_INTERVAL_REPLACEMENT": 15,
+    "PRESENT_ORIGINAL_OR_REPLACED_KEY": 3
+  },
+  "code_evidence": [
+    "short_term_thinking_dataset_builder.load_existing(): reindex union adds only signal OHLC; no previous bar or volume added",
+    "short_term_thinking_current.build(): removes all old bars for any current code from 2026-08-31, then uses bounded current raw response rows; response may start later than old covered date"
+  ],
+  "fact_inference": "Key-level before/after field comparison proves exact absence/injection/removal; which builder executed each step is established by existing module pipeline, not an invented raw receipt",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv": "25f907b16d2436688608eca063bd850c708d60d4b0630b6ccaa3c4e864b3636a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\ranking_optimization_20261015T173045Z\\source_audit\\trace_pipeline_missing_fields.py": "b5b6d4ab0d10dae4a1a62c600a9945df8ab78ecbb901fefcb80f5adbd5d60ea5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_dataset_builder.py": "8072e232ac74509885e32f1bcf4385c95647ef2b9c32c57b3604bbf131da5eee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_current.py": "381e8babf07eb69d4365bb19791df457e1e83e1a02cec74ebcb414daecd481b4"
+  },
+  "output_sha256": "6cd3926de3c6c95e789903825757cc37a61b8dc92bb94a710a9d28c5e685d9eb"
+}

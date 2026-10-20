@@ -1,0 +1,166 @@
+{
+  "formed_at": "2026-10-20T15:13:24.596527+00:00",
+  "status": "FIXED_PREFIX_DIVERSITY_FINISHED",
+  "complete_pool": 2428,
+  "complete_dates": 42,
+  "pool_known": 2422,
+  "pool_unknown": 6,
+  "risk_allowed": 1800,
+  "complete_positive_pool": 530,
+  "training": [
+    {
+      "head": "BASE",
+      "members": 8075,
+      "max_label_end": "2024-10-31"
+    },
+    {
+      "head": "LINEAR",
+      "members": 8075,
+      "max_label_end": "2024-10-31"
+    },
+    {
+      "head": "ORDERED",
+      "members": 8075,
+      "max_label_end": "2024-10-31"
+    }
+  ],
+  "heads": {
+    "BASE": {
+      "selected": 42,
+      "selected_dates": 42,
+      "known": 42,
+      "unknown": 0,
+      "hits": 21,
+      "hit_rate": 0.5,
+      "wilson95": [
+        0.3552598959637448,
+        0.6447401040362553
+      ],
+      "full_positive_recall": 0.03962264150943396,
+      "false_positives": 21,
+      "false_negatives": 509,
+      "positive_pool": 412,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 530,
+      "full_signal_dates": 42,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.5,
+      "excluded_rows": 628,
+      "excluded_known_promoters": 118,
+      "excluded_unknown": 3
+    },
+    "LINEAR": {
+      "selected": 42,
+      "selected_dates": 42,
+      "known": 42,
+      "unknown": 0,
+      "hits": 20,
+      "hit_rate": 0.47619047619047616,
+      "wilson95": [
+        0.3335960123070547,
+        0.6227753586865502
+      ],
+      "full_positive_recall": 0.03773584905660377,
+      "false_positives": 22,
+      "false_negatives": 510,
+      "positive_pool": 412,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 530,
+      "full_signal_dates": 42,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.47619047619047616,
+      "excluded_rows": 628,
+      "excluded_known_promoters": 118,
+      "excluded_unknown": 3
+    },
+    "ORDERED": {
+      "selected": 42,
+      "selected_dates": 42,
+      "known": 42,
+      "unknown": 0,
+      "hits": 19,
+      "hit_rate": 0.4523809523809524,
+      "wilson95": [
+        0.31223393233454466,
+        0.6005088096526652
+      ],
+      "full_positive_recall": 0.035849056603773584,
+      "false_positives": 23,
+      "false_negatives": 511,
+      "positive_pool": 412,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 530,
+      "full_signal_dates": 42,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.4523809523809524,
+      "excluded_rows": 628,
+      "excluded_known_promoters": 118,
+      "excluded_unknown": 3
+    }
+  },
+  "pairwise": {
+    "BASE__LINEAR": {
+      "same_code_days": 15,
+      "different_code_days": 27,
+      "both_known_hit": 15,
+      "both_known_failure": 16,
+      "first_only_known_hit": 6,
+      "second_only_known_hit": 5,
+      "at_least_one_unknown": 0
+    },
+    "BASE__ORDERED": {
+      "same_code_days": 20,
+      "different_code_days": 22,
+      "both_known_hit": 15,
+      "both_known_failure": 17,
+      "first_only_known_hit": 6,
+      "second_only_known_hit": 4,
+      "at_least_one_unknown": 0
+    },
+    "LINEAR__ORDERED": {
+      "same_code_days": 13,
+      "different_code_days": 29,
+      "both_known_hit": 12,
+      "both_known_failure": 15,
+      "first_only_known_hit": 8,
+      "second_only_known_hit": 7,
+      "at_least_one_unknown": 0
+    }
+  },
+  "code_diversity": {
+    "1": {
+      "days": 9,
+      "any_known_winner_days": 6,
+      "no_known_winner_with_unknown": 0,
+      "base_hit": 6,
+      "linear_hit": 6,
+      "ordered_hit": 6
+    },
+    "2": {
+      "days": 21,
+      "any_known_winner_days": 14,
+      "no_known_winner_with_unknown": 0,
+      "base_hit": 10,
+      "linear_hit": 8,
+      "ordered_hit": 8
+    },
+    "3": {
+      "days": 12,
+      "any_known_winner_days": 8,
+      "no_known_winner_with_unknown": 0,
+      "base_hit": 5,
+      "linear_hit": 6,
+      "ordered_hit": 5
+    }
+  },
+  "union_oracle_any_known_winner_days_LABEL_ONLY": 28,
+  "union_oracle_is_not_top1_success": true,
+  "combined_ranker_scored": false,
+  "model_fits": 0,
+  "new_forward_results": 0,
+  "actual_trades": 0,
+  "goal_60_passed": false
+}

@@ -1,0 +1,118 @@
+{
+  "formed_at": "2026-10-15T17:05:21.408472+00:00",
+  "actual_authored_reviews": 243,
+  "independent_review_contexts": 3,
+  "external_API_inference_calls": 0,
+  "full_cohort_rows": 81,
+  "historical_retrospective_rows": 75,
+  "supplemental_known_outcomes": 74,
+  "historical_blind": false,
+  "historical_independence_of_label_knowledge": false,
+  "exposure": [
+    {
+      "protocol": "345-v1",
+      "repeat_id": 1,
+      "canonical_facts_sha256": "74a1a81076eca0151d5b088290e118e9d7334cc23d4e6d119005be436b9a52e0",
+      "model_scores_seen": true,
+      "outcomes_seen": true,
+      "exposure_notes": "本轮为已曝光的封闭材料事后诊断。自动继承的用户项目说明含若干历史实际结果，以及农心40.1、醋化36.3等少量旧分数概述；首次整包读取同时显示后续信号日日线，日期成员概览亦间接透露较早目标日存续。未读取AGENTS.md文件、模型文件、旧报告、其他代理产物或互联网，未调用外部API，未再委派。81份方向、排序、理由和取消条件由审阅者逐行写定，脚本仅整理已写判断并校验格式，判断引用限定于各自信号日及以前的包内事实。存在曝光使其不能认证历史盲审、独立无污染评测或预测增益。2026-10-15这6只的2026-10-16实际结果未见；它们可另作未来结算。概率未验证，排名和方向属于结构情景判断。"
+    },
+    {
+      "protocol": "345-v1",
+      "repeat_id": 2,
+      "canonical_facts_sha256": "74a1a81076eca0151d5b088290e118e9d7334cc23d4e6d119005be436b9a52e0",
+      "model_scores_seen": true,
+      "outcomes_seen": true,
+      "exposure_notes": "本任务是封闭材料事后诊断，不能称严格盲审。会话自动附带的用户AGENTS指令正文已披露部分历史BASE统计、个别分数以及10月9→12、13→14等结果；没有主动读取AGENTS.md、旧报告、模型或其他审阅者文件。首次读取本packet时全文件输出遭截断，显示了9月30日开头和10月15日结尾；同packet后续信号日也可能显露较早目标日。以下逐日期只以该日及以前材料推理，未用已知未来结果修订已写判断；没有互联网、外部API或再委派。model_scores_seen与outcomes_seen据实际会话暴露诚实标true，并不表示packet含显式目标标签或模型分数。2026年10月15日六只的10月16日目标结果未见，仍须事后全池结算，不能把全局曝光旗标误读成已见16日结果。"
+    },
+    {
+      "protocol": "345-v1",
+      "repeat_id": 3,
+      "canonical_facts_sha256": "74a1a81076eca0151d5b088290e118e9d7334cc23d4e6d119005be436b9a52e0",
+      "model_scores_seen": true,
+      "outcomes_seen": true,
+      "exposure_notes": "本次是封闭材料的事后已曝光诊断。实际只读取固定协议和分配的LLM_repeat_3_closed_packet.json；未读取其他项目文件、旧报告、模型文件、其他代理产物或互联网，未调用外部API，未再委派。环境自动带入的用户AGENTS说明含部分旧模型分数、总体指标及个股历史结果，因此model_scores_seen与outcomes_seen据实为true。整包的后续信号日候选、价格与前池transition也间接透露较早目标日状态，不能以本次81行证明严格盲测增益。所有方向、排名、理由及取消条件均由本审阅者逐股手工写定；脚本仅整理和校验本人判断，未按固定规则生成方向或文字。逐行引用截断于各自信号日，不把当日前池transition当作待预测日结果，不按后续结果修改判断。2026-10-15的6只预测目标为2026-10-16，该目标日实际结果未在包内提供，也未另行获取。概率未验证，未报百分比；日线、规则角色和作者支持标志不认证资金因果、唯一核心或可交易成交。"
+    }
+  ],
+  "controlled_fact_packet_content_identical": true,
+  "candidate_order_changed": true,
+  "indirect_later_date_outcome_exposure": true,
+  "unvalidated_historical_LLMeffect": true,
+  "pairwise_ALL81": [
+    {
+      "left": 1,
+      "right": 2,
+      "rows": 81,
+      "agreement": 0.8518518518518519,
+      "kappa": 0.777319587628866
+    },
+    {
+      "left": 1,
+      "right": 3,
+      "rows": 81,
+      "agreement": 0.9135802469135802,
+      "kappa": 0.8704888076747372
+    },
+    {
+      "left": 2,
+      "right": 3,
+      "rows": 81,
+      "agreement": 0.8148148148148148,
+      "kappa": 0.7233606557377049
+    }
+  ],
+  "pairwise_CURRENT15_SIX": [
+    {
+      "left": 1,
+      "right": 2,
+      "rows": 6,
+      "agreement": 1.0,
+      "kappa": 1.0
+    },
+    {
+      "left": 1,
+      "right": 3,
+      "rows": 6,
+      "agreement": 0.8333333333333334,
+      "kappa": 0.7499999999999999
+    },
+    {
+      "left": 2,
+      "right": 3,
+      "rows": 6,
+      "agreement": 0.8333333333333334,
+      "kappa": 0.7499999999999999
+    }
+  ],
+  "unanimous_ALL81": 64,
+  "unanimous_CURRENT15_SIX": 5,
+  "current15_future_target16_known_outcomes": 0,
+  "fixed_majority_used": true,
+  "best_repeat_selected_by_outcome": false,
+  "automatic_call_generation": false,
+  "LLM_weight_finetuning": false,
+  "production_adopted": false,
+  "limitation": "Three Codex contexts inherit the project's historical results/old scores; later signal packets also imply earlier outcomes. This quantifies exposed retrospective disagreement/effect only. Current15 six target16 unknown, separate shadow record. Consensus is a fixed comparison, never certified as superior from this batch.",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeated_review_protocol.md": "b6d4b617ec1c4de21f92eb3ca833af7b4d876e49952bc2cba694a3a1aa634559",
+    "D:\\Documents\\ChatGPT\\龙头战法\\expectation_345_llm_evaluation.py": "b2c38b1e81194d6770c457e5852ff82b422b8b6556de64b30ca246442b80630f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeat_1_closed_packet.json": "9c3c3d57a996a56b2864c10411e17155ddaf9867259d03b7631fbb400e3a5bb5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeat_1_actual_review.json": "fb65a64b43fdd698c1ad34a21a76e997b66b737af2a910fea700e96c4310b27e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeat_2_closed_packet.json": "248bcde85752a6a652890646b437579116be170324fa0b135ba73dcce634392e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeat_2_actual_review.json": "5f99d6cf4699a652c7e16aa187e8d1c9d555ab1143e9607c16a7774cb534ac23",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeat_3_closed_packet.json": "a2740a165dadb2a992d427d6e3fefe9e8d9627f982eff71f8c63177bc2129295",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_repeat_3_actual_review.json": "40c8d6e560f84747539552b72f7e7e28876768324fa717b4ff97bf3ca41c0348",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\evaluation_scope_alignment\\complete18885_predictions_ORIGINAL_FROZEN_COHORT.csv": "2e94c44148836bf6a51d17ad6e56b16d6b0b53a255035b75832cf24ed2c8e94a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\causal_scope_alignment_20261015T121000Z\\workbench\\完整81只_全部证据与原审阅.json": "d6b50a1d3454cc8075746eb9430ed5e8120c8961e494f027d13834d7a64afafb",
+    "D:\\Documents\\ChatGPT\\龙头战法\\expectation_345_evaluation.py": "989ac53b6844a22167faa24d556dfa1ca5a0cb957ccf16000f50c8871c1a35ce",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\all243_actual_manual_reviews.csv": "910600a4e2c43d23c805629bf35e83168333123aead3c95a80bdb84a07c7c1e5",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\all81_votes_and_fixed_consensus.json": "b156db70db46927f614d2336dcf7aa320f437658fda973d5690de779920c6d08",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\all891_comparable_calls_WITH_ORIGINAL_AND_SUPPLEMENT_LABELS.csv": "398508cc56d063ae31780c936e8fb0830648b942f89d74b96310de4f64580b30",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\all_daily_rank_agreement.csv": "c8d42c57f23990a148c688b7d544c004616be26658e51d38e82afe8d3ce24973",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\all_disagreements_WITH_REASONS_REFERENCED.json": "e01dae75573ea7da884f7d653ef09db617b3b72874a0f5938ed309af3271c727",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\all_selected_rows_WITH_UNKNOWN.csv": "46fe4c01dedc1a5776524079eacc405c3e499dbc1a2eeb5f045c7cd86c1d1049",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\current15_six_target16_forward_shadow_FROZEN.json": "e1775ee7701e9b0503b86d867231ec8aa95cd1003e56a903d65aa8e1b9e0c100",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\pairwise_call_agreement_ALL81.csv": "0da4409d1c34e94b44037d1f205bf46a5bb3085dd4c57311c9a9f7b57c427f2a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\expectation_345_20261015T163226Z\\LLM_evaluation\\standalone_effect_coverage_abstention_false_alarm.csv": "a6ee7fe5dc380b66f4992f673c903ed666bbebe62662469e36dbec6f1952431e"
+  }
+}

@@ -1,0 +1,1572 @@
+{
+  "version": "first-second-stage-20261020",
+  "completed_at": "2026-10-20T12:23:32.342287+00:00",
+  "selected_variants": {
+    "1": "STAGE_CYCLE_GENE",
+    "2": "STAGE_CYCLE_GENE"
+  },
+  "data": {
+    "input_bar_rows": 1985754,
+    "source_collected_later": true,
+    "full_historical_universe_complete": false,
+    "survivorship_bias_resolved": false,
+    "theme_leader_truth_available": false,
+    "price_basis": "Archived unadjusted OHLC; exact rounded 10% price inference, not an independent official limit-price feed",
+    "outside_calendar_bars": 0,
+    "first_board_rows": 28503,
+    "first_board_sessions": 668,
+    "scope_verified_rows": 28503,
+    "first_date": "2023-11-29",
+    "last_date": "2026-08-31",
+    "source_distribution": {
+      "Sina unadjusted daily via AKShare fallback": 28209,
+      "Tencent unadjusted daily via AKShare fallback": 294
+    },
+    "mature_observed_rows": 28116,
+    "unknown_or_right_censored_rows": 387,
+    "cohort_label_known_rows": 22950,
+    "features": [
+      "log_price",
+      "log_amount",
+      "log_float_cap",
+      "turnover",
+      "amount_cap",
+      "gap",
+      "amplitude",
+      "body",
+      "one_price",
+      "close_to_open",
+      "return_5",
+      "return_10",
+      "return_20",
+      "return_60",
+      "volume_ratio_5",
+      "volume_ratio_20",
+      "amount_ratio_5",
+      "close_ma5",
+      "close_ma20",
+      "close_ma60",
+      "breakout_20",
+      "position_60",
+      "prior_limits_20",
+      "prior_failed_20",
+      "previous_limit_age",
+      "prior_volatility_20",
+      "listing_age_sessions",
+      "market_limits",
+      "market_first",
+      "market_relays",
+      "market_failed",
+      "market_failed_rate",
+      "market_max_height",
+      "market_down_limits",
+      "market_positive_fraction",
+      "market_median_return",
+      "previous_first_promotion",
+      "previous_relay_promotion",
+      "previous_top_return",
+      "previous_top_broken",
+      "turnover_rank",
+      "amount_rank",
+      "volume_ratio_rank",
+      "pre_momentum_rank"
+    ],
+    "last_source_session": "2026-08-31",
+    "last_mature_signal": "2026-08-24",
+    "stage_rows": {
+      "1": 28503,
+      "2": 5222
+    },
+    "stage_known": {
+      "1": 28377,
+      "2": 5198
+    },
+    "next_session_label": "Exactly next official session; next session missing/ineligible/invalid price remains UNKNOWN",
+    "extra_features": [
+      "gene_max_streak_60",
+      "gene_limits_60",
+      "gene_relay_rate_60",
+      "turnover_ratio_5",
+      "prior_compression_5",
+      "two_session_turnover_sum",
+      "previous_one_price",
+      "opened_after_one_price",
+      "cycle_height_change",
+      "cycle_height_break_20",
+      "cycle_anchor_breaks",
+      "cycle_anchor_collapses",
+      "cycle_high_survival",
+      "cycle_first_expansion_5",
+      "cycle_first_relay_ratio",
+      "cycle_top_one_price_share",
+      "stage_pool_size",
+      "stage_one_price_share"
+    ],
+    "stage2_identity": "Previous adjacent official session is a verified reconstructed first board, current close is second exact limit"
+  },
+  "evaluation": {
+    "1": {
+      "all": {
+        "rows": 13149,
+        "sessions": 286,
+        "known": 13047,
+        "unknown": 102,
+        "pool_rate": 0.16555530006898136,
+        "top": {
+          "1": {
+            "selected": 286,
+            "selected_dates": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 116,
+            "hit_rate": 0.4070175438596491,
+            "wilson95": [
+              0.35158468619741945,
+              0.4649236494951339
+            ],
+            "full_positive_recall": 0.053703703703703705,
+            "false_positives": 169,
+            "false_negatives": 2044,
+            "positive_pool": 2160,
+            "outcome_coverage": 0.9965034965034965
+          },
+          "3": {
+            "selected": 858,
+            "selected_dates": 286,
+            "known": 854,
+            "unknown": 4,
+            "hits": 292,
+            "hit_rate": 0.34192037470725994,
+            "wilson95": [
+              0.31087749415530197,
+              0.374379032882714
+            ],
+            "full_positive_recall": 0.13518518518518519,
+            "false_positives": 562,
+            "false_negatives": 1868,
+            "positive_pool": 2160,
+            "outcome_coverage": 0.9953379953379954
+          },
+          "5": {
+            "selected": 1430,
+            "selected_dates": 286,
+            "known": 1423,
+            "unknown": 7,
+            "hits": 436,
+            "hit_rate": 0.30639494026704145,
+            "wilson95": [
+              0.2829907226518047,
+              0.330841636512044
+            ],
+            "full_positive_recall": 0.20185185185185187,
+            "false_positives": 987,
+            "false_negatives": 1724,
+            "positive_pool": 2160,
+            "outcome_coverage": 0.9951048951048951
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 286,
+            "selected_dates": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 80,
+            "hit_rate": 0.2807017543859649,
+            "wilson95": [
+              0.23171654974841088,
+              0.3355200910359129
+            ],
+            "full_positive_recall": 0.037037037037037035,
+            "false_positives": 205,
+            "false_negatives": 2080,
+            "positive_pool": 2160,
+            "outcome_coverage": 0.9965034965034965
+          },
+          "3": {
+            "selected": 858,
+            "selected_dates": 286,
+            "known": 853,
+            "unknown": 5,
+            "hits": 193,
+            "hit_rate": 0.22626025791324736,
+            "wilson95": [
+              0.19944507283856558,
+              0.2555299459440793
+            ],
+            "full_positive_recall": 0.08935185185185185,
+            "false_positives": 660,
+            "false_negatives": 1967,
+            "positive_pool": 2160,
+            "outcome_coverage": 0.9941724941724942
+          },
+          "5": {
+            "selected": 1430,
+            "selected_dates": 286,
+            "known": 1422,
+            "unknown": 8,
+            "hits": 293,
+            "hit_rate": 0.2060478199718706,
+            "wilson95": [
+              0.18583091903980176,
+              0.22784863500300806
+            ],
+            "full_positive_recall": 0.13564814814814816,
+            "false_positives": 1129,
+            "false_negatives": 1867,
+            "positive_pool": 2160,
+            "outcome_coverage": 0.9944055944055944
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.7335019544722925,
+          "precision": 0.25923217550274225,
+          "recall": 0.3282407407407407,
+          "f1": 0.28968335035750764,
+          "auc": 0.6238947487489327
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": true,
+          "rows": 13047,
+          "brier": 0.1335012839443092,
+          "prior_brier": 0.138421007138783,
+          "ece": 0.008422249165406693,
+          "top1_rows": 285,
+          "top1_forecast_mean": 0.35973111487005344,
+          "top1_observed": 0.4070175438596491,
+          "top1_absolute_gap": 0.047286428989595675,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 1830.0,
+              "mean_probability": 0.08163218045912218,
+              "observed": 0.09180327868852459
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 7881.0,
+              "mean_probability": 0.14942236772601253,
+              "observed": 0.1446516939474686
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 2815.0,
+              "mean_probability": 0.23511913999459558,
+              "observed": 0.22628774422735345
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 409.0,
+              "mean_probability": 0.3365648061836726,
+              "observed": 0.3691931540342298
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 85.0,
+              "mean_probability": 0.44222387060219975,
+              "observed": 0.5529411764705883
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 24.0,
+              "mean_probability": 0.5361992043534858,
+              "observed": 0.7083333333333334
+            },
+            {
+              "bin": "(0.6, 0.7]",
+              "n": 3.0,
+              "mean_probability": 0.6422438675187335,
+              "observed": 0.0
+            }
+          ]
+        }
+      },
+      "2025H2": {
+        "rows": 4875,
+        "sessions": 126,
+        "known": 4861,
+        "unknown": 14,
+        "pool_rate": 0.1857642460399095,
+        "top": {
+          "1": {
+            "selected": 126,
+            "selected_dates": 126,
+            "known": 126,
+            "unknown": 0,
+            "hits": 44,
+            "hit_rate": 0.3492063492063492,
+            "wilson95": [
+              0.2715482562775235,
+              0.4357871330107585
+            ],
+            "full_positive_recall": 0.048726467331118496,
+            "false_positives": 82,
+            "false_negatives": 859,
+            "positive_pool": 903,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 378,
+            "selected_dates": 126,
+            "known": 378,
+            "unknown": 0,
+            "hits": 125,
+            "hit_rate": 0.3306878306878307,
+            "wilson95": [
+              0.2851726063990102,
+              0.37960973443080914
+            ],
+            "full_positive_recall": 0.13842746400885936,
+            "false_positives": 253,
+            "false_negatives": 778,
+            "positive_pool": 903,
+            "outcome_coverage": 1.0
+          },
+          "5": {
+            "selected": 630,
+            "selected_dates": 126,
+            "known": 630,
+            "unknown": 0,
+            "hits": 195,
+            "hit_rate": 0.30952380952380953,
+            "wilson95": [
+              0.2746699230341497,
+              0.3466864955779484
+            ],
+            "full_positive_recall": 0.2159468438538206,
+            "false_positives": 435,
+            "false_negatives": 708,
+            "positive_pool": 903,
+            "outcome_coverage": 1.0
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 126,
+            "selected_dates": 126,
+            "known": 126,
+            "unknown": 0,
+            "hits": 38,
+            "hit_rate": 0.30158730158730157,
+            "wilson95": [
+              0.22829828781414407,
+              0.38661669809149013
+            ],
+            "full_positive_recall": 0.042081949058693245,
+            "false_positives": 88,
+            "false_negatives": 865,
+            "positive_pool": 903,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 378,
+            "selected_dates": 126,
+            "known": 378,
+            "unknown": 0,
+            "hits": 93,
+            "hit_rate": 0.24603174603174602,
+            "wilson95": [
+              0.20531177075614282,
+              0.29186174048858626
+            ],
+            "full_positive_recall": 0.10299003322259136,
+            "false_positives": 285,
+            "false_negatives": 810,
+            "positive_pool": 903,
+            "outcome_coverage": 1.0
+          },
+          "5": {
+            "selected": 630,
+            "selected_dates": 126,
+            "known": 630,
+            "unknown": 0,
+            "hits": 145,
+            "hit_rate": 0.23015873015873015,
+            "wilson95": [
+              0.19898367546620888,
+              0.26460458423426336
+            ],
+            "full_positive_recall": 0.16057585825027684,
+            "false_positives": 485,
+            "false_negatives": 758,
+            "positive_pool": 903,
+            "outcome_coverage": 1.0
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.714667763834602,
+          "precision": 0.2791970802919708,
+          "recall": 0.3388704318936877,
+          "f1": 0.3061530765382691,
+          "auc": 0.620148323733644
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 4861,
+          "brier": 0.1469836533286473,
+          "prior_brier": 0.1517229592468764,
+          "ece": 0.008384071075380282,
+          "top1_rows": 126,
+          "top1_forecast_mean": 0.35012020793425347,
+          "top1_observed": 0.3492063492063492,
+          "top1_absolute_gap": 0.000913858727904282,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 434.0,
+              "mean_probability": 0.07933834270250224,
+              "observed": 0.11290322580645161
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 2692.0,
+              "mean_probability": 0.15551792992612434,
+              "observed": 0.1549034175334324
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 1493.0,
+              "mean_probability": 0.23635651750653439,
+              "observed": 0.2277294038847957
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 208.0,
+              "mean_probability": 0.33515331034087503,
+              "observed": 0.3701923076923077
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 28.0,
+              "mean_probability": 0.4489672796938472,
+              "observed": 0.5714285714285714
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 6.0,
+              "mean_probability": 0.5106275642905526,
+              "observed": 0.6666666666666666
+            }
+          ]
+        }
+      },
+      "2026": {
+        "rows": 8274,
+        "sessions": 160,
+        "known": 8186,
+        "unknown": 88,
+        "pool_rate": 0.15355484974346445,
+        "top": {
+          "1": {
+            "selected": 160,
+            "selected_dates": 160,
+            "known": 159,
+            "unknown": 1,
+            "hits": 72,
+            "hit_rate": 0.4528301886792453,
+            "wilson95": [
+              0.37748186767165937,
+              0.5304039980738902
+            ],
+            "full_positive_recall": 0.057279236276849645,
+            "false_positives": 87,
+            "false_negatives": 1185,
+            "positive_pool": 1257,
+            "outcome_coverage": 0.99375
+          },
+          "3": {
+            "selected": 480,
+            "selected_dates": 160,
+            "known": 476,
+            "unknown": 4,
+            "hits": 167,
+            "hit_rate": 0.35084033613445376,
+            "wilson95": [
+              0.3093175850891269,
+              0.39475133728162193
+            ],
+            "full_positive_recall": 0.1328560063643596,
+            "false_positives": 309,
+            "false_negatives": 1090,
+            "positive_pool": 1257,
+            "outcome_coverage": 0.9916666666666667
+          },
+          "5": {
+            "selected": 800,
+            "selected_dates": 160,
+            "known": 793,
+            "unknown": 7,
+            "hits": 241,
+            "hit_rate": 0.30390920554854983,
+            "wilson95": [
+              0.27290553670119155,
+              0.3368035258013139
+            ],
+            "full_positive_recall": 0.1917263325377884,
+            "false_positives": 552,
+            "false_negatives": 1016,
+            "positive_pool": 1257,
+            "outcome_coverage": 0.99125
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 160,
+            "selected_dates": 160,
+            "known": 159,
+            "unknown": 1,
+            "hits": 42,
+            "hit_rate": 0.2641509433962264,
+            "wilson95": [
+              0.20177129915956804,
+              0.33765802956817925
+            ],
+            "full_positive_recall": 0.03341288782816229,
+            "false_positives": 117,
+            "false_negatives": 1215,
+            "positive_pool": 1257,
+            "outcome_coverage": 0.99375
+          },
+          "3": {
+            "selected": 480,
+            "selected_dates": 160,
+            "known": 475,
+            "unknown": 5,
+            "hits": 100,
+            "hit_rate": 0.21052631578947367,
+            "wilson95": [
+              0.1762595723697944,
+              0.2494376079092928
+            ],
+            "full_positive_recall": 0.07955449482895784,
+            "false_positives": 375,
+            "false_negatives": 1157,
+            "positive_pool": 1257,
+            "outcome_coverage": 0.9895833333333334
+          },
+          "5": {
+            "selected": 800,
+            "selected_dates": 160,
+            "known": 792,
+            "unknown": 8,
+            "hits": 148,
+            "hit_rate": 0.18686868686868688,
+            "wilson95": [
+              0.16125583291628975,
+              0.21550445708545218
+            ],
+            "full_positive_recall": 0.1177406523468576,
+            "false_positives": 644,
+            "false_negatives": 1109,
+            "positive_pool": 1257,
+            "outcome_coverage": 0.99
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.7446860493525531,
+          "precision": 0.2458816351433801,
+          "recall": 0.3206046141607001,
+          "f1": 0.27831491712707185,
+          "auc": 0.6244563996246507
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 8186,
+          "brier": 0.1254952006829767,
+          "prior_brier": 0.13052205903257216,
+          "ece": 0.0084449200297627,
+          "top1_rows": 159,
+          "top1_forecast_mean": 0.36734730527200815,
+          "top1_observed": 0.4528301886792453,
+          "top1_absolute_gap": 0.08548288340723714,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 1396.0,
+              "mean_probability": 0.08234530766999114,
+              "observed": 0.08524355300859598
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 5189.0,
+              "mean_probability": 0.14626005255108457,
+              "observed": 0.13933320485642706
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 1322.0,
+              "mean_probability": 0.23372170835667988,
+              "observed": 0.22465960665658094
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 201.0,
+              "mean_probability": 0.33802545859811,
+              "observed": 0.3681592039800995
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 57.0,
+              "mean_probability": 0.4389113187677063,
+              "observed": 0.543859649122807
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 18.0,
+              "mean_probability": 0.5447230843744636,
+              "observed": 0.7222222222222222
+            },
+            {
+              "bin": "(0.6, 0.7]",
+              "n": 3.0,
+              "mean_probability": 0.6422438675187335,
+              "observed": 0.0
+            }
+          ]
+        }
+      },
+      "non_one_price": {
+        "rows": 12844,
+        "sessions": 286,
+        "known": 12743,
+        "unknown": 101,
+        "pool_rate": 0.15741975986816292,
+        "top": {
+          "1": {
+            "selected": 286,
+            "selected_dates": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 80,
+            "hit_rate": 0.2807017543859649,
+            "wilson95": [
+              0.23171654974841088,
+              0.3355200910359129
+            ],
+            "full_positive_recall": 0.03988035892323031,
+            "false_positives": 205,
+            "false_negatives": 1926,
+            "positive_pool": 2006,
+            "outcome_coverage": 0.9965034965034965
+          },
+          "3": {
+            "selected": 858,
+            "selected_dates": 286,
+            "known": 854,
+            "unknown": 4,
+            "hits": 228,
+            "hit_rate": 0.26697892271662765,
+            "wilson95": [
+              0.23840063866640165,
+              0.2976441678563035
+            ],
+            "full_positive_recall": 0.11365902293120637,
+            "false_positives": 626,
+            "false_negatives": 1778,
+            "positive_pool": 2006,
+            "outcome_coverage": 0.9953379953379954
+          },
+          "5": {
+            "selected": 1430,
+            "selected_dates": 286,
+            "known": 1422,
+            "unknown": 8,
+            "hits": 359,
+            "hit_rate": 0.25246132208157523,
+            "wilson95": [
+              0.23056940191006892,
+              0.2756870646522973
+            ],
+            "full_positive_recall": 0.178963110667996,
+            "false_positives": 1063,
+            "false_negatives": 1647,
+            "positive_pool": 2006,
+            "outcome_coverage": 0.9944055944055944
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 286,
+            "selected_dates": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 53,
+            "hit_rate": 0.18596491228070175,
+            "wilson95": [
+              0.14507754713941765,
+              0.23520532246373402
+            ],
+            "full_positive_recall": 0.02642073778664008,
+            "false_positives": 232,
+            "false_negatives": 1953,
+            "positive_pool": 2006,
+            "outcome_coverage": 0.9965034965034965
+          },
+          "3": {
+            "selected": 858,
+            "selected_dates": 286,
+            "known": 853,
+            "unknown": 5,
+            "hits": 135,
+            "hit_rate": 0.15826494724501758,
+            "wilson95": [
+              0.1353103728221129,
+              0.1842837084418742
+            ],
+            "full_positive_recall": 0.06729810568295115,
+            "false_positives": 718,
+            "false_negatives": 1871,
+            "positive_pool": 2006,
+            "outcome_coverage": 0.9941724941724942
+          },
+          "5": {
+            "selected": 1430,
+            "selected_dates": 286,
+            "known": 1421,
+            "unknown": 9,
+            "hits": 235,
+            "hit_rate": 0.1653764954257565,
+            "wilson95": [
+              0.1469669195022009,
+              0.1855904017964655
+            ],
+            "full_positive_recall": 0.11714855433698904,
+            "false_positives": 1186,
+            "false_negatives": 1771,
+            "positive_pool": 2006,
+            "outcome_coverage": 0.9937062937062937
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.7385231107274582,
+          "precision": 0.22894521668029436,
+          "recall": 0.27916251246261214,
+          "f1": 0.25157232704402516,
+          "auc": 0.6048952889863519
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": true,
+          "rows": 12743,
+          "brier": 0.13025650501136174,
+          "prior_brier": 0.13335426358191696,
+          "ece": 0.008015141877352746,
+          "top1_rows": 285,
+          "top1_forecast_mean": 0.3077004523167246,
+          "top1_observed": 0.2807017543859649,
+          "top1_absolute_gap": 0.026998697930759707,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 1829.0,
+              "mean_probability": 0.08163037286051768,
+              "observed": 0.09130672498633133
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 7866.0,
+              "mean_probability": 0.14937818710767742,
+              "observed": 0.14454614797864226
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 2738.0,
+              "mean_probability": 0.23436245959187438,
+              "observed": 0.21986851716581446
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 284.0,
+              "mean_probability": 0.3312337528103055,
+              "observed": 0.30985915492957744
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 25.0,
+              "mean_probability": 0.43279623578351006,
+              "observed": 0.44
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 1.0,
+              "mean_probability": 0.5048091500887385,
+              "observed": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "all": {
+        "rows": 2172,
+        "sessions": 284,
+        "known": 2157,
+        "unknown": 15,
+        "pool_rate": 0.31525266573945293,
+        "top": {
+          "1": {
+            "selected": 284,
+            "selected_dates": 284,
+            "known": 283,
+            "unknown": 1,
+            "hits": 148,
+            "hit_rate": 0.5229681978798587,
+            "wilson95": [
+              0.46485837261690416,
+              0.5804628304387754
+            ],
+            "full_positive_recall": 0.21764705882352942,
+            "false_positives": 135,
+            "false_negatives": 532,
+            "positive_pool": 680,
+            "outcome_coverage": 0.9964788732394366
+          },
+          "3": {
+            "selected": 839,
+            "selected_dates": 284,
+            "known": 832,
+            "unknown": 7,
+            "hits": 344,
+            "hit_rate": 0.41346153846153844,
+            "wilson95": [
+              0.3804718499322422,
+              0.4472466743400851
+            ],
+            "full_positive_recall": 0.5058823529411764,
+            "false_positives": 488,
+            "false_negatives": 336,
+            "positive_pool": 680,
+            "outcome_coverage": 0.9916567342073898
+          },
+          "5": {
+            "selected": 1310,
+            "selected_dates": 284,
+            "known": 1301,
+            "unknown": 9,
+            "hits": 485,
+            "hit_rate": 0.3727901614142967,
+            "wilson95": [
+              0.34692537591617034,
+              0.39940395952726704
+            ],
+            "full_positive_recall": 0.7132352941176471,
+            "false_positives": 816,
+            "false_negatives": 195,
+            "positive_pool": 680,
+            "outcome_coverage": 0.9931297709923664
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 284,
+            "selected_dates": 284,
+            "known": 281,
+            "unknown": 3,
+            "hits": 146,
+            "hit_rate": 0.5195729537366548,
+            "wilson95": [
+              0.46128761718638045,
+              0.5773303566350654
+            ],
+            "full_positive_recall": 0.21470588235294116,
+            "false_positives": 135,
+            "false_negatives": 534,
+            "positive_pool": 680,
+            "outcome_coverage": 0.9894366197183099
+          },
+          "3": {
+            "selected": 839,
+            "selected_dates": 284,
+            "known": 833,
+            "unknown": 6,
+            "hits": 351,
+            "hit_rate": 0.42136854741896757,
+            "wilson95": [
+              0.38827274173768245,
+              0.455186256834628
+            ],
+            "full_positive_recall": 0.5161764705882353,
+            "false_positives": 482,
+            "false_negatives": 329,
+            "positive_pool": 680,
+            "outcome_coverage": 0.9928486293206198
+          },
+          "5": {
+            "selected": 1310,
+            "selected_dates": 284,
+            "known": 1302,
+            "unknown": 8,
+            "hits": 467,
+            "hit_rate": 0.358678955453149,
+            "wilson95": [
+              0.3330781780731042,
+              0.3851111951358451
+            ],
+            "full_positive_recall": 0.6867647058823529,
+            "false_positives": 835,
+            "false_negatives": 213,
+            "positive_pool": 680,
+            "outcome_coverage": 0.9938931297709923
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.6657394529439036,
+          "precision": 0.4668820678513732,
+          "recall": 0.425,
+          "f1": 0.4449576597382602,
+          "auc": 0.6466077900354454
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": true,
+          "rows": 2157,
+          "brier": 0.2060167089045686,
+          "prior_brier": 0.21674842412919082,
+          "ece": 0.03978838867745929,
+          "top1_rows": 283,
+          "top1_forecast_mean": 0.4581975210716495,
+          "top1_observed": 0.5229681978798587,
+          "top1_absolute_gap": 0.0647706768082092,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 19.0,
+              "mean_probability": 0.08671387126988499,
+              "observed": 0.21052631578947367
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 380.0,
+              "mean_probability": 0.16298627217015044,
+              "observed": 0.23157894736842105
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 661.0,
+              "mean_probability": 0.25021160677610566,
+              "observed": 0.25113464447806355
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 579.0,
+              "mean_probability": 0.34717547064773047,
+              "observed": 0.2970639032815199
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 337.0,
+              "mean_probability": 0.4435224136323054,
+              "observed": 0.40059347181008903
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 143.0,
+              "mean_probability": 0.5409190616844948,
+              "observed": 0.6153846153846154
+            },
+            {
+              "bin": "(0.6, 0.7]",
+              "n": 34.0,
+              "mean_probability": 0.631953330644521,
+              "observed": 0.7058823529411765
+            },
+            {
+              "bin": "(0.7, 0.8]",
+              "n": 4.0,
+              "mean_probability": 0.7120096003139691,
+              "observed": 0.75
+            }
+          ]
+        }
+      },
+      "2025H2": {
+        "rows": 906,
+        "sessions": 125,
+        "known": 904,
+        "unknown": 2,
+        "pool_rate": 0.37057522123893805,
+        "top": {
+          "1": {
+            "selected": 125,
+            "selected_dates": 125,
+            "known": 125,
+            "unknown": 0,
+            "hits": 66,
+            "hit_rate": 0.528,
+            "wilson95": [
+              0.4409609341541313,
+              0.6133694037982024
+            ],
+            "full_positive_recall": 0.19701492537313434,
+            "false_positives": 59,
+            "false_negatives": 269,
+            "positive_pool": 335,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 371,
+            "selected_dates": 125,
+            "known": 370,
+            "unknown": 1,
+            "hits": 161,
+            "hit_rate": 0.43513513513513513,
+            "wilson95": [
+              0.3855411508305295,
+              0.48606217494446896
+            ],
+            "full_positive_recall": 0.48059701492537316,
+            "false_positives": 209,
+            "false_negatives": 174,
+            "positive_pool": 335,
+            "outcome_coverage": 0.9973045822102425
+          },
+          "5": {
+            "selected": 589,
+            "selected_dates": 125,
+            "known": 588,
+            "unknown": 1,
+            "hits": 239,
+            "hit_rate": 0.4064625850340136,
+            "wilson95": [
+              0.36749380315172886,
+              0.4466456114489541
+            ],
+            "full_positive_recall": 0.7134328358208956,
+            "false_positives": 349,
+            "false_negatives": 96,
+            "positive_pool": 335,
+            "outcome_coverage": 0.99830220713073
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 125,
+            "selected_dates": 125,
+            "known": 124,
+            "unknown": 1,
+            "hits": 71,
+            "hit_rate": 0.5725806451612904,
+            "wilson95": [
+              0.4846173228363051,
+              0.6561820717110161
+            ],
+            "full_positive_recall": 0.21194029850746268,
+            "false_positives": 53,
+            "false_negatives": 264,
+            "positive_pool": 335,
+            "outcome_coverage": 0.992
+          },
+          "3": {
+            "selected": 371,
+            "selected_dates": 125,
+            "known": 370,
+            "unknown": 1,
+            "hits": 169,
+            "hit_rate": 0.45675675675675675,
+            "wilson95": [
+              0.4067046604032982,
+              0.507697556780034
+            ],
+            "full_positive_recall": 0.5044776119402985,
+            "false_positives": 201,
+            "false_negatives": 166,
+            "positive_pool": 335,
+            "outcome_coverage": 0.9973045822102425
+          },
+          "5": {
+            "selected": 589,
+            "selected_dates": 125,
+            "known": 588,
+            "unknown": 1,
+            "hits": 234,
+            "hit_rate": 0.3979591836734694,
+            "wilson95": [
+              0.3591813199069439,
+              0.43806167783925565
+            ],
+            "full_positive_recall": 0.6985074626865672,
+            "false_positives": 354,
+            "false_negatives": 101,
+            "positive_pool": 335,
+            "outcome_coverage": 0.99830220713073
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.6327433628318584,
+          "precision": 0.505338078291815,
+          "recall": 0.42388059701492536,
+          "f1": 0.461038961038961,
+          "auc": 0.6384859533614878
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 904,
+          "brier": 0.2234615916428811,
+          "prior_brier": 0.23335289254629488,
+          "ece": 0.04391141543886429,
+          "top1_rows": 125,
+          "top1_forecast_mean": 0.5081224182549764,
+          "top1_observed": 0.528,
+          "top1_absolute_gap": 0.01987758174502363,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 4.0,
+              "mean_probability": 0.09339893272885208,
+              "observed": 0.0
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 109.0,
+              "mean_probability": 0.16012087970974645,
+              "observed": 0.27522935779816515
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 228.0,
+              "mean_probability": 0.25217175793953767,
+              "observed": 0.2982456140350877
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 298.0,
+              "mean_probability": 0.34939176976673936,
+              "observed": 0.33557046979865773
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 158.0,
+              "mean_probability": 0.44461230912586946,
+              "observed": 0.4430379746835443
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 87.0,
+              "mean_probability": 0.5427180283649651,
+              "observed": 0.6436781609195402
+            },
+            {
+              "bin": "(0.6, 0.7]",
+              "n": 18.0,
+              "mean_probability": 0.6404764898618877,
+              "observed": 0.5
+            },
+            {
+              "bin": "(0.7, 0.8]",
+              "n": 2.0,
+              "mean_probability": 0.7044700288714287,
+              "observed": 1.0
+            }
+          ]
+        }
+      },
+      "2026": {
+        "rows": 1266,
+        "sessions": 159,
+        "known": 1253,
+        "unknown": 13,
+        "pool_rate": 0.2753391859537111,
+        "top": {
+          "1": {
+            "selected": 159,
+            "selected_dates": 159,
+            "known": 158,
+            "unknown": 1,
+            "hits": 82,
+            "hit_rate": 0.5189873417721519,
+            "wilson95": [
+              0.4415585434486676,
+              0.5955147753642054
+            ],
+            "full_positive_recall": 0.23768115942028986,
+            "false_positives": 76,
+            "false_negatives": 263,
+            "positive_pool": 345,
+            "outcome_coverage": 0.9937106918238994
+          },
+          "3": {
+            "selected": 468,
+            "selected_dates": 159,
+            "known": 462,
+            "unknown": 6,
+            "hits": 183,
+            "hit_rate": 0.3961038961038961,
+            "wilson95": [
+              0.35253892081723476,
+              0.4413823839909938
+            ],
+            "full_positive_recall": 0.5304347826086957,
+            "false_positives": 279,
+            "false_negatives": 162,
+            "positive_pool": 345,
+            "outcome_coverage": 0.9871794871794872
+          },
+          "5": {
+            "selected": 721,
+            "selected_dates": 159,
+            "known": 713,
+            "unknown": 8,
+            "hits": 246,
+            "hit_rate": 0.3450210378681627,
+            "wilson95": [
+              0.31104214127502,
+              0.3806609580915034
+            ],
+            "full_positive_recall": 0.7130434782608696,
+            "false_positives": 467,
+            "false_negatives": 99,
+            "positive_pool": 345,
+            "outcome_coverage": 0.9889042995839112
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 159,
+            "selected_dates": 159,
+            "known": 157,
+            "unknown": 2,
+            "hits": 75,
+            "hit_rate": 0.47770700636942676,
+            "wilson95": [
+              0.4010429920931341,
+              0.5554358905822364
+            ],
+            "full_positive_recall": 0.21739130434782608,
+            "false_positives": 82,
+            "false_negatives": 270,
+            "positive_pool": 345,
+            "outcome_coverage": 0.9874213836477987
+          },
+          "3": {
+            "selected": 468,
+            "selected_dates": 159,
+            "known": 463,
+            "unknown": 5,
+            "hits": 182,
+            "hit_rate": 0.3930885529157667,
+            "wilson95": [
+              0.3496526654324424,
+              0.43828390676042234
+            ],
+            "full_positive_recall": 0.527536231884058,
+            "false_positives": 281,
+            "false_negatives": 163,
+            "positive_pool": 345,
+            "outcome_coverage": 0.9893162393162394
+          },
+          "5": {
+            "selected": 721,
+            "selected_dates": 159,
+            "known": 714,
+            "unknown": 7,
+            "hits": 233,
+            "hit_rate": 0.32633053221288516,
+            "wilson95": [
+              0.2929479513085012,
+              0.36157186368320066
+            ],
+            "full_positive_recall": 0.6753623188405797,
+            "false_positives": 481,
+            "false_negatives": 112,
+            "positive_pool": 345,
+            "outcome_coverage": 0.9902912621359223
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.6895450917797287,
+          "precision": 0.4349112426035503,
+          "recall": 0.4260869565217391,
+          "f1": 0.43045387994143486,
+          "auc": 0.6466321905126732
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 1253,
+          "brier": 0.19343077594731842,
+          "prior_brier": 0.20476882361118434,
+          "ece": 0.05794062182124,
+          "top1_rows": 158,
+          "top1_forecast_mean": 0.4186999758316757,
+          "top1_observed": 0.5189873417721519,
+          "top1_absolute_gap": 0.10028736594047621,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 15.0,
+              "mean_probability": 0.08493118821416043,
+              "observed": 0.26666666666666666
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 271.0,
+              "mean_probability": 0.1641387731966598,
+              "observed": 0.2140221402214022
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 433.0,
+              "mean_probability": 0.2491794717524048,
+              "observed": 0.22632794457274827
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 281.0,
+              "mean_probability": 0.3448250893756143,
+              "observed": 0.25622775800711745
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 179.0,
+              "mean_probability": 0.44256038297318184,
+              "observed": 0.36312849162011174
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 56.0,
+              "mean_probability": 0.5381242384487641,
+              "observed": 0.5714285714285714
+            },
+            {
+              "bin": "(0.6, 0.7]",
+              "n": 16.0,
+              "mean_probability": 0.6223647765249836,
+              "observed": 0.9375
+            },
+            {
+              "bin": "(0.7, 0.8]",
+              "n": 2.0,
+              "mean_probability": 0.7195491717565096,
+              "observed": 0.5
+            }
+          ]
+        }
+      },
+      "non_one_price": {
+        "rows": 1885,
+        "sessions": 284,
+        "known": 1873,
+        "unknown": 12,
+        "pool_rate": 0.2637479978643887,
+        "top": {
+          "1": {
+            "selected": 284,
+            "selected_dates": 284,
+            "known": 282,
+            "unknown": 2,
+            "hits": 98,
+            "hit_rate": 0.3475177304964539,
+            "wilson95": [
+              0.2943264898663469,
+              0.4048074273938953
+            ],
+            "full_positive_recall": 0.19838056680161945,
+            "false_positives": 184,
+            "false_negatives": 396,
+            "positive_pool": 494,
+            "outcome_coverage": 0.9929577464788732
+          },
+          "3": {
+            "selected": 828,
+            "selected_dates": 284,
+            "known": 821,
+            "unknown": 7,
+            "hits": 259,
+            "hit_rate": 0.315468940316687,
+            "wilson95": [
+              0.2846036679641902,
+              0.3480530119834812
+            ],
+            "full_positive_recall": 0.5242914979757085,
+            "false_positives": 562,
+            "false_negatives": 235,
+            "positive_pool": 494,
+            "outcome_coverage": 0.9915458937198067
+          },
+          "5": {
+            "selected": 1262,
+            "selected_dates": 284,
+            "known": 1253,
+            "unknown": 9,
+            "hits": 378,
+            "hit_rate": 0.3016759776536313,
+            "wilson95": [
+              0.27689986601019145,
+              0.3276644197141674
+            ],
+            "full_positive_recall": 0.7651821862348178,
+            "false_positives": 875,
+            "false_negatives": 116,
+            "positive_pool": 494,
+            "outcome_coverage": 0.9928684627575277
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 284,
+            "selected_dates": 284,
+            "known": 281,
+            "unknown": 3,
+            "hits": 93,
+            "hit_rate": 0.3309608540925267,
+            "wilson95": [
+              0.2785467603720381,
+              0.3879343748063843
+            ],
+            "full_positive_recall": 0.1882591093117409,
+            "false_positives": 188,
+            "false_negatives": 401,
+            "positive_pool": 494,
+            "outcome_coverage": 0.9894366197183099
+          },
+          "3": {
+            "selected": 828,
+            "selected_dates": 284,
+            "known": 822,
+            "unknown": 6,
+            "hits": 251,
+            "hit_rate": 0.305352798053528,
+            "wilson95": [
+              0.27483408810553633,
+              0.33768233792015434
+            ],
+            "full_positive_recall": 0.5080971659919028,
+            "false_positives": 571,
+            "false_negatives": 243,
+            "positive_pool": 494,
+            "outcome_coverage": 0.9927536231884058
+          },
+          "5": {
+            "selected": 1262,
+            "selected_dates": 284,
+            "known": 1254,
+            "unknown": 8,
+            "hits": 353,
+            "hit_rate": 0.28149920255183414,
+            "wilson95": [
+              0.2573040609744021,
+              0.3070289508236152
+            ],
+            "full_positive_recall": 0.7145748987854251,
+            "false_positives": 901,
+            "false_negatives": 141,
+            "positive_pool": 494,
+            "outcome_coverage": 0.993660855784469
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.6689802455953017,
+          "precision": 0.3259668508287293,
+          "recall": 0.2388663967611336,
+          "f1": 0.2757009345794392,
+          "auc": 0.5692222551693564
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": true,
+          "rows": 1873,
+          "brier": 0.19847655969970973,
+          "prior_brier": 0.20179891985388376,
+          "ece": 0.055809860412377475,
+          "top1_rows": 282,
+          "top1_forecast_mean": 0.3855800794499272,
+          "top1_observed": 0.3475177304964539,
+          "top1_absolute_gap": 0.038062348953473324,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 19.0,
+              "mean_probability": 0.08671387126988499,
+              "observed": 0.21052631578947367
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 379.0,
+              "mean_probability": 0.16294864946134682,
+              "observed": 0.22955145118733508
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 651.0,
+              "mean_probability": 0.25001452539464336,
+              "observed": 0.24731182795698925
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 531.0,
+              "mean_probability": 0.346717261465434,
+              "observed": 0.2674199623352166
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 250.0,
+              "mean_probability": 0.439176016949821,
+              "observed": 0.324
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 39.0,
+              "mean_probability": 0.5313645468697329,
+              "observed": 0.4358974358974359
+            },
+            {
+              "bin": "(0.6, 0.7]",
+              "n": 4.0,
+              "mean_probability": 0.638356704232037,
+              "observed": 0.5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "chain": {
+    "first_selections": 286,
+    "first_promoted": 116,
+    "second_rechecks_available": 116,
+    "second_outcomes_known": 116,
+    "continued_to_third": 43,
+    "conditional_second_to_third": 0.3706896551724138,
+    "qualified_rechecks": 16,
+    "qualified_wins": 10,
+    "qualified_hit_rate": 0.625,
+    "full_first_to_third_rate": 0.15087719298245614
+  },
+  "goal_60_passed": false,
+  "goal_status": "ACTIVE_TARGET_NOT_REACHED",
+  "scenario": {
+    "status": "OHLC_EXECUTION_SCENARIO_NOT_VERIFIED_FILLS",
+    "selected": 286,
+    "closed_trades": 196,
+    "open_unresolved": 1,
+    "skipped": 88,
+    "total_return": -0.5523044988800002,
+    "max_drawdown": -0.5761165174029856,
+    "win_rate": 0.35714285714285715,
+    "average_trade": -0.019479854060296772,
+    "average_win": 0.08650392263688622,
+    "average_loss": -0.0783597300031762,
+    "worst_trade": -0.28937491710498053,
+    "profit_factor": 0.5987082080539688,
+    "blocked_exit_count": 9,
+    "actual_trade_count": 0,
+    "annual_return_claimed": false
+  },
+  "core_fit_count": 68,
+  "actual_trades": 0,
+  "new_forward_results": 0,
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54"
+  },
+  "old_model_not_retrained": true,
+  "production_deployment_allowed": false,
+  "code_sha256": "3c785c2190242453b13311e79b753f9fa93a0d0dca773c8b6e65e056f602f012",
+  "bundle_sha256": "3057daf89cae65ff6cf6b9261f2e6c27d6b54ea4325962b9410bcf39af068f2c"
+}

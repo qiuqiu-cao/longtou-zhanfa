@@ -1,0 +1,59 @@
+{
+  "formed_at": "2026-10-20T15:17:12.037886+00:00",
+  "budget_minutes": 30,
+  "previous_batch": "Finishedread-onlypre2025diversity:BASE/LINEAR/ORDERED21/20/19of42,unionoracle28,BASEmissrescued5and4days;notanactualensemblegain",
+  "hypothesis": "Fixed equal-weight averaging of already-qualified distinct learner families reduces individual ranking errors",
+  "heads": [
+    "BASE",
+    "LINEAR",
+    "ORDERED"
+  ],
+  "arms": {
+    "EQUAL_PROBABILITY_MEAN": "Exactly1/3each savedtemporalPlatt score,no newaggregatecalibrator;all3required",
+    "EQUAL_DAILY_RANK_MEAN": "Exactly1/3each rawscore'ssame-datecomplete-pool percentileaverage-rank,averageties;scoreisnotprobability"
+  },
+  "feature_policy": "Original62fields/fullknownmaturemembers;componentvalidationcoresreusedexactly,no newfeaturesorfitweights;allmissing/unknown candidates retained",
+  "baseline": "FrozenoriginalBASEscores plusunchangedrisk screen;noBASErefits;no passingbythree-pickany-hit",
+  "validation": "Completeoriginal2025H1:4724rows/117days. Need>52Top1hits,>=48non-one-pricehits,>=95%datecoverage;baselinewinsties. Mosthitspassingarm,probabilitymeanwinsarmtie",
+  "evaluation": "Onlyselectedarm14originalmonthly252officialpositionwindows. SavedmonthlyBASE reused;fit originalfixedLINEARandORDEREDheads oncepermonthwiththeir42datecalibrators. Thesearecomponentfitsforthefrozenensemble,notretryingtheirfailedstandalonevalidation",
+  "calibration": "Probabilitymeanrequiresall3componentcalibrators,nofallbackorheadsubsets;aggregatequalificationonlyonfullfinalevaluation. Rankmean remainsuncalibrated",
+  "target60": "FirstcloseonlydailyTop1next-official-close1to2hitrate>=60%,>=200known,>=95%outcomecoverage,noabstentiondates;2025H2and2026each>=55%;samecodesecondclose recheckedindependently",
+  "stop": "Twofixedrulesonce;no weight/subset/threshold changesafterresults. No newfits ifbothfail. Stopfixedcomparisonor30minutes",
+  "already_seen_historical_validation_not_pristine_blind": true,
+  "weights_not_fitted_on_any_outcomes": true,
+  "inputs": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_capital_risk_20261020_run1\\COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv": "eb979ae06bbb8324eff9268d0284026b98b859a8b602aa615a11c589f2c276c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\validation_S1_STAGE_CYCLE_GENE_PREDICTIONS.csv": "9065c1f429fc666cea225df7525151fc115fd51d57df4e2d3c33135d7d11758f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_regularized_ordered_20261020_run1\\validation_REGULARIZED_LINEAR_ALL_BEFORE_METRICS.csv": "7afa19f248d74c1b925bf0e847720e4cd9cd04ba72068623ef82bc0dcc92f37c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_regularized_ordered_20261020_run1\\validation_CHRONO_ORDERED_ALL_BEFORE_METRICS.csv": "ac82b278d657ec3ff7e3bc47982139cab6045e9962ca735b0c4a76c53c17fa16",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_prefix_diversity_20261020\\report.json": "fd7f1eafc595e9b3d8348d714369f4e0e9c695d7a6a127e58edcef843ddb72c9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_prefix_diversity_20261020\\verification.json": "6dcf88d37b0422566851acbd4979345fc36e15667f1f9acba17304ca8bd60b90",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_prefix_diversity_20261020\\completion.json": "a1e3d74a19f6c6266658b1dc6a4e1e3e052d2c1b5e697c67b8a6deaeb1962051",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_ordered_learning_dependency_20261020\\wheel_acquisition.json": "95c00aefe3725786fa3ccc3922a0734e6a83f745ed49db69f297b4279c5c0580",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_ordered_learning_dependency_20261020\\runtime\\catboost\\core.py": "6bc0a210b7f62e3c1553682636a7ba2363ad0c71f6974a1030817e7d9754921e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_ordered_learning_dependency_20261020\\runtime\\catboost\\_catboost.pyd": "b3fb3dab53250e0850acf4aa0b529fcc71f055133e811b46cc7a807b1022d6eb"
+  },
+  "protected": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_leader_model.py": "bff6e3d692bd1c46b511399c71ff91b9fdcbeda746cbe6875480652c3f08cdb1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_second_stage_model.py": "3c785c2190242453b13311e79b753f9fa93a0d0dca773c8b6e65e056f602f012",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_capital_risk_model.py": "7fddb3fe32738af4067aed8837a5d665fa72f569893f83fcfa0999d1f60f3b20",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_matured_event_model.py": "969f45c054ad8f80d179d4b6d243afd952e8b721fbe5abbca394437c092a955d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_regularized_ordered.py": "03e320075170afbb35a6d67bcf7bdb6c667d33ef1e3383114b8999d709cd6735",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\report.json": "328dbbbaf3d08d7a8b873b87e341317e52beed5adb22bbaf2c5ffad32336ad6a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S2_ALL_PREDICTIONS.csv": "68dd5e13a5609385fd0828cf402bd7c87c13062b1a4dcdec4aff4fee499e9ce6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_regularized_ordered_20261020_run1\\report.json": "bdb29ebc031eac4e5afea283efaefb5eb47af90b40eb10348109436ea49f6474",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_regularized_ordered_20261020_run1\\combined_report_APPEND_ONLY.json": "42b0af0afd8c84f5ffd4f48a0fb0e7a7398331554626f8657c53c035eba1f8ef"
+  },
+  "raw_source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54"
+  },
+  "source_sha256": "8cf2091fd2e4fc840aa1b5000b7542f2d5dd2330bc3ef5b3f8f804396a4beaaa",
+  "production_changes": false,
+  "new_forward_results": 0,
+  "actual_trades": 0
+}

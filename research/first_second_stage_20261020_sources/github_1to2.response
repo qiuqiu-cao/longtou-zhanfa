@@ -1,0 +1,537 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+A股1进2打板智能选股系统 V1.0
+自动识别最近交易日 → 扫描首板 → 多维度评分 → 输出推荐
+
+调用方式:
+    python3 a_stock_1to2.py                          # 自动使用最近交易日
+    python3 a_stock_1to2.py --date 2026-06-12        # 指定日期
+    python3 a_stock_1to2.py --top 10                  # 显示TOP10
+    python3 a_stock_1to2.py --filter 低空经济          # 只看特定板块
+    python3 a_stock_1to2.py --min-score 60            # 最低分数阈值
+
+作者: lpw821
+版本: V1.0 (2026-06-13)
+"""
+
+import sys
+import json
+import time
+import argparse
+import urllib.request
+import requests
+from datetime import datetime, timedelta
+from collections import Counter
+
+# ============================================================
+# 全局配置
+# ============================================================
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
+EXCLUDE_CODE_PREFIXES = ('68', '8')  # 科创板688 + 北交所8
+EXCLUDE_NAME_KW = ('ST', '*ST', '退')
+
+SECTOR_PREMIUM = {
+    '低空经济': 10, '有色金属': 8, '黄金': 8, '白银': 8,
+    '铜': 7, '锌': 7, '锗': 7, '稀土': 7, '钼': 7,
+    '大金融': 7, '券商': 7, '金融科技': 7, '保险': 6,
+    '军工': 6, '军工装备': 6, '军工信息化': 6, '航天': 6,
+    '新能源': 5, '光伏': 5, '储能': 5, '锂电': 5, '固态电池': 5,
+    '医药': 4, '创新药': 4, '医疗器械': 4, '中药': 4,
+    'AI应用': 3, '人工智能': 3, '机器人': 5, '具身智能': 5,
+    '半导体': 3, '芯片': 3, '光模块': 2, '先进封装': 4, '存储芯片': 4,
+    '消费电子': 3, 'PCB': 3, '面板': 3,
+    '华为': 4, '特斯拉': 4, '苹果': 3,
+    '国资': 4, '国企改革': 4, '高股息': 3, '分红': 3, '回购': 3,
+    '一般零售': 3, '零售': 3,
+}
+
+HOT_MONEY_KW = [
+    '桑田路', '拉萨', '解放南', '溧阳路', '江宁路', '黄河路',
+    '华鑫证券', '华泰证券', '中信证券', '国泰君安', '银河证券',
+    '东吴证券', '东方证券', '西藏', '财通证券', '浙商证券',
+    '光大证券', '中泰证券', '长城证券', '方正证券',
+]
+
+# ============================================================
+# 日期工具
+# ============================================================
+def get_recent_trading_day(ref_date=None):
+    if ref_date is None:
+        d = datetime.now()
+    elif isinstance(ref_date, str):
+        d = datetime.strptime(ref_date, "%Y-%m-%d")
+    else:
+        d = ref_date
+    while d.weekday() >= 5:
+        d = d - timedelta(days=1)
+    return d
+
+def get_next_trading_day(ref_date):
+    d = ref_date + timedelta(days=1)
+    while d.weekday() >= 5:
+        d = d + timedelta(days=1)
+    return d
+
+# ============================================================
+# 数据获取
+# ============================================================
+def get_hotspot(date_str):
+    url = ("http://zx.10jqka.com.cn/event/api/getharden/"
+           "date/{}/orderby/date/orderway/desc/charset/GBK/").format(date_str)
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/117.0.0.0 Safari/537.36"}
+    r = urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=10)
+    data = json.loads(r.read().decode("utf-8", errors='ignore'))
+    return data.get("data") or []
+
+def tencent_quote_batch(codes):
+    prefixed = []
+    for c in codes:
+        if c.startswith(("6", "9")): prefixed.append("sh{}".format(c))
+        else: prefixed.append("sz{}".format(c))
+    result = {}
+    for i in range(0, len(prefixed), 40):
+        batch = prefixed[i:i+40]
+        url = "https://qt.gtimg.cn/q=" + ",".join(batch)
+        req = urllib.request.Request(url)
+        req.add_header("User-Agent", "Mozilla/5.0")
+        try:
+            resp = urllib.request.urlopen(req, timeout=15)
+            data = resp.read().decode("gbk", errors='ignore')
+            for line in data.strip().split(";"):
+                if not line.strip() or "=" not in line or '"' not in line:
+                    continue
+                key = line.split("=")[0].split("_")[-1]
+                vals = line.split('"')[1].split("~")
+                if len(vals) < 53: continue
+                code = key[2:]
+                result[code] = {
+                    "name": vals[1], "price": float(vals[3]) if vals[3] else 0,
+                    "last_close": float(vals[4]) if vals[4] else 0,
+                    "open": float(vals[5]) if vals[5] else 0,
+                    "high": float(vals[33]) if vals[33] else 0,
+                    "low": float(vals[34]) if vals[34] else 0,
+                    "change_pct": float(vals[32]) if vals[32] else 0,
+                    "amount_wan": float(vals[37]) if vals[37] else 0,
+                    "turnover_pct": float(vals[38]) if vals[38] else 0,
+                    "pe_ttm": float(vals[39]) if vals[39] else 0,
+                    "amplitude_pct": float(vals[43]) if vals[43] else 0,
+                    "mcap_yi": float(vals[44]) if vals[44] else 0,
+                    "float_mcap_yi": float(vals[45]) if vals[45] else 0,
+                    "pb": float(vals[46]) if vals[46] else 0,
+                    "limit_up": float(vals[47]) if vals[47] else 0,
+                    "vol_ratio": float(vals[49]) if vals[49] else 0,
+                    "pe_static": float(vals[52]) if vals[52] else 0,
+                }
+        except Exception as e:
+            print("[WARN] 腾讯行情批次失败: {}".format(e))
+    return result
+
+def eastmoney_datacenter(report_name, columns="ALL", filter_str="",
+                          page_size=50, sort_columns="", sort_types="-1"):
+    DATACENTER_URL = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "reportName": report_name, "columns": columns,
+        "filter": filter_str, "pageNumber": "1", "pageSize": str(page_size),
+        "sortColumns": sort_columns, "sortTypes": sort_types,
+        "source": "WEB", "client": "WEB",
+    }
+    r = requests.get(DATACENTER_URL, params=params,
+                     headers={"User-Agent": UA}, timeout=15)
+    d = r.json()
+    if d.get("result") and d["result"].get("data"):
+        return d["result"]["data"]
+    return []
+
+# ============================================================
+# 核心分析引擎
+# ============================================================
+def run_analysis(target_date=None, top_n=25, sector_filter=None, min_score=40):
+    """执行完整1进2选股分析，返回排名列表"""
+
+    # 确定日期
+    if target_date:
+        trade_date = datetime.strptime(target_date, "%Y-%m-%d")
+    else:
+        trade_date = get_recent_trading_day()
+    while trade_date.weekday() >= 5:
+        trade_date = trade_date - timedelta(days=1)
+
+    target_str = trade_date.strftime("%Y-%m-%d")
+    prev_str = (trade_date - timedelta(days=1)).strftime("%Y-%m-%d")
+    prev2_str = (trade_date - timedelta(days=2)).strftime("%Y-%m-%d")
+    next_str = get_next_trading_day(trade_date).strftime("%Y-%m-%d")
+
+    print("=" * 100)
+    print("A股1进2打板智能选股 V1.0")
+    print("分析日期: {} | 目标交易日: {}".format(target_str, next_str))
+    print("=" * 100)
+
+    # [1/8] 获取数据
+    print("\n[1/8] 获取3日强势股数据...")
+    rows_t = get_hotspot(target_str)
+    rows_p = get_hotspot(prev_str)
+    rows_p2 = get_hotspot(prev2_str)
+
+    prev_lu = set()
+    for row in rows_p:
+        if float(row.get('zhangfu', 0) or 0) >= 9.5:
+            prev_lu.add(row.get('code', ''))
+    prev2_lu = set()
+    for row in rows_p2:
+        if float(row.get('zhangfu', 0) or 0) >= 9.5:
+            prev2_lu.add(row.get('code', ''))
+
+    print("  {}强势股:{} | {}涨停:{} | {}涨停:{}".format(
+        target_str, len(rows_t), prev_str, len(prev_lu), prev2_str, len(prev2_lu)))
+
+    # [2/8] 筛选
+    print("\n[2/8] 筛选首板+排除ST/科创/北交/退市...")
+    candidates = []
+    excluded = []
+    for row in rows_t:
+        zf = float(row.get('zhangfu', 0) or 0)
+        if zf < 9.5: continue
+        code = row.get('code', '')
+        name = row.get('name', '')
+
+        if code.startswith(EXCLUDE_CODE_PREFIXES):
+            excluded.append((code, name, "科创板" if code.startswith('68') else "北交所"))
+            continue
+        if any(kw in name for kw in EXCLUDE_NAME_KW):
+            excluded.append((code, name, "ST/退市"))
+            continue
+
+        candidates.append({
+            'code': code, 'name': name,
+            'change_pct': zf,
+            'turnover': float(row.get('huanshou', 0) or 0),
+            'close': float(row.get('close', 0) or 0),
+            'amount': float(row.get('chengjiaoe', 0) or 0),
+            'dde_net': float(row.get('ddejingliang', 0) or 0),
+            'reason': row.get('reason', ''),
+            'in_prev_lu': code in prev_lu,
+            'in_prev2_lu': code in prev2_lu,
+        })
+
+    print("  候选:{}只 | 排除:{}只".format(len(candidates), len(excluded)))
+    if not candidates:
+        print("[ERROR] 无候选！可能非交易日或数据源异常。")
+        return []
+
+    # [3/8] 估值
+    print("\n[3/8] 获取腾讯财经估值...")
+    quotes = tencent_quote_batch([s['code'] for s in candidates])
+    print("  成功:{}只".format(len(quotes)))
+
+    for s in candidates:
+        q = quotes.get(s['code'], {})
+        s['mcap'] = q.get('mcap_yi', 0)
+        s['float_mcap'] = q.get('float_mcap_yi', 0)
+        s['pe_ttm'] = q.get('pe_ttm', 0)
+        s['pb'] = q.get('pb', 0)
+        s['vol_ratio'] = q.get('vol_ratio', 0)
+        s['amplitude'] = q.get('amplitude_pct', 0)
+        s['open_price'] = q.get('open', 0)
+        s['high'] = q.get('high', 0)
+        s['low'] = q.get('low', 0)
+        s['last_close'] = q.get('last_close', 0)
+
+    # [4/8] 龙虎榜 + 同营业部
+    print("\n[4/8] 龙虎榜+同营业部识别...")
+    dt_data = eastmoney_datacenter(
+        "RPT_DAILYBILLBOARD_DETAILSNEW",
+        filter_str="(TRADE_DATE>='{}')(TRADE_DATE<='{}')".format(target_str, target_str),
+        page_size=500,
+        sort_columns="BILLBOARD_NET_AMT", sort_types="-1",
+    )
+    dt_map = {}
+    for row in dt_data:
+        code = row.get("SECURITY_CODE", "")
+        dt_map[code] = {
+            "net_buy_wan": round((row.get("BILLBOARD_NET_AMT") or 0) / 10000, 1),
+            "buy_wan": round((row.get("BILLBOARD_BUY_AMT") or 0) / 10000, 1),
+            "sell_wan": round((row.get("BILLBOARD_SELL_AMT") or 0) / 10000, 1),
+        }
+    print("  全市场龙虎榜:{}条".format(len(dt_data)))
+
+    same_broker_found = 0
+    for s in candidates:
+        code = s['code']
+        dt = dt_map.get(code, {})
+        s['on_dt'] = code in dt_map
+        s['dt_net_buy'] = dt.get('net_buy_wan', 0)
+        s['dt_buy'] = dt.get('buy_wan', 0)
+        s['dt_sell'] = dt.get('sell_wan', 0)
+
+        if not s['on_dt']:
+            s['inst_buy_wan'] = 0; s['inst_sell_wan'] = 0; s['inst_net_wan'] = 0
+            s['same_broker_count'] = 0; s['same_broker_buy_wan'] = 0
+            s['buy_seats'] = []; s['sell_seats'] = []
+            s['hot_money_count'] = 0
+            continue
+
+        buy_data = eastmoney_datacenter(
+            "RPT_BILLBOARD_DAILYDETAILSBUY",
+            filter_str="(TRADE_DATE='{}')(SECURITY_CODE=\"{}\")".format(target_str, code),
+            page_size=10, sort_columns="BUY", sort_types="-1",
+        )
+        sell_data = eastmoney_datacenter(
+            "RPT_BILLBOARD_DAILYDETAILSSELL",
+            filter_str="(TRADE_DATE='{}')(SECURITY_CODE=\"{}\")".format(target_str, code),
+            page_size=10, sort_columns="SELL", sort_types="-1",
+        )
+
+        inst_buy = sum((row.get("BUY") or 0) for row in (buy_data or [])
+                       if str(row.get("OPERATEDEPT_CODE", "")) == "0")
+        inst_sell = sum((row.get("SELL") or 0) for row in (sell_data or [])
+                        if str(row.get("OPERATEDEPT_CODE", "")) == "0")
+        s['inst_buy_wan'] = round(inst_buy / 10000, 1)
+        s['inst_sell_wan'] = round(inst_sell / 10000, 1)
+        s['inst_net_wan'] = round((inst_buy - inst_sell) / 10000, 1)
+
+        buy_seats = []
+        for row in (buy_data or [])[:5]:
+            buy_seats.append({
+                "name": row.get("OPERATEDEPT_NAME", ""),
+                "buy_wan": round((row.get("BUY") or 0) / 10000, 1),
+                "sell_wan": round((row.get("SELL") or 0) / 10000, 1),
+                "net_wan": round((row.get("NET") or 0) / 10000, 1),
+            })
+        s['buy_seats'] = buy_seats
+        s['hot_money_count'] = sum(1 for seat in buy_seats
+                                     if any(kw in seat['name'] for kw in HOT_MONEY_KW))
+
+        # 同营业部
+        lookback = (trade_date - timedelta(days=20)).strftime("%Y-%m-%d")
+        hist_dt = eastmoney_datacenter(
+            "RPT_DAILYBILLBOARD_DETAILSNEW",
+            filter_str="(TRADE_DATE>='{}')(TRADE_DATE<='{}')(SECURITY_CODE=\"{}\")".format(
+                lookback, target_str, code),
+            page_size=30, sort_columns="TRADE_DATE", sort_types="-1",
+        )
+
+        today_brokers = set()
+        for seat in buy_seats:
+            b = seat['name'][:8] if len(seat['name']) > 8 else seat['name']
+            today_brokers.add(b)
+
+        same_broker_apps = {}
+        for hist in hist_dt:
+            hist_date = str(hist.get("TRADE_DATE", ""))[:10]
+            if hist_date == target_str: continue
+            hist_buy = eastmoney_datacenter(
+                "RPT_BILLBOARD_DAILYDETAILSBUY",
+                filter_str="(TRADE_DATE='{}')(SECURITY_CODE=\"{}\")".format(hist_date, code),
+                page_size=5, sort_columns="BUY", sort_types="-1",
+            )
+            for row in (hist_buy or []):
+                hist_seat = row.get("OPERATEDEPT_NAME", "")
+                h = hist_seat[:8] if len(hist_seat) > 8 else hist_seat
+                if h in today_brokers:
+                    if h not in same_broker_apps:
+                        same_broker_apps[h] = []
+                    same_broker_apps[h].append({
+                        "date": hist_date,
+                        "buy_wan": round((row.get("BUY") or 0) / 10000, 1),
+                    })
+            time.sleep(0.03)
+
+        s['same_broker_count'] = len(same_broker_apps)
+        s['same_broker_buy_wan'] = round(
+            sum(item['buy_wan'] for apps in same_broker_apps.values() for item in apps), 1)
+        if same_broker_apps:
+            same_broker_found += 1
+
+    print("  上龙虎榜候选:{}只 | 同营业部信号:{}只".format(
+        sum(1 for s in candidates if s['on_dt']), same_broker_found))
+
+    # [5/8] 板块
+    print("\n[5/8] 板块热度分析...")
+    all_themes = []
+    for s in candidates:
+        reason = s.get('reason', '')
+        themes = [t.strip() for t in reason.split('+') if t.strip()] if reason else []
+        all_themes.extend(themes)
+        s['themes'] = themes
+    theme_counter = Counter(all_themes)
+    top5 = theme_counter.most_common(5)
+    print("  TOP5: {}".format(" | ".join("{}:{}只".format(t, c) for t, c in top5)))
+
+    # [6/8] 评分
+    print("\n[6/8] 11维度评分...")
+    for s in candidates:
+        score = 0
+        details = []
+        code = s['code']
+        is_20cm = code.startswith('30')
+        fmcap = s.get('float_mcap', 0)
+        turnover = s.get('turnover', 0)
+        vol_ratio = s.get('vol_ratio', 0)
+        amp = s.get('amplitude', 99)
+        price = s.get('close', 0)
+
+        if 0 < fmcap <= 20: score += 15; details.append('极小盘')
+        elif 20 < fmcap <= 40: score += 13; details.append('小盘')
+        elif 40 < fmcap <= 55: score += 10; details.append('中小盘')
+        elif 55 < fmcap <= 80: score += 7; details.append('中盘')
+        elif 80 < fmcap <= 150: score += 4; details.append('大盘')
+        else: score += 1; details.append('巨盘')
+
+        if is_20cm:
+            if 8 <= turnover <= 15: score += 15
+            elif 15 < turnover <= 22: score += 11
+            elif 4 <= turnover < 8: score += 9
+            elif turnover > 22: score += 5
+            else: score += 3
+        else:
+            if 2.5 <= turnover <= 6: score += 15
+            elif 6 < turnover <= 10: score += 12
+            elif 10 < turnover <= 15: score += 8
+            elif 1 <= turnover < 2.5: score += 9
+            else: score += 3
+
+        if 1.5 <= vol_ratio <= 3: score += 12
+        elif 3 < vol_ratio <= 5: score += 10
+        elif 5 < vol_ratio <= 8: score += 7
+        elif 0.8 <= vol_ratio < 1.5: score += 6
+        elif vol_ratio > 8: score += 4
+        else: score += 2
+
+        if amp <= 2.5: score += 12
+        elif amp <= 5: score += 10
+        elif amp <= 7: score += 7
+        elif amp <= 10: score += 4
+        else: score += 1
+        if amp <= 1 and vol_ratio < 0.5:
+            score -= 20; details.append('一字板陷阱!')
+
+        if price <= 8: score += 8
+        elif price <= 15: score += 7
+        elif price <= 25: score += 5
+        elif price <= 50: score += 3
+        else: score += 1
+
+        themes = s.get('themes', [])
+        sector_score = max((SECTOR_PREMIUM.get(t, 3) for t in themes), default=3)
+        sector_count = max((theme_counter.get(t, 0) for t in themes), default=0)
+        if sector_count >= 6: sector_score += 5
+        elif sector_count >= 3: sector_score += 3
+        score += min(sector_score, 18)
+
+        if s['on_dt']:
+            dt_net = s.get('dt_net_buy', 0)
+            inst_net = s.get('inst_net_wan', 0)
+            hm = s.get('hot_money_count', 0)
+            sb = s.get('same_broker_count', 0)
+            if dt_net > 5000: score += 8
+            elif dt_net > 2000: score += 6
+            elif dt_net > 500: score += 4
+            elif dt_net > 0: score += 2
+            if inst_net > 5000: score += 5
+            elif inst_net > 1000: score += 3
+            if hm >= 2: score += 3
+            if sb >= 2: score += 5; details.append('同营业部强庄!')
+            elif sb >= 1: score += 3; details.append('同营业部信号')
+
+        dde = s.get('dde_net', 0)
+        if dde >= 2.5: score += 8
+        elif dde >= 1.5: score += 6
+        elif dde >= 0.7: score += 4
+        elif dde > 0: score += 2
+
+        if is_20cm: score += 1
+        else: score += 5
+
+        pe = s.get('pe_ttm', -1)
+        if 0 < pe <= 25: score += 4
+        elif 25 < pe <= 50: score += 3
+        elif 50 < pe <= 100: score += 2
+        elif pe > 0: score += 1
+
+        s['score'] = score
+        s['score_details'] = details
+
+    candidates.sort(key=lambda x: x['score'], reverse=True)
+
+    if sector_filter:
+        filtered = [s for s in candidates if any(sector_filter in t for t in s.get('themes', []))]
+        if filtered:
+            candidates = filtered
+    candidates = [s for s in candidates if s['score'] >= min_score]
+
+    # [7/8] 排名
+    print("\n[7/8] 排名输出...")
+    print("\n" + "=" * 100)
+    print("{}首板 → {} 1进2排名 (排除ST/科创/北交/退市)".format(target_str, next_str))
+    print("=" * 100)
+    print("\n{:<4s} {:<8s} {:<10s} {:<6s} {:<8s} {:<9s} {:<6s} {:<6s} {:<6s} {:8s} {}".format(
+        "排名", "代码", "名称", "得分", "涨幅%", "流市值亿", "换手%", "量比", "振幅%", "信号", "核心题材"))
+    print("-" * 115)
+
+    for i, s in enumerate(candidates[:top_n]):
+        themes_str = '+'.join(s.get('themes', [])[:2])
+        signals = []
+        if s['on_dt']: signals.append('龙')
+        if s.get('same_broker_count', 0) > 0: signals.append('同')
+        if s.get('hot_money_count', 0) > 0: signals.append('游')
+        signal_str = '/'.join(signals) if signals else '-'
+        print("{:<4d} {:<8s} {:<10s} {:<6.1f} {:<8.2f} {:<9.1f} {:<6.1f} {:<6.2f} {:<6.1f} {:8s} {}".format(
+            i+1, s['code'], s['name'], s['score'],
+            s['change_pct'], s.get('float_mcap', 0), s.get('turnover', 0),
+            s.get('vol_ratio', 0), s.get('amplitude', 0),
+            signal_str, themes_str[:25]))
+
+    # [8/8] TOP5详细
+    print("\n[8/8] TOP5 深度分析...")
+    for rank, s in enumerate(candidates[:5]):
+        print("\n" + "-" * 70)
+        print("#{} {} {} | 得分:{:.1f} | {}→{}".format(rank+1, s['code'], s['name'], s['score'], target_str, next_str))
+        print("  股价{:.2f} | 涨幅{:.2f}% | 市值{:.1f}亿/流通{:.1f}亿 | PE{:.1f} | PB{:.2f}".format(
+            s['close'], s['change_pct'], s.get('mcap', 0), s.get('float_mcap', 0),
+            s.get('pe_ttm', 0), s.get('pb', 0)))
+        print("  换手{:.1f}% | 量比{:.2f} | 振幅{:.1f}% | DDE{:.2f} | 成交{:.2f}亿".format(
+            s['turnover'], s.get('vol_ratio', 0), s.get('amplitude', 0),
+            s.get('dde_net', 0), s.get('amount', 0) / 1e8 if s.get('amount', 0) else 0))
+        print("  题材: {}".format(s.get('reason', '')))
+        if s['on_dt']:
+            print("  [龙虎榜] 净买{}万 总买{}万 总卖{}万".format(s['dt_net_buy'], s['dt_buy'], s['dt_sell']))
+            if s.get('inst_net_wan', 0):
+                print("  [机构] 净买{}万(买{}万/卖{}万)".format(s['inst_net_wan'], s['inst_buy_wan'], s['inst_sell_wan']))
+            if s.get('same_broker_count', 0) > 0:
+                print("  [同营业部] {}家近20日反复买入!".format(s['same_broker_count']))
+            if s.get('hot_money_count', 0) > 0:
+                print("  [游资] {}家知名席位".format(s['hot_money_count']))
+        print("  评分: {}".format(", ".join(s.get('score_details', [])[:8])))
+
+    if candidates:
+        best = candidates[0]
+        print("\n" + "=" * 100)
+        print(">>> 最终推荐: {} ({}) 得分{:.1f} | {} 1进2打板 <<<".format(best['code'], best['name'], best['score'], next_str))
+        print("    题材: {}".format(best.get('reason', '')))
+        if best['on_dt']:
+            print("    龙虎榜: 净买{}万 | 同营业部:{}家".format(best['dt_net_buy'], best.get('same_broker_count', 0)))
+        print("=" * 100)
+    else:
+        print("\n无符合条件的标的。")
+
+    return candidates
+
+# ============================================================
+# CLI
+# ============================================================
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='A股1进2打板智能选股V1.0')
+    parser.add_argument('--date', type=str, default=None, help='分析日期 YYYY-MM-DD')
+    parser.add_argument('--top', type=int, default=25, help='显示TOP N')
+    parser.add_argument('--filter', type=str, default=None, help='板块过滤词')
+    parser.add_argument('--min-score', type=float, default=40, help='最低分数')
+    args = parser.parse_args()
+
+    run_analysis(
+        target_date=args.date,
+        top_n=args.top,
+        sector_filter=args.filter,
+        min_score=args.min_score,
+    )

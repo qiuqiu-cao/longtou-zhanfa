@@ -1,0 +1,27 @@
+{
+  "review_only": true,
+  "new_fits": 0,
+  "code_sha256": "1b39d3696a8cf251574ca9e19de5151c209c0b2bf6c139c30a19758ea44c9695",
+  "fixed_design_temporal_routing_review_pass": true,
+  "blocking_technical_issue": "bootstrap_intervals reads statistics[negatives] but classification returns known/positives and no negatives, causing guaranteed evaluate KeyError after fitting",
+  "requested_prefreeze_fix": "Use known-positives or remove unused negatives column; add minimal bootstrap smoke test",
+  "checks_passed": [
+    "Full-date OOF completion by saved first-stage models; original caches exactly reproduced",
+    "Prefix uses first2 blocks with target_date strictly before block3 first signal",
+    "Final uses all3 known eligible blocks with target_date strictly before outer month",
+    "Training-only imputer and scaler, keep_empty_features=True",
+    "Every meta row weight1, no class balancing",
+    "Third-block threshold guards use complete original B with unknown retained",
+    "Only original B verified0 primary positives can be rejected",
+    "64fit bound: two arms x16months x2phases",
+    "Original raw ranking score unchanged"
+  ],
+  "risks_retained": [
+    "Final-meta refit coefficients and scale differ from prefix used for threshold selection",
+    "Inner first-stage training62/125/188 days differs from outer252",
+    "Seen historical outcomes and late source limits remain"
+  ],
+  "zero_original_B_dates_in_outer308_dates": 0,
+  "original_model_data_code_hash_waiver": false,
+  "future_target16_result_read": false
+}

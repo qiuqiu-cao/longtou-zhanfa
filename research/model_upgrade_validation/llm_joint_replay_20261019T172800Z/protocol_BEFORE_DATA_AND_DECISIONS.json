@@ -1,0 +1,100 @@
+{
+  "created_at_utc": "2026-10-19T17:27:00.930209+00:00",
+  "experiment": "CODEX_GEMINI38_HISTORICAL_CONSULTATION_V1",
+  "human_request": "两个真实模型用以往当时数据各自判断、商量、共同决策后揭晓结果",
+  "seed": "human-request-two-actual-llms-historical-consultation-20261019-v1",
+  "sample_rule": "Each of three fixed periods: select the four signal dates with the lowest SHA256(seed:period:date). Keep the entire archived relay pool on each selected date. Order cases by a separate hash. No label, score, performance or pool-size selection.",
+  "periods": [
+    [
+      "2025H2",
+      "2025-07-01",
+      "2025-12-31"
+    ],
+    [
+      "2026JanAug",
+      "2026-01-01",
+      "2026-08-31"
+    ],
+    [
+      "2026Sep",
+      "2026-09-01",
+      "2026-09-30"
+    ]
+  ],
+  "days_per_period": 4,
+  "main_event": "Next adjacent official session CLOSE limit-up, using archived promotion target corroborated by unadjusted exact-cent 10% prices; missing/conflicting qualification remains UNKNOWN.",
+  "secondary_event": "Next adjacent official session intraday TOUCH limit-up, separately counted.",
+  "reviewers": [
+    "Codex (this live assistant)",
+    "Actual Antigravity Gemini 3.8 Flash High"
+  ],
+  "arms": [
+    "codex_independent",
+    "gemini_independent",
+    "discussed_joint"
+  ],
+  "reference_arms": [
+    "archived_ROLL252_strict_gt_0.5",
+    "always_no",
+    "height_rank_Top3"
+  ],
+  "sequence": [
+    "protocol and selection frozen",
+    "explicit signal-only packet; dates/codes/names masked; no target or model score",
+    "each reviewer saves independent all-pool decisions before seeing other decisions",
+    "one label-hidden consultation and all-pool joint decision freeze",
+    "only then extract labels and evaluate all arms"
+  ],
+  "metrics": [
+    "TP/FP/TN/FN, unknown labels and abstentions",
+    "judged-known accuracy and full-known correct fraction",
+    "precision, recall, F1, balanced accuracy, coverage",
+    "Top1/Top3 with unknown slots retained",
+    "real daily non-one-price subset",
+    "paired consultation corrections and induced errors",
+    "three period strata",
+    "fixed seed 10000 day-cluster bootstrap joint-minus-each accuracy difference"
+  ],
+  "abstention_policy": "UNKNOWN is never a correct NO. Report judged denominator plus complete known denominator. Recall retains abstained positive labels as misses, coverage separate.",
+  "top3_policy": "Rank exactly min(3,pool size) relative candidates, even if direction NO/UNKNOWN; relative rank is not a positive forecast. Top3 slots with unknown outcomes retained.",
+  "end_rule": "One fixed sample, one independent pass each, one consultation. No outcome-driven date replacement, parameter adjustment, post-reveal decision change, retraining, production deployment or formal-ledger writes.",
+  "limits": [
+    "Previously researched historical universe and late-acquired sources: masked replay is NOT independently certified blind or genuine forward evidence.",
+    "Historical contemporaneous theme/forum/announcement coverage is insufficient; packet tests price-volume/emotion/competition reasoning only, not a full narrative strategy.",
+    "Archived pool and bars retain original survivor and supplier scope biases. No claim of all-A-share performance.",
+    "No fill, profit or calibrated individual event probability is inferred."
+  ],
+  "signal_fields": [
+    "boards",
+    "turnover",
+    "amplitude",
+    "first_seal_minute",
+    "last_seal_minute",
+    "bomb_count",
+    "signal_amount",
+    "signal_float_cap"
+  ],
+  "bar_fields": [
+    "date",
+    "code",
+    "open",
+    "high",
+    "low",
+    "close",
+    "pre_close",
+    "volume",
+    "amount",
+    "turnover"
+  ],
+  "market_fields": [
+    "limit_count",
+    "consecutive_count",
+    "max_board",
+    "failed_count",
+    "down_limit_count",
+    "failed_rate",
+    "seal_rate",
+    "yesterday_premium",
+    "emotion_state"
+  ]
+}

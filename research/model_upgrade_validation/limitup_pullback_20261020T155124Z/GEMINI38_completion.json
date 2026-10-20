@@ -1,0 +1,94 @@
+{
+  "at": "2026-10-20T16:38:00+00:00",
+  "reviewer": "Antigravity Gemini 3.8 Flash High",
+  "role": "Verification and Delivery Takeover (复核与交付接手)",
+  "codex_role": "Review",
+  "application": "Antigravity",
+  "conversation_id": "cbfaa95f-7eb8-46fd-8195-6ace0c4fe35e",
+  "handoff_file": "HANDOFF_TO_GEMINI38.md",
+  "handoff_file_sha256": "aa5c304d594c902dc3433706e16173d4b55b9b2787aa9304e0447be7320397f2",
+  "implementation_sha256": "a241fb5d917d11359cff37034a3031f74fb5f63ffd9c63aea9787848fe9c6854",
+  "results_sha256": "bb414d3f63d13a0da141fe3602124c0e2a8d3a1e765982c72cb2e85192b4c893",
+  "full_predictions_sha256": "0b0235506056f743efccdbee6bd2fa9bd2458e6330166d574ee8c667871ad843",
+  "causality_tests_passed": true,
+  "bindings_verified": true,
+  "models_reload_verified": true,
+  "models_reload_max_error": 1.1102230246251565e-16,
+  "replicated_results": {
+    "total_rows": 3707,
+    "known_rows": 3640,
+    "unknown_rows": 67,
+    "overall_accuracy": {
+      "roll252": 0.6909340659340659,
+      "pullback_personality": 0.6854395604395604,
+      "frozen_base": 0.6843406593406594
+    },
+    "september_daily_one_word_scope": {
+      "total": 132,
+      "known": 100,
+      "positives": 37,
+      "roll252": {
+        "TP": 5,
+        "FP": 4,
+        "FN": 32,
+        "TN": 59,
+        "Accuracy": 0.64,
+        "Precision": 0.5555555555555556,
+        "Recall": 0.13513513513513514,
+        "F1": 0.21739130434782608
+      },
+      "pullback_personality": {
+        "TP": 6,
+        "FP": 4,
+        "FN": 31,
+        "TN": 59,
+        "Accuracy": 0.65,
+        "Precision": 0.6,
+        "Recall": 0.16216216216216217,
+        "F1": 0.2553191489361702
+      },
+      "recall_diff_pp": 2.702702702702703
+    },
+    "september_actual_one_word_daily_scope": {
+      "total": 143,
+      "known": 107,
+      "positives": 40,
+      "roll252": {
+        "TP": 6,
+        "FP": 4,
+        "FN": 34,
+        "TN": 63,
+        "Accuracy": 0.6448598130841121,
+        "Precision": 0.6,
+        "Recall": 0.15,
+        "F1": 0.24
+      },
+      "pullback_personality": {
+        "TP": 6,
+        "FP": 4,
+        "FN": 34,
+        "TN": 63,
+        "Accuracy": 0.6448598130841121,
+        "Precision": 0.6,
+        "Recall": 0.15,
+        "F1": 0.24
+      },
+      "recall_diff_pp": 0.0
+    }
+  },
+  "gate_verdict": {
+    "nonword_F1_all_folds": true,
+    "sep_recall_plus10pp": false,
+    "sep_precision_not_less5pp": true,
+    "sep_nonword_top2_not_worse": false,
+    "screen_passed": false,
+    "statistically_supported": false,
+    "deployed": false
+  },
+  "new_fits_started": 0,
+  "new_fits_completed": 0,
+  "deliverables": {
+    "report": "GEMINI38_review.md",
+    "completion": "GEMINI38_completion.json"
+  }
+}

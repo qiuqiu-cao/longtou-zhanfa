@@ -1,0 +1,980 @@
+{
+  "formed_at": "2026-10-20T13:49:10.971545+00:00",
+  "periods": {
+    "validation2025H1": {
+      "all_unfiltered": {
+        "rows": 4724,
+        "dates": 117,
+        "complete_known": 4714,
+        "complete_unknown": 10,
+        "complete_positive_pool": 863,
+        "admissible_rows": 4724,
+        "admissible_unknown": 10,
+        "admissible_positive_pool": 863,
+        "known_winner_dates_LABEL_ONLY": 117,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 1.0,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 0,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 52,
+          "TOP1_MISS_WINNER_RANK2TO3": 35,
+          "TOP1_MISS_WINNER_RANK4TO5": 15,
+          "TOP1_MISS_WINNER_BEYOND5": 15
+        },
+        "top": {
+          "1": {
+            "selected": 117,
+            "known": 117,
+            "unknown": 0,
+            "positive_stocks": 52,
+            "stock_precision": 0.4444444444444444,
+            "full_positive_recall": 0.06025492468134415,
+            "dates_containing_known_winner": 52,
+            "date_any_winner_fraction": 0.4444444444444444,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 351,
+            "known": 351,
+            "unknown": 0,
+            "positive_stocks": 117,
+            "stock_precision": 0.3333333333333333,
+            "full_positive_recall": 0.13557358053302435,
+            "dates_containing_known_winner": 87,
+            "date_any_winner_fraction": 0.7435897435897436,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 585,
+            "known": 584,
+            "unknown": 1,
+            "positive_stocks": 181,
+            "stock_precision": 0.3099315068493151,
+            "full_positive_recall": 0.20973348783314022,
+            "dates_containing_known_winner": 102,
+            "date_any_winner_fraction": 0.8717948717948718,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "all_fixed_screen": {
+        "rows": 4724,
+        "dates": 117,
+        "complete_known": 4714,
+        "complete_unknown": 10,
+        "complete_positive_pool": 863,
+        "admissible_rows": 3577,
+        "admissible_unknown": 8,
+        "admissible_positive_pool": 691,
+        "known_winner_dates_LABEL_ONLY": 117,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 1.0,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 0,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 52,
+          "TOP1_MISS_WINNER_RANK2TO3": 28,
+          "TOP1_MISS_WINNER_BEYOND5": 20,
+          "TOP1_MISS_WINNER_RANK4TO5": 17
+        },
+        "top": {
+          "1": {
+            "selected": 117,
+            "known": 117,
+            "unknown": 0,
+            "positive_stocks": 52,
+            "stock_precision": 0.4444444444444444,
+            "full_positive_recall": 0.06025492468134415,
+            "dates_containing_known_winner": 52,
+            "date_any_winner_fraction": 0.4444444444444444,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 351,
+            "known": 351,
+            "unknown": 0,
+            "positive_stocks": 108,
+            "stock_precision": 0.3076923076923077,
+            "full_positive_recall": 0.12514484356894554,
+            "dates_containing_known_winner": 80,
+            "date_any_winner_fraction": 0.6837606837606838,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 585,
+            "known": 584,
+            "unknown": 1,
+            "positive_stocks": 172,
+            "stock_precision": 0.2945205479452055,
+            "full_positive_recall": 0.1993047508690614,
+            "dates_containing_known_winner": 97,
+            "date_any_winner_fraction": 0.8290598290598291,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_unfiltered": {
+        "rows": 4596,
+        "dates": 117,
+        "complete_known": 4586,
+        "complete_unknown": 10,
+        "complete_positive_pool": 810,
+        "admissible_rows": 4596,
+        "admissible_unknown": 10,
+        "admissible_positive_pool": 810,
+        "known_winner_dates_LABEL_ONLY": 117,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 1.0,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 0,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 41,
+          "TOP1_MISS_WINNER_RANK2TO3": 36,
+          "TOP1_MISS_WINNER_BEYOND5": 22,
+          "TOP1_MISS_WINNER_RANK4TO5": 18
+        },
+        "top": {
+          "1": {
+            "selected": 117,
+            "known": 117,
+            "unknown": 0,
+            "positive_stocks": 41,
+            "stock_precision": 0.3504273504273504,
+            "full_positive_recall": 0.050617283950617285,
+            "dates_containing_known_winner": 41,
+            "date_any_winner_fraction": 0.3504273504273504,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 351,
+            "known": 351,
+            "unknown": 0,
+            "positive_stocks": 101,
+            "stock_precision": 0.28774928774928776,
+            "full_positive_recall": 0.12469135802469136,
+            "dates_containing_known_winner": 77,
+            "date_any_winner_fraction": 0.6581196581196581,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 585,
+            "known": 584,
+            "unknown": 1,
+            "positive_stocks": 168,
+            "stock_precision": 0.2876712328767123,
+            "full_positive_recall": 0.2074074074074074,
+            "dates_containing_known_winner": 95,
+            "date_any_winner_fraction": 0.811965811965812,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_fixed_screen": {
+        "rows": 4596,
+        "dates": 117,
+        "complete_known": 4586,
+        "complete_unknown": 10,
+        "complete_positive_pool": 810,
+        "admissible_rows": 3504,
+        "admissible_unknown": 8,
+        "admissible_positive_pool": 660,
+        "known_winner_dates_LABEL_ONLY": 117,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 1.0,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 0,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 48,
+          "TOP1_MISS_WINNER_RANK2TO3": 28,
+          "TOP1_MISS_WINNER_BEYOND5": 25,
+          "TOP1_MISS_WINNER_RANK4TO5": 16
+        },
+        "top": {
+          "1": {
+            "selected": 117,
+            "known": 117,
+            "unknown": 0,
+            "positive_stocks": 48,
+            "stock_precision": 0.41025641025641024,
+            "full_positive_recall": 0.05925925925925926,
+            "dates_containing_known_winner": 48,
+            "date_any_winner_fraction": 0.41025641025641024,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 351,
+            "known": 351,
+            "unknown": 0,
+            "positive_stocks": 98,
+            "stock_precision": 0.2792022792022792,
+            "full_positive_recall": 0.12098765432098765,
+            "dates_containing_known_winner": 76,
+            "date_any_winner_fraction": 0.6495726495726496,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 585,
+            "known": 584,
+            "unknown": 1,
+            "positive_stocks": 164,
+            "stock_precision": 0.2808219178082192,
+            "full_positive_recall": 0.20246913580246914,
+            "dates_containing_known_winner": 92,
+            "date_any_winner_fraction": 0.7863247863247863,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      }
+    },
+    "evaluation_all": {
+      "all_unfiltered": {
+        "rows": 13149,
+        "dates": 286,
+        "complete_known": 13047,
+        "complete_unknown": 102,
+        "complete_positive_pool": 2160,
+        "admissible_rows": 13149,
+        "admissible_unknown": 102,
+        "admissible_positive_pool": 2160,
+        "known_winner_dates_LABEL_ONLY": 283,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9895104895104895,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 2,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 116,
+          "TOP1_MISS_WINNER_RANK2TO3": 84,
+          "TOP1_MISS_WINNER_BEYOND5": 55,
+          "TOP1_MISS_WINNER_RANK4TO5": 28,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 2,
+          "TOP1_OUTCOME_UNKNOWN": 1
+        },
+        "top": {
+          "1": {
+            "selected": 286,
+            "known": 285,
+            "unknown": 1,
+            "positive_stocks": 116,
+            "stock_precision": 0.4070175438596491,
+            "full_positive_recall": 0.053703703703703705,
+            "dates_containing_known_winner": 116,
+            "date_any_winner_fraction": 0.40559440559440557,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 858,
+            "known": 854,
+            "unknown": 4,
+            "positive_stocks": 292,
+            "stock_precision": 0.34192037470725994,
+            "full_positive_recall": 0.13518518518518519,
+            "dates_containing_known_winner": 200,
+            "date_any_winner_fraction": 0.6993006993006993,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 1430,
+            "known": 1423,
+            "unknown": 7,
+            "positive_stocks": 436,
+            "stock_precision": 0.30639494026704145,
+            "full_positive_recall": 0.20185185185185187,
+            "dates_containing_known_winner": 228,
+            "date_any_winner_fraction": 0.7972027972027972,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "all_fixed_screen": {
+        "rows": 13149,
+        "dates": 286,
+        "complete_known": 13047,
+        "complete_unknown": 102,
+        "complete_positive_pool": 2160,
+        "admissible_rows": 7254,
+        "admissible_unknown": 73,
+        "admissible_positive_pool": 1251,
+        "known_winner_dates_LABEL_ONLY": 280,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9790209790209791,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 3,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 5,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 106,
+          "TOP1_MISS_WINNER_RANK2TO3": 79,
+          "TOP1_MISS_WINNER_BEYOND5": 61,
+          "TOP1_MISS_WINNER_RANK4TO5": 33,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 5,
+          "TOP1_OUTCOME_UNKNOWN": 2
+        },
+        "top": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "positive_stocks": 106,
+            "stock_precision": 0.3732394366197183,
+            "full_positive_recall": 0.049074074074074076,
+            "dates_containing_known_winner": 106,
+            "date_any_winner_fraction": 0.3706293706293706,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 858,
+            "known": 852,
+            "unknown": 6,
+            "positive_stocks": 261,
+            "stock_precision": 0.30633802816901406,
+            "full_positive_recall": 0.12083333333333333,
+            "dates_containing_known_winner": 185,
+            "date_any_winner_fraction": 0.6468531468531469,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 1430,
+            "known": 1421,
+            "unknown": 9,
+            "positive_stocks": 389,
+            "stock_precision": 0.27375087966220973,
+            "full_positive_recall": 0.18009259259259258,
+            "dates_containing_known_winner": 218,
+            "date_any_winner_fraction": 0.7622377622377622,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_unfiltered": {
+        "rows": 12844,
+        "dates": 286,
+        "complete_known": 12743,
+        "complete_unknown": 101,
+        "complete_positive_pool": 2006,
+        "admissible_rows": 12844,
+        "admissible_unknown": 101,
+        "admissible_positive_pool": 2006,
+        "known_winner_dates_LABEL_ONLY": 283,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9895104895104895,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 2,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_MISS_WINNER_RANK2TO3": 89,
+          "TOP1_HIT": 80,
+          "TOP1_MISS_WINNER_BEYOND5": 71,
+          "TOP1_MISS_WINNER_RANK4TO5": 43,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 2,
+          "TOP1_OUTCOME_UNKNOWN": 1
+        },
+        "top": {
+          "1": {
+            "selected": 286,
+            "known": 285,
+            "unknown": 1,
+            "positive_stocks": 80,
+            "stock_precision": 0.2807017543859649,
+            "full_positive_recall": 0.03988035892323031,
+            "dates_containing_known_winner": 80,
+            "date_any_winner_fraction": 0.27972027972027974,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 858,
+            "known": 854,
+            "unknown": 4,
+            "positive_stocks": 228,
+            "stock_precision": 0.26697892271662765,
+            "full_positive_recall": 0.11365902293120637,
+            "dates_containing_known_winner": 169,
+            "date_any_winner_fraction": 0.5909090909090909,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 1430,
+            "known": 1422,
+            "unknown": 8,
+            "positive_stocks": 359,
+            "stock_precision": 0.25246132208157523,
+            "full_positive_recall": 0.178963110667996,
+            "dates_containing_known_winner": 212,
+            "date_any_winner_fraction": 0.7412587412587412,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_fixed_screen": {
+        "rows": 12844,
+        "dates": 286,
+        "complete_known": 12743,
+        "complete_unknown": 101,
+        "complete_positive_pool": 2006,
+        "admissible_rows": 7100,
+        "admissible_unknown": 73,
+        "admissible_positive_pool": 1175,
+        "known_winner_dates_LABEL_ONLY": 279,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9755244755244755,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 4,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 6,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_MISS_WINNER_RANK2TO3": 85,
+          "TOP1_HIT": 80,
+          "TOP1_MISS_WINNER_BEYOND5": 73,
+          "TOP1_MISS_WINNER_RANK4TO5": 40,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 6,
+          "TOP1_OUTCOME_UNKNOWN": 2
+        },
+        "top": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "positive_stocks": 80,
+            "stock_precision": 0.28169014084507044,
+            "full_positive_recall": 0.03988035892323031,
+            "dates_containing_known_winner": 80,
+            "date_any_winner_fraction": 0.27972027972027974,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 858,
+            "known": 851,
+            "unknown": 7,
+            "positive_stocks": 222,
+            "stock_precision": 0.2608695652173913,
+            "full_positive_recall": 0.1106679960119641,
+            "dates_containing_known_winner": 165,
+            "date_any_winner_fraction": 0.5769230769230769,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 1430,
+            "known": 1420,
+            "unknown": 10,
+            "positive_stocks": 344,
+            "stock_precision": 0.24225352112676057,
+            "full_positive_recall": 0.17148554336989033,
+            "dates_containing_known_winner": 205,
+            "date_any_winner_fraction": 0.7167832167832168,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      }
+    },
+    "2025H2": {
+      "all_unfiltered": {
+        "rows": 4875,
+        "dates": 126,
+        "complete_known": 4861,
+        "complete_unknown": 14,
+        "complete_positive_pool": 903,
+        "admissible_rows": 4875,
+        "admissible_unknown": 14,
+        "admissible_positive_pool": 903,
+        "known_winner_dates_LABEL_ONLY": 125,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9920634920634921,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 1,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 44,
+          "TOP1_MISS_WINNER_RANK2TO3": 43,
+          "TOP1_MISS_WINNER_BEYOND5": 24,
+          "TOP1_MISS_WINNER_RANK4TO5": 14,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 1
+        },
+        "top": {
+          "1": {
+            "selected": 126,
+            "known": 126,
+            "unknown": 0,
+            "positive_stocks": 44,
+            "stock_precision": 0.3492063492063492,
+            "full_positive_recall": 0.048726467331118496,
+            "dates_containing_known_winner": 44,
+            "date_any_winner_fraction": 0.3492063492063492,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 378,
+            "known": 378,
+            "unknown": 0,
+            "positive_stocks": 125,
+            "stock_precision": 0.3306878306878307,
+            "full_positive_recall": 0.13842746400885936,
+            "dates_containing_known_winner": 87,
+            "date_any_winner_fraction": 0.6904761904761905,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 630,
+            "known": 630,
+            "unknown": 0,
+            "positive_stocks": 195,
+            "stock_precision": 0.30952380952380953,
+            "full_positive_recall": 0.2159468438538206,
+            "dates_containing_known_winner": 101,
+            "date_any_winner_fraction": 0.8015873015873016,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "all_fixed_screen": {
+        "rows": 4875,
+        "dates": 126,
+        "complete_known": 4861,
+        "complete_unknown": 14,
+        "complete_positive_pool": 903,
+        "admissible_rows": 2915,
+        "admissible_unknown": 13,
+        "admissible_positive_pool": 585,
+        "known_winner_dates_LABEL_ONLY": 124,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9841269841269841,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 1,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 2,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 46,
+          "TOP1_MISS_WINNER_RANK2TO3": 36,
+          "TOP1_MISS_WINNER_BEYOND5": 24,
+          "TOP1_MISS_WINNER_RANK4TO5": 18,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 2
+        },
+        "top": {
+          "1": {
+            "selected": 126,
+            "known": 126,
+            "unknown": 0,
+            "positive_stocks": 46,
+            "stock_precision": 0.36507936507936506,
+            "full_positive_recall": 0.05094130675526024,
+            "dates_containing_known_winner": 46,
+            "date_any_winner_fraction": 0.36507936507936506,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 378,
+            "known": 378,
+            "unknown": 0,
+            "positive_stocks": 121,
+            "stock_precision": 0.3201058201058201,
+            "full_positive_recall": 0.13399778516057587,
+            "dates_containing_known_winner": 82,
+            "date_any_winner_fraction": 0.6507936507936508,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 630,
+            "known": 629,
+            "unknown": 1,
+            "positive_stocks": 188,
+            "stock_precision": 0.2988871224165342,
+            "full_positive_recall": 0.2081949058693245,
+            "dates_containing_known_winner": 100,
+            "date_any_winner_fraction": 0.7936507936507936,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_unfiltered": {
+        "rows": 4770,
+        "dates": 126,
+        "complete_known": 4756,
+        "complete_unknown": 14,
+        "complete_positive_pool": 845,
+        "admissible_rows": 4770,
+        "admissible_unknown": 14,
+        "admissible_positive_pool": 845,
+        "known_winner_dates_LABEL_ONLY": 125,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9920634920634921,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 1,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_MISS_WINNER_RANK2TO3": 45,
+          "TOP1_HIT": 34,
+          "TOP1_MISS_WINNER_BEYOND5": 26,
+          "TOP1_MISS_WINNER_RANK4TO5": 20,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 1
+        },
+        "top": {
+          "1": {
+            "selected": 126,
+            "known": 126,
+            "unknown": 0,
+            "positive_stocks": 34,
+            "stock_precision": 0.2698412698412698,
+            "full_positive_recall": 0.040236686390532544,
+            "dates_containing_known_winner": 34,
+            "date_any_winner_fraction": 0.2698412698412698,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 378,
+            "known": 378,
+            "unknown": 0,
+            "positive_stocks": 106,
+            "stock_precision": 0.2804232804232804,
+            "full_positive_recall": 0.12544378698224853,
+            "dates_containing_known_winner": 79,
+            "date_any_winner_fraction": 0.626984126984127,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 630,
+            "known": 629,
+            "unknown": 1,
+            "positive_stocks": 170,
+            "stock_precision": 0.2702702702702703,
+            "full_positive_recall": 0.20118343195266272,
+            "dates_containing_known_winner": 99,
+            "date_any_winner_fraction": 0.7857142857142857,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_fixed_screen": {
+        "rows": 4770,
+        "dates": 126,
+        "complete_known": 4756,
+        "complete_unknown": 14,
+        "complete_positive_pool": 845,
+        "admissible_rows": 2858,
+        "admissible_unknown": 13,
+        "admissible_positive_pool": 554,
+        "known_winner_dates_LABEL_ONLY": 124,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9841269841269841,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 1,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 0,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 2,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_MISS_WINNER_RANK2TO3": 39,
+          "TOP1_HIT": 38,
+          "TOP1_MISS_WINNER_BEYOND5": 25,
+          "TOP1_MISS_WINNER_RANK4TO5": 22,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 2
+        },
+        "top": {
+          "1": {
+            "selected": 126,
+            "known": 126,
+            "unknown": 0,
+            "positive_stocks": 38,
+            "stock_precision": 0.30158730158730157,
+            "full_positive_recall": 0.04497041420118343,
+            "dates_containing_known_winner": 38,
+            "date_any_winner_fraction": 0.30158730158730157,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 378,
+            "known": 377,
+            "unknown": 1,
+            "positive_stocks": 106,
+            "stock_precision": 0.28116710875331563,
+            "full_positive_recall": 0.12544378698224853,
+            "dates_containing_known_winner": 77,
+            "date_any_winner_fraction": 0.6111111111111112,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 630,
+            "known": 628,
+            "unknown": 2,
+            "positive_stocks": 178,
+            "stock_precision": 0.28343949044585987,
+            "full_positive_recall": 0.2106508875739645,
+            "dates_containing_known_winner": 99,
+            "date_any_winner_fraction": 0.7857142857142857,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      }
+    },
+    "2026": {
+      "all_unfiltered": {
+        "rows": 8274,
+        "dates": 160,
+        "complete_known": 8186,
+        "complete_unknown": 88,
+        "complete_positive_pool": 1257,
+        "admissible_rows": 8274,
+        "admissible_unknown": 88,
+        "admissible_positive_pool": 1257,
+        "known_winner_dates_LABEL_ONLY": 158,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9875,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 1,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 72,
+          "TOP1_MISS_WINNER_RANK2TO3": 41,
+          "TOP1_MISS_WINNER_BEYOND5": 31,
+          "TOP1_MISS_WINNER_RANK4TO5": 14,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 1,
+          "TOP1_OUTCOME_UNKNOWN": 1
+        },
+        "top": {
+          "1": {
+            "selected": 160,
+            "known": 159,
+            "unknown": 1,
+            "positive_stocks": 72,
+            "stock_precision": 0.4528301886792453,
+            "full_positive_recall": 0.057279236276849645,
+            "dates_containing_known_winner": 72,
+            "date_any_winner_fraction": 0.45,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 480,
+            "known": 476,
+            "unknown": 4,
+            "positive_stocks": 167,
+            "stock_precision": 0.35084033613445376,
+            "full_positive_recall": 0.1328560063643596,
+            "dates_containing_known_winner": 113,
+            "date_any_winner_fraction": 0.70625,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 800,
+            "known": 793,
+            "unknown": 7,
+            "positive_stocks": 241,
+            "stock_precision": 0.30390920554854983,
+            "full_positive_recall": 0.1917263325377884,
+            "dates_containing_known_winner": 127,
+            "date_any_winner_fraction": 0.79375,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "all_fixed_screen": {
+        "rows": 8274,
+        "dates": 160,
+        "complete_known": 8186,
+        "complete_unknown": 88,
+        "complete_positive_pool": 1257,
+        "admissible_rows": 4339,
+        "admissible_unknown": 60,
+        "admissible_positive_pool": 666,
+        "known_winner_dates_LABEL_ONLY": 156,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.975,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 2,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 3,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 60,
+          "TOP1_MISS_WINNER_RANK2TO3": 43,
+          "TOP1_MISS_WINNER_BEYOND5": 37,
+          "TOP1_MISS_WINNER_RANK4TO5": 15,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 3,
+          "TOP1_OUTCOME_UNKNOWN": 2
+        },
+        "top": {
+          "1": {
+            "selected": 160,
+            "known": 158,
+            "unknown": 2,
+            "positive_stocks": 60,
+            "stock_precision": 0.379746835443038,
+            "full_positive_recall": 0.0477326968973747,
+            "dates_containing_known_winner": 60,
+            "date_any_winner_fraction": 0.375,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 480,
+            "known": 474,
+            "unknown": 6,
+            "positive_stocks": 140,
+            "stock_precision": 0.29535864978902954,
+            "full_positive_recall": 0.11137629276054097,
+            "dates_containing_known_winner": 103,
+            "date_any_winner_fraction": 0.64375,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 800,
+            "known": 792,
+            "unknown": 8,
+            "positive_stocks": 201,
+            "stock_precision": 0.2537878787878788,
+            "full_positive_recall": 0.15990453460620524,
+            "dates_containing_known_winner": 118,
+            "date_any_winner_fraction": 0.7375,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_unfiltered": {
+        "rows": 8074,
+        "dates": 160,
+        "complete_known": 7987,
+        "complete_unknown": 87,
+        "complete_positive_pool": 1161,
+        "admissible_rows": 8074,
+        "admissible_unknown": 87,
+        "admissible_positive_pool": 1161,
+        "known_winner_dates_LABEL_ONLY": 158,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.9875,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 0,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 1,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_HIT": 46,
+          "TOP1_MISS_WINNER_BEYOND5": 45,
+          "TOP1_MISS_WINNER_RANK2TO3": 44,
+          "TOP1_MISS_WINNER_RANK4TO5": 23,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 1,
+          "TOP1_OUTCOME_UNKNOWN": 1
+        },
+        "top": {
+          "1": {
+            "selected": 160,
+            "known": 159,
+            "unknown": 1,
+            "positive_stocks": 46,
+            "stock_precision": 0.2893081761006289,
+            "full_positive_recall": 0.03962101636520241,
+            "dates_containing_known_winner": 46,
+            "date_any_winner_fraction": 0.2875,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 480,
+            "known": 476,
+            "unknown": 4,
+            "positive_stocks": 122,
+            "stock_precision": 0.25630252100840334,
+            "full_positive_recall": 0.10508182601205857,
+            "dates_containing_known_winner": 90,
+            "date_any_winner_fraction": 0.5625,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 800,
+            "known": 793,
+            "unknown": 7,
+            "positive_stocks": 189,
+            "stock_precision": 0.23833543505674654,
+            "full_positive_recall": 0.16279069767441862,
+            "dates_containing_known_winner": 113,
+            "date_any_winner_fraction": 0.70625,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      },
+      "non_one_price_fixed_screen": {
+        "rows": 8074,
+        "dates": 160,
+        "complete_known": 7987,
+        "complete_unknown": 87,
+        "complete_positive_pool": 1161,
+        "admissible_rows": 4242,
+        "admissible_unknown": 60,
+        "admissible_positive_pool": 621,
+        "known_winner_dates_LABEL_ONLY": 155,
+        "oracle_known_winner_date_fraction_LABEL_ONLY": 0.96875,
+        "filter_removes_all_known_winner_dates_LABEL_ONLY": 3,
+        "no_known_winner_dates_with_unknown_LABEL_ONLY": 1,
+        "all_admissible_known_negative_dates_LABEL_ONLY": 4,
+        "abstention_dates": 0,
+        "error_categories_LABEL_ONLY": {
+          "TOP1_MISS_WINNER_BEYOND5": 48,
+          "TOP1_MISS_WINNER_RANK2TO3": 46,
+          "TOP1_HIT": 42,
+          "TOP1_MISS_WINNER_RANK4TO5": 18,
+          "TOP1_MISS_ALL_ADMISSIBLE_KNOWN_NEGATIVE": 4,
+          "TOP1_OUTCOME_UNKNOWN": 2
+        },
+        "top": {
+          "1": {
+            "selected": 160,
+            "known": 158,
+            "unknown": 2,
+            "positive_stocks": 42,
+            "stock_precision": 0.26582278481012656,
+            "full_positive_recall": 0.03617571059431524,
+            "dates_containing_known_winner": 42,
+            "date_any_winner_fraction": 0.2625,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "3": {
+            "selected": 480,
+            "known": 474,
+            "unknown": 6,
+            "positive_stocks": 116,
+            "stock_precision": 0.24472573839662448,
+            "full_positive_recall": 0.09991386735572783,
+            "dates_containing_known_winner": 88,
+            "date_any_winner_fraction": 0.55,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          },
+          "5": {
+            "selected": 800,
+            "known": 792,
+            "unknown": 8,
+            "positive_stocks": 166,
+            "stock_precision": 0.20959595959595959,
+            "full_positive_recall": 0.1429801894918174,
+            "dates_containing_known_winner": 106,
+            "date_any_winner_fraction": 0.6625,
+            "semantics": "Top1stockprecision is primary. Top3/5any-winner fractions are diagnostic,not Top1success or a tradable oracle."
+          }
+        }
+      }
+    }
+  },
+  "goal_60_passed": false,
+  "new_fits": 0,
+  "new_forward_results": 0,
+  "actual_trades": 0,
+  "exclusions": {
+    "all_excluded": {
+      "rows": 7042,
+      "known": 7011,
+      "unknown": 31,
+      "promoters": 1081,
+      "dates": 402
+    },
+    "above_cap": {
+      "rows": 6800,
+      "known": 6771,
+      "unknown": 29,
+      "promoters": 1025,
+      "dates": 402
+    },
+    "thin_turnover_proxy": {
+      "rows": 207,
+      "known": 205,
+      "unknown": 2,
+      "promoters": 49,
+      "dates": 107
+    },
+    "cap_missing": {
+      "rows": 35,
+      "known": 35,
+      "unknown": 0,
+      "promoters": 7,
+      "dates": 26
+    }
+  },
+  "status": "READ_ONLY_FIXED_AUDIT_FINISHED"
+}

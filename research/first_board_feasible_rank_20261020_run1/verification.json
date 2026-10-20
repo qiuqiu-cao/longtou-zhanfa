@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-10-20T14:01:20.448336+00:00",
+  "unchanged_full_rows": 28503,
+  "unchanged62_fields_labels_screen": true,
+  "replayed_core_models": 4,
+  "calibration_heads": 2,
+  "daily_rank_query_members_weights_and_labels_independently_verified": true,
+  "validation": [
+    {
+      "arm": "ADMISSIBLE_HGB",
+      "complete_rows": 4724,
+      "training_rows": 7675,
+      "calibration_rows": 1797,
+      "top1_hits": 47,
+      "known": 117,
+      "unknown": 0,
+      "gain_known": 11,
+      "loss_known": 16,
+      "baseline_hit_to_unknown": 0
+    },
+    {
+      "arm": "ADMISSIBLE_LAMBDARANK",
+      "complete_rows": 4724,
+      "training_rows": 7675,
+      "calibration_rows": 1797,
+      "top1_hits": 49,
+      "known": 116,
+      "unknown": 1,
+      "gain_known": 11,
+      "loss_known": 13,
+      "baseline_hit_to_unknown": 1
+    }
+  ],
+  "pre_fit_path_failure_preserved": true,
+  "monthly_challenge_fits": 0,
+  "new_fits_during_verification": 0,
+  "actual_trades": 0,
+  "new_forward_results": 0,
+  "goal_60_passed": false,
+  "source_sha256": "c1c9a7e486c4ec9c74444cd8eb5b613d1c6be4232873d78449661dbdea54a63a",
+  "verifier_sha256": "e2f17c50cdf4cfe9f9a84d9a994b90c81df9c4c5533b0c0eb69705c8b2cd4329"
+}

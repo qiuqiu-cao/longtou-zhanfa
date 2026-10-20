@@ -1,0 +1,55 @@
+{
+  "at": "2026-10-20T16:56:35.153203+00:00",
+  "scope": "Internal compatibility against existing bound daily archive, not independent exchange/provider truth; no network or data changes",
+  "original_source_binding_hash_check_reused": {
+    "matched": 678,
+    "total": 678,
+    "does_not_certify_vendor_field_truth": true
+  },
+  "engine_sha": "55d4c444457570079231b5201c60efcce1c697dda258c0403f939c2dc6377141",
+  "cohort_sha": "0d48f59932e4d177e8f878bfea13a983ac60617b7317a460cc37c8cff8d4c93f",
+  "daily_rows": 2025305,
+  "daily_duplicate_date_code": 0,
+  "all_prepared": {
+    "rows": 9315,
+    "signal_daily_status": {
+      "VALID_OHLC": 9297,
+      "MISSING_DAILY_OHLC": 18
+    },
+    "pool_price_disagreements": 0,
+    "signal_high_not_close": 46,
+    "signal_exact_cap_disagreements_when_preclose_known": 54,
+    "current_run_not_verified": 792,
+    "known_target_labels": 9178,
+    "missing_or_invalid_target_daily_for_known_labels": 248,
+    "target_not_next_official_session": 0,
+    "known_label_comparable_to_daily": 8930,
+    "known_label_daily_price_disagreements": 12,
+    "unknown_labels_retained": 137
+  },
+  "evaluation3707": {
+    "rows": 3707,
+    "signal_daily_status": {
+      "VALID_OHLC": 3689,
+      "MISSING_DAILY_OHLC": 18
+    },
+    "pool_price_disagreements": 0,
+    "signal_high_not_close": 12,
+    "signal_exact_cap_disagreements_when_preclose_known": 15,
+    "current_run_not_verified": 298,
+    "known_target_labels": 3640,
+    "missing_or_invalid_target_daily_for_known_labels": 99,
+    "target_not_next_official_session": 0,
+    "known_label_comparable_to_daily": 3541,
+    "known_label_daily_price_disagreements": 7,
+    "unknown_labels_retained": 67
+  },
+  "limitations": [
+    "Missing volume units not certified",
+    "Signal OHLC may have been patched without replacing underlying volume, pre_close or amount; source provenance must remain field-specific",
+    "Historical ST/listing/industry completeness and surviving-universe selection remain",
+    "Matching same bound source is not independent price verification"
+  ],
+  "model_fits": 0,
+  "data_values_changed": 0
+}

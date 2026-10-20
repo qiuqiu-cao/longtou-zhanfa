@@ -1,0 +1,49 @@
+{
+  "formed_at": "2026-10-16T09:20:08.127970+00:00",
+  "month": "2026-03",
+  "arm": "POSITIVE_FILTER_INDIVIDUAL_CONTEXT",
+  "phase": "PREFIX",
+  "features": [
+    "base_score_logit",
+    "boards",
+    "height_gap",
+    "same_height_rivals",
+    "turnover",
+    "amplitude",
+    "log_signal_amount",
+    "price_same_height_percentile",
+    "signal_amount_same_height_percentile",
+    "turnover_same_height_percentile"
+  ],
+  "estimator": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": null,
+    "random_state": 20261016
+  },
+  "weights": "Every row weight1; no class balancing",
+  "training_digest": "fea17004e3472bdb7e09193a0514c7a38ece0ef4f1ad3a42a412fc104ffa59b9",
+  "training_dtypes": {
+    "date": "str",
+    "code": "str",
+    "target_date": "str",
+    "target": "float64",
+    "base_score_logit": "float64",
+    "boards": "float64",
+    "height_gap": "float64",
+    "same_height_rivals": "float64",
+    "turnover": "float64",
+    "amplitude": "float64",
+    "log_signal_amount": "float64",
+    "price_same_height_percentile": "float64",
+    "signal_amount_same_height_percentile": "float64",
+    "turnover_same_height_percentile": "float64"
+  },
+  "max_training_target": "2025-11-19",
+  "rows": 282,
+  "positives": 122,
+  "negatives": 160,
+  "signal_days": 96,
+  "qualified": true
+}

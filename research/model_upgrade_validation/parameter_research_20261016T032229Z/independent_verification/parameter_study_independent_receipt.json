@@ -1,0 +1,76 @@
+{
+  "formed_at": "2026-10-16T03:33:28.488177+00:00",
+  "verification_new_fits": 0,
+  "no_fetch": true,
+  "no_oct16_market_result_read": true,
+  "original30216_all_columns_exact": true,
+  "BASE_original_values_unchanged": true,
+  "all37770_complete10heads": true,
+  "original_september_B": [
+    143,
+    107,
+    40,
+    36
+  ],
+  "current6_each_policy_unknown": true,
+  "new_inner_models_replayed": 96,
+  "reused_inner_models_replayed": 48,
+  "monthly_selected_final_models_replayed": 16,
+  "selected_new_final_models": 11,
+  "capacity_threshold_selected_only_from_training_OOF": true,
+  "exact_fraction_choice_recomputed": true,
+  "policy_raw_scores_and_Topk_identical": true,
+  "event_probability_validated": false,
+  "source_hashes_verified": 2393,
+  "guards": {
+    "PARAM_CAPACITY_OOF_FIXED_HALF": {
+      "pooled_FP_drop_at_least10percent": false,
+      "pooled_Precision_gain_at_least3pp": false,
+      "pooled_F1_not_lower": true,
+      "2025H2_Recall_loss_within2p5pp": true,
+      "2025H2_FP_not_higher": true,
+      "2025H2_F1_not_lower": true,
+      "2026JanAug_Recall_loss_within2p5pp": true,
+      "2026JanAug_FP_not_higher": false,
+      "2026JanAug_F1_not_lower": true,
+      "2026Sep_Recall_loss_within2p5pp": true,
+      "2026Sep_FP_not_higher": true,
+      "2026Sep_F1_not_lower": true,
+      "pooled_Top3_full_slot_hits_not_lower": false
+    },
+    "PARAM_CAPACITY_OOF_SELECTED_THRESHOLD": {
+      "pooled_FP_drop_at_least10percent": false,
+      "pooled_Precision_gain_at_least3pp": false,
+      "pooled_F1_not_lower": true,
+      "2025H2_Recall_loss_within2p5pp": true,
+      "2025H2_FP_not_higher": false,
+      "2025H2_F1_not_lower": true,
+      "2026JanAug_Recall_loss_within2p5pp": true,
+      "2026JanAug_FP_not_higher": false,
+      "2026JanAug_F1_not_lower": true,
+      "2026Sep_Recall_loss_within2p5pp": true,
+      "2026Sep_FP_not_higher": false,
+      "2026Sep_F1_not_lower": true,
+      "pooled_Top3_full_slot_hits_not_lower": false
+    }
+  },
+  "completion_timestamp_limitation": "Monthly COMPLETED.formed_at inherits selection formation; never asserted as actual completion clock. Original files retained, separate filesystem mtime recorded.",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\verify_parameter_study_without_fit.py": "b4a46ecae8a4c2d8697da440549b30f67e0aacb61f0d954b8b6d7ff4c1887ec2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\parameter_audit_primitives.py": "5bf4afb7255dc9f6f4b51419ca32057489e6a1f567c3d7ed0ef6f3577cfe4dbc",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\protocol_BEFORE_ANY_FIT.json": "8fe1e242fd8ad9a75f6ca0230bdf74598efafe60ed8ddeb07ebd5c1692e7df43",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\fixed_input_BEFORE_ANY_FIT.joblib": "9b75d771b3d7c696642c60a3d07be4f8fb51471b33d5b8646cbd4d1a0b7328c4",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\false_positive_20261016T030307Z\\execution\\all30216_predictions_BEFORE_EVALUATION.csv": "4eeb27933335e44616f6c1474b695a090ef5e9cc809ff4259d6d5efa95043b4e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\execution\\all37770_predictions_BEFORE_EVALUATION.csv": "2245f06cc27d29ca1760b9ba8ef3c5f08112c677b283ef91122357c903d5e417",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\execution\\parameter_fixed_result.json": "ccb64fd57cb4ef4cdc6117b76a73211069dc21d8424326b605d9966beaa296bd"
+  },
+  "output_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立核验_96新内层严格时间块与重放.csv": "47f4fd5d5de7a806ad4806a1bb5c54af2708577f05c76a895128911e67d0cdc6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立核验_16月训练期选容量与阈值.csv": "5c7a81f76c11ee6936b4339e3f381aa92b5d7d7d3b5071931186b3a610a9c63b",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立复算_所有容量与五阈值OOF指标.csv": "10153bca1b45bfbec37b543f5386924602f76cf5a3b7278d9a76004da5808821",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立重放_两策略完整7554原始分数.csv": "2c93e72c31cc6778c19f8893a70814f4884e656ec5c481cfec011e0290a08d95",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立复算_完整池和原非一字指标.csv": "f85e32cb9024d5caa552627cc0f8ae6bf4ffc650cbb9f0b4e595e7c5417ca7e3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立复算_完整槽位Top1Top2Top3.csv": "2476174e0fdf17febc1dfacd548b3b85d95f74ebc5fefe9e5c22e03627e009af",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\parameter_research_20261016T032229Z\\independent_verification\\独立复算_全部预选保留未知.csv": "d57d5047c87baf4614e871c91bf564d224e99f969b4d10af424989f4c8f0ab9e"
+  }
+}

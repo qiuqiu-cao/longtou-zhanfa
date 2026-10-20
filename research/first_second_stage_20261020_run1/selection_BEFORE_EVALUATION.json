@@ -1,0 +1,675 @@
+{
+  "formed_at": "2026-10-20T12:20:30.661192+00:00",
+  "selected": {
+    "1": "STAGE_CYCLE_GENE",
+    "2": "STAGE_CYCLE_GENE"
+  },
+  "validation": {
+    "1": {
+      "STAGE_BASE": {
+        "rows": 4724,
+        "sessions": 117,
+        "known": 4714,
+        "unknown": 10,
+        "pool_rate": 0.18307170131523123,
+        "top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 117,
+            "unknown": 0,
+            "hits": 45,
+            "hit_rate": 0.38461538461538464,
+            "wilson95": [
+              0.30146439061091146,
+              0.47510235838818093
+            ],
+            "full_positive_recall": 0.05214368482039398,
+            "false_positives": 72,
+            "false_negatives": 818,
+            "positive_pool": 863,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 351,
+            "unknown": 0,
+            "hits": 119,
+            "hit_rate": 0.33903133903133903,
+            "wilson95": [
+              0.291489170070141,
+              0.3900587517100466
+            ],
+            "full_positive_recall": 0.13789107763615296,
+            "false_positives": 232,
+            "false_negatives": 744,
+            "positive_pool": 863,
+            "outcome_coverage": 1.0
+          },
+          "5": {
+            "selected": 585,
+            "selected_dates": 117,
+            "known": 584,
+            "unknown": 1,
+            "hits": 183,
+            "hit_rate": 0.3133561643835616,
+            "wilson95": [
+              0.2770584755818393,
+              0.35209323406901855
+            ],
+            "full_positive_recall": 0.21205098493626884,
+            "false_positives": 401,
+            "false_negatives": 680,
+            "positive_pool": 863,
+            "outcome_coverage": 0.9982905982905983
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 117,
+            "unknown": 0,
+            "hits": 28,
+            "hit_rate": 0.23931623931623933,
+            "wilson95": [
+              0.17108054172885034,
+              0.3241258171209509
+            ],
+            "full_positive_recall": 0.03244495944380069,
+            "false_positives": 89,
+            "false_negatives": 835,
+            "positive_pool": 863,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 350,
+            "unknown": 1,
+            "hits": 89,
+            "hit_rate": 0.2542857142857143,
+            "wilson95": [
+              0.21150263098490302,
+              0.3024039627385889
+            ],
+            "full_positive_recall": 0.10312862108922363,
+            "false_positives": 261,
+            "false_negatives": 774,
+            "positive_pool": 863,
+            "outcome_coverage": 0.9971509971509972
+          },
+          "5": {
+            "selected": 585,
+            "selected_dates": 117,
+            "known": 582,
+            "unknown": 3,
+            "hits": 146,
+            "hit_rate": 0.2508591065292096,
+            "wilson95": [
+              0.21735092326851183,
+              0.2876346054378835
+            ],
+            "full_positive_recall": 0.16917728852838934,
+            "false_positives": 436,
+            "false_negatives": 717,
+            "positive_pool": 863,
+            "outcome_coverage": 0.9948717948717949
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.7484089944845143,
+          "precision": 0.28777923784494086,
+          "recall": 0.253765932792584,
+          "f1": 0.2697044334975369,
+          "auc": 0.6180276119760018
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 4714,
+          "brier": 0.1455432384831481,
+          "prior_brier": 0.1501186575052912,
+          "ece": 0.012997504947232492,
+          "top1_rows": 117,
+          "top1_forecast_mean": 0.3252499329956512,
+          "top1_observed": 0.38461538461538464,
+          "top1_absolute_gap": 0.059365451619733445,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 398.0,
+              "mean_probability": 0.08397826717683138,
+              "observed": 0.09296482412060302
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 3119.0,
+              "mean_probability": 0.15165906227720494,
+              "observed": 0.16287271561397884
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 1058.0,
+              "mean_probability": 0.23390212510607286,
+              "observed": 0.2448015122873346
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 126.0,
+              "mean_probability": 0.335479895524495,
+              "observed": 0.4126984126984127
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 13.0,
+              "mean_probability": 0.42637545395796084,
+              "observed": 0.5384615384615384
+            }
+          ]
+        }
+      },
+      "STAGE_CYCLE_GENE": {
+        "rows": 4724,
+        "sessions": 117,
+        "known": 4714,
+        "unknown": 10,
+        "pool_rate": 0.18307170131523123,
+        "top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 117,
+            "unknown": 0,
+            "hits": 52,
+            "hit_rate": 0.4444444444444444,
+            "wilson95": [
+              0.3575972219792095,
+              0.5348238053166497
+            ],
+            "full_positive_recall": 0.06025492468134415,
+            "false_positives": 65,
+            "false_negatives": 811,
+            "positive_pool": 863,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 351,
+            "unknown": 0,
+            "hits": 117,
+            "hit_rate": 0.3333333333333333,
+            "wilson95": [
+              0.2860560865768438,
+              0.3842191952663594
+            ],
+            "full_positive_recall": 0.13557358053302435,
+            "false_positives": 234,
+            "false_negatives": 746,
+            "positive_pool": 863,
+            "outcome_coverage": 1.0
+          },
+          "5": {
+            "selected": 585,
+            "selected_dates": 117,
+            "known": 584,
+            "unknown": 1,
+            "hits": 181,
+            "hit_rate": 0.3099315068493151,
+            "wilson95": [
+              0.27376798708406863,
+              0.3485791667805666
+            ],
+            "full_positive_recall": 0.20973348783314022,
+            "false_positives": 403,
+            "false_negatives": 682,
+            "positive_pool": 863,
+            "outcome_coverage": 0.9982905982905983
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 117,
+            "unknown": 0,
+            "hits": 28,
+            "hit_rate": 0.23931623931623933,
+            "wilson95": [
+              0.17108054172885034,
+              0.3241258171209509
+            ],
+            "full_positive_recall": 0.03244495944380069,
+            "false_positives": 89,
+            "false_negatives": 835,
+            "positive_pool": 863,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 350,
+            "unknown": 1,
+            "hits": 89,
+            "hit_rate": 0.2542857142857143,
+            "wilson95": [
+              0.21150263098490302,
+              0.3024039627385889
+            ],
+            "full_positive_recall": 0.10312862108922363,
+            "false_positives": 261,
+            "false_negatives": 774,
+            "positive_pool": 863,
+            "outcome_coverage": 0.9971509971509972
+          },
+          "5": {
+            "selected": 585,
+            "selected_dates": 117,
+            "known": 582,
+            "unknown": 3,
+            "hits": 146,
+            "hit_rate": 0.2508591065292096,
+            "wilson95": [
+              0.21735092326851183,
+              0.2876346054378835
+            ],
+            "full_positive_recall": 0.16917728852838934,
+            "false_positives": 436,
+            "false_negatives": 717,
+            "positive_pool": 863,
+            "outcome_coverage": 0.9948717948717949
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.7571064913025032,
+          "precision": 0.28173374613003094,
+          "recall": 0.21089223638470453,
+          "f1": 0.24121935056328694,
+          "auc": 0.609210170388092
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 4714,
+          "brier": 0.1464640848099578,
+          "prior_brier": 0.1501186575052912,
+          "ece": 0.023230910635583604,
+          "top1_rows": 117,
+          "top1_forecast_mean": 0.31597476482093406,
+          "top1_observed": 0.4444444444444444,
+          "top1_absolute_gap": 0.12846967962351036,
+          "bins": [
+            {
+              "bin": "(-0.001, 0.1]",
+              "n": 625.0,
+              "mean_probability": 0.08297518850219031,
+              "observed": 0.0944
+            },
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 3123.0,
+              "mean_probability": 0.1480483200654974,
+              "observed": 0.17739353186039064
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 841.0,
+              "mean_probability": 0.2341714106775023,
+              "observed": 0.23543400713436385
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 117.0,
+              "mean_probability": 0.33127933688727795,
+              "observed": 0.41025641025641024
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 6.0,
+              "mean_probability": 0.4340731618101145,
+              "observed": 0.5
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 2.0,
+              "mean_probability": 0.5135934405050381,
+              "observed": 0.5
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "STAGE_BASE": {
+        "rows": 861,
+        "sessions": 117,
+        "known": 857,
+        "unknown": 4,
+        "pool_rate": 0.36989498249708286,
+        "top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 116,
+            "unknown": 1,
+            "hits": 70,
+            "hit_rate": 0.603448275862069,
+            "wilson95": [
+              0.5124876143136842,
+              0.6877769705484594
+            ],
+            "full_positive_recall": 0.22082018927444794,
+            "false_positives": 46,
+            "false_negatives": 247,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9914529914529915
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 349,
+            "unknown": 2,
+            "hits": 171,
+            "hit_rate": 0.4899713467048711,
+            "wilson95": [
+              0.43792001615165854,
+              0.5422410453534259
+            ],
+            "full_positive_recall": 0.5394321766561514,
+            "false_positives": 178,
+            "false_negatives": 146,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9943019943019943
+          },
+          "5": {
+            "selected": 546,
+            "selected_dates": 117,
+            "known": 543,
+            "unknown": 3,
+            "hits": 236,
+            "hit_rate": 0.43462246777163904,
+            "wilson95": [
+              0.3935319012775176,
+              0.47663156410216134
+            ],
+            "full_positive_recall": 0.7444794952681388,
+            "false_positives": 307,
+            "false_negatives": 81,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9945054945054945
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 117,
+            "unknown": 0,
+            "hits": 77,
+            "hit_rate": 0.6581196581196581,
+            "wilson95": [
+              0.5683713264826604,
+              0.7378149804445093
+            ],
+            "full_positive_recall": 0.24290220820189273,
+            "false_positives": 40,
+            "false_negatives": 240,
+            "positive_pool": 317,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 351,
+            "unknown": 0,
+            "hits": 169,
+            "hit_rate": 0.48148148148148145,
+            "wilson95": [
+              0.4296936055696226,
+              0.5336703146351777
+            ],
+            "full_positive_recall": 0.5331230283911672,
+            "false_positives": 182,
+            "false_negatives": 148,
+            "positive_pool": 317,
+            "outcome_coverage": 1.0
+          },
+          "5": {
+            "selected": 546,
+            "selected_dates": 117,
+            "known": 545,
+            "unknown": 1,
+            "hits": 230,
+            "hit_rate": 0.42201834862385323,
+            "wilson95": [
+              0.3812417893760333,
+              0.4638865284033103
+            ],
+            "full_positive_recall": 0.7255520504731862,
+            "false_positives": 315,
+            "false_negatives": 87,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9981684981684982
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.6487747957992999,
+          "precision": 0.5283687943262412,
+          "recall": 0.47003154574132494,
+          "f1": 0.4974958263772955,
+          "auc": 0.6512267788293025
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 857,
+          "brier": 0.22115619433332598,
+          "prior_brier": 0.23338820620856482,
+          "ece": 0.03700727269989905,
+          "top1_rows": 116,
+          "top1_forecast_mean": 0.44124786131242805,
+          "top1_observed": 0.603448275862069,
+          "top1_absolute_gap": 0.1622004145496409,
+          "bins": [
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 2.0,
+              "mean_probability": 0.188058467435341,
+              "observed": 0.0
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 252.0,
+              "mean_probability": 0.2678046250144197,
+              "observed": 0.25
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 417.0,
+              "mean_probability": 0.34397559238432024,
+              "observed": 0.36211031175059955
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 164.0,
+              "mean_probability": 0.4402122608610908,
+              "observed": 0.5426829268292683
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 22.0,
+              "mean_probability": 0.5234098604186613,
+              "observed": 0.6363636363636364
+            }
+          ]
+        }
+      },
+      "STAGE_CYCLE_GENE": {
+        "rows": 861,
+        "sessions": 117,
+        "known": 857,
+        "unknown": 4,
+        "pool_rate": 0.36989498249708286,
+        "top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 116,
+            "unknown": 1,
+            "hits": 72,
+            "hit_rate": 0.6206896551724138,
+            "wilson95": [
+              0.5298630447498485,
+              0.7037789709226525
+            ],
+            "full_positive_recall": 0.22712933753943218,
+            "false_positives": 44,
+            "false_negatives": 245,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9914529914529915
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 349,
+            "unknown": 2,
+            "hits": 168,
+            "hit_rate": 0.4813753581661891,
+            "wilson95": [
+              0.42944304513720305,
+              0.533713211943668
+            ],
+            "full_positive_recall": 0.5299684542586751,
+            "false_positives": 181,
+            "false_negatives": 149,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9943019943019943
+          },
+          "5": {
+            "selected": 546,
+            "selected_dates": 117,
+            "known": 543,
+            "unknown": 3,
+            "hits": 236,
+            "hit_rate": 0.43462246777163904,
+            "wilson95": [
+              0.3935319012775176,
+              0.47663156410216134
+            ],
+            "full_positive_recall": 0.7444794952681388,
+            "false_positives": 307,
+            "false_negatives": 81,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9945054945054945
+          }
+        },
+        "baseline_top": {
+          "1": {
+            "selected": 117,
+            "selected_dates": 117,
+            "known": 117,
+            "unknown": 0,
+            "hits": 77,
+            "hit_rate": 0.6581196581196581,
+            "wilson95": [
+              0.5683713264826604,
+              0.7378149804445093
+            ],
+            "full_positive_recall": 0.24290220820189273,
+            "false_positives": 40,
+            "false_negatives": 240,
+            "positive_pool": 317,
+            "outcome_coverage": 1.0
+          },
+          "3": {
+            "selected": 351,
+            "selected_dates": 117,
+            "known": 351,
+            "unknown": 0,
+            "hits": 169,
+            "hit_rate": 0.48148148148148145,
+            "wilson95": [
+              0.4296936055696226,
+              0.5336703146351777
+            ],
+            "full_positive_recall": 0.5331230283911672,
+            "false_positives": 182,
+            "false_negatives": 148,
+            "positive_pool": 317,
+            "outcome_coverage": 1.0
+          },
+          "5": {
+            "selected": 546,
+            "selected_dates": 117,
+            "known": 545,
+            "unknown": 1,
+            "hits": 230,
+            "hit_rate": 0.42201834862385323,
+            "wilson95": [
+              0.3812417893760333,
+              0.4638865284033103
+            ],
+            "full_positive_recall": 0.7255520504731862,
+            "false_positives": 315,
+            "false_negatives": 87,
+            "positive_pool": 317,
+            "outcome_coverage": 0.9981684981684982
+          }
+        },
+        "threshold_0_5_uncalibrated": {
+          "accuracy": 0.6546091015169195,
+          "precision": 0.5353535353535354,
+          "recall": 0.501577287066246,
+          "f1": 0.5179153094462541,
+          "auc": 0.6455894380184601
+        },
+        "calibration": {
+          "status": "HISTORICAL_TEMPORAL_CALIBRATION_ONLY",
+          "historical_gate_passed": false,
+          "rows": 857,
+          "brier": 0.22158422641331896,
+          "prior_brier": 0.23338820620856482,
+          "ece": 0.030400760757538576,
+          "top1_rows": 116,
+          "top1_forecast_mean": 0.4356874319164368,
+          "top1_observed": 0.6206896551724138,
+          "top1_absolute_gap": 0.18500222325597704,
+          "bins": [
+            {
+              "bin": "(0.1, 0.2]",
+              "n": 2.0,
+              "mean_probability": 0.18895647385491798,
+              "observed": 0.0
+            },
+            {
+              "bin": "(0.2, 0.3]",
+              "n": 249.0,
+              "mean_probability": 0.2696933695892177,
+              "observed": 0.26506024096385544
+            },
+            {
+              "bin": "(0.3, 0.4]",
+              "n": 430.0,
+              "mean_probability": 0.3434195187270174,
+              "observed": 0.3511627906976744
+            },
+            {
+              "bin": "(0.4, 0.5]",
+              "n": 160.0,
+              "mean_probability": 0.4405632819178657,
+              "observed": 0.55
+            },
+            {
+              "bin": "(0.5, 0.6]",
+              "n": 16.0,
+              "mean_probability": 0.5198494904211548,
+              "observed": 0.75
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,25 @@
 # A股主板连板龙头：强度评估与高度预测
 
+## 首板一进二与 Gemini 共同研究（2026-10-20）
+
+本轮验收是**首板收盘时选出的每日 Top1，下一官方交易日收盘涨停命中率至少60%**；同一股票晋级后，再用二板收盘信息重新评估二进三。当前历史一进二原基准为116/285，资本筛选后106/284，均未达标；二板以上接力池的分类准确率不能代替这一指标。
+
+已独立按分复核33,725条首板／二板记录，在当前绑定原始日线内，信号封板、板位、相邻目标日与标签差异均为0，150条未知保留。这不等于原始行情获得独立外源认证，也不消除当前股票池的幸存者偏差。另一套旧接力资料发现12处目标标签价格冲突，原件与失败结果均保留，不能把它们移作当前首板管道的错误。
+
+- [Chrome Gemini 交接、工作分工与复现入口](research/gemini_codex_joint_training_20261020/CHROME_GEMINI_HANDOFF.md)
+- [首板／二板完整源内资格核验](research/gemini_codex_joint_training_20261020/codex/CODEX_FIRST_SECOND_DATA_QUALIFICATION.json)
+- [唯一新信息提案：历史共同涨停网络](research/gemini_codex_joint_training_20261020/codex/CODEX_PROPOSAL_BEFORE_GEMINI_REVIEW.md)
+- [全28,503条网络直接枚举核验](research/gemini_codex_joint_training_20261020/codex/network_qualification_precision_repair/DIRECT_ENUMERATION_VERIFICATION.json)
+- [旧接力模型数据核查补充结论](research/model_upgrade_validation/limitup_pullback_20261020T155124Z/delivery_codex_review/data_quality_followup/数据核查补充结论.md)
+
+Chrome 中真实 Gemini（界面 Argon）已审阅14个关键文件并同意一次固定比较，Codex 已完成本地拟合和保存模型复核。**70字段挑战在2025H1验证为52/117，与基准持平；非一字46/117，低于基准48/117，按原协议淘汰。** 本批为1个挑战头、2次HGB核心拟合和1次时序校准；后续月度拟合0，原基准与二进三重训0，没有部署。Gemini 已确认淘汰，其依据是上传附件及Codex回报，未读取私有仓库或本地全量CSV。
+
+- [Chrome实际交接、首次固定训练与结算](research/gemini_codex_joint_training_20261020/CHROME_CURRENT_STATUS.md)
+- [本轮完整结果](research/first_board_co_limit_network_20261020_run1/report.json)
+- [保存模型及全部117日选择独立复核](research/first_board_co_limit_network_20261020_run1/INDEPENDENT_SAVED_MODEL_VERIFICATION.json)
+
+失败研究不部署，原BASE、预测与交易账本保持原状；首板60%目标仍未达到。
+
 ## 最新进展与验收状态（2026-10-15）
 
 已完成全周期上下文重建、80份固定研究模型训练、完整同池比较，以及次日涨停优先候选和未来2／3／5个官方交易日的情景留档。**新研究模型均未通过各自固定验收，尚未替换正式BASE；分数未经校准，补涨身份准确率、真实净收益和组合回撤仍未验证。** 以下旧版本章节保留原研究记录，当前执行约束以[AGENTS.md](AGENTS.md)及最新交付为准。
@@ -34,6 +54,12 @@
 ```powershell
 git lfs install
 git lfs pull
+```
+
+本次三份超大评分JSON采用可逐字节恢复的`.json.gz`档案，清单保留原文件大小与SHA256；原始大行情仍沿用原Git LFS。需要重建评分JSON时运行（已有同哈希原件只核验，不覆盖）：
+
+```powershell
+python research/gemini_codex_joint_training_20261020/restore_large_archives.py
 ```
 
 ## 历史版本与研究记录
@@ -119,7 +145,7 @@ git lfs pull
 > **V265 输入字段契约：** 已固定基础、竞价、盘中封板、题材、情绪和执行字段的覆盖审计。当前历史池允许身份复盘，但竞价/盘中/题材字段缺失，条件接力复盘和交易授权均为 `false`；补齐数据后可直接复验，不再临时改规则。详见 `results/v265/leader_input_contract_20260927_v1/report.json`。
 > **V266 日复盘桥接：** 将日复盘、V263 身份诊断与 V265 字段闸门统一；过期行情只保留历史诊断，缺竞价/盘中/题材/执行字段时保持 `CASH`。2026-09-21 复盘相对 2026-09-27 为 `STALE / DIAGNOSTIC_ONLY / CASH`，华瓷股份是情绪锚、世联行是挑战者，均不等于买入许可。详见 `results/v266/strategy_review_bridge_20260927_v1/report.json`。
 
-> **日复盘管线示例：** 2026-09-21 复盘识别为“加速”，涨停 93 家、连板 21 家、炸板率约 19.83%；最高板华瓷股份只保留情绪锚身份，世联行是观察级高度竞争者，因题材、竞价和执行证据不完整，主选与交易授权均为 `CASH`。详见 [盘后复盘 V7](<D:/Documents/ChatGPT/龙头战法/results/daily_review_20260921_v7/review.md>)。
+> **日复盘管线示例：** 2026-09-21 复盘识别为“加速”，涨停 93 家、连板 21 家、炸板率约 19.83%；最高板华瓷股份只保留情绪锚身份，世联行是观察级高度竞争者，因题材、竞价和执行证据不完整，主选与交易授权均为 `CASH`。详见 [盘后复盘 V7](<results/daily_review_20260921_v7/review.md>)。
 
 > **当前交易模式：V246 次日抗核按钮追高模式。** 允许追高，但必须先判断买入后下一个交易日是否具备承接，以及高标是否可能形成市场负反馈；`ANTI_NUCLEAR_PASS`通过后才允许进入追高预案。详见 [交易模式V246_次日抗核按钮.md](交易模式V246_次日抗核按钮.md)。
 

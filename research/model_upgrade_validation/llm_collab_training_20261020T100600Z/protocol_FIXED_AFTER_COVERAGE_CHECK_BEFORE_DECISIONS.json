@@ -1,0 +1,128 @@
+{
+  "created_at_utc": "2026-10-20T10:43:36.984439+00:00",
+  "experiment": "ACTUAL_CODEX_GEMINI38_COLLAB_TRAINING",
+  "status": "CODEX_FIXED_PROPOSAL_AWAITING_GEMINI_AGREEMENT",
+  "human_constraints": "Preserve ALL old models and results; no adoption, deployment or production switch without subsequent user decision.",
+  "hypothesis": "Evidence-specific changes and a learned arbitration head can reduce induced errors, harmful withdrawals and Top3 substitution losses while preserving complementary detection.",
+  "main_event": "Next adjacent official trading session close limit-up; exact-cent 10% unadjusted price corroborated by valid archived promotion target. Missing qualification remains UNKNOWN.",
+  "secondary_event": "Intraday touch, separate from close limit-up.",
+  "baseline": "Codex independent; Gemini independent is a prespecified peer reference.",
+  "challenges": [
+    "A_evidence_audited_joint",
+    "B_fixed_learned_arbitration"
+  ],
+  "references": [
+    "Old formal BASE if saved and same-pool available",
+    "Saved ROLL252, separate from BASE",
+    "Always NO",
+    "Height Top3"
+  ],
+  "selection": {
+    "seed": "actual-two-llm-evidence-and-learned-arbitration-20261020-v1",
+    "strata": [
+      [
+        "SepEarly",
+        "2026-09-01",
+        "2026-09-10"
+      ],
+      [
+        "SepMiddle",
+        "2026-09-11",
+        "2026-09-20"
+      ],
+      [
+        "SepLate",
+        "2026-09-21",
+        "2026-09-30"
+      ]
+    ],
+    "days_per_stratum": "ALL_REMAINING_AVAILABLE_DATES:4early6middle2late",
+    "rule": "All September signal dates present in the fixed source excluding every date in the previous12-day sample:12 dates total. Separate hash determines anonymous case order only. No label/score/performance/size filter.",
+    "predecision_technical_correction": "Initial4/4/4 proposal failed before any packet, judgment or fit: source contains only2 unused late-September dates. Old protocol and failed source preserved; use the whole12-date available complement rather than inventing or effect-selecting dates."
+  },
+  "training": {
+    "source": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\llm_joint_replay_20261019T172800Z\\complete_122_revealed_all_arms.csv",
+    "signal_date_before": "2026-09-01",
+    "rows": "all pre-September old rows with strict_close known; unknown labels retained in exclusions",
+    "chronology": "Every included training target_date strictly before every test signal date.",
+    "features": [
+      "codex_vote",
+      "gemini_vote",
+      "codex_unknown",
+      "gemini_unknown",
+      "one_price",
+      "one_price_unknown",
+      "codex_vote_x_one_price",
+      "gemini_vote_x_one_price"
+    ],
+    "model": "sklearn LogisticRegression",
+    "params": {
+      "C": 0.25,
+      "penalty": "l2",
+      "solver": "lbfgs",
+      "fit_intercept": true,
+      "max_iter": 1000,
+      "tol": 0.0001,
+      "class_weight": null
+    },
+    "weights": "Each known training row receives (known rows / training days) / known rows on its day; mean sample weight is one, dates have equal total weight.",
+    "fits_allowed": 1,
+    "search": false,
+    "decision": "YES iff raw score > 0.5; NO otherwise, except both reviewers UNKNOWN -> UNKNOWN.",
+    "ranking": "Raw learned score descending, then equal average of both independent full-pool ranks, then fixed anonymous-ID hash. No forced shape slots.",
+    "probability": "Uncalibrated internal score, never advertised as validated event probability."
+  },
+  "consultation": {
+    "sequence": [
+      "Both reviewers independently write all rows and full rank before viewing the other.",
+      "Codex proposes each change using concrete evidence and counterevidence.",
+      "Gemini audits or counters each proposal once.",
+      "Codex binds acceptance/rejection with reasons; no forced consensus.",
+      "Freeze all rows, Top3, head output and all discussion hashes; only then reveal."
+    ],
+    "change_card_fields": [
+      "case",
+      "id",
+      "from",
+      "to",
+      "original_support",
+      "signal_evidence",
+      "counterevidence",
+      "alternative_explanation",
+      "change_cost",
+      "new_fact_or_reinterpretation",
+      "resolution"
+    ],
+    "top3_change": "Name entrants and displaced stocks, compare both on identical available evidence. UNKNOWN withdrawal requires its own reason and opportunity cost.",
+    "unresolved": "Preserve Codex baseline call and explicitly record unresolved disagreement; do not silently force UNKNOWN or YES.",
+    "prohibited_shortcuts": [
+      "No word=YES or word=NO rule",
+      "No posthoc 2.2/2.5x volume cutoff",
+      "No fixed word/nonword/low-board slots",
+      "No theme, queue or money-flow invention",
+      "No one-field missingness ban on all predictions"
+    ]
+  },
+  "metrics": [
+    "Complete Top3 hits, misses and unknown slots",
+    "Full-known correct fraction (UNKNOWN is unanswered)",
+    "Judged Accuracy, coverage, Precision, full Recall, F1",
+    "Shape, board and stratum partitions",
+    "All correction/induced-error/resolution/withdrawal changes and Top3 displacement",
+    "10000 fixed-seed day-cluster paired intervals"
+  ],
+  "success_rule": "Diagnostic candidate only if complete Top3 confirmed hits and full-known correct fraction both exceed Codex independent; Precision and non-one-price F1 not lower. Unknown labels and coverage reported separately. Even a diagnostic win is not stable/forward proof and never permits automatic adoption.",
+  "budget_minutes": 30,
+  "end_rule": "One fit and one reveal; no effect-driven parameter change, date replacement or refit. If the actual Gemini service remains unavailable, do not claim joint completion and do not reveal the new test.",
+  "limits": [
+    "Previously researched historical domain and late-acquired sources: NOT independently certified blind or genuine forward evidence.",
+    "No qualified historical theme/forum/announcement text: price-volume/emotion/competition scope only.",
+    "Only 8 available old training days; small fit may be unstable, all same-date stocks correlated.",
+    "September-only holdout is not cross-cycle validation; retain pool/survivor and supplier biases.",
+    "No trading fills, fees or returns are inferred from this event-prediction experiment."
+  ],
+  "method_sources": [
+    "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+  ]
+}

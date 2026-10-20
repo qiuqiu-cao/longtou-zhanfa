@@ -1,0 +1,21 @@
+{
+  "version": "limitup-pullback-personality-1",
+  "started_at": "2026-10-20T15:47:01+00:00",
+  "deadline_utc": "2026-10-20T16:17:01+00:00",
+  "user_clarification": "涨停回调的洗盘；不是泛指普通上涨试盘，也不是纸面模拟",
+  "hypothesis": "在原连板池和29字段之外，前一段真实收盘涨停后的回调量价路径、此前已成熟的涨停股性及当时市值，可为本轮已启动后次日连板提供增量信息。形态不认证洗盘意图。",
+  "scope": "原2025-07至2026-09完整3707只次连板池；既有历史，非新增盲测；不以已重启样本检验回调阶段首次重启命中率",
+  "baseline": "已存ROLL252月初滚动原29字段，15月，0次重拟合；冻结生产BASE另列参照",
+  "challenger": "PULLBACK_PERSONALITY，15个月各一次Logistic C=0.25 max_iter=2500 random_state=271，训练期内中位数插补及标准化，按信号日等权，阈值严格>0.5；不搜索参数、阈值、窗口",
+  "maximum_fits": 15,
+  "training": "同原252个已知标签信号日，target_date严格早于月初；原29字段、完整成员及标签不改",
+  "history_boundary": "每只股票本轮启动日由信号日板数和官方交易日倒推；股性只用启动日前63官方交易日，历史跟随结果也必须早于启动日；前一涨停在启动日前2至21官方交易日内，至少有1个非涨停间隔；所有回调几何只用前一涨停之后、本轮启动之前。再启动当天量价允许，均早于信号截止。",
+  "anchor": "已存重建attempts内CLOSING_LIMIT_UP且不复权分价OHLC与10%涨停价吻合；没有涨停的普通大阳线不当锚。动态ST/分类原时点与幸存者限制保留。",
+  "features": ["history63_coverage","history63_limit_count","history63_link_rate","history63_follow_return","history63_follow_loss_rate","history63_max_run","pullback_has_anchor","pullback_days","pullback_min_return","pullback_low_vs_anchor_low","pullback_last_close_return","pullback_mean_volume_ratio","pullback_min_volume_ratio","pullback_last_volume_ratio","relaunch_volume_ratio","relaunch_reclaim_return","relaunch_excess_return","relaunch_close_position","relaunch_range","signal_vs_anchor_close","signal_log_float_cap"],
+  "missing": "缺源/非相邻官方交易日/不复权断裂保持NaN，成交量单位只在同一代码同一原归档内相除；不借未来补齐。未见锚仅在完整21日可观察且无锚时为0。",
+  "evaluation": ["完整池Accuracy Precision Recall F1与TP FP FN TN","已核真实非一字相同指标","有涨停回调锚分层及无锚/未知全保留","完整每日Top1 Top2 Top3，未知槽位不删","2025H2、2026JanAug、2026Sep分别报告","按日期5交易日块配对bootstrap 2000次的F1差，seed20261020"],
+  "screen_before_results": "仅当三个时间段非一字F1均不低于ROLL252，9月非一字Recall至少+10pp、Precision不下降超过5pp且Top2不下降，才称初步值得后续验证；9月F1差95%区间下界>0才称历史增益有统计支持。任一不满足不作为升级，不套旧全池Accuracy+3pp否决。",
+  "stop": "固定比较完成、拟合失败或30分钟预算到即停；已失败旧价格形态/曲线/代理/阶段/衰减等实验不重跑。",
+  "outcomes_separate": "只检验次日连板，不冒充洗盘身份准确率、回调低吸胜率或可成交净收益；不接实际订单",
+  "preservation": "旧模型及账本不改；新研究模型保留供用户参考，禁止自动部署；Gemini已受限，不调用也不换模型绕过"
+}

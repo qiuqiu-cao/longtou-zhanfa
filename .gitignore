@@ -26,7 +26,16 @@ id_ed25519
 .env.*
 !.env.example
 !.env.sample
+
+# Local ML package downloads and extracted runtimes; provenance receipts stay tracked.
+/research/*_dependency_*/runtime/
+*.whl
 *.pem
 *.key
 *.p12
 *.pfx
+
+# Losslessly packaged research snapshots; restore from the tracked .json.gz files.
+/research/model_upgrade_validation/ranking_optimization_20261015T173045Z/scorecard/final_verified22662_research_view/complete_scorecard.json
+/research/model_upgrade_validation/ranking_optimization_20261015T173045Z/scorecard/final_verified26439_research_view/complete_scorecard.json
+/research/model_upgrade_validation/ranking_optimization_20261015T173045Z/scorecard/full22662_research_view/complete_scorecard.json

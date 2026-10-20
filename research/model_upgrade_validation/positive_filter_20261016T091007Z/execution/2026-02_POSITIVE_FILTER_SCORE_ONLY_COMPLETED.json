@@ -1,0 +1,75 @@
+{
+  "completed_at": "2026-10-16T09:20:07.095475+00:00",
+  "selection_formed_at": "2026-10-16T09:20:07.043550+00:00",
+  "selected_threshold": 0.0,
+  "prefix_fit": {
+    "formed_at": "2026-10-16T09:20:06.919323+00:00",
+    "month": "2026-02",
+    "arm": "POSITIVE_FILTER_SCORE_ONLY",
+    "phase": "PREFIX",
+    "features": [
+      "base_score_logit"
+    ],
+    "estimator": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "class_weight": null,
+      "random_state": 20261016
+    },
+    "weights": "Every row weight1; no class balancing",
+    "training_digest": "020ae05c378b97413c2ae43905110b29260c2f87ba2c6c69c6b2a8875a1929c7",
+    "training_dtypes": {
+      "date": "str",
+      "code": "str",
+      "target_date": "str",
+      "target": "float64",
+      "base_score_logit": "float64"
+    },
+    "max_training_target": "2025-10-30",
+    "rows": 280,
+    "positives": 119,
+    "negatives": 161,
+    "signal_days": 91,
+    "qualified": true,
+    "model_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\positive_filter_20261016T091007Z\\execution\\2026-02_POSITIVE_FILTER_SCORE_ONLY_PREFIX_model.joblib",
+    "model_sha256": "40731dec819aff900d7bda497436c18dff5a9faffefc106d5e8fea48fb622a8a",
+    "new_fits": 1
+  },
+  "final_fit": {
+    "formed_at": "2026-10-16T09:20:07.047582+00:00",
+    "month": "2026-02",
+    "arm": "POSITIVE_FILTER_SCORE_ONLY",
+    "phase": "FINAL",
+    "features": [
+      "base_score_logit"
+    ],
+    "estimator": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "class_weight": null,
+      "random_state": 20261016
+    },
+    "weights": "Every row weight1; no class balancing",
+    "training_digest": "f32b05876cdba4ca9827d099cdab98c7692c74d24f2f35abf8301f8db32dccef",
+    "training_dtypes": {
+      "date": "str",
+      "code": "str",
+      "target_date": "str",
+      "target": "float64",
+      "base_score_logit": "float64"
+    },
+    "max_training_target": "2026-01-28",
+    "rows": 387,
+    "positives": 172,
+    "negatives": 215,
+    "signal_days": 136,
+    "qualified": true,
+    "model_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\positive_filter_20261016T091007Z\\execution\\2026-02_POSITIVE_FILTER_SCORE_ONLY_FINAL_model.joblib",
+    "model_sha256": "748be1bf3928fe96b666e6929f5539844ddc1eeece419ee6abe608f2c0ff3930",
+    "new_fits": 1
+  },
+  "first_stage_new_fits": 0,
+  "outer_results_used_for_selection": false
+}
