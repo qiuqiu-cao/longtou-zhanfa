@@ -1,0 +1,141 @@
+{
+  "round": 4,
+  "conquered_direction": "Direction 1: 题材低位首板成群扩散助攻矩阵",
+  "total_oof_samples": 1480,
+  "unique_trading_days": 449,
+  "base_rates": {
+    "is_3to5": 0.225,
+    "is_market_space_leader": 0.19864864864864865,
+    "is_emotion_dragon_proxy": 0.11418918918918919,
+    "is_3to4": 0.4783783783783784
+  },
+  "model_top1_hit_rates": {
+    "top1_is_market_space_leader": 0.27616926503340755,
+    "top1_is_emotion_dragon_proxy": 0.15367483296213807,
+    "top1_is_3to5": 0.2873051224944321,
+    "top1_is_3to4": 0.5812917594654788
+  },
+  "model_top2_hit_rates": {
+    "top2_space_hit": 0.36525612472160357,
+    "top2_dragon_hit": 0.23608017817371937,
+    "top2_5_hit": 0.39198218262806234
+  },
+  "excess_alpha_pp": {
+    "space_leader_alpha_pp": 7.75206163847589,
+    "emotion_dragon_alpha_pp": 3.948564377294889,
+    "height_5_alpha_pp": 6.230512249443207
+  },
+  "theme_diffusion_audit": {
+    "tiers": {
+      "0只(孤狼)": {
+        "samples": 653,
+        "share": 0.4412162162162162,
+        "space_leader_rate": 0.23889739663093415,
+        "dragon_rate": 0.13016845329249618,
+        "5board_rate": 0.23736600306278713
+      },
+      "1只(弱助攻)": {
+        "samples": 339,
+        "share": 0.22905405405405405,
+        "space_leader_rate": 0.15339233038348082,
+        "dragon_rate": 0.10619469026548672,
+        "5board_rate": 0.24188790560471976
+      },
+      "2只(成梯队)": {
+        "samples": 190,
+        "share": 0.12837837837837837,
+        "space_leader_rate": 0.16842105263157894,
+        "dragon_rate": 0.09473684210526316,
+        "5board_rate": 0.18947368421052632
+      },
+      "3只以上(群蜂爆发)": {
+        "samples": 298,
+        "share": 0.20135135135135135,
+        "space_leader_rate": 0.18120805369127516,
+        "dragon_rate": 0.10067114093959731,
+        "5board_rate": 0.20134228187919462
+      }
+    },
+    "top1_lone_wolf_chosen": 187,
+    "top1_cluster_chosen": 262,
+    "top1_lone_wolf_pct": 0.41648106904231624
+  },
+  "base_comparison": {
+    "complete_match": {
+      "days": 185,
+      "model_top1_space": 0.21621621621621623,
+      "base_top1_space": 0.1891891891891892,
+      "model_top1_5": 0.1783783783783784,
+      "base_top1_5": 0.15675675675675677
+    },
+    "all_matched": {
+      "days": 412,
+      "model_top1_space": 0.2645631067961165,
+      "base_top1_space": 0.19902912621359223,
+      "model_top1_5": 0.279126213592233,
+      "base_top1_5": 0.18446601941747573
+    }
+  },
+  "selective_policy": {
+    "th_0.30": {
+      "threshold": 0.3,
+      "recommended_days": 241,
+      "coverage_pct": 0.5367483296213809,
+      "space_leader_hit_rate": 0.35269709543568467,
+      "dragon_hit_rate": 0.1825726141078838,
+      "height_5_hit_rate": 0.3360995850622407
+    },
+    "th_0.35": {
+      "threshold": 0.35,
+      "recommended_days": 169,
+      "coverage_pct": 0.37639198218262804,
+      "space_leader_hit_rate": 0.3668639053254438,
+      "dragon_hit_rate": 0.17751479289940827,
+      "height_5_hit_rate": 0.3431952662721893
+    },
+    "th_0.40": {
+      "threshold": 0.4,
+      "recommended_days": 116,
+      "coverage_pct": 0.2583518930957684,
+      "space_leader_hit_rate": 0.4224137931034483,
+      "dragon_hit_rate": 0.21551724137931033,
+      "height_5_hit_rate": 0.39655172413793105
+    },
+    "th_0.45": {
+      "threshold": 0.45,
+      "recommended_days": 79,
+      "coverage_pct": 0.1759465478841871,
+      "space_leader_hit_rate": 0.43037974683544306,
+      "dragon_hit_rate": 0.17721518987341772,
+      "height_5_hit_rate": 0.4050632911392405
+    },
+    "th_0.50": {
+      "threshold": 0.5,
+      "recommended_days": 45,
+      "coverage_pct": 0.10022271714922049,
+      "space_leader_hit_rate": 0.4888888888888889,
+      "dragon_hit_rate": 0.2,
+      "height_5_hit_rate": 0.37777777777777777
+    }
+  },
+  "yearly_stability": {
+    "2024": {
+      "days": 75,
+      "top1_space_rate": 0.10666666666666667,
+      "top1_dragon_rate": 0.10666666666666667,
+      "top1_5_rate": 0.44
+    },
+    "2025": {
+      "days": 228,
+      "top1_space_rate": 0.3026315789473684,
+      "top1_dragon_rate": 0.18421052631578946,
+      "top1_5_rate": 0.2807017543859649
+    },
+    "2026": {
+      "days": 146,
+      "top1_space_rate": 0.3219178082191781,
+      "top1_dragon_rate": 0.13013698630136986,
+      "top1_5_rate": 0.2191780821917808
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "settled_at": "2026-10-21T03:30:00+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/gemini_codex_joint_event_path_20261021T030334Z",
+  "batch_deadline_utc": "2026-10-21T03:33:34+00:00",
+  "status": "BATCH_SETTLED_BOTH_ARMS_REJECTED",
+  "selection_decision": "BOTH_FIXED_ARMS_REJECTED",
+  "selected_arm": null,
+  "production_deployment_allowed": false,
+  "validation_metrics_117_dates": {
+    "total_dates": 117,
+    "total_rows": 4724,
+    "unknown_outcomes": 0,
+    "BASE_62": {
+      "primary": {
+        "hits": 52,
+        "total": 117,
+        "hit_rate": 0.4444444444444444
+      },
+      "non_one_price": {
+        "hits": 48,
+        "total": 117,
+        "hit_rate": 0.41025641025641024
+      }
+    },
+    "EVENT_SEALED_PATH_67": {
+      "trainer": "Gemini",
+      "fields_count": 67,
+      "primary": {
+        "hits": 48,
+        "total": 117,
+        "hit_rate": 0.41025641025641024,
+        "gain_vs_base": -4
+      },
+      "non_one_price": {
+        "hits": 43,
+        "total": 117,
+        "hit_rate": 0.36752136752136755,
+        "gain_vs_base": -5
+      },
+      "decision_date_coverage": 1.0,
+      "pass_validation": false
+    },
+    "EVENT_DUAL_PATH_72": {
+      "trainer": "Codex",
+      "fields_count": 72,
+      "primary": {
+        "hits": 46,
+        "total": 117,
+        "hit_rate": 0.39316239316239315,
+        "gain_vs_base": -6
+      },
+      "non_one_price": {
+        "hits": 40,
+        "total": 117,
+        "hit_rate": 0.3418803418803419,
+        "gain_vs_base": -8
+      },
+      "decision_date_coverage": 1.0,
+      "pass_validation": false
+    },
+    "paired_matrices": {
+      "EVENT_SEALED_PATH_67_vs_BASE": {
+        "primary": {
+          "both_hit": 40,
+          "challenger_exclusive_hit": 8,
+          "baseline_exclusive_hit": 12,
+          "both_failed": 57,
+          "same_code_dates": 70,
+          "different_code_dates": 47,
+          "net_diff_hits": -4
+        },
+        "non_one_price": {
+          "both_hit": 32,
+          "challenger_exclusive_hit": 11,
+          "baseline_exclusive_hit": 16,
+          "both_failed": 58,
+          "same_code_dates": 63,
+          "different_code_dates": 54,
+          "net_diff_hits": -5
+        }
+      },
+      "EVENT_DUAL_PATH_72_vs_BASE": {
+        "primary": {
+          "both_hit": 41,
+          "challenger_exclusive_hit": 5,
+          "baseline_exclusive_hit": 11,
+          "both_failed": 60,
+          "same_code_dates": 72,
+          "different_code_dates": 45,
+          "net_diff_hits": -6
+        },
+        "non_one_price": {
+          "both_hit": 34,
+          "challenger_exclusive_hit": 6,
+          "baseline_exclusive_hit": 14,
+          "both_failed": 63,
+          "same_code_dates": 64,
+          "different_code_dates": 53,
+          "net_diff_hits": -8
+        }
+      }
+    }
+  },
+  "fits_summary": {
+    "core_fits": 4,
+    "calibration_fits": 2,
+    "monthly_fits": 0,
+    "baseline_refits": 0,
+    "second_stage_refits": 0
+  },
+  "verification": {
+    "status": "PASS_SAVED_VALIDATION_REPLAY",
+    "verification_receipt": "JOINT_SAVED_RESULT_VERIFICATION.json"
+  },
+  "next_direction_proposal": {
+    "track_a_label_audit": "Agree to bounded sample PidType=2 real response audit to verify 2-board promotion truth.",
+    "track_b_cross_sectional_cohort": "Propose point-in-time concept/theme cohort size and amount share at S close, avoiding static name or market-wide macro proxy flaws."
+  }
+}

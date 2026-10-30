@@ -1,0 +1,105 @@
+{
+  "formed_at_utc": "2026-10-28T19:05:01.064380+00:00",
+  "human_authorization": "User requested Codex to recheck, fix bugs, and backtest on 2026-10-28.",
+  "latest_gemini_repair_not_located": true,
+  "starting_source": "D:\\Documents\\ChatGPT\\龙头战法\\results\\gemini_5d_latest_review_20261028\\source_snapshot",
+  "fixed_arms": 1,
+  "feature_order": [
+    "tail_seal_momentum",
+    "open_gap",
+    "open_gap_pct",
+    "open_vs_prev_high",
+    "open_vs_prev_vwap",
+    "open_vs_prev_open",
+    "is_golden_auction",
+    "fake_open_risk",
+    "ind_max_streak",
+    "ind_zt_count",
+    "ind_first_board_count",
+    "streak_gap_in_industry",
+    "is_industry_space_dragon",
+    "theme_assist_ratio",
+    "ind_liquidity_share",
+    "prev_turnover",
+    "prev_amount_yi",
+    "float_cap_yi",
+    "chip_cleansing_ratio",
+    "vwap_cost_support",
+    "is_capacity_dragon",
+    "is_super_capacity_dragon",
+    "is_small_cap_trap",
+    "has_bad_crash_gene",
+    "bad_zhuang_score",
+    "mkt_promote_rate",
+    "is_cycle_expansion",
+    "is_cycle_divergence",
+    "is_cycle_retraction",
+    "is_cycle_freezing",
+    "moe_capacity_dragon_boost",
+    "moe_retraction_risk_brake",
+    "prev_board_streak",
+    "prev_amplitude_pct"
+  ],
+  "folds": [
+    [
+      "Fold 1",
+      "2024-01-01",
+      "2024-08-31",
+      "2024-09-01",
+      "2025-01-31"
+    ],
+    [
+      "Fold 2",
+      "2024-06-01",
+      "2025-01-31",
+      "2025-02-01",
+      "2025-07-31"
+    ],
+    [
+      "Fold 3",
+      "2025-01-01",
+      "2025-07-31",
+      "2025-08-01",
+      "2026-01-31"
+    ],
+    [
+      "Fold 4",
+      "2025-06-01",
+      "2026-01-31",
+      "2026-02-01",
+      "2026-09-16"
+    ]
+  ],
+  "params": {
+    "max_iter": 150,
+    "learning_rate": 0.06,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 25,
+    "l2_regularization": 1.5,
+    "random_state": 42,
+    "early_stopping": false
+  },
+  "no_effect_based_tuning": true,
+  "blind_test": false,
+  "fit_count_planned": 4,
+  "scope": "Legacy 10/20 percent board universe; archived current ST/new-list flags retained; survivorship remains.",
+  "target": "Entry-day close at regular price-limit reference; not original prior-close BASE objective.",
+  "purging": "Training sample next_date must be strictly before test_start to mature its next-open-dependent weight.",
+  "missing_tail_order": "NaN; not synthesized from daily amplitude",
+  "comparators": [
+    "same-pool daily highest open gap",
+    "same-pool daily highest previous board streak"
+  ],
+  "execution": "Conditional 09:30 daily-open proxy plus 10bp each side; T+1 or later exit; 2 positions; 500k max each; round lots; blocked down-limit sales; 3bp/min5 commission plus 0.1bp transfer each side and 5bp sell stamp tax.",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v3\\imported\\daily-bars.csv": "25f907b16d2436688608eca063bd850c708d60d4b0630b6ccaa3c4e864b3636a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v298\\exchange_calendar_extension_20261003_v2\\calendar.json": "2f991b34d9317dcc1ed0d4c3e4da40132eedf27ea23431415e1048172b119cdd",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\fixed_20261007T112017Z\\models\\relay\\BASE\\model.joblib": "8c734bd546ffa122a44035ccd9d2a5c89a6032a04e1f818d18d043dbb8dc3af7",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\codex_5d_causal_repair_20261028\\causal_engine.py": "34c400c102cd319eaac8e07528de7e69fb1c8269ebf17ad54efbaa6d0a482190",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\codex_5d_causal_repair_20261028\\run_backtest.py": "51b33bc78f6c2d225c7c179962581e793c848e044e748eae36d577446d68a13a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\legacy_industry_snapshot.py": "1363ddc6e177e908de97d7e077fe3bdd97ef0e24de073c4ea9320fbfc313d4ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\gemini_5d_latest_review_20261028\\source_snapshot\\build_and_train_5d_dragon_model.py": "391fff50f2c25dc4da10ee7647cd12630fbb98141a5e85cfa75d25918f0ccbd3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_github_industry_qualification_20261020\\qualified_legacy_snapshot.json": "f8a28d25896d0e5d1378e4445b33f0b6ecc83b2eb727b9cafe370607d569d4ad"
+  },
+  "production_replacement": false
+}

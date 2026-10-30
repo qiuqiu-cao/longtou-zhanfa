@@ -1,0 +1,136 @@
+{
+  "recorded_at": "2026-10-29T18:36:20.374830+00:00",
+  "status": "DESIGN_REQUIRES_CORRECTION_NO_NEW_FIT",
+  "source_sha256": "0a5d9182545c9a1c5cc925af90f11e29347905788dca24021eba2cf9e5935310",
+  "fits": 0,
+  "new_strategy_tested": false,
+  "full_evaluation": {
+    "rows": 13149,
+    "positives": 292,
+    "negatives": 12529,
+    "unknown": 328,
+    "dates": 286
+  },
+  "allowed_evaluation": {
+    "rows": 7254,
+    "positives": 195,
+    "negatives": 6830,
+    "unknown": 229,
+    "dates": 286
+  },
+  "beyond_top10": {
+    "rows": 4397,
+    "positives": 82,
+    "negatives": 4155,
+    "unknown": 160,
+    "dates": 285
+  },
+  "missed_paths": {
+    "rows": 82,
+    "positives": 82,
+    "negatives": 0,
+    "unknown": 0,
+    "dates": 68
+  },
+  "missed_distinct_codes": 79,
+  "missed_date_range": [
+    "2025-07-07",
+    "2026-08-21"
+  ],
+  "pool_size": {
+    "min": 7,
+    "max": 72,
+    "median": 24.0,
+    "dates_below15": 30,
+    "dates_above35": 42
+  },
+  "beyond_rank35": {
+    "rows": 363,
+    "positives": 5,
+    "negatives": 326,
+    "unknown": 32,
+    "dates": 42
+  },
+  "observed_medians_not_causal": {
+    "top3_four": {
+      "rows": 55,
+      "positives": 55,
+      "negatives": 0,
+      "unknown": 0,
+      "dates": 50,
+      "turnover_median": 5.354051674767254,
+      "amount_median_cny": 208905429.0,
+      "market_positive_fraction_median": 0.4798792756539235
+    },
+    "beyond10_four": {
+      "rows": 82,
+      "positives": 82,
+      "negatives": 0,
+      "unknown": 0,
+      "dates": 68,
+      "turnover_median": 8.612082198811429,
+      "amount_median_cny": 364530530.5,
+      "market_positive_fraction_median": 0.5656736628300609
+    },
+    "beyond10_nonfour": {
+      "rows": 4155,
+      "positives": 0,
+      "negatives": 4155,
+      "unknown": 0,
+      "dates": 280,
+      "turnover_median": 7.37853944922245,
+      "amount_median_cny": 341347929.0,
+      "market_positive_fraction_median": 0.5656736628300609
+    }
+  },
+  "screen_precision_difference": {
+    "delta": 0.004773269689737472,
+    "ci95": [
+      -0.0021904108511659115,
+      0.012135938600316394
+    ],
+    "replicates": 2000,
+    "seed": 42,
+    "circular_block_weeks": 5,
+    "interpretation": "Historical descriptive comparison; not new blind validation"
+  },
+  "historical_coarse_bar_overlap": [
+    {
+      "path": "data/v287/september_five_minute_20261002_v1/five_minute_bars_UNRECONCILED.csv",
+      "resolution_minutes": 5,
+      "raw_missed82_date_code_overlap": 0,
+      "raw_allowed7254_date_code_overlap": 12,
+      "status": "RAW_UNRECONCILED_OVERLAP_ONLY_NOT_1_MINUTE_OR_ORDER_QUEUE_EVIDENCE"
+    },
+    {
+      "path": "data/v289/full_august_five_minute_20261002_v1/five_minute_bars_UNRECONCILED.csv",
+      "resolution_minutes": 5,
+      "raw_missed82_date_code_overlap": 10,
+      "raw_allowed7254_date_code_overlap": 199,
+      "status": "RAW_UNRECONCILED_OVERLAP_ONLY_NOT_1_MINUTE_OR_ORDER_QUEUE_EVIDENCE"
+    },
+    {
+      "path": "data/v290/full_long_interval_20261002_v1/thirty_minute_bars_UNRECONCILED.csv",
+      "resolution_minutes": 30,
+      "raw_missed82_date_code_overlap": 62,
+      "raw_allowed7254_date_code_overlap": 3753,
+      "status": "RAW_UNRECONCILED_OVERLAP_ONLY_NOT_1_MINUTE_OR_ORDER_QUEUE_EVIDENCE"
+    }
+  ],
+  "october28_minutes": {
+    "date": "20261028",
+    "records": 49,
+    "first_boards": 51,
+    "first_boards_covered": 5,
+    "missed82_exact_date_code_overlap": 0
+  },
+  "corrections": [
+    "82 four-board paths are future-selected labels (79 unique codes), not an ex-ante candidate universe; reach2=100% is definitional.",
+    "Evaluate all 7254 allowed candidates across 286 dates, retaining 160 unknown outcomes in the 4397 below-top10 candidates.",
+    "Do not impose a 35-candidate ceiling or infer causality from winner-only turnover medians.",
+    "October28 minute evidence cannot substitute for July2025-August2026 signal-day evidence; coarse bars do not identify 1/3-minute events or queue changes.",
+    "Touching limit-up is a trigger, not a confirmed fill; explicit causal exit rules, queue uncertainty and unavailable exits remain necessary.",
+    "Original scenario total return is -52.71%; maximum drawdown is -53.42%.",
+    "Freeze feature definitions and decision rules before comparison; no old failed arm, production score, source prediction or task changes."
+  ]
+}

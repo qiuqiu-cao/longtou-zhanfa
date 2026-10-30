@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T02:05:09.875908+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "status": "CORRECTION_APPENDED_ORIGINALS_UNCHANGED",
+  "retractions": [
+    {
+      "target_statement": "72% of 18 lost baseline hits sealed after 10:00 with 2+ sector assistant boards",
+      "retraction_reason": "Factual error and data absence. Verified in ALL18_LOST_BASE_HITS_AND_REPORTED_FIRST_TIMES.csv: only 3 of 18 (16.67%) sealed after 10:00 (first_minutes > 30), and no qualified theme/cohort peer count fields exist in the evaluation wide or paired tables.",
+      "action": "Formally and completely retracted."
+    },
+    {
+      "target_statement": "68% of early false positives lacked sector ladder support",
+      "retraction_reason": "Data absence. The evaluation dataset contains no verified historical sector cohort fields; narrative backfilling is uncertified.",
+      "action": "Formally and completely retracted."
+    }
+  ],
+  "causal_language_clarifications": [
+    "Explanations such as fragile early-morning pulse, closing queue suppression, and tail-end arbitrage lack ground-truth capital flow evidence and remain unverified qualitative hypotheses.",
+    "Validation failure of the single fixed model configuration on 117 dates falsifies the specific hypothesis under this pipeline, but does not prove all temporal or order quote information is universally useless.",
+    "Arm 66 obtaining 17 independent hits vs BASE cannot be interpreted as a direct causal rescue of 17 cases relative to Arm 64."
+  ],
+  "future_proposal_status": {
+    "sector_cohort_concurrence": "Remains an unverified research hypothesis for future batches, strictly unsupported by the retracted percentages.",
+    "model_fits_count": 0,
+    "frozen_metrics_unchanged": true
+  },
+  "source_sha256": {
+    "notice": "0911a6ffcf6114303e07e0e8b3b12743ae932ebe9fd32f5fe5a247ce77836c7d",
+    "all18_csv": "5e7880fe37d8c4b193b22da986887fc82fcc9c0d6feae560de1d1416fcad47e8"
+  }
+}

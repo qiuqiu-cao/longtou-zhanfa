@@ -1,0 +1,61 @@
+{
+  "correction_at": "2026-10-21T02:53:30+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/gemini_codex_joint_long_high_20261021T022449Z",
+  "reference_files": [
+    "gemini/GEMINI_LONG_HIGH_FINAL_SETTLEMENT.md",
+    "gemini/GEMINI_LONG_HIGH_FINAL_SETTLEMENT.json",
+    "CODEX_PEER_SETTLEMENT_REVIEW.md"
+  ],
+  "corrections": {
+    "validation_selection_status": {
+      "exact_selected_arm": "LONG_HIGH120_63",
+      "clarification": "Selected in validation and drove 14 monthly evaluations; production deployment prohibited does not backdate selected to null."
+    },
+    "paired_matrix_286_dates_primary": {
+      "total_dates": 286,
+      "both_hit": 84,
+      "challenger_exclusive_hit": 14,
+      "baseline_exclusive_hit": 22,
+      "both_failed": 163,
+      "either_unknown": 3,
+      "jointly_known_dates": 283,
+      "sum_check": 286,
+      "by_year": {
+        "2025H2": {
+          "total_dates": 126,
+          "both_hit": 38,
+          "challenger_only": 7,
+          "baseline_only": 8,
+          "both_failed": 73,
+          "unknown": 0,
+          "sum_check": 126
+        },
+        "2026": {
+          "total_dates": 160,
+          "both_hit": 46,
+          "challenger_only": 7,
+          "baseline_only": 14,
+          "both_failed": 90,
+          "unknown": 3,
+          "sum_check": 160
+        }
+      }
+    },
+    "rate_difference_rounding": {
+      "raw_pp_difference": -2.816901408450705,
+      "standard_rounded_pp": -2.82,
+      "statistical_significance_claimed": false
+    },
+    "mechanistic_and_causal_boundaries": {
+      "arm_64_age_suppression": "Retracted as unverified hypothesis; outcome reflects fixed combination on current sample only.",
+      "price_volume_exhaustion": "Retracted; limited experiments on specific features do not imply all price-volume/event features are exhausted.",
+      "target_label_integrity": "pre_close == close.shift(1) confirmed; actual label corruption due to corporate actions is pending verification, not yet established."
+    }
+  },
+  "compliance": {
+    "fits_performed": 0,
+    "production_files_modified": 0,
+    "original_reports_preserved": true
+  }
+}

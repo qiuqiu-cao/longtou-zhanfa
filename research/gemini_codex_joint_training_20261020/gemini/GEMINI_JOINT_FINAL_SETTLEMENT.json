@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-21T02:02:19.432779+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "status": "JOINT_EXPERIMENT_SETTLED_BOTH_ARMS_REJECTED",
+  "source_sha256": {
+    "protocol": "eee9a196170a332b31a4a7ab73b7c252acde4b26b1666085b4511251b1ec16ef",
+    "report": "22f7a275ec6a0b3b1fe89e23588b7a61f9712d028c644f9b79fd487cb2b6ac58",
+    "verification": "46190461660d25139b098fded8df0fb15dec3d993a6715f1a7d407cea5ac2ed3",
+    "complete_4724": "c5b4dc06a1d0348710229b186eb05f838859fe6e5ebd63483dc91b88eb2847fa",
+    "complete_117_paired": "2a162bdf1fe6b87750fbef380bdf794a5bb6d3668f9ff20568729f675ee9b54d"
+  },
+  "validation_audit_recalculated": {
+    "total_validation_dates": 117,
+    "total_validation_rows": 4724,
+    "arms": {
+      "SEAL_TIME_64": {
+        "trainer": "Gemini",
+        "primary": {
+          "hits": 40,
+          "total": 117,
+          "hit_rate": 0.3418803418803419,
+          "baseline_hits": 52,
+          "delta_hits": -12,
+          "passed_gate_gt_52": false
+        },
+        "non_one_price": {
+          "hits": 34,
+          "total": 117,
+          "hit_rate": 0.2905982905982906,
+          "baseline_hits": 48,
+          "delta_hits": -14,
+          "passed_gate_ge_48": false
+        },
+        "paired_transitions_vs_baseline": {
+          "same_selection_count": 62,
+          "challenger_new_hits_gain": 6,
+          "baseline_hits_lost": 18
+        }
+      },
+      "SEAL_TIME_FUND_66": {
+        "trainer": "Codex",
+        "primary": {
+          "hits": 52,
+          "total": 117,
+          "hit_rate": 0.4444444444444444,
+          "baseline_hits": 52,
+          "delta_hits": 0,
+          "passed_gate_gt_52": false
+        },
+        "non_one_price": {
+          "hits": 41,
+          "total": 117,
+          "hit_rate": 0.3504273504273504,
+          "baseline_hits": 48,
+          "delta_hits": -7,
+          "passed_gate_ge_48": false
+        },
+        "paired_transitions_vs_baseline": {
+          "same_selection_count": 43,
+          "challenger_new_hits_gain": 17,
+          "baseline_hits_lost": 17
+        }
+      }
+    }
+  },
+  "joint_selection_audit": {
+    "selected_arm": null,
+    "reason": "Both SEAL_TIME_64 (40 hits) and SEAL_TIME_FUND_66 (52 hits) failed primary validation threshold (> 52 hits). Ties/failures resolve in favor of Frozen Baseline (52 hits, non-one-price 48 hits).",
+    "monthly_rolling_evaluation_fits": 0,
+    "unfiltered_diagnostic_55_cherrypicking_prevented": true,
+    "goal_60_achieved": false,
+    "production_base_deployed": false
+  },
+  "falsification_synthesis": {
+    "hypothesis": "Intraday first-seal timing and reported close-seal quotes improve full-date first-close Top-1 promotion beyond frozen 62-field model.",
+    "falsification_finding": "Decisively falsified. Adding first seal time alone (64 fields) skews selection toward fragile early-morning speculative pumps (loss of 18 baseline hits, net -12). Adding closing seal quote (66 fields) restores 17 hits but simultaneously drops 17 other sound picks (net 0 on primary, net -7 on non-one-price).",
+    "attribution_clarity": "The divergence between 40 and 52 is an empirical property of the feature information content (time-only vs time+closing funds), not a difference in agent reasoning capability."
+  },
+  "next_batch_proposal": {
+    "single_recommendation": "Investigate Sector Cohort Concurrence (当日同题材首板梯队数量与共振先锋身位). Complete error logs show that early sealers that failed almost invariably lacked sector follow-through, while slightly later sealers that succeeded had multi-stock cohort support.",
+    "strict_boundary": "No 3rd arm, no parameter tuning, and no ad-hoc filtering in this batch."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "COVERAGE_CORRECTIONS_VERIFIED_NOT_NEW_STRATEGY",
+  "tests_passed": 11,
+  "rows": 7254,
+  "dates": 286,
+  "original_rank_and_raw_coverage_unchanged": true,
+  "protected_files": 128,
+  "protected_changed": [],
+  "findings": {
+    "m30_grid_incomplete": 8,
+    "m30_daily_price_disagreement": 13,
+    "m30_duplicate_dates_codes": 0
+  },
+  "source_original_preserved": true,
+  "new_fits": 0,
+  "new_strategy_tested": false,
+  "output_hashes": {
+    "BAR_SOURCE_CHECKS.csv": "2885a9bca2ef99e0ab82c1808a005615c9af9761950bf01ae18d0a32a2dd3043",
+    "COMPLETE286_DATE_COVERAGE.csv": "454dbee9f39493557e899809de15197cdec45d279ea3395269d5b4c19f0b203a",
+    "DATA_COVERAGE_REPORT.json": "8be05bbba19a2ed705f92c59cb4d3458a0e4f7522280420c581c98c5f048c43b",
+    "QUALIFIED_7254_DATA_COVERAGE.csv": "cd05865b72d64fd6319f354a60fe97202a3f32af9d5e68f039588847618cf300"
+  },
+  "valid_coarse_descriptions": [
+    "First bar interval whose high touches the reference limit price",
+    "Count of bar closes at the reference limit price",
+    "Bar low below limit following an earlier observed touch; exact within-bar event order remains unknown"
+  ],
+  "unsupported_claims": [
+    "First 30-minute flat bar proves all-day seal",
+    "Last bar closes at limit proves first seal after14:30",
+    "30-minute OHLC proves reseal duration or auction and fills",
+    "No-reach4 labels mean next-day losses",
+    "Static2021 industry means signal-date active theme"
+  ],
+  "next_step": "Define coarse price-path hypotheses with full7254 baseline and explicit missing-evidence fallback before any comparison; test within the identical availability/date scope as well as full-pool impact. No fitted or deployed ranking rule exists."
+}

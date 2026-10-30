@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>龙头战法 · 本地复盘台</title><meta name="description" content="私用归档复盘：大盘、情绪、原BASE与人工观察，分别呈现。">
+  <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/auto.css"><script defer src="/app.js"></script><script defer src="/auto.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-icon">龙</span><span>龙头战法<small>本地复盘台 / PRIVATE</small></span></a>
+    <div class="side-label">今日工作台</div>
+    <nav aria-label="主导航">
+      <a href="#overview" class="active"><span>◈</span> 大盘与情绪</a>
+      <a href="#base"><span>▤</span> 连板 BASE <b id="relayCount">—</b></a>
+      <a href="#firstbase"><span>▧</span> 首板 BASE</a>
+      <a href="#watch"><span>◎</span> 人工观察与预案</a>
+      <a href="#pool"><span>▦</span> 完整候选池</a>
+      <a href="#evidence"><span>⌁</span> 来源与验证</a>
+    </nav>
+    <div class="side-foot"><span class="dot"></span> 本机运行 · 归档与采集<p>无交易连接<br>无付费数据调用</p><span class="version">LOCAL / v0.2</span></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><span class="eyebrow">MARKET REVIEW</span><span class="top-title">每日复盘</span></div><div class="toolbar"><label class="sr-only" for="date">归档日期</label><select id="date"></select><button id="reload" class="button">↻ 重读归档</button><button id="export" class="button quiet">导出数据 ↓</button></div></header>
+    <div id="loading" class="loading">正在读取本地归档…</div>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div id="content" hidden>
+      <section class="section live-section" id="autoStatus"><div class="live-title"><div><span class="eyebrow">自动采集 / FREE PUBLIC DATA</span><h2>当前采集状态</h2></div><span class="pill neutral" id="liveState">正在核对…</span></div><p id="liveSummary" class="small muted"></p><div class="live-metrics" id="liveMetrics"></div><details><summary>查看本次各来源结果与行情时钟</summary><div class="table-wrap"><table><thead><tr><th>来源</th><th>目标交易日</th><th>源日期 / 行情时钟</th><th>实际抓取时间</th><th>状态</th></tr></thead><tbody id="liveSources"></tbody></table></div><p class="small muted" id="livePolicy"></p><div id="liveQuotes"></div></details><div class="live-review-gap" id="liveReviewGap"></div></section>
+      <section id="overview" class="hero section">
+        <div class="hero-line"><span class="pill archive">归档行情 · 非实时</span><span id="clock" class="muted"></span></div>
+        <div class="hero-title"><div><h1><span id="dayTitle"></span> <em>收盘复盘</em></h1><p id="target"></p></div><div class="hero-mark">盘</div></div>
+        <div class="archive-note">下面是指定日期的归档复盘，不随自动报价改写。当前采集在上方单列；未接Level-2、竞价未匹配量或自动每日研判。</div>
+        <div class="index-grid" id="indexes"></div>
+      </section>
+      <section class="section"><div class="section-heading"><div><span class="eyebrow">01 / 市场关系</span><h2>修复的先后，比涨停家数更重要</h2></div><span class="pill neutral">事实与推演分别呈现</span></div>
+        <div class="emotion-grid"><article class="panel summary"><h3>情绪判断</h3><p id="summary"></p><div class="small muted" id="formation"></div></article><article class="panel"><h3>完整返回池</h3><div class="counts" id="counts"></div><p class="small muted" id="scope"></p></article></div>
+        <div class="panel feedback"><h3>上一交易日梯队反馈</h3><div class="table-wrap"><table><thead><tr><th>昨日板位</th><th>晋级 / 完整样本</th><th>未知</th><th>平均昨收收益</th><th>跌幅 ≥ 7%</th></tr></thead><tbody id="feedback"></tbody></table></div></div>
+        <div class="panel chart-panel"><div class="chart-header"><div><h3>情绪关系 · 分钟对照</h3><p class="small muted">相对昨收涨跌；分钟点连线，午休留空。相关走势不证明资金迁移。</p></div><select id="chartChoice" aria-label="分时对照组合"><option value="anchors">指数与高位锚</option><option value="low">机器人高低位</option><option value="old">旧情绪与容量科技</option></select></div><div id="chart"></div><div id="legend" class="legend"></div><div id="chartSource" class="small muted"></div></div>
+      </section>
+      <section id="base" class="section"><div class="section-heading"><div><span class="eyebrow">02 / 原模型</span><h2>连板 BASE · 完整原榜</h2></div><span class="pill blue">分数 ≠ 概率</span></div><div class="notice" id="baseIdentity"></div><div class="model-top" id="modelTop"></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>原排名</th><th>股票</th><th>板位</th><th>原分数 / 100</th><th>原阈值方向</th><th>当前参与状态</th></tr></thead><tbody id="baseRows"></tbody></table></div></div></section>
+      <section id="firstbase" class="section"><div class="section-heading"><div><span class="eyebrow">03 / 原模型</span><h2>首板 BASE · 资格缺口</h2></div><span class="pill archive">当日未输出</span></div><div class="panel empty-state"><div class="empty-icon">∅</div><div><h3>没有合格分数，保留完整首板池</h3><p>不借连板模型分数，也不把人工排序写成模型概率。</p><ul id="firstGaps"></ul><div id="firstModel" class="small muted"></div></div></div></section>
+      <section id="watch" class="section"><div class="section-heading"><div><span class="eyebrow">04 / 人工观察</span><h2>看什么，为什么看，何时取消</h2></div><span class="pill neutral">未验证人工预案</span></div><div class="correction" id="correction"></div><h3 class="group-heading">连板 · 分歧与条件观察 <small>不冒充模型前三或当前买入排名</small></h3><div class="watch-grid" id="relayWatch"></div><h3 class="group-heading">首板 · 三只早期观察 <small>寻找后续龙头潜力，尚无合格首板BASE</small></h3><div class="watch-grid" id="firstWatch"></div><div class="notice">竞价符合不等于可以买。真实竞价成交、未匹配量、开盘承接仍须当时核验；取消后不自动买下一名。一字排队不等于成交，普通限价单不等于条件单。</div></section>
+      <section id="pool" class="section"><div class="section-heading"><div><span class="eyebrow">05 / 完整样本</span><h2>完整候选池</h2></div><span id="poolCount" class="muted small"></span></div><div class="pool-tools"><div class="filters" role="group" aria-label="候选类型"><button data-filter="all" class="selected">全部</button><button data-filter="relay">连板</button><button data-filter="first">首板</button><button data-filter="failed_board">炸板</button><button data-filter="limit_down">跌停</button></div><label><span class="sr-only">搜索股票</span><input id="search" type="search" placeholder="搜索名称或代码…"></label></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>股票</th><th>类型</th><th>收盘</th><th>涨跌幅</th><th>换手</th><th>流通市值</th><th>原筛选 / 数据资格</th><th>查看</th></tr></thead><tbody id="poolRows"></tbody></table></div><div id="noResults" class="no-results" hidden>没有匹配的股票，换一个名称或筛选。</div></div></section>
+      <section id="evidence" class="section"><div class="section-heading"><div><span class="eyebrow">06 / 可追溯</span><h2>来源、时钟与完成边界</h2></div></div><div class="emotion-grid"><article class="panel"><h3>网页交付</h3><ul class="check-list"><li>本地HTTP入口、电脑与手机布局</li><li>原BASE与人工意见分开</li><li>全池搜索、个股详情、分时对照</li><li>重读本地归档、JSON导出</li></ul><p class="small muted">没有接入持续实时采集和自动每日研判。新合格归档出现后可重新读取；旧日期不会自动变成今日行情。</p></article><article class="panel"><h3>模型训练与效果</h3><p id="training"></p><ul id="blockers"></ul><p class="small muted">本网页不加载权重、不拟合、不改模型设置。历史研究结论以原报告为准。</p></article></div><div class="panel"><h3>数据来源与真实取得时间</h3><div class="table-wrap"><table><thead><tr><th>来源</th><th>行情时间</th><th>抓取时间（上海）</th><th>原收据状态</th></tr></thead><tbody id="sources"></tbody></table></div><p id="refreshTime" class="small muted"></p><details><summary>异常与原文件哈希</summary><pre id="provenance"></pre></details></div><div class="panel" id="evidenceImage"></div></section>
+      <footer>龙头战法 · 本地只读复盘台 <span>行情与预案分别保留时点，未知不填零。</span></footer>
+    </div>
+  </main>
+  <dialog id="detail"><div class="dialog-head"><div id="detailTitle"></div><button id="closeDetail" class="button" aria-label="关闭详情">关闭 ×</button></div><div id="detailBody"></div></dialog>
+</body></html>

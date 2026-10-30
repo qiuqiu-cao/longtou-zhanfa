@@ -1,0 +1,62 @@
+{
+  "status": "PAUSED_AFTER_CORRECTION",
+  "formed_at_utc": "2026-10-21T11:48:00.000000+00:00",
+  "user_instruction": "首板的返修完之后先不弄了，后面还是继续弄连板的，你们两个制定好研究报告，然后你审查让Gemini推进",
+  "new_first_board_fits": 0,
+  "new_first_board_models": 0,
+  "fits_74_76": 0,
+  "fits_75_79_retained_rejected": true,
+  "repairs_completed": {
+    "key_based_merge": {
+      "verified": true,
+      "details": "Merged features and relay on ['date', 'code'] explicitly, resolving 173 code and 91 board positional mismatches in September 2026."
+    },
+    "formal_target_integration": {
+      "verified": true,
+      "details": "Adopted formal target with 9,178 known and 67 unknown rows (incorporating 133 legitimate historical mature outcomes previously omitted by raw promoted_next_day)."
+    },
+    "full_denominator_disclosure": {
+      "verified": true,
+      "details": "All tables and receipts now report N, known, unknown, success, known_rate, lower_bound (k/N), upper_bound ((k+unknown)/N), and Wilson 95% on known."
+    },
+    "first_board_scope_correction": {
+      "verified": true,
+      "details": "Corrected scope to 2025-07-01 to 2026-08-31 (286 trading dates, 13,149 rows: 13,047 known, 102 unknown; non-one-price: 12,844 rows: 12,743 known, 101 unknown)."
+    },
+    "cycle_height_change_full_range": {
+      "verified": true,
+      "details": "Disclosed full distribution from -7 to +1; acknowledged that height<=-2 difference interval contains 0 ([-0.57pp, +6.60pp]) and does not satisfy +5pp gate. Removed blanket break encouragement."
+    },
+    "execution_proxy_terminology_and_denominators": {
+      "verified": true,
+      "details": "Re-named '真实次日净收益' to 'S+1假设触板入场、S+2收盘退出的日线执行代理'. Disclosed observable denominators for large_loss (3,018 non-one-word, 1,016 one-word) and net_return (2,956 and 991). Clarified that failed promotion with proxy is not the entire failed population."
+    },
+    "verified_turnover_boards_definition": {
+      "verified": true,
+      "details": "Corrected definition: it counts historical turnover nodes in the streak, not current board height (527 of 4,964 are board=3, 205 are board=4). Deleted invalid gate 'verified_turnover_boards == 2 && EBB_HANDOVER' from first-board design."
+    },
+    "turnover_monotonicity_correction": {
+      "verified": true,
+      "details": "Withdrew 'strictly monotonic' claim (dips from <3% 16.12% to 3-5% 14.64%). Disclosed that turnover fields are already part of BASE 62 features."
+    },
+    "auction_constraint_removal": {
+      "verified": true,
+      "details": "Removed requirement that 09:25 call auction is mandatory to be positive Top1 in S 15:00 close evaluation."
+    }
+  },
+  "closeout_artifacts": {
+    "line_a_script": "research\\relay_joint_research_20261021T1142Z\\first_board_closeout\\line_a_cohort_feedback_study_v2.py",
+    "line_a_json": "research\\relay_joint_research_20261021T1142Z\\first_board_closeout\\LINE_A_CONDITION_STUDY_V2.json",
+    "line_a_markdown": "research\\relay_joint_research_20261021T1142Z\\first_board_closeout\\线A_梯队与断板条件研究报告_修订版.md",
+    "line_b_script": "research\\relay_joint_research_20261021T1142Z\\first_board_closeout\\line_b_seal_quality_audit_v2.py",
+    "line_b_json": "research\\relay_joint_research_20261021T1142Z\\first_board_closeout\\LINE_B_AUDIT_RECEIPT_V2.json",
+    "line_b_markdown": "research\\relay_joint_research_20261021T1142Z\\first_board_closeout\\线B_封板质量与换手分桶资格审计报告_修订版.md"
+  },
+  "standing_baseline_protection": {
+    "first_board_base_62_preserved": true,
+    "first_board_goal_60_preserved": true,
+    "production_base_models_untouched": true,
+    "prior_predictions_untouched": true,
+    "scheduled_tasks_untouched": true
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "at": "2026-10-21T14:52:11.932703+00:00",
+  "status": "P1_REQUIRES_CORRECTION_NO_MODEL_UPGRADE_ESTABLISHED",
+  "new_fits": 0,
+  "source_csv_hash_verified": true,
+  "original_p1_fits": 0,
+  "source_hashes": {
+    "COMPLETION_P1_RESEARCH.json": "7adee1d3c227674401bd3334aaee459e121fa449fac1342e86262bba900ac1d6",
+    "P1_CONDITION_TABLES.json": "a442bedc3d7e44b1080bd926b3b5cb4888b608ea1e0642114ea0167cc7aaafe3",
+    "p1_features_9245.csv": "7b08af2be0212045eb2d7bc5a149a0f5cd4b86e553f9192f31486a795a83fdc9",
+    "P1_PREFIX_AUDIT.json": "fd18e2e0e8489389af5589e90c0ae4c5a55042c3eb1735c382c495460326e968",
+    "P1_连板路径与抗分歧零拟合研究报告.md": "aa432575481be8da7290d5b0241e866d17632dcaf4e210d22afed2cbd91ae138",
+    "run_p1_zero_fit_research.py": "60dd81550339efcbcd8b00f4e7e042849fdc8069381dc4d2a0774d4593a46ee2",
+    "START_P1_RESEARCH.json": "9a319d2dbbd58e7bd7f2d53e85f69df943c0d4fca0e8ed63be4f440a1ee8a132"
+  },
+  "missing_current_anchor_and_mid_price_counterexample": {
+    "date": "d4",
+    "code": "000002",
+    "boards": 2,
+    "anchor_break_today": 1,
+    "anchor_break_age_sessions": "0",
+    "mid_tier_void": 1,
+    "mid_tier_cohort_size": 1,
+    "mid_tier_failed_count": 1,
+    "mid_tier_damaged_ratio": 1.0,
+    "same_height_amount_rank_delta": 0.0
+  },
+  "missing_competitor_amount_counterexample": [
+    {
+      "date": "d4",
+      "code": "000002",
+      "boards": 2,
+      "anchor_break_today": "NO_ANCHOR",
+      "anchor_break_age_sessions": "UNKNOWN",
+      "mid_tier_void": 1,
+      "mid_tier_cohort_size": 0,
+      "mid_tier_failed_count": 0,
+      "mid_tier_damaged_ratio": 0.0,
+      "same_height_amount_rank_delta": 0.0
+    },
+    {
+      "date": "d4",
+      "code": "000003",
+      "boards": 2,
+      "anchor_break_today": "NO_ANCHOR",
+      "anchor_break_age_sessions": "UNKNOWN",
+      "mid_tier_void": 1,
+      "mid_tier_cohort_size": 0,
+      "mid_tier_failed_count": 0,
+      "mid_tier_damaged_ratio": 0.0,
+      "same_height_amount_rank_delta": null
+    }
+  ],
+  "original_cells_arithmetic_reproduced": true,
+  "age_counts_and_observed_dates": {
+    "0": {
+      "n": 3868,
+      "dates": 322,
+      "known": 3829,
+      "unknown": 39,
+      "success": 1517,
+      "known_rate": 0.3961869939932097
+    },
+    "1": {
+      "n": 2191,
+      "dates": 174,
+      "known": 2174,
+      "unknown": 17,
+      "success": 879,
+      "known_rate": 0.4043238270469181
+    },
+    "2": {
+      "n": 1148,
+      "dates": 83,
+      "known": 1148,
+      "unknown": 0,
+      "success": 416,
+      "known_rate": 0.3623693379790941
+    },
+    "3": {
+      "n": 523,
+      "dates": 38,
+      "known": 523,
+      "unknown": 0,
+      "success": 223,
+      "known_rate": 0.42638623326959846
+    },
+    "4": {
+      "n": 349,
+      "dates": 24,
+      "known": 349,
+      "unknown": 0,
+      "success": 196,
+      "known_rate": 0.5616045845272206
+    },
+    "NO_BREAK_IN_WINDOW": {
+      "n": 1140,
+      "dates": 40,
+      "known": 1129,
+      "unknown": 11,
+      "success": 455,
+      "known_rate": 0.4030115146147033
+    },
+    "UNKNOWN": {
+      "n": 26,
+      "dates": 3,
+      "known": 26,
+      "unknown": 0,
+      "success": 17,
+      "known_rate": 0.6538461538461539
+    }
+  },
+  "original_pooled_same_day_diagnostic": {
+    "contested_b2_dates_count": 525,
+    "b2_winner_mean_delta": -0.0025,
+    "b2_winner_median_delta": 0.005,
+    "b2_loser_mean_delta": 0.0546,
+    "b2_loser_median_delta": 0.0372,
+    "delta_gap": 0.0571,
+    "finding": "Losers experience +5.2pp larger surge in same-height turnover/amount percentile than winners on the exact same date and board."
+  },
+  "equal_date_board2_diagnostic": {
+    "original_board2_dates": 682,
+    "paired_observed_dates": 586,
+    "unpaired_dates": 96,
+    "loss_minus_win_delta_mean_by_day": 0.073252331063695,
+    "moving_block5_observed_days_descriptive_ci95": [
+      0.057752368008105154,
+      0.09142721264935094
+    ],
+    "caveat": "Exploratory, outcome-conditioned mixed days only; not selection performance, independent causality or new blind evidence."
+  },
+  "equal_date_real_nonword_board2_diagnostic": {
+    "original_board2_dates": 682,
+    "paired_observed_dates": 506,
+    "unpaired_dates": 176,
+    "loss_minus_win_delta_mean_by_day": 0.0230005496209275,
+    "moving_block5_observed_days_descriptive_ci95": [
+      0.004503212510499104,
+      0.04095842320704742
+    ],
+    "caveat": "Exploratory, outcome-conditioned mixed days only; not selection performance, independent causality or new blind evidence."
+  },
+  "qualification_passed": false,
+  "new_training_freeze_approved": false,
+  "defects": [
+    "Missing source/price interpreted as observed anchor break and middle-tier failure",
+    "Missing competitors discarded from amount ranks instead of interval/unknown",
+    "Narrative contradicts actual age table; fixed causal claims not supported",
+    "Pooled winner/loser means across mixed dates are not within-date equal-weighted control",
+    "B absence only checked by blank theme columns; admitted name/narrative qualification not completed",
+    "Saved baseline in P1 script is copied constants; Codex independent replay remains separately valid"
+  ]
+}

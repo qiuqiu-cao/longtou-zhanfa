@@ -1,0 +1,90 @@
+{
+  "at": "2026-10-21T02:21:49.984533+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "status": "REOPEN_EXPERIMENT_SETTLED_BOTH_ARMS_REJECTED",
+  "verified_sources": {
+    "protocol_sha256": "5b041caad760e8b62a846e40975c816394b5d843381f408a8c24657954e4ad16",
+    "report_sha256": "57d2c27c0a9f23e01047a99d1eb3c7d01368c690aa17854deaf77ba0d5f78cff",
+    "verification_sha256": "86c32cb830cb536ca32a69731eb025c9ac9206c4928becf2ad743995994bdba3",
+    "complete4724_sha256": "79bafcca591d146640fb446e123582beb387df567a12733031a84977b25292bc",
+    "complete117_paired_sha256": "e760c33de32bf4d36afad4ad22a28289293580a784143b6554708ded35f9a693"
+  },
+  "independent_recalculated_results": {
+    "FROZEN_BASE_62": {
+      "primary_hits": 52,
+      "primary_hit_rate": 0.4444444444444444,
+      "non_one_price_hits": 48,
+      "non_one_price_hit_rate": 0.41025641025641024
+    },
+    "REOPEN_STATE_63": {
+      "trainer": "Gemini",
+      "primary": {
+        "hits": 47,
+        "total": 117,
+        "hit_rate": 0.4017094017094017,
+        "delta_vs_base": -5,
+        "passed_gt_52": false
+      },
+      "non_one_price": {
+        "hits": 43,
+        "total": 117,
+        "hit_rate": 0.36752136752136755,
+        "delta_vs_base": -5,
+        "passed_ge_48": false
+      },
+      "paired_transitions": {
+        "same_code_dates": 83,
+        "primary_new_hits_gain": 3,
+        "primary_baseline_hits_lost": 8,
+        "primary_net": -5,
+        "non_one_price_new_hits_gain": 4,
+        "non_one_price_baseline_hits_lost": 9,
+        "non_one_price_net": -5
+      }
+    },
+    "REOPEN_TIME_FUND_67": {
+      "trainer": "Codex",
+      "primary": {
+        "hits": 53,
+        "total": 117,
+        "hit_rate": 0.452991452991453,
+        "delta_vs_base": 1,
+        "passed_gt_52": true
+      },
+      "non_one_price": {
+        "hits": 44,
+        "total": 117,
+        "hit_rate": 0.37606837606837606,
+        "delta_vs_base": -4,
+        "passed_ge_48": false
+      },
+      "paired_transitions": {
+        "same_code_dates": 45,
+        "primary_new_hits_gain": 18,
+        "primary_baseline_hits_lost": 17,
+        "primary_net": 1,
+        "non_one_price_new_hits_gain": 16,
+        "non_one_price_baseline_hits_lost": 20,
+        "non_one_price_net": -4
+      }
+    }
+  },
+  "joint_evaluation_decision": {
+    "selected_arm": null,
+    "reason": "REOPEN_STATE_63 failed both gates (47 <= 52, 43 < 48). REOPEN_TIME_FUND_67 passed primary (53 > 52) but failed non-one-price (44 < 48). Both arms rejected per pre-registered joint criteria.",
+    "monthly_rolling_fits_count": 0,
+    "production_deployment": false,
+    "goal_60_achieved": false
+  },
+  "peer_joint_report_review": {
+    "joint_report_path": "research/gemini_codex_joint_reopen_20261021T020835Z/联合训练_开板状态_结果.md",
+    "factual_errors_found": 0,
+    "verification_conclusion": "Joint report numbers, transitions, and narrative boundaries fully match independent code audit."
+  },
+  "single_next_direction_proposal": {
+    "direction": "Long-cycle Overhead Resistance Distance (长周期前高阻力位距离代理)",
+    "data_gap": "Existing 62 features only look back 60 trading days (position_60, breakout_20). Overhead lock-up chips (套牢盘) from 120-day and 250-day peaks are completely unrepresented.",
+    "raw_source": "Existing bound verified point-in-time daily bars archive (bars table: 2,025,305 rows, verified OHLC exact to cent, 100% historical coverage, zero late-request bias).",
+    "prohibition": "No tuning of this batch thresholds, no third arm in this batch."
+  }
+}

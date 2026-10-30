@@ -1,0 +1,111 @@
+{
+  "formed_at": "2026-10-30T10:08:51.972428+00:00",
+  "rows": 7254,
+  "dates": 286,
+  "slots": 858,
+  "source_hashes": {
+    "research\\first_board_optimization_20261030\\results\\S1_FULL_SCORED.csv": "3fc5e67224efce2fb0c9a73c5dea7e098a6dc834d4a487928f4ec7954a1c1b40",
+    "research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c",
+    "research\\first_board_math_20261030\\math_frontier.py": "3feb37ec2ea1a371aec1de283725a5742ce217873dea754850dd879b3f220e15",
+    "research\\first_board_dragon_upgrade_20261029\\DELETION_RECEIPT.json": "9f708eef8f1e23244ae9f4efcd13ed9d841f1870e6d42c0c729e75f1bc6eaf49"
+  },
+  "all_within_day_pair_crossings": 33884,
+  "distinct_global_top3_change_weights": 730,
+  "point_and_interval_states": 1463,
+  "exact_arithmetic": "Integer coefficients and rational crossing/midpoints; every boundary included; code-ascending ties",
+  "hindsight_best_constant_mixture": {
+    "weight_left": 0.9683542196745893,
+    "weight_right": 0.9710411995163244,
+    "weight_left_exact": "10570296360831357/10915733257591889",
+    "weight_right_exact": "24393382796827407/25120852553916095",
+    "state": "OPEN_INTERVAL",
+    "hits": 265,
+    "known": 852,
+    "unknown": 6,
+    "precision_known": 0.31103286384976525,
+    "confirmed_hits_per_all_slots": 0.30885780885780884,
+    "possible_hits_per_all_slots": 0.31585081585081587,
+    "reach4_hits": 55,
+    "reach4_known": 834
+  },
+  "maximum_known_hits_with_constant_mixture": 265,
+  "maximum_unknown_optimistic_precision_all_slots": 0.31585081585081587,
+  "any_constant_mixture_reaches_40": false,
+  "oracle_daily_varying_weight_known_hits": 339,
+  "optimistic_monotone_two_score_known_hit_capacity": 435,
+  "representative_replay_checks": [
+    {
+      "weight": 0.0,
+      "hits": 221,
+      "known": 854
+    },
+    {
+      "weight": 0.1,
+      "hits": 223,
+      "known": 853
+    },
+    {
+      "weight": 0.5,
+      "hits": 240,
+      "known": 854
+    },
+    {
+      "weight": 0.6,
+      "hits": 245,
+      "known": 854
+    },
+    {
+      "weight": 0.7,
+      "hits": 253,
+      "known": 853
+    },
+    {
+      "weight": 0.9,
+      "hits": 261,
+      "known": 852
+    },
+    {
+      "weight": 1.0,
+      "hits": 261,
+      "known": 852
+    }
+  ],
+  "discrimination": {
+    "s1_score": {
+      "known": 7181,
+      "global_auc": 0.6156716448089421,
+      "brier_diagnostic": 0.202309778867761
+    },
+    "height_score": {
+      "known": 7181,
+      "global_auc": 0.5789073968481201,
+      "brier_diagnostic": 0.1566549677131993
+    },
+    "calibrated_score": {
+      "known": 7181,
+      "global_auc": 0.613272484878876,
+      "brier_diagnostic": 0.13947972592475014
+    }
+  },
+  "mean_within_date_s1_auc": 0.6029299702282458,
+  "mean_within_date_height_auc": 0.5616985733367391,
+  "s1_top3_descriptive_block_interval": {
+    "repetitions": 5000,
+    "block_dates": 25,
+    "interval95": [
+      0.2660443407234539,
+      0.3372365339578454
+    ],
+    "source": "Already inspected history; descriptive temporal resampling, not independent validation"
+  },
+  "conditional_randomization_reference": {
+    "expected_known_hits": 153.45024932803724,
+    "sd_if_independent_days": 10.34241402553676,
+    "definition": "Shuffle only known labels within each day; unknown positions fixed; not a tradable benchmark or serial-dependence-adjusted p-value"
+  },
+  "new_model_fits": 0,
+  "live_weight_selected": false,
+  "production_changed": false,
+  "independent_validation": false,
+  "protected_files_unchanged": 128
+}

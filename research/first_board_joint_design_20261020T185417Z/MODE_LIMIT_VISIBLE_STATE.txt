@@ -1,0 +1,108 @@
+210 content list
+												1211 container
+													1212 text 不变量与截断 ：在 668 个日期的无标签资格核查中，必须检验 
+													1213 text index6 <= index7 * (1 + 1e-5)
+													1214 text  的满足率；若发现 
+													1215 text index7
+													1216 text  在不同日期的快照中随未来行情变动，或违背 
+													1217 text index6 <= index7
+													1218 text  的比例 >1%，则直接判定⑤⑥不合格并剔除（退回仅含①②③④的 66 字段单臂），绝不强凑。计算字段⑥时统一写为 
+													1219 text np.where((index7 > 0) & (index6 >= 0), np.minimum(index6 / index7, 1.0), np.nan)
+													1220 text 。
+												1221 container
+													1222 text 交易分钟数精确映射（字段①） ：将 
+													1223 text index4
+													1224 text  转为上海时区 
+													1225 text HH:MM:SS
+													1226 text （自00:00起算分钟数 
+													1227 text 𝑡
+													1228 text ）：若 
+													1229 container
+														1230 text 𝑡 < 570
+													1231 text （09:30前集合竞价），记为 
+													1232 container
+														1233 text 𝑡 − 570
+													1234 text （如 09:25 为 
+													1235 text -5.0
+													1236 text ）；若 
+													1237 container
+														1238 text 570 ≤ 𝑡 ≤ 690
+													1239 text （早盘），记为 
+													1240 container
+														1241 text 𝑡 − 570
+													1242 text ；若 
+													1243 container
+														1244 text 690 < 𝑡 < 780
+													1245 text （午休），夹逼为 
+													1246 text 120.0
+													1247 text ；若 
+													1248 container
+														1249 text 𝑡 ≥ 780
+													1250 text （午盘），记为 
+													1251 container
+														1252 text 𝑡 − 780 + 120
+													1253 text （扣除90分钟午休，15:00收盘为 
+													1254 text 240.0
+													1255 text ）。
+												1256 container
+													1257 container p-rc_bfb450265787da46-337
+														1258 text 同日首封分位防泄漏（字段②） ：仅在 
+														1259 text STAGE_CYCLE_GENE
+														1260 text  原 28,503 池
+														1261 text 内按 
+														1262 text signal_date
+														1263 text  分组，对 
+														1264 text first_seal_minutes
+														1265 text  非空行计算 
+														1266 text rank(pct=True, ascending=True)
+														1267 text ，缺失行严格保留 
+														1268 text NaN
+														1269 text ，且验证 
+														1270 text 2025-06-30
+														1271 text  与 
+														1272 text 2025-12-31
+														1273 text  两处时间前缀截断差异为 0
+														1274 text 。
+														1275 pop up button (collapsed) Secondary Actions: Expand, Description: 查看来自“TXT: CHROME_GEMINI_REVIEW_PACKET.txt, TXT: IPO_TENURE_GEMINI4_REVIEW_PACKET.txt, TXT: CHROME_GEMINI_REVIEW_PACKET.txt”及其他网站的引用内容的来源详情。按 Enter 键打开来源对话框。
+												1276 container
+													1277 container p-rc_bfb450265787da46-338
+														1278 text 覆盖率门控 ：开发集（
+														1279 text <2025-01-01
+														1280 text ）与 2025H1 验证集（4,724行/117日）的 6 个新字段非空覆盖率须  ≥ 85%  且每日至少 1 只可观测
+														1281 text 。
+														1282 pop up button (collapsed) Secondary Actions: Expand, Description: 查看来自“TXT: CHROME_GEMINI_REVIEW_PACKET.txt和TXT: IPO_TENURE_GEMINI4_REVIEW_PACKET.txt”的引用内容的来源详情。按 Enter 键打开来源对话框。
+									1283 container p-rc_bfb450265787da46-339
+										1284 text 若 668 日只读源拉取与上述无标签资格核查通过，即冻结该唯一挑战头（原 HGB 超参数、原训练成员、日等权、42日校准、固定资本筛选及 
+										1285 text >52/117
+										1286 text  且非一字 
+										1287 text >=48/117
+										1288 text  验证门控全部不变
+										1289 text ），由你在本地执行单次验证拟合。
+										1290 pop up button (collapsed) ID: ow340, Secondary Actions: Expand, Description: 查看来自“TXT: CHROME_GEMINI_REVIEW_PACKET.txt和TXT: IPO_TENURE_GEMINI4_REVIEW_PACKET.txt”的引用内容的来源详情。按 Enter 键打开来源对话框。
+								1291 checkbox Description: 答得好, Value: 0
+								1292 checkbox Description: 答得不好, Value: 0
+								1293 button 重做
+								1294 button 复制
+								1295 button 显示更多选项
+					605 container
+						1304 button 滚动至底部
+						606 container
+							607 container
+								608 text entry area (settable) Description: 为 Gemini 输入提示, Value: 
+
+									1305 text 问问 Gemini
+							610 pop up button (collapsed) Description: 上传和工具, Secondary Actions: Expand
+							611 container
+								612 pop up button (collapsed) Description: 打开模式选择器，当前模式为“Flash-Lite”, Secondary Actions: Expand
+								1297 container
+									1298 button 语音输入 (^⇧D)
+						615 text Gemini 是一款 AI 工具，其回答未必正确无误。
+			616 container
+				617 button Convert chat to PDF
+					618 image Convert chat to PDF
+					619 text Convert chat to PDF
+					620 text Open this chat in Acrobat
+				621 button 打开对话操作菜单。
+		622 container Notifications
+
+The focused UI element is 0 AXWebArea 龙头战法共同训练挑战裁决 - Google Gemini, URL: gemini.google.com/app/ec17e48589786054

@@ -1,0 +1,201 @@
+{
+  "formed_at": "2026-10-30T08:58:50.013185+00:00",
+  "source_hashes": {
+    "research\\first_board_optimization_20261030\\results\\S1_FULL_SCORED.csv": "3fc5e67224efce2fb0c9a73c5dea7e098a6dc834d4a487928f4ec7954a1c1b40",
+    "research\\first_board_optimization_20261030\\results\\HEIGHT_FULL_SCORED.csv": "3f78ce174888d4d18feefca7cc58fdbd713e872796c4b6a7f07294a639510a51",
+    "research\\first_board_optimization_20261030\\results\\FIXED_ENGINE_70_30_FULL_SCORED.csv": "b9f3fb08954f50f7419bdbaa9a803c09936b92afc8b573ca6df7076930df4660",
+    "research\\first_board_joint_design_20261020T185417Z\\qualification_resumed_20261021\\COMPLETE28503_NEW_FIELDS_NO_LABELS.csv": "049c3b537aeb95b5dbacf0b64177a1024dc27a71c40fdadce8b9f149ff0a4277",
+    "research\\first_board_leader_emotion_20261021T1706Z\\UNFROZEN_PRESSURE_RESPONSE_FEATURES_WITHOUT_TARGETS.csv": "a0a0eccaa7f45ebe873385070d1e1ed457e8ed69003ee467e380f3a3cd1726e3",
+    "research\\first_board_top3_40_20261030\\analyze_top3_gap.py": "ea1f59a3f207395ccd97f5e2ab63db6e45a9eff9a508c3c097031c7ad3d41be0",
+    "research\\first_board_dragon_upgrade_20261029\\DELETION_RECEIPT.json": "9f708eef8f1e23244ae9f4efcd13ed9d841f1870e6d42c0c729e75f1bc6eaf49"
+  },
+  "target": "Daily Top-3 pooled next-official-session closing-limit-up precision >= 40%",
+  "baseline": {
+    "dates": 286,
+    "slots": 858,
+    "selected": 858,
+    "known": 852,
+    "unknown": 6,
+    "unfilled_slots": 0,
+    "hits": 261,
+    "known_precision": 0.30633802816901406,
+    "confirmed_hits_per_all_slots": 0.3041958041958042,
+    "possible_hits_per_all_slots": 0.3111888111888112,
+    "complete_daily_top3": true,
+    "extra_hits_for_known_target": 80,
+    "extra_hits_for_all_slots_target": 83,
+    "observed_target_met": false,
+    "all_slots_target_confirmed": false,
+    "predictive_validation_passed": false
+  },
+  "rank_metrics": [
+    {
+      "rank": 1,
+      "rows": 286,
+      "hits": 106,
+      "failures": 178,
+      "unknown": 2,
+      "known": 284,
+      "known_precision": 0.3732394366197183
+    },
+    {
+      "rank": 2,
+      "rows": 286,
+      "hits": 80,
+      "failures": 203,
+      "unknown": 3,
+      "known": 283,
+      "known_precision": 0.2826855123674912
+    },
+    {
+      "rank": 3,
+      "rows": 286,
+      "hits": 75,
+      "failures": 210,
+      "unknown": 1,
+      "known": 285,
+      "known_precision": 0.2631578947368421
+    },
+    {
+      "rank": 4,
+      "rows": 286,
+      "hits": 63,
+      "failures": 221,
+      "unknown": 2,
+      "known": 284,
+      "known_precision": 0.22183098591549297
+    },
+    {
+      "rank": 5,
+      "rows": 286,
+      "hits": 65,
+      "failures": 220,
+      "unknown": 1,
+      "known": 285,
+      "known_precision": 0.22807017543859648
+    }
+  ],
+  "daily_known_hits_histogram": {
+    "0": 101,
+    "1": 115,
+    "2": 64,
+    "3": 6
+  },
+  "oracle_opportunities_DIAGNOSTIC_ONLY": {
+    "oracle_known_hits_within_5_DIAGNOSTIC_ONLY": 383,
+    "oracle_extra_within_5_DIAGNOSTIC_ONLY": 122,
+    "oracle_known_hits_within_10_DIAGNOSTIC_ONLY": 569,
+    "oracle_extra_within_10_DIAGNOSTIC_ONLY": 308,
+    "oracle_known_hits_within_full_pool_DIAGNOSTIC_ONLY": 768,
+    "oracle_extra_within_full_pool_DIAGNOSTIC_ONLY": 507
+  },
+  "existing_evidence_coverage": {
+    "reported_first_seal_trading_minutes": 7221,
+    "reported_close_seal_log_amount_ratio": 7221,
+    "prelaunch_shock_return": 4806,
+    "prelaunch_shock_return_same_day_rank": 3906
+  },
+  "comparisons": {
+    "HEIGHT": {
+      "metrics": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 854,
+        "unknown": 4,
+        "unfilled_slots": 0,
+        "hits": 221,
+        "known_precision": 0.25878220140515223,
+        "confirmed_hits_per_all_slots": 0.25757575757575757,
+        "possible_hits_per_all_slots": 0.26223776223776224,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 121,
+        "extra_hits_for_all_slots_target": 123,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false
+      },
+      "outgoing_p2": {
+        "rows": 515,
+        "hits": 132,
+        "failures": 377,
+        "unknown": 6
+      },
+      "incoming_p2": {
+        "rows": 515,
+        "hits": 92,
+        "failures": 419,
+        "unknown": 4
+      },
+      "outgoing_p4": {
+        "rows": 515,
+        "hits": 21,
+        "failures": 477,
+        "unknown": 17
+      },
+      "incoming_p4": {
+        "rows": 515,
+        "hits": 24,
+        "failures": 478,
+        "unknown": 13
+      }
+    },
+    "FIXED_ENGINE_70_30": {
+      "metrics": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 852,
+        "unknown": 6,
+        "unfilled_slots": 0,
+        "hits": 255,
+        "known_precision": 0.2992957746478873,
+        "confirmed_hits_per_all_slots": 0.2972027972027972,
+        "possible_hits_per_all_slots": 0.3041958041958042,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 86,
+        "extra_hits_for_all_slots_target": 89,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false
+      },
+      "outgoing_p2": {
+        "rows": 271,
+        "hits": 70,
+        "failures": 199,
+        "unknown": 2
+      },
+      "incoming_p2": {
+        "rows": 271,
+        "hits": 64,
+        "failures": 205,
+        "unknown": 2
+      },
+      "outgoing_p4": {
+        "rows": 271,
+        "hits": 12,
+        "failures": 251,
+        "unknown": 8
+      },
+      "incoming_p4": {
+        "rows": 271,
+        "hits": 15,
+        "failures": 251,
+        "unknown": 5
+      }
+    }
+  },
+  "protected_files_unchanged": 128,
+  "new_fits": 0,
+  "new_rank_rules": 0,
+  "production_changed": false,
+  "new_forward_validation": false,
+  "limits": [
+    "All 286 days were previously inspected; no new independent validation.",
+    "Oracle capacities use future labels and cannot be used in scoring.",
+    "Historical provider first seal is not a continuous intraday path or queue.",
+    "Static legacy industry is not contemporaneous theme membership.",
+    "Pressure response remains an unfrozen, unvalidated hypothesis.",
+    "Top-3 promotion precision is not trading win rate or calibrated probability."
+  ]
+}

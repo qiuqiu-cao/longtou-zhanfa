@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-21T01:51:19.268196+00:00",
+  "status": "FEATURES_QUALIFIED_AWAIT_GEMINI_COUNTERPROPOSAL",
+  "source_dates": 668,
+  "complete_first_board_rows": 28503,
+  "qualified_arms": {
+    "SEAL_TIME_64": true,
+    "SEAL_TIME_FUND_66": true
+  },
+  "periods": {
+    "development": {
+      "rows": 10630,
+      "dates": 265,
+      "observations": 10349,
+      "price_mismatch": 0,
+      "field_coverage": {
+        "reported_first_seal_trading_minutes": 0.9722483537158984,
+        "reported_first_seal_observed_pool_rank": 0.9722483537158984,
+        "reported_close_seal_log_amount_ratio": 0.9481655691439322,
+        "reported_close_seal_log_floatcap_ratio": 0.9481655691439322
+      },
+      "dates_without_time_observation": 0
+    },
+    "validation2025H1": {
+      "rows": 4724,
+      "dates": 117,
+      "observations": 4694,
+      "price_mismatch": 0,
+      "field_coverage": {
+        "reported_first_seal_trading_minutes": 0.9930143945808637,
+        "reported_first_seal_observed_pool_rank": 0.9930143945808637,
+        "reported_close_seal_log_amount_ratio": 0.9862404741744285,
+        "reported_close_seal_log_floatcap_ratio": 0.9862404741744285
+      },
+      "dates_without_time_observation": 0
+    },
+    "evaluation": {
+      "rows": 13149,
+      "dates": 286,
+      "observations": 13048,
+      "price_mismatch": 0,
+      "field_coverage": {
+        "reported_first_seal_trading_minutes": 0.992166704692372,
+        "reported_first_seal_observed_pool_rank": 0.992166704692372,
+        "reported_close_seal_log_amount_ratio": 0.9920906532816184,
+        "reported_close_seal_log_floatcap_ratio": 0.9920906532816184
+      },
+      "dates_without_time_observation": 0
+    }
+  },
+  "qualification_path": "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_joint_design_20261020T185417Z\\qualification_resumed_20261021\\qualification.json",
+  "qualification_sha256": "75f56832b34855342427dda6e8c0caaf784c7a478452d7d3a46de895e8eaf396",
+  "feature_code": "D:\\Documents\\ChatGPT\\龙头战法\\first_board_joint_seal_model.py",
+  "new_fits": 0,
+  "tests": "5 targeted tests passed;not predictive improvement",
+  "existing_first_second_binding": "D:\\Documents\\ChatGPT\\龙头战法\\research\\gemini_codex_joint_training_20261020\\codex\\CODEX_FIRST_SECOND_DATA_QUALIFICATION.json",
+  "next_action": "Gemini reads new scope and critiques time64/timefund66;sharedfreeze then each agent fits one arm once"
+}

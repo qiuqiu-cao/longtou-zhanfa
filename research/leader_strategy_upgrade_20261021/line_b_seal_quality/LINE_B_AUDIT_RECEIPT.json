@@ -1,0 +1,223 @@
+{
+  "title": "Line B Seal Quality and Turnover Binning Audit Receipt",
+  "timestamp_utc": "2026-10-21T11:18:34.643074+00:00",
+  "zero_fits_declaration": true,
+  "network_calls": 0,
+  "source_hashes": {
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\dataset.joblib": "d4b462f0e86873b571371034c81c405f1d5c61656d7bf7b2cc23b5b313cd3383",
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c"
+  },
+  "relay_field_audit": {
+    "daily_one_word": {
+      "non_null_count": 9199,
+      "null_count": 46,
+      "non_null_rate": 0.995,
+      "qualified_cutoff": true,
+      "status": "QUALIFIED"
+    },
+    "verified_turnover_boards": {
+      "non_null_count": 9242,
+      "null_count": 3,
+      "non_null_rate": 0.9997,
+      "qualified_cutoff": true,
+      "status": "QUALIFIED"
+    },
+    "observed_nonword_boards": {
+      "non_null_count": 9242,
+      "null_count": 3,
+      "non_null_rate": 0.9997,
+      "qualified_cutoff": true,
+      "status": "QUALIFIED"
+    },
+    "first_open_after_one_word": {
+      "non_null_count": 8986,
+      "null_count": 259,
+      "non_null_rate": 0.972,
+      "qualified_cutoff": true,
+      "status": "QUALIFIED"
+    },
+    "relative_volume": {
+      "non_null_count": 9026,
+      "null_count": 219,
+      "non_null_rate": 0.9763,
+      "qualified_cutoff": true,
+      "status": "QUALIFIED"
+    }
+  },
+  "relay_one_word_comparison": {
+    "non_one_word": {
+      "n": 7073,
+      "promoted_count": 2223,
+      "promotion_rate": 0.3143,
+      "wilson95": [
+        0.3036,
+        0.3252
+      ],
+      "mean_next_open_gap": 0.0227,
+      "large_loss_rate": 0.4062,
+      "mean_net_return": -0.0282
+    },
+    "one_word": {
+      "n": 2126,
+      "promoted_count": 1421,
+      "promotion_rate": 0.6684,
+      "wilson95": [
+        0.6481,
+        0.6881
+      ],
+      "mean_next_open_gap": 0.0745,
+      "large_loss_rate": 0.439,
+      "mean_net_return": -0.0307
+    }
+  },
+  "relay_verified_turnover_boards": {
+    "turnover_boards_0": {
+      "n": 545,
+      "promoted_count": 390,
+      "promotion_rate": 0.7156,
+      "wilson95": [
+        0.6763,
+        0.7519
+      ],
+      "mean_next_open_gap": 0.0822,
+      "large_loss_rate": 0.425,
+      "mean_net_return": -0.0315
+    },
+    "turnover_boards_1": {
+      "n": 1617,
+      "promoted_count": 824,
+      "promotion_rate": 0.5096,
+      "wilson95": [
+        0.4852,
+        0.5339
+      ],
+      "mean_next_open_gap": 0.052,
+      "large_loss_rate": 0.4115,
+      "mean_net_return": -0.029
+    },
+    "turnover_boards_2": {
+      "n": 4964,
+      "promoted_count": 1537,
+      "promotion_rate": 0.3096,
+      "wilson95": [
+        0.2969,
+        0.3226
+      ],
+      "mean_next_open_gap": 0.0256,
+      "large_loss_rate": 0.4097,
+      "mean_net_return": -0.0278
+    },
+    "turnover_boards_3": {
+      "n": 1340,
+      "promoted_count": 558,
+      "promotion_rate": 0.4164,
+      "wilson95": [
+        0.3903,
+        0.443
+      ],
+      "mean_next_open_gap": 0.0299,
+      "large_loss_rate": 0.4,
+      "mean_net_return": -0.0285
+    },
+    "turnover_boards_4": {
+      "n": 472,
+      "promoted_count": 199,
+      "promotion_rate": 0.4216,
+      "wilson95": [
+        0.3779,
+        0.4666
+      ],
+      "mean_next_open_gap": 0.0298,
+      "large_loss_rate": 0.469,
+      "mean_net_return": -0.0385
+    },
+    "turnover_boards_5": {
+      "n": 173,
+      "promoted_count": 77,
+      "promotion_rate": 0.4451,
+      "wilson95": [
+        0.373,
+        0.5195
+      ],
+      "mean_next_open_gap": 0.0285,
+      "large_loss_rate": 0.4255,
+      "mean_net_return": -0.0168
+    }
+  },
+  "first_board_field_audit": {
+    "turnover": {
+      "non_null_count": 13148,
+      "null_count": 1,
+      "non_null_rate": 0.9999,
+      "status": "QUALIFIED"
+    },
+    "one_price": {
+      "non_null_count": 13149,
+      "null_count": 0,
+      "non_null_rate": 1.0,
+      "status": "QUALIFIED"
+    }
+  },
+  "first_board_turnover_binnings": {
+    "<3%": {
+      "n": 1696,
+      "promoted_count": 271,
+      "promotion_rate": 0.1598,
+      "wilson95": [
+        0.1431,
+        0.178
+      ]
+    },
+    "3-5%": {
+      "n": 2506,
+      "promoted_count": 364,
+      "promotion_rate": 0.1453,
+      "wilson95": [
+        0.132,
+        0.1596
+      ]
+    },
+    "5-10%": {
+      "n": 4717,
+      "promoted_count": 704,
+      "promotion_rate": 0.1492,
+      "wilson95": [
+        0.1394,
+        0.1597
+      ]
+    },
+    "10-15%": {
+      "n": 2163,
+      "promoted_count": 344,
+      "promotion_rate": 0.159,
+      "wilson95": [
+        0.1442,
+        0.1751
+      ]
+    },
+    "15-20%": {
+      "n": 922,
+      "promoted_count": 161,
+      "promotion_rate": 0.1746,
+      "wilson95": [
+        0.1515,
+        0.2005
+      ]
+    },
+    ">20%": {
+      "n": 839,
+      "promoted_count": 162,
+      "promotion_rate": 0.1931,
+      "wilson95": [
+        0.1678,
+        0.2212
+      ]
+    }
+  },
+  "audit_verdict": {
+    "qualified_for_model_design": true,
+    "key_finding_1": "S1 first board non-one-price shows monotonic promotion increase above 5% turnover (3-5%: 14.64% -> 15-20%: 17.52% -> >20%: 19.38%).",
+    "key_finding_2": "daily_one_word has higher nominal promotion (68.28% vs 32.13%) but slightly higher large_loss rate on failure (43.9% vs 40.6%) and cannot be traded post-close.",
+    "key_finding_3": "verified_turnover_boards=2 (standard 2-board turnover) is the most crowded failure trap (promo 31.50%), while turnover_boards=0 (pure one-price chain) promotes at 73.72% but carries severe unfillable liquidity hazard."
+  }
+}

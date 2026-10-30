@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-20T18:44:52.543338+00:00",
+  "status": "PASS",
+  "verifier_fits": 0,
+  "all_raw_source_and_protected_hashes_unchanged": true,
+  "all28503_original_fields_and_labels_unchanged": true,
+  "all4724_scores_replayed": true,
+  "feature_count": 62,
+  "removed_from_estimator_only": "listing_age_sessions",
+  "new_feature_only": "listing_calendar_age_days",
+  "actual_age_coverage": 28503,
+  "validation_rows": 4724,
+  "validation_known": 4714,
+  "validation_unknown": 10,
+  "first_unknown": 126,
+  "original_full_and_prefix_training_members_unchanged": true,
+  "original_parameters": {
+    "calibration_prefix": {
+      "max_iter": 160,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 60,
+      "learning_rate": 0.06,
+      "l2_regularization": 8,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "early_stopping": false
+    },
+    "full": {
+      "max_iter": 160,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 60,
+      "learning_rate": 0.06,
+      "l2_regularization": 8,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "early_stopping": false
+    }
+  },
+  "settlement": {
+    "primary": {
+      "dates": 117,
+      "challenger_hits": 48,
+      "baseline_hits": 52,
+      "challenger_known": 117,
+      "baseline_known": 117,
+      "common_wins": 39,
+      "challenger_only_win": 9,
+      "baseline_only_win": 13,
+      "common_failures": 56
+    },
+    "non_one_price": {
+      "dates": 117,
+      "challenger_hits": 43,
+      "baseline_hits": 48,
+      "challenger_known": 117,
+      "baseline_known": 117,
+      "common_wins": 35,
+      "challenger_only_win": 8,
+      "baseline_only_win": 13,
+      "common_failures": 61
+    }
+  },
+  "core_fits": 2,
+  "temporal_calibrator_fits": 1,
+  "monthly_fits": 0,
+  "baseline_refits": 0,
+  "second_stage_refits": 0,
+  "interpretation": "REJECTED:primary and non-one-price validation both declined;not a60%achievement,no deployment"
+}

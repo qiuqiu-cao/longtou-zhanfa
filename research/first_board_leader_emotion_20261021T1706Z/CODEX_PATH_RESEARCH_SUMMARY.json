@@ -1,0 +1,93 @@
+{
+  "at_utc": "2026-10-21T17:09:48.251325+00:00",
+  "fits": 0,
+  "scope": {
+    "rows": 28503,
+    "dates": 668,
+    "first": "2023-11-29",
+    "last": "2026-08-31",
+    "known": 28116,
+    "unknown": 387,
+    "allowed": 18540,
+    "excluded": 9963
+  },
+  "path_groups": {
+    "STOP1": 22953,
+    "STOP2": 3413,
+    "STOP3": 923,
+    "STOP4": 442,
+    "UNKNOWN": 387,
+    "REACH5PLUS": 385
+  },
+  "path_groups_allowed": {
+    "STOP1": 14809,
+    "STOP2": 2202,
+    "STOP3": 647,
+    "STOP4": 315,
+    "REACH5PLUS": 300,
+    "UNKNOWN": 267
+  },
+  "days_with_known_high5": 260,
+  "complete_path_days": 562,
+  "days_same_emotion_but_high5_and_stop1": 260,
+  "cases": [
+    {
+      "rule": "First chronological complete same-date cohort in year with allowed reach5plus and an observed stop1",
+      "signal_date": "2024-01-02",
+      "complete_rows": 34,
+      "allowed": 32,
+      "high5": [
+        {
+          "code": "603099",
+          "name": "长白山",
+          "allowed": true,
+          "turnover": 4.976701541230734,
+          "one_price": 0,
+          "max_height_5_LABEL_ONLY": 6.0
+        }
+      ],
+      "stop1_count": 27
+    },
+    {
+      "rule": "First chronological complete same-date cohort in year with allowed reach5plus and an observed stop1",
+      "signal_date": "2025-01-02",
+      "complete_rows": 37,
+      "allowed": 34,
+      "high5": [
+        {
+          "code": "605033",
+          "name": "美邦股份",
+          "allowed": true,
+          "turnover": 2.52260724852071,
+          "one_price": 0,
+          "max_height_5_LABEL_ONLY": 6.0
+        }
+      ],
+      "stop1_count": 29
+    },
+    {
+      "rule": "First chronological complete same-date cohort in year with allowed reach5plus and an observed stop1",
+      "signal_date": "2026-03-04",
+      "complete_rows": 30,
+      "allowed": 19,
+      "high5": [
+        {
+          "code": "605268",
+          "name": "王力安防",
+          "allowed": true,
+          "turnover": 2.0974399483660187,
+          "one_price": 0,
+          "max_height_5_LABEL_ONLY": 5.0
+        }
+      ],
+      "stop1_count": 24
+    }
+  ],
+  "maturity": "Original uniform S+5 official-session horizon; max_height_5 is capped at6 because it includes first board plus5 successors. >=5 is a continuation proxy, not a verified leader label.",
+  "statistical_status": "Descriptive already-seen history, no new model fit/selection/validation; original risk exclusions retained but all excluded winners and unknowns saved.",
+  "source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_leader_20261020T114600Z\\all_first_boards_features_and_LABEL_ONLY.csv": "baa079cf88ff8df3d3dcddf3883a3dff89d0815d0884b67caa6cacb1eb387482",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_capital_risk_20261020_run1\\COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv": "eb979ae06bbb8324eff9268d0284026b98b859a8b602aa615a11c589f2c276c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_leader_emotion_20261021T1706Z\\diagnose_firstboard_paths.py": "d9dd15a764e20b77c93fc7eff59bb165a5724d148eca50a5f72ab47864ece18c"
+  }
+}

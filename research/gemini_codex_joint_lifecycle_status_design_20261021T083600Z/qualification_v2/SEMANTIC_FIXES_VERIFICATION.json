@@ -1,0 +1,84 @@
+{
+  "formed_at": "2026-10-21T09:46:40.286511+00:00",
+  "status": "QUALIFICATION_V2_SEMANTIC_CORRECTIONS_PASS",
+  "zero_fits": true,
+  "zero_http": true,
+  "zero_labels": true,
+  "prefix_checks": [
+    {
+      "cutoff": "2024-12-31",
+      "rows": 10630,
+      "prefix_equal": true
+    },
+    {
+      "cutoff": "2025-06-30",
+      "rows": 15354,
+      "prefix_equal": true
+    }
+  ],
+  "audit_fixes_summary": {
+    "issue1_tie_breaking_stock_code_dependence": {
+      "resolved": true,
+      "method": "fractional average ranking with ties receiving identical rank; all min ties receive is_earliest=1.0",
+      "synthetic_test_pass": true
+    },
+    "issue2_missing_candidate_seal_facts": {
+      "resolved": true,
+      "method": "explicit NaN propagation; cohorts with incomplete seal facts propagate NaN to preserve full cohort denominator",
+      "v2_missing_own_first_with_rank": 0,
+      "v2_missing_own_first_with_earliest": 0,
+      "v2_missing_own_close_with_rank": 0,
+      "synthetic_test_pass": true
+    },
+    "issue3_known_state_checking_on_anchors_and_followers": {
+      "resolved": true,
+      "method": "explicit check of known = eligible and valid_price and regular_price for all anchors and followers; NaN on any unobserved member",
+      "synthetic_test_pass": true
+    },
+    "issue4_rolling_10day_peak_height_lookback": {
+      "resolved": true,
+      "method": "rolling [p-10, p-1] peak height lookup via pre-indexed closing_height_dict; proper rebound board height retention"
+    },
+    "issue5_strict_external_anchor_requirement": {
+      "resolved": true,
+      "method": "cand_matched_tokens strictly filters for external anchors where anchor_code != candidate_code and p1 state is known",
+      "actual_cohort_without_nonself_anchor_v2": 0,
+      "was_in_v1": 250
+    },
+    "issue6_follower_sentiment_acceleration": {
+      "resolved": true,
+      "method": "computed on fixed S-2 cohort (height 1/2 at S-2) tracking R(S) - R(S-1)",
+      "correlation_with_old_follower_return": 0.25826025086582466,
+      "correlation_was_in_v1": 0.97828,
+      "orthogonal_variance_injected": 0.9333016428227213
+    }
+  },
+  "synthetic_reproducers": {
+    "same_seal_tie_test": {
+      "pass": true,
+      "ranks": [
+        0.5,
+        0.5
+      ],
+      "earliest": [
+        1.0,
+        1.0
+      ]
+    },
+    "missing_seal_test": {
+      "pass": true,
+      "ranks": [
+        null,
+        null
+      ]
+    },
+    "unknown_anchor_test": {
+      "pass": true,
+      "decays": [
+        null,
+        null
+      ]
+    }
+  },
+  "core_feature_v2_sha256": "cc78aa6d6739c9f68b37fe6efcf67435625601f4374cfdbb9f94735fb57fb055"
+}

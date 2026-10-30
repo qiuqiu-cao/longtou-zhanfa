@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-21T02:05:35.153291+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_index": 5,
+  "current_step": "SETTLEMENT_CORRECTION_COMPLETED",
+  "status": "CORRECTED",
+  "final_outcome": {
+    "selected_arm": null,
+    "reason": "Both arms failed validation gates (> 52 hits, >= 48 non-one-price). Baseline wins ties.",
+    "SEAL_TIME_64": {
+      "primary_hits": 40,
+      "non_one_price_hits": 34,
+      "status": "REJECTED_VALIDATION"
+    },
+    "SEAL_TIME_FUND_66": {
+      "primary_hits": 52,
+      "non_one_price_hits": 41,
+      "status": "REJECTED_VALIDATION"
+    },
+    "FROZEN_BASELINE": {
+      "primary_hits": 52,
+      "non_one_price_hits": 48
+    },
+    "goal_60_achieved": false,
+    "monthly_rolling_fits": 0,
+    "production_deployed": false
+  },
+  "artifacts": {
+    "data_qualification": {
+      "path": "research/gemini_codex_joint_training_20261020/gemini/GEMINI_DATA_QUALIFICATION.json",
+      "sha256": "36316c4235817bc5541a2691f5129694fc018025af41559fe0fb2a44c39b2056"
+    },
+    "proposal": {
+      "path": "research/gemini_codex_joint_training_20261020/gemini/GEMINI_PROPOSAL_BEFORE_NEW_FITS.md",
+      "sha256": "088af1b3b22c3d824b94177e346e68104dbee3e1dc0ba036825f4b9fc443bfb9"
+    },
+    "joint_protocol": {
+      "path": "research/gemini_codex_joint_training_20261020/JOINT_FROZEN_PROTOCOL.json",
+      "sha256": "eee9a196170a332b31a4a7ab73b7c252acde4b26b1666085b4511251b1ec16ef"
+    },
+    "seal_time_64_report": {
+      "path": "research/first_board_joint_seal_20261021_run1/SEAL_TIME_64/report.json",
+      "sha256": "de33503c2c008f7084e49330f94be7bf91fc6edaa48f5a177b87b830bf1021f4"
+    },
+    "settlement_json": {
+      "path": "research/gemini_codex_joint_training_20261020/gemini/GEMINI_JOINT_FINAL_SETTLEMENT.json",
+      "sha256": "79f34cf55625a5efa3fe1a7051ec7ee4315ec0274b7ff4d70bd04dd97bcd2a5c"
+    },
+    "settlement_md": {
+      "path": "research/gemini_codex_joint_training_20261020/gemini/GEMINI_JOINT_FINAL_SETTLEMENT.md",
+      "sha256": "ec802e18bc850666f77610b08792641a04c46485375fc931c08ebf948cf90b3e"
+    },
+    "settlement_correction_json": {
+      "path": "research/gemini_codex_joint_training_20261020/gemini/GEMINI_JOINT_SETTLEMENT_CORRECTION.json",
+      "sha256": "b12b052961d5ff1bc44e49385183a239a16943e3788dc5988159aeeae237a65d"
+    },
+    "settlement_correction_md": {
+      "path": "research/gemini_codex_joint_training_20261020/gemini/GEMINI_JOINT_SETTLEMENT_CORRECTION.md",
+      "sha256": "ac88dbc52cb01d04bf589349a079da5711fe498ebc8361a8a8b96907667f0f06"
+    }
+  },
+  "completed_actions": [
+    "Traced and resolved legacy 0.011 tolerance bug in old pool.",
+    "Audited and verified KPL 668/668 first-board seal time and closing seal order quote dataset.",
+    "Agreed and frozen JOINT_FROZEN_PROTOCOL.json with exact status AGREED_BEFORE_NEW_FITS.",
+    "Independently trained and validated SEAL_TIME_64 arm (40 hits / 117 dates).",
+    "Independently audited COMPLETE4724_BOTH_ARMS_WITH_FROZEN_BASE.csv and COMPLETE117_DAILY_PAIRED_SELECTIONS_ALL_ARMS.csv.",
+    "Recalculated paired selection transitions (Arm 64: +6 gain, -18 loss, net -12; Arm 66: +17 gain, -17 loss, net 0 primary, -7 non-one-price).",
+    "Formulated joint settlement, objective feature attribution, and evidence-supported future recommendation.",
+    "Formally retracted unsupported 72% and 68% claims; verified true first_minutes > 30 on 18 lost baseline hits is exactly 3/18 (16.67%).",
+    "Clarified capital causality as qualitative hypotheses and circumscribed failure to the current fixed configuration."
+  ],
+  "pending_actions": [],
+  "compliance_checks": {
+    "gemini_model_version": "Gemini 3.8 Flash High",
+    "unverified_hard_filters_deployed": false,
+    "diagnostic_55_cherrypicking_prevented": true,
+    "exact_to_cent_rule_enforced": true,
+    "full_denominator_preserved": true,
+    "production_base_protected": true,
+    "no_third_arm_or_retuning_in_batch": true
+  }
+}

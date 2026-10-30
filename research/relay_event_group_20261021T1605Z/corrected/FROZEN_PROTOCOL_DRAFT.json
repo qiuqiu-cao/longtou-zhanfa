@@ -1,0 +1,90 @@
+{
+  "at_utc": "2026-10-21T16:52:00.000000+00:00",
+  "arm": "ST_A_EVENT_COHORT_FIXED3",
+  "control": "ST_DUAL_FIXED3_CONTROL",
+  "algorithm": "HistGradientBoostingClassifier",
+  "params": {
+    "learning_rate": 0.06,
+    "max_iter": 120,
+    "max_depth": 3,
+    "min_samples_leaf": 25,
+    "l2_regularization": 3.0,
+    "random_state": 20261015
+  },
+  "features_count": 89,
+  "base_features_count": 82,
+  "added_features": [
+    "event_cohort_matched",
+    "event_cohort_size",
+    "event_cohort_primary_member",
+    "event_cohort_damage_ratio",
+    "event_cohort_repair_ratio",
+    "event_anchor_status",
+    "event_cohort_amount_share_delta"
+  ],
+  "folds": [
+    {"id": "2025H2", "start": "2025-07-01", "end": "2025-12-31"},
+    {"id": "2026JanAug", "start": "2026-01-01", "end": "2026-08-31"},
+    {"id": "2026Sep", "start": "2026-09-01", "end": "2026-09-30"}
+  ],
+  "evaluation_scope": {
+    "rows": 3707,
+    "dates": 302,
+    "unknown_target_rows": 67
+  },
+  "gates": {
+    "nonword_top1_min_hits": 140,
+    "min_gain_hits_vs_control": 6,
+    "paired_bootstrap_lower_positive": true,
+    "full_top1_protected_min": 209,
+    "base_nonword_top2_slot_hits": 246,
+    "base_nonword_top3_slot_hits": 356,
+    "nonword_top2_dates_min": 184,
+    "nonword_top3_dates_min": 233,
+    "fold_top1_no_loss_vs_control": true,
+    "fold_classification_degradation_max": 0.025
+  },
+  "checks": [
+    {
+      "fold": {"id": "2025H2", "start": "2025-07-01", "end": "2025-12-31"},
+      "train_rows": 4062,
+      "days": 252,
+      "max_target": "2025-06-30",
+      "training_digest": "6ec37b401701e93f9f89df85bd010a4c67b482af9ce408547cfaac3441745e17",
+      "weight_digest": "4e5239b2627036094d247ebb90590258c3c5137040b120e9d43e76fc4ea97c87",
+      "test_rows": 1584,
+      "test_days": 126
+    },
+    {
+      "fold": {"id": "2026JanAug", "start": "2026-01-01", "end": "2026-08-31"},
+      "train_rows": 3243,
+      "days": 252,
+      "max_target": "2025-12-31",
+      "training_digest": "abf7d870ab1c2da11202bdae5c4d6d94185e60e61b0c2ca497bdc3cbfb72febd",
+      "weight_digest": "dedce48be71ea917cb16c776faf3f96a2ee51b712c5fa619b359c0d4fc4b556c",
+      "test_rows": 1941,
+      "test_days": 160
+    },
+    {
+      "fold": {"id": "2026Sep", "start": "2026-09-01", "end": "2026-09-30"},
+      "train_rows": 3059,
+      "days": 252,
+      "max_target": "2026-08-31",
+      "training_digest": "16324a110bce74ae477b85d02d18e1adfb8b91c8a9311ed7b873568f59cfd21f",
+      "weight_digest": "7bc83e895e17978d4106efcc718bda274ef5f5e411c0ac09f214dcaf6499d3e0",
+      "test_rows": 182,
+      "test_days": 16
+    }
+  ],
+  "sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\historical_final\\dataset.joblib": "6ef4a7b70e7b9fa35c1394a2f1a9b2fd21f352e46606a8f5e567180ee29f42e9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\corrected\\event_group_features_9245.csv": "8103c09a74ae7acde691c2271707647c0d13a5d39af1eb0de58a0ecb904a688f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\corrected\\fixed_cohort_validation.py": "0c31ffdffb1d94d50105e4e7d7b681a79719442a16803d5de6ec967a56a2b2c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_research.py": "a5c90006a5e80f99e7f3edf19054f19c9b1877b2a1b70dd6ae544d8871030e38",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_preprocessing.py": "0b598b3f77db674f27f8b067378b3802eb33e5962be4adec0b7093db2f998e3c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\execution_after_binning_repair\\2025-07_ST_DUAL_model.joblib": "7732bdc57170d206d4591379a7e12968a5db7eb06a72bafc33edd1ed65b40028",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\execution_after_binning_repair\\2026-01_ST_DUAL_model.joblib": "7bcfc63c0f2155ba14e86e1032c839dbab39113f0fd2aeee427ca1d3befbf37a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\execution_after_binning_repair\\2026-09_ST_DUAL_model.joblib": "8100459fda902179d456e4e757fd7d5627639c0f1f8d7022fd44c62b3ba162ef"
+  }
+}

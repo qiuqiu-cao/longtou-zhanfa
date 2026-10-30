@@ -1,0 +1,65 @@
+{
+  "formed_at": "2026-10-23T16:26:34.990279+00:00",
+  "requests": 166,
+  "normalized_received": 163,
+  "current_full_rows": 81,
+  "current_exact_known": 79,
+  "unknown_current": [
+    {
+      "code": "000972",
+      "name": "中基健康",
+      "qualification": "UNKNOWN_MISSING_EXACT_DAILY"
+    },
+    {
+      "code": "603600",
+      "name": "永艺股份",
+      "qualification": "UNKNOWN_MISSING_EXACT_DAILY"
+    }
+  ],
+  "requested_daily_failures": [
+    {
+      "code": "000972",
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Read timed out. (read timeout=4)",
+      "parse_error": null
+    },
+    {
+      "code": "002347",
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Read timed out. (read timeout=4)",
+      "parse_error": null
+    },
+    {
+      "code": "603600",
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Read timed out. (read timeout=4)",
+      "parse_error": null
+    }
+  ],
+  "price_board_conflicts": [],
+  "seal_time_conflicts": [
+    {
+      "code": "002724",
+      "name": "海洋王",
+      "field": "FIRST_LAST_SEAL_TIME",
+      "page": "14:25 / 14:54",
+      "primary_first": 95351,
+      "primary_last": 145406,
+      "resolution": "UNKNOWN_REQUIRE_INTRADAY_CROSSCHECK"
+    },
+    {
+      "code": "603721",
+      "name": "中广天择",
+      "field": "FIRST_LAST_SEAL_TIME",
+      "page": "13:58 / 13:59",
+      "primary_first": 95521,
+      "primary_last": 135933,
+      "resolution": "UNKNOWN_REQUIRE_INTRADAY_CROSSCHECK"
+    }
+  ],
+  "all_receipt_hashes_valid": true,
+  "prior_full97_preserved": true,
+  "models_loaded": 0,
+  "fits": 0,
+  "previous_files_changed": 0
+}

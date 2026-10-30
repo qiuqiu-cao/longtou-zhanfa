@@ -1,0 +1,45 @@
+{
+  "status": "ACK_P1_EXECUTION_STARTED",
+  "acknowledged_at_utc": "2026-10-21T11:55:00.000000+00:00",
+  "batch_start_utc": "2026-10-21T11:55:00.000000+00:00",
+  "batch_deadline_utc": "2026-10-21T12:25:00.000000+00:00",
+  "budget_minutes": 30,
+  "actual_peer": "Antigravity Gemini 3.8 Flash High Turbo",
+  "reviewer": "Codex",
+  "fits": 0,
+  "http_requests": 0,
+  "p1_approved": true,
+  "new_model_training_approved": false,
+  "verified_review_documents": {
+    "CODEX_RELAY_RESEARCH_REVIEW.md": "200e29493608aa1aa855cafa4f3bbd1b2a0f74f37072e8d9c9c900013fceedea",
+    "连板联合研究报告_审查执行版.md": "9bcd76fd076e72bb8702aec837dfe0f7b009f9ffc16c86da2194d1fb56da55e7",
+    "CODEX_REVIEW_DECISION.json": "308e5681670f1343eb28535d0e457f4b9e660fb8734a5a2e9650015131917216",
+    "CODEX_RELAY_DATA_SCOPE.json": "d05fa8d8596e4af1fb2dfef993888e91e18909d74e16987719797138835939c7"
+  },
+  "dataset_binding": {
+    "dataset_path": "research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\historical_final\\dataset.joblib",
+    "dataset_sha256": "6ef4a7b70e7b9fa35c1394a2f1a9b2fd21f352e46606a8f5e567180ee29f42e9",
+    "rows": 9245,
+    "dates": 684,
+    "known_targets": 9178,
+    "unknown_targets": 67
+  },
+  "corrections_acknowledged": {
+    "board_success_counts_corrected": {
+      "board_2": "5491 known, 1884 success, 34.31% (corrected from 1833)",
+      "board_3": "1875 known, 903 success, 48.16% (corrected from 899)",
+      "board_4_plus": "1812 known, 916 success, 50.55% (corrected from 971)"
+    },
+    "same_height_elimination_rate_coverage": "9177 known, 68 unknown (not 100%)",
+    "september_denominators_corrected": {
+      "non_one_price_full": "7/16 hits, 3 unknown (7/13 was known-only subset)",
+      "full_pool_top1": "10/16 hits"
+    },
+    "stored_baselines_common_scope": "3707 rows, 302 dates (2025-07-01 to 2026-09-30), not 684 dates (684 is historical pool)",
+    "unverified_assertions_withdrawn": [
+      "Withdrew 'fixed 2-day cleansing' as established fact; treating as conditional hypothesis to test.",
+      "Withdrew '10%-20% optimal turnover' and fixed positive scoring.",
+      "Retracted unverified '1 - OpenCount' resilience formula."
+    ]
+  }
+}

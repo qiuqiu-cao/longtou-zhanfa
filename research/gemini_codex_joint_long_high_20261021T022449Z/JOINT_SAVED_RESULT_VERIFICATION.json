@@ -1,0 +1,545 @@
+{
+  "at": "2026-10-21T02:42:21.073290+00:00",
+  "status": "PASS_SAVED_VALIDATION_REPLAY",
+  "model_fits": 0,
+  "full28503_original_fields_labels_screen_unchanged": true,
+  "all_original_daily_calendar_master_hashes": true,
+  "unchanged_pending_protocol_except_peer_ack": true,
+  "full4724_scores_per_arm": true,
+  "unknown126_and_validation10_retained": true,
+  "arms": {
+    "LONG_HIGH120_63": {
+      "rows": 4724,
+      "all_saved_scores_replayed": true,
+      "full_and_prefix_members_match": true,
+      "exact_fixed_estimator_params": true,
+      "primary": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 53,
+        "hit_rate": 0.452991452991453,
+        "wilson95": [
+          0.36572041742148637,
+          0.5432512210596254
+        ],
+        "full_positive_recall": 0.06141367323290846,
+        "false_positives": 64,
+        "false_negatives": 810,
+        "positive_pool": 691,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 863,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.452991452991453,
+        "excluded_rows": 1147,
+        "excluded_known_promoters": 172,
+        "excluded_unknown": 2
+      },
+      "non_one_price": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 51,
+        "hit_rate": 0.4358974358974359,
+        "wilson95": [
+          0.34949970890097853,
+          0.5263707072096283
+        ],
+        "full_positive_recall": 0.06296296296296296,
+        "false_positives": 66,
+        "false_negatives": 759,
+        "positive_pool": 660,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 810,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.4358974358974359,
+        "excluded_rows": 1092,
+        "excluded_known_promoters": 150,
+        "excluded_unknown": 2
+      },
+      "pass_validation": true,
+      "trainer": "Gemini",
+      "core_fits": 2,
+      "temporal_calibrator_fits": 1
+    },
+    "LONG_HIGH120_AGE_64": {
+      "rows": 4724,
+      "all_saved_scores_replayed": true,
+      "full_and_prefix_members_match": true,
+      "exact_fixed_estimator_params": true,
+      "primary": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 43,
+        "hit_rate": 0.36752136752136755,
+        "wilson95": [
+          0.28566809393867315,
+          0.4577974326899144
+        ],
+        "full_positive_recall": 0.04982618771726535,
+        "false_positives": 74,
+        "false_negatives": 820,
+        "positive_pool": 691,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 863,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.36752136752136755,
+        "excluded_rows": 1147,
+        "excluded_known_promoters": 172,
+        "excluded_unknown": 2
+      },
+      "non_one_price": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 39,
+        "hit_rate": 0.3333333333333333,
+        "wilson95": [
+          0.25441546280057303,
+          0.42284761908700474
+        ],
+        "full_positive_recall": 0.04814814814814815,
+        "false_positives": 78,
+        "false_negatives": 771,
+        "positive_pool": 660,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 810,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.3333333333333333,
+        "excluded_rows": 1092,
+        "excluded_known_promoters": 150,
+        "excluded_unknown": 2
+      },
+      "pass_validation": false,
+      "trainer": "Codex",
+      "core_fits": 2,
+      "temporal_calibrator_fits": 1
+    }
+  },
+  "drift": [
+    {
+      "arm": "LONG_HIGH120_63",
+      "scope": "non_one_price",
+      "dates": 117,
+      "same_code": 76,
+      "both_hit": 40,
+      "gained_hits": 11,
+      "lost_hits": 8,
+      "both_failed": 58,
+      "unknown_outcomes": 0
+    },
+    {
+      "arm": "LONG_HIGH120_63",
+      "scope": "primary",
+      "dates": 117,
+      "same_code": 73,
+      "both_hit": 42,
+      "gained_hits": 11,
+      "lost_hits": 10,
+      "both_failed": 54,
+      "unknown_outcomes": 0
+    },
+    {
+      "arm": "LONG_HIGH120_AGE_64",
+      "scope": "non_one_price",
+      "dates": 117,
+      "same_code": 79,
+      "both_hit": 31,
+      "gained_hits": 8,
+      "lost_hits": 17,
+      "both_failed": 61,
+      "unknown_outcomes": 0
+    },
+    {
+      "arm": "LONG_HIGH120_AGE_64",
+      "scope": "primary",
+      "dates": 117,
+      "same_code": 81,
+      "both_hit": 37,
+      "gained_hits": 6,
+      "lost_hits": 15,
+      "both_failed": 59,
+      "unknown_outcomes": 0
+    }
+  ],
+  "no_actor_or_causal_interpretation": true,
+  "production_changes": false,
+  "monthly_replay": {
+    "months": 14,
+    "rows": 13149,
+    "all_scores_and_members_replayed": true,
+    "all28_core_params_and_hashes": true,
+    "metrics": {
+      "all": {
+        "new_screened": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 284,
+          "unknown": 2,
+          "hits": 98,
+          "hit_rate": 0.34507042253521125,
+          "wilson95": [
+            0.2921801686345265,
+            0.40209597782282563
+          ],
+          "full_positive_recall": 0.04537037037037037,
+          "false_positives": 186,
+          "false_negatives": 2062,
+          "positive_pool": 1251,
+          "outcome_coverage": 0.993006993006993,
+          "full_positive_pool": 2160,
+          "full_signal_dates": 286,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.34265734265734266,
+          "excluded_rows": 5895,
+          "excluded_known_promoters": 909,
+          "excluded_unknown": 29
+        },
+        "frozen_screened": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 284,
+          "unknown": 2,
+          "hits": 106,
+          "hit_rate": 0.3732394366197183,
+          "wilson95": [
+            0.31903074297454864,
+            0.4308315586723758
+          ],
+          "full_positive_recall": 0.049074074074074076,
+          "false_positives": 178,
+          "false_negatives": 2054,
+          "positive_pool": 1251,
+          "outcome_coverage": 0.993006993006993,
+          "full_positive_pool": 2160,
+          "full_signal_dates": 286,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.3706293706293706,
+          "excluded_rows": 5895,
+          "excluded_known_promoters": 909,
+          "excluded_unknown": 29
+        },
+        "original_full": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 285,
+          "unknown": 1,
+          "hits": 116,
+          "hit_rate": 0.4070175438596491,
+          "wilson95": [
+            0.35158468619741945,
+            0.4649236494951339
+          ],
+          "full_positive_recall": 0.053703703703703705,
+          "false_positives": 169,
+          "false_negatives": 2044,
+          "positive_pool": 2160,
+          "outcome_coverage": 0.9965034965034965
+        },
+        "new_unfiltered_diagnostic": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 285,
+          "unknown": 1,
+          "hits": 121,
+          "hit_rate": 0.4245614035087719,
+          "wilson95": [
+            0.3685541382016768,
+            0.48257526622813063
+          ],
+          "full_positive_recall": 0.056018518518518516,
+          "false_positives": 164,
+          "false_negatives": 2039,
+          "positive_pool": 2160,
+          "outcome_coverage": 0.9965034965034965
+        }
+      },
+      "2025H2": {
+        "new_screened": {
+          "selected": 126,
+          "selected_dates": 126,
+          "known": 126,
+          "unknown": 0,
+          "hits": 45,
+          "hit_rate": 0.35714285714285715,
+          "wilson95": [
+            0.27884355878787953,
+            0.4438952310641771
+          ],
+          "full_positive_recall": 0.04983388704318937,
+          "false_positives": 81,
+          "false_negatives": 858,
+          "positive_pool": 585,
+          "outcome_coverage": 1.0,
+          "full_positive_pool": 903,
+          "full_signal_dates": 126,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.35714285714285715,
+          "excluded_rows": 1960,
+          "excluded_known_promoters": 318,
+          "excluded_unknown": 1
+        },
+        "frozen_screened": {
+          "selected": 126,
+          "selected_dates": 126,
+          "known": 126,
+          "unknown": 0,
+          "hits": 46,
+          "hit_rate": 0.36507936507936506,
+          "wilson95": [
+            0.28616266218332564,
+            0.45197952823250553
+          ],
+          "full_positive_recall": 0.05094130675526024,
+          "false_positives": 80,
+          "false_negatives": 857,
+          "positive_pool": 585,
+          "outcome_coverage": 1.0,
+          "full_positive_pool": 903,
+          "full_signal_dates": 126,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.36507936507936506,
+          "excluded_rows": 1960,
+          "excluded_known_promoters": 318,
+          "excluded_unknown": 1
+        },
+        "original_full": {
+          "selected": 126,
+          "selected_dates": 126,
+          "known": 126,
+          "unknown": 0,
+          "hits": 44,
+          "hit_rate": 0.3492063492063492,
+          "wilson95": [
+            0.2715482562775235,
+            0.4357871330107585
+          ],
+          "full_positive_recall": 0.048726467331118496,
+          "false_positives": 82,
+          "false_negatives": 859,
+          "positive_pool": 903,
+          "outcome_coverage": 1.0
+        },
+        "new_unfiltered_diagnostic": {
+          "selected": 126,
+          "selected_dates": 126,
+          "known": 126,
+          "unknown": 0,
+          "hits": 48,
+          "hit_rate": 0.38095238095238093,
+          "wilson95": [
+            0.3008709848998441,
+            0.4680780066435364
+          ],
+          "full_positive_recall": 0.053156146179401995,
+          "false_positives": 78,
+          "false_negatives": 855,
+          "positive_pool": 903,
+          "outcome_coverage": 1.0
+        }
+      },
+      "2026": {
+        "new_screened": {
+          "selected": 160,
+          "selected_dates": 160,
+          "known": 158,
+          "unknown": 2,
+          "hits": 53,
+          "hit_rate": 0.33544303797468356,
+          "wilson95": [
+            0.26650325646792516,
+            0.412194647153845
+          ],
+          "full_positive_recall": 0.042163882259347654,
+          "false_positives": 105,
+          "false_negatives": 1204,
+          "positive_pool": 666,
+          "outcome_coverage": 0.9875,
+          "full_positive_pool": 1257,
+          "full_signal_dates": 160,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.33125,
+          "excluded_rows": 3935,
+          "excluded_known_promoters": 591,
+          "excluded_unknown": 28
+        },
+        "frozen_screened": {
+          "selected": 160,
+          "selected_dates": 160,
+          "known": 158,
+          "unknown": 2,
+          "hits": 60,
+          "hit_rate": 0.379746835443038,
+          "wilson95": [
+            0.3077754233976651,
+            0.4574268907874746
+          ],
+          "full_positive_recall": 0.0477326968973747,
+          "false_positives": 98,
+          "false_negatives": 1197,
+          "positive_pool": 666,
+          "outcome_coverage": 0.9875,
+          "full_positive_pool": 1257,
+          "full_signal_dates": 160,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.375,
+          "excluded_rows": 3935,
+          "excluded_known_promoters": 591,
+          "excluded_unknown": 28
+        },
+        "original_full": {
+          "selected": 160,
+          "selected_dates": 160,
+          "known": 159,
+          "unknown": 1,
+          "hits": 72,
+          "hit_rate": 0.4528301886792453,
+          "wilson95": [
+            0.37748186767165937,
+            0.5304039980738902
+          ],
+          "full_positive_recall": 0.057279236276849645,
+          "false_positives": 87,
+          "false_negatives": 1185,
+          "positive_pool": 1257,
+          "outcome_coverage": 0.99375
+        },
+        "new_unfiltered_diagnostic": {
+          "selected": 160,
+          "selected_dates": 160,
+          "known": 159,
+          "unknown": 1,
+          "hits": 73,
+          "hit_rate": 0.4591194968553459,
+          "wilson95": [
+            0.3835394437387993,
+            0.5366283065740103
+          ],
+          "full_positive_recall": 0.05807478122513922,
+          "false_positives": 86,
+          "false_negatives": 1184,
+          "positive_pool": 1257,
+          "outcome_coverage": 0.99375
+        }
+      },
+      "non_one_price": {
+        "new_screened": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 284,
+          "unknown": 2,
+          "hits": 75,
+          "hit_rate": 0.2640845070422535,
+          "wilson95": [
+            0.21620771871655978,
+            0.3182582315707718
+          ],
+          "full_positive_recall": 0.03738783649052842,
+          "false_positives": 209,
+          "false_negatives": 1931,
+          "positive_pool": 1175,
+          "outcome_coverage": 0.993006993006993,
+          "full_positive_pool": 2006,
+          "full_signal_dates": 286,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.26223776223776224,
+          "excluded_rows": 5744,
+          "excluded_known_promoters": 831,
+          "excluded_unknown": 28
+        },
+        "frozen_screened": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 284,
+          "unknown": 2,
+          "hits": 80,
+          "hit_rate": 0.28169014084507044,
+          "wilson95": [
+            0.23255677171681582,
+            0.3366505255639986
+          ],
+          "full_positive_recall": 0.03988035892323031,
+          "false_positives": 204,
+          "false_negatives": 1926,
+          "positive_pool": 1175,
+          "outcome_coverage": 0.993006993006993,
+          "full_positive_pool": 2006,
+          "full_signal_dates": 286,
+          "abstention_dates": 0,
+          "decision_date_coverage": 1.0,
+          "successful_predictions_per_all_pool_dates": 0.27972027972027974,
+          "excluded_rows": 5744,
+          "excluded_known_promoters": 831,
+          "excluded_unknown": 28
+        },
+        "original_full": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 285,
+          "unknown": 1,
+          "hits": 80,
+          "hit_rate": 0.2807017543859649,
+          "wilson95": [
+            0.23171654974841088,
+            0.3355200910359129
+          ],
+          "full_positive_recall": 0.03988035892323031,
+          "false_positives": 205,
+          "false_negatives": 1926,
+          "positive_pool": 2006,
+          "outcome_coverage": 0.9965034965034965
+        },
+        "new_unfiltered_diagnostic": {
+          "selected": 286,
+          "selected_dates": 286,
+          "known": 285,
+          "unknown": 1,
+          "hits": 79,
+          "hit_rate": 0.2771929824561403,
+          "wilson95": [
+            0.22845092065484668,
+            0.33186150638202633
+          ],
+          "full_positive_recall": 0.03938185443668993,
+          "false_positives": 206,
+          "false_negatives": 1927,
+          "positive_pool": 2006,
+          "outcome_coverage": 0.9965034965034965
+        }
+      }
+    },
+    "second_recheck": {
+      "first_selections": 286,
+      "first_promoted": 98,
+      "second_rechecks_available": 98,
+      "second_outcomes_known": 98,
+      "continued_to_third": 43,
+      "conditional_second_to_third": 0.4387755102040816,
+      "qualified_rechecks": 18,
+      "qualified_wins": 10,
+      "qualified_hit_rate": 0.5555555555555556,
+      "full_first_to_third_rate": 0.15140845070422534
+    },
+    "goal_60_achieved": false
+  }
+}

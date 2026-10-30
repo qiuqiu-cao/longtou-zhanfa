@@ -1,0 +1,20 @@
+{
+  "counterexample_1": {
+    "status": "PASSED",
+    "anchor_break_today": "UNKNOWN",
+    "anchor_break_age_sessions": "UNKNOWN",
+    "mid_tier_failed_count": null,
+    "mid_tier_damaged_ratio": null,
+    "description": "Missing anchor/mid price does not trigger false break or 100% failure."
+  },
+  "counterexample_2": {
+    "status": "PASSED",
+    "code_000002_delta": null,
+    "code_000003_delta": null,
+    "description": "Missing competitor amount properly invalidates exact rank delta."
+  },
+  "counterexample_3_tied": {
+    "status": "PASSED",
+    "description": "Tied amounts receive identical average fractional rank without code bias."
+  }
+}

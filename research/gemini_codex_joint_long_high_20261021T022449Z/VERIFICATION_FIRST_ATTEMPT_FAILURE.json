@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-21T02:42:12.498036+00:00",
+  "kind": "READ_ONLY_VERIFIER_FIRST_ATTEMPT_FAILURE",
+  "error": "assert before[at] >= freeze[agreed_at]",
+  "cause": "Preparationreceiptat02:37:59.013402precededGemini-declaredwhole-secondack02:38:00by0.986598s;actualfirstcorefit02:38:00.976292wasafterack. FinalagreedprotocolSHAwasalreadyboundinpreparationreceipt. Do notbackdateorrewritethefrozenackorreceipts.",
+  "fix": "Checkcorrectevent:allactualcoreBEFORE_FIT.started_at>=declaredagreed_at usingparseddatetimes,plusunchangedagreedobjectSHAinbothheadpreparationreceipts. Preservepreimageandoriginalfailure. No fittingorpredictionchanges.",
+  "model_fits": 0,
+  "original_verifier_sha256": "0fca8d0b5fa1cd8fadebadd28601d2cd2d2b0767ac2fc7b347ebf5ae5da626ce"
+}

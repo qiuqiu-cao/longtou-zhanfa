@@ -1,0 +1,46 @@
+|--- open_gap <= 0.03
+|   |--- open_vs_ma5 <= 0.15
+|   |   |--- open_vs_prev_high <= 0.02
+|   |   |   |--- open_vs_prev_open <= 0.13
+|   |   |   |   |--- class: 0
+|   |   |   |--- open_vs_prev_open >  0.13
+|   |   |   |   |--- class: 0
+|   |   |--- open_vs_prev_high >  0.02
+|   |   |   |--- open_vs_prev_open <= 0.15
+|   |   |   |   |--- class: 0
+|   |   |   |--- open_vs_prev_open >  0.15
+|   |   |   |   |--- class: 0
+|   |--- open_vs_ma5 >  0.15
+|   |   |--- open_vs_ma5 <= 0.18
+|   |   |   |--- open_vs_prev_high <= 0.00
+|   |   |   |   |--- class: 0
+|   |   |   |--- open_vs_prev_high >  0.00
+|   |   |   |   |--- class: 0
+|   |   |--- open_vs_ma5 >  0.18
+|   |   |   |--- pre_close <= 27.28
+|   |   |   |   |--- class: 0
+|   |   |   |--- pre_close >  27.28
+|   |   |   |   |--- class: 0
+|--- open_gap >  0.03
+|   |--- open_gap <= 0.05
+|   |   |--- prev_turnover <= 11.65
+|   |   |   |--- prev_board_streak <= 2.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- prev_board_streak >  2.50
+|   |   |   |   |--- class: 0
+|   |   |--- prev_turnover >  11.65
+|   |   |   |--- open_vs_ma20 <= 0.44
+|   |   |   |   |--- class: 0
+|   |   |   |--- open_vs_ma20 >  0.44
+|   |   |   |   |--- class: 0
+|   |--- open_gap >  0.05
+|   |   |--- prev_board_streak <= 2.50
+|   |   |   |--- prev_turnover <= 8.68
+|   |   |   |   |--- class: 0
+|   |   |   |--- prev_turnover >  8.68
+|   |   |   |   |--- class: 0
+|   |   |--- prev_board_streak >  2.50
+|   |   |   |--- open_gap <= 0.07
+|   |   |   |   |--- class: 0
+|   |   |   |--- open_gap >  0.07
+|   |   |   |   |--- class: 1

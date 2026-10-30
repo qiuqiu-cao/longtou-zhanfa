@@ -1,0 +1,77 @@
+{
+  "formed_at": "2026-10-27T09:29:22.277556+00:00",
+  "requests": 155,
+  "normalized_received": 152,
+  "current_full_rows": 83,
+  "current_exact_known": 79,
+  "unknown_current": [
+    {
+      "code": "600303",
+      "name": "曙光股份",
+      "qualification": "UNKNOWN_MISSING_EXACT_DAILY"
+    },
+    {
+      "code": "600826",
+      "name": "兰生股份",
+      "qualification": "CONFLICT_FAILED_VS_PRICE"
+    },
+    {
+      "code": "600558",
+      "name": "大西洋",
+      "qualification": "UNKNOWN_MISSING_EXACT_DAILY"
+    },
+    {
+      "code": "600865",
+      "name": "百大集团",
+      "qualification": "CONFLICT_FAILED_VS_PRICE"
+    }
+  ],
+  "requested_daily_failures": [
+    {
+      "code": "600303",
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Read timed out. (read timeout=4)",
+      "parse_error": null
+    },
+    {
+      "code": "600558",
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Read timed out. (read timeout=4)",
+      "parse_error": null
+    },
+    {
+      "code": "600822",
+      "status": "UNAVAILABLE",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Read timed out. (read timeout=4)",
+      "parse_error": null
+    }
+  ],
+  "price_board_conflicts": [
+    {
+      "code": "600826",
+      "reason": "CONFLICT_FAILED_VS_PRICE",
+      "price_kind": "limit_up"
+    },
+    {
+      "code": "600865",
+      "reason": "CONFLICT_FAILED_VS_PRICE",
+      "price_kind": "limit_up"
+    }
+  ],
+  "seal_time_conflicts": [
+    {
+      "code": "603028",
+      "name": "赛福天",
+      "field": "FIRST_LAST_SEAL_TIME",
+      "page": "09:25 / 09:25",
+      "primary_first": 92502,
+      "primary_last": 150000,
+      "resolution": "UNKNOWN_REQUIRE_INTRADAY_CROSSCHECK"
+    }
+  ],
+  "all_receipt_hashes_valid": true,
+  "prior_full90_preserved": true,
+  "models_loaded": 0,
+  "fits": 0,
+  "previous_files_changed": 0
+}

@@ -1,0 +1,42 @@
+{
+  "reviewed_at": "2026-10-21T06:44:00+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/first_board_label_stage_audit_20261021T062951Z",
+  "v2_overlay_audit": {
+    "script": "first_board_corporate_action_overlay.py",
+    "unit_tests_passed": "8/8 passed",
+    "output_file": "COMPLETE28503_ORIGINAL_PLUS_PARTIAL_CORRECTION_RESEARCH_ONLY_V2.csv",
+    "receipt_file": "PARTIAL_CORRECTION_OVERLAY_RECEIPT_V2.json",
+    "total_rows": 28503,
+    "total_columns": 99,
+    "original_columns_unmodified": true,
+    "original_unknown126_preserved": true,
+    "verified_row_count": 1,
+    "verified_stock": "603214 on 2024-09-30",
+    "unverified_rows_count": 28502,
+    "status": "APPROVED_AS_SEPARATE_RESEARCH_LAYER"
+  },
+  "methodological_concurrence": {
+    "speculative_count_retraction": {
+      "status": "ACCEPTED",
+      "statement": "Retract unverified speculation of dozens to hundreds of errors. Exactly 1 case is proven; all other cases remain unknown pending audit."
+    },
+    "cumulative_factor_for_features": {
+      "status": "STRONGLY_AGREED",
+      "statement": "Single-day pre_close swap only fixes Y. Fixing historical lookback features X across corporate action dates requires point-in-time backward cumulative adjustment factors without future leakage."
+    }
+  },
+  "next_batch_proposal_verdict": {
+    "proposal": "Result-blind offline scan of existing 668 KPL original first-board responses for XD/DR/XR prefixes to construct candidate corporate action ledger",
+    "status": "ACCEPTED",
+    "budget": "30-minute 0-fit qualification batch",
+    "strict_boundaries": [
+      "Offline only, zero external HTTP requests",
+      "Zero model fits (fits = 0)",
+      "Absence of XD/DR/XR does not certify no action occurred",
+      "Unmatched rows are not certified negative",
+      "Bounded official announcement sampling before any training considerations",
+      "Original dataset labels strictly untouched"
+    ]
+  }
+}

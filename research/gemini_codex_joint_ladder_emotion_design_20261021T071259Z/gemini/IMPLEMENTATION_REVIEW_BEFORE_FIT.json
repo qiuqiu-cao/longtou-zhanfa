@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-21T07:36:00.000000+00:00",
+  "agent": "Antigravity Gemini 3.8 Flash High",
+  "status": "IMPLEMENTATION_AND_FIT_PLAN_AUDIT_PASSED",
+  "experiment_root": "research/gemini_codex_joint_ladder_emotion_design_20261021T071259Z",
+  "audited_scripts": {
+    "model_driver": "first_board_joint_ladder_emotion_model.py",
+    "emotion_forecast": "first_board_emotion_forecast.py",
+    "fit_plan_file": "EXACT_FIT_PLAN_BEFORE_ANY_FIT.json"
+  },
+  "audit_results": {
+    "nested_42day_calibration": {
+      "verified": true,
+      "mechanism": "calibration_parts() splits dates[-42]; macro head uses predict_at(cut) with label_end < cut; inner model uses inner data with label_end < cut; zero calibration label leakage."
+    },
+    "validation_2025H1_macro_head": {
+      "verified": true,
+      "mechanism": "Macro cut is frozen at boundary 2025-01-01; single fixed head used across all 117 validation days; zero intra-validation learning."
+    },
+    "macro_model_cache_integrity": {
+      "verified": true,
+      "mechanism": "Validates exact descriptor match and model_sha256 hash match on ridge.joblib; cold starts recorded as None; raises FileExistsError on partial/corrupt caches."
+    },
+    "fit_plan_counts": {
+      "macro_cuts": 46,
+      "cold_start_cuts": 5,
+      "validation_ridge_fits": 10,
+      "total_ridge_fits_if_B_wins": 41,
+      "validation_stock_hgb_fits_arm_A": 2,
+      "validation_stock_hgb_fits_arm_B": 2,
+      "validation_platt_fits_arm_A": 1,
+      "validation_platt_fits_arm_B": 1,
+      "baseline_refits": 0,
+      "second_stage_refits": 0
+    }
+  },
+  "feature_dimensions": {
+    "arm_A_LADDER_SEAL_DIRECT_80": 80,
+    "arm_B_LADDER_EMOTION_HIERARCHICAL_81": 81
+  },
+  "numerical_batch_created": false,
+  "model_fits": 0,
+  "external_requests": 0,
+  "production_writes": 0,
+  "ready_for_protocol_freeze": true
+}

@@ -1,0 +1,56 @@
+{
+  "audited_at": "2026-10-21T06:39:00+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/first_board_label_stage_audit_20261021T062951Z",
+  "status": "CORPORATE_ACTION_DIVIDEND_MISLABEL_CONFIRMED",
+  "confirmed_case": {
+    "code": "603214",
+    "name": "爱婴室 (XD爱婴室 on 2024-10-08)",
+    "signal_date": "2024-09-30",
+    "target_date": "2024-10-08",
+    "original_label": 0.0,
+    "corrected_true_label": 1.0,
+    "proof_details": {
+      "announcement_number": "2024-053",
+      "announcement_title": "上海爱婴室商务服务股份有限公司2024年半年度权益分派实施公告",
+      "announcement_pdf_url": "https://static.cninfo.com.cn/finalpage/2024-09-24/1221275041.PDF",
+      "announcement_pdf_sha256": "4905f39ad76918b98a6bbfded3ff80375bbdddba45a1f9b37b3c048f8c69004f",
+      "cash_dividend_per_share": "0.109",
+      "record_date": "2024-09-30",
+      "ex_dividend_date": "2024-10-08",
+      "differential_dividend": false,
+      "signal_close": "15.52",
+      "ex_dividend_reference_price": "15.411",
+      "unadjusted_10pct_cap": "17.07",
+      "adjusted_10pct_cap": "16.95",
+      "actual_target_close": "16.95",
+      "pid2_source_pointer": "/info/0/244",
+      "pid2_raw_response_sha256": "613acf7f443215b6860c57dc3bdb39cd52914cdf3d63bafdd4dfeb2a16817646",
+      "pid2_recorded_board_count": 2,
+      "pid2_recorded_pct_change": 9.99
+    }
+  },
+  "bounded_sample_summary_21_dates": {
+    "total_scope_rows": 1981,
+    "signal_dates": 21,
+    "positive_second_board_reports_captured": 636,
+    "corroborated_positives": 462,
+    "vendor_first_stage_conflicts_pending": 36,
+    "confirmed_dividend_mislabels": 1,
+    "unknown_no_matching_second_report": 1482
+  },
+  "audit_boundaries": {
+    "generalization_prohibited": true,
+    "single_case_does_not_prove_all_labels_wrong": true,
+    "past_model_failures_not_improved_by_one_case": true,
+    "model_fits": 0,
+    "production_files_modified": 0,
+    "original_dataset_labels_overwritten": 0,
+    "corrections_stored_in_isolated_shadow_layer": true
+  },
+  "systematic_roadmap_recommendation": {
+    "step_1": "Construct deterministic ex_rights_calendar_and_reference_table.csv from official announcements",
+    "step_2": "Replace pre_close with true exchange reference price ONLY on ex-dates",
+    "step_3": "Recompute promotion labels in isolated shadow layer and count exact corrections before any retraining"
+  }
+}

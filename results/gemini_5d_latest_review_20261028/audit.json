@@ -1,0 +1,99 @@
+{
+  "formed_at_utc": "2026-10-28T18:52:06.177359+00:00",
+  "new_fits": 0,
+  "orders": 0,
+  "source_hashes": {
+    "build_and_train_5d_dragon_model.py": "391fff50f2c25dc4da10ee7647cd12630fbb98141a5e85cfa75d25918f0ccbd3",
+    "backtest_and_evaluate_5d_dragon.py": "2664145159bd093b3b449e5290b6dfecaf1bc0a5e9377be510b6a211111138e3",
+    "evaluate_20261028_case.py": "5c0f8e4ca66df4022c7e454e2e38d382680a034130ea8bc2e25370d91d42908d",
+    "UNIFIED_5D_DRAGON_BREAKTHROUGH_REPORT.md": "391ee663b15035cfc26be8aeab2010d326ea85bab9a25011ede4f6d63b49fef2",
+    "model_5d_dragon_breakthrough.joblib": "2aef64726e551f4625b697ea66c688c4215c0175b0d764784ba8c24c3cf8f919",
+    "feature_list_5d.json": "a673108205f12f58eeda58bfad63e5c96bb011ecd47fdb49019f9afa5882281f",
+    "oof_5d_predictions.csv": "cb6d15957ccf8c2a4d32ca50d40beb03ada124f291b1f3a6963cbad42c09ec37",
+    "unified_5d_metrics.json": "5ab34b8b4826b0eddc3ded5031159af37171bd3b12827dc8d6169855b0b77ed1",
+    "comprehensive_backtest_metrics.json": "30859318aa234c1bbcc2326e2051fc8eb74e7a3a43ec0710fe376f66eef92c3d",
+    "case_study_20261028_ranking.csv": "001a33c02c563215c035afc211794886d76e27b31b63e75ce833f81aad38363d",
+    "feature_importances_5d.csv": "6d74b51b75f8e904d74341da27b4a5f931cf2de434fb29e136fbad98a531e406"
+  },
+  "reviewed_sources_unchanged": true,
+  "oof_rows": 17705,
+  "oof_dates": 495,
+  "oof_date_range": [
+    "2024-09-02",
+    "2026-09-16"
+  ],
+  "duplicate_date_code_rows": 0,
+  "top1_reported_label_hits": 271,
+  "top1_count": 495,
+  "top1_reported_label_hit_pct": 54.75,
+  "top1_day_loss_at_least_4pct": 107,
+  "top1_mean_open_close_pct": 0.111,
+  "saved_case_prediction_max_abs_error": 9.71445146547012e-17,
+  "saved_case_head": [
+    {
+      "actual_saved_rank": 1,
+      "code_str": "600838",
+      "name": "上海九百",
+      "pred_5d_score": 0.3878177088750627,
+      "execution_status": "可参与正常竞价"
+    },
+    {
+      "actual_saved_rank": 2,
+      "code_str": "603376",
+      "name": "大明电子",
+      "pred_5d_score": 0.3055016850595289,
+      "execution_status": "可参与正常竞价"
+    },
+    {
+      "actual_saved_rank": 3,
+      "code_str": "002820",
+      "name": "桂发祥",
+      "pred_5d_score": 0.3005369620515465,
+      "execution_status": "可参与正常竞价"
+    },
+    {
+      "actual_saved_rank": 4,
+      "code_str": "000678",
+      "name": "襄阳轴承",
+      "pred_5d_score": 0.2803996546817353,
+      "execution_status": "可参与正常竞价"
+    }
+  ],
+  "causal_mutation_synthetic_only": {
+    "mkt_promote_rate": {
+      "original": 1.0,
+      "changed_today_close": 0.18
+    },
+    "mkt_total_dt": {
+      "original": 0.0,
+      "changed_today_close": 1.0
+    },
+    "float_cap_yi": {
+      "original": 14.64,
+      "changed_today_close": 11.98
+    },
+    "prev_bad_crash_count": {
+      "original": 0.0,
+      "changed_today_close": 1.0
+    },
+    "has_bad_crash_gene": {
+      "original": 0.0,
+      "changed_today_close": 1.0
+    }
+  },
+  "actual_sina_vwap_unit_check": {
+    "rows": 2014265,
+    "amount_div_volume_inside_daily_range_pct": 100.0,
+    "used_vwap_inside_daily_range_pct": 0.0
+  },
+  "accepted_for_production": false,
+  "primary_reasons": [
+    "same-day outcome leaked via market promotion and down-limit counts",
+    "current-day close-based float cap leaked into features",
+    "historical crash event backdated before the crash was observable",
+    "Sina volume shares divided by extra 100",
+    "daily amplitude used as a proxy for tail order changes",
+    "report case ranking contradicts saved model output",
+    "open-to-close compounding cannot represent A-share T+1 portfolio return"
+  ]
+}

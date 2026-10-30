@@ -1,0 +1,63 @@
+{
+  "formed_at": "2026-10-24T19:11:48.510198+00:00",
+  "http_status": 200,
+  "actual_collection": {
+    "requested_day": "2026-10-23",
+    "observation_day": "2026-10-25",
+    "session_state": "NON_TRADING_DAY",
+    "status": "SUCCESS_PUBLIC_DATA_ONLY",
+    "rows": 81,
+    "quotes": 84,
+    "raw_hashes_verified": 4,
+    "quote_clocks": [
+      "2026-10-23T15:00:00+08:00",
+      "2026-10-23T15:00:01+08:00",
+      "2026-10-23T15:00:02+08:00",
+      "2026-10-23T15:00:03+08:00",
+      "2026-10-23T15:34:59+08:00",
+      "2026-10-23T15:35:00+08:00",
+      "2026-10-23T15:35:15+08:00",
+      "2026-10-23T15:35:30+08:00",
+      "2026-10-23T15:35:45+08:00",
+      "2026-10-23T15:36:00+08:00"
+    ],
+    "completed_at": "2026-10-24T19:11:15.931499+00:00"
+  },
+  "contract_tests": {
+    "passed": 8,
+    "covered": [
+      "官方交易日与午休/收盘",
+      "日历越界",
+      "旧报价不得充当当天",
+      "未来时钟拒用",
+      "旧包不复用",
+      "HTTP失败不填零",
+      "错误源日期拒收"
+    ]
+  },
+  "browser": {
+    "desktop": true,
+    "mobile_390px": true,
+    "document_horizontal_overflow": false,
+    "error_console_count": 0,
+    "screenshots": [
+      "qa/auto-update-desktop.png",
+      "qa/auto-update-mobile.png"
+    ]
+  },
+  "protected_files_unchanged": 9,
+  "new_fits": 0,
+  "model_predictions_generated": 0,
+  "orders": 0,
+  "paid_API_calls": 0,
+  "scheduled_OS_or_Codex_tasks_created": 0,
+  "firewall_changes": 0,
+  "phone_physical_connection_verified": false,
+  "scope_complete": "自动公共事实更新已可运行；完整自动每日研判未完成",
+  "remaining": [
+    "完整合格模型输入",
+    "独立情绪/题材/风险/反证分析执行器及冻结",
+    "竞价未匹配量与Level2",
+    "手机实机连通"
+  ]
+}

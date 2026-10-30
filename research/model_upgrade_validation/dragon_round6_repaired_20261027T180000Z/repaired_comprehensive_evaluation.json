@@ -1,0 +1,528 @@
+{
+  "evaluation_title": "Comprehensive Repaired Round 6 Evaluation",
+  "total_test_days": 449,
+  "arms_comparison": {
+    "round4_orig": {
+      "arm_name": "Original Round 4",
+      "n_days": 449,
+      "is_3to4": {
+        "hits": 261,
+        "rate": 0.5813,
+        "wilson95": [
+          0.5352,
+          0.626
+        ]
+      },
+      "is_3to5": {
+        "hits": 129,
+        "rate": 0.2873,
+        "wilson95": [
+          0.2474,
+          0.3308
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 124,
+        "rate": 0.2762,
+        "wilson95": [
+          0.2368,
+          0.3193
+        ]
+      },
+      "whole_day_one_word_up": 0,
+      "open_gap_pos_below_9p5pct": 0,
+      "open_gap_non_positive": 449,
+      "base_lt50": 105,
+      "base_missing": 240,
+      "execution_status_breakdown": {
+        "unknown": 449
+      },
+      "actionable_non_one_word": {
+        "n_days": 449,
+        "is_3to4_hits": 261,
+        "is_3to4_rate": 0.5813,
+        "is_space_hits": 124,
+        "is_space_rate": 0.2762,
+        "is_5b_hits": 129,
+        "is_5b_rate": 0.2873
+      }
+    },
+    "round6_orig": {
+      "arm_name": "Original Round 6",
+      "n_days": 449,
+      "is_3to4": {
+        "hits": 255,
+        "rate": 0.5679,
+        "wilson95": [
+          0.5217,
+          0.613
+        ]
+      },
+      "is_3to5": {
+        "hits": 130,
+        "rate": 0.2895,
+        "wilson95": [
+          0.2495,
+          0.3331
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 119,
+        "rate": 0.265,
+        "wilson95": [
+          0.2263,
+          0.3077
+        ]
+      },
+      "whole_day_one_word_up": 106,
+      "open_gap_pos_below_9p5pct": 164,
+      "open_gap_non_positive": 88,
+      "base_lt50": 107,
+      "base_missing": 235,
+      "execution_status_breakdown": {
+        "inferred_daily_limit_touch_fill": 223,
+        "no_limit_touch_no_trade": 113,
+        "unbuyable_one_word_up": 106,
+        "sell_blocked_one_word_down": 3,
+        "missing_exit_bar": 2,
+        "missing_trade_bar": 2
+      },
+      "actionable_non_one_word": {
+        "n_days": 343,
+        "is_3to4_hits": 149,
+        "is_3to4_rate": 0.4344,
+        "is_space_hits": 60,
+        "is_space_rate": 0.1749,
+        "is_5b_hits": 58,
+        "is_5b_rate": 0.1691
+      }
+    },
+    "arm0_repaired_r4_base": {
+      "arm_name": "Repaired Arm 0 (Clean R4 Baseline)",
+      "n_days": 449,
+      "is_3to4": {
+        "hits": 255,
+        "rate": 0.5679,
+        "wilson95": [
+          0.5217,
+          0.613
+        ]
+      },
+      "is_3to5": {
+        "hits": 132,
+        "rate": 0.294,
+        "wilson95": [
+          0.2537,
+          0.3377
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 125,
+        "rate": 0.2784,
+        "wilson95": [
+          0.239,
+          0.3216
+        ]
+      },
+      "whole_day_one_word_up": 102,
+      "open_gap_pos_below_9p5pct": 172,
+      "open_gap_non_positive": 85,
+      "base_lt50": 112,
+      "base_missing": 247,
+      "execution_status_breakdown": {
+        "inferred_daily_limit_touch_fill": 228,
+        "no_limit_touch_no_trade": 113,
+        "unbuyable_one_word_up": 102,
+        "sell_blocked_one_word_down": 3,
+        "missing_trade_bar": 2,
+        "missing_exit_bar": 1
+      },
+      "actionable_non_one_word": {
+        "n_days": 347,
+        "is_3to4_hits": 153,
+        "is_3to4_rate": 0.4409,
+        "is_space_hits": 64,
+        "is_space_rate": 0.1844,
+        "is_5b_hits": 59,
+        "is_5b_rate": 0.17
+      }
+    },
+    "arm1_repaired_r6_full": {
+      "arm_name": "Repaired Arm 1 (Clean R6 Full-Horizon)",
+      "n_days": 449,
+      "is_3to4": {
+        "hits": 256,
+        "rate": 0.5702,
+        "wilson95": [
+          0.524,
+          0.6152
+        ]
+      },
+      "is_3to5": {
+        "hits": 133,
+        "rate": 0.2962,
+        "wilson95": [
+          0.2559,
+          0.34
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 123,
+        "rate": 0.2739,
+        "wilson95": [
+          0.2347,
+          0.317
+        ]
+      },
+      "whole_day_one_word_up": 101,
+      "open_gap_pos_below_9p5pct": 175,
+      "open_gap_non_positive": 80,
+      "base_lt50": 109,
+      "base_missing": 248,
+      "execution_status_breakdown": {
+        "inferred_daily_limit_touch_fill": 233,
+        "no_limit_touch_no_trade": 109,
+        "unbuyable_one_word_up": 101,
+        "sell_blocked_one_word_down": 3,
+        "missing_trade_bar": 2,
+        "missing_exit_bar": 1
+      },
+      "actionable_non_one_word": {
+        "n_days": 348,
+        "is_3to4_hits": 155,
+        "is_3to4_rate": 0.4454,
+        "is_space_hits": 65,
+        "is_space_rate": 0.1868,
+        "is_5b_hits": 59,
+        "is_5b_rate": 0.1695
+      }
+    },
+    "arm2_repaired_space_core": {
+      "arm_name": "Repaired Arm 2 (Dual-Track Space Core)",
+      "n_days": 449,
+      "is_3to4": {
+        "hits": 262,
+        "rate": 0.5835,
+        "wilson95": [
+          0.5374,
+          0.6282
+        ]
+      },
+      "is_3to5": {
+        "hits": 135,
+        "rate": 0.3007,
+        "wilson95": [
+          0.2601,
+          0.3446
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 126,
+        "rate": 0.2806,
+        "wilson95": [
+          0.2411,
+          0.3239
+        ]
+      },
+      "whole_day_one_word_up": 106,
+      "open_gap_pos_below_9p5pct": 162,
+      "open_gap_non_positive": 83,
+      "base_lt50": 109,
+      "base_missing": 236,
+      "execution_status_breakdown": {
+        "inferred_daily_limit_touch_fill": 231,
+        "no_limit_touch_no_trade": 108,
+        "unbuyable_one_word_up": 106,
+        "sell_blocked_one_word_down": 2,
+        "missing_exit_bar": 1,
+        "missing_trade_bar": 1
+      },
+      "actionable_non_one_word": {
+        "n_days": 343,
+        "is_3to4_hits": 156,
+        "is_3to4_rate": 0.4548,
+        "is_space_hits": 63,
+        "is_space_rate": 0.1837,
+        "is_5b_hits": 62,
+        "is_5b_rate": 0.1808
+      }
+    }
+  },
+  "top2_evaluation": {
+    "arm0": {
+      "name": "Repaired Arm 0 Top-2",
+      "days": 449,
+      "top2_3to4_hits": 317,
+      "top2_3to4_rate": 0.706,
+      "top2_space_hits": 157,
+      "top2_space_rate": 0.3497,
+      "top2_5b_hits": 178,
+      "top2_5b_rate": 0.3964
+    },
+    "arm2": {
+      "name": "Repaired Arm 2 Top-2",
+      "days": 449,
+      "top2_3to4_hits": 318,
+      "top2_3to4_rate": 0.7082,
+      "top2_space_hits": 164,
+      "top2_space_rate": 0.3653,
+      "top2_5b_hits": 180,
+      "top2_5b_rate": 0.4009
+    }
+  },
+  "complete_competitive_dates": {
+    "arm2": {
+      "arm_name": "Complete Competitive Dates: Repaired Arm 2",
+      "n_days": 100,
+      "is_3to4": {
+        "hits": 41,
+        "rate": 0.41,
+        "wilson95": [
+          0.3187,
+          0.508
+        ]
+      },
+      "is_3to5": {
+        "hits": 19,
+        "rate": 0.19,
+        "wilson95": [
+          0.1251,
+          0.2778
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 23,
+        "rate": 0.23,
+        "wilson95": [
+          0.1584,
+          0.3215
+        ]
+      },
+      "whole_day_one_word_up": 11,
+      "open_gap_pos_below_9p5pct": 48,
+      "open_gap_non_positive": 24,
+      "base_lt50": 47,
+      "base_missing": 0,
+      "execution_status_breakdown": {
+        "inferred_daily_limit_touch_fill": 56,
+        "no_limit_touch_no_trade": 33,
+        "unbuyable_one_word_up": 11
+      },
+      "actionable_non_one_word": {
+        "n_days": 89,
+        "is_3to4_hits": 30,
+        "is_3to4_rate": 0.3371,
+        "is_space_hits": 16,
+        "is_space_rate": 0.1798,
+        "is_5b_hits": 12,
+        "is_5b_rate": 0.1348
+      }
+    },
+    "base": {
+      "arm_name": "Complete Competitive Dates: BASE Historical",
+      "n_days": 100,
+      "is_3to4": {
+        "hits": 38,
+        "rate": 0.38,
+        "wilson95": [
+          0.291,
+          0.4779
+        ]
+      },
+      "is_3to5": {
+        "hits": 16,
+        "rate": 0.16,
+        "wilson95": [
+          0.101,
+          0.2442
+        ]
+      },
+      "is_market_space_leader": {
+        "hits": 21,
+        "rate": 0.21,
+        "wilson95": [
+          0.1417,
+          0.2998
+        ]
+      },
+      "whole_day_one_word_up": 6,
+      "open_gap_pos_below_9p5pct": 45,
+      "open_gap_non_positive": 32,
+      "base_lt50": 38,
+      "base_missing": 0,
+      "execution_status_breakdown": {
+        "inferred_daily_limit_touch_fill": 54,
+        "no_limit_touch_no_trade": 39,
+        "unbuyable_one_word_up": 6,
+        "sell_blocked_one_word_down": 1
+      },
+      "actionable_non_one_word": {
+        "n_days": 94,
+        "is_3to4_hits": 32,
+        "is_3to4_rate": 0.3404,
+        "is_space_hits": 16,
+        "is_space_rate": 0.1702,
+        "is_5b_hits": 10,
+        "is_5b_rate": 0.1064
+      }
+    }
+  },
+  "paired_statistical_significance_vs_round4": {
+    "is_3to4": {
+      "new_only_wins": 14,
+      "old_only_losses": 13,
+      "net_advantage": 1,
+      "p_value": 1.0,
+      "statistically_significant": false
+    },
+    "is_market_space_leader": {
+      "new_only_wins": 9,
+      "old_only_losses": 7,
+      "net_advantage": 2,
+      "p_value": 0.8036,
+      "statistically_significant": false
+    },
+    "is_3to5": {
+      "new_only_wins": 12,
+      "old_only_losses": 6,
+      "net_advantage": 6,
+      "p_value": 0.2379,
+      "statistically_significant": false
+    }
+  },
+  "execution_funnels": {
+    "funnel_1_standard_numeric": [
+      {
+        "stage": "S0_total",
+        "n": 449,
+        "3to4_hits": 262
+      },
+      {
+        "stage": "S1_base_ge50",
+        "n": 104,
+        "3to4_hits": 46
+      },
+      {
+        "stage": "S2_open_gt0",
+        "n": 75,
+        "3to4_hits": 40
+      },
+      {
+        "stage": "S3_not_oneword",
+        "n": 62,
+        "3to4_hits": 27
+      },
+      {
+        "stage": "S4_limit_touch_fill",
+        "n": 45,
+        "3to4_hits": 27
+      }
+    ],
+    "funnel_2_complete_cohort_match": [
+      {
+        "stage": "S0_total",
+        "n": 449,
+        "3to4_hits": 262
+      },
+      {
+        "stage": "S1_base_complete_ge50",
+        "n": 83,
+        "3to4_hits": 35
+      },
+      {
+        "stage": "S2_open_gt0",
+        "n": 61,
+        "3to4_hits": 30
+      },
+      {
+        "stage": "S3_not_oneword",
+        "n": 52,
+        "3to4_hits": 21
+      },
+      {
+        "stage": "S4_limit_touch_fill",
+        "n": 37,
+        "3to4_hits": 21,
+        "rate": 0.5676
+      }
+    ],
+    "funnel_3_six_labels_veto": [
+      {
+        "stage": "S0_total",
+        "n": 449,
+        "3to4_hits": 262
+      },
+      {
+        "stage": "S1_six_labels_veto_passed",
+        "n": 86,
+        "3to4_hits": 40,
+        "rate": 0.4651
+      },
+      {
+        "stage": "S2_auction_open_gt0",
+        "n": 62,
+        "3to4_hits": 35,
+        "rate": 0.5645
+      },
+      {
+        "stage": "S3_actionable_liquid",
+        "n": 51,
+        "3to4_hits": 24,
+        "rate": 0.4706
+      },
+      {
+        "stage": "S4_limit_touch_fill",
+        "n": 38,
+        "3to4_hits": 24,
+        "rate": 0.6316,
+        "space_hits": 15,
+        "space_rate": 0.3947
+      }
+    ],
+    "funnel_4_six_labels_plus_complete_cohort": [
+      {
+        "stage": "S0_total",
+        "n": 449,
+        "3to4_hits": 262
+      },
+      {
+        "stage": "S1_veto_passed_and_complete_cohort",
+        "n": 67,
+        "3to4_hits": 30
+      },
+      {
+        "stage": "S2_auction_open_gt0",
+        "n": 49,
+        "3to4_hits": 26
+      },
+      {
+        "stage": "S3_actionable_liquid",
+        "n": 41,
+        "3to4_hits": 18
+      },
+      {
+        "stage": "S4_limit_touch_fill",
+        "n": 30,
+        "3to4_hits": 18,
+        "rate": 0.6
+      }
+    ]
+  },
+  "noncumulative_206_breakdown": {
+    "total_touch_fill": 206,
+    "base_lt50": 53,
+    "base_missing": 108,
+    "base_missing_or_incomplete": 120,
+    "overlap_lt50_and_incomplete": 4,
+    "qualified_complete_ge50": 37
+  },
+  "six_labels_audit_summary": {
+    "total_candidates_audited": 1480,
+    "top1_vetoed_count": 363,
+    "top1_passed_count": 86,
+    "top1_passed_3to4_hits": 40,
+    "top1_passed_3to4_rate": 0.4651,
+    "top1_passed_space_hits": 25,
+    "top1_passed_space_rate": 0.2907
+  }
+}

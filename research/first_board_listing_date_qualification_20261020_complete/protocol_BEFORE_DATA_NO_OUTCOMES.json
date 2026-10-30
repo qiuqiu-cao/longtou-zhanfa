@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-20T18:42:03.760839+00:00",
+  "task": "Outcome-blind qualification of stable actual listing dates for one replacement feature",
+  "hypothesis": "A real pre-archive listing date supplies cross-stock tenure absent from the left-censored archive clock; this is not another deletion/cap of the old field",
+  "field": "listing_calendar_age_days",
+  "definition": "Signal calendar date minus actual IPO listing calendar date, in days; no log, cap, bins or optimized cutoffs",
+  "source_policy": "Existing official-list CSVs must reproduce the master date; missing/conflicting/future listing dates remain NaN. Historical source retrieval clocks are not backdated.",
+  "no_outcome_columns_read": true,
+  "no_new_network_requests": true,
+  "coverage_gate": "At least95% actual-age coverage and100 observed rows in development and2025H1 validation",
+  "bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\security_evidence\\szse_mainboard_list_20260831.csv": "cd8e1012a7474375a8f62581e777bcb7889f3894787ba02fda039b781a0ef0c8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v5\\security_evidence\\sse_current\\sse_current_mainboard.csv": "ce06ef6c945bf156600686912ee2066fb45f645d998b2eea8e643d32f065b32d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v7\\security_evidence\\sse_breadth_gap\\sse_current_mainboard.csv": "1d425f98f6b060e357abe77862cae1e62ce5da1962ac94c44306899aa779247c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\security_sse_asof_20260904\\sse_current_mainboard.csv": "ae93edf01182d646efe5fc32de99fb9d620a2a891bbfb4be88485c08b08a70af",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\historical_universe\\official_delisted_mainboard.csv": "5fbf4bbf498bd87c05cb6ef49bd70373533b99858fe9e3ea8a59910572ea3057"
+  },
+  "source_sha256": "4807d91d11e242ae7f2ea2fe8009652cdfd4edcdeb47af4a0e2db171cd36ff01",
+  "fits": 0
+}

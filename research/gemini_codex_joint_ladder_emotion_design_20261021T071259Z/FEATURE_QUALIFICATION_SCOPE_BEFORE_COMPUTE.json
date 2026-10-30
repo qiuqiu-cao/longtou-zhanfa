@@ -1,0 +1,34 @@
+{
+  "at": "2026-10-21T07:17:44.159177+00:00",
+  "model_fits": 0,
+  "labels_read": false,
+  "source_sha256": "904312e1cfd0e9c24cfe66a8fce30ada799403bbe8731f7c136ded28d3e64390",
+  "original_facts_sha256": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+  "fields": [
+    "ladder_n2",
+    "ladder_n3",
+    "ladder_n4",
+    "ladder_n5plus",
+    "ladder_contiguous_from2",
+    "ladder_missing_tier_fraction",
+    "emotion_prev2_survival",
+    "emotion_prev3_survival",
+    "emotion_prev_relay_mean_return",
+    "emotion_prev_relay_loss7_share",
+    "emotion_prev2_survival_change3",
+    "emotion_failed_rate_change3",
+    "emotion_relay_return_change3"
+  ],
+  "dropped_from_candidate_inputs": [
+    "emotion_prev4plus_survival_DIAGNOSTIC"
+  ],
+  "reason": "Previous4plus survival overlaps existing cycle_high_survival;retain as diagnostic with explicit unknown handling",
+  "feedback": "Full previous official-day cohort;rate is NaN forzero members orany unknown current outcome;do not turn missing into failures",
+  "history_path": "Current feedback minus arithmetic mean of preceding3official dates,all3 required;no future stage label",
+  "source_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54"
+  }
+}

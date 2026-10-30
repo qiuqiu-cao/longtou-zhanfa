@@ -1,0 +1,62 @@
+{
+  "experiment": "dragon_round6_repaired_20261027T180000Z",
+  "version": "v2_audit_repaired",
+  "timestamp": "2026-10-27T11:35:00Z",
+  "heads_trained": [
+    "3to4",
+    "space",
+    "5b",
+    "gain46",
+    "reb18"
+  ],
+  "total_models": 20,
+  "total_oof_rows": 1480,
+  "total_test_days": 449,
+  "feature_count": 80,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "test_range": "2024-09-01 to 2024-12-31",
+      "auc_3to4": 0.6738675213675213,
+      "auc_space": 0.544374899695073,
+      "auc_5b": 0.6015896804581704,
+      "auc_gain46": 0.5306520459228732,
+      "auc_reb18": 0.49176470588235294,
+      "test_samples": 433
+    },
+    {
+      "fold": 2,
+      "test_range": "2025-01-01 to 2025-05-31",
+      "auc_3to4": 0.6371778755499686,
+      "auc_space": 0.6719086600603188,
+      "auc_5b": 0.6077752629476767,
+      "auc_gain46": 0.5351623740201568,
+      "auc_reb18": 0.5792666666666666,
+      "test_samples": 277
+    },
+    {
+      "fold": 3,
+      "test_range": "2025-06-01 to 2025-11-30",
+      "auc_3to4": 0.6519963702359346,
+      "auc_space": 0.6257052102593278,
+      "auc_5b": 0.6775125257883879,
+      "auc_gain46": 0.48547751887102064,
+      "auc_reb18": 0.5477602408539367,
+      "test_samples": 326
+    },
+    {
+      "fold": 4,
+      "test_range": "2025-12-01 to 2026-08-31",
+      "auc_3to4": 0.670327868852459,
+      "auc_space": 0.7196318342151675,
+      "auc_5b": 0.6774345076784101,
+      "auc_gain46": 0.6026014905337221,
+      "auc_reb18": 0.6204013377926421,
+      "test_samples": 444
+    }
+  ],
+  "artifacts_sha256": {
+    "repaired_all_fold_models.joblib": "33ce166f4b65ad021732933982ace85b710d54046f4bca0179f8fd8aed18205b",
+    "oof_repaired_predictions.csv": "52ad8965318fa385cfdac03292091622398f7bcdced4e0dc78ec99994757c436"
+  }
+}

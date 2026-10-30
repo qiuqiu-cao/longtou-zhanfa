@@ -1,0 +1,135 @@
+{
+  "evaluation_samples": 1480,
+  "competitive_days": 340,
+  "target_baselines": {
+    "is_3to4": {
+      "count": 707,
+      "rate": 0.4777
+    },
+    "is_3to5": {
+      "count": 332,
+      "rate": 0.2243
+    },
+    "is_deep_dragon_height": {
+      "count": 172,
+      "rate": 0.1162
+    },
+    "is_super_monster_height": {
+      "count": 88,
+      "rate": 0.0595
+    },
+    "is_market_space_leader": {
+      "count": 418,
+      "rate": 0.2824
+    },
+    "is_unique_space_leader": {
+      "count": 188,
+      "rate": 0.127
+    },
+    "is_emotion_dragon_proxy": {
+      "count": 184,
+      "rate": 0.1243
+    }
+  },
+  "discrimination_metrics": {
+    "score_space_leader": {
+      "is_market_space_leader_auc": 0.7467,
+      "is_market_space_leader_pr_auc": 0.6533,
+      "is_emotion_dragon_proxy_auc": 0.6233,
+      "is_emotion_dragon_proxy_pr_auc": 0.182,
+      "is_3to5_auc": 0.6025,
+      "is_3to5_pr_auc": 0.2745,
+      "is_3to4_auc": 0.6055,
+      "is_3to4_pr_auc": 0.5559
+    },
+    "score_emotion_dragon": {
+      "is_market_space_leader_auc": 0.6,
+      "is_market_space_leader_pr_auc": 0.3904,
+      "is_emotion_dragon_proxy_auc": 0.599,
+      "is_emotion_dragon_proxy_pr_auc": 0.1798,
+      "is_3to5_auc": 0.5966,
+      "is_3to5_pr_auc": 0.2992,
+      "is_3to4_auc": 0.5935,
+      "is_3to4_pr_auc": 0.5626
+    },
+    "score_height_5": {
+      "is_market_space_leader_auc": 0.5394,
+      "is_market_space_leader_pr_auc": 0.3029,
+      "is_emotion_dragon_proxy_auc": 0.589,
+      "is_emotion_dragon_proxy_pr_auc": 0.1546,
+      "is_3to5_auc": 0.6291,
+      "is_3to5_pr_auc": 0.3274,
+      "is_3to4_auc": 0.6215,
+      "is_3to4_pr_auc": 0.6011
+    },
+    "score_composite_dragon": {
+      "is_market_space_leader_auc": 0.7247,
+      "is_market_space_leader_pr_auc": 0.5952,
+      "is_emotion_dragon_proxy_auc": 0.6269,
+      "is_emotion_dragon_proxy_pr_auc": 0.1919,
+      "is_3to5_auc": 0.6146,
+      "is_3to5_pr_auc": 0.2957,
+      "is_3to4_auc": 0.6147,
+      "is_3to4_pr_auc": 0.5824
+    }
+  },
+  "head_to_head_competition": {
+    "comp_base_space": 0.2801,
+    "top1_space_rate": 0.3794,
+    "bot1_space_rate": 0.2529,
+    "comp_base_dragon": 0.1247,
+    "top1_dragon_rate": 0.1824,
+    "bot1_dragon_rate": 0.0676,
+    "comp_base_5": 0.2268,
+    "top1_5_rate": 0.3235,
+    "bot1_5_rate": 0.1206,
+    "comp_base_4": 0.4807,
+    "top1_4_rate": 0.6147
+  },
+  "authentic_base_comparison": {
+    "matched_days": 259,
+    "model_top1_space": 0.3205,
+    "base_top1_space": 0.3089,
+    "model_top1_dragon": 0.1583,
+    "base_top1_dragon": 0.1506,
+    "model_top1_5": 0.2201,
+    "base_top1_5": 0.2046
+  },
+  "selective_recommendation": {
+    "threshold": 0.4,
+    "recommended_days": 151,
+    "coverage_rate": 0.4441,
+    "rec_space_rate": 0.4702,
+    "rec_dragon_rate": 0.1788,
+    "rec_5_rate": 0.3245,
+    "skipped_days": 189,
+    "skipped_had_space": 96,
+    "skipped_had_dragon": 71
+  },
+  "year_stats": {
+    "2024": {
+      "days": 68,
+      "top1_space_rate": 0.1765,
+      "top1_dragon_rate": 0.1471,
+      "top1_5_rate": 0.4265,
+      "cohort_space_base": 0.1291,
+      "cohort_dragon_base": 0.0869
+    },
+    "2025": {
+      "days": 179,
+      "top1_space_rate": 0.4022,
+      "top1_dragon_rate": 0.2123,
+      "top1_5_rate": 0.3352,
+      "cohort_space_base": 0.307,
+      "cohort_dragon_base": 0.1598
+    },
+    "2026": {
+      "days": 93,
+      "top1_space_rate": 0.4839,
+      "top1_dragon_rate": 0.1505,
+      "top1_5_rate": 0.2258,
+      "cohort_space_base": 0.4313,
+      "cohort_dragon_base": 0.1054
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "created_at_utc": "2026-10-28T16:11:11.977039+00:00",
+  "trade_date": "2026-10-28",
+  "run_type": "RETROSPECTIVE_PYTHON_EQUIVALENT_PRIMARY_EXPORTED_FORMULA_NOT_THS_CLIENT_RUN_NOT_NEW_BLIND_PREDICTION",
+  "formula_sha256": "c20aa630992d66e6a7db91d96786256df698156a6e37d69c382aa80d51c0a0ef",
+  "formula_condition_order": [
+    "NOT_ST",
+    "YESTERDAY_ZT",
+    "NOT_ONE_WORD",
+    "GOLDEN_GAP",
+    "EXPLOSIVE_VOL",
+    "BREAK_HIGH",
+    "HEALTHY_CAPACITY"
+  ],
+  "fits": 0,
+  "actual_orders": 0,
+  "prior_pool_rows": 38,
+  "definitive_matches": 1,
+  "definitive_non_matches": 37,
+  "unknown_final_signals": 0,
+  "static_pass_rows": 1,
+  "actual_continuing_limit_ups": 8,
+  "matched_continuing_limit_ups": 1,
+  "missing_outcomes": 0,
+  "matches": [
+    {
+      "code": "000678",
+      "name": "襄阳轴承",
+      "previous_boards": 4,
+      "previous_close": 16.01,
+      "previous_high": 16.01,
+      "previous_amount_cny": 1491865747.0,
+      "previous_turnover_pct": 20.5714,
+      "open": 16.96,
+      "gap_pct": 5.933791380387254,
+      "upper_reference": 17.61,
+      "auction_amount_cny": 97058700,
+      "auction_amount_ratio_pct": 6.505860208612995,
+      "original_formula_signal": true,
+      "static_conditions_signal": true,
+      "reject_reasons": [],
+      "unknown_conditions": [],
+      "checks": {
+        "NOT_ST": true,
+        "YESTERDAY_ZT": true,
+        "NOT_ONE_WORD": true,
+        "GOLDEN_GAP": true,
+        "EXPLOSIVE_VOL": true,
+        "BREAK_HIGH": true,
+        "HEALTHY_CAPACITY": true
+      },
+      "close": 17.61,
+      "high": 17.61,
+      "closed_at_limit": true,
+      "touched_limit": true,
+      "close_change_pct": 9.993753903810099
+    }
+  ],
+  "auction_evidence": {
+    "000678": {
+      "price": 16.96,
+      "volume_lots": 57228,
+      "amount_cny_displayed": 97058700,
+      "amount_cny_price_times_volume": 97058688,
+      "source_url": "https://finance.eastmoney.com/a/202610283911131982.html",
+      "source_published_at": "2026-10-28T09:26:00+08:00",
+      "event_time": "2026-10-28T09:25:00+08:00",
+      "raw_sha256": "0811fdf7a9876112908778de64be93a216145dd17796ddc8a33df4d621f45285",
+      "precision": "Article amount rounded to 0.01 ten-thousand CNY; price-times-volume crosschecks archived Tencent first point, not assumed from its 09:30 timestamp alone."
+    }
+  },
+  "provenance": [
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\templates\\同花顺公式_龙头竞价非一字选股_v2026.txt",
+      "sha256": "c20aa630992d66e6a7db91d96786256df698156a6e37d69c382aa80d51c0a0ef"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261027T0928Z\\facts\\RESOLVED_FACTS_v2_SCORES_MASKED.json",
+      "sha256": "c4684bdf819073157dd17c60741279d59315185e74385beaba60d48994e52091"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261027T0928Z\\facts\\normalized_daily.json",
+      "sha256": "6a02a9623dcd007e30f29c105a9c50a14d76cfa9c7e23dc3914368644f067abc"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261028T1020Z\\facts\\normalized_daily.json",
+      "sha256": "6380aa1ccd9b707568f589283654663805530cf686a93dfb0f35da9e9aab0551"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261028T1020Z\\facts\\RESOLVED_FACTS_v2_SCORES_MASKED.json",
+      "sha256": "84afa81d1c2df764e9a1c1acfe92458492d84b92b2c1fd5928c225636b1b9faf"
+    },
+    {
+      "path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261028T1020Z\\minutes\\sz000678.response",
+      "sha256": "d657092b94134325a36547f5082f58fff5ed7882ca381a433755c54d43be2476"
+    }
+  ],
+  "limitations": [
+    "Universe is the complete returned and reconciled archived mainboard prior-limit pool; exchange-wide completeness and historical security status are not certified.",
+    "Python equivalent uses archived prior turnover percentage as the software REF(VOL,1)/CAPITAL*100 observation; the client CAPITAL field and compiled result were not independently run.",
+    "Most excluded stocks have no verified auction amount/ratio, but at least one known false AND condition makes their final primary-formula signal false without inventing auction fields.",
+    "Article was retrieved after market close. Its 09:25 facts corroborate archived data but are not an originally frozen 09:25 forecast.",
+    "Daily price equality verifies close-at-limit price only, not fills or complete live order-flow. No claim of executable open-price return.",
+    "This evaluates the primary relay formula only; it does not assert an all-market first-board formula scan or a trained-model probability.",
+    "One matched and successful stock on one known day does not estimate future accuracy. Seven other same-pool continuing limit ups were missed."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS_STRICT_AUDIT",
+  "defects_rectified": [
+    "1. Float Cap Lookahead removed: strictly prev_float_cap used at 09:25.",
+    "2. In-sample duplicate removed: 100% expanding temporal Out-of-Sample evaluation.",
+    "3. Emotion gate lookahead removed: strictly Day t-1 closing sentiment used.",
+    "4. Unreal exit timing & compounding fixed: honest close exit, realistic portfolio cash ledger.",
+    "5. Volume scaling bug fixed: amount / volume without *100.",
+    "6. Formula & backtest alignment: dual version delivered with transparent field boundaries."
+  ],
+  "true_oos_performance": {
+    "oos_trades": 413,
+    "true_oos_limit_up_rate": 0.4116222760290557,
+    "true_oos_touch_rate": 0.6368038740920097,
+    "true_win_rate": 0.38498789346246975,
+    "profit_loss_ratio": 1.5544973452813846,
+    "realistic_portfolio_return": 0.01699098749688166,
+    "realistic_cagr": 0.006014008664907422,
+    "realistic_mdd": -0.6331907187707629,
+    "realistic_sharpe": 0.2785209651593048,
+    "avg_holding_days": 1.6634382566585957
+  }
+}

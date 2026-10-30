@@ -1,0 +1,38 @@
+{
+  "status": "P1_ZERO_FIT_COMPLETED",
+  "completed_at_utc": "2026-10-21T12:05:00.102219+00:00",
+  "elapsed_seconds": 8.43,
+  "fits": 0,
+  "http_requests": 0,
+  "dataset_binding": {
+    "path": "d:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\historical_final\\dataset.joblib",
+    "sha256": "6ef4a7b70e7b9fa35c1394a2f1a9b2fd21f352e46606a8f5e567180ee29f42e9"
+  },
+  "artifacts_produced": {
+    "features_csv": "d:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\research\\relay_joint_research_20261021T1142Z\\p1_zero_fit\\p1_features_9245.csv",
+    "features_sha256": "7b08af2be0212045eb2d7bc5a149a0f5cd4b86e553f9192f31486a795a83fdc9",
+    "prefix_audit_json": "d:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\research\\relay_joint_research_20261021T1142Z\\p1_zero_fit\\P1_PREFIX_AUDIT.json",
+    "condition_tables_json": "d:\\Documents\\ChatGPT\\\u9f99\u5934\u6218\u6cd5\\research\\relay_joint_research_20261021T1142Z\\p1_zero_fit\\P1_CONDITION_TABLES.json"
+  },
+  "prefix_invariance_verified": true,
+  "group_b_status": "DISQUALIFIED_FOR_MODEL_ARM",
+  "stored_baseline_verified": {
+    "window_start": "2025-07-01",
+    "window_end": "2026-09-30",
+    "common_rows": 3707,
+    "common_dates": 302,
+    "known_targets": 3640,
+    "unknown_targets": 67,
+    "base_performance": {
+      "full_pool_top1_hits": 209,
+      "full_pool_top1_hit_rate": "209 / 302 = 69.21%",
+      "non_one_price_top1_hits": 128,
+      "non_one_price_top1_hit_rate": "128 / 302 = 42.38% (4 unknown)",
+      "september_2026_dates": 16,
+      "september_full_top1_hits": 10,
+      "september_full_top1_hit_rate": "10 / 16 = 62.50%",
+      "september_non_one_price_top1_hits": 7,
+      "september_non_one_price_top1_hit_rate": "7 / 16 = 43.75% (3 unknown; 7/13 known-subset)"
+    }
+  }
+}

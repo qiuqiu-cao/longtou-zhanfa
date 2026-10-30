@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-21T01:59:56.628050+00:00",
+  "status": "PASS_NO_FIT_REPLAY",
+  "verifier_fits": 0,
+  "all_bindings_and668raw_hashes_unchanged": true,
+  "all28503_original_fields_and_labels_preserved": true,
+  "validation_rows": 4724,
+  "validation_unknown": 10,
+  "first_unknown": 126,
+  "arms": {
+    "SEAL_TIME_64": {
+      "trainer": "Gemini",
+      "contract_feature_count": 64,
+      "all4724_scores_replayed": true,
+      "original_prefix_and_full_members_equal": true,
+      "core_fits": 2,
+      "temporal_calibrator_fits": 1,
+      "settlements": {
+        "primary": {
+          "dates": 117,
+          "challenger_hits": 40,
+          "baseline_hits": 52,
+          "challenger_known": 117,
+          "baseline_known": 117,
+          "common_wins": 34,
+          "challenger_only_win": 6,
+          "baseline_only_win": 18,
+          "common_failures": 59
+        },
+        "non_one_price": {
+          "dates": 117,
+          "challenger_hits": 34,
+          "baseline_hits": 48,
+          "challenger_known": 117,
+          "baseline_known": 117,
+          "common_wins": 28,
+          "challenger_only_win": 6,
+          "baseline_only_win": 20,
+          "common_failures": 63
+        }
+      },
+      "pass_validation": false
+    },
+    "SEAL_TIME_FUND_66": {
+      "trainer": "Codex",
+      "contract_feature_count": 66,
+      "all4724_scores_replayed": true,
+      "original_prefix_and_full_members_equal": true,
+      "core_fits": 2,
+      "temporal_calibrator_fits": 1,
+      "settlements": {
+        "primary": {
+          "dates": 117,
+          "challenger_hits": 52,
+          "baseline_hits": 52,
+          "challenger_known": 117,
+          "baseline_known": 117,
+          "common_wins": 35,
+          "challenger_only_win": 17,
+          "baseline_only_win": 17,
+          "common_failures": 48
+        },
+        "non_one_price": {
+          "dates": 117,
+          "challenger_hits": 41,
+          "baseline_hits": 48,
+          "challenger_known": 117,
+          "baseline_known": 117,
+          "common_wins": 27,
+          "challenger_only_win": 14,
+          "baseline_only_win": 21,
+          "common_failures": 55
+        }
+      },
+      "pass_validation": false
+    }
+  },
+  "evaluation": null,
+  "baseline_refits": 0,
+  "second_stage_refits": 0,
+  "production_changes": false,
+  "goal_60_achieved": false,
+  "qualification_scope": "Raw/provider/sourcebinding checks and saved-modelreplay;no new fitting,external exchange authentication or prospective-performance claim"
+}

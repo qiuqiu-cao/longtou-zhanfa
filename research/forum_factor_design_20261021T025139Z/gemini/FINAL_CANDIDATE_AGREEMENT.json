@@ -1,0 +1,57 @@
+{
+  "agreed_at": "2026-10-21T03:03:00+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/forum_factor_design_20261021T025139Z",
+  "redundancy_audit_confirmed": {
+    "sealed_age_equals_previous_limit_age": true,
+    "sealed_age_matches_count": 12265,
+    "sealed_found_equals_prior_limits_20_positive": true,
+    "sealed_found_matches_count": 27327,
+    "probe_found_equals_prior_failed_20_positive": true,
+    "probe_found_matches_count": 27327,
+    "decision": "Prune found and age from model inputs; keep 5 genuine path metrics per event type."
+  },
+  "final_candidate_arms": {
+    "EVENT_SEALED_PATH_67": {
+      "definition": "Original 62 + 5 nominal_sealed_path20 metrics",
+      "fields_count": 67,
+      "fields_added": [
+        "nominal_sealed_path20_correction_low_log_return",
+        "nominal_sealed_path20_worst_correction_close_return",
+        "nominal_sealed_path20_correction_volume_to_event",
+        "nominal_sealed_path20_signal_volume_to_correction",
+        "nominal_sealed_path20_signal_close_to_event_high"
+      ]
+    },
+    "EVENT_DUAL_PATH_72": {
+      "definition": "Original 62 + 5 nominal_sealed_path20 metrics + 5 nominal_probe_path20 metrics",
+      "fields_count": 72,
+      "fields_added": [
+        "nominal_sealed_path20_correction_low_log_return",
+        "nominal_sealed_path20_worst_correction_close_return",
+        "nominal_sealed_path20_correction_volume_to_event",
+        "nominal_sealed_path20_signal_volume_to_correction",
+        "nominal_sealed_path20_signal_close_to_event_high",
+        "nominal_probe_path20_correction_low_log_return",
+        "nominal_probe_path20_worst_correction_close_return",
+        "nominal_probe_path20_correction_volume_to_event",
+        "nominal_probe_path20_signal_volume_to_correction",
+        "nominal_probe_path20_signal_close_to_event_high"
+      ]
+    }
+  },
+  "scope_corrections_acknowledged": {
+    "probe_found_total": 8810,
+    "probe_complete_consolidation_total": 7560,
+    "probe_adjacent_day_count": 1250,
+    "validation_probe_dates": 117,
+    "validation_probe_consolidation_dates": 116,
+    "kpl_crosscheck_boundary": "PidType=1 absence does not certify label error nor certify label correctness; original labels preserved."
+  },
+  "compliance": {
+    "fits_performed_in_design_batch": 0,
+    "screening_rules_altered": false,
+    "target_labels_altered": false,
+    "production_base_protected": true
+  }
+}

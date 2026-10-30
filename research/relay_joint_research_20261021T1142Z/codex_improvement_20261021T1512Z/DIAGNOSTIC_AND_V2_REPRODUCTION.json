@@ -1,0 +1,88 @@
+{
+  "at_utc": "2026-10-21T15:10:27.616607+00:00",
+  "fits": 0,
+  "http_requests": 0,
+  "sources": {
+    "research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\historical_final\\dataset.joblib": "6ef4a7b70e7b9fa35c1394a2f1a9b2fd21f352e46606a8f5e567180ee29f42e9",
+    "research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "research\\relay_joint_research_20261021T1142Z\\p1_correction_v2\\run_p1_correction_v2.py": "f7d9b95d8697bf9dfefa20e0fbfc5f3f4bc1845e3989f04121e9108f46891ba2",
+    "research\\relay_joint_research_20261021T1142Z\\p1_correction_v2\\p1_features_9245_v2.csv": "b9ea5eefe99c9b74d40069b43a3bc215a85d0fbc4e534ac81c75572c0fbb2617",
+    "research\\relay_joint_research_20261021T1142Z\\p1_correction_v2\\P1_CONDITION_TABLES_V2.json": "3fa66fd2417072ca878767c194aff969a124e9ef00cefe474ed10f5d5ffbf3db"
+  },
+  "saved_baseline_choice_diagnostic": {
+    "full": {
+      "dates": 302,
+      "candidates": 3707,
+      "positive_exists_days": 296,
+      "no_positive_all_known_days": 2,
+      "no_observed_positive_with_unknown_days": 4,
+      "top1_hits": 209,
+      "top1_unknown": 4,
+      "top1_known_failure_but_positive_elsewhere_days": 87,
+      "top1_unknown_but_positive_elsewhere_days": 0,
+      "top2_any_hit_days": 250,
+      "top3_any_hit_days": 275,
+      "first_positive_rank_counts": {
+        "1.0": 209,
+        "2.0": 41,
+        "3.0": 25,
+        "4.0": 11,
+        "5.0": 6,
+        "NONE_OBSERVED": 6,
+        "8.0": 2,
+        "6.0": 1,
+        "9.0": 1
+      },
+      "note": "Outcome-conditioned diagnostic; presence of a winner is not an achievable model ceiling or a prospective selection rule."
+    },
+    "nonword": {
+      "dates": 302,
+      "candidates": 2980,
+      "positive_exists_days": 282,
+      "no_positive_all_known_days": 16,
+      "no_observed_positive_with_unknown_days": 4,
+      "top1_hits": 128,
+      "top1_unknown": 4,
+      "top1_known_failure_but_positive_elsewhere_days": 154,
+      "top1_unknown_but_positive_elsewhere_days": 0,
+      "top2_any_hit_days": 184,
+      "top3_any_hit_days": 233,
+      "first_positive_rank_counts": {
+        "1.0": 128,
+        "2.0": 56,
+        "3.0": 49,
+        "4.0": 22,
+        "NONE_OBSERVED": 20,
+        "5.0": 10,
+        "6.0": 6,
+        "7.0": 5,
+        "8.0": 4,
+        "10.0": 1,
+        "12.0": 1
+      },
+      "note": "Outcome-conditioned diagnostic; presence of a winner is not an achievable model ceiling or a prospective selection rule."
+    }
+  },
+  "v2_reproduction": {
+    "rows": 9245,
+    "mismatches": {},
+    "nonword_board2_day_gap": {
+      "original_board2_dates": 682,
+      "paired_observed_dates": 457,
+      "unpaired_dates": 225,
+      "loss_minus_win_delta_mean_by_day": 0.021311,
+      "moving_block5_observed_days_descriptive_ci95": [
+        0.002062,
+        0.041361
+      ],
+      "caveat": "Exploratory, outcome-conditioned mixed days only; not selection performance, independent causality or new blind evidence."
+    }
+  },
+  "limitations": [
+    "Saved historical results already seen; not fresh blind evidence.",
+    "Current-universe survivor bias and original source limitations persist.",
+    "No trade execution or realized profit win rate measured.",
+    "V2 middle nonpromotion is not severe damage; severe-damage path and complete bounds still need peer clarification.",
+    "Prior pairwise ranking models failed; no authorization to rerun them under a new name."
+  ]
+}

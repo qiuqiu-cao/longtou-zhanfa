@@ -1,0 +1,165 @@
+{
+  "recorded_at": "2026-10-29T16:47:32.925944+00:00",
+  "status": "REVIEW_NOT_PASSED",
+  "fits": 0,
+  "source_hashes_unchanged": true,
+  "old_protected_files_checked": 128,
+  "old_protected_files_unchanged": true,
+  "pool": {
+    "rows": 13149,
+    "dates": 286,
+    "archived_screen_matches": 13148
+  },
+  "top3": {
+    "raw": {
+      "selected": 858,
+      "known": 838,
+      "hits": 51
+    },
+    "screened": {
+      "selected": 858,
+      "known": 838,
+      "hits": 55
+    }
+  },
+  "corrected_ledger": {
+    "excluded": 168,
+    "false_four_board": 156,
+    "removed_four_board": 6,
+    "four_board_unknown": 6,
+    "observed_closed": 40,
+    "avoided_negative_proxy_trades": 22,
+    "excluded_profitable_proxy_trades": 18,
+    "excluded_profit_unknown": 128,
+    "unknown_breakdown": {
+      "NO_SCENARIO_RECORD": 107,
+      "OPEN_AT_UPPER_LIMIT_NO_QUEUE_ASSUMPTION": 19,
+      "ENTRY_LOT_OR_SLIPPAGE_LIMIT_CANCEL": 1,
+      "OPEN_UNRESOLVED": 1
+    },
+    "profitable_pnl": 90868.73463999997,
+    "negative_pnl": -237920.11072,
+    "promoted": 168,
+    "promoted_closed": 0,
+    "note": "Original Top1 scenario only. These sums do not rerun portfolio cash, replacement entries, exits or fees; no new strategy-return claim."
+  },
+  "score_origin": {
+    "knowledge_cutoff": "2026-08-31",
+    "train_max_label_end": "2026-08-28",
+    "score_mismatch_rows": 13149,
+    "rank_mismatch_rows": 12437,
+    "note": "Audit uses rolling OOF scores for Top3 metrics but records static final-bundle ranks. Missing OOF file silently switches to static scores."
+  },
+  "counterexamples": {
+    "missing_seal_time_grants_exemption": {
+      "result": [
+        "SATISFIED",
+        "大容量换手且尾盘大额加单锁仓(Seal_Delta=1.30)，确凿特赦"
+      ]
+    },
+    "seal_delta_1_1_grants_exemption": {
+      "result": [
+        "SATISFIED",
+        "大容量换手且尾盘封单平稳(Seal_Delta=1.10)，予以观察特赦"
+      ]
+    },
+    "bad_history_not_checked": {
+      "result": [
+        [
+          "SATISFIED",
+          "大容量换手且尾盘大额加单锁仓(Seal_Delta=1.30)，确凿特赦"
+        ],
+        [
+          false,
+          "通过盘口排雷"
+        ]
+      ]
+    },
+    "zero_promotion_not_defensive": {
+      "result": {
+        "is_defense": false,
+        "regime": "NORMAL_TRADING",
+        "risk_flags": [
+          "市场跌停家数(8)偏高"
+        ],
+        "recommendation": "【情绪正常/分歧】按标准流程全池审阅候选"
+      }
+    },
+    "missing_emotion_reports_normal": {
+      "result": {
+        "is_defense": false,
+        "regime": "NORMAL_TRADING",
+        "risk_flags": [],
+        "recommendation": "【情绪正常/分歧】按标准流程全池审阅候选"
+      }
+    },
+    "thirteen_fortyfive_wrongly_after_fourteen": {
+      "result": [
+        true,
+        "14:00后偷袭封板且换手严重不足(2.5%)，诱多嫌疑一票否决"
+      ]
+    },
+    "two_industry_rows_without_times": {
+      "result": [
+        {
+          "code": "000001",
+          "theme_pioneer_tag": "🟡【先封但偏晚(0分)-助攻1只】"
+        },
+        {
+          "code": "000002",
+          "theme_pioneer_tag": "🟡【先封但偏晚(0分)-助攻1只】"
+        }
+      ]
+    },
+    "early_and_late_industry_rows_invent_assistance": {
+      "result": [
+        {
+          "code": "000001",
+          "theme_pioneer_tag": "🟢【题材先锋身位-助攻1只】"
+        },
+        {
+          "code": "000002",
+          "theme_pioneer_tag": "⚪【题材同位跟风(第2封)】"
+        }
+      ]
+    },
+    "partial_missing_seal_crashes_theme": {
+      "error": "ValueError",
+      "message": "cannot convert float NaN to integer"
+    },
+    "all44_nan_accepted": {
+      "result": [
+        0.0012219956993483668,
+        0.0012219956993483668
+      ]
+    },
+    "unverified_scope_accepted": {
+      "result": [
+        0.2749859322784418,
+        0.22632478943135695
+      ]
+    }
+  },
+  "original_gemini_receipt": {
+    "timestamp": "2026-10-29T16:38:34.376103+00:00",
+    "legacy_bundle": "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_leader_20261020T114600Z\\first_board_leader_bundle.joblib",
+    "test_period": "2025-07-01 to 2026-08-31",
+    "test_dates": 286,
+    "test_rows": 13149,
+    "unscreened_precision": 0.060859188544152745,
+    "screened_precision": 0.06563245823389022,
+    "ledger_summary": {
+      "total_decisions": 1026,
+      "excluded_count": 168,
+      "avoided_losses_count": 156,
+      "avoided_negative_trades": 61,
+      "killed_profitable_trades": 0,
+      "killed_true_dragons": 6,
+      "net_loss_prevention": 61,
+      "promoted_count": 168,
+      "promoted_dragons": 10,
+      "promoted_profitable_trades": 0,
+      "promoted_failed_trades": 0
+    }
+  }
+}

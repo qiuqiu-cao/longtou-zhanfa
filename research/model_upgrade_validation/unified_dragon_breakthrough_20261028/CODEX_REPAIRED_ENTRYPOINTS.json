@@ -1,0 +1,19 @@
+{
+  "status": "RESEARCH_BUGFIX_ONLY_NOT_PRODUCTION",
+  "active_feature_engine": "research/model_upgrade_validation/codex_5d_causal_repair_20261028/causal_engine.py",
+  "backtest": "research/model_upgrade_validation/codex_5d_causal_repair_20261028/backtest_summary.json",
+  "model_bundles": [
+    "research/model_upgrade_validation/codex_5d_causal_repair_20261028/model_Fold_1.joblib",
+    "research/model_upgrade_validation/codex_5d_causal_repair_20261028/model_Fold_2.joblib",
+    "research/model_upgrade_validation/codex_5d_causal_repair_20261028/model_Fold_3.joblib",
+    "research/model_upgrade_validation/codex_5d_causal_repair_20261028/model_Fold_4.joblib"
+  ],
+  "prior_gemini_weights": "model_clean_5d_dragon.joblib retained for provenance; not loaded by corrected entry",
+  "frozen_comparison_note": "Codex repair was frozen from the original 5D snapshot before this latest clean version appeared; its results are not a like-for-like improvement claim over Gemini clean.",
+  "original_clean_source_snapshot": "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\codex_5d_causal_repair_20261028\\latest_gemini_clean_before_fix",
+  "corrected_entrypoints": [
+    "build_and_train_clean_5d_model.py",
+    "eval_clean_1028.py",
+    "evaluate_20261028_case.py"
+  ]
+}

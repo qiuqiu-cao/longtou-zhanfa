@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-10-21T02:57:00+00:00",
+  "updated_at": "2026-10-21T03:03:30+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/forum_factor_design_20261021T025139Z",
+  "batch_deadline_utc": "2026-10-21T03:21:39+00:00",
+  "current_step": "FINAL_CANDIDATE_REDUNDANCY_PRUNED_AND_AGREED",
+  "status": "DESIGN_COMPLETE_CONSENSUS_REACHED_NO_FITS",
+  "redundancy_pruning": {
+    "pruned_features": ["nominal_sealed_path20_age", "nominal_sealed_path20_found", "nominal_probe_path20_found"],
+    "reason": "Exact functional redundancy with baseline previous_limit_age, prior_limits_20 > 0, prior_failed_20 > 0 verified on 28503 rows."
+  },
+  "final_consensus_arms": {
+    "EVENT_SEALED_PATH_67": {
+      "definition": "Original 62 + 5 nominal_sealed_path20 metrics",
+      "fields_count": 67
+    },
+    "EVENT_DUAL_PATH_72": {
+      "definition": "Original 62 + 5 nominal_sealed_path20 + 5 nominal_probe_path20 metrics",
+      "fields_count": 72
+    }
+  },
+  "artifacts": {
+    "agreement_markdown": "research/forum_factor_design_20261021T025139Z/gemini/FINAL_CANDIDATE_AGREEMENT.md",
+    "agreement_json": "research/forum_factor_design_20261021T025139Z/gemini/FINAL_CANDIDATE_AGREEMENT.json",
+    "initial_design": "research/forum_factor_design_20261021T025139Z/gemini/GEMINI_FORUM_FACTOR_DESIGN.md",
+    "response_report": "research/forum_factor_design_20261021T025139Z/gemini/GEMINI_FORUM_FACTOR_DESIGN_RESPONSE.md"
+  },
+  "compliance_checks": {
+    "gemini_model_version": "Gemini 3.8 Flash High",
+    "fits_in_this_design_batch": 0,
+    "production_files_modified": 0,
+    "screening_rules_altered": false,
+    "target_labels_altered": false
+  }
+}

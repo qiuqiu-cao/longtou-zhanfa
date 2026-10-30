@@ -1,0 +1,509 @@
+{
+  "audit_at_utc": "2026-10-27T14:35:20.351473+00:00",
+  "scope": "NO_FIT_NO_SOURCE_OVERWRITE",
+  "source_sha256": {
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\build_stage_leader_dataset.py": "28bc3d62d834bcfe73c604f9830f2ad48f35eabf255f806a1893b150f10094a9",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\daily_competition_round2.csv": "dd798cb987b40f19da7261cc2a8bc60d1b5b387ef541f75d457a073baa132214",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\evaluate_round2_comprehensive.py": "dd62fc3068c5fda18846a7ccb78fa7d3f6ffff1de9b3e72a8071e8a1e700a69b",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\manifest_round2.json": "f7943f972a8eb1d815010d0411f5fb4bdb0cf0ac505e282373312ccacdbca146",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\model_emotion_dragon.joblib": "07dc20eee2f7ddc8ddd5813e5eb40b98f22a80ba4c79d94b712b279dacec9539",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\model_height_5.joblib": "3ba22d3d60b18f07739c3993bdf78c82184c5a1cba69639c7700e2d3e7481ec9",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\model_space_leader.joblib": "4570a17eb5b3369a7a63ea53fb259be56c38d719d64191749b701805ebe57cbc",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\oof_round2_predictions.csv": "5b9306fab13b11a22f1474b0deb90999d4e657ec95f41aa8307f356d3d594e1b",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\round2_comprehensive_metrics.json": "391b1b26b594f01bad5e7d611d8191ad19ff3e1c2b56782183942288fcddb5b5",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\ROUND2_STAGE_LEADER_DRAGON_REPORT.md": "7e1a8a6f4501910868bb4e7eb42023c4cb9edb64bd9519b6b9877b173aa9019c",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\stage_leader_dataset.csv": "5d8702cf38d95ecec86c5f1ea65f53df6222fc2a97d98672183bff4036319333",
+    "research\\model_upgrade_validation\\dragon_stage_leader_20261027T071500Z\\train_and_evaluate_round2.py": "6bf0a9a55d6b4fed16fa3c481550ae13d33fd3cf76adcb5316d7a9d7284e16ae",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "audit_three_board_traps.py": "aeaca49c793e203c5fefb9949b7c04804e98950f91c8ccb4dd8f619fb4418fd1"
+  },
+  "raw_original_scores_top1": {
+    "is_market_space_leader": {
+      "n": 340,
+      "known": 340,
+      "unknown": 0,
+      "hits": 129,
+      "rate_known": 0.37941176470588234
+    },
+    "is_emotion_dragon_proxy": {
+      "n": 340,
+      "known": 340,
+      "unknown": 0,
+      "hits": 62,
+      "rate_known": 0.18235294117647058
+    },
+    "is_3to5": {
+      "n": 340,
+      "known": 340,
+      "unknown": 0,
+      "hits": 110,
+      "rate_known": 0.3235294117647059
+    },
+    "bounded_space_including_signal": {
+      "n": 340,
+      "known": 340,
+      "unknown": 0,
+      "hits": 114,
+      "rate_known": 0.3352941176470588
+    },
+    "strict_future_space": {
+      "n": 340,
+      "known": 338,
+      "unknown": 2,
+      "hits": 101,
+      "rate_known": 0.2988165680473373
+    },
+    "strict_dragon_proxy": {
+      "n": 340,
+      "known": 338,
+      "unknown": 2,
+      "hits": 57,
+      "rate_known": 0.16863905325443787
+    },
+    "already_space_on_signal": {
+      "n": 340,
+      "known": 340,
+      "unknown": 0,
+      "hits": 36,
+      "rate_known": 0.10588235294117647
+    },
+    "bounded_dragon_proxy": {
+      "n": 340,
+      "known": 340,
+      "unknown": 0,
+      "hits": 57,
+      "rate_known": 0.1676470588235294
+    }
+  },
+  "raw_original_scores_selected_040": {
+    "is_market_space_leader": {
+      "n": 151,
+      "known": 151,
+      "unknown": 0,
+      "hits": 71,
+      "rate_known": 0.47019867549668876
+    },
+    "is_emotion_dragon_proxy": {
+      "n": 151,
+      "known": 151,
+      "unknown": 0,
+      "hits": 27,
+      "rate_known": 0.17880794701986755
+    },
+    "is_3to5": {
+      "n": 151,
+      "known": 151,
+      "unknown": 0,
+      "hits": 49,
+      "rate_known": 0.32450331125827814
+    },
+    "bounded_space_including_signal": {
+      "n": 151,
+      "known": 151,
+      "unknown": 0,
+      "hits": 64,
+      "rate_known": 0.423841059602649
+    },
+    "strict_future_space": {
+      "n": 151,
+      "known": 150,
+      "unknown": 1,
+      "hits": 51,
+      "rate_known": 0.34
+    },
+    "strict_dragon_proxy": {
+      "n": 151,
+      "known": 150,
+      "unknown": 1,
+      "hits": 25,
+      "rate_known": 0.16666666666666666
+    },
+    "already_space_on_signal": {
+      "n": 151,
+      "known": 151,
+      "unknown": 0,
+      "hits": 36,
+      "rate_known": 0.23841059602649006
+    },
+    "bounded_dragon_proxy": {
+      "n": 151,
+      "known": 151,
+      "unknown": 0,
+      "hits": 25,
+      "rate_known": 0.16556291390728478
+    }
+  },
+  "all_signal_days_top1_diagnostics": {
+    "is_market_space_leader": {
+      "n": 449,
+      "known": 449,
+      "unknown": 0,
+      "hits": 163,
+      "rate_known": 0.36302895322939865
+    },
+    "is_emotion_dragon_proxy": {
+      "n": 449,
+      "known": 449,
+      "unknown": 0,
+      "hits": 75,
+      "rate_known": 0.16703786191536749
+    },
+    "is_3to5": {
+      "n": 449,
+      "known": 449,
+      "unknown": 0,
+      "hits": 131,
+      "rate_known": 0.29175946547884185
+    },
+    "bounded_space_including_signal": {
+      "n": 449,
+      "known": 449,
+      "unknown": 0,
+      "hits": 144,
+      "rate_known": 0.3207126948775056
+    },
+    "strict_future_space": {
+      "n": 449,
+      "known": 447,
+      "unknown": 2,
+      "hits": 126,
+      "rate_known": 0.28187919463087246
+    },
+    "strict_dragon_proxy": {
+      "n": 449,
+      "known": 446,
+      "unknown": 3,
+      "hits": 69,
+      "rate_known": 0.1547085201793722
+    },
+    "already_space_on_signal": {
+      "n": 449,
+      "known": 449,
+      "unknown": 0,
+      "hits": 49,
+      "rate_known": 0.1091314031180401
+    },
+    "bounded_dragon_proxy": {
+      "n": 449,
+      "known": 449,
+      "unknown": 0,
+      "hits": 69,
+      "rate_known": 0.15367483296213807
+    }
+  },
+  "original_metrics_recomputed": {
+    "competitive_days": 340,
+    "selected_days": 151,
+    "selected_coverage": 0.4441176470588235,
+    "all_competitive_space_positive_rows": 384,
+    "all_competitive_dragon_positive_rows": 171
+  },
+  "label_bug": {
+    "stage_rows": 1851,
+    "oof_rows": 1480,
+    "all_rows_with_outside_current_run_observations": 662,
+    "changed_labels_by_same_run_upper_bound": {
+      "is_market_space_leader": 91,
+      "is_emotion_dragon_proxy": 21
+    },
+    "oof_space_label_changes": 61,
+    "oof_dragon_label_changes": 15,
+    "raw_top1_space_hits_already_high_at_signal": 36,
+    "selected_space_hits_already_high_at_signal": 36
+  },
+  "training_label_leakage_by_fold": [
+    {
+      "fold_start": "2024-09-01",
+      "n": 370,
+      "label_reads_beyond_train": 181,
+      "space_labels_changed": 23,
+      "dragon_labels_changed": 4,
+      "failure_not_known": 2
+    },
+    {
+      "fold_start": "2025-01-01",
+      "n": 801,
+      "label_reads_beyond_train": 284,
+      "space_labels_changed": 39,
+      "dragon_labels_changed": 9,
+      "failure_not_known": 3
+    },
+    {
+      "fold_start": "2025-06-01",
+      "n": 1078,
+      "label_reads_beyond_train": 297,
+      "space_labels_changed": 49,
+      "dragon_labels_changed": 11,
+      "failure_not_known": 0
+    },
+    {
+      "fold_start": "2025-12-01",
+      "n": 1405,
+      "label_reads_beyond_train": 246,
+      "space_labels_changed": 39,
+      "dragon_labels_changed": 10,
+      "failure_not_known": 1
+    }
+  ],
+  "original_cutoff_rows": [
+    {
+      "date": "2026-08-26",
+      "code": "002084",
+      "name": "海鸥住工",
+      "original_terminal": null,
+      "round2_terminal": 6.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 4,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 1,
+      "bounded_unique_space": 1,
+      "bounded_space_days": 1,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 6,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": 1.0,
+      "strict_future_space": 1.0,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-27",
+      "code": "002855",
+      "name": "捷荣技术",
+      "original_terminal": null,
+      "round2_terminal": 5.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 3,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 5,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-27",
+      "code": "600371",
+      "name": "万向德农",
+      "original_terminal": null,
+      "round2_terminal": 5.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 3,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 5,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-28",
+      "code": "000712",
+      "name": "锦龙股份",
+      "original_terminal": null,
+      "round2_terminal": 4.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 2,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 4,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-31",
+      "code": "002396",
+      "name": "星网锐捷",
+      "original_terminal": null,
+      "round2_terminal": 3.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 1,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 3,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-31",
+      "code": "002886",
+      "name": "沃特股份",
+      "original_terminal": null,
+      "round2_terminal": 3.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 1,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 3,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-31",
+      "code": "600540",
+      "name": "新赛股份",
+      "original_terminal": null,
+      "round2_terminal": 3.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 1,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 3,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    },
+    {
+      "date": "2026-08-31",
+      "code": "603269",
+      "name": "海鸥股份",
+      "original_terminal": null,
+      "round2_terminal": 3.0,
+      "original_terminal_date": null,
+      "round2_terminal_date": "2026-08-31",
+      "original_censored": 1,
+      "wrong_selected_rows": 1,
+      "outside_current_run_rows": 0,
+      "last_label_observation": "2026-08-31",
+      "bounded_space_including_signal": 0,
+      "bounded_unique_space": 0,
+      "bounded_space_days": 0,
+      "bounded_dragon_proxy": 0,
+      "strict_chain_completed": false,
+      "strict_chain_max": 3,
+      "strict_chain_last_date": "2026-08-31",
+      "failure_known_on": null,
+      "strict_space_including_signal": null,
+      "strict_future_space": null,
+      "strict_dragon_proxy": null,
+      "already_space_on_signal": 0,
+      "already_unique_on_signal": 0
+    }
+  ],
+  "saved_audit_tags": {
+    "vetoed": 117,
+    "claimed_tradable_n": 102,
+    "claimed_tradable_space_hits": 44,
+    "claimed_tradable_dragon_hits": 14,
+    "claimed_tradable_base_below_50": 31,
+    "claimed_tradable_base_unknown": 23,
+    "all_tag_counts": {
+      "['【三板-身位一字先锋】']": 119,
+      "['【三板-同位跟风陪跑】']": 117,
+      "[]": 92,
+      "['【三板-换手核心真龙】']": 12
+    }
+  },
+  "base_match_coverage": {
+    "competitive_rows": 1371,
+    "matched_rows": 950,
+    "matched_days_2plus": 259,
+    "complete_days_2plus": 100,
+    "partial_days_2plus": 159
+  },
+  "models": {
+    "model_emotion_dragon.joblib": {
+      "loaded": true,
+      "feature_count": 57,
+      "sha256": "07dc20eee2f7ddc8ddd5813e5eb40b98f22a80ba4c79d94b712b279dacec9539"
+    },
+    "model_height_5.joblib": {
+      "loaded": true,
+      "feature_count": 57,
+      "sha256": "3ba22d3d60b18f07739c3993bdf78c82184c5a1cba69639c7700e2d3e7481ec9"
+    },
+    "model_space_leader.joblib": {
+      "loaded": true,
+      "feature_count": 57,
+      "sha256": "4570a17eb5b3369a7a63ea53fb259be56c38d719d64191749b701805ebe57cbc"
+    }
+  },
+  "base_hash_matches": true,
+  "original_data_board_min": 2.0,
+  "fitted_new_models": 0,
+  "new_formal_predictions": 0,
+  "new_trades": 0,
+  "all_original_files_unchanged": true,
+  "checks": {
+    "preserved_originals": true,
+    "base_hash_matches": true,
+    "top1_space_rate_matches_saved": true,
+    "top1_dragon_rate_matches_saved": true,
+    "selective_space_rate_matches_saved": true
+  }
+}

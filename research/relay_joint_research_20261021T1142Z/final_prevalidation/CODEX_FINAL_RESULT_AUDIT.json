@@ -1,0 +1,100 @@
+{
+  "at_utc": "2026-10-21T15:53:35.180203+00:00",
+  "decision": "REJECTED_FIXED_EXPERIMENT_NO_MONTHLY_NO_DEPLOYMENT",
+  "actual_new_fits": 3,
+  "new_a_models_verified": [
+    {
+      "fold": "2025H2",
+      "model_sha256": "22e52755ef7142510167e539e26b5d17d696132eedd2e17a99e9c37787e94a74",
+      "fields": 87,
+      "trees": 120
+    },
+    {
+      "fold": "2026JanAug",
+      "model_sha256": "cc0a2a3e62b7028912c1a11cb36292efcd4522bc28dda64c5b43a35c03737fd5",
+      "fields": 87,
+      "trees": 120
+    },
+    {
+      "fold": "2026Sep",
+      "model_sha256": "fd84ff77645b1a93c0107a04e8bd04af4f7983887c2004722f3dea70589e4943",
+      "fields": 87,
+      "trees": 120
+    }
+  ],
+  "rows": 3707,
+  "dates": 302,
+  "unknown": 67,
+  "source_hashes_unchanged": true,
+  "labels_and_identity_exactly_match_canonical": true,
+  "independent_top_metrics": {
+    "nonword_top1": {
+      "hits": 131,
+      "slots": 302,
+      "known": 298,
+      "unknown": 4,
+      "dates": 302,
+      "any_hit_days": 131
+    },
+    "nonword_top2": {
+      "hits": 246,
+      "slots": 604,
+      "known": 596,
+      "unknown": 8,
+      "dates": 302,
+      "any_hit_days": 194
+    },
+    "nonword_top3": {
+      "hits": 351,
+      "slots": 906,
+      "known": 894,
+      "unknown": 12,
+      "dates": 302,
+      "any_hit_days": 221
+    },
+    "full_top1": {
+      "hits": 215,
+      "slots": 302,
+      "known": 298,
+      "unknown": 4,
+      "dates": 302,
+      "any_hit_days": 215
+    },
+    "full_top2": {
+      "hits": 389,
+      "slots": 604,
+      "known": 596,
+      "unknown": 8,
+      "dates": 302,
+      "any_hit_days": 260
+    },
+    "full_top3": {
+      "hits": 527,
+      "slots": 906,
+      "known": 894,
+      "unknown": 12,
+      "dates": 302,
+      "any_hit_days": 277
+    }
+  },
+  "choice_changes": {
+    "BASE": {
+      "gains_from_known_fail": 36,
+      "lost_known_success": 33,
+      "changed_choice_days": 146,
+      "unknown_new": 4,
+      "unknown_reference": 4
+    },
+    "ST_DUAL_FIXED3": {
+      "gains_from_known_fail": 8,
+      "lost_known_success": 11,
+      "changed_choice_days": 44,
+      "unknown_new": 4,
+      "unknown_reference": 4
+    }
+  },
+  "all_gates_passed": false,
+  "new_validation_fits": 0,
+  "original_BASE_refits": 0,
+  "first_board": "PAUSED"
+}

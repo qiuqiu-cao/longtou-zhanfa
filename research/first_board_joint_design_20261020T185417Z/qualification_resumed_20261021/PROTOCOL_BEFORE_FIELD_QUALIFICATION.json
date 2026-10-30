@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-21T01:50:29.521782+00:00",
+  "fits": 0,
+  "labels_read": false,
+  "source_sha256": "2ea6a900dc7af60de5778ffd54ae85f15dec9b85c95097b3b75f98c2036de607",
+  "facts_sha256": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+  "manifest_sha256": "b5f01a6311020fbe4c97916bd767d5902f19bd549532de6b7a7eaba8635d6479",
+  "fields": [
+    "reported_first_seal_trading_minutes",
+    "reported_first_seal_observed_pool_rank",
+    "reported_close_seal_log_amount_ratio",
+    "reported_close_seal_log_floatcap_ratio"
+  ],
+  "definition": "Exact first-seal trading minutes,observed original-pool same-day mean percentile;log1p provider reported close-seal yuan divided by original signal-day amount/floatcap",
+  "field_scope": "Only raw indices0/4/6/21 under exact dated daily envelope;quarantine reasons/concepts/group IDs/currentname/flow/maxseal/unmappedflags/finalseal/bomb count",
+  "gate": "Each required field>=90% in development and2025H1,each signal date at least one timestamp observation;no target-based row removal. Missing/lunch/wrongdate/price mismatch remain NaN.",
+  "boundary": "Late downloaded daily-provider quotes are historical proxies,not strict originalHTTPclock,verified exchange queue,capital-actor identity or eliminated universe-survivorship bias"
+}

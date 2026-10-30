@@ -1,0 +1,900 @@
+{
+  "title": "Line A Cohort Feedback Condition Study V2 (Repaired & Sealed)",
+  "timestamp_utc": "2026-10-21T11:46:57.647138+00:00",
+  "zero_fits_declaration": true,
+  "network_calls": 0,
+  "source_hashes": {
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\dataset.joblib": "d4b462f0e86873b571371034c81c405f1d5c61656d7bf7b2cc23b5b313cd3383",
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c"
+  },
+  "relay_track_9245": {
+    "dataset_rows": 9245,
+    "unique_dates": 684,
+    "target_column": "target",
+    "overall": {
+      "n": 9245,
+      "known": 9178,
+      "unknown": 67,
+      "k": 3703,
+      "known_rate": 0.4035,
+      "lower_bound": 0.4005,
+      "upper_bound": 0.4078,
+      "wilson95": [
+        0.3935,
+        0.4135
+      ]
+    },
+    "raw_promoted_overall": {
+      "n": 9245,
+      "known": 9045,
+      "unknown": 200,
+      "k": 3648,
+      "known_rate": 0.4033,
+      "lower_bound": 0.3946,
+      "upper_bound": 0.4162,
+      "wilson95": [
+        0.3933,
+        0.4135
+      ]
+    },
+    "by_parent_break": {
+      "no_break": {
+        "n": 3001,
+        "known": 2969,
+        "unknown": 32,
+        "k": 1233,
+        "known_rate": 0.4153,
+        "lower_bound": 0.4109,
+        "upper_bound": 0.4215,
+        "wilson95": [
+          0.3977,
+          0.4331
+        ]
+      },
+      "has_break": {
+        "n": 6244,
+        "known": 6209,
+        "unknown": 35,
+        "k": 2470,
+        "known_rate": 0.3978,
+        "lower_bound": 0.3956,
+        "upper_bound": 0.4012,
+        "wilson95": [
+          0.3857,
+          0.41
+        ]
+      }
+    },
+    "by_boards_x_parent_break": {
+      "board_2": {
+        "no_break": {
+          "n": 1815,
+          "known": 1796,
+          "unknown": 19,
+          "k": 647,
+          "known_rate": 0.3602,
+          "lower_bound": 0.3565,
+          "upper_bound": 0.3669,
+          "wilson95": [
+            0.3384,
+            0.3827
+          ]
+        },
+        "has_break": {
+          "n": 3713,
+          "known": 3695,
+          "unknown": 18,
+          "k": 1237,
+          "known_rate": 0.3348,
+          "lower_bound": 0.3332,
+          "upper_bound": 0.338,
+          "wilson95": [
+            0.3197,
+            0.3502
+          ]
+        }
+      },
+      "board_3": {
+        "no_break": {
+          "n": 605,
+          "known": 597,
+          "unknown": 8,
+          "k": 284,
+          "known_rate": 0.4757,
+          "lower_bound": 0.4694,
+          "upper_bound": 0.4826,
+          "wilson95": [
+            0.4359,
+            0.5158
+          ]
+        },
+        "has_break": {
+          "n": 1287,
+          "known": 1278,
+          "unknown": 9,
+          "k": 619,
+          "known_rate": 0.4844,
+          "lower_bound": 0.481,
+          "upper_bound": 0.488,
+          "wilson95": [
+            0.457,
+            0.5118
+          ]
+        }
+      },
+      "board_4": {
+        "no_break": {
+          "n": 314,
+          "known": 311,
+          "unknown": 3,
+          "k": 141,
+          "known_rate": 0.4534,
+          "lower_bound": 0.449,
+          "upper_bound": 0.4586,
+          "wilson95": [
+            0.399,
+            0.5089
+          ]
+        },
+        "has_break": {
+          "n": 590,
+          "known": 588,
+          "unknown": 2,
+          "k": 288,
+          "known_rate": 0.4898,
+          "lower_bound": 0.4881,
+          "upper_bound": 0.4915,
+          "wilson95": [
+            0.4496,
+            0.5301
+          ]
+        }
+      },
+      "board_5": {
+        "no_break": {
+          "n": 137,
+          "known": 136,
+          "unknown": 1,
+          "k": 77,
+          "known_rate": 0.5662,
+          "lower_bound": 0.562,
+          "upper_bound": 0.5693,
+          "wilson95": [
+            0.4822,
+            0.6465
+          ]
+        },
+        "has_break": {
+          "n": 294,
+          "known": 292,
+          "unknown": 2,
+          "k": 144,
+          "known_rate": 0.4932,
+          "lower_bound": 0.4898,
+          "upper_bound": 0.4966,
+          "wilson95": [
+            0.4363,
+            0.5502
+          ]
+        }
+      },
+      "board_6": {
+        "no_break": {
+          "n": 64,
+          "known": 64,
+          "unknown": 0,
+          "k": 42,
+          "known_rate": 0.6562,
+          "lower_bound": 0.6562,
+          "upper_bound": 0.6562,
+          "wilson95": [
+            0.534,
+            0.7608
+          ]
+        },
+        "has_break": {
+          "n": 159,
+          "known": 156,
+          "unknown": 3,
+          "k": 76,
+          "known_rate": 0.4872,
+          "lower_bound": 0.478,
+          "upper_bound": 0.4969,
+          "wilson95": [
+            0.41,
+            0.565
+          ]
+        }
+      }
+    },
+    "by_regime_x_parent_break": {
+      "BALANCED": {
+        "no_break": {
+          "n": 824,
+          "known": 803,
+          "unknown": 21,
+          "k": 331,
+          "known_rate": 0.4122,
+          "lower_bound": 0.4017,
+          "upper_bound": 0.4272,
+          "wilson95": [
+            0.3787,
+            0.4466
+          ]
+        },
+        "has_break": {
+          "n": 1254,
+          "known": 1254,
+          "unknown": 0,
+          "k": 546,
+          "known_rate": 0.4354,
+          "lower_bound": 0.4354,
+          "upper_bound": 0.4354,
+          "wilson95": [
+            0.4082,
+            0.463
+          ]
+        }
+      },
+      "CLIMAX_CONSENSUS": {
+        "no_break": {
+          "n": 65,
+          "known": 65,
+          "unknown": 0,
+          "k": 43,
+          "known_rate": 0.6615,
+          "lower_bound": 0.6615,
+          "upper_bound": 0.6615,
+          "wilson95": [
+            0.5404,
+            0.7647
+          ]
+        },
+        "has_break": {
+          "n": 50,
+          "known": 50,
+          "unknown": 0,
+          "k": 26,
+          "known_rate": 0.52,
+          "lower_bound": 0.52,
+          "upper_bound": 0.52,
+          "wilson95": [
+            0.3851,
+            0.652
+          ]
+        }
+      },
+      "DIVERGENCE_TEST": {
+        "no_break": {
+          "n": 1566,
+          "known": 1555,
+          "unknown": 11,
+          "k": 643,
+          "known_rate": 0.4135,
+          "lower_bound": 0.4106,
+          "upper_bound": 0.4176,
+          "wilson95": [
+            0.3893,
+            0.4382
+          ]
+        },
+        "has_break": {
+          "n": 3218,
+          "known": 3201,
+          "unknown": 17,
+          "k": 1266,
+          "known_rate": 0.3955,
+          "lower_bound": 0.3934,
+          "upper_bound": 0.3987,
+          "wilson95": [
+            0.3787,
+            0.4126
+          ]
+        }
+      },
+      "EBB_HANDOVER": {
+        "no_break": {
+          "n": 273,
+          "known": 273,
+          "unknown": 0,
+          "k": 108,
+          "known_rate": 0.3956,
+          "lower_bound": 0.3956,
+          "upper_bound": 0.3956,
+          "wilson95": [
+            0.3394,
+            0.4547
+          ]
+        },
+        "has_break": {
+          "n": 1363,
+          "known": 1345,
+          "unknown": 18,
+          "k": 510,
+          "known_rate": 0.3792,
+          "lower_bound": 0.3742,
+          "upper_bound": 0.3874,
+          "wilson95": [
+            0.3536,
+            0.4054
+          ]
+        }
+      },
+      "ICE_BREAKING": {
+        "no_break": {
+          "n": 273,
+          "known": 273,
+          "unknown": 0,
+          "k": 108,
+          "known_rate": 0.3956,
+          "lower_bound": 0.3956,
+          "upper_bound": 0.3956,
+          "wilson95": [
+            0.3394,
+            0.4547
+          ]
+        },
+        "has_break": {
+          "n": 359,
+          "known": 359,
+          "unknown": 0,
+          "k": 122,
+          "known_rate": 0.3398,
+          "lower_bound": 0.3398,
+          "upper_bound": 0.3398,
+          "wilson95": [
+            0.2928,
+            0.3903
+          ]
+        }
+      }
+    },
+    "by_primary_role": {
+      "CYCLE_CROSS_DRAGON": {
+        "n": 1139,
+        "known": 1130,
+        "unknown": 9,
+        "k": 632,
+        "known_rate": 0.5593,
+        "lower_bound": 0.5549,
+        "upper_bound": 0.5628,
+        "wilson95": [
+          0.5302,
+          0.588
+        ]
+      },
+      "RELAY_CONTENDER": {
+        "n": 5763,
+        "known": 5724,
+        "unknown": 39,
+        "k": 2105,
+        "known_rate": 0.3677,
+        "lower_bound": 0.3653,
+        "upper_bound": 0.372,
+        "wilson95": [
+          0.3554,
+          0.3803
+        ]
+      },
+      "SPACE_DRAGON": {
+        "n": 995,
+        "known": 991,
+        "unknown": 4,
+        "k": 496,
+        "known_rate": 0.5005,
+        "lower_bound": 0.4985,
+        "upper_bound": 0.5025,
+        "wilson95": [
+          0.4694,
+          0.5316
+        ]
+      },
+      "SUPPLEMENT_DRAGON": {
+        "n": 146,
+        "known": 145,
+        "unknown": 1,
+        "k": 49,
+        "known_rate": 0.3379,
+        "lower_bound": 0.3356,
+        "upper_bound": 0.3425,
+        "wilson95": [
+          0.266,
+          0.4182
+        ]
+      },
+      "TURNOVER_DRAGON": {
+        "n": 973,
+        "known": 961,
+        "unknown": 12,
+        "k": 345,
+        "known_rate": 0.359,
+        "lower_bound": 0.3546,
+        "upper_bound": 0.3669,
+        "wilson95": [
+          0.3293,
+          0.3898
+        ]
+      },
+      "USURP_DRAGON": {
+        "n": 229,
+        "known": 227,
+        "unknown": 2,
+        "k": 76,
+        "known_rate": 0.3348,
+        "lower_bound": 0.3319,
+        "upper_bound": 0.3406,
+        "wilson95": [
+          0.2766,
+          0.3985
+        ]
+      }
+    },
+    "by_handover": {
+      "handover_0": {
+        "n": 3111,
+        "known": 3073,
+        "unknown": 38,
+        "k": 1344,
+        "known_rate": 0.4374,
+        "lower_bound": 0.432,
+        "upper_bound": 0.4442,
+        "wilson95": [
+          0.4199,
+          0.455
+        ]
+      },
+      "handover_1": {
+        "n": 6134,
+        "known": 6105,
+        "unknown": 29,
+        "k": 2359,
+        "known_rate": 0.3864,
+        "lower_bound": 0.3846,
+        "upper_bound": 0.3893,
+        "wilson95": [
+          0.3743,
+          0.3987
+        ]
+      }
+    },
+    "corrected_counterexamples": [
+      {
+        "date": "2024-10-09",
+        "cohort_size": 23,
+        "promoted_count": 1,
+        "promotion_rate": 0.0435,
+        "samples": [
+          {
+            "code": "000158",
+            "name": "常山北明",
+            "boards": 3,
+            "role": "CYCLE_CROSS_DRAGON",
+            "next_open_gap": "+10.03%",
+            "proxy_net_return": "0.44%",
+            "is_large_loss": false
+          },
+          {
+            "code": "000536",
+            "name": "华映科技",
+            "boards": 3,
+            "role": "SUPPLEMENT_DRAGON",
+            "next_open_gap": "+-0.25%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "002123",
+            "name": "梦网科技",
+            "boards": 3,
+            "role": "CYCLE_CROSS_DRAGON",
+            "next_open_gap": "+6.27%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "002178",
+            "name": "延华智能",
+            "boards": 4,
+            "role": "USURP_DRAGON",
+            "next_open_gap": "+-3.46%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "boards": 3,
+            "role": "TURNOVER_DRAGON",
+            "next_open_gap": "+2.50%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          }
+        ]
+      },
+      {
+        "date": "2024-10-08",
+        "cohort_size": 281,
+        "promoted_count": 19,
+        "promotion_rate": 0.0676,
+        "samples": [
+          {
+            "code": "000004",
+            "name": "国华网安",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+-0.17%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "000027",
+            "name": "深圳能源",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+-1.04%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "000032",
+            "name": "深桑达Ａ",
+            "boards": 3,
+            "role": "CYCLE_CROSS_DRAGON",
+            "next_open_gap": "+-1.79%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "000034",
+            "name": "神州数码",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+-0.47%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "000062",
+            "name": "深圳华强",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+0.00%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          }
+        ]
+      },
+      {
+        "date": "2026-02-04",
+        "cohort_size": 10,
+        "promoted_count": 1,
+        "promotion_rate": 0.1,
+        "samples": [
+          {
+            "code": "000039",
+            "name": "中集集团",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+1.67%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "000533",
+            "name": "顺钠股份",
+            "boards": 3,
+            "role": "TURNOVER_DRAGON",
+            "next_open_gap": "+0.45%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "002126",
+            "name": "银轮股份",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+0.90%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "002342",
+            "name": "巨力索具",
+            "boards": 2,
+            "role": "RELAY_CONTENDER",
+            "next_open_gap": "+-0.40%",
+            "proxy_net_return": "N/A",
+            "is_large_loss": null
+          },
+          {
+            "code": "002830",
+            "name": "名雕股份",
+            "boards": 4,
+            "role": "SPACE_DRAGON",
+            "next_open_gap": "+0.19%",
+            "proxy_net_return": "-10.29%",
+            "is_large_loss": true
+          }
+        ]
+      }
+    ]
+  },
+  "first_board_track_13149": {
+    "dataset_rows": 13149,
+    "date_start": "2025-07-01",
+    "date_end": "2026-08-31",
+    "unique_dates": 286,
+    "overall": {
+      "n": 13149,
+      "known": 13047,
+      "unknown": 102,
+      "k": 2160,
+      "known_rate": 0.1656,
+      "lower_bound": 0.1643,
+      "upper_bound": 0.172,
+      "wilson95": [
+        0.1593,
+        0.172
+      ]
+    },
+    "non_one_price_overall": {
+      "n": 12844,
+      "known": 12743,
+      "unknown": 101,
+      "k": 2006,
+      "known_rate": 0.1574,
+      "lower_bound": 0.1562,
+      "upper_bound": 0.164,
+      "wilson95": [
+        0.1512,
+        0.1638
+      ]
+    },
+    "by_anchor_breaks": {
+      "no_break": {
+        "n": 5096,
+        "known": 5082,
+        "unknown": 14,
+        "k": 813,
+        "known_rate": 0.16,
+        "lower_bound": 0.1595,
+        "upper_bound": 0.1623,
+        "wilson95": [
+          0.1502,
+          0.1703
+        ]
+      },
+      "has_break": {
+        "n": 8053,
+        "known": 7965,
+        "unknown": 88,
+        "k": 1347,
+        "known_rate": 0.1691,
+        "lower_bound": 0.1673,
+        "upper_bound": 0.1782,
+        "wilson95": [
+          0.161,
+          0.1775
+        ]
+      }
+    },
+    "by_anchor_collapses": {
+      "no_collapse": {
+        "n": 9549,
+        "known": 9515,
+        "unknown": 34,
+        "k": 1574,
+        "known_rate": 0.1654,
+        "lower_bound": 0.1648,
+        "upper_bound": 0.1684,
+        "wilson95": [
+          0.1581,
+          0.173
+        ]
+      },
+      "has_collapse": {
+        "n": 3600,
+        "known": 3532,
+        "unknown": 68,
+        "k": 586,
+        "known_rate": 0.1659,
+        "lower_bound": 0.1628,
+        "upper_bound": 0.1817,
+        "wilson95": [
+          0.154,
+          0.1785
+        ]
+      }
+    },
+    "by_height_change_full": {
+      "height_change_-7": {
+        "n": 60,
+        "known": 60,
+        "unknown": 0,
+        "k": 8,
+        "known_rate": 0.1333,
+        "lower_bound": 0.1333,
+        "upper_bound": 0.1333,
+        "wilson95": [
+          0.0691,
+          0.2417
+        ]
+      },
+      "height_change_-6": {
+        "n": 48,
+        "known": 48,
+        "unknown": 0,
+        "k": 6,
+        "known_rate": 0.125,
+        "lower_bound": 0.125,
+        "upper_bound": 0.125,
+        "wilson95": [
+          0.0586,
+          0.247
+        ]
+      },
+      "height_change_-5": {
+        "n": 96,
+        "known": 94,
+        "unknown": 2,
+        "k": 12,
+        "known_rate": 0.1277,
+        "lower_bound": 0.125,
+        "upper_bound": 0.1458,
+        "wilson95": [
+          0.0746,
+          0.21
+        ]
+      },
+      "height_change_-4": {
+        "n": 298,
+        "known": 298,
+        "unknown": 0,
+        "k": 76,
+        "known_rate": 0.255,
+        "lower_bound": 0.255,
+        "upper_bound": 0.255,
+        "wilson95": [
+          0.2089,
+          0.3074
+        ]
+      },
+      "height_change_-3": {
+        "n": 648,
+        "known": 647,
+        "unknown": 1,
+        "k": 131,
+        "known_rate": 0.2025,
+        "lower_bound": 0.2022,
+        "upper_bound": 0.2037,
+        "wilson95": [
+          0.1733,
+          0.2352
+        ]
+      },
+      "height_change_-2": {
+        "n": 745,
+        "known": 745,
+        "unknown": 0,
+        "k": 123,
+        "known_rate": 0.1651,
+        "lower_bound": 0.1651,
+        "upper_bound": 0.1651,
+        "wilson95": [
+          0.1402,
+          0.1935
+        ]
+      },
+      "height_change_-1": {
+        "n": 1872,
+        "known": 1804,
+        "unknown": 68,
+        "k": 282,
+        "known_rate": 0.1563,
+        "lower_bound": 0.1506,
+        "upper_bound": 0.187,
+        "wilson95": [
+          0.1403,
+          0.1738
+        ]
+      },
+      "height_change_0": {
+        "n": 1863,
+        "known": 1859,
+        "unknown": 4,
+        "k": 287,
+        "known_rate": 0.1544,
+        "lower_bound": 0.1541,
+        "upper_bound": 0.1562,
+        "wilson95": [
+          0.1387,
+          0.1715
+        ]
+      },
+      "height_change_1": {
+        "n": 7519,
+        "known": 7492,
+        "unknown": 27,
+        "k": 1235,
+        "known_rate": 0.1648,
+        "lower_bound": 0.1643,
+        "upper_bound": 0.1678,
+        "wilson95": [
+          0.1566,
+          0.1734
+        ]
+      }
+    },
+    "height_change_threshold_comparisons": {
+      "height_eq_neg3": {
+        "condition": {
+          "n": 648,
+          "known": 647,
+          "unknown": 1,
+          "k": 131,
+          "known_rate": 0.2025,
+          "lower_bound": 0.2022,
+          "upper_bound": 0.2037,
+          "wilson95": [
+            0.1733,
+            0.2352
+          ]
+        },
+        "rest": {
+          "n": 12501,
+          "known": 12400,
+          "unknown": 101,
+          "k": 2029,
+          "known_rate": 0.1636,
+          "lower_bound": 0.1623,
+          "upper_bound": 0.1704,
+          "wilson95": [
+            0.1572,
+            0.1702
+          ]
+        },
+        "unique_dates_condition": 11,
+        "rate_diff_known": 0.0388
+      },
+      "height_le_neg2": {
+        "condition": {
+          "n": 1895,
+          "known": 1892,
+          "unknown": 3,
+          "k": 356,
+          "known_rate": 0.1882,
+          "lower_bound": 0.1879,
+          "upper_bound": 0.1894,
+          "wilson95": [
+            0.1712,
+            0.2064
+          ]
+        },
+        "rest": {
+          "n": 11254,
+          "known": 11155,
+          "unknown": 99,
+          "k": 1804,
+          "known_rate": 0.1617,
+          "lower_bound": 0.1603,
+          "upper_bound": 0.1691,
+          "wilson95": [
+            0.155,
+            0.1687
+          ]
+        },
+        "unique_dates_condition": 40,
+        "rate_diff_known": 0.0264
+      }
+    }
+  },
+  "audit_corrections_acknowledged": [
+    "Merged features and relay on ['date', 'code'] explicitly (resolved 173 code / 91 board index shifts).",
+    "Used formal target (9,178 known, 67 unknown) alongside raw promoted_next_day.",
+    "Reported N, known, unknown, success, known-rate, all-rows lower bound, all-rows upper bound in all tables.",
+    "Corrected first-board date scope to 2025-07-01 - 2026-08-31 (286 dates, 13,149 rows, 13,047 known, 102 unknown).",
+    "Disclosed full cycle_height_change range (-7 to +1) and acknowledged that height<=-2 difference interval contains 0.",
+    "Corrected counterexample descriptions: distinguished non-promotion from actual price drawdown; removed blanket 'nuclear button' labels.",
+    "Removed 09:25 auction confirmation requirement from S 15:00 close evaluation."
+  ]
+}

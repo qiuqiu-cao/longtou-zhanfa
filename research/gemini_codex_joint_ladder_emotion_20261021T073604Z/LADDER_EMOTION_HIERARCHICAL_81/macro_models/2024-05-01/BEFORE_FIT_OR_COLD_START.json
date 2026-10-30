@@ -1,0 +1,34 @@
+{
+  "at": "2026-10-21T07:36:44.675860+00:00",
+  "cut": "2024-05-01",
+  "rows": 100,
+  "fit_required": true,
+  "min_signal": "2023-11-29",
+  "max_signal": "2024-04-29",
+  "max_label_end": "2024-04-30",
+  "member_sha256": "5e4f3370e8d8740cd4ba941944fecb2549b1604be0bb7582b79c21e9e59d004e",
+  "fields": [
+    "ladder_n2",
+    "ladder_n3",
+    "ladder_n4",
+    "ladder_n5plus",
+    "ladder_contiguous_from2",
+    "ladder_missing_tier_fraction",
+    "emotion_prev2_survival",
+    "emotion_prev3_survival",
+    "emotion_prev_relay_mean_return",
+    "emotion_prev_relay_loss7_share",
+    "emotion_prev2_survival_change3",
+    "emotion_failed_rate_change3",
+    "emotion_relay_return_change3"
+  ],
+  "target": "first_pool_promotion_rate_TARGET_ONLY",
+  "alpha": 1.0,
+  "imputer": "median_keep_empty",
+  "scale": "StandardScaler",
+  "output_clip": [
+    0.0,
+    1.0
+  ],
+  "equal_day_weights": true
+}

@@ -1,0 +1,231 @@
+{
+  "title": "Line B Seal Quality and Turnover Binning Audit Receipt V2 (Repaired & Sealed)",
+  "timestamp_utc": "2026-10-21T11:47:59.688595+00:00",
+  "zero_fits_declaration": true,
+  "network_calls": 0,
+  "source_hashes": {
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\dataset.joblib": "d4b462f0e86873b571371034c81c405f1d5c61656d7bf7b2cc23b5b313cd3383",
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c"
+  },
+  "relay_field_audit": {
+    "daily_one_word": {
+      "non_null_count": 9199,
+      "null_count": 46,
+      "non_null_rate": 0.995,
+      "qualification_status": "QUALIFIED_HISTORICAL_PROXY"
+    },
+    "verified_turnover_boards": {
+      "non_null_count": 9242,
+      "null_count": 3,
+      "non_null_rate": 0.9997,
+      "qualification_status": "QUALIFIED_HISTORICAL_PROXY"
+    },
+    "observed_nonword_boards": {
+      "non_null_count": 9242,
+      "null_count": 3,
+      "non_null_rate": 0.9997,
+      "qualification_status": "QUALIFIED_HISTORICAL_PROXY"
+    },
+    "first_open_after_one_word": {
+      "non_null_count": 8986,
+      "null_count": 259,
+      "non_null_rate": 0.972,
+      "qualification_status": "QUALIFIED_HISTORICAL_PROXY"
+    }
+  },
+  "relay_one_word_analysis_with_observable_denominators": {
+    "non_one_word": {
+      "total_rows": 7073,
+      "known_target_rows": 7025,
+      "unknown_target_rows": 48,
+      "promoted_count": 2263,
+      "promotion_known_rate": 0.3221,
+      "all_rows_lower_bound": 0.3199,
+      "large_loss_observable_denominator": 3018,
+      "large_loss_observable_rate": 0.4062,
+      "failed_with_loss_observable_denominator": 1198,
+      "failed_loss_rate_in_observable_subset": 0.6611,
+      "net_return_observable_denominator": 2956,
+      "mean_execution_proxy_net_return": -0.0282,
+      "next_open_gap_observable_denominator": 6905,
+      "mean_next_open_gap": 0.0227
+    },
+    "one_word": {
+      "total_rows": 2126,
+      "known_target_rows": 2107,
+      "unknown_target_rows": 19,
+      "promoted_count": 1436,
+      "promotion_known_rate": 0.6815,
+      "all_rows_lower_bound": 0.6754,
+      "large_loss_observable_denominator": 1016,
+      "large_loss_observable_rate": 0.439,
+      "failed_with_loss_observable_denominator": 333,
+      "failed_loss_rate_in_observable_subset": 0.7447,
+      "net_return_observable_denominator": 991,
+      "mean_execution_proxy_net_return": -0.0307,
+      "next_open_gap_observable_denominator": 2074,
+      "mean_next_open_gap": 0.0745
+    }
+  },
+  "verified_turnover_boards_composition": {
+    "turnover_nodes_0": {
+      "total_rows": 545,
+      "board_height_distribution": {
+        "2": 288,
+        "3": 115,
+        "4": 49,
+        "5": 31,
+        "6": 20,
+        "7": 16,
+        "8": 10,
+        "9": 8,
+        "10": 4,
+        "11": 2,
+        "12": 2
+      }
+    },
+    "turnover_nodes_1": {
+      "total_rows": 1617,
+      "board_height_distribution": {
+        "2": 1104,
+        "3": 312,
+        "4": 125,
+        "5": 42,
+        "6": 15,
+        "7": 6,
+        "8": 5,
+        "9": 1,
+        "10": 2,
+        "11": 2,
+        "12": 1,
+        "13": 2
+      }
+    },
+    "turnover_nodes_2": {
+      "total_rows": 4964,
+      "board_height_distribution": {
+        "2": 4133,
+        "3": 527,
+        "4": 205,
+        "5": 57,
+        "6": 23,
+        "7": 10,
+        "8": 2,
+        "9": 3,
+        "10": 1,
+        "12": 1,
+        "14": 2
+      }
+    },
+    "turnover_nodes_3": {
+      "total_rows": 1340,
+      "board_height_distribution": {
+        "3": 938,
+        "4": 233,
+        "5": 119,
+        "6": 35,
+        "7": 11,
+        "8": 3,
+        "11": 1
+      }
+    },
+    "turnover_nodes_4": {
+      "total_rows": 472,
+      "board_height_distribution": {
+        "4": 292,
+        "5": 86,
+        "6": 61,
+        "7": 20,
+        "8": 6,
+        "9": 3,
+        "10": 1,
+        "11": 1,
+        "12": 2
+      }
+    }
+  },
+  "first_board_turnover_binnings_corrected": {
+    "<3%": {
+      "n": 1696,
+      "known": 1681,
+      "unknown": 15,
+      "k": 271,
+      "known_rate": 0.1612,
+      "lower_bound": 0.1598,
+      "wilson95": [
+        0.1444,
+        0.1796
+      ]
+    },
+    "3-5%": {
+      "n": 2506,
+      "known": 2487,
+      "unknown": 19,
+      "k": 364,
+      "known_rate": 0.1464,
+      "lower_bound": 0.1453,
+      "wilson95": [
+        0.133,
+        0.1608
+      ]
+    },
+    "5-10%": {
+      "n": 4717,
+      "known": 4678,
+      "unknown": 39,
+      "k": 704,
+      "known_rate": 0.1505,
+      "lower_bound": 0.1492,
+      "wilson95": [
+        0.1405,
+        0.161
+      ]
+    },
+    "10-15%": {
+      "n": 2163,
+      "known": 2141,
+      "unknown": 22,
+      "k": 344,
+      "known_rate": 0.1607,
+      "lower_bound": 0.159,
+      "wilson95": [
+        0.1457,
+        0.1768
+      ]
+    },
+    "15-20%": {
+      "n": 922,
+      "known": 919,
+      "unknown": 3,
+      "k": 161,
+      "known_rate": 0.1752,
+      "lower_bound": 0.1746,
+      "wilson95": [
+        0.152,
+        0.2011
+      ]
+    },
+    ">20%": {
+      "n": 839,
+      "known": 836,
+      "unknown": 3,
+      "k": 162,
+      "known_rate": 0.1938,
+      "lower_bound": 0.1931,
+      "wilson95": [
+        0.1684,
+        0.2219
+      ]
+    }
+  },
+  "audit_corrections_acknowledged": [
+    "Merged on ['date', 'code'] explicitly.",
+    "Re-named return metric to 'S+1假设触板入场、S+2收盘退出的日线执行代理'.",
+    "Disclosed observable denominators for large_loss (3,018 non-one-word, 1,016 one-word) and net_return (2,956 and 991).",
+    "Disclosed that conditional subset of failed promotions with proxy execution is not the entire failed population.",
+    "Corrected verified_turnover_boards definition: it counts historical turnover nodes in streak, not current board height (527 of 4964 are board=3, 205 are board=4).",
+    "Deleted the invalid gate 'verified_turnover_boards == 2 && EBB_HANDOVER' from first-board design.",
+    "Withdrew strictly monotonic turnover claim across full range (dips from <3% 16.12% to 3-5% 14.64%).",
+    "Acknowledged that turnover is already part of BASE 62 features."
+  ]
+}

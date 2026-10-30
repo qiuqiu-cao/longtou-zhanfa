@@ -1,0 +1,90 @@
+{
+  "missing_seal_time_grants_exemption": {
+    "result": [
+      "SATISFIED",
+      "大容量换手且尾盘大额加单锁仓(Seal_Delta=1.30)，确凿特赦"
+    ]
+  },
+  "seal_delta_1_1_grants_exemption": {
+    "result": [
+      "SATISFIED",
+      "大容量换手且尾盘封单平稳(Seal_Delta=1.10)，予以观察特赦"
+    ]
+  },
+  "bad_history_not_checked": {
+    "result": [
+      [
+        "SATISFIED",
+        "大容量换手且尾盘大额加单锁仓(Seal_Delta=1.30)，确凿特赦"
+      ],
+      [
+        false,
+        "通过盘口排雷"
+      ]
+    ]
+  },
+  "zero_promotion_not_defensive": {
+    "result": {
+      "is_defense": false,
+      "regime": "NORMAL_TRADING",
+      "risk_flags": [
+        "市场跌停家数(8)偏高"
+      ],
+      "recommendation": "【情绪正常/分歧】按标准流程全池审阅候选"
+    }
+  },
+  "missing_emotion_reports_normal": {
+    "result": {
+      "is_defense": false,
+      "regime": "NORMAL_TRADING",
+      "risk_flags": [],
+      "recommendation": "【情绪正常/分歧】按标准流程全池审阅候选"
+    }
+  },
+  "thirteen_fortyfive_wrongly_after_fourteen": {
+    "result": [
+      true,
+      "14:00后偷袭封板且换手严重不足(2.5%)，诱多嫌疑一票否决"
+    ]
+  },
+  "two_industry_rows_without_times": {
+    "result": [
+      {
+        "code": "000001",
+        "theme_pioneer_tag": "🟡【先封但偏晚(0分)-助攻1只】"
+      },
+      {
+        "code": "000002",
+        "theme_pioneer_tag": "🟡【先封但偏晚(0分)-助攻1只】"
+      }
+    ]
+  },
+  "early_and_late_industry_rows_invent_assistance": {
+    "result": [
+      {
+        "code": "000001",
+        "theme_pioneer_tag": "🟢【题材先锋身位-助攻1只】"
+      },
+      {
+        "code": "000002",
+        "theme_pioneer_tag": "⚪【题材同位跟风(第2封)】"
+      }
+    ]
+  },
+  "partial_missing_seal_crashes_theme": {
+    "error": "ValueError",
+    "message": "cannot convert float NaN to integer"
+  },
+  "all44_nan_accepted": {
+    "result": [
+      0.0012219956993483668,
+      0.0012219956993483668
+    ]
+  },
+  "unverified_scope_accepted": {
+    "result": [
+      0.2749859322784418,
+      0.22632478943135695
+    ]
+  }
+}

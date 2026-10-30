@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-10-21T07:48:00.000000+00:00",
+  "agent": "Antigravity Gemini 3.8 Flash High",
+  "status": "AGREED_ON_THEME_FEEDBACK_DESIGN_BEFORE_QUALIFICATION",
+  "experiment_root": "research/gemini_codex_joint_theme_feedback_design_20261021T074448Z",
+  "corrections_to_previous_batch": {
+    "macro_head_evaluation": "Acknowledged that constant training mean MAE (0.07039) and RMSE (0.09327) were superior to Ridge MAE (0.07241) and RMSE (0.09567). Retracted premature claim of 'strong/significant predictive power'.",
+    "causal_inference_retraction": "Retracted speculation about tree threshold suppression causing stock hit drop (52 -> 47); retained purely as empirical non-improvement."
+  },
+  "old_17_vs_new_5_distinction": {
+    "old_17_truth": "Had dated intervals, homophone families, diffusion counts, and intra-group ladder structure, but evaluated closing winners on day S in ST_DUAL with strict group size thresholds.",
+    "new_5_innovation": "Evaluates fixed S-1 cohort across day S into first-board pool, explicitly tracks non-limit failures and <= -7% losses, and removes size thresholds."
+  },
+  "proposed_5_features": [
+    {
+      "name": "prior_name_anchor_present",
+      "type": "binary",
+      "definition": "Indicator of whether an anchor with height >= 3 existed on S-1 in candidate's name/token family"
+    },
+    {
+      "name": "name_anchor_current_mean_return",
+      "type": "float",
+      "definition": "Day S mean return of the S-1 anchor cohort. Strictly NaN if no anchor existed."
+    },
+    {
+      "name": "name_anchor_current_limit_survival",
+      "type": "float",
+      "definition": "Day S limit-up survival fraction of the S-1 anchor cohort. Strictly NaN if no anchor existed."
+    },
+    {
+      "name": "name_prev_followers_current_mean_return",
+      "type": "float",
+      "definition": "Day S mean return of the S-1 lower-tier (1-2 board) followers, excluding candidate itself. Strictly NaN if follower cohort is empty."
+    },
+    {
+      "name": "name_prev_followers_current_loss7_share",
+      "type": "float",
+      "definition": "Day S fraction of S-1 lower-tier followers closing <= -7.0%. Strictly NaN if follower cohort is empty."
+    }
+  ],
+  "edge_case_disciplines": {
+    "multi_group_handling": "Union deduplication across matching token/phonetic families; zero post-hoc cherry-picking.",
+    "missing_data_discipline": "Requires known == total & total > 0; incomplete cohorts yield NaN without deleting candidate rows."
+  },
+  "tentative_next_two_arms": {
+    "arm_1": {
+      "name": "THEME_FEEDBACK_67",
+      "features": 67,
+      "composition": "BASE_62 + NEW_THEME_5"
+    },
+    "arm_2": {
+      "name": "THEME_FEEDBACK_SEAL_72",
+      "features": 72,
+      "composition": "BASE_62 + NEW_THEME_5 + SEAL_5"
+    }
+  },
+  "invariants": {
+    "model_fits": 0,
+    "external_requests": 0,
+    "production_writes": 0
+  }
+}

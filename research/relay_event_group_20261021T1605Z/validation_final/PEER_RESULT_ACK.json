@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-21T17:02:00.000000+00:00",
+  "actual_executor": "Antigravity Gemini",
+  "director": "Codex",
+  "arm": "ST_A_EVENT_COHORT_FIXED3",
+  "protocol_sha256": "460df50bbd15cb7aae4b95604e57be9beb5f83a7854b066b41491fd990e308a5",
+  "reviewed_files": [
+    "research\\relay_event_group_20261021T1605Z\\validation_final\\REPORT_REVIEW_AND_STOP.md",
+    "research\\relay_event_group_20261021T1605Z\\validation_final\\CODEX_VERIFIED_RESULT.md",
+    "research\\relay_event_group_20261021T1605Z\\validation_final\\REPORT_CORRECTIONS.json",
+    "research\\relay_event_group_20261021T1605Z\\validation_final\\CODEX_INDEPENDENT_PREDICTION_AUDIT.json",
+    "research\\relay_event_group_20261021T1605Z\\validation_final\\CODEX_SAVED_MODEL_AUDIT.json"
+  ],
+  "verification_acknowledgment": {
+    "nonword_top1_new": 137,
+    "nonword_top1_control": 134,
+    "net_gain_days": 3,
+    "bootstrap_ci_95": [-0.009933774834437087, 0.029801324503311258],
+    "full_pool_top1_new": 211,
+    "full_pool_top1_control": 212,
+    "fold_breakdown_nonword_top1": {
+      "2025H2": {"control": 59, "new": 60, "dates": 126},
+      "2026JanAug": {"control": 67, "new": 69, "dates": 160},
+      "2026Sep": {"control": 8, "new": 8, "dates": 16, "unknown": 3}
+    },
+    "fold_classification_gates": {
+      "2026Sep_Recall": {"control": 0.50, "new": 0.45, "passed": false},
+      "2026Sep_F1": {"control": 0.4878, "new": 0.4557, "passed": false}
+    },
+    "matched_coverage": {
+      "final_matched_candidates": 1118,
+      "total_candidates": 9245,
+      "matched_ratio": 0.120930,
+      "source_unknown_preserved": 3613
+    },
+    "changed_dates_audit": {
+      "total_changed_days": 31,
+      "corrected_previous_miss": 8,
+      "lost_previous_hit": 5,
+      "same_known_target": 18
+    },
+    "all_gates_passed": false
+  },
+  "closeout_determination": {
+    "experiment_status": "SEALED_REJECTED_NO_RETRY",
+    "no_retries_or_tuning": true,
+    "no_monthly_fits_authorized": true,
+    "no_production_deployment": true,
+    "first_board_status": "PAUSED_AFTER_CORRECTION",
+    "production_base_protected": true,
+    "scheduled_tasks_unchanged": true
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "formed_at": "2026-10-21T09:47:45+00:00",
+  "status": "GEMINI_V2_SEMANTIC_CORRECTIONS_QUALIFIED_AWAITING_FREEZE",
+  "model_fits": 0,
+  "http_requests": 0,
+  "labels_loaded": false,
+  "qualification_dir": "research/gemini_codex_joint_lifecycle_status_design_20261021T083600Z/qualification_v2",
+  "core_feature_v2_path": "first_board_lifecycle_status_features_v2.py",
+  "core_feature_v2_sha256": "cc78aa6d6739c9f68b37fe6efcf67435625601f4374cfdbb9f94735fb57fb055",
+  "semantic_fixes_verification": {
+    "issue1_tie_breaking_stock_code_independence": {
+      "status": "RESOLVED",
+      "method": "fractional_average_ranking",
+      "synthetic_test_pass": true
+    },
+    "issue2_missing_candidate_seal_facts_and_denominator_integrity": {
+      "status": "RESOLVED",
+      "method": "explicit_nan_propagation_and_complete_cohort_requirement",
+      "v2_missing_own_first_with_rank": 0,
+      "v2_missing_own_first_with_earliest": 0,
+      "v2_missing_own_close_with_rank": 0,
+      "synthetic_test_pass": true
+    },
+    "issue3_known_state_verification_anchors_and_followers": {
+      "status": "RESOLVED",
+      "method": "known_flag_mandatory_for_all_anchors_and_followers_else_nan",
+      "synthetic_test_pass": true
+    },
+    "issue4_rolling_10day_peak_height_and_rebound_preservation": {
+      "status": "RESOLVED",
+      "method": "closing_height_dict_lookup_over_p_minus_10_to_p_minus_1",
+      "rebound_height_retained": true
+    },
+    "issue5_strict_external_anchor_requirement": {
+      "status": "RESOLVED",
+      "method": "cand_matched_tokens_requires_anchor_code_ne_cand_code_and_known_p1",
+      "actual_cohort_without_nonself_anchor_v2": 0,
+      "was_in_v1": 250
+    },
+    "issue6_follower_sentiment_acceleration_orthogonality": {
+      "status": "RESOLVED",
+      "method": "fixed_s2_cohort_tracking_r_s_minus_r_s1",
+      "correlation_with_old_static_follower_return": 0.25826025086582466,
+      "was_in_v1": 0.97828,
+      "orthogonal_variance_injected": 0.9333016428227213
+    }
+  },
+  "prefix_checks": [
+    {
+      "cutoff": "2024-12-31",
+      "rows": 10630,
+      "prefix_equal": true
+    },
+    {
+      "cutoff": "2025-06-30",
+      "rows": 15354,
+      "prefix_equal": true
+    }
+  ],
+  "proposed_arms": {
+    "base": "THEME_FEEDBACK_SEAL_72",
+    "arm_a": {
+      "name": "THEME_LIFECYCLE_75",
+      "features_count": 75,
+      "added_features": [
+        "name_anchor_broken_age_sessions",
+        "name_anchor_decay_from_peak",
+        "name_fixed_followers_return_acceleration"
+      ]
+    },
+    "arm_b": {
+      "name": "THEME_LIFECYCLE_STATUS_79",
+      "features_count": 79,
+      "added_features": [
+        "name_anchor_broken_age_sessions",
+        "name_anchor_decay_from_peak",
+        "name_fixed_followers_return_acceleration",
+        "theme_candidate_cohort_size",
+        "theme_first_seal_rank_in_group",
+        "theme_is_earliest_sealer",
+        "theme_close_seal_rank_in_group"
+      ]
+    }
+  },
+  "training_and_evaluation_gates": {
+    "fits_per_arm": 1,
+    "max_arms": 2,
+    "validation_window_sessions": 117,
+    "top1_hits_required": "> 52",
+    "non_one_price_hits_required": ">= 48",
+    "coverage_required": ">= 95%"
+  }
+}

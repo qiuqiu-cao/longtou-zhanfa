@@ -1,0 +1,690 @@
+{
+  "title": "Line A Cohort Feedback and Parent Break Condition Study",
+  "timestamp_utc": "2026-10-21T11:16:22.249030+00:00",
+  "zero_fits_declaration": true,
+  "network_calls": 0,
+  "source_hashes": {
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\dataset.joblib": "d4b462f0e86873b571371034c81c405f1d5c61656d7bf7b2cc23b5b313cd3383",
+    "d:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c"
+  },
+  "relay_track_9245": {
+    "dataset_rows": 9245,
+    "unique_dates": 684,
+    "overall": {
+      "n": 9245,
+      "k": 3648,
+      "rate": 0.3946,
+      "wilson95": [
+        0.3847,
+        0.4046
+      ]
+    },
+    "by_parent_break": {
+      "no_break": {
+        "n": 3001,
+        "k": 1202,
+        "rate": 0.4005,
+        "wilson95": [
+          0.3831,
+          0.4182
+        ]
+      },
+      "has_break": {
+        "n": 6244,
+        "k": 2446,
+        "rate": 0.3917,
+        "wilson95": [
+          0.3797,
+          0.4039
+        ]
+      }
+    },
+    "by_boards_x_parent_break": {
+      "board_2": {
+        "no_break": {
+          "n": 1815,
+          "k": 631,
+          "rate": 0.3477,
+          "wilson95": [
+            0.3261,
+            0.3699
+          ]
+        },
+        "has_break": {
+          "n": 3713,
+          "k": 1220,
+          "rate": 0.3286,
+          "wilson95": [
+            0.3137,
+            0.3439
+          ]
+        }
+      },
+      "board_3": {
+        "no_break": {
+          "n": 605,
+          "k": 273,
+          "rate": 0.4512,
+          "wilson95": [
+            0.412,
+            0.4911
+          ]
+        },
+        "has_break": {
+          "n": 1287,
+          "k": 616,
+          "rate": 0.4786,
+          "wilson95": [
+            0.4514,
+            0.5059
+          ]
+        }
+      },
+      "board_4": {
+        "no_break": {
+          "n": 314,
+          "k": 140,
+          "rate": 0.4459,
+          "wilson95": [
+            0.3919,
+            0.5012
+          ]
+        },
+        "has_break": {
+          "n": 590,
+          "k": 285,
+          "rate": 0.4831,
+          "wilson95": [
+            0.443,
+            0.5234
+          ]
+        }
+      },
+      "board_5": {
+        "no_break": {
+          "n": 137,
+          "k": 75,
+          "rate": 0.5474,
+          "wilson95": [
+            0.4639,
+            0.6284
+          ]
+        },
+        "has_break": {
+          "n": 294,
+          "k": 143,
+          "rate": 0.4864,
+          "wilson95": [
+            0.4298,
+            0.5433
+          ]
+        }
+      },
+      "board_6": {
+        "no_break": {
+          "n": 64,
+          "k": 41,
+          "rate": 0.6406,
+          "wilson95": [
+            0.5182,
+            0.7471
+          ]
+        },
+        "has_break": {
+          "n": 159,
+          "k": 76,
+          "rate": 0.478,
+          "wilson95": [
+            0.4018,
+            0.5552
+          ]
+        }
+      }
+    },
+    "by_regime_x_parent_break": {
+      "BALANCED": {
+        "no_break": {
+          "n": 824,
+          "k": 309,
+          "rate": 0.375,
+          "wilson95": [
+            0.3426,
+            0.4086
+          ]
+        },
+        "has_break": {
+          "n": 1254,
+          "k": 542,
+          "rate": 0.4322,
+          "wilson95": [
+            0.405,
+            0.4598
+          ]
+        }
+      },
+      "CLIMAX_CONSENSUS": {
+        "no_break": {
+          "n": 65,
+          "k": 43,
+          "rate": 0.6615,
+          "wilson95": [
+            0.5404,
+            0.7647
+          ]
+        },
+        "has_break": {
+          "n": 50,
+          "k": 26,
+          "rate": 0.52,
+          "wilson95": [
+            0.3851,
+            0.652
+          ]
+        }
+      },
+      "DIVERGENCE_TEST": {
+        "no_break": {
+          "n": 1566,
+          "k": 643,
+          "rate": 0.4106,
+          "wilson95": [
+            0.3865,
+            0.4352
+          ]
+        },
+        "has_break": {
+          "n": 3218,
+          "k": 1250,
+          "rate": 0.3884,
+          "wilson95": [
+            0.3717,
+            0.4054
+          ]
+        }
+      },
+      "EBB_HANDOVER": {
+        "no_break": {
+          "n": 273,
+          "k": 99,
+          "rate": 0.3626,
+          "wilson95": [
+            0.3079,
+            0.4212
+          ]
+        },
+        "has_break": {
+          "n": 1363,
+          "k": 506,
+          "rate": 0.3712,
+          "wilson95": [
+            0.346,
+            0.3972
+          ]
+        }
+      },
+      "ICE_BREAKING": {
+        "no_break": {
+          "n": 273,
+          "k": 108,
+          "rate": 0.3956,
+          "wilson95": [
+            0.3394,
+            0.4547
+          ]
+        },
+        "has_break": {
+          "n": 359,
+          "k": 122,
+          "rate": 0.3398,
+          "wilson95": [
+            0.2928,
+            0.3903
+          ]
+        }
+      }
+    },
+    "by_primary_role": {
+      "CYCLE_CROSS_DRAGON": {
+        "n": 1139,
+        "k": 627,
+        "rate": 0.5505,
+        "wilson95": [
+          0.5215,
+          0.5792
+        ]
+      },
+      "RELAY_CONTENDER": {
+        "n": 5763,
+        "k": 2068,
+        "rate": 0.3588,
+        "wilson95": [
+          0.3466,
+          0.3713
+        ]
+      },
+      "SPACE_DRAGON": {
+        "n": 995,
+        "k": 489,
+        "rate": 0.4915,
+        "wilson95": [
+          0.4605,
+          0.5225
+        ]
+      },
+      "SUPPLEMENT_DRAGON": {
+        "n": 146,
+        "k": 49,
+        "rate": 0.3356,
+        "wilson95": [
+          0.2641,
+          0.4156
+        ]
+      },
+      "TURNOVER_DRAGON": {
+        "n": 973,
+        "k": 340,
+        "rate": 0.3494,
+        "wilson95": [
+          0.3201,
+          0.3799
+        ]
+      },
+      "USURP_DRAGON": {
+        "n": 229,
+        "k": 75,
+        "rate": 0.3275,
+        "wilson95": [
+          0.27,
+          0.3907
+        ]
+      }
+    },
+    "by_handover": {
+      "handover_0": {
+        "n": 3111,
+        "k": 1311,
+        "rate": 0.4214,
+        "wilson95": [
+          0.4042,
+          0.4388
+        ]
+      },
+      "handover_1": {
+        "n": 6134,
+        "k": 2337,
+        "rate": 0.381,
+        "wilson95": [
+          0.3689,
+          0.3932
+        ]
+      }
+    },
+    "counterexamples": [
+      {
+        "date": "2024-10-09",
+        "cohort_size": 23,
+        "promoted_count": 1,
+        "promotion_rate": 0.0435,
+        "description": "Parent break massacre day: 23 contenders, only 1 promoted (4.3%)",
+        "sample_casualties": [
+          {
+            "code": "000158",
+            "name": "常山北明",
+            "boards": 3,
+            "primary_role": "CYCLE_CROSS_DRAGON"
+          },
+          {
+            "code": "000536",
+            "name": "华映科技",
+            "boards": 3,
+            "primary_role": "SUPPLEMENT_DRAGON"
+          },
+          {
+            "code": "002123",
+            "name": "梦网科技",
+            "boards": 3,
+            "primary_role": "CYCLE_CROSS_DRAGON"
+          },
+          {
+            "code": "002178",
+            "name": "延华智能",
+            "boards": 4,
+            "primary_role": "USURP_DRAGON"
+          },
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "boards": 3,
+            "primary_role": "TURNOVER_DRAGON"
+          }
+        ]
+      },
+      {
+        "date": "2024-10-08",
+        "cohort_size": 281,
+        "promoted_count": 19,
+        "promotion_rate": 0.0676,
+        "description": "Parent break massacre day: 281 contenders, only 19 promoted (6.8%)",
+        "sample_casualties": [
+          {
+            "code": "000004",
+            "name": "国华网安",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "000027",
+            "name": "深圳能源",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "000032",
+            "name": "深桑达Ａ",
+            "boards": 3,
+            "primary_role": "CYCLE_CROSS_DRAGON"
+          },
+          {
+            "code": "000034",
+            "name": "神州数码",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "000062",
+            "name": "深圳华强",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          }
+        ]
+      },
+      {
+        "date": "2026-02-04",
+        "cohort_size": 10,
+        "promoted_count": 1,
+        "promotion_rate": 0.1,
+        "description": "Parent break massacre day: 10 contenders, only 1 promoted (10.0%)",
+        "sample_casualties": [
+          {
+            "code": "000039",
+            "name": "中集集团",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "000533",
+            "name": "顺钠股份",
+            "boards": 3,
+            "primary_role": "TURNOVER_DRAGON"
+          },
+          {
+            "code": "002126",
+            "name": "银轮股份",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "002342",
+            "name": "巨力索具",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "002830",
+            "name": "名雕股份",
+            "boards": 4,
+            "primary_role": "SPACE_DRAGON"
+          }
+        ]
+      },
+      {
+        "date": "2026-01-29",
+        "cohort_size": 16,
+        "promoted_count": 2,
+        "promotion_rate": 0.125,
+        "description": "Parent break massacre day: 16 contenders, only 2 promoted (12.5%)",
+        "sample_casualties": [
+          {
+            "code": "000506",
+            "name": "招金黄金",
+            "boards": 4,
+            "primary_role": "TURNOVER_DRAGON"
+          },
+          {
+            "code": "000630",
+            "name": "铜陵有色",
+            "boards": 2,
+            "primary_role": "SUPPLEMENT_DRAGON"
+          },
+          {
+            "code": "000737",
+            "name": "北方铜业",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "000878",
+            "name": "云南铜业",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          },
+          {
+            "code": "001376",
+            "name": "百通能源",
+            "boards": 2,
+            "primary_role": "RELAY_CONTENDER"
+          }
+        ]
+      }
+    ]
+  },
+  "first_board_track_13149": {
+    "dataset_rows": 13149,
+    "unique_dates": 286,
+    "overall": {
+      "n": 13149,
+      "k": 2160,
+      "rate": 0.1643,
+      "wilson95": [
+        0.158,
+        0.1707
+      ]
+    },
+    "by_anchor_breaks": {
+      "no_break": {
+        "n": 5096,
+        "k": 813,
+        "rate": 0.1595,
+        "wilson95": [
+          0.1497,
+          0.1698
+        ]
+      },
+      "has_break": {
+        "n": 8053,
+        "k": 1347,
+        "rate": 0.1673,
+        "wilson95": [
+          0.1593,
+          0.1756
+        ]
+      }
+    },
+    "by_anchor_collapses": {
+      "no_collapse": {
+        "n": 9549,
+        "k": 1574,
+        "rate": 0.1648,
+        "wilson95": [
+          0.1575,
+          0.1724
+        ]
+      },
+      "has_collapse": {
+        "n": 3600,
+        "k": 586,
+        "rate": 0.1628,
+        "wilson95": [
+          0.1511,
+          0.1752
+        ]
+      }
+    },
+    "by_previous_top_broken": {
+      "top_held": {
+        "n": 7644,
+        "k": 1255,
+        "rate": 0.1642,
+        "wilson95": [
+          0.156,
+          0.1727
+        ]
+      },
+      "top_broken": {
+        "n": 5505,
+        "k": 905,
+        "rate": 0.1644,
+        "wilson95": [
+          0.1548,
+          0.1744
+        ]
+      }
+    },
+    "by_height_change": {
+      "height_change_-3": {
+        "n": 648,
+        "k": 131,
+        "rate": 0.2022,
+        "wilson95": [
+          0.173,
+          0.2348
+        ]
+      },
+      "height_change_-2": {
+        "n": 745,
+        "k": 123,
+        "rate": 0.1651,
+        "wilson95": [
+          0.1402,
+          0.1935
+        ]
+      },
+      "height_change_-1": {
+        "n": 1872,
+        "k": 282,
+        "rate": 0.1506,
+        "wilson95": [
+          0.1352,
+          0.1676
+        ]
+      },
+      "height_change_0": {
+        "n": 1863,
+        "k": 287,
+        "rate": 0.1541,
+        "wilson95": [
+          0.1384,
+          0.1712
+        ]
+      },
+      "height_change_1": {
+        "n": 7519,
+        "k": 1235,
+        "rate": 0.1643,
+        "wilson95": [
+          0.156,
+          0.1728
+        ]
+      }
+    },
+    "by_market_max_height": {
+      "height_3": {
+        "n": 2242,
+        "k": 397,
+        "rate": 0.1771,
+        "wilson95": [
+          0.1618,
+          0.1934
+        ]
+      },
+      "height_4": {
+        "n": 3468,
+        "k": 515,
+        "rate": 0.1485,
+        "wilson95": [
+          0.1371,
+          0.1607
+        ]
+      },
+      "height_5": {
+        "n": 2826,
+        "k": 472,
+        "rate": 0.167,
+        "wilson95": [
+          0.1537,
+          0.1812
+        ]
+      },
+      "height_6": {
+        "n": 1963,
+        "k": 339,
+        "rate": 0.1727,
+        "wilson95": [
+          0.1566,
+          0.1901
+        ]
+      },
+      "height_7": {
+        "n": 1352,
+        "k": 237,
+        "rate": 0.1753,
+        "wilson95": [
+          0.156,
+          0.1965
+        ]
+      }
+    },
+    "counterexamples": [
+      {
+        "date": "2026-02-12",
+        "anchor_breaks": 1,
+        "cohort_size": 39,
+        "promoted_count": 1,
+        "promotion_rate": 0.0256,
+        "description": "First-board break massacre: 39 first boards, only 1 promoted (2.6%) despite anchor break"
+      },
+      {
+        "date": "2026-04-01",
+        "anchor_breaks": 1,
+        "cohort_size": 44,
+        "promoted_count": 2,
+        "promotion_rate": 0.0455,
+        "description": "First-board break massacre: 44 first boards, only 2 promoted (4.5%) despite anchor break"
+      },
+      {
+        "date": "2026-05-20",
+        "anchor_breaks": 1,
+        "cohort_size": 39,
+        "promoted_count": 2,
+        "promotion_rate": 0.0513,
+        "description": "First-board break massacre: 39 first boards, only 2 promoted (5.1%) despite anchor break"
+      },
+      {
+        "date": "2026-05-19",
+        "anchor_breaks": 1,
+        "cohort_size": 57,
+        "promoted_count": 3,
+        "promotion_rate": 0.0526,
+        "description": "First-board break massacre: 57 first boards, only 3 promoted (5.3%) despite anchor break"
+      },
+      {
+        "date": "2026-07-03",
+        "anchor_breaks": 1,
+        "cohort_size": 76,
+        "promoted_count": 4,
+        "promotion_rate": 0.0526,
+        "description": "First-board break massacre: 76 first boards, only 4 promoted (5.3%) despite anchor break"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-21T07:05:00.000000+00:00",
+  "agent": "Antigravity Gemini 3.8 Flash High",
+  "status": "INDEPENDENT_THREE_CASE_OFFICIAL_AUDIT_SETTLED",
+  "experiment_root": "research/first_board_corporate_action_official_probe_20261021T065629Z",
+  "protocol": "research/first_board_corporate_action_official_probe_20261021T065629Z/JOINT_FROZEN_PROTOCOL.json",
+  "verified_cases": {
+    "600361": {
+      "name": "创新新材",
+      "announcement_id": "1220436893",
+      "announcement_number": "2024-029",
+      "publication_date": "2024-06-24",
+      "record_date": "2024-06-27",
+      "ex_date": "2024-06-28",
+      "is_differential": true,
+      "total_shares": 4336192838,
+      "participating_shares": 4107435885,
+      "excluded_shares": 228756953,
+      "cash_dividend_per_participating_share": "0.07",
+      "bonus_ratio": "0",
+      "official_reference_formula": "P_ref = P_close - 0.07",
+      "record_date_close": "3.73",
+      "ex_date_close": "4.03",
+      "official_derived_p_ref": "3.66",
+      "official_statutory_limit_price": "4.03",
+      "naive_shift_limit_price": "4.10",
+      "actual_close_matches_official_limit": true,
+      "actual_close_matches_naive_limit": false,
+      "history_queue_33725_rows_on_2024_06_28": 0,
+      "raw_first_board_source_name": "XD创新新",
+      "defect_classification": "FIRST_BOARD_CANDIDATE_OMISSION_NOT_TARGET_LABEL_CORRECTION"
+    },
+    "688368": {
+      "name": "晶丰明源",
+      "announcement_id": "1225347015",
+      "announcement_number": "2026-042",
+      "publication_date": "2026-06-03",
+      "record_date": "2026-06-08",
+      "ex_date": "2026-06-09",
+      "is_differential": true,
+      "total_shares": 145714693,
+      "participating_shares": 144801113,
+      "excluded_shares": 913580,
+      "cash_dividend_per_participating_share": "1.00",
+      "bonus_transfer_per_participating_share": "0.40",
+      "diluted_virtual_cash_dividend": "0.9937",
+      "diluted_virtual_transfer_ratio": "0.3975",
+      "official_reference_formula": "P_ref = (P_close - 0.9937) / 1.3975",
+      "naive_formula_refuted": "(P_close - 1.00) / 1.40",
+      "board": "STAR_BOARD_20",
+      "main_board_training_pool_allowed": false,
+      "role": "FORMULA_AND_SOURCE_BOUNDARY_CONTROL_ONLY"
+    },
+    "603203": {
+      "name": "快克智能",
+      "index_items_received": 25,
+      "implementation_matched": false,
+      "status": "NO_IMPLEMENTATION_IN_BOUNDED_INDEX_UNKNOWN",
+      "epistemic_discipline": "UNKNOWN_DO_NOT_INFER_NO_DIVIDEND_NO_UNBOUNDED_RETRIES"
+    }
+  },
+  "empirical_distinction": {
+    "candidate_pool_omission": "Demonstrated by 600361. Signal-day ex-date causes naive pre_close to misjudge signal-day limit status, omitting the row entirely from the candidate queue (0 rows in 33,725).",
+    "target_label_misclassification": "Demonstrated by 603214. Target-day ex-date causes naive pre_close to misjudge target-day promotion, setting Y=0 instead of Y=1."
+  },
+  "differential_distribution_confirmed": true,
+  "standard_formula_assumption_refuted": true,
+  "model_fits": 0,
+  "external_requests": 0,
+  "production_writes": 0
+}

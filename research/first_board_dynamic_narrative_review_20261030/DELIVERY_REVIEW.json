@@ -1,0 +1,117 @@
+{
+  "reviewed_at": "2026-10-30T12:20:01.187429+00:00",
+  "delivery_status": "EVIDENCE_AND_CASE_RESEARCH_STAGE_ONLY",
+  "stage_claims_reproduced": true,
+  "case_diagnostics": [
+    {
+      "signal_date": "2026-10-09",
+      "candidates": 33,
+      "promotion_hits": 11,
+      "promotion_failures": 22,
+      "promotion_unknown": 0,
+      "reach4_hits": 3,
+      "baseline_top3_hits": 1,
+      "baseline_top3_slots": 3
+    },
+    {
+      "signal_date": "2026-10-15",
+      "candidates": 23,
+      "promotion_hits": 4,
+      "promotion_failures": 19,
+      "promotion_unknown": 0,
+      "reach4_hits": 1,
+      "baseline_top3_hits": 1,
+      "baseline_top3_slots": 3
+    },
+    {
+      "signal_date": "2026-10-16",
+      "candidates": 36,
+      "promotion_hits": 8,
+      "promotion_failures": 28,
+      "promotion_unknown": 0,
+      "reach4_hits": 3,
+      "baseline_top3_hits": 0,
+      "baseline_top3_slots": 3
+    }
+  ],
+  "case_dates_selected_after_outcomes_known": true,
+  "independent_test": false,
+  "timeline_rows": 126,
+  "observed_event_rows": 56,
+  "blank_code_rows_before": 70,
+  "blank_code_rows_after": 0,
+  "score_roundtrip_differences_before": 40,
+  "score_roundtrip_differences_after": 0,
+  "case_ranks_and_outcomes_unchanged": true,
+  "amount_missing_retained": 11,
+  "forum_claim_cutoff_checks_reproduced": 12,
+  "actual_eligible_claims": 0,
+  "original_artifacts_preserved_except_reviewed_code": true,
+  "baseline_source": "research\\first_board_theme_diffusion_review_20261030\\results\\REPORT.json",
+  "baseline_source_sha256": "37bf140861e2a33050fede5e4e3ab1c84a4c0ac530c833bc05c3442b074fd82d",
+  "unchanged_historical_baseline": {
+    "dates": 286,
+    "slots": 858,
+    "selected": 858,
+    "known": 852,
+    "unknown": 6,
+    "unfilled_slots": 0,
+    "hits": 261,
+    "known_precision": 0.30633802816901406,
+    "confirmed_hits_per_all_slots": 0.3041958041958042,
+    "possible_hits_per_all_slots": 0.3111888111888112,
+    "complete_daily_top3": true,
+    "extra_hits_for_known_target": 80,
+    "extra_hits_for_all_slots_target": 83,
+    "observed_target_met": false,
+    "all_slots_target_confirmed": false,
+    "predictive_validation_passed": false,
+    "reach4_hits": 52,
+    "reach4_known": 834,
+    "by_slot": {
+      "1": {
+        "selected": 286,
+        "known": 284,
+        "unknown": 2,
+        "hits": 106
+      },
+      "2": {
+        "selected": 286,
+        "known": 283,
+        "unknown": 3,
+        "hits": 80
+      },
+      "3": {
+        "selected": 286,
+        "known": 285,
+        "unknown": 1,
+        "hits": 75
+      }
+    },
+    "signal_day_non_one_price": {
+      "selected": 730,
+      "hits": 192,
+      "known": 724,
+      "unknown": 6
+    }
+  },
+  "new_market_fits": 0,
+  "new_rankings": 0,
+  "validated_accuracy_improvement": false,
+  "target_40_percent_achieved": false,
+  "production_changes": false,
+  "protected_checked": 128,
+  "protected_mismatches": [],
+  "tests": {
+    "passed": 19,
+    "command": "python -m pytest -q tests/test_dynamic_narrative_delivery_review.py tests/test_dynamic_narrative_contract.py tests/test_first_board_top3_target.py"
+  },
+  "corrected_artifact_sha256": {
+    "CASE_EVENT_TIMELINE_LATE_SOURCE.csv": "05f07aeb13d524693f33d12c94faa5fddb358f2ebcf6980b7b05cd81c200d677",
+    "CASE_OUTCOMES_DIAGNOSTIC_ONLY.csv": "86262447c8f3ece3691ba623dd8d7d2efa5a8a508ef345ed0d2331b17e0d390d",
+    "CASE_POOL_NO_LABELS.csv": "c46f199b9f0d075860cad9cde47080936a1eb9aef9c50d0ed67bbebc8e698f96",
+    "RETURNED_BACKGROUND_UNVERIFIED.csv": "248544c48992701de3a197bceb16a25320860669782318659e73e6ccf47578d6",
+    "SOURCE_MANIFEST.json": "366605c84e84744a14151e6a8103d46e5057a747d9787acb6f8f169f45773c3d",
+    "TIMELINE_SOURCES.json": "38f272ddf60d328dd82b55029b0d7d8dca717f791d1e652ab03572551a7093d1"
+  }
+}

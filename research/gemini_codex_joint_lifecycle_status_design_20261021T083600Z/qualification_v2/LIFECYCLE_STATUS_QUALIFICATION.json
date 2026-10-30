@@ -1,0 +1,138 @@
+{
+  "at": "2026-10-21T09:46:40.287334+00:00",
+  "status": "FULL28503_CAUSAL_LIFECYCLE_STATUS_V2_QUALIFIED",
+  "rows": 28503,
+  "dates": 668,
+  "labels_loaded": false,
+  "model_fits": 0,
+  "http_requests": 0,
+  "fields": [
+    "name_anchor_broken_age_sessions",
+    "name_anchor_decay_from_peak",
+    "name_fixed_followers_return_acceleration",
+    "theme_candidate_cohort_size",
+    "theme_first_seal_rank_in_group",
+    "theme_is_earliest_sealer",
+    "theme_close_seal_rank_in_group"
+  ],
+  "lifecycle_fields": [
+    "name_anchor_broken_age_sessions",
+    "name_anchor_decay_from_peak",
+    "name_fixed_followers_return_acceleration"
+  ],
+  "status_fields": [
+    "theme_candidate_cohort_size",
+    "theme_first_seal_rank_in_group",
+    "theme_is_earliest_sealer",
+    "theme_close_seal_rank_in_group"
+  ],
+  "periods": {
+    "development": {
+      "rows": 10630,
+      "dates": 265,
+      "field_coverage": {
+        "name_anchor_broken_age_sessions": 0.40959548447789274,
+        "name_anchor_decay_from_peak": 0.40959548447789274,
+        "name_fixed_followers_return_acceleration": 0.33904045155221074,
+        "theme_candidate_cohort_size": 0.40959548447789274,
+        "theme_first_seal_rank_in_group": 0.2696142991533396,
+        "theme_is_earliest_sealer": 0.2696142991533396,
+        "theme_close_seal_rank_in_group": 0.24308560677328317
+      },
+      "anchor_observed_rows": 4354,
+      "cohort_observed_rows": 4354,
+      "multi_cohort_rows": 2866
+    },
+    "validation2025H1": {
+      "rows": 4724,
+      "dates": 117,
+      "field_coverage": {
+        "name_anchor_broken_age_sessions": 0.3552074513124471,
+        "name_anchor_decay_from_peak": 0.3552074513124471,
+        "name_fixed_followers_return_acceleration": 0.2777307366638442,
+        "theme_candidate_cohort_size": 0.3552074513124471,
+        "theme_first_seal_rank_in_group": 0.25084674005080443,
+        "theme_is_earliest_sealer": 0.25084674005080443,
+        "theme_close_seal_rank_in_group": 0.24132091447925486
+      },
+      "anchor_observed_rows": 1678,
+      "cohort_observed_rows": 1678,
+      "multi_cohort_rows": 1185
+    },
+    "evaluation": {
+      "rows": 13149,
+      "dates": 286,
+      "field_coverage": {
+        "name_anchor_broken_age_sessions": 0.325347935204198,
+        "name_anchor_decay_from_peak": 0.325347935204198,
+        "name_fixed_followers_return_acceleration": 0.26671229751311887,
+        "theme_candidate_cohort_size": 0.32557608943645905,
+        "theme_first_seal_rank_in_group": 0.24207164042892995,
+        "theme_is_earliest_sealer": 0.24207164042892995,
+        "theme_close_seal_rank_in_group": 0.24161533196440793
+      },
+      "anchor_observed_rows": 4278,
+      "cohort_observed_rows": 4281,
+      "multi_cohort_rows": 3183
+    }
+  },
+  "prefix_checks": [
+    {
+      "cutoff": "2024-12-31",
+      "rows": 10630,
+      "prefix_equal": true
+    },
+    {
+      "cutoff": "2025-06-30",
+      "rows": 15354,
+      "prefix_equal": true
+    }
+  ],
+  "semantic_verification": {
+    "issue1_tie_breaking_stock_code_dependence": {
+      "resolved": true,
+      "method": "fractional average ranking with ties receiving identical rank; all min ties receive is_earliest=1.0",
+      "synthetic_test_pass": true
+    },
+    "issue2_missing_candidate_seal_facts": {
+      "resolved": true,
+      "method": "explicit NaN propagation; cohorts with incomplete seal facts propagate NaN to preserve full cohort denominator",
+      "v2_missing_own_first_with_rank": 0,
+      "v2_missing_own_first_with_earliest": 0,
+      "v2_missing_own_close_with_rank": 0,
+      "synthetic_test_pass": true
+    },
+    "issue3_known_state_checking_on_anchors_and_followers": {
+      "resolved": true,
+      "method": "explicit check of known = eligible and valid_price and regular_price for all anchors and followers; NaN on any unobserved member",
+      "synthetic_test_pass": true
+    },
+    "issue4_rolling_10day_peak_height_lookback": {
+      "resolved": true,
+      "method": "rolling [p-10, p-1] peak height lookup via pre-indexed closing_height_dict; proper rebound board height retention"
+    },
+    "issue5_strict_external_anchor_requirement": {
+      "resolved": true,
+      "method": "cand_matched_tokens strictly filters for external anchors where anchor_code != candidate_code and p1 state is known",
+      "actual_cohort_without_nonself_anchor_v2": 0,
+      "was_in_v1": 250
+    },
+    "issue6_follower_sentiment_acceleration": {
+      "resolved": true,
+      "method": "computed on fixed S-2 cohort (height 1/2 at S-2) tracking R(S) - R(S-1)",
+      "correlation_with_old_follower_return": 0.25826025086582466,
+      "correlation_was_in_v1": 0.97828,
+      "orthogonal_variance_injected": 0.9333016428227213
+    }
+  },
+  "bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_lifecycle_status_features_v2.py": "cc78aa6d6739c9f68b37fe6efcf67435625601f4374cfdbb9f94735fb57fb055",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\gemini_codex_joint_theme_feedback_design_20261021T074448Z\\COMPLETE28503_CANDIDATE_HISTORICAL_NAMES_NO_TARGETS.csv": "48b35bc6fa4b518598a598c1068ae05d74d59b7bab91b9ecf52f8a2bd06f7b2a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\gemini_codex_joint_theme_feedback_design_20261021T074448Z\\ALL_DECLARED_ARCHIVE_CLOSING_COHORT_NAMES_NO_TARGETS.csv": "9d544309041a6901ce98bac33d2f3c62f6c847530028a410d44d2e0bc9525ae6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_joint_design_20261020T185417Z\\qualification_resumed_20261021\\COMPLETE28503_NEW_FIELDS_NO_LABELS.csv": "049c3b537aeb95b5dbacf0b64177a1024dc27a71c40fdadce8b9f149ff0a4277",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\gemini_codex_joint_theme_feedback_design_20261021T074448Z\\CAUSAL_PRICE_STATES_WITHOUT_TARGETS.joblib": "5f112472f1d789ace3e73ddc1c5b94ea64b9a9f31458ef4c5c0db1d07d34904c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\historical_symbolic_context.py": "c1ea45f3729ad4c0415a386d8800294e6b5476c21b6e1e8eca9b9c0ee31ba650",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\security_master_intervals.csv": "ab3379fff9dbc789af95faa7c250acb8df786841bfec42285992398e0c70f489"
+  },
+  "core_feature_v2_sha256": "cc78aa6d6739c9f68b37fe6efcf67435625601f4374cfdbb9f94735fb57fb055"
+}

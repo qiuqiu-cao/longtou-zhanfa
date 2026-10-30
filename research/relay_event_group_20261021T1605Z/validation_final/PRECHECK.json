@@ -1,0 +1,349 @@
+{
+  "at_utc": "2026-10-21T16:54:12.101548+00:00",
+  "fits": 0,
+  "arm": "ST_A_EVENT_COHORT_FIXED3",
+  "fields": [
+    "boards",
+    "height_gap",
+    "same_height_rivals",
+    "unique_space",
+    "height_share",
+    "is_space_leader",
+    "emotion_score",
+    "promotion_2to3",
+    "promotion_3to4",
+    "promotion_mid",
+    "previous_limit_tail_loss",
+    "failed_rate",
+    "down_limit_rate",
+    "breadth_health",
+    "ladder_health",
+    "loss_effect_health",
+    "crowding_risk",
+    "regime_fragility",
+    "turnover",
+    "signal_amount",
+    "amplitude",
+    "turnover_vs_prev",
+    "price",
+    "price_same_height_percentile",
+    "signal_amount_same_height_percentile",
+    "turnover_same_height_percentile",
+    "turnover_vs_prev_same_height_percentile",
+    "log_signal_amount",
+    "cycle_height",
+    "cycle_height_delta_5",
+    "cycle_promotion",
+    "cycle_bomb_rate",
+    "cycle_down_count",
+    "cycle_premium",
+    "cycle_limit_rank20",
+    "cycle_promotion_rank20",
+    "is_ice_breaker_seed",
+    "is_divergence_survivor",
+    "climax_backrow_penalty",
+    "active_parent_count",
+    "parent_accelerating_count",
+    "parent_heavy_count",
+    "parent_break_count",
+    "parent_collapsing_count",
+    "parent_unobserved_count",
+    "launch_lag_days",
+    "supplement_coupling_score",
+    "handover_on_anchor_break",
+    "relation_channel_match",
+    "same_height_success_count",
+    "same_height_failed_count",
+    "same_height_elimination_rate",
+    "same_height_turnover_rank",
+    "same_height_amount_rank",
+    "same_height_amplitude_rank",
+    "same_height_cap_rank",
+    "sole_nonword_survivor",
+    "verified_turnover_boards",
+    "observed_nonword_boards",
+    "streak_observed_fraction",
+    "first_open_after_one_word",
+    "daily_one_word",
+    "daily_identity_observed",
+    "relative_volume",
+    "high_to_low_range",
+    "theme_first_support",
+    "theme_relay_support",
+    "name_cluster_members",
+    "isolated_volume_without_support",
+    "parent_history_observed_fraction",
+    "regime_ICE_BREAKING",
+    "regime_DIVERGENCE_TEST",
+    "regime_CLIMAX_CONSENSUS",
+    "regime_EBB_HANDOVER",
+    "regime_BALANCED",
+    "role_SPACE_DRAGON",
+    "role_CYCLE_CROSS_DRAGON",
+    "role_SUPPLEMENT_DRAGON",
+    "role_USURP_DRAGON",
+    "role_TURNOVER_DRAGON",
+    "role_THEME_LEADER",
+    "role_THEME_SEED",
+    "event_cohort_matched",
+    "event_cohort_size",
+    "event_cohort_primary_member",
+    "event_cohort_damage_ratio",
+    "event_cohort_repair_ratio",
+    "event_anchor_status",
+    "event_cohort_amount_share_delta"
+  ],
+  "added_fields": [
+    "event_cohort_matched",
+    "event_cohort_size",
+    "event_cohort_primary_member",
+    "event_cohort_damage_ratio",
+    "event_cohort_repair_ratio",
+    "event_anchor_status",
+    "event_cohort_amount_share_delta"
+  ],
+  "estimator": {
+    "learning_rate": 0.06,
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "max_depth": 3,
+    "min_samples_leaf": 25,
+    "l2_regularization": 3.0,
+    "early_stopping": false,
+    "random_state": 20261015
+  },
+  "checks": [
+    {
+      "fold": {
+        "id": "2025H2",
+        "start": "2025-07-01",
+        "end": "2025-12-31"
+      },
+      "train_rows": 4062,
+      "days": 252,
+      "max_target": "2025-06-30",
+      "test_rows": 1584,
+      "test_days": 126,
+      "training_digest": "ee0bde2312c4223146f6c6937984d7f4aa199267039a94ad462296dceff95ba9",
+      "weight_digest": "4e5239b2627036094d247ebb90590258c3c5137040b120e9d43e76fc4ea97c87"
+    },
+    {
+      "fold": {
+        "id": "2026JanAug",
+        "start": "2026-01-01",
+        "end": "2026-08-31"
+      },
+      "train_rows": 3243,
+      "days": 252,
+      "max_target": "2025-12-31",
+      "test_rows": 1941,
+      "test_days": 160,
+      "training_digest": "01d5e1ea9a4c45ecb615bdbb969478f303a6b7e8ddb78603357c84d2d4678625",
+      "weight_digest": "dedce48be71ea917cb16c776faf3f96a2ee51b712c5fa619b359c0d4fc4b556c"
+    },
+    {
+      "fold": {
+        "id": "2026Sep",
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "train_rows": 3059,
+      "days": 252,
+      "max_target": "2026-08-31",
+      "test_rows": 182,
+      "test_days": 16,
+      "training_digest": "8754f0b6ca5ddb4a780d34af73b68f4efdc15b7e00cb429b2cacb02d10ba992a",
+      "weight_digest": "7bc83e895e17978d4106efcc718bda274ef5f5e411c0ac09f214dcaf6499d3e0"
+    }
+  ],
+  "control_metrics": {
+    "nonword_top1": {
+      "hits": 134,
+      "slots": 302,
+      "known": 298,
+      "unknown": 4,
+      "dates": 302,
+      "any_hit_days": 134
+    },
+    "nonword_top2": {
+      "hits": 250,
+      "slots": 604,
+      "known": 596,
+      "unknown": 8,
+      "dates": 302,
+      "any_hit_days": 199
+    },
+    "nonword_top3": {
+      "hits": 350,
+      "slots": 906,
+      "known": 894,
+      "unknown": 12,
+      "dates": 302,
+      "any_hit_days": 225
+    },
+    "full_top1": {
+      "hits": 212,
+      "slots": 302,
+      "known": 298,
+      "unknown": 4,
+      "dates": 302,
+      "any_hit_days": 212
+    },
+    "full_top2": {
+      "hits": 391,
+      "slots": 604,
+      "known": 596,
+      "unknown": 8,
+      "dates": 302,
+      "any_hit_days": 260
+    },
+    "full_top3": {
+      "hits": 526,
+      "slots": 906,
+      "known": 894,
+      "unknown": 12,
+      "dates": 302,
+      "any_hit_days": 276
+    },
+    "nonword_classification": {
+      "TP": 248,
+      "FP": 352,
+      "FN": 623,
+      "TN": 1709,
+      "Recall": 0.2847301951779564,
+      "Precision": 0.41333333333333333,
+      "F1": 0.3371855880353501
+    },
+    "full_classification": {
+      "TP": 711,
+      "FP": 566,
+      "FN": 633,
+      "TN": 1730,
+      "Recall": 0.5290178571428571,
+      "Precision": 0.5567736883320282,
+      "F1": 0.5425410148798169
+    },
+    "by_board": {
+      "2": {
+        "rows": 2348,
+        "known": 2311,
+        "unknown": 37,
+        "top1_hits": 111,
+        "top1_slots": 300
+      },
+      "3": {
+        "rows": 759,
+        "known": 742,
+        "unknown": 17,
+        "top1_hits": 93,
+        "top1_slots": 253
+      },
+      "4": {
+        "rows": 342,
+        "known": 337,
+        "unknown": 5,
+        "top1_hits": 57,
+        "top1_slots": 164
+      },
+      "5": {
+        "rows": 135,
+        "known": 132,
+        "unknown": 3,
+        "top1_hits": 35,
+        "top1_slots": 81
+      },
+      "6": {
+        "rows": 62,
+        "known": 59,
+        "unknown": 3,
+        "top1_hits": 17,
+        "top1_slots": 44
+      },
+      "7": {
+        "rows": 32,
+        "known": 30,
+        "unknown": 2,
+        "top1_hits": 6,
+        "top1_slots": 19
+      },
+      "8": {
+        "rows": 15,
+        "known": 15,
+        "unknown": 0,
+        "top1_hits": 2,
+        "top1_slots": 9
+      },
+      "9": {
+        "rows": 7,
+        "known": 7,
+        "unknown": 0,
+        "top1_hits": 0,
+        "top1_slots": 2
+      },
+      "10": {
+        "rows": 3,
+        "known": 3,
+        "unknown": 0,
+        "top1_hits": 0,
+        "top1_slots": 0
+      },
+      "11": {
+        "rows": 2,
+        "known": 2,
+        "unknown": 0,
+        "top1_hits": 1,
+        "top1_slots": 1
+      },
+      "12": {
+        "rows": 2,
+        "known": 2,
+        "unknown": 0,
+        "top1_hits": 0,
+        "top1_slots": 1
+      }
+    }
+  },
+  "feature_file": "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\qualified_final\\event_group_features_9245.csv",
+  "engine_file": "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\codex_review\\final_qualified_event_engine.py",
+  "control_file": "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_joint_research_20261021T1142Z\\final_prevalidation\\CONTROL_FIXED3_3707.csv",
+  "gates": {
+    "nonword_top1_min_hits": 140,
+    "min_gain_hits_vs_control": 6,
+    "paired_95pct_lower_positive": true,
+    "base_nonword_top2_slot_hits": 246,
+    "base_nonword_top3_slot_hits": 356,
+    "full_top1_min_hits": 209,
+    "nonword_top2_any_min_days": 184,
+    "nonword_top3_any_min_days": 233,
+    "each_fold_top1_not_lower_than_control": true,
+    "each_fold_recall_precision_f1_max_decline": 0.025
+  },
+  "sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\historical_final\\dataset.joblib": "6ef4a7b70e7b9fa35c1394a2f1a9b2fd21f352e46606a8f5e567180ee29f42e9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_joint_research_20261021T1142Z\\final_prevalidation\\CONTROL_FIXED3_3707.csv": "7bc02b36d7bdf6117b3b773c36d8629898bef6793eb095a555bb5066eebcbfe3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\codex_review\\final_qualified_event_engine.py": "866fcafe48cd5e593bbcc40823e7177ebbe4cc1a6713d74e52d08b122f8a6a55",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\qualified_final\\event_group_features_9245.csv": "4d40bdf82f2c030890eb2f873f2a79b7b2af7adbecea8962057d1160d100815e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_event_group_20261021T1605Z\\codex_review\\fixed_event_validation.py": "8cced2e2e5a05dc5882403614264c4d443ba49c4e218c989d1b121e956e96323",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_joint_research_20261021T1142Z\\final_prevalidation\\fixed_path_validation.py": "d7a1e54f8adeb70f1a32175eb081ddc452d6d3b502270cd6042733433fcb7f2c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\relay_joint_research_20261021T1142Z\\final_prevalidation\\FROZEN_PROTOCOL.json": "f540a565806a7fa33552bd39a87d464366ad9fe6850162158514b83ce4e09ca9",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_research.py": "a5c90006a5e80f99e7f3edf19054f19c9b1877b2a1b70dd6ae544d8871030e38",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_preprocessing.py": "0b598b3f77db674f27f8b067378b3802eb33e5962be4adec0b7093db2f998e3c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\short_term_thinking_dataset_builder.py": "8072e232ac74509885e32f1bcf4385c95647ef2b9c32c57b3604bbf131da5eee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\model_upgrade_history.py": "df4768203991406b0d2b22a33d11b6d9374b08fee9e7cb86aec395e4bb6215b2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\historical_symbolic_context.py": "c1ea45f3729ad4c0415a386d8800294e6b5476c21b6e1e8eca9b9c0ee31ba650",
+    "D:\\Documents\\ChatGPT\\龙头战法\\symbolic_name_theme_v217.py": "2dd8412a0a516bb0b50f57a853c6cb4106482114cf290b0d6135e334db7aef22",
+    "D:\\Documents\\ChatGPT\\龙头战法\\security_master_v4.py": "26f57bbe490645653d0733bcc59d64184e42fb46443ac4f63b3143e057d08955",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\security_master_intervals.csv": "ab3379fff9dbc789af95faa7c250acb8df786841bfec42285992398e0c70f489",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\execution_after_binning_repair\\2025-07_ST_DUAL_model.joblib": "7732bdc57170d206d4591379a7e12968a5db7eb06a72bafc33edd1ed65b40028",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\execution_after_binning_repair\\2026-01_ST_DUAL_model.joblib": "7bcfc63c0f2155ba14e86e1032c839dbab39113f0fd2aeee427ca1d3befbf37a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\execution_after_binning_repair\\2026-09_ST_DUAL_model.joblib": "8100459fda902179d456e4e757fd7d5627639c0f1f8d7022fd44c62b3ba162ef"
+  },
+  "causal_qualification_requires_separate_codex_review": true,
+  "maximum_new_fits": 3,
+  "maximum_fits_per_cutoff": 1,
+  "first_board": "PAUSED",
+  "history_seen": true,
+  "new_blind_test": false,
+  "monthly_fits_authorized": false,
+  "production_deployed": false
+}

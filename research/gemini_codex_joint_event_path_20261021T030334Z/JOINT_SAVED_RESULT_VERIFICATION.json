@@ -1,0 +1,181 @@
+{
+  "at": "2026-10-21T03:08:57.938937+00:00",
+  "status": "PASS_SAVED_VALIDATION_REPLAY",
+  "model_fits": 0,
+  "full28503_original_fields_labels_screen_unchanged": true,
+  "all_original_daily_calendar_master_hashes": true,
+  "unchanged_pending_protocol_except_peer_ack": true,
+  "full4724_scores_per_arm": true,
+  "unknown126_and_validation10_retained": true,
+  "arms": {
+    "EVENT_SEALED_PATH_67": {
+      "rows": 4724,
+      "all_saved_scores_replayed": true,
+      "full_and_prefix_members_match": true,
+      "exact_fixed_estimator_params": true,
+      "primary": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 48,
+        "hit_rate": 0.41025641025641024,
+        "wilson95": [
+          0.32536293772432145,
+          0.5008556448305281
+        ],
+        "full_positive_recall": 0.055619930475086905,
+        "false_positives": 69,
+        "false_negatives": 815,
+        "positive_pool": 691,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 863,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.41025641025641024,
+        "excluded_rows": 1147,
+        "excluded_known_promoters": 172,
+        "excluded_unknown": 2
+      },
+      "non_one_price": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 43,
+        "hit_rate": 0.36752136752136755,
+        "wilson95": [
+          0.28566809393867315,
+          0.4577974326899144
+        ],
+        "full_positive_recall": 0.05308641975308642,
+        "false_positives": 74,
+        "false_negatives": 767,
+        "positive_pool": 660,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 810,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.36752136752136755,
+        "excluded_rows": 1092,
+        "excluded_known_promoters": 150,
+        "excluded_unknown": 2
+      },
+      "pass_validation": false,
+      "trainer": "Gemini",
+      "core_fits": 2,
+      "temporal_calibrator_fits": 1
+    },
+    "EVENT_DUAL_PATH_72": {
+      "rows": 4724,
+      "all_saved_scores_replayed": true,
+      "full_and_prefix_members_match": true,
+      "exact_fixed_estimator_params": true,
+      "primary": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 46,
+        "hit_rate": 0.39316239316239315,
+        "wilson95": [
+          0.309403674424791,
+          0.48371368575955376
+        ],
+        "full_positive_recall": 0.05330243337195829,
+        "false_positives": 71,
+        "false_negatives": 817,
+        "positive_pool": 691,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 863,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.39316239316239315,
+        "excluded_rows": 1147,
+        "excluded_known_promoters": 172,
+        "excluded_unknown": 2
+      },
+      "non_one_price": {
+        "selected": 117,
+        "selected_dates": 117,
+        "known": 117,
+        "unknown": 0,
+        "hits": 40,
+        "hit_rate": 0.3418803418803419,
+        "wilson95": [
+          0.2621850195554907,
+          0.4316286735173396
+        ],
+        "full_positive_recall": 0.04938271604938271,
+        "false_positives": 77,
+        "false_negatives": 770,
+        "positive_pool": 660,
+        "outcome_coverage": 1.0,
+        "full_positive_pool": 810,
+        "full_signal_dates": 117,
+        "abstention_dates": 0,
+        "decision_date_coverage": 1.0,
+        "successful_predictions_per_all_pool_dates": 0.3418803418803419,
+        "excluded_rows": 1092,
+        "excluded_known_promoters": 150,
+        "excluded_unknown": 2
+      },
+      "pass_validation": false,
+      "trainer": "Codex",
+      "core_fits": 2,
+      "temporal_calibrator_fits": 1
+    }
+  },
+  "drift": [
+    {
+      "arm": "EVENT_DUAL_PATH_72",
+      "scope": "non_one_price",
+      "dates": 117,
+      "same_code": 64,
+      "both_hit": 34,
+      "gained_hits": 6,
+      "lost_hits": 14,
+      "both_failed": 63,
+      "unknown_outcomes": 0
+    },
+    {
+      "arm": "EVENT_DUAL_PATH_72",
+      "scope": "primary",
+      "dates": 117,
+      "same_code": 72,
+      "both_hit": 41,
+      "gained_hits": 5,
+      "lost_hits": 11,
+      "both_failed": 60,
+      "unknown_outcomes": 0
+    },
+    {
+      "arm": "EVENT_SEALED_PATH_67",
+      "scope": "non_one_price",
+      "dates": 117,
+      "same_code": 63,
+      "both_hit": 32,
+      "gained_hits": 11,
+      "lost_hits": 16,
+      "both_failed": 58,
+      "unknown_outcomes": 0
+    },
+    {
+      "arm": "EVENT_SEALED_PATH_67",
+      "scope": "primary",
+      "dates": 117,
+      "same_code": 70,
+      "both_hit": 40,
+      "gained_hits": 8,
+      "lost_hits": 12,
+      "both_failed": 57,
+      "unknown_outcomes": 0
+    }
+  ],
+  "no_actor_or_causal_interpretation": true,
+  "production_changes": false,
+  "monthly_replay": null
+}

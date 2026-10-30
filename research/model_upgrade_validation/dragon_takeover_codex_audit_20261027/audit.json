@@ -1,0 +1,560 @@
+{
+  "audit_at_utc": "2026-10-27T15:25:10.853818+00:00",
+  "scope": "NO_FIT_NO_SOURCE_MUTATION",
+  "source_hashes": {
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\daily_competition_round3.csv": "e6b733e7e4f491bce9380361b8e62782c7eeb739fd61f1a97f43073f553d9f1d",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\manifest_round3.json": "ac81b7abcbb4d910d934b79124fcbd3a6ce93ab104669a6d2a5f45d3fb67c92b",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\model_emotion_dragon_r3.joblib": "8a495dfacfd56658e7788f23cd2da4110e14f593c9f495e5bb739c46f8935a77",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\model_height_5_r3.joblib": "32f4f1f4c1b93f12a15ca775761d4494bd9af459528b0356e90ea6dbb2f9a786",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\model_space_leader_r3.joblib": "7b8bde0d58a40be3b1c34d098b4a0800feec5adebacd0e3d08ac87ff8030c507",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\oof_round3_predictions.csv": "570705ff00534d26a6b443b4dc3a46098f8292c60b85ef7067547060cd67ab38",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\round3_comprehensive_metrics.json": "51f3091abfa19ac743f0494dbea35b8dc94e8373a21c8f05e1af6a416bbf6dc5",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\round3_dataset.csv": "33b0d2c0e1cec61320e0e0774a2cad0cf60d9ffa178964f073632b1cc72ac483",
+    "research\\model_upgrade_validation\\dragon_takeover_20261027T074500Z\\ROUND3_TAKEOVER_AND_DRAGON_REPORT.md": "282cc65932d242eb86259c44377be0745a099e50c389f896d139935b13b7fb77",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\leader_candidates.csv": "8f5e6182a53db022f5e484e9250b00b725d8186bda79682abf4aa03af67d5d2e",
+    "compute_round3_dataset.py": "2d9995814f596e553747666c6ccd2f2c16bfd7ae6f59761834126e9446d3bf6b",
+    "train_and_evaluate_round3.py": "c87b76cb3de1bd6870ad24ba5fe4fe246ed48f6c13da2cc239e457d2475e4b87",
+    "evaluate_round3_comprehensive.py": "105e7fb516bca9fa1deff7b2eb00e66042f62154bb4dd1f3f272f212899fffae",
+    "audit_three_board_traps.py": "aeaca49c793e203c5fefb9949b7c04804e98950f91c8ccb4dd8f619fb4418fd1"
+  },
+  "prior_exact_chain_diagnostics_sha256": "c1871170e104016ce5669df5ec7e1f2a45b1071d374dccf30aa3771f3bedeb8e",
+  "label_checks_mature_1843": {
+    "mature_streak_rows": 1843,
+    "incomplete_streak_rows": 8,
+    "space_label_disagreements": 0,
+    "emotion_proxy_disagreements": 0,
+    "final_maturity_date_disagreements": 0,
+    "is_3to4_disagreements": 0,
+    "is_3to5_disagreements": 0,
+    "is_deep_6_disagreements": 0,
+    "is_monster_7_disagreements": 0
+  },
+  "calendar_matches_official": true,
+  "fold_maturity_checks": [
+    {
+      "test_start": "2024-09-01",
+      "train_n": 368,
+      "unknown_chain_rows_in_train": 0,
+      "actual_maturity_after_train_end": 0
+    },
+    {
+      "test_start": "2025-01-01",
+      "train_n": 798,
+      "unknown_chain_rows_in_train": 0,
+      "actual_maturity_after_train_end": 0
+    },
+    {
+      "test_start": "2025-06-01",
+      "train_n": 1078,
+      "unknown_chain_rows_in_train": 0,
+      "actual_maturity_after_train_end": 0
+    },
+    {
+      "test_start": "2025-12-01",
+      "train_n": 1404,
+      "unknown_chain_rows_in_train": 0,
+      "actual_maturity_after_train_end": 0
+    }
+  ],
+  "original_score_top1": {
+    "n": 340,
+    "is_market_space_leader": {
+      "hits": 102,
+      "rate": 0.3
+    },
+    "target_B_takeover_space": {
+      "hits": 79,
+      "rate": 0.2598684210526316
+    },
+    "is_emotion_dragon_proxy": {
+      "hits": 59,
+      "rate": 0.17352941176470588
+    },
+    "is_3to4": {
+      "hits": 215,
+      "rate": 0.6323529411764706
+    },
+    "is_3to5": {
+      "hits": 110,
+      "rate": 0.3235294117647059
+    },
+    "is_deep_6": {
+      "hits": 63,
+      "rate": 0.18529411764705883
+    },
+    "is_monster_7": {
+      "hits": 33,
+      "rate": 0.09705882352941177
+    }
+  },
+  "selective_040": {
+    "n": 118,
+    "is_market_space_leader": {
+      "hits": 45,
+      "rate": 0.3813559322033898
+    },
+    "target_B_takeover_space": {
+      "hits": 27,
+      "rate": 0.29347826086956524
+    },
+    "is_emotion_dragon_proxy": {
+      "hits": 24,
+      "rate": 0.2033898305084746
+    },
+    "is_3to4": {
+      "hits": 75,
+      "rate": 0.635593220338983
+    },
+    "is_3to5": {
+      "hits": 46,
+      "rate": 0.3898305084745763
+    },
+    "is_deep_6": {
+      "hits": 26,
+      "rate": 0.22033898305084745
+    },
+    "is_monster_7": {
+      "hits": 14,
+      "rate": 0.11864406779661017
+    }
+  },
+  "selected_coverage": 0.34705882352941175,
+  "case_b_takeover": {
+    "n": 304,
+    "is_market_space_leader": {
+      "hits": 79,
+      "rate": 0.2598684210526316
+    },
+    "target_B_takeover_space": {
+      "hits": 79,
+      "rate": 0.2598684210526316
+    },
+    "is_emotion_dragon_proxy": {
+      "hits": 54,
+      "rate": 0.17763157894736842
+    },
+    "is_3to4": {
+      "hits": 192,
+      "rate": 0.631578947368421
+    },
+    "is_3to5": {
+      "hits": 103,
+      "rate": 0.33881578947368424
+    },
+    "is_deep_6": {
+      "hits": 60,
+      "rate": 0.19736842105263158
+    },
+    "is_monster_7": {
+      "hits": 32,
+      "rate": 0.10526315789473684
+    }
+  },
+  "all_signal_days_top1": {
+    "n": 449,
+    "is_market_space_leader": {
+      "hits": 127,
+      "rate": 0.2828507795100223
+    },
+    "target_B_takeover_space": {
+      "hits": 96,
+      "rate": 0.24
+    },
+    "is_emotion_dragon_proxy": {
+      "hits": 71,
+      "rate": 0.15812917594654788
+    },
+    "is_3to4": {
+      "hits": 263,
+      "rate": 0.5857461024498887
+    },
+    "is_3to5": {
+      "hits": 131,
+      "rate": 0.29175946547884185
+    },
+    "is_deep_6": {
+      "hits": 75,
+      "rate": 0.16703786191536749
+    },
+    "is_monster_7": {
+      "hits": 39,
+      "rate": 0.08685968819599109
+    }
+  },
+  "simple_benchmarks_same_pool": {
+    "min_amplitude": {
+      "n": 340,
+      "is_market_space_leader": {
+        "hits": 95,
+        "rate": 0.27941176470588236
+      },
+      "target_B_takeover_space": {
+        "hits": 74,
+        "rate": 0.24342105263157895
+      },
+      "is_emotion_dragon_proxy": {
+        "hits": 53,
+        "rate": 0.15588235294117647
+      },
+      "is_3to4": {
+        "hits": 210,
+        "rate": 0.6176470588235294
+      },
+      "is_3to5": {
+        "hits": 104,
+        "rate": 0.3058823529411765
+      },
+      "is_deep_6": {
+        "hits": 56,
+        "rate": 0.16470588235294117
+      },
+      "is_monster_7": {
+        "hits": 29,
+        "rate": 0.08529411764705883
+      }
+    },
+    "min_turnover": {
+      "n": 340,
+      "is_market_space_leader": {
+        "hits": 93,
+        "rate": 0.2735294117647059
+      },
+      "target_B_takeover_space": {
+        "hits": 75,
+        "rate": 0.24671052631578946
+      },
+      "is_emotion_dragon_proxy": {
+        "hits": 55,
+        "rate": 0.16176470588235295
+      },
+      "is_3to4": {
+        "hits": 212,
+        "rate": 0.6235294117647059
+      },
+      "is_3to5": {
+        "hits": 107,
+        "rate": 0.31470588235294117
+      },
+      "is_deep_6": {
+        "hits": 58,
+        "rate": 0.17058823529411765
+      },
+      "is_monster_7": {
+        "hits": 30,
+        "rate": 0.08823529411764706
+      }
+    },
+    "min_price": {
+      "n": 340,
+      "is_market_space_leader": {
+        "hits": 75,
+        "rate": 0.22058823529411764
+      },
+      "target_B_takeover_space": {
+        "hits": 53,
+        "rate": 0.17434210526315788
+      },
+      "is_emotion_dragon_proxy": {
+        "hits": 48,
+        "rate": 0.1411764705882353
+      },
+      "is_3to4": {
+        "hits": 171,
+        "rate": 0.5029411764705882
+      },
+      "is_3to5": {
+        "hits": 85,
+        "rate": 0.25
+      },
+      "is_deep_6": {
+        "hits": 49,
+        "rate": 0.14411764705882352
+      },
+      "is_monster_7": {
+        "hits": 29,
+        "rate": 0.08529411764705883
+      }
+    },
+    "max_amount": {
+      "n": 340,
+      "is_market_space_leader": {
+        "hits": 54,
+        "rate": 0.1588235294117647
+      },
+      "target_B_takeover_space": {
+        "hits": 36,
+        "rate": 0.11842105263157894
+      },
+      "is_emotion_dragon_proxy": {
+        "hits": 27,
+        "rate": 0.07941176470588235
+      },
+      "is_3to4": {
+        "hits": 133,
+        "rate": 0.3911764705882353
+      },
+      "is_3to5": {
+        "hits": 50,
+        "rate": 0.14705882352941177
+      },
+      "is_deep_6": {
+        "hits": 25,
+        "rate": 0.07352941176470588
+      },
+      "is_monster_7": {
+        "hits": 13,
+        "rate": 0.03823529411764706
+      }
+    }
+  },
+  "paired_diagnostic_vs_simple": {
+    "min_amplitude": {
+      "is_market_space_leader": {
+        "n": 340,
+        "model_only_hits": 19,
+        "control_only_hits": 12,
+        "net_hits": 7,
+        "two_sided_discordant_binomial_p": 0.28104151505976915,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_emotion_dragon_proxy": {
+        "n": 340,
+        "model_only_hits": 15,
+        "control_only_hits": 9,
+        "net_hits": 6,
+        "two_sided_discordant_binomial_p": 0.30745625495910645,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_3to5": {
+        "n": 340,
+        "model_only_hits": 22,
+        "control_only_hits": 16,
+        "net_hits": 6,
+        "two_sided_discordant_binomial_p": 0.417692190836533,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      }
+    },
+    "min_turnover": {
+      "is_market_space_leader": {
+        "n": 340,
+        "model_only_hits": 20,
+        "control_only_hits": 11,
+        "net_hits": 9,
+        "two_sided_discordant_binomial_p": 0.14961278438568115,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_emotion_dragon_proxy": {
+        "n": 340,
+        "model_only_hits": 13,
+        "control_only_hits": 9,
+        "net_hits": 4,
+        "two_sided_discordant_binomial_p": 0.5234670639038086,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_3to5": {
+        "n": 340,
+        "model_only_hits": 19,
+        "control_only_hits": 16,
+        "net_hits": 3,
+        "two_sided_discordant_binomial_p": 0.735878800856881,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      }
+    },
+    "min_price": {
+      "is_market_space_leader": {
+        "n": 340,
+        "model_only_hits": 44,
+        "control_only_hits": 17,
+        "net_hits": 27,
+        "two_sided_discordant_binomial_p": 0.0007299045109347685,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_emotion_dragon_proxy": {
+        "n": 340,
+        "model_only_hits": 30,
+        "control_only_hits": 19,
+        "net_hits": 11,
+        "two_sided_discordant_binomial_p": 0.15240777196147803,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_3to5": {
+        "n": 340,
+        "model_only_hits": 51,
+        "control_only_hits": 26,
+        "net_hits": 25,
+        "two_sided_discordant_binomial_p": 0.005870707889737201,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      }
+    },
+    "max_amount": {
+      "is_market_space_leader": {
+        "n": 340,
+        "model_only_hits": 72,
+        "control_only_hits": 24,
+        "net_hits": 48,
+        "two_sided_discordant_binomial_p": 9.69923242552742e-07,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_emotion_dragon_proxy": {
+        "n": 340,
+        "model_only_hits": 50,
+        "control_only_hits": 18,
+        "net_hits": 32,
+        "two_sided_discordant_binomial_p": 0.00013083876154198454,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_3to5": {
+        "n": 340,
+        "model_only_hits": 90,
+        "control_only_hits": 30,
+        "net_hits": 60,
+        "two_sided_discordant_binomial_p": 3.7727533063553086e-08,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      }
+    }
+  },
+  "complete_base": {
+    "model": {
+      "n": 100,
+      "is_market_space_leader": {
+        "hits": 26,
+        "rate": 0.26
+      },
+      "target_B_takeover_space": {
+        "hits": 19,
+        "rate": 0.2111111111111111
+      },
+      "is_emotion_dragon_proxy": {
+        "hits": 15,
+        "rate": 0.15
+      },
+      "is_3to4": {
+        "hits": 44,
+        "rate": 0.44
+      },
+      "is_3to5": {
+        "hits": 19,
+        "rate": 0.19
+      },
+      "is_deep_6": {
+        "hits": 9,
+        "rate": 0.09
+      },
+      "is_monster_7": {
+        "hits": 2,
+        "rate": 0.02
+      }
+    },
+    "base": {
+      "n": 100,
+      "is_market_space_leader": {
+        "hits": 21,
+        "rate": 0.21
+      },
+      "target_B_takeover_space": {
+        "hits": 16,
+        "rate": 0.17777777777777778
+      },
+      "is_emotion_dragon_proxy": {
+        "hits": 13,
+        "rate": 0.13
+      },
+      "is_3to4": {
+        "hits": 38,
+        "rate": 0.38
+      },
+      "is_3to5": {
+        "hits": 16,
+        "rate": 0.16
+      },
+      "is_deep_6": {
+        "hits": 6,
+        "rate": 0.06
+      },
+      "is_monster_7": {
+        "hits": 0,
+        "rate": 0.0
+      }
+    },
+    "paired_diagnostics": {
+      "is_market_space_leader": {
+        "n": 100,
+        "model_only_hits": 7,
+        "control_only_hits": 2,
+        "net_hits": 5,
+        "two_sided_discordant_binomial_p": 0.1796875,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_emotion_dragon_proxy": {
+        "n": 100,
+        "model_only_hits": 4,
+        "control_only_hits": 2,
+        "net_hits": 2,
+        "two_sided_discordant_binomial_p": 0.6875,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      },
+      "is_3to5": {
+        "n": 100,
+        "model_only_hits": 6,
+        "control_only_hits": 3,
+        "net_hits": 3,
+        "two_sided_discordant_binomial_p": 0.5078125,
+        "limitation": "Diagnostic paired-day test; does not adjust for repeated research or dependence between dates."
+      }
+    }
+  },
+  "artifact_completeness": {
+    "loaded_models": {
+      "model_emotion_dragon_r3.joblib": {
+        "loaded": true,
+        "feature_count": 68,
+        "sha256": "8a495dfacfd56658e7788f23cd2da4110e14f593c9f495e5bb739c46f8935a77"
+      },
+      "model_height_5_r3.joblib": {
+        "loaded": true,
+        "feature_count": 68,
+        "sha256": "32f4f1f4c1b93f12a15ca775761d4494bd9af459528b0356e90ea6dbb2f9a786"
+      },
+      "model_space_leader_r3.joblib": {
+        "loaded": true,
+        "feature_count": 68,
+        "sha256": "7b8bde0d58a40be3b1c34d098b4a0800feec5adebacd0e3d08ac87ff8030c507"
+      }
+    },
+    "takeover_model_saved": false,
+    "takeover_weight": 0.25,
+    "top1_changes_if_component_omitted": 17,
+    "preprocessing_thresholds_saved_in_manifest": false
+  },
+  "execution_audit": {
+    "veto_n": 193,
+    "tag_counts": {
+      "['【三板-身位一字先锋】']": 120,
+      "['【三板-同位跟风陪跑】']": 107,
+      "['【三板-尾盘偷袭诱多】']": 54,
+      "['【三板-尾盘偷袭诱多】', '【三板-同位跟风陪跑】']": 32,
+      "[]": 27
+    },
+    "top1_missing_first_seal": 122,
+    "top1_known_first_seal_values": [
+      0.0
+    ],
+    "base_missing_defaults_to_50_code_still_present": true,
+    "historical_risk_defaults_to_false_code_still_present": true,
+    "unknown_string_compares_after_1400": true
+  },
+  "base_hash_matches": true,
+  "new_fit_count": 0,
+  "new_trade_count": 0,
+  "source_files_preserved": true,
+  "checks": {
+    "preserved_sources": true,
+    "base_hash": true,
+    "raw_top1_space_matches_json": true,
+    "raw_top1_dragon_matches_json": true,
+    "selective_space_matches_json": true,
+    "all_1843_mature_targets_match": true,
+    "calendar_matches": true,
+    "no_observed_late_training_labels": true
+  }
+}

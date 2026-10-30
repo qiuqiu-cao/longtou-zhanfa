@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-21T01:50:33.138408+00:00",
+  "fits": 0,
+  "labels_read": false,
+  "full_rows": 28503,
+  "full_dates": 668,
+  "periods": {
+    "development": {
+      "rows": 10630,
+      "dates": 265,
+      "observations": 10349,
+      "price_mismatch": 0,
+      "field_coverage": {
+        "reported_first_seal_trading_minutes": 0.9722483537158984,
+        "reported_first_seal_observed_pool_rank": 0.9722483537158984,
+        "reported_close_seal_log_amount_ratio": 0.9481655691439322,
+        "reported_close_seal_log_floatcap_ratio": 0.9481655691439322
+      },
+      "dates_without_time_observation": 0
+    },
+    "validation2025H1": {
+      "rows": 4724,
+      "dates": 117,
+      "observations": 4694,
+      "price_mismatch": 0,
+      "field_coverage": {
+        "reported_first_seal_trading_minutes": 0.9930143945808637,
+        "reported_first_seal_observed_pool_rank": 0.9930143945808637,
+        "reported_close_seal_log_amount_ratio": 0.9862404741744285,
+        "reported_close_seal_log_floatcap_ratio": 0.9862404741744285
+      },
+      "dates_without_time_observation": 0
+    },
+    "evaluation": {
+      "rows": 13149,
+      "dates": 286,
+      "observations": 13048,
+      "price_mismatch": 0,
+      "field_coverage": {
+        "reported_first_seal_trading_minutes": 0.992166704692372,
+        "reported_first_seal_observed_pool_rank": 0.992166704692372,
+        "reported_close_seal_log_amount_ratio": 0.9920906532816184,
+        "reported_close_seal_log_floatcap_ratio": 0.9920906532816184
+      },
+      "dates_without_time_observation": 0
+    }
+  },
+  "qualified_arms": {
+    "SEAL_TIME_64": true,
+    "SEAL_TIME_FUND_66": true
+  },
+  "prefix_checks": [
+    {
+      "cutoff": "2025-06-30",
+      "rows": 15354,
+      "all_four_fields_equal": true
+    },
+    {
+      "cutoff": "2025-12-31",
+      "rows": 20229,
+      "all_four_fields_equal": true
+    }
+  ],
+  "new_feature_fields": [
+    "reported_first_seal_trading_minutes",
+    "reported_first_seal_observed_pool_rank",
+    "reported_close_seal_log_amount_ratio",
+    "reported_close_seal_log_floatcap_ratio"
+  ],
+  "source_captured_later": true,
+  "strict_originalHTTPtime_certified": false,
+  "original_universe_survivorship_unchanged": true,
+  "fund_definition": "Provider historical dated daily closingseal report in yuan,not exchange-verified executable queue or identity"
+}

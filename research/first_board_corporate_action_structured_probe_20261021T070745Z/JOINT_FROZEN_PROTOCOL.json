@@ -1,0 +1,76 @@
+{
+  "frozen_at": "2026-10-21T07:07:45.931693+00:00",
+  "deadline_utc": "2026-10-21T07:37:45.931693+00:00",
+  "budget_minutes": 30,
+  "status": "ACTUAL_JOINT_STRUCTURED_FOUR_CODE_SCOPE_FROZEN_BEFORE_HTTP",
+  "codes": [
+    "600361",
+    "603203",
+    "688368",
+    "603214"
+  ],
+  "control_cases": [
+    {
+      "code": "600361",
+      "name": "创新新材",
+      "target_ex_date": "2024-06-28",
+      "board": "MAIN_BOARD_10",
+      "official_benchmark": "Announcement 2024-029: Differential distribution confirmed, P_ref = P_close - 0.07"
+    },
+    {
+      "code": "603203",
+      "name": "快克智能",
+      "target_ex_date": "2026-06-08",
+      "board": "MAIN_BOARD_10",
+      "official_benchmark": "Cninfo bounded index missed; test whether EastMoney captures it"
+    },
+    {
+      "code": "688368",
+      "name": "晶丰明源",
+      "target_ex_date": "2026-06-09",
+      "board": "STAR_BOARD_20",
+      "official_benchmark": "Announcement 2026-042: Differential distribution confirmed, Virtual cash 0.9937, virtual transfer 0.3975. Crucial test for virtual fields."
+    },
+    {
+      "code": "603214",
+      "name": "爱婴室",
+      "target_ex_date": "2024-10-08",
+      "board": "MAIN_BOARD_10",
+      "official_benchmark": "Verified dividend 0.109 RMB/share, target label flip from 0 to 1"
+    }
+  ],
+  "source_scope": "One raw RPT_SHAREBONUS_DET response per declared company;not a marketwide crawl",
+  "actual_peer": "Antigravity Gemini 3.8 Flash High",
+  "collector_owner": "Codex",
+  "independent_reviewer": "Gemini",
+  "max_direct_http_requests": 4,
+  "page_size": 100,
+  "page_number": 1,
+  "timeout_seconds": 10,
+  "no_paging": true,
+  "no_retries": true,
+  "max_requests_per_code": 1,
+  "on_access_denial": "Stop;no bypass or alternate route",
+  "model_fits_allowed": 0,
+  "training_arms": [],
+  "target_label_changes_allowed": 0,
+  "production_writes_allowed": 0,
+  "agreement": "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_corporate_action_official_probe_20261021T065629Z\\gemini\\NEXT_STRUCTURED_SOURCE_SCOPE_AGREEMENT.json",
+  "agreement_sha256": "fad464ef24166747f70bf90dd1119a063b3767f377710ac17eb6881ed0b64103",
+  "collector_source": "D:\\Documents\\ChatGPT\\龙头战法\\first_board_corporate_action_structured_probe.py",
+  "collector_source_sha256": "37c2f8a4431a5e345383289ed35ffa8bffca4490e0e590641f6eb61396edd902",
+  "technical_source_url": "https://raw.githubusercontent.com/akfamily/akshare/main/akshare/stock_feature/stock_fhps_em.py",
+  "local_technical_source_sha256": "131df9e6a8f58ff11fb8cec898e6ee149a1452aa573bbddafb35da0c930a56e5",
+  "qualifications": [
+    "Companyidentity and dates",
+    "Units against official PDFs",
+    "Implementation vs plan status",
+    "Presence of differential distribution flags and virtual diluted parameters",
+    "Revised historical fields and true capture clocks"
+  ],
+  "rejection": "Nominal distributions alone cannot certify reference prices for differential cases or authorize full dataset repair",
+  "later_capture_not_original_signal_time": true,
+  "original_facts": "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv",
+  "original_facts_sha256": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+  "goal_60_achieved": false
+}

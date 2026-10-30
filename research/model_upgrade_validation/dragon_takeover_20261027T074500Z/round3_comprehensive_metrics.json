@@ -1,0 +1,110 @@
+{
+  "evaluation_samples": 1480,
+  "competitive_days": 340,
+  "target_baselines": {
+    "is_3to4": {
+      "count": 708,
+      "rate": 0.4784
+    },
+    "is_3to5": {
+      "count": 333,
+      "rate": 0.225
+    },
+    "is_deep_6": {
+      "count": 174,
+      "rate": 0.1176
+    },
+    "is_monster_7": {
+      "count": 89,
+      "rate": 0.0601
+    },
+    "is_market_space_leader": {
+      "count": 294,
+      "rate": 0.1986
+    },
+    "is_unique_space_leader": {
+      "count": 170,
+      "rate": 0.1149
+    },
+    "is_emotion_dragon_proxy": {
+      "count": 169,
+      "rate": 0.1142
+    }
+  },
+  "competition_overall": {
+    "comp_base_space": 0.1962,
+    "top1_space_rate": 0.3,
+    "bot1_space_rate": 0.1618,
+    "comp_base_dragon": 0.1145,
+    "top1_dragon_rate": 0.1735,
+    "bot1_dragon_rate": 0.0794,
+    "comp_base_5": 0.2276,
+    "top1_5_rate": 0.3235,
+    "bot1_5_rate": 0.1294,
+    "comp_base_4": 0.4814,
+    "top1_4_rate": 0.6324
+  },
+  "target_b_takeover": {
+    "case_b_days": 304,
+    "top1_takeover_rate": 0.2599,
+    "cohort_takeover_base": 0.1892,
+    "alpha": 0.0706
+  },
+  "base_comparison": {
+    "complete_match": {
+      "days": 100,
+      "model_space": 0.26,
+      "base_space": 0.21,
+      "model_dragon": 0.15,
+      "base_dragon": 0.13,
+      "model_5": 0.19,
+      "base_5": 0.16
+    },
+    "partial_match": {
+      "days": 227,
+      "model_space": 0.3172,
+      "base_space": 0.207,
+      "model_dragon": 0.1806,
+      "base_dragon": 0.1454,
+      "model_5": 0.3744,
+      "base_5": 0.207
+    }
+  },
+  "selective_recommendation": {
+    "threshold": 0.4,
+    "recommended_days": 118,
+    "coverage_rate": 0.3471,
+    "rec_space_rate": 0.3814,
+    "rec_dragon_rate": 0.2034,
+    "rec_5_rate": 0.3898,
+    "skipped_days": 222,
+    "skipped_had_space": 94,
+    "skipped_had_dragon": 74
+  },
+  "year_stability": {
+    "2024": {
+      "days": 68,
+      "top1_space_rate": 0.1176,
+      "top1_dragon_rate": 0.1176,
+      "top1_5_rate": 0.4412,
+      "cohort_space_base": 0.0728,
+      "cohort_dragon_base": 0.0681
+    },
+    "2025": {
+      "days": 179,
+      "top1_space_rate": 0.324,
+      "top1_dragon_rate": 0.2011,
+      "top1_5_rate": 0.3128,
+      "cohort_space_base": 0.2437,
+      "cohort_dragon_base": 0.1503
+    },
+    "2026": {
+      "days": 93,
+      "top1_space_rate": 0.3871,
+      "top1_dragon_rate": 0.1613,
+      "top1_5_rate": 0.2581,
+      "cohort_space_base": 0.2684,
+      "cohort_dragon_base": 0.1054
+    }
+  }
+}

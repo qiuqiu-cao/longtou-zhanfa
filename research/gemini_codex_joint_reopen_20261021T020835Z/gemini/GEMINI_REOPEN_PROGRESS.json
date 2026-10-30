@@ -1,0 +1,123 @@
+{
+  "created_at": "2026-10-21T02:23:54.952130+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/gemini_codex_joint_reopen_20261021T020835Z",
+  "current_step": "FINAL_SCOPE_NOTE_APPENDED",
+  "status": "BATCH_FULLY_SETTLED_AND_CONCLUDED",
+  "new_field_evaluation": {
+    "field": "provider_reported_any_reopen",
+    "semantic_verification": "122/122 binary match against (em_reported_bomb_count > 0); 29 multiple breaks still 1; strictly binary reopen flag",
+    "coverage_stats": {
+      "development": 0.9722483537158984,
+      "validation2025H1": 0.9930143945808637,
+      "evaluation": 0.992166704692372
+    },
+    "decision": "ADMITTED_AS_QUALIFIED_INTRADAY_PATH_PROXY"
+  },
+  "proposed_arms": {
+    "REOPEN_STATE_63": {
+      "trainer": "Gemini",
+      "features_count": 63,
+      "definition": "Original 62 + provider_reported_any_reopen"
+    },
+    "REOPEN_TIME_FUND_67": {
+      "trainer": "Codex",
+      "features_count": 67,
+      "definition": "Original 62 + provider_reported_any_reopen + 2 timing fields + 2 seal fund fields"
+    }
+  },
+  "proposal_artifact": {
+    "path": "research/gemini_codex_joint_reopen_20261021T020835Z/gemini/GEMINI_REOPEN_PROPOSAL.md",
+    "sha256": "cd4901a82859277b608ccf0385fd73df0f4f078ea089c314f9c9c8a8e6d9070f"
+  },
+  "completed_actions": [
+    "Audited qualification.json, PROTOCOL_BEFORE_FULL_FIELD_AUDIT.json, and ALL122_CROSS_SOURCE_REOPEN_SEMANTICS_NO_TARGETS.csv.",
+    "Confirmed provider_reported_any_reopen is purely binary (0.0=unopened, 1.0=reopened, missing=NaN).",
+    "Verified coverage exceeds >= 90% in both development (97.2%) and validation (99.3%).",
+    "Drafted GEMINI_REOPEN_PROPOSAL.md agreeing to REOPEN_STATE_63 (Gemini) vs REOPEN_TIME_FUND_67 (Codex).",
+    "Corrected evaluation period coverage to exactly 13,046 / 13,149 = 99.2167% and circumscribed cross-source audit to the two August 2026 dates.",
+    "Retracted unverified causal mechanisms of 64-arm failure, multiple break count references, and absolute claims about 63-arm causal purity.",
+    "Signed and froze JOINT_FROZEN_PROTOCOL.json with status AGREED_BEFORE_NEW_FITS.",
+    "Trained REOPEN_STATE_63 arm; validated 47/117 primary hits and 43/117 non-one-price hits (REJECTED_VALIDATION).",
+    "Independently recalculated COMPLETE4724_BOTH_ARMS_WITH_FROZEN_BASE.csv and COMPLETE117_DAILY_PAIRED_SELECTIONS_ALL_ARMS.csv.",
+    "Verified paired transitions: Arm 63 (new 3, lost 8; non-one-price new 4, lost 9), Arm 67 (new 18, lost 17; non-one-price new 16, lost 20).",
+    "Verified joint report 联合训练_开板状态_结果.md: 0 errors found.",
+    "Settled batch without third arm or parameter tuning. Preserved all frozen files and BASE protections.",
+    "Appended GEMINI_REOPEN_FINAL_SCOPE_NOTE.md correcting 120/250d coverage claim, proxy boundaries, and HGB fixed hyperparameter wording."
+  ],
+  "pending_actions": [],
+  "new_fits_count": 3,
+  "production_files_modified": 0,
+  "compliance_checks": {
+    "gemini_model_version": "Gemini 3.8 Flash High",
+    "no_early_fits_before_protocol_freeze": true,
+    "missing_values_kept_as_nan": true,
+    "no_unverified_causal_narrative": true,
+    "production_base_protected": true
+  },
+  "artifacts": {
+    "proposal": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/gemini/GEMINI_REOPEN_PROPOSAL.md",
+      "sha256": "cd4901a82859277b608ccf0385fd73df0f4f078ea089c314f9c9c8a8e6d9070f"
+    },
+    "proposal_correction": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/gemini/GEMINI_REOPEN_PROPOSAL_CORRECTION.md",
+      "sha256": "4186bbbec2d6d46ec02d04eb316970ed9af9b0ebb51f22b1eefd648f76861ef6"
+    },
+    "reopen_state_63_report": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/REOPEN_STATE_63/report.json",
+      "sha256": "25d4e6d08315ab06309e9bb7b0ef48db1afcc41a9e12663300d09c854b0f53b7"
+    },
+    "joint_frozen_protocol": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/JOINT_FROZEN_PROTOCOL.json",
+      "sha256": "5b041caad760e8b62a846e40975c816394b5d843381f408a8c24657954e4ad16"
+    },
+    "settlement_json": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/gemini/GEMINI_REOPEN_FINAL_SETTLEMENT.json",
+      "sha256": "95bd2de23234a314cfb3c807a7fe3b9dc163da3ec4a3af6df96fcc5af68f8071"
+    },
+    "settlement_md": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/gemini/GEMINI_REOPEN_FINAL_SETTLEMENT.md",
+      "sha256": "4d7a6503e6582a5bb823d85509e3c17abf6c145215da09df087344a42740e975"
+    },
+    "final_scope_note_md": {
+      "path": "research/gemini_codex_joint_reopen_20261021T020835Z/gemini/GEMINI_REOPEN_FINAL_SCOPE_NOTE.md",
+      "sha256": "5158c8ee2751c2acf8da201c8e2ce3eada063bee0c739b91c14f8b16109b69df"
+    }
+  },
+  "assigned_arm_execution": {
+    "arm": "REOPEN_STATE_63",
+    "trainer": "Gemini",
+    "command": "D:/python/python.exe first_board_joint_reopen_model.py train --arm REOPEN_STATE_63 --trainer Gemini",
+    "report_path": "research/gemini_codex_joint_reopen_20261021T020835Z/REOPEN_STATE_63/report.json",
+    "report_sha256": "25d4e6d08315ab06309e9bb7b0ef48db1afcc41a9e12663300d09c854b0f53b7",
+    "validation_results": {
+      "selected_dates": 117,
+      "hits": 47,
+      "hit_rate": 0.4017094017094017,
+      "wilson95": [
+        0.3173699518631661,
+        0.49229801950643115
+      ],
+      "non_one_price_hits": 43,
+      "non_one_price_hit_rate": 0.36752136752136755,
+      "unfiltered_diagnostic_hits": 49,
+      "pass_validation": false,
+      "status": "REJECTED_VALIDATION"
+    },
+    "comparison_to_baseline": {
+      "baseline_hits": 52,
+      "challenger_hits": 47,
+      "delta_hits": -5,
+      "passed_gate_gt_52": false
+    }
+  },
+  "final_settlement": {
+    "selected_arm": null,
+    "reason": "REOPEN_STATE_63 failed both gates (47/117 primary, 43/117 non-one-price). REOPEN_TIME_FUND_67 failed non-one-price (44/117 < 48). Both arms rejected per joint protocol.",
+    "goal_60_achieved": false,
+    "monthly_fits_count": 0,
+    "production_deployed": false,
+    "peer_report_verification": "联合训练_开板状态_结果.md 100% matched, 0 factual errors found."
+  }
+}

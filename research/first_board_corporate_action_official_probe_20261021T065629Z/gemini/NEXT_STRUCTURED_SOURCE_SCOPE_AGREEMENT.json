@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-10-21T07:06:50.000000+00:00",
+  "agent": "Antigravity Gemini 3.8 Flash High",
+  "status": "AGREED_ON_STRUCTURED_SOURCE_SCOPE_WITH_STRICT_BOUNDS",
+  "experiment_root": "research/first_board_corporate_action_official_probe_20261021T065629Z",
+  "target_codes": [
+    {
+      "code": "600361",
+      "name": "创新新材",
+      "target_ex_date": "2024-06-28",
+      "board": "MAIN_BOARD_10",
+      "official_benchmark": "Announcement 2024-029: Differential distribution confirmed, P_ref = P_close - 0.07"
+    },
+    {
+      "code": "603203",
+      "name": "快克智能",
+      "target_ex_date": "2026-06-08",
+      "board": "MAIN_BOARD_10",
+      "official_benchmark": "Cninfo bounded index missed; test whether EastMoney captures it"
+    },
+    {
+      "code": "688368",
+      "name": "晶丰明源",
+      "target_ex_date": "2026-06-09",
+      "board": "STAR_BOARD_20",
+      "official_benchmark": "Announcement 2026-042: Differential distribution confirmed, Virtual cash 0.9937, virtual transfer 0.3975. Crucial test for virtual fields."
+    },
+    {
+      "code": "603214",
+      "name": "爱婴室",
+      "target_ex_date": "2024-10-08",
+      "board": "MAIN_BOARD_10",
+      "official_benchmark": "Verified dividend 0.109 RMB/share, target label flip from 0 to 1"
+    }
+  ],
+  "target_endpoint": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+  "target_report_name": "RPT_SHAREBONUS_DET",
+  "request_budget_max": 4,
+  "strict_technical_bounds": {
+    "no_akshare_paging_loop": true,
+    "direct_single_get_request": true,
+    "page_size": 100,
+    "page_number": 1,
+    "timeout_seconds": 10,
+    "preserve_raw_response_bytes": true,
+    "record_real_clocks_and_sha256": true,
+    "no_automatic_retry_on_error": true,
+    "no_cross_stock_expansion": true
+  },
+  "qualification_decision_boundary": "If the structured API fails to provide differential distribution indicators and virtual diluted parameters (as proven necessary by 688368 and 600361), it CANNOT be used to blindly overwrite or batch-repair the full 28,503 dataset.",
+  "prior_freeze_required": true,
+  "budget_carryover_forbidden": true,
+  "model_fits": 0,
+  "external_requests_before_new_protocol": 0,
+  "production_writes": 0
+}

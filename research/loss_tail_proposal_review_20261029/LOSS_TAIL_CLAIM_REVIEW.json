@@ -1,0 +1,80 @@
+{
+  "formed_at": "2026-10-29T19:52:43.027499+00:00",
+  "status": "RETROSPECTIVE_LOSS_DIAGNOSIS_NOT_A_VALIDATED_FILTER",
+  "source_hashes": {
+    "research\\first_board_leader_20261020T114600Z\\model_score_SCENARIO_TRADES.csv": "c5a38f14e6b27e5b5558323a5c972fbc2fcb6ee817078b2780e1f723473999d4",
+    "data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "research\\loss_tail_proposal_review_20261029\\audit_loss_tail_claims.py": "7d227c97959309463a8d6ea7ef9ba970e23b453a0e8f1f1348f268e15364bf17"
+  },
+  "original_scenario_status_counts": {
+    "SCENARIO_CLOSED": 214,
+    "OPEN_AT_UPPER_LIMIT_NO_QUEUE_ASSUMPTION": 66,
+    "ENTRY_LOT_OR_SLIPPAGE_LIMIT_CANCEL": 3,
+    "OPEN_AT_LOWER_LIMIT_CANCEL": 1,
+    "OPEN_UNRESOLVED": 1
+  },
+  "all_closed": {
+    "rows": 214,
+    "net_pnl_cny": -529977.62136,
+    "mean_net_return": -0.01649458822713508,
+    "entry_bar_known": 214,
+    "b1_bar_known": 212,
+    "mean_entry_gap": 0.020036006327379962,
+    "positive_entry_gap": 140,
+    "nonpositive_entry_gap": 74,
+    "mean_entry_close_vs_open": -0.0014899038001965344,
+    "entry_close_ge_open": 101,
+    "entry_day_touched_cap_proxy": 68,
+    "entry_day_closed_at_cap_proxy": 52,
+    "b1_open_already_below_entry_by_more_than_3pct": 83,
+    "blocked_exit_trade_count": 10
+  },
+  "ex_post_loss_gt10pct": {
+    "rows": 33,
+    "net_pnl_cny": -624929.33955,
+    "mean_net_return": -0.14233063520318975,
+    "entry_bar_known": 33,
+    "b1_bar_known": 33,
+    "mean_entry_gap": 0.04013500822962279,
+    "positive_entry_gap": 28,
+    "nonpositive_entry_gap": 5,
+    "mean_entry_close_vs_open": -0.04244056256641103,
+    "entry_close_ge_open": 8,
+    "entry_day_touched_cap_proxy": 11,
+    "entry_day_closed_at_cap_proxy": 6,
+    "b1_open_already_below_entry_by_more_than_3pct": 26,
+    "blocked_exit_trade_count": 4
+  },
+  "all_other_closed": {
+    "rows": 181,
+    "net_pnl_cny": 94951.71818999996,
+    "mean_net_return": 0.006447895475681517,
+    "entry_bar_known": 181,
+    "b1_bar_known": 179,
+    "mean_entry_gap": 0.016371547417026296,
+    "positive_entry_gap": 112,
+    "nonpositive_entry_gap": 69,
+    "mean_entry_close_vs_open": 0.005976238405798374,
+    "entry_close_ge_open": 93,
+    "entry_day_touched_cap_proxy": 57,
+    "entry_day_closed_at_cap_proxy": 46,
+    "b1_open_already_below_entry_by_more_than_3pct": 57,
+    "blocked_exit_trade_count": 6
+  },
+  "oracle_removed_loss_sum_NOT_A_REPLAYED_STRATEGY_cny": 94951.71818999996,
+  "scope": "Original unscreened height Top1 daily-open/B+2-close scenario; not the screened or comprehensive strategy",
+  "limitations": [
+    "33 trades were identified from future realized losses, not an ex-ante observable filter.",
+    "Removing their original PnL does not replay the changed cash, positions, fees or false rejections.",
+    "Daily OHLC cannot certify a monotonic path, 09:25 queue, intraday reseal or a 09:45 execution.",
+    "Observed opening gaps show why a stop trigger cannot guarantee a maximum loss.",
+    "High reaching the upper limit is a price proxy, not proof of order fill."
+  ],
+  "new_fits": 0,
+  "new_strategy_return": null,
+  "auction_rejection_recall": null,
+  "current_objective": "Improve first-board S-close overnight selection; relay structure supplies context rather than replacing that objective",
+  "production_changed": false
+}

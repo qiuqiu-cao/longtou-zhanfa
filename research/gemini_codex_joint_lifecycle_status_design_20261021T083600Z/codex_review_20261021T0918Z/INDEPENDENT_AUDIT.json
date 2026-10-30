@@ -1,0 +1,147 @@
+{
+  "formed_at": "2026-10-21T09:21:54.991361+00:00",
+  "status": "PRE_FREEZE_REVIEW_REQUIRES_CORRECTIONS_NO_FITS",
+  "full28503_numerical_replay": true,
+  "replay_tolerance_absolute": 1e-14,
+  "replay_exact_different_cells": 32,
+  "replay_max_absolute_difference": 2.7755575615628914e-17,
+  "exact_replay_claim": false,
+  "prefix_checks": [
+    {
+      "cutoff": "2024-12-31",
+      "rows": 10630,
+      "prefix_equal": true
+    },
+    {
+      "cutoff": "2025-06-30",
+      "rows": 15354,
+      "prefix_equal": true
+    }
+  ],
+  "no_future_inputs_seen": true,
+  "existing_qualification_does_not_cover_semantic_edge_cases": true,
+  "actual_rows_with_first_seal_ties": 64,
+  "actual_rows_with_close_seal_ties": 0,
+  "actual_anchor_price_unknown_rows": 52,
+  "actual_follower_price_unknown_rows": 47,
+  "actual_missing_first_rows": 166,
+  "actual_missing_close_rows": 291,
+  "actual_cohort_without_nonself_anchor": 250,
+  "validation_cohort_without_nonself_anchor": 63,
+  "acceleration_redundancy_with_old_feedback": {
+    "overlap_rows": 4938,
+    "correlation": 0.9782821314721872,
+    "old_feedback_minus_new_acceleration_min": -0.045914481129028406,
+    "old_feedback_minus_new_acceleration_max": 0.2039285842979523,
+    "old_feedback_minus_new_acceleration_std": 0.009367954362033137,
+    "caution": "Old feedback and new acceleration may use different token unions/cohorts. Their difference is not asserted to be the actual prior mean return. Correlation0.97828 is overlap evidence, not proof of exact duplication or performance."
+  },
+  "synthetic_reproducers": {
+    "same_seal_tie": [
+      {
+        "signal_date": "D9",
+        "code": "100001",
+        "name_anchor_broken_age_sessions": 0.0,
+        "name_anchor_decay_from_peak": 0.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 0.0,
+        "theme_is_earliest_sealer": 1.0,
+        "theme_close_seal_rank_in_group": 0.0
+      },
+      {
+        "signal_date": "D9",
+        "code": "100002",
+        "name_anchor_broken_age_sessions": 0.0,
+        "name_anchor_decay_from_peak": 0.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 1.0,
+        "theme_is_earliest_sealer": 0.0,
+        "theme_close_seal_rank_in_group": 1.0
+      }
+    ],
+    "missing_anchor": [
+      {
+        "signal_date": "D9",
+        "code": "100001",
+        "name_anchor_broken_age_sessions": 1.0,
+        "name_anchor_decay_from_peak": 4.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 0.0,
+        "theme_is_earliest_sealer": 1.0,
+        "theme_close_seal_rank_in_group": 0.0
+      },
+      {
+        "signal_date": "D9",
+        "code": "100002",
+        "name_anchor_broken_age_sessions": 1.0,
+        "name_anchor_decay_from_peak": 4.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 1.0,
+        "theme_is_earliest_sealer": 0.0,
+        "theme_close_seal_rank_in_group": 1.0
+      }
+    ],
+    "invalid_follower": [
+      {
+        "signal_date": "D9",
+        "code": "100001",
+        "name_anchor_broken_age_sessions": 0.0,
+        "name_anchor_decay_from_peak": 0.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 0.0,
+        "theme_is_earliest_sealer": 1.0,
+        "theme_close_seal_rank_in_group": 0.0
+      },
+      {
+        "signal_date": "D9",
+        "code": "100002",
+        "name_anchor_broken_age_sessions": 0.0,
+        "name_anchor_decay_from_peak": 0.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 1.0,
+        "theme_is_earliest_sealer": 0.0,
+        "theme_close_seal_rank_in_group": 1.0
+      }
+    ],
+    "missing_seal": [
+      {
+        "signal_date": "D9",
+        "code": "100001",
+        "name_anchor_broken_age_sessions": 0.0,
+        "name_anchor_decay_from_peak": 0.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 0.0,
+        "theme_is_earliest_sealer": 1.0,
+        "theme_close_seal_rank_in_group": 0.0
+      },
+      {
+        "signal_date": "D9",
+        "code": "100002",
+        "name_anchor_broken_age_sessions": 0.0,
+        "name_anchor_decay_from_peak": 0.0,
+        "name_fixed_followers_return_acceleration": -0.15000000000000002,
+        "theme_candidate_cohort_size": 2.0,
+        "theme_first_seal_rank_in_group": 1.0,
+        "theme_is_earliest_sealer": 0.0,
+        "theme_close_seal_rank_in_group": 1.0
+      }
+    ]
+  },
+  "peak_definition_mismatch": "Proposal states [S-10,S-1] peak; implementation max of only [S-3,S-1] anchor closing heights. Reset/rebound rule remains unspecified.",
+  "new_fits": 0,
+  "labels_loaded": false,
+  "http_requests": 0,
+  "original_source_hash": "393a724aeb177e5b847688f39f1729c113f12ef0c7376c4fa053b4ada62c7001",
+  "actual_unknown_anchor_rows_with_observed_decay": 52,
+  "actual_unknown_follower_rows_with_observed_acceleration": 12,
+  "actual_missing_own_first_with_observed_rank": 141,
+  "actual_missing_own_first_with_observed_earliest_flag": 166,
+  "actual_missing_own_seal_amount_with_observed_rank": 235
+}

@@ -1,0 +1,81 @@
+{
+  "early_and_tail_unknown": {
+    "code": "SYNTHETIC",
+    "name": "合成边界样本",
+    "applicable": true,
+    "tags": [
+      "【三板-换手核心真龙】"
+    ],
+    "veto": false,
+    "veto_reasons": [
+      "BASE 量化模型打分 27.7 分（<50分），但命中【大容量换手真龙特赦豁免】：成交额/换手充沛且主力主动顶板，豁免机械低分偏见，准予列为主选！"
+    ],
+    "decision": "【准予列入三进四换手真龙主选】",
+    "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+  },
+  "leader_early_but_no_late_add": {
+    "code": "SYNTHETIC",
+    "name": "合成边界样本",
+    "applicable": true,
+    "tags": [
+      "【三板-换手核心真龙】"
+    ],
+    "veto": false,
+    "veto_reasons": [
+      "BASE 量化模型打分 27.7 分（<50分），但命中【大容量换手真龙特赦豁免】：成交额/换手充沛且主力主动顶板，豁免机械低分偏见，准予列为主选！"
+    ],
+    "decision": "【准予列入三进四换手真龙主选】",
+    "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+  },
+  "nonleader_early_ADD": {
+    "code": "SYNTHETIC",
+    "name": "合成边界样本",
+    "applicable": true,
+    "tags": [
+      "【尾盘加单-真龙锁仓】",
+      "【三板-换手核心真龙】"
+    ],
+    "veto": false,
+    "veto_reasons": [
+      "BASE 量化模型打分 27.7 分（<50分），但命中【大容量换手真龙特赦豁免】：成交额/换手充沛且主力主动顶板，豁免机械低分偏见，准予列为主选！"
+    ],
+    "decision": "【准予列入三进四换手真龙主选】",
+    "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+  },
+  "known_prior_nuclear_but_historical_max6": {
+    "code": "SYNTHETIC",
+    "name": "合成边界样本",
+    "applicable": true,
+    "tags": [
+      "【尾盘加单-真龙锁仓】",
+      "【三板-换手核心真龙】"
+    ],
+    "veto": false,
+    "veto_reasons": [
+      "BASE 量化模型打分 27.7 分（<50分），但命中【大容量换手真龙特赦豁免】：成交额/换手充沛且主力主动顶板，豁免机械低分偏见，准予列为主选！"
+    ],
+    "decision": "【准予列入三进四换手真龙主选】",
+    "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+  },
+  "four_board_applicability": {
+    "code": "SYNTHETIC",
+    "name": "合成边界样本",
+    "applicable": false,
+    "message": "当前板位为 4 板，非三板组，不适用三板专项审计。"
+  },
+  "late_cancel_veto": {
+    "code": "SYNTHETIC",
+    "name": "合成边界样本",
+    "applicable": true,
+    "tags": [
+      "【三板-尾盘撤单心虚】"
+    ],
+    "veto": true,
+    "veto_reasons": [
+      "14:30后主力大单撤单缩水，准备次日竞价抢跑出逃，触发一票否决！",
+      "BASE 量化模型打分仅 27.7 分（<50分，明确判定偏不晋级），严禁人为主观调高，一票否决。"
+    ],
+    "decision": "【一票否决-严禁接力】",
+    "execution_warning": "已触发一票否决，不设次日买入预案。"
+  }
+}

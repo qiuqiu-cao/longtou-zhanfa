@@ -1,0 +1,61 @@
+{
+  "experiment": "dragon_round7_capacity_dragon_20261028T094500Z",
+  "version": "v1_capacity_dragon_upgrade",
+  "heads_trained": [
+    "3to4",
+    "space",
+    "5b",
+    "gain46",
+    "reb18"
+  ],
+  "total_models": 20,
+  "total_oof_rows": 1480,
+  "total_test_days": 449,
+  "feature_count": 80,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "test_range": "2024-09-01 to 2024-12-31",
+      "auc_3to4": 0.6757478632478632,
+      "auc_space": 0.526801476488525,
+      "auc_5b": 0.5939356634373494,
+      "auc_gain46": 0.528628201354136,
+      "auc_reb18": 0.5170278637770898,
+      "test_samples": 433
+    },
+    {
+      "fold": 2,
+      "test_range": "2025-01-01 to 2025-05-31",
+      "auc_3to4": 0.6352922690131992,
+      "auc_space": 0.6688927186557518,
+      "auc_5b": 0.5933297829849554,
+      "auc_gain46": 0.5360582306830907,
+      "auc_reb18": 0.5640666666666666,
+      "test_samples": 277
+    },
+    {
+      "fold": 3,
+      "test_range": "2025-06-01 to 2025-11-30",
+      "auc_3to4": 0.6519963702359346,
+      "auc_space": 0.623050301047741,
+      "auc_5b": 0.6769820218096081,
+      "auc_gain46": 0.47587791270101737,
+      "auc_reb18": 0.5456162758872366,
+      "test_samples": 326
+    },
+    {
+      "fold": 4,
+      "test_range": "2025-12-01 to 2026-08-31",
+      "auc_3to4": 0.67125,
+      "auc_space": 0.7231316137566137,
+      "auc_5b": 0.6683649503161698,
+      "auc_gain46": 0.592232560292552,
+      "auc_reb18": 0.6080028666985189,
+      "test_samples": 444
+    }
+  ],
+  "artifacts_sha256": {
+    "round7_all_fold_models.joblib": "d2847ebf6fa974e0e0a3cdf6107cef5c8300ec993324777e03f779fd1968f6e8",
+    "oof_round7_predictions.csv": "0ef9ccba90aea10e2314d277ba5fd686a22769e9a1e084ec467d1841eb667bb5"
+  }
+}

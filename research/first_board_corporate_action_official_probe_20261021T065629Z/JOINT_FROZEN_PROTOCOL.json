@@ -1,0 +1,72 @@
+{
+  "frozen_at": "2026-10-21T06:56:29.648800+00:00",
+  "deadline_utc": "2026-10-21T07:26:29.648800+00:00",
+  "budget_minutes": 30,
+  "status": "ACTUAL_JOINT_THREE_CASE_SOURCE_SCOPE_FROZEN_BEFORE_HTTP",
+  "cases": [
+    {
+      "code": "600361",
+      "name": "创新新材",
+      "source_date": "2024-06-28",
+      "matched_prefix": "XD",
+      "board": "MAIN_BOARD_10",
+      "price_limit_band": 0.1,
+      "role": "EARLIEST_XD_HISTORICAL_ANCHOR",
+      "verification_focus": "Pure cash dividend announcement parsing and single-day ex-reference formula: P_ref = P_close - D"
+    },
+    {
+      "code": "603203",
+      "name": "快克智能",
+      "source_date": "2026-06-08",
+      "matched_prefix": "DR",
+      "board": "MAIN_BOARD_10",
+      "price_limit_band": 0.1,
+      "role": "MAIN_BOARD_DR_COMPOUND_ACTION",
+      "verification_focus": "Main-board compound cash dividend and bonus/reserve share capital expansion: P_ref = (P_close - D) / (1 + S_bonus) and point-in-time backward feature adjustment"
+    },
+    {
+      "code": "688368",
+      "name": "晶丰明源",
+      "source_date": "2026-06-09",
+      "matched_prefix": "DR",
+      "board": "STAR_BOARD_20",
+      "price_limit_band": 0.2,
+      "role": "STAR_BOARD_FORMULA_BOUNDARY_CONTROL",
+      "verification_focus": "STAR board 20% price limit band boundary control. Strictly isolated from 10% main board training pool."
+    }
+  ],
+  "actual_peer": "Antigravity Gemini 3.8 Flash High",
+  "collector_owner": "Codex",
+  "independent_source_reviewer": "Gemini",
+  "agreement": "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_corporate_action_qualification_20261021T064545Z\\gemini\\NEXT_BOUNDED_OFFICIAL_SCOPE_AGREEMENT.json",
+  "agreement_sha256": "bf0593fd5fde65eafc17a72a53b121489907779123e0c9afde6b94badfa3bae4",
+  "collector_source": "D:\\Documents\\ChatGPT\\龙头战法\\first_board_corporate_action_official_probe.py",
+  "collector_source_sha256": "02f677e192cb42f6bf087ec069f1a70b706cbddeb1ab09ffd4d2ddfa932680b9",
+  "max_direct_http_requests": 6,
+  "max_index_queries_per_code": 1,
+  "max_pdf_downloads_per_code": 1,
+  "timeout_seconds": 10,
+  "request_policy": "One bounded120-calendar-day company index page100,then latest matching implementation PDF published no later than source date;no paging/retries/alternate companies",
+  "on_403_or_429": "Stop all remaining requests,record unknown;no bypass",
+  "pdf_selection_is_not_field_verification": true,
+  "requested_field_scope": [
+    "actual_company_code",
+    "publication_date",
+    "cash_per_share_gross",
+    "record_date",
+    "ex_date",
+    "bonus_and_reserve_share_ratio",
+    "differential_distribution",
+    "rights_subscription_if_any",
+    "reference_formula"
+  ],
+  "price_reference_and_asof_cumulative_factor_separate": true,
+  "star_case_not_in_main_board_training_pool": true,
+  "model_fits_allowed": 0,
+  "target_label_changes_allowed": 0,
+  "production_writes_allowed": 0,
+  "original_facts": "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv",
+  "original_facts_sha256": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+  "goal_60_achieved": false,
+  "limitation": "3 source/formula probes do not certify full action history,all labels or prediction improvement"
+}

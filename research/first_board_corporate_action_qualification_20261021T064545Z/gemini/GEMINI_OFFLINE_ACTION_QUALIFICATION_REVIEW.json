@@ -1,0 +1,110 @@
+{
+  "reviewed_at": "2026-10-21T06:50:00+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/first_board_corporate_action_qualification_20261021T064545Z",
+  "qualification_status": "OFFLINE_SCAN_AUDIT_PASSED",
+  "scanned_source_metrics": {
+    "total_dates": 668,
+    "total_source_records": 35292,
+    "candidate_records": 32,
+    "candidate_dates": 28,
+    "candidate_codes": 32,
+    "prefix_breakdown": {
+      "XD": 30,
+      "DR": 2,
+      "XR": 0
+    },
+    "empty_names": 0,
+    "duplicate_records": 0,
+    "utf8_byte_spans_and_pointers_verified": true,
+    "target_labels_read": false,
+    "external_http_requests": 0,
+    "model_fits": 0
+  },
+  "technical_amendment_audit": {
+    "initial_scan_interrupted": true,
+    "interruption_reason": "KeyError on missing received_at across 3 legacy probe receipts at index 209 (9381 rows)",
+    "preimage_preserved": "SCAN_FAILURE_RECEIPT.json and scan_source_before_missing_clock_fix.py",
+    "amendment_rule": "Marked received_at as null and clock_known as false on 3 dates without fabricating timestamps from filesystem",
+    "missing_clock_dates": ["2024-10-15", "2025-01-02", "2026-08-28"],
+    "missing_clock_rows": 142,
+    "impact_on_32_candidates": 0,
+    "audit_verdict": "CONFIRMED_AND_APPROVED"
+  },
+  "scientific_boundaries": {
+    "candidates_are_not_confirmed_mislabels": true,
+    "unmarked_records_not_certified_no_action": true,
+    "unmatched_rows_are_unknown_not_negative": true,
+    "original_dataset_labels_overwritten": 0
+  },
+  "proposed_bounded_sampling_scope": {
+    "sample_size": 8,
+    "selection_principle": "Rule-based, stratified, outcome-blind (100% of DR cases + chronologically stratified XD cases)",
+    "proposed_cases": [
+      {
+        "code": "603203",
+        "name": "DR快克智",
+        "date": "2026-06-08",
+        "prefix": "DR",
+        "horizon": "Evaluation 2026",
+        "reason": "1 of only 2 DR cases in universe; tests main board cash + bonus/transfer compound math"
+      },
+      {
+        "code": "688368",
+        "name": "DR晶丰明",
+        "date": "2026-06-09",
+        "prefix": "DR",
+        "horizon": "Evaluation 2026",
+        "reason": "1 of only 2 DR cases in universe; tests STAR board 20% limit cash + bonus/transfer compound math"
+      },
+      {
+        "code": "600361",
+        "name": "XD创新新",
+        "date": "2024-06-28",
+        "prefix": "XD",
+        "horizon": "Development 2024",
+        "reason": "Earliest chronological XD candidate in dataset"
+      },
+      {
+        "code": "600125",
+        "name": "XD铁龙物",
+        "date": "2024-07-19",
+        "prefix": "XD",
+        "horizon": "Development 2024",
+        "reason": "Development period main board standard cash dividend case"
+      },
+      {
+        "code": "603893",
+        "name": "XD瑞芯微",
+        "date": "2025-01-21",
+        "prefix": "XD",
+        "horizon": "Validation 2025H1",
+        "reason": "Validation period semiconductor high-price stock cash dividend case"
+      },
+      {
+        "code": "600530",
+        "name": "XD交大昂",
+        "date": "2025-06-09",
+        "prefix": "XD",
+        "horizon": "Validation 2025H1",
+        "reason": "Validation period small-cap cash dividend case"
+      },
+      {
+        "code": "603488",
+        "name": "XD展鹏科",
+        "date": "2025-07-07",
+        "prefix": "XD",
+        "horizon": "Evaluation 2025H2",
+        "reason": "Evaluation period start cash dividend case"
+      },
+      {
+        "code": "605299",
+        "name": "XD舒华体",
+        "date": "2026-04-29",
+        "prefix": "XD",
+        "horizon": "Evaluation 2026",
+        "reason": "Evaluation 2026 consumer sector standard cash dividend case"
+      }
+    ]
+  }
+}

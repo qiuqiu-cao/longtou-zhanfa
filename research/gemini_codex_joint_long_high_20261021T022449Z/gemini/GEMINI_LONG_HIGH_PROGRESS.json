@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-21T02:31:33.219847+00:00",
+  "updated_at": "2026-10-21T02:46:15+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/gemini_codex_joint_long_high_20261021T022449Z",
+  "batch_deadline_utc": "2026-10-21T02:54:49+00:00",
+  "current_step": "BATCH_FULLY_SETTLED",
+  "status": "BATCH_SETTLED_GOAL_60_NOT_ACHIEVED",
+  "selection_decision": "BOTH_CHALLENGER_ARMS_REJECTED",
+  "production_deployment_allowed": false,
+  "summary_metrics": {
+    "validation_2025H1": {
+      "BASE_62": "52 / 117 (44.44%)",
+      "LONG_HIGH120_63": "53 / 117 (45.30%) [PASSED GATE]",
+      "LONG_HIGH120_AGE_64": "43 / 117 (36.75%) [REJECTED]"
+    },
+    "evaluation_14_months": {
+      "primary_screened": {
+        "LONG_HIGH120_63": "98 / 284 (34.51%)",
+        "BASE_62": "106 / 284 (37.32%)",
+        "net_gain": "-8 hits (-2.81 pp)"
+      },
+      "subperiods": {
+        "2025H2": "45 / 126 (35.71%) vs BASE 46 / 126 (36.51%)",
+        "2026": "53 / 158 (33.54%) vs BASE 60 / 158 (37.97%)"
+      },
+      "non_one_price_screened": {
+        "LONG_HIGH120_63": "75 / 284 (26.41%)",
+        "BASE_62": "80 / 284 (28.17%)",
+        "net_gain": "-5 hits"
+      },
+      "unfiltered_diagnostic": "121 / 285 (42.46%) vs BASE 116 / 285 (40.70%)"
+    },
+    "same_stock_second_recheck": {
+      "first_promoted_s1": 98,
+      "continued_to_third_board": 43,
+      "qualified_s2_screened": "10 / 18 (55.56%) [Small conditional subset, not 60% first-board]"
+    }
+  },
+  "settlement_artifacts": {
+    "settlement_markdown": "research/gemini_codex_joint_long_high_20261021T022449Z/gemini/GEMINI_LONG_HIGH_FINAL_SETTLEMENT.md",
+    "settlement_json": "research/gemini_codex_joint_long_high_20261021T022449Z/gemini/GEMINI_LONG_HIGH_FINAL_SETTLEMENT.json"
+  },
+  "agreed_next_direction": {
+    "task": "Target label vs KPL daily board count audit without model fitting",
+    "status": "AGREED_AWAITING_NEW_BATCH"
+  },
+  "compliance_checks": {
+    "gemini_model_version": "Gemini 3.8 Flash High",
+    "zero_unauthorized_fits": true,
+    "baseline_refits": 0,
+    "production_base_protected": true,
+    "metrics_honesty_preserved": true
+  }
+}

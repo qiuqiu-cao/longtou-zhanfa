@@ -1,0 +1,198 @@
+{
+  "settled_at": "2026-10-21T02:46:00+00:00",
+  "agent": "Gemini 3.8 Flash High",
+  "batch_directory": "research/gemini_codex_joint_long_high_20261021T022449Z",
+  "batch_deadline_utc": "2026-10-21T02:54:49+00:00",
+  "status": "BATCH_SETTLED_GOAL_60_NOT_ACHIEVED",
+  "selection_decision": "BOTH_CHALLENGER_ARMS_REJECTED_FOR_PRODUCTION",
+  "production_deployment_allowed": false,
+  "validation_metrics_117_dates": {
+    "total_dates": 117,
+    "total_rows": 4724,
+    "unknown_outcomes": 0,
+    "BASE_62": {
+      "primary": {
+        "hits": 52,
+        "total": 117,
+        "hit_rate": 0.4444444444444444
+      },
+      "non_one_price": {
+        "hits": 48,
+        "total": 117,
+        "hit_rate": 0.41025641025641024
+      }
+    },
+    "LONG_HIGH120_63": {
+      "trainer": "Gemini",
+      "fields_count": 63,
+      "primary": {
+        "hits": 53,
+        "total": 117,
+        "hit_rate": 0.452991452991453,
+        "gain_vs_base": 1
+      },
+      "non_one_price": {
+        "hits": 51,
+        "total": 117,
+        "hit_rate": 0.4358974358974359,
+        "gain_vs_base": 3
+      },
+      "decision_date_coverage": 1.0,
+      "pass_validation": true
+    },
+    "LONG_HIGH120_AGE_64": {
+      "trainer": "Codex",
+      "fields_count": 64,
+      "primary": {
+        "hits": 43,
+        "total": 117,
+        "hit_rate": 0.36752136752136755,
+        "gain_vs_base": -9
+      },
+      "non_one_price": {
+        "hits": 39,
+        "total": 117,
+        "hit_rate": 0.3333333333333333,
+        "gain_vs_base": -9
+      },
+      "decision_date_coverage": 1.0,
+      "pass_validation": false
+    },
+    "paired_matrix_validation_63_vs_base": {
+      "primary": {
+        "both_hit": 42,
+        "challenger_exclusive_hit": 11,
+        "baseline_exclusive_hit": 10,
+        "both_failed": 54,
+        "same_code_dates": 73,
+        "different_code_dates": 44
+      },
+      "non_one_price": {
+        "both_hit": 40,
+        "challenger_exclusive_hit": 11,
+        "baseline_exclusive_hit": 8,
+        "both_failed": 58,
+        "same_code_dates": 76,
+        "different_code_dates": 41
+      }
+    }
+  },
+  "evaluation_metrics_14_months_286_dates": {
+    "total_dates": 286,
+    "known_outcomes": 284,
+    "unknown_outcomes": 2,
+    "outcome_coverage": 0.993006993006993,
+    "primary_screened": {
+      "overall": {
+        "new_arm_hits": 98,
+        "new_arm_rate": 0.34507042253521125,
+        "base_hits": 106,
+        "base_rate": 0.3732394366197183,
+        "net_gain_hits": -8,
+        "rate_diff_pp": -2.816901408450705
+      },
+      "subperiod_2025H2": {
+        "dates": 126,
+        "known": 126,
+        "new_arm_hits": 45,
+        "new_arm_rate": 0.35714285714285715,
+        "base_hits": 46,
+        "base_rate": 0.36507936507936506,
+        "net_gain_hits": -1
+      },
+      "subperiod_2026": {
+        "dates": 160,
+        "known": 158,
+        "unknown": 2,
+        "new_arm_hits": 53,
+        "new_arm_rate": 0.33544303797468356,
+        "base_hits": 60,
+        "base_rate": 0.379746835443038,
+        "net_gain_hits": -7
+      }
+    },
+    "non_one_price_screened": {
+      "overall": {
+        "new_arm_hits": 75,
+        "new_arm_rate": 0.2640845070422535,
+        "base_hits": 80,
+        "base_rate": 0.28169014084507044,
+        "net_gain_hits": -5
+      },
+      "subperiod_2025H2": {
+        "new_arm_hits": 37,
+        "new_arm_rate": 0.29365079365079366,
+        "base_hits": 38,
+        "base_rate": 0.30158730158730157
+      },
+      "subperiod_2026": {
+        "new_arm_hits": 38,
+        "new_arm_rate": 0.24050632911392406,
+        "base_hits": 42,
+        "base_rate": 0.26582278481012656
+      }
+    },
+    "unfiltered_diagnostic_layer": {
+      "overall": {
+        "new_arm_hits": 121,
+        "new_arm_rate": 0.4245614035087719,
+        "base_hits": 116,
+        "base_rate": 0.4070175438596491,
+        "known": 285,
+        "diagnostic_only_disclaimer": "Violates research selection constraints; cannot be cherry-picked to claim upgrade."
+      }
+    },
+    "paired_matrix_evaluation_primary": {
+      "both_hit": 84,
+      "challenger_exclusive_hit": 14,
+      "baseline_exclusive_hit": 22,
+      "both_failed": 163,
+      "same_code_dates": 192,
+      "different_code_dates": 94,
+      "net_gain_hits": -8,
+      "by_year": {
+        "2025": {
+          "both_hit": 38,
+          "chal_only": 7,
+          "base_only": 8,
+          "both_0": 73
+        },
+        "2026": {
+          "both_hit": 46,
+          "chal_only": 7,
+          "base_only": 14,
+          "both_0": 90
+        }
+      }
+    }
+  },
+  "same_stock_second_recheck_s2": {
+    "first_selections": 286,
+    "first_promoted_known": 98,
+    "second_rechecks_available": 98,
+    "continued_to_third_board": 43,
+    "unconditional_second_to_third_rate": 0.4387755102040816,
+    "qualified_under_fixed_s2_screen": 18,
+    "qualified_third_board_wins": 10,
+    "qualified_s2_hit_rate": 0.5555555555555556,
+    "full_first_to_third_conversion_rate": 0.15140845070422534,
+    "disclaimer": "S2 10/18 (55.56%) is a small conditional post-filter subset on already successful first promoters; does not satisfy first-board 60% goal."
+  },
+  "verification_audit": {
+    "verifier_status": "PASS_SAVED_VALIDATION_REPLAY",
+    "model_fits_performed_during_verification": 0,
+    "timing_discrepancy_resolved": "Preparation receipt at 02:37:59 preceded declared 02:38:00 by 0.98s, but actual first core fit started at 02:38:00.976 (> 02:38:00). Physical causality verified without backdating.",
+    "failure_preimage_preserved": true
+  },
+  "next_direction_concurrence": {
+    "proposed_action": "Audit KPL daily board count and price consistency against historical promotion labels",
+    "gemini_decision": "AGREE",
+    "rationale": "Unadjusted pre_close == close.shift(1) directly endangers the validity of the ground truth Y label around corporate action dates. Verifying target labels before fitting any further models is mandatory.",
+    "strict_boundaries": [
+      "Zero model fits and zero parameter tuning during audit.",
+      "KPL absence != limit-broken; KPL is not exchange clearing ground truth.",
+      "Dual-track audit ledger; do not overwrite historical labels directly.",
+      "Preserve all unknown labels and original candidate pools."
+    ]
+  }
+}

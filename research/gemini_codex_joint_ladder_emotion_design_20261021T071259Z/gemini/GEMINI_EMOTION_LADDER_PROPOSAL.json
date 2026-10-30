@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-10-21T07:20:00.000000+00:00",
+  "agent": "Antigravity Gemini 3.8 Flash High",
+  "status": "GEMINI_EMOTION_LADDER_DESIGN_PROPOSAL_SETTLED",
+  "experiment_root": "research/gemini_codex_joint_ladder_emotion_design_20261021T071259Z",
+  "human_priority_pivot_acknowledged": {
+    "priority_1": "Halt dividend/announcement audit; return to core stock selection training",
+    "priority_2": "Consecutive boards and first boards critically depend on ladder structure, sealing quality, and market emotion",
+    "priority_3": "Historical consecutive boards require market emotion and capital acceptance; announcement business logic cannot veto market theme acceptance",
+    "priority_4": "Precise emotion judgment is the highest priority"
+  },
+  "deferred_dividend_audit": {
+    "deferred_path": "research/first_board_corporate_action_structured_probe_20261021T070745Z/DEFERRED_BY_LATEST_USER_PRIORITY.json",
+    "external_requests": 0,
+    "model_fits": 0
+  },
+  "features_14_ladder_emotion_critique": {
+    "bug1_gap_ratio_fix": "Fixed division by zero/negative denominator when max_height <= 2. Explicit definition: If max_height <= 2, gap_ratio = 0.0; otherwise sum(I(n_k == 0, k=2..H-1)) / (H - 2).",
+    "bug2_empty_cohort_nan_fix": "Empty tier cohorts (e.g. n_3_prev == 0) must strictly yield NaN, NEVER 0.0. Tree models handle NaN natively without falsely equating absence of stocks with 100% crash.",
+    "bug3_big_loss_ratio_definition": "Strictly defined as percentage of yesterday's relay stocks closing <= -5.0% today, with NaN for empty relay cohorts.",
+    "delta3_momentum_path": "3-day momentum difference between day S and day S-3, capturing the first derivative of emotion warming, diverging, or receding."
+  },
+  "features_5_sealing_quality_analysis": {
+    "difference_from_failed_old64_66": "Old 64 and 66 treated seal minute/amount as pro-cyclical unconditional linear factors, causing severe bull traps during receding waves. Under ladder structure and emotion trajectory, sealing quality acts as a conditional interaction factor.",
+    "qualified_fields": [
+      "qualified_first_seal_minute",
+      "seal_minute_rank",
+      "closing_seal_ratio_amount",
+      "closing_seal_ratio_mcap",
+      "provider_reopened_flag"
+    ]
+  },
+  "architectural_debate_decision": {
+    "recommendation": "RETAIN_PREDICTED_EMOTION_HEAD",
+    "core_rationales": [
+      "Directly addresses user directive: '最重要的是要精准判断情绪'. Without an explicit head, emotion is mere passive tabular noise in a greedy tree.",
+      "Solves cross-sectional sample domination (N=42 vs T=668), forcing regularized macro emotion prior into a 1D calibrated scalar.",
+      "Provides independent MAE/RMSE evaluation of emotion prediction accuracy against realized cohort promotion rates."
+    ]
+  },
+  "proposed_two_arms": {
+    "arm_A": {
+      "name": "LADDER_SEAL_DIRECT_81",
+      "features_count": 81,
+      "composition": "BASE_62 + 14_LADDER_EMOTION + 5_SEAL_QUALITY",
+      "architecture": "Single-stage flat GBDT predicting next-day limit Top-1 directly"
+    },
+    "arm_B": {
+      "name": "LADDER_EMOTION_HIERARCHICAL_82",
+      "features_count": 82,
+      "composition": "BASE_62 + 14_LADDER_EMOTION + 5_SEAL_QUALITY + OOF_PREDICTED_EMOTION_HEAD",
+      "architecture": "Two-stage hierarchical: Stage 1 Rolling 252-day Ridge(alpha=1.0) OOF predicting next-day first-board pool promotion rate E_hat; Stage 2 GBDT conditioned on E_hat",
+      "independent_metric": "Emotion Head MAE and RMSE against realized first-board promotion rate"
+    }
+  },
+  "invariants_maintained": {
+    "model_fits": 0,
+    "external_requests": 0,
+    "full_date_top1_60_target": true,
+    "validation_117_days": true,
+    "evaluation_14_months": true,
+    "unknown_denominators_kept": true,
+    "same_stock_2to3_separate": true,
+    "original_market_cap_filter_preserved": true
+  }
+}

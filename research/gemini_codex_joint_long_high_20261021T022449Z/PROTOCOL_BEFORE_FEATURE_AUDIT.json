@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-21T02:29:53.179230+00:00",
+  "previous_goal_turn": "PROGRESS:twojointreopenarmsactuallytrainedandindependentlysettled,bothrejected,original60targetactive",
+  "budget_started": "2026-10-21T02:24:49+00:00",
+  "deadline": "2026-10-21T02:54:49+00:00",
+  "fits": 0,
+  "outcomes_read": false,
+  "hypothesis": "Longer previously unused120-session prior-high position andlatest-high age addinformation beyond original20/60-day context",
+  "sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54"
+  },
+  "source_start_observation": "Rawdatesstart2023-11-28;265devsignaldatepool;250hasnoexpectedinnerprefixsupportbefore2024-11-01. Auditcoveragewithouttraining250.",
+  "features": [
+    "reference_chain_log_distance_high120",
+    "reference_chain_latest_high_age120"
+  ],
+  "quarantined": "250-session distance diagnostic only;not anarm. No rawunadjusteddistance,reopen/sealfeatures,labels,futureprices,currentthemes or actoridentity in eithernewhead.",
+  "formula": "a(t)=log(reportedpreclose(t))-log(close(t-1))onlyadjacentvalidbars;L=cumsum(a);zHigh=log(high)-L;distance=log(closeS)-L(S)-max(zHigh[S-120:S]);latestargmaxageusing1..120officialpositions,currentS-high excluded",
+  "source_admission": "EntireS-120..S validtradedcentOHLC,positiveamount/volume,10%regularbounds andexacth consecutiveofficialpositions;missinginvalidsuspendedwindowNaN. Missingneverzero. ExactsourceS-centclosematch withoriginalfull28503pool.",
+  "before_outcome_qualification_gate": "120fieldnonmissing>=1000rows and>=60distinctsignaldates inoriginalbaselineinnerprefix;>=300rows and>=30dates incalibration42;validation>=70%fieldcoverage and>=95%dateshaveatleastoneknownfield;nonconstantinnerfield;bothprefixchecksidentical. Theseareinputqualification,notperformanceacceptance.",
+  "source_interpretation": "Archivedreportedreferencechainproxy,notindependentlycertifiedofficialadjustmentfactor,corporateactiontruth,shareholdercostbasisorfundcause. Rawpricejumpalonenotmarketreturn. Oldsurvivorshipandlateacquisitionremain.",
+  "proposed_arms": "Gemini original62+distance120(63);Codex original62+distance120+latesthighage120(64). Actualpeerreviewandcommonfreezearemandatorybeforefits."
+}

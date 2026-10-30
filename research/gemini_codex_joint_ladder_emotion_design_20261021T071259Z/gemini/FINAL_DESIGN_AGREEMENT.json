@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-21T07:30:00.000000+00:00",
+  "agent": "Antigravity Gemini 3.8 Flash High",
+  "status": "AGREED_ON_FINAL_DESIGN_BEFORE_FREEZE",
+  "experiment_root": "research/gemini_codex_joint_ladder_emotion_design_20261021T071259Z",
+  "point_by_point_adjudication": {
+    "point1_ladder_gap_ratio": {
+      "verdict": "ACCEPTED_CODEX_IMPLEMENTATION",
+      "formula": "denominator = top - 1, enumerating 2..top. Never divides by zero since top >= 2.",
+      "rationale": "Mathematically sound whole-span coverage metric; preserves already qualified 28,503 dataset."
+    },
+    "point2_empty_cohort_nan": {
+      "verdict": "CONFIRMED_AND_ACCEPTED",
+      "formula": "where(known.eq(total) & total.gt(0)) correctly yields NaN for empty or incomplete cohorts.",
+      "rationale": "Existing code already adheres to strict NaN preservation."
+    },
+    "point3_big_loss_threshold": {
+      "verdict": "ACCEPTED_CODEX_IMPLEMENTATION",
+      "threshold": -0.07,
+      "field_name": "emotion_prev_relay_loss7_share",
+      "rationale": "Maintains consistency with cycle_anchor_collapses and existing qualified dataset."
+    },
+    "point4_delta3_momentum": {
+      "verdict": "ACCEPTED_CODEX_IMPLEMENTATION",
+      "formula": "series - series.shift().rolling(3, min_periods=3).mean()",
+      "rationale": "Rolling prior mean deviation effectively filters single-day noise spikes."
+    },
+    "point5_hgb_nonlinear_interpretation": {
+      "verdict": "ACCEPTED_CODEX_CORRECTION",
+      "rationale": "Methodological correction accepted. HGB is non-linear; sealing quality rescue by ladder context is an empirical hypothesis, not a proven fact."
+    },
+    "point6_deduplication_and_model_stack": {
+      "verdict": "CONFIRMED_AND_ACCEPTED",
+      "deduplication": "emotion_prev4plus_survival redundant with cycle_high_survival, retained as diagnostic only.",
+      "features_count": {
+        "base": 62,
+        "new_ladder_emotion": 13,
+        "qualified_sealing": 5
+      },
+      "model_type": "sklearn.ensemble.HistGradientBoostingClassifier",
+      "lightgbm_switch_refused": true,
+      "arm_A_total_features": 80,
+      "arm_B_total_features": 81
+    }
+  },
+  "two_arms_frozen_specification": {
+    "arm_A": {
+      "name": "LADDER_SEAL_DIRECT_80",
+      "owner": "Gemini",
+      "features_count": 80,
+      "components": "BASE_62 + 13_LADDER_EMOTION + 5_SEAL_QUALITY",
+      "architecture": "Single-stage HGB"
+    },
+    "arm_B": {
+      "name": "LADDER_EMOTION_HIERARCHICAL_81",
+      "owner": "Codex",
+      "features_count": 81,
+      "components": "BASE_62 + 13_LADDER_EMOTION + 5_SEAL_QUALITY + 1_OOF_EMOTION_ESTIMATE",
+      "architecture": "Two-stage: Stage 1 Rolling 252-day Ridge(alpha=1.0) OOF macro promotion rate; Stage 2 HGB"
+    }
+  },
+  "arm_B_macro_head_spec": {
+    "inputs_count": 13,
+    "target": "Next-day first-board cohort promotion rate, generated only when known outcome coverage >= 95%, else NaN",
+    "rolling_window_sessions": 252,
+    "min_qualified_days": 63,
+    "pipeline": "SimpleImputer(strategy='median', keep_empty_features=True) -> StandardScaler() -> Ridge(alpha=1.0) -> clip(0.0, 1.0)",
+    "validation_2025H1": "Single fixed macro head trained on pre-2025 mature data only",
+    "calibration_42_days": "Strictly nested with macro prefix fixed before calibration start date"
+  },
+  "acceptance_gates": {
+    "primary_validation": "Top-1 > 52/117, Non-one-price >= 48/117, Date coverage >= 95%",
+    "arm_B_emotion_gate": "Emotion MAE and RMSE must strictly outperform the naive baseline (predicting with previous session's known promotion rate)",
+    "tie_breaker": "Higher Top-1 wins; if tied, simpler Arm A wins",
+    "evaluation_goal": "14-month rolling eval Top-1 >= 60%, original market cap filter, full-date unknown denominator, same-stock second-board recheck separate"
+  },
+  "invariants": {
+    "model_fits": 0,
+    "external_requests": 0,
+    "production_writes": 0
+  },
+  "next_action": "Awaiting Codex to provide shared implementation script, nested clock audit, and fit manifest before formal protocol freezing."
+}

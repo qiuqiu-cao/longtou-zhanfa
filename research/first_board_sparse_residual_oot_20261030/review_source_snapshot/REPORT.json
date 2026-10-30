@@ -1,0 +1,267 @@
+{
+  "theta_a": {
+    "z1_seal_ratio": 0.0097,
+    "z2_seal_time": 0.0393,
+    "z3_breakout": 0.0201,
+    "z4_height": 0.0809
+  },
+  "theta_b": {
+    "z1_seal_ratio": 0.0206,
+    "z2_seal_time": -0.0002,
+    "z3_breakout": 0.0569,
+    "z4_height": 0.0723
+  },
+  "l1_bound": 0.15,
+  "robust_penalty_lambda": 5.0,
+  "results": {
+    "S1_BASELINE": {
+      "in_sample_train": {
+        "dates": 203,
+        "total_slots": 609,
+        "known": 608,
+        "unknown": 1,
+        "hits": 190,
+        "precision": 0.3125,
+        "reach4_hits": 43,
+        "reach4_known": 603,
+        "non_one_hits": 141,
+        "non_one_known": 523,
+        "non_one_precision": 0.2695984703632887,
+        "by_slot": {
+          "1": {
+            "hits": 77,
+            "known": 203
+          },
+          "2": {
+            "hits": 56,
+            "known": 202
+          },
+          "3": {
+            "hits": 57,
+            "known": 203
+          }
+        }
+      },
+      "out_of_time_test": {
+        "dates": 83,
+        "total_slots": 249,
+        "known": 244,
+        "unknown": 5,
+        "hits": 71,
+        "precision": 0.29098360655737704,
+        "reach4_hits": 9,
+        "reach4_known": 231,
+        "non_one_hits": 51,
+        "non_one_known": 201,
+        "non_one_precision": 0.2537313432835821,
+        "by_slot": {
+          "1": {
+            "hits": 29,
+            "known": 81
+          },
+          "2": {
+            "hits": 24,
+            "known": 81
+          },
+          "3": {
+            "hits": 18,
+            "known": 82
+          }
+        }
+      },
+      "full_sample_286d": {
+        "dates": 286,
+        "total_slots": 858,
+        "known": 852,
+        "unknown": 6,
+        "hits": 261,
+        "precision": 0.30633802816901406,
+        "reach4_hits": 52,
+        "reach4_known": 834,
+        "non_one_hits": 192,
+        "non_one_known": 724,
+        "non_one_precision": 0.26519337016574585,
+        "by_slot": {
+          "1": {
+            "hits": 106,
+            "known": 284
+          },
+          "2": {
+            "hits": 80,
+            "known": 283
+          },
+          "3": {
+            "hits": 75,
+            "known": 285
+          }
+        }
+      }
+    },
+    "ARM_A_DIRECT_TOP3": {
+      "in_sample_train": {
+        "dates": 203,
+        "total_slots": 609,
+        "known": 608,
+        "unknown": 1,
+        "hits": 203,
+        "precision": 0.3338815789473684,
+        "reach4_hits": 49,
+        "reach4_known": 603,
+        "non_one_hits": 153,
+        "non_one_known": 516,
+        "non_one_precision": 0.29651162790697677,
+        "by_slot": {
+          "1": {
+            "hits": 78,
+            "known": 203
+          },
+          "2": {
+            "hits": 60,
+            "known": 202
+          },
+          "3": {
+            "hits": 65,
+            "known": 203
+          }
+        }
+      },
+      "out_of_time_test": {
+        "dates": 83,
+        "total_slots": 249,
+        "known": 243,
+        "unknown": 6,
+        "hits": 70,
+        "precision": 0.2880658436213992,
+        "reach4_hits": 9,
+        "reach4_known": 231,
+        "non_one_hits": 50,
+        "non_one_known": 196,
+        "non_one_precision": 0.25510204081632654,
+        "by_slot": {
+          "1": {
+            "hits": 29,
+            "known": 81
+          },
+          "2": {
+            "hits": 22,
+            "known": 81
+          },
+          "3": {
+            "hits": 19,
+            "known": 81
+          }
+        }
+      },
+      "full_sample_286d": {
+        "dates": 286,
+        "total_slots": 858,
+        "known": 851,
+        "unknown": 7,
+        "hits": 273,
+        "precision": 0.3207990599294947,
+        "reach4_hits": 58,
+        "reach4_known": 834,
+        "non_one_hits": 203,
+        "non_one_known": 712,
+        "non_one_precision": 0.2851123595505618,
+        "by_slot": {
+          "1": {
+            "hits": 107,
+            "known": 284
+          },
+          "2": {
+            "hits": 82,
+            "known": 283
+          },
+          "3": {
+            "hits": 84,
+            "known": 284
+          }
+        }
+      }
+    },
+    "ARM_B_GROUP_ROBUST": {
+      "in_sample_train": {
+        "dates": 203,
+        "total_slots": 609,
+        "known": 608,
+        "unknown": 1,
+        "hits": 203,
+        "precision": 0.3338815789473684,
+        "reach4_hits": 50,
+        "reach4_known": 603,
+        "non_one_hits": 156,
+        "non_one_known": 520,
+        "non_one_precision": 0.3,
+        "by_slot": {
+          "1": {
+            "hits": 79,
+            "known": 203
+          },
+          "2": {
+            "hits": 59,
+            "known": 202
+          },
+          "3": {
+            "hits": 65,
+            "known": 203
+          }
+        }
+      },
+      "out_of_time_test": {
+        "dates": 83,
+        "total_slots": 249,
+        "known": 244,
+        "unknown": 5,
+        "hits": 67,
+        "precision": 0.27459016393442626,
+        "reach4_hits": 9,
+        "reach4_known": 232,
+        "non_one_hits": 47,
+        "non_one_known": 200,
+        "non_one_precision": 0.235,
+        "by_slot": {
+          "1": {
+            "hits": 28,
+            "known": 81
+          },
+          "2": {
+            "hits": 25,
+            "known": 81
+          },
+          "3": {
+            "hits": 14,
+            "known": 82
+          }
+        }
+      },
+      "full_sample_286d": {
+        "dates": 286,
+        "total_slots": 858,
+        "known": 852,
+        "unknown": 6,
+        "hits": 270,
+        "precision": 0.31690140845070425,
+        "reach4_hits": 59,
+        "reach4_known": 835,
+        "non_one_hits": 203,
+        "non_one_known": 720,
+        "non_one_precision": 0.28194444444444444,
+        "by_slot": {
+          "1": {
+            "hits": 107,
+            "known": 284
+          },
+          "2": {
+            "hits": 84,
+            "known": 283
+          },
+          "3": {
+            "hits": 79,
+            "known": 285
+          }
+        }
+      }
+    }
+  }
+}
