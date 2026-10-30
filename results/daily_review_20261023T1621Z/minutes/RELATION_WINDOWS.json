@@ -1,0 +1,4727 @@
+{
+  "formed_at": "2026-10-23T16:33:16.396151+00:00",
+  "signal_date": "2026-10-23",
+  "clock_timezone": "Asia/Shanghai",
+  "minute_timestamp_semantics": "Provider minute timestamp; not exchange-certified trade-by-trade time",
+  "price_basis": "Raw Tencent prices, day return relative to each own previous close; no interpolation across lunch or missing minutes",
+  "events": [
+    {
+      "event": {
+        "time": "1020",
+        "name": "沪指与创业板当日最低分钟价",
+        "event_type": "EX_POST_OBSERVED_MINUTE_POINT_LOW",
+        "qualification": "Both index lowest sampled minute points; not a contemporaneous forecast of reversal"
+      },
+      "stocks": [
+        {
+          "symbol": "sh000001",
+          "name": "沪指",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 3658.03,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh000001.response",
+          "source_raw_sha256": "2390f104aed8c1623d3e36db7549f262947c203eef7eaddb3a1e9f92e4ef7a0d",
+          "source_requested_at": "2026-10-23T16:24:04.546042+00:00",
+          "source_received_at": "2026-10-23T16:24:06.421393+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 3579.94,
+              "day_return_pct": -2.1347555924910444,
+              "cumulative_volume_native": 193064197.0,
+              "cumulative_amount_cny": 293206149624.3
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 3578.74,
+              "day_return_pct": -2.167560134826685,
+              "cumulative_volume_native": 198270772.0,
+              "cumulative_amount_cny": 300620992886.0
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 3577.72,
+              "day_return_pct": -2.195443995811963,
+              "cumulative_volume_native": 202508519.0,
+              "cumulative_amount_cny": 307073824298.7
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 3574.8,
+              "day_return_pct": -2.275268382161988,
+              "cumulative_volume_native": 205101343.0,
+              "cumulative_amount_cny": 310365873303.0
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 3577.69,
+              "day_return_pct": -2.1962641093703494,
+              "cumulative_volume_native": 208211428.0,
+              "cumulative_amount_cny": 314220977079.2
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 3595.72,
+              "day_return_pct": -1.703375860777534,
+              "cumulative_volume_native": 215981053.0,
+              "cumulative_amount_cny": 324661805595.7
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 3601.79,
+              "day_return_pct": -1.537439550796471,
+              "cumulative_volume_native": 221668071.0,
+              "cumulative_amount_cny": 333348982525.3
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.08161622485828302,
+              "post_event_return_pct": 0.08084368356271465,
+              "symmetric_window_return_pct": -0.000838522858126467
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.1100946143055781,
+              "post_event_return_pct": 0.5852075640595089,
+              "symmetric_window_return_pct": 0.4744686677433885
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.1435778253266795,
+              "post_event_return_pct": 0.7550072731341562,
+              "symmetric_window_return_pct": 0.6103454247836426
+            }
+          },
+          "close_price": 3690.48,
+          "close_return_pct": 0.8870894989926326
+        },
+        {
+          "symbol": "sz399006",
+          "name": "创业板",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 2576.9,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz399006.response",
+          "source_raw_sha256": "abac64c203b306805ad3458da0b5e9215b471409e946b64081c51ba277915853",
+          "source_requested_at": "2026-10-23T16:24:04.546554+00:00",
+          "source_received_at": "2026-10-23T16:24:07.087193+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 2499.41,
+              "day_return_pct": -3.0071015561333514,
+              "cumulative_volume_native": 75591148.0,
+              "cumulative_amount_cny": 174186974147.86
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 2501.49,
+              "day_return_pct": -2.9263844153828322,
+              "cumulative_volume_native": 77509383.0,
+              "cumulative_amount_cny": 178597669984.61
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 2500.34,
+              "day_return_pct": -2.9710116807016185,
+              "cumulative_volume_native": 79293984.0,
+              "cumulative_amount_cny": 182399278537.1
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 2494.6,
+              "day_return_pct": -3.1937599441189124,
+              "cumulative_volume_native": 80184269.0,
+              "cumulative_amount_cny": 184189751148.91
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 2497.61,
+              "day_return_pct": -3.0769529279366714,
+              "cumulative_volume_native": 81142247.0,
+              "cumulative_amount_cny": 186418504453.45
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 2512.51,
+              "day_return_pct": -2.49873879467577,
+              "cumulative_volume_native": 83628242.0,
+              "cumulative_amount_cny": 192141737593.09
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 2516.08,
+              "day_return_pct": -2.360200240599175,
+              "cumulative_volume_native": 85485312.0,
+              "cumulative_amount_cny": 196710123559.11
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.22956877864611647,
+              "post_event_return_pct": 0.12066062695423874,
+              "symmetric_window_return_pct": -0.10918515081949076
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.2754358402392132,
+              "post_event_return_pct": 0.7179507736711388,
+              "symmetric_window_return_pct": 0.4405374396859729
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.19244541711843643,
+              "post_event_return_pct": 0.8610598893610266,
+              "symmetric_window_return_pct": 0.666957401946866
+            }
+          },
+          "close_price": 2684.1,
+          "close_return_pct": 4.160037254064952
+        },
+        {
+          "symbol": "sh603278",
+          "name": "大业股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.51,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603278.response",
+          "source_raw_sha256": "ff063f5f12708ae4947c127102c41c4606389a4dcfe8696329b175ecb4315cf9",
+          "source_requested_at": "2026-10-23T16:24:04.546694+00:00",
+          "source_received_at": "2026-10-23T16:24:07.708763+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 15.5,
+              "day_return_pct": 6.822880771881468,
+              "cumulative_volume_native": 826671.0,
+              "cumulative_amount_cny": 1176359705.16
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 15.45,
+              "day_return_pct": 6.478290833907652,
+              "cumulative_volume_native": 852184.0,
+              "cumulative_amount_cny": 1215687732.25
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 15.59,
+              "day_return_pct": 7.443142660234314,
+              "cumulative_volume_native": 867380.0,
+              "cumulative_amount_cny": 1239077683.31
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 15.35,
+              "day_return_pct": 5.78911095796002,
+              "cumulative_volume_native": 878446.0,
+              "cumulative_amount_cny": 1256232267.57
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 15.29,
+              "day_return_pct": 5.3756030323914405,
+              "cumulative_volume_native": 885220.0,
+              "cumulative_amount_cny": 1266619472.19
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 15.25,
+              "day_return_pct": 5.09993108201241,
+              "cumulative_volume_native": 897244.0,
+              "cumulative_amount_cny": 1284844875.64
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 15.06,
+              "day_return_pct": 3.7904893177119314,
+              "cumulative_volume_native": 903001.0,
+              "cumulative_amount_cny": 1293573028.39
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -1.5394483643361156,
+              "post_event_return_pct": -0.3908794788273662,
+              "symmetric_window_return_pct": -1.9243104554201418
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.6472491909385036,
+              "post_event_return_pct": -0.6514657980456029,
+              "symmetric_window_return_pct": -1.2944983818770184
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.9677419354838679,
+              "post_event_return_pct": -1.889250814332244,
+              "symmetric_window_return_pct": -2.8387096774193488
+            }
+          },
+          "close_price": 15.96,
+          "close_return_pct": 9.993108201240531
+        },
+        {
+          "symbol": "sz002724",
+          "name": "海洋王",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 11.21,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002724.response",
+          "source_raw_sha256": "f213e9b87cacd974767b6ac236b64a297d5ea06acb37f4ab724da712de714499",
+          "source_requested_at": "2026-10-23T16:24:04.546827+00:00",
+          "source_received_at": "2026-10-23T16:24:06.397828+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 689065.0,
+              "cumulative_amount_cny": 726793509.8
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 690101.0,
+              "cumulative_amount_cny": 727838833.81
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 691084.0,
+              "cumulative_amount_cny": 728830680.81
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 691421.0,
+              "cumulative_amount_cny": 729170713.82
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 691751.0,
+              "cumulative_amount_cny": 729503683.82
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 692602.0,
+              "cumulative_amount_cny": 730362342.82
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 693110.0,
+              "cumulative_amount_cny": 730874914.83
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 12.33,
+          "close_return_pct": 9.991079393398739
+        },
+        {
+          "symbol": "sh603089",
+          "name": "正裕工业",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 10.81,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603089.response",
+          "source_raw_sha256": "ca1f1930d9e8d33ca9f997f31995bb73a33093c667b4e70c3a59bbff0344a338",
+          "source_requested_at": "2026-10-23T16:27:49.074237+00:00",
+          "source_received_at": "2026-10-23T16:27:51.883805+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 177938.0,
+              "cumulative_amount_cny": 208199291.87
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 178340.0,
+              "cumulative_amount_cny": 208677269.85
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 178508.0,
+              "cumulative_amount_cny": 208877021.85
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 178567.0,
+              "cumulative_amount_cny": 208947172.84
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 179429.0,
+              "cumulative_amount_cny": 209972090.8
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 179652.0,
+              "cumulative_amount_cny": 210237237.79
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 180139.0,
+              "cumulative_amount_cny": 210816280.77
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 11.89,
+          "close_return_pct": 9.990749306197966
+        },
+        {
+          "symbol": "sh603677",
+          "name": "奇精机械",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.82,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603677.response",
+          "source_raw_sha256": "8ca3a312342d1359c0ebca48441f63c502032b3331ac95c4a6cfb39a17cd12e5",
+          "source_requested_at": "2026-10-23T16:27:49.075119+00:00",
+          "source_received_at": "2026-10-23T16:27:51.104705+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 86962.0,
+              "cumulative_amount_cny": 136314804.3
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 90585.0,
+              "cumulative_amount_cny": 142220294.2
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 16.04,
+              "day_return_pct": 8.232118758434549,
+              "cumulative_volume_native": 101561.0,
+              "cumulative_amount_cny": 160058833.96
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 16.13,
+              "day_return_pct": 8.83940620782726,
+              "cumulative_volume_native": 104037.0,
+              "cumulative_amount_cny": 164035775.93
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 16.04,
+              "day_return_pct": 8.232118758434549,
+              "cumulative_volume_native": 106397.0,
+              "cumulative_amount_cny": 167814059.91
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 112654.0,
+              "cumulative_amount_cny": 177942081.82
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 113309.0,
+              "cumulative_amount_cny": 179009731.81
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.5610972568578454,
+              "post_event_return_pct": -0.5579665220086794,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -1.0429447852760787,
+              "post_event_return_pct": 1.0539367637941721,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -1.0429447852760787,
+              "post_event_return_pct": 1.0539367637941721,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 16.3,
+          "close_return_pct": 9.986504723346833
+        },
+        {
+          "symbol": "sz002009",
+          "name": "天奇股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 15.73,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002009.response",
+          "source_raw_sha256": "c001c2c1b2e415aa5f41ec9d93e5480d90f4b69a5d92040d00d2bb68a86cfd48",
+          "source_requested_at": "2026-10-23T16:27:49.075330+00:00",
+          "source_received_at": "2026-10-23T16:27:51.900255+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 16.73,
+              "day_return_pct": 6.357279084551815,
+              "cumulative_volume_native": 400728.0,
+              "cumulative_amount_cny": 671625345.39
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 16.65,
+              "day_return_pct": 5.8486967577876525,
+              "cumulative_volume_native": 407138.0,
+              "cumulative_amount_cny": 682322687.36
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 16.67,
+              "day_return_pct": 5.975842339478721,
+              "cumulative_volume_native": 412155.0,
+              "cumulative_amount_cny": 690690960.33
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 16.63,
+              "day_return_pct": 5.721551176096629,
+              "cumulative_volume_native": 413592.0,
+              "cumulative_amount_cny": 693084448.32
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 16.73,
+              "day_return_pct": 6.357279084551815,
+              "cumulative_volume_native": 415967.0,
+              "cumulative_amount_cny": 697044277.3
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 16.72,
+              "day_return_pct": 6.2937062937062915,
+              "cumulative_volume_native": 420610.0,
+              "cumulative_amount_cny": 704820280.3
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 16.63,
+              "day_return_pct": 5.721551176096629,
+              "cumulative_volume_native": 423888.0,
+              "cumulative_amount_cny": 710287635.28
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.23995200959809893,
+              "post_event_return_pct": 0.6013229104028905,
+              "symmetric_window_return_pct": 0.359928014397104
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.12012012012011519,
+              "post_event_return_pct": 0.541190619362597,
+              "symmetric_window_return_pct": 0.42042042042043093
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.597728631201444,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": -0.597728631201444
+            }
+          },
+          "close_price": 17.3,
+          "close_return_pct": 9.980928162746338
+        },
+        {
+          "symbol": "sh600215",
+          "name": "派斯林",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 5.76,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh600215.response",
+          "source_raw_sha256": "ba3129265d8b1b37f82525bd895280d574e4e5bce40636e5c08944def11a62d3",
+          "source_requested_at": "2026-10-23T16:27:51.105569+00:00",
+          "source_received_at": "2026-10-23T16:27:53.422089+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 5.7,
+              "day_return_pct": -1.041666666666663,
+              "cumulative_volume_native": 73918.0,
+              "cumulative_amount_cny": 41671792.0
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 5.69,
+              "day_return_pct": -1.215277777777768,
+              "cumulative_volume_native": 74723.0,
+              "cumulative_amount_cny": 42130655.0
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 5.7,
+              "day_return_pct": -1.041666666666663,
+              "cumulative_volume_native": 75006.0,
+              "cumulative_amount_cny": 42291540.0
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 5.68,
+              "day_return_pct": -1.388888888888895,
+              "cumulative_volume_native": 75125.0,
+              "cumulative_amount_cny": 42359185.0
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 5.67,
+              "day_return_pct": -1.5625,
+              "cumulative_volume_native": 76130.0,
+              "cumulative_amount_cny": 42929753.0
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 5.65,
+              "day_return_pct": -1.9097222222222099,
+              "cumulative_volume_native": 77472.0,
+              "cumulative_amount_cny": 43691044.0
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 5.65,
+              "day_return_pct": -1.9097222222222099,
+              "cumulative_volume_native": 78422.0,
+              "cumulative_amount_cny": 44227604.0
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.35087719298246833,
+              "post_event_return_pct": -0.17605633802816323,
+              "symmetric_window_return_pct": -0.5263157894736858
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.17574692442883233,
+              "post_event_return_pct": -0.5281690140845008,
+              "symmetric_window_return_pct": -0.702987697715296
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.35087719298246833,
+              "post_event_return_pct": -0.5281690140845008,
+              "symmetric_window_return_pct": -0.877192982456132
+            }
+          },
+          "close_price": 6.34,
+          "close_return_pct": 10.069444444444443
+        },
+        {
+          "symbol": "sh603081",
+          "name": "大丰实业",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.68,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603081.response",
+          "source_raw_sha256": "cc861e6bdd11ead50b8c9a25dbd0741b25f69cb880bc3a33ffb4041791ddf7c6",
+          "source_requested_at": "2026-10-23T16:27:51.251576+00:00",
+          "source_received_at": "2026-10-23T16:27:53.380352+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 9.35,
+              "day_return_pct": -3.409090909090906,
+              "cumulative_volume_native": 27368.0,
+              "cumulative_amount_cny": 25877794.78
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 9.3,
+              "day_return_pct": -3.9256198347107363,
+              "cumulative_volume_native": 27836.0,
+              "cumulative_amount_cny": 26313997.87
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 9.33,
+              "day_return_pct": -3.615702479338845,
+              "cumulative_volume_native": 28015.0,
+              "cumulative_amount_cny": 26480899.9
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 9.3,
+              "day_return_pct": -3.9256198347107363,
+              "cumulative_volume_native": 28080.0,
+              "cumulative_amount_cny": 26541405.92
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 9.31,
+              "day_return_pct": -3.8223140495867725,
+              "cumulative_volume_native": 28332.0,
+              "cumulative_amount_cny": 26775881.97
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 9.31,
+              "day_return_pct": -3.8223140495867725,
+              "cumulative_volume_native": 28888.0,
+              "cumulative_amount_cny": 27295001.06
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 9.3,
+              "day_return_pct": -3.9256198347107363,
+              "cumulative_volume_native": 29368.0,
+              "cumulative_amount_cny": 27741659.15
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.3215434083601254,
+              "post_event_return_pct": 0.10752688172042113,
+              "symmetric_window_return_pct": -0.2143622722400762
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.10752688172042113,
+              "symmetric_window_return_pct": 0.10752688172042113
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.5347593582887611,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": -0.5347593582887611
+            }
+          },
+          "close_price": 10.65,
+          "close_return_pct": 10.0206611570248
+        },
+        {
+          "symbol": "sh600825",
+          "name": "新华传媒",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.55,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh600825.response",
+          "source_raw_sha256": "8b7f97fe10442ee4a2cbfaae3f2286cd9c96db9554ede664d5a5ee830f1565e8",
+          "source_requested_at": "2026-10-23T16:24:06.614324+00:00",
+          "source_received_at": "2026-10-23T16:24:09.220688+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 14.42,
+              "day_return_pct": -0.8934707903780148,
+              "cumulative_volume_native": 954013.0,
+              "cumulative_amount_cny": 1393280887.68
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 14.25,
+              "day_return_pct": -2.0618556701030966,
+              "cumulative_volume_native": 989994.0,
+              "cumulative_amount_cny": 1444473204.05
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 14.29,
+              "day_return_pct": -1.7869415807560296,
+              "cumulative_volume_native": 1008780.0,
+              "cumulative_amount_cny": 1471150843.67
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 14.19,
+              "day_return_pct": -2.4742268041237248,
+              "cumulative_volume_native": 1014373.0,
+              "cumulative_amount_cny": 1479136631.62
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 14.4,
+              "day_return_pct": -1.0309278350515538,
+              "cumulative_volume_native": 1019863.0,
+              "cumulative_amount_cny": 1486970559.96
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 14.33,
+              "day_return_pct": -1.5120274914089404,
+              "cumulative_volume_native": 1026003.0,
+              "cumulative_amount_cny": 1495770711.94
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 14.46,
+              "day_return_pct": -0.6185567010309256,
+              "cumulative_volume_native": 1033515.0,
+              "cumulative_amount_cny": 1506547273.92
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.6997900629810982,
+              "post_event_return_pct": 1.4799154334038223,
+              "symmetric_window_return_pct": 0.7697690692792358
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.42105263157895534,
+              "post_event_return_pct": 0.9866102889358741,
+              "symmetric_window_return_pct": 0.5614035087719405
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -1.5950069348127593,
+              "post_event_return_pct": 1.9027484143763207,
+              "symmetric_window_return_pct": 0.277392510402219
+            }
+          },
+          "close_price": 15.18,
+          "close_return_pct": 4.3298969072164795
+        },
+        {
+          "symbol": "sz002343",
+          "name": "慈文传媒",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.9,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002343.response",
+          "source_raw_sha256": "75c44c203ac484a80dbed3bdfda0b4703d504c663da24f5c11a68d347e0dc0be",
+          "source_requested_at": "2026-10-23T16:24:06.422706+00:00",
+          "source_received_at": "2026-10-23T16:24:09.015980+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 10.48,
+              "day_return_pct": 5.858585858585852,
+              "cumulative_volume_native": 1390503.0,
+              "cumulative_amount_cny": 1478966644.79
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 10.45,
+              "day_return_pct": 5.555555555555536,
+              "cumulative_volume_native": 1409927.0,
+              "cumulative_amount_cny": 1499121141.7
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 10.4,
+              "day_return_pct": 5.050505050505061,
+              "cumulative_volume_native": 1419884.0,
+              "cumulative_amount_cny": 1509469013.66
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 10.43,
+              "day_return_pct": 5.353535353535355,
+              "cumulative_volume_native": 1422761.0,
+              "cumulative_amount_cny": 1512471319.65
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 10.44,
+              "day_return_pct": 5.454545454545445,
+              "cumulative_volume_native": 1425558.0,
+              "cumulative_amount_cny": 1515382841.64
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 10.58,
+              "day_return_pct": 6.8686868686868685,
+              "cumulative_volume_native": 1431823.0,
+              "cumulative_amount_cny": 1521968179.63
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 10.67,
+              "day_return_pct": 7.777777777777772,
+              "cumulative_volume_native": 1442609.0,
+              "cumulative_amount_cny": 1533397703.62
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.28846153846153744,
+              "post_event_return_pct": 0.09587727708533222,
+              "symmetric_window_return_pct": 0.38461538461538325
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.191387559808609,
+              "post_event_return_pct": 1.4381591562799612,
+              "symmetric_window_return_pct": 1.2440191387559807
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -0.4770992366412319,
+              "post_event_return_pct": 2.301054650047951,
+              "symmetric_window_return_pct": 1.8129770992366456
+            }
+          },
+          "close_price": 10.89,
+          "close_return_pct": 10.000000000000009
+        },
+        {
+          "symbol": "sz002242",
+          "name": "九阳股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 21.71,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002242.response",
+          "source_raw_sha256": "f4f7c4962a36382db3618dd7cd805a271a19074a4b905e58e970b65e7cd6b41b",
+          "source_requested_at": "2026-10-23T16:24:07.088850+00:00",
+          "source_received_at": "2026-10-23T16:24:08.957527+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 21.63,
+              "day_return_pct": -0.36849378166744495,
+              "cumulative_volume_native": 468613.0,
+              "cumulative_amount_cny": 1009662509.99
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 21.7,
+              "day_return_pct": -0.04606172270843478,
+              "cumulative_volume_native": 473745.0,
+              "cumulative_amount_cny": 1020796647.66
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 21.41,
+              "day_return_pct": -1.381851681252877,
+              "cumulative_volume_native": 476902.0,
+              "cumulative_amount_cny": 1027607185.07
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 21.35,
+              "day_return_pct": -1.6582220175034523,
+              "cumulative_volume_native": 479538.0,
+              "cumulative_amount_cny": 1033237618.86
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 21.39,
+              "day_return_pct": -1.4739751266697354,
+              "cumulative_volume_native": 482511.0,
+              "cumulative_amount_cny": 1039580301.36
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 21.42,
+              "day_return_pct": -1.3357899585444422,
+              "cumulative_volume_native": 486359.0,
+              "cumulative_amount_cny": 1047846203.35
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 21.27,
+              "day_return_pct": -2.0267157991708973,
+              "cumulative_volume_native": 492602.0,
+              "cumulative_amount_cny": 1061149861.57
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": -0.28024287716019725,
+              "post_event_return_pct": 0.18735362997657212,
+              "symmetric_window_return_pct": -0.09341429238672871
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -1.612903225806439,
+              "post_event_return_pct": 0.3278688524590123,
+              "symmetric_window_return_pct": -1.2903225806451535
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": -1.2944983818770073,
+              "post_event_return_pct": -0.37470725995316645,
+              "symmetric_window_return_pct": -1.664355062413314
+            }
+          },
+          "close_price": 21.53,
+          "close_return_pct": -0.8291110087517262
+        },
+        {
+          "symbol": "sz002696",
+          "name": "百洋股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.81,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002696.response",
+          "source_raw_sha256": "20bcab135b2f520dc6793c4e9352363a6e95db5fe7e0bd9b4659dbc0113aa9e1",
+          "source_requested_at": "2026-10-23T16:24:07.057352+00:00",
+          "source_received_at": "2026-10-23T16:24:10.325041+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 9.88,
+              "day_return_pct": 0.7135575942915473,
+              "cumulative_volume_native": 724299.0,
+              "cumulative_amount_cny": 745202265.78
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 9.91,
+              "day_return_pct": 1.0193679918450549,
+              "cumulative_volume_native": 733145.0,
+              "cumulative_amount_cny": 753963277.73
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 9.85,
+              "day_return_pct": 0.4077471967380175,
+              "cumulative_volume_native": 737017.0,
+              "cumulative_amount_cny": 757792947.7
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 9.88,
+              "day_return_pct": 0.7135575942915473,
+              "cumulative_volume_native": 741775.0,
+              "cumulative_amount_cny": 762465927.67
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 10.02,
+              "day_return_pct": 2.1406727828745975,
+              "cumulative_volume_native": 745790.0,
+              "cumulative_amount_cny": 766470719.59
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 10.05,
+              "day_return_pct": 2.4464831804281273,
+              "cumulative_volume_native": 753889.0,
+              "cumulative_amount_cny": 774616208.52
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 9.85,
+              "day_return_pct": 0.4077471967380175,
+              "cumulative_volume_native": 759277.0,
+              "cumulative_amount_cny": 779969182.44
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.3045685279188026,
+              "post_event_return_pct": 1.4170040485829816,
+              "symmetric_window_return_pct": 1.7258883248731038
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": -0.3027245206861706,
+              "post_event_return_pct": 1.7206477732793601,
+              "symmetric_window_return_pct": 1.4127144298688332
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": -0.30364372469636747,
+              "symmetric_window_return_pct": -0.30364372469636747
+            }
+          },
+          "close_price": 10.25,
+          "close_return_pct": 4.485219164118237
+        },
+        {
+          "symbol": "sz002185",
+          "name": "华天科技",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 15.55,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002185.response",
+          "source_raw_sha256": "ff1bc5e65072e85cbf80f7305f1a3ab0fda5fa2d50c8bf7e8f6836e6226cdbfa",
+          "source_requested_at": "2026-10-23T16:24:07.709654+00:00",
+          "source_received_at": "2026-10-23T16:24:09.315204+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 15.41,
+              "day_return_pct": -0.9003215434083667,
+              "cumulative_volume_native": 2109342.0,
+              "cumulative_amount_cny": 3261036377.09
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 15.48,
+              "day_return_pct": -0.4501607717041778,
+              "cumulative_volume_native": 2132327.0,
+              "cumulative_amount_cny": 3296594702.43
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 15.45,
+              "day_return_pct": -0.6430868167202619,
+              "cumulative_volume_native": 2155769.0,
+              "cumulative_amount_cny": 3332699446.47
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 15.48,
+              "day_return_pct": -0.4501607717041778,
+              "cumulative_volume_native": 2167388.0,
+              "cumulative_amount_cny": 3350689332.47
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 15.48,
+              "day_return_pct": -0.4501607717041778,
+              "cumulative_volume_native": 2176290.0,
+              "cumulative_amount_cny": 3364472971.03
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 15.71,
+              "day_return_pct": 1.028938906752419,
+              "cumulative_volume_native": 2214946.0,
+              "cumulative_amount_cny": 3424861235.58
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 15.77,
+              "day_return_pct": 1.414790996784565,
+              "cumulative_volume_native": 2281931.0,
+              "cumulative_amount_cny": 3530111808.0
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.1941747572815622,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.1941747572815622
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 1.4857881136950857,
+              "symmetric_window_return_pct": 1.4857881136950857
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": 0.454250486696961,
+              "post_event_return_pct": 1.8733850129198926,
+              "symmetric_window_return_pct": 2.336145360155739
+            }
+          },
+          "close_price": 16.19,
+          "close_return_pct": 4.115755627009654
+        },
+        {
+          "symbol": "sz002156",
+          "name": "通富微电",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 47.8,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002156.response",
+          "source_raw_sha256": "97f896b61c4d6f915f664959bb49577796ebe3e687f9bd2431ccf742ae5581ac",
+          "source_requested_at": "2026-10-23T16:24:08.239927+00:00",
+          "source_received_at": "2026-10-23T16:24:11.043939+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1015",
+              "valid_same_trading_session": true,
+              "raw_price": 44.57,
+              "day_return_pct": -6.757322175732217,
+              "cumulative_volume_native": 269379.0,
+              "cumulative_amount_cny": 1232046808.18
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1017",
+              "valid_same_trading_session": true,
+              "raw_price": 44.55,
+              "day_return_pct": -6.799163179916324,
+              "cumulative_volume_native": 278978.0,
+              "cumulative_amount_cny": 1274889025.4
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1019",
+              "valid_same_trading_session": true,
+              "raw_price": 44.7,
+              "day_return_pct": -6.485355648535551,
+              "cumulative_volume_native": 287156.0,
+              "cumulative_amount_cny": 1311331743.01
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1020",
+              "valid_same_trading_session": true,
+              "raw_price": 44.7,
+              "day_return_pct": -6.485355648535551,
+              "cumulative_volume_native": 290488.0,
+              "cumulative_amount_cny": 1326229150.22
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1021",
+              "valid_same_trading_session": true,
+              "raw_price": 44.78,
+              "day_return_pct": -6.317991631799158,
+              "cumulative_volume_native": 293483.0,
+              "cumulative_amount_cny": 1339634637.39
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1023",
+              "valid_same_trading_session": true,
+              "raw_price": 45.0,
+              "day_return_pct": -5.857740585774051,
+              "cumulative_volume_native": 302221.0,
+              "cumulative_amount_cny": 1378895214.79
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1025",
+              "valid_same_trading_session": true,
+              "raw_price": 45.14,
+              "day_return_pct": -5.56485355648535,
+              "cumulative_volume_native": 310181.0,
+              "cumulative_amount_cny": 1414725278.07
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1019",
+              "event_time": "1020",
+              "to_time": "1021",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.17897091722594016,
+              "symmetric_window_return_pct": 0.17897091722594016
+            },
+            "3": {
+              "from_time": "1017",
+              "event_time": "1020",
+              "to_time": "1023",
+              "pre_event_return_pct": 0.33670033670034627,
+              "post_event_return_pct": 0.6711409395973034,
+              "symmetric_window_return_pct": 1.0101010101010166
+            },
+            "5": {
+              "from_time": "1015",
+              "event_time": "1020",
+              "to_time": "1025",
+              "pre_event_return_pct": 0.2916760152569031,
+              "post_event_return_pct": 0.9843400447427264,
+              "symmetric_window_return_pct": 1.2788871438187188
+            }
+          },
+          "close_price": 48.32,
+          "close_return_pct": 1.087866108786617
+        }
+      ]
+    },
+    {
+      "event": {
+        "time": "1310",
+        "name": "大业首次分钟收于涨停",
+        "event_type": "MINUTE_POINT_FIRST_LIMIT_CLOSE",
+        "provider_second_timestamp": "13:09:45",
+        "qualification": "Minute bin 13:10; provider second-level stamp separately attributed"
+      },
+      "stocks": [
+        {
+          "symbol": "sh000001",
+          "name": "沪指",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 3658.03,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh000001.response",
+          "source_raw_sha256": "2390f104aed8c1623d3e36db7549f262947c203eef7eaddb3a1e9f92e4ef7a0d",
+          "source_requested_at": "2026-10-23T16:24:04.546042+00:00",
+          "source_received_at": "2026-10-23T16:24:06.421393+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 3629.57,
+              "day_return_pct": -0.7780143957266672,
+              "cumulative_volume_native": 333252729.0,
+              "cumulative_amount_cny": 511379400524.2
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 3638.81,
+              "day_return_pct": -0.5254194197423234,
+              "cumulative_volume_native": 337844220.0,
+              "cumulative_amount_cny": 519647739479.5
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 3643.67,
+              "day_return_pct": -0.39256102328302234,
+              "cumulative_volume_native": 342509033.0,
+              "cumulative_amount_cny": 528067344872.1
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 3643.52,
+              "day_return_pct": -0.3966615910749871,
+              "cumulative_volume_native": 345611065.0,
+              "cumulative_amount_cny": 532885037881.4
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 3639.75,
+              "day_return_pct": -0.49972252824608265,
+              "cumulative_volume_native": 347722298.0,
+              "cumulative_amount_cny": 536508463873.3
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 3642.54,
+              "day_return_pct": -0.42345196731574664,
+              "cumulative_volume_native": 352064951.0,
+              "cumulative_amount_cny": 543438782485.4
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 3647.17,
+              "day_return_pct": -0.29688110813744784,
+              "cumulative_volume_native": 356360130.0,
+              "cumulative_amount_cny": 552151157903.9
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": -0.004116728463332553,
+              "post_event_return_pct": -0.10347136834709669,
+              "symmetric_window_return_pct": -0.10758383717516251
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.12943792063888626,
+              "post_event_return_pct": -0.026897066572983963,
+              "symmetric_window_return_pct": 0.10250603906221123
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.3843430489011146,
+              "post_event_return_pct": 0.10017784999121204,
+              "symmetric_window_return_pct": 0.48490592549530476
+            }
+          },
+          "close_price": 3690.48,
+          "close_return_pct": 0.8870894989926326
+        },
+        {
+          "symbol": "sz399006",
+          "name": "创业板",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 2576.9,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz399006.response",
+          "source_raw_sha256": "abac64c203b306805ad3458da0b5e9215b471409e946b64081c51ba277915853",
+          "source_requested_at": "2026-10-23T16:24:04.546554+00:00",
+          "source_received_at": "2026-10-23T16:24:07.087193+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 2564.59,
+              "day_return_pct": -0.47770577049943697,
+              "cumulative_volume_native": 127206406.0,
+              "cumulative_amount_cny": 300299723572.63
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 2596.94,
+              "day_return_pct": 0.7776786060770702,
+              "cumulative_volume_native": 129314863.0,
+              "cumulative_amount_cny": 306044260084.48
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 2609.84,
+              "day_return_pct": 1.2782801040009284,
+              "cumulative_volume_native": 131708243.0,
+              "cumulative_amount_cny": 312885480877.27
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 2607.84,
+              "day_return_pct": 1.2006674686638963,
+              "cumulative_volume_native": 133030764.0,
+              "cumulative_amount_cny": 316564112684.52
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 2605.48,
+              "day_return_pct": 1.109084558966189,
+              "cumulative_volume_native": 133959391.0,
+              "cumulative_amount_cny": 319070195326.89
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 2608.76,
+              "day_return_pct": 1.2363692809189475,
+              "cumulative_volume_native": 135666311.0,
+              "cumulative_amount_cny": 323539398478.2
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 2622.6,
+              "day_return_pct": 1.7734487174511981,
+              "cumulative_volume_native": 137672125.0,
+              "cumulative_amount_cny": 329568144072.4
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": -0.07663305030193301,
+              "post_event_return_pct": -0.09049634946929341,
+              "symmetric_window_return_pct": -0.16706004965821863
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.419724752978512,
+              "post_event_return_pct": 0.035278237928704215,
+              "symmetric_window_return_pct": 0.4551510624042132
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 1.6864294097691968,
+              "post_event_return_pct": 0.5659856432910004,
+              "symmetric_window_return_pct": 2.261960001403729
+            }
+          },
+          "close_price": 2684.1,
+          "close_return_pct": 4.160037254064952
+        },
+        {
+          "symbol": "sh603278",
+          "name": "大业股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.51,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603278.response",
+          "source_raw_sha256": "ff063f5f12708ae4947c127102c41c4606389a4dcfe8696329b175ecb4315cf9",
+          "source_requested_at": "2026-10-23T16:24:04.546694+00:00",
+          "source_received_at": "2026-10-23T16:24:07.708763+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 15.8,
+              "day_return_pct": 8.890420399724341,
+              "cumulative_volume_native": 1051122.0,
+              "cumulative_amount_cny": 1518695744.72
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 15.8,
+              "day_return_pct": 8.890420399724341,
+              "cumulative_volume_native": 1059258.0,
+              "cumulative_amount_cny": 1531452471.59
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 15.77,
+              "day_return_pct": 8.68366643694003,
+              "cumulative_volume_native": 1064012.0,
+              "cumulative_amount_cny": 1538963809.51
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1109450.0,
+              "cumulative_amount_cny": 1611395937.5
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1114479.0,
+              "cumulative_amount_cny": 1619422221.76
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1120440.0,
+              "cumulative_amount_cny": 1628936063.77
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1122432.0,
+              "cumulative_amount_cny": 1632115295.72
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 1.2048192771084487,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 1.2048192771084487
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 1.0126582278481067,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 1.0126582278481067
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 1.0126582278481067,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 1.0126582278481067
+            }
+          },
+          "close_price": 15.96,
+          "close_return_pct": 9.993108201240531
+        },
+        {
+          "symbol": "sz002724",
+          "name": "海洋王",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 11.21,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002724.response",
+          "source_raw_sha256": "f213e9b87cacd974767b6ac236b64a297d5ea06acb37f4ab724da712de714499",
+          "source_requested_at": "2026-10-23T16:24:04.546827+00:00",
+          "source_received_at": "2026-10-23T16:24:06.397828+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 942176.0,
+              "cumulative_amount_cny": 983162374.52
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 942744.0,
+              "cumulative_amount_cny": 983735486.51
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 943520.0,
+              "cumulative_amount_cny": 984518470.51
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 944525.0,
+              "cumulative_amount_cny": 985532515.51
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 945509.0,
+              "cumulative_amount_cny": 986525371.5
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 946487.0,
+              "cumulative_amount_cny": 987512173.5
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": -9.99107939339876,
+              "cumulative_volume_native": 947358.0,
+              "cumulative_amount_cny": 988391012.49
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 12.33,
+          "close_return_pct": 9.991079393398739
+        },
+        {
+          "symbol": "sh603089",
+          "name": "正裕工业",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 10.81,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603089.response",
+          "source_raw_sha256": "ca1f1930d9e8d33ca9f997f31995bb73a33093c667b4e70c3a59bbff0344a338",
+          "source_requested_at": "2026-10-23T16:27:49.074237+00:00",
+          "source_received_at": "2026-10-23T16:27:51.883805+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 185743.0,
+              "cumulative_amount_cny": 217479434.32
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 185992.0,
+              "cumulative_amount_cny": 217775495.32
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 186148.0,
+              "cumulative_amount_cny": 217960979.31
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 186155.0,
+              "cumulative_amount_cny": 217969302.31
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 186161.0,
+              "cumulative_amount_cny": 217976436.31
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 186179.0,
+              "cumulative_amount_cny": 217997838.31
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 186314.0,
+              "cumulative_amount_cny": 218158353.31
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 11.89,
+          "close_return_pct": 9.990749306197966
+        },
+        {
+          "symbol": "sh603677",
+          "name": "奇精机械",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.82,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603677.response",
+          "source_raw_sha256": "8ca3a312342d1359c0ebca48441f63c502032b3331ac95c4a6cfb39a17cd12e5",
+          "source_requested_at": "2026-10-23T16:27:49.075119+00:00",
+          "source_received_at": "2026-10-23T16:27:51.104705+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 124937.0,
+              "cumulative_amount_cny": 197963362.52
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 124952.0,
+              "cumulative_amount_cny": 197987812.52
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 125247.0,
+              "cumulative_amount_cny": 198468662.54
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 125256.0,
+              "cumulative_amount_cny": 198483332.54
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 125273.0,
+              "cumulative_amount_cny": 198511042.54
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 125401.0,
+              "cumulative_amount_cny": 198719682.55
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 125474.0,
+              "cumulative_amount_cny": 198838672.55
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 16.3,
+          "close_return_pct": 9.986504723346833
+        },
+        {
+          "symbol": "sz002009",
+          "name": "天奇股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 15.73,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002009.response",
+          "source_raw_sha256": "c001c2c1b2e415aa5f41ec9d93e5480d90f4b69a5d92040d00d2bb68a86cfd48",
+          "source_requested_at": "2026-10-23T16:27:49.075330+00:00",
+          "source_received_at": "2026-10-23T16:27:51.900255+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 16.99,
+              "day_return_pct": 8.01017164653528,
+              "cumulative_volume_native": 520338.0,
+              "cumulative_amount_cny": 872615161.1
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 17.06,
+              "day_return_pct": 8.455181182453897,
+              "cumulative_volume_native": 522937.0,
+              "cumulative_amount_cny": 877032398.14
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 16.95,
+              "day_return_pct": 7.75588048315321,
+              "cumulative_volume_native": 525197.0,
+              "cumulative_amount_cny": 880873671.17
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 16.98,
+              "day_return_pct": 7.946598855689757,
+              "cumulative_volume_native": 525664.0,
+              "cumulative_amount_cny": 881666423.18
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 17.05,
+              "day_return_pct": 8.391608391608397,
+              "cumulative_volume_native": 527625.0,
+              "cumulative_amount_cny": 885010878.21
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 17.01,
+              "day_return_pct": 8.137317228226326,
+              "cumulative_volume_native": 529160.0,
+              "cumulative_amount_cny": 887619918.23
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 17.13,
+              "day_return_pct": 8.900190718372535,
+              "cumulative_volume_native": 532351.0,
+              "cumulative_amount_cny": 893066878.28
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.1769911504424737,
+              "post_event_return_pct": 0.41224970553592755,
+              "symmetric_window_return_pct": 0.5899705014749346
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": -0.4689331770222682,
+              "post_event_return_pct": 0.17667844522968323,
+              "symmetric_window_return_pct": -0.2930832356389024
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": -0.05885815185402432,
+              "post_event_return_pct": 0.883392226148394,
+              "symmetric_window_return_pct": 0.8240141259564515
+            }
+          },
+          "close_price": 17.3,
+          "close_return_pct": 9.980928162746338
+        },
+        {
+          "symbol": "sh600215",
+          "name": "派斯林",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 5.76,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh600215.response",
+          "source_raw_sha256": "ba3129265d8b1b37f82525bd895280d574e4e5bce40636e5c08944def11a62d3",
+          "source_requested_at": "2026-10-23T16:27:51.105569+00:00",
+          "source_received_at": "2026-10-23T16:27:53.422089+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 5.76,
+              "day_return_pct": 0.0,
+              "cumulative_volume_native": 104289.0,
+              "cumulative_amount_cny": 58818403.8
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 5.79,
+              "day_return_pct": 0.5208333333333481,
+              "cumulative_volume_native": 105430.0,
+              "cumulative_amount_cny": 59477510.83
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 5.81,
+              "day_return_pct": 0.868055555555558,
+              "cumulative_volume_native": 106225.0,
+              "cumulative_amount_cny": 59939259.85
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 5.8,
+              "day_return_pct": 0.694444444444442,
+              "cumulative_volume_native": 106326.0,
+              "cumulative_amount_cny": 59997906.86
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 5.8,
+              "day_return_pct": 0.694444444444442,
+              "cumulative_volume_native": 108119.0,
+              "cumulative_amount_cny": 61037714.91
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 5.78,
+              "day_return_pct": 0.3472222222222321,
+              "cumulative_volume_native": 109273.0,
+              "cumulative_amount_cny": 61704958.94
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 5.83,
+              "day_return_pct": 1.2152777777777901,
+              "cumulative_volume_native": 109761.0,
+              "cumulative_amount_cny": 61989192.95
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": -0.1721170395869165,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": -0.1721170395869165
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.17271157167528806,
+              "post_event_return_pct": -0.34482758620688614,
+              "symmetric_window_return_pct": -0.17271157167529916
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.694444444444442,
+              "post_event_return_pct": 0.5172413793103514,
+              "symmetric_window_return_pct": 1.2152777777777901
+            }
+          },
+          "close_price": 6.34,
+          "close_return_pct": 10.069444444444443
+        },
+        {
+          "symbol": "sh603081",
+          "name": "大丰实业",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.68,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603081.response",
+          "source_raw_sha256": "cc861e6bdd11ead50b8c9a25dbd0741b25f69cb880bc3a33ffb4041791ddf7c6",
+          "source_requested_at": "2026-10-23T16:27:51.251576+00:00",
+          "source_received_at": "2026-10-23T16:27:53.380352+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 9.14,
+              "day_return_pct": -5.578512396694202,
+              "cumulative_volume_native": 47731.0,
+              "cumulative_amount_cny": 44548261.67
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 9.19,
+              "day_return_pct": -5.061983471074383,
+              "cumulative_volume_native": 48305.0,
+              "cumulative_amount_cny": 45074475.75
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 9.2,
+              "day_return_pct": -4.958677685950419,
+              "cumulative_volume_native": 48564.0,
+              "cumulative_amount_cny": 45312751.78
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 9.23,
+              "day_return_pct": -4.648760330578505,
+              "cumulative_volume_native": 48965.0,
+              "cumulative_amount_cny": 45683099.81
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 9.24,
+              "day_return_pct": -4.545454545454541,
+              "cumulative_volume_native": 49244.0,
+              "cumulative_amount_cny": 45940800.83
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 9.95,
+              "day_return_pct": 2.789256198347112,
+              "cumulative_volume_native": 57047.0,
+              "cumulative_amount_cny": 53468432.09
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 78976.0,
+              "cumulative_amount_cny": 76507917.5
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.3260869565217428,
+              "post_event_return_pct": 0.10834236186347823,
+              "symmetric_window_return_pct": 0.43478260869567187
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.43525571273124175,
+              "post_event_return_pct": 7.800650054171165,
+              "symmetric_window_return_pct": 8.26985854189337
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.9846827133479286,
+              "post_event_return_pct": 15.384615384615374,
+              "symmetric_window_return_pct": 16.520787746170672
+            }
+          },
+          "close_price": 10.65,
+          "close_return_pct": 10.0206611570248
+        },
+        {
+          "symbol": "sh600825",
+          "name": "新华传媒",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.55,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh600825.response",
+          "source_raw_sha256": "8b7f97fe10442ee4a2cbfaae3f2286cd9c96db9554ede664d5a5ee830f1565e8",
+          "source_requested_at": "2026-10-23T16:24:06.614324+00:00",
+          "source_received_at": "2026-10-23T16:24:09.220688+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 14.21,
+              "day_return_pct": -2.3367697594501746,
+              "cumulative_volume_native": 1368632.0,
+              "cumulative_amount_cny": 1975094074.39
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 14.38,
+              "day_return_pct": -1.1683848797250818,
+              "cumulative_volume_native": 1374389.0,
+              "cumulative_amount_cny": 1983328141.01
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 14.26,
+              "day_return_pct": -1.993127147766327,
+              "cumulative_volume_native": 1381077.0,
+              "cumulative_amount_cny": 1992895646.01
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 14.31,
+              "day_return_pct": -1.6494845360824795,
+              "cumulative_volume_native": 1384672.0,
+              "cumulative_amount_cny": 1998026474.01
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 14.4,
+              "day_return_pct": -1.0309278350515538,
+              "cumulative_volume_native": 1387428.0,
+              "cumulative_amount_cny": 2001987065.01
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 14.38,
+              "day_return_pct": -1.1683848797250818,
+              "cumulative_volume_native": 1393436.0,
+              "cumulative_amount_cny": 2010600830.0
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 14.47,
+              "day_return_pct": -0.5498281786941561,
+              "cumulative_volume_native": 1400013.0,
+              "cumulative_amount_cny": 2020051159.0
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.3506311360448766,
+              "post_event_return_pct": 0.6289308176100628,
+              "symmetric_window_return_pct": 0.9817671809256634
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": -0.48678720445062273,
+              "post_event_return_pct": 0.4891684136967278,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.703729767769179,
+              "post_event_return_pct": 1.1180992313067684,
+              "symmetric_window_return_pct": 1.8296973961998475
+            }
+          },
+          "close_price": 15.18,
+          "close_return_pct": 4.3298969072164795
+        },
+        {
+          "symbol": "sz002343",
+          "name": "慈文传媒",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.9,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002343.response",
+          "source_raw_sha256": "75c44c203ac484a80dbed3bdfda0b4703d504c663da24f5c11a68d347e0dc0be",
+          "source_requested_at": "2026-10-23T16:24:06.422706+00:00",
+          "source_received_at": "2026-10-23T16:24:09.015980+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 10.24,
+              "day_return_pct": 3.4343434343434343,
+              "cumulative_volume_native": 1588959.0,
+              "cumulative_amount_cny": 1685490234.82
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 10.05,
+              "day_return_pct": 1.5151515151515138,
+              "cumulative_volume_native": 1603098.0,
+              "cumulative_amount_cny": 1699806419.87
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 10.12,
+              "day_return_pct": 2.2222222222222143,
+              "cumulative_volume_native": 1616356.0,
+              "cumulative_amount_cny": 1713221943.91
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 10.0,
+              "day_return_pct": 1.0101010101010166,
+              "cumulative_volume_native": 1621518.0,
+              "cumulative_amount_cny": 1718413305.92
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 10.05,
+              "day_return_pct": 1.5151515151515138,
+              "cumulative_volume_native": 1635318.0,
+              "cumulative_amount_cny": 1732146575.98
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 10.06,
+              "day_return_pct": 1.6161616161616266,
+              "cumulative_volume_native": 1644935.0,
+              "cumulative_amount_cny": 1741853201.01
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 10.25,
+              "day_return_pct": 3.535353535353525,
+              "cumulative_volume_native": 1653236.0,
+              "cumulative_amount_cny": 1750319964.95
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": -1.1857707509881354,
+              "post_event_return_pct": 0.5000000000000115,
+              "symmetric_window_return_pct": -0.6916996047430679
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": -0.4975124378109541,
+              "post_event_return_pct": 0.6000000000000005,
+              "symmetric_window_return_pct": 0.09950248756218638
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": -2.34375,
+              "post_event_return_pct": 2.499999999999991,
+              "symmetric_window_return_pct": 0.09765625
+            }
+          },
+          "close_price": 10.89,
+          "close_return_pct": 10.000000000000009
+        },
+        {
+          "symbol": "sz002242",
+          "name": "九阳股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 21.71,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002242.response",
+          "source_raw_sha256": "f4f7c4962a36382db3618dd7cd805a271a19074a4b905e58e970b65e7cd6b41b",
+          "source_requested_at": "2026-10-23T16:24:07.088850+00:00",
+          "source_received_at": "2026-10-23T16:24:08.957527+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 20.72,
+              "day_return_pct": -4.56011054813451,
+              "cumulative_volume_native": 752995.0,
+              "cumulative_amount_cny": 1597966519.46
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 20.8,
+              "day_return_pct": -4.191616766467066,
+              "cumulative_volume_native": 758627.0,
+              "cumulative_amount_cny": 1609623320.75
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 20.76,
+              "day_return_pct": -4.3758636573007825,
+              "cumulative_volume_native": 762639.0,
+              "cumulative_amount_cny": 1617952908.87
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 20.85,
+              "day_return_pct": -3.961308152924914,
+              "cumulative_volume_native": 764923.0,
+              "cumulative_amount_cny": 1622704939.93
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 20.84,
+              "day_return_pct": -4.007369875633349,
+              "cumulative_volume_native": 768809.0,
+              "cumulative_amount_cny": 1630812675.01
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 20.65,
+              "day_return_pct": -4.882542607093521,
+              "cumulative_volume_native": 772178.0,
+              "cumulative_amount_cny": 1637774320.15
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 20.62,
+              "day_return_pct": -5.020727775218791,
+              "cumulative_volume_native": 777512.0,
+              "cumulative_amount_cny": 1648768469.35
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.43352601156070314,
+              "post_event_return_pct": -0.04796163069544779,
+              "symmetric_window_return_pct": 0.3853564547205979
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.24038461538462563,
+              "post_event_return_pct": -0.9592326139088891,
+              "symmetric_window_return_pct": -0.7211538461538547
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 0.6274131274131456,
+              "post_event_return_pct": -1.1031175059952103,
+              "symmetric_window_return_pct": -0.4826254826254761
+            }
+          },
+          "close_price": 21.53,
+          "close_return_pct": -0.8291110087517262
+        },
+        {
+          "symbol": "sz002696",
+          "name": "百洋股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.81,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002696.response",
+          "source_raw_sha256": "20bcab135b2f520dc6793c4e9352363a6e95db5fe7e0bd9b4659dbc0113aa9e1",
+          "source_requested_at": "2026-10-23T16:24:07.057352+00:00",
+          "source_received_at": "2026-10-23T16:24:10.325041+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 9.82,
+              "day_return_pct": 0.10193679918450993,
+              "cumulative_volume_native": 961120.0,
+              "cumulative_amount_cny": 979491433.04
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 9.68,
+              "day_return_pct": -1.3251783893985847,
+              "cumulative_volume_native": 964372.0,
+              "cumulative_amount_cny": 982661249.0
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 9.87,
+              "day_return_pct": 0.6116207951070152,
+              "cumulative_volume_native": 967054.0,
+              "cumulative_amount_cny": 985288500.98
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 10.0,
+              "day_return_pct": 1.9367991845055998,
+              "cumulative_volume_native": 968473.0,
+              "cumulative_amount_cny": 986698568.97
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 9.95,
+              "day_return_pct": 1.4271151885830724,
+              "cumulative_volume_native": 969623.0,
+              "cumulative_amount_cny": 987845543.96
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 9.91,
+              "day_return_pct": 1.0193679918450549,
+              "cumulative_volume_native": 971358.0,
+              "cumulative_amount_cny": 989566885.95
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 9.94,
+              "day_return_pct": 1.3251783893985625,
+              "cumulative_volume_native": 972861.0,
+              "cumulative_amount_cny": 991058529.94
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 1.317122593718345,
+              "post_event_return_pct": -0.5000000000000115,
+              "symmetric_window_return_pct": 0.8105369807497542
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 3.3057851239669533,
+              "post_event_return_pct": -0.9000000000000008,
+              "symmetric_window_return_pct": 2.3760330578512345
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 1.8329938900203624,
+              "post_event_return_pct": -0.6000000000000005,
+              "symmetric_window_return_pct": 1.2219959266802416
+            }
+          },
+          "close_price": 10.25,
+          "close_return_pct": 4.485219164118237
+        },
+        {
+          "symbol": "sz002185",
+          "name": "华天科技",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 15.55,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002185.response",
+          "source_raw_sha256": "ff1bc5e65072e85cbf80f7305f1a3ab0fda5fa2d50c8bf7e8f6836e6226cdbfa",
+          "source_requested_at": "2026-10-23T16:24:07.709654+00:00",
+          "source_received_at": "2026-10-23T16:24:09.315204+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 16.46,
+              "day_return_pct": 5.8520900321543445,
+              "cumulative_volume_native": 3575066.0,
+              "cumulative_amount_cny": 5623457890.7
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 16.6,
+              "day_return_pct": 6.7524115755627,
+              "cumulative_volume_native": 3673624.0,
+              "cumulative_amount_cny": 5787696146.59
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 16.61,
+              "day_return_pct": 6.816720257234721,
+              "cumulative_volume_native": 3700075.0,
+              "cumulative_amount_cny": 5831686770.41
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 16.45,
+              "day_return_pct": 5.787781350482302,
+              "cumulative_volume_native": 3707679.0,
+              "cumulative_amount_cny": 5844268072.37
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 16.5,
+              "day_return_pct": 6.109324758842449,
+              "cumulative_volume_native": 3717183.0,
+              "cumulative_amount_cny": 5859892315.87
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 16.4,
+              "day_return_pct": 5.466237942122176,
+              "cumulative_volume_native": 3731540.0,
+              "cumulative_amount_cny": 5883537909.05
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 16.47,
+              "day_return_pct": 5.916398713826365,
+              "cumulative_volume_native": 3746682.0,
+              "cumulative_amount_cny": 5908470345.16
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": -0.9632751354605618,
+              "post_event_return_pct": 0.3039513677811634,
+              "symmetric_window_return_pct": -0.6622516556291314
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": -0.9036144578313365,
+              "post_event_return_pct": -0.3039513677811634,
+              "symmetric_window_return_pct": -1.2048192771084487
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": -0.060753341433783525,
+              "post_event_return_pct": 0.12158054711246535,
+              "symmetric_window_return_pct": 0.06075334143376132
+            }
+          },
+          "close_price": 16.19,
+          "close_return_pct": 4.115755627009654
+        },
+        {
+          "symbol": "sz002156",
+          "name": "通富微电",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 47.8,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002156.response",
+          "source_raw_sha256": "97f896b61c4d6f915f664959bb49577796ebe3e687f9bd2431ccf742ae5581ac",
+          "source_requested_at": "2026-10-23T16:24:08.239927+00:00",
+          "source_received_at": "2026-10-23T16:24:11.043939+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1305",
+              "valid_same_trading_session": true,
+              "raw_price": 46.26,
+              "day_return_pct": -3.2217573221757334,
+              "cumulative_volume_native": 456974.0,
+              "cumulative_amount_cny": 2086061446.64
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1307",
+              "valid_same_trading_session": true,
+              "raw_price": 46.97,
+              "day_return_pct": -1.7364016736401644,
+              "cumulative_volume_native": 469313.0,
+              "cumulative_amount_cny": 2143663176.52
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1309",
+              "valid_same_trading_session": true,
+              "raw_price": 46.92,
+              "day_return_pct": -1.8410041841004143,
+              "cumulative_volume_native": 479827.0,
+              "cumulative_amount_cny": 2193039273.41
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1310",
+              "valid_same_trading_session": true,
+              "raw_price": 47.01,
+              "day_return_pct": -1.6527196652719622,
+              "cumulative_volume_native": 484133.0,
+              "cumulative_amount_cny": 2213284288.9
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1311",
+              "valid_same_trading_session": true,
+              "raw_price": 46.78,
+              "day_return_pct": -2.1338912133891164,
+              "cumulative_volume_native": 486093.0,
+              "cumulative_amount_cny": 2222476826.78
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1313",
+              "valid_same_trading_session": true,
+              "raw_price": 46.91,
+              "day_return_pct": -1.8619246861924732,
+              "cumulative_volume_native": 490527.0,
+              "cumulative_amount_cny": 2243202109.56
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1315",
+              "valid_same_trading_session": true,
+              "raw_price": 47.17,
+              "day_return_pct": -1.3179916317991536,
+              "cumulative_volume_native": 497024.0,
+              "cumulative_amount_cny": 2273811317.05
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1309",
+              "event_time": "1310",
+              "to_time": "1311",
+              "pre_event_return_pct": 0.19181585677747748,
+              "post_event_return_pct": -0.4892576047649366,
+              "symmetric_window_return_pct": -0.2983802216538822
+            },
+            "3": {
+              "from_time": "1307",
+              "event_time": "1310",
+              "to_time": "1313",
+              "pre_event_return_pct": 0.08516074089843784,
+              "post_event_return_pct": -0.21272069772388935,
+              "symmetric_window_return_pct": -0.12774111134767896
+            },
+            "5": {
+              "from_time": "1305",
+              "event_time": "1310",
+              "to_time": "1315",
+              "pre_event_return_pct": 1.621271076523989,
+              "post_event_return_pct": 0.3403531163582274,
+              "symmetric_window_return_pct": 1.9671422395157956
+            }
+          },
+          "close_price": 48.32,
+          "close_return_pct": 1.087866108786617
+        }
+      ]
+    },
+    {
+      "event": {
+        "time": "1426",
+        "name": "海洋王首次分钟触板并收于涨停",
+        "event_type": "CROSSCHECKED_MINUTE_OHLC_HIGH_AND_CLOSE",
+        "qualification": "Eastmoney OHLC and Tencent point both 14:26; reject conflicting 09:53:51 pool fbt"
+      },
+      "stocks": [
+        {
+          "symbol": "sh000001",
+          "name": "沪指",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 3658.03,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh000001.response",
+          "source_raw_sha256": "2390f104aed8c1623d3e36db7549f262947c203eef7eaddb3a1e9f92e4ef7a0d",
+          "source_requested_at": "2026-10-23T16:24:04.546042+00:00",
+          "source_received_at": "2026-10-23T16:24:06.421393+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 3683.71,
+              "day_return_pct": 0.7020172059824414,
+              "cumulative_volume_native": 470470376.0,
+              "cumulative_amount_cny": 757113395160.7
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 3682.72,
+              "day_return_pct": 0.6749534585555494,
+              "cumulative_volume_native": 474687639.0,
+              "cumulative_amount_cny": 764929397408.2
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 3674.1,
+              "day_return_pct": 0.4393074961112964,
+              "cumulative_volume_native": 478659649.0,
+              "cumulative_amount_cny": 771435664911.7
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 3679.28,
+              "day_return_pct": 0.5809137705267586,
+              "cumulative_volume_native": 480794422.0,
+              "cumulative_amount_cny": 775072527503.4
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 3678.69,
+              "day_return_pct": 0.5647848705450764,
+              "cumulative_volume_native": 482429536.0,
+              "cumulative_amount_cny": 778042207887.8
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 3677.17,
+              "day_return_pct": 0.5232324502532748,
+              "cumulative_volume_native": 485072902.0,
+              "cumulative_amount_cny": 782998402486.8
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 3678.94,
+              "day_return_pct": 0.5716191501983214,
+              "cumulative_volume_native": 488655131.0,
+              "cumulative_amount_cny": 789117362740.7
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.14098690835850913,
+              "post_event_return_pct": -0.0160357461242433,
+              "symmetric_window_return_pct": 0.12492855393158031
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": -0.09340921927269985,
+              "post_event_return_pct": -0.05734817681720683,
+              "symmetric_window_return_pct": -0.15070382760568046
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": -0.12025919521351236,
+              "post_event_return_pct": -0.009240938444476932,
+              "symmetric_window_return_pct": -0.12948902057979828
+            }
+          },
+          "close_price": 3690.48,
+          "close_return_pct": 0.8870894989926326
+        },
+        {
+          "symbol": "sz399006",
+          "name": "创业板",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 2576.9,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz399006.response",
+          "source_raw_sha256": "abac64c203b306805ad3458da0b5e9215b471409e946b64081c51ba277915853",
+          "source_requested_at": "2026-10-23T16:24:04.546554+00:00",
+          "source_received_at": "2026-10-23T16:24:07.087193+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 2671.98,
+              "day_return_pct": 3.6897046839225345,
+              "cumulative_volume_native": 189619556.0,
+              "cumulative_amount_cny": 454154497430.6
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 2676.94,
+              "day_return_pct": 3.8821840195583768,
+              "cumulative_volume_native": 191648774.0,
+              "cumulative_amount_cny": 458989253100.92
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 2667.63,
+              "day_return_pct": 3.520897202064499,
+              "cumulative_volume_native": 193182925.0,
+              "cumulative_amount_cny": 462594648766.96
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 2673.29,
+              "day_return_pct": 3.7405409600682837,
+              "cumulative_volume_native": 194026649.0,
+              "cumulative_amount_cny": 464640870561.75
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 2670.98,
+              "day_return_pct": 3.6508983662540295,
+              "cumulative_volume_native": 194734542.0,
+              "cumulative_amount_cny": 466402289766.7
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 2670.74,
+              "day_return_pct": 3.6415848500135795,
+              "cumulative_volume_native": 195766278.0,
+              "cumulative_amount_cny": 469135491910.92
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 2674.56,
+              "day_return_pct": 3.789824983507306,
+              "cumulative_volume_native": 197283036.0,
+              "cumulative_amount_cny": 472821538419.36
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.21217335237644352,
+              "post_event_return_pct": -0.08641037822308961,
+              "symmetric_window_return_pct": 0.12557963435708697
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": -0.13634971273170926,
+              "post_event_return_pct": -0.09538807985666198,
+              "symmetric_window_return_pct": -0.2316077312154996
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.04902731307869779,
+              "post_event_return_pct": 0.04750700447762046,
+              "symmetric_window_return_pct": 0.0965576089641429
+            }
+          },
+          "close_price": 2684.1,
+          "close_return_pct": 4.160037254064952
+        },
+        {
+          "symbol": "sh603278",
+          "name": "大业股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.51,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603278.response",
+          "source_raw_sha256": "ff063f5f12708ae4947c127102c41c4606389a4dcfe8696329b175ecb4315cf9",
+          "source_requested_at": "2026-10-23T16:24:04.546694+00:00",
+          "source_received_at": "2026-10-23T16:24:07.708763+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1136888.0,
+              "cumulative_amount_cny": 1655186992.68
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1137166.0,
+              "cumulative_amount_cny": 1655630680.69
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1137779.0,
+              "cumulative_amount_cny": 1656609028.72
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1137859.0,
+              "cumulative_amount_cny": 1656736708.72
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1137899.0,
+              "cumulative_amount_cny": 1656800548.73
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1138009.0,
+              "cumulative_amount_cny": 1656976108.73
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 15.96,
+              "day_return_pct": 9.993108201240531,
+              "cumulative_volume_native": 1138176.0,
+              "cumulative_amount_cny": 1657242640.74
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 15.96,
+          "close_return_pct": 9.993108201240531
+        },
+        {
+          "symbol": "sz002724",
+          "name": "海洋王",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 11.21,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002724.response",
+          "source_raw_sha256": "f213e9b87cacd974767b6ac236b64a297d5ea06acb37f4ab724da712de714499",
+          "source_requested_at": "2026-10-23T16:24:04.546827+00:00",
+          "source_received_at": "2026-10-23T16:24:06.397828+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 12.08,
+              "day_return_pct": 7.760927743086521,
+              "cumulative_volume_native": 1418600.0,
+              "cumulative_amount_cny": 1514402845.84
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 12.08,
+              "day_return_pct": 7.760927743086521,
+              "cumulative_volume_native": 1428034.0,
+              "cumulative_amount_cny": 1525867730.62
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 12.19,
+              "day_return_pct": 8.742194469223886,
+              "cumulative_volume_native": 1433104.0,
+              "cumulative_amount_cny": 1532034496.75
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 12.33,
+              "day_return_pct": 9.991079393398739,
+              "cumulative_volume_native": 1475804.0,
+              "cumulative_amount_cny": 1584608248.97
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 12.32,
+              "day_return_pct": 9.901873327386257,
+              "cumulative_volume_native": 1486416.0,
+              "cumulative_amount_cny": 1597688913.14
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 12.33,
+              "day_return_pct": 9.991079393398739,
+              "cumulative_volume_native": 1493401.0,
+              "cumulative_amount_cny": 1606294637.31
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 12.33,
+              "day_return_pct": 9.991079393398739,
+              "cumulative_volume_native": 1502063.0,
+              "cumulative_amount_cny": 1616960501.5
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 1.1484823625922846,
+              "post_event_return_pct": -0.08110300081103361,
+              "symmetric_window_return_pct": 1.0664479081214262
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 2.0695364238410674,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 2.0695364238410674
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 2.0695364238410674,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 2.0695364238410674
+            }
+          },
+          "close_price": 12.33,
+          "close_return_pct": 9.991079393398739
+        },
+        {
+          "symbol": "sh603089",
+          "name": "正裕工业",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 10.81,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603089.response",
+          "source_raw_sha256": "ca1f1930d9e8d33ca9f997f31995bb73a33093c667b4e70c3a59bbff0344a338",
+          "source_requested_at": "2026-10-23T16:27:49.074237+00:00",
+          "source_received_at": "2026-10-23T16:27:51.883805+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187390.0,
+              "cumulative_amount_cny": 219437717.27
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187412.0,
+              "cumulative_amount_cny": 219463875.27
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187421.0,
+              "cumulative_amount_cny": 219474576.27
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187421.0,
+              "cumulative_amount_cny": 219474576.27
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187421.0,
+              "cumulative_amount_cny": 219474576.27
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187527.0,
+              "cumulative_amount_cny": 219600610.27
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 11.89,
+              "day_return_pct": 9.990749306197966,
+              "cumulative_volume_native": 187552.0,
+              "cumulative_amount_cny": 219630335.27
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 11.89,
+          "close_return_pct": 9.990749306197966
+        },
+        {
+          "symbol": "sh603677",
+          "name": "奇精机械",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.82,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603677.response",
+          "source_raw_sha256": "8ca3a312342d1359c0ebca48441f63c502032b3331ac95c4a6cfb39a17cd12e5",
+          "source_requested_at": "2026-10-23T16:27:49.075119+00:00",
+          "source_received_at": "2026-10-23T16:27:51.104705+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 126949.0,
+              "cumulative_amount_cny": 201242948.2
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 126963.0,
+              "cumulative_amount_cny": 201265768.2
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 126976.0,
+              "cumulative_amount_cny": 201286958.2
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 126980.0,
+              "cumulative_amount_cny": 201293478.2
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 126997.0,
+              "cumulative_amount_cny": 201321188.2
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 127022.0,
+              "cumulative_amount_cny": 201361938.19
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 16.3,
+              "day_return_pct": 9.986504723346833,
+              "cumulative_volume_native": 127057.0,
+              "cumulative_amount_cny": 201418988.19
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 16.3,
+          "close_return_pct": 9.986504723346833
+        },
+        {
+          "symbol": "sz002009",
+          "name": "天奇股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 15.73,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002009.response",
+          "source_raw_sha256": "c001c2c1b2e415aa5f41ec9d93e5480d90f4b69a5d92040d00d2bb68a86cfd48",
+          "source_requested_at": "2026-10-23T16:27:49.075330+00:00",
+          "source_received_at": "2026-10-23T16:27:51.900255+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 604472.0,
+              "cumulative_amount_cny": 1017672320.35
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 604636.0,
+              "cumulative_amount_cny": 1017956040.35
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 604741.0,
+              "cumulative_amount_cny": 1018137690.35
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 604778.0,
+              "cumulative_amount_cny": 1018201700.35
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 604889.0,
+              "cumulative_amount_cny": 1018393730.35
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 605016.0,
+              "cumulative_amount_cny": 1018613440.34
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 17.3,
+              "day_return_pct": 9.980928162746338,
+              "cumulative_volume_native": 605123.0,
+              "cumulative_amount_cny": 1018798550.34
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 17.3,
+          "close_return_pct": 9.980928162746338
+        },
+        {
+          "symbol": "sh600215",
+          "name": "派斯林",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 5.76,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh600215.response",
+          "source_raw_sha256": "ba3129265d8b1b37f82525bd895280d574e4e5bce40636e5c08944def11a62d3",
+          "source_requested_at": "2026-10-23T16:27:51.105569+00:00",
+          "source_received_at": "2026-10-23T16:27:53.422089+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 239811.0,
+              "cumulative_amount_cny": 143580617.41
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 240004.0,
+              "cumulative_amount_cny": 143702979.4
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 240328.0,
+              "cumulative_amount_cny": 143908395.38
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 240421.0,
+              "cumulative_amount_cny": 143967357.38
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 240490.0,
+              "cumulative_amount_cny": 144011103.38
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 241865.0,
+              "cumulative_amount_cny": 144882853.31
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 6.34,
+              "day_return_pct": 10.069444444444443,
+              "cumulative_volume_native": 242230.0,
+              "cumulative_amount_cny": 145114263.3
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 6.34,
+          "close_return_pct": 10.069444444444443
+        },
+        {
+          "symbol": "sh603081",
+          "name": "大丰实业",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.68,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh603081.response",
+          "source_raw_sha256": "cc861e6bdd11ead50b8c9a25dbd0741b25f69cb880bc3a33ffb4041791ddf7c6",
+          "source_requested_at": "2026-10-23T16:27:51.251576+00:00",
+          "source_received_at": "2026-10-23T16:27:53.380352+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 161543.0,
+              "cumulative_amount_cny": 164441752.82
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 161661.0,
+              "cumulative_amount_cny": 164567422.81
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 161811.0,
+              "cumulative_amount_cny": 164727172.79
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 161906.0,
+              "cumulative_amount_cny": 164828347.78
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 162718.0,
+              "cumulative_amount_cny": 165693127.69
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 163007.0,
+              "cumulative_amount_cny": 166000912.65
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 10.65,
+              "day_return_pct": 10.0206611570248,
+              "cumulative_volume_native": 163253.0,
+              "cumulative_amount_cny": 166262902.63
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.0
+            }
+          },
+          "close_price": 10.65,
+          "close_return_pct": 10.0206611570248
+        },
+        {
+          "symbol": "sh600825",
+          "name": "新华传媒",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 14.55,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sh600825.response",
+          "source_raw_sha256": "8b7f97fe10442ee4a2cbfaae3f2286cd9c96db9554ede664d5a5ee830f1565e8",
+          "source_requested_at": "2026-10-23T16:24:06.614324+00:00",
+          "source_received_at": "2026-10-23T16:24:09.220688+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 14.86,
+              "day_return_pct": 2.130584192439855,
+              "cumulative_volume_native": 1644746.0,
+              "cumulative_amount_cny": 2381786659.56
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 14.87,
+              "day_return_pct": 2.1993127147766245,
+              "cumulative_volume_native": 1650529.0,
+              "cumulative_amount_cny": 2390371920.68
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 14.86,
+              "day_return_pct": 2.130584192439855,
+              "cumulative_volume_native": 1656418.0,
+              "cumulative_amount_cny": 2399139086.74
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 14.77,
+              "day_return_pct": 1.5120274914089293,
+              "cumulative_volume_native": 1661453.0,
+              "cumulative_amount_cny": 2406587955.79
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 14.86,
+              "day_return_pct": 2.130584192439855,
+              "cumulative_volume_native": 1664142.0,
+              "cumulative_amount_cny": 2410577583.81
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 14.89,
+              "day_return_pct": 2.3367697594501635,
+              "cumulative_volume_native": 1671080.0,
+              "cumulative_amount_cny": 2420898107.64
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 15.05,
+              "day_return_pct": 3.436426116838498,
+              "cumulative_volume_native": 1698535.0,
+              "cumulative_amount_cny": 2462273459.03
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": -0.605652759084796,
+              "post_event_return_pct": 0.6093432633716978,
+              "symmetric_window_return_pct": 0.0
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": -0.672494956287828,
+              "post_event_return_pct": 0.8124576844956044,
+              "symmetric_window_return_pct": 0.13449899125757003
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": -0.605652759084796,
+              "post_event_return_pct": 1.8957345971563955,
+              "symmetric_window_return_pct": 1.2786002691790088
+            }
+          },
+          "close_price": 15.18,
+          "close_return_pct": 4.3298969072164795
+        },
+        {
+          "symbol": "sz002343",
+          "name": "慈文传媒",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.9,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002343.response",
+          "source_raw_sha256": "75c44c203ac484a80dbed3bdfda0b4703d504c663da24f5c11a68d347e0dc0be",
+          "source_requested_at": "2026-10-23T16:24:06.422706+00:00",
+          "source_received_at": "2026-10-23T16:24:09.015980+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 10.32,
+              "day_return_pct": 4.2424242424242475,
+              "cumulative_volume_native": 1843044.0,
+              "cumulative_amount_cny": 1947886248.55
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 10.4,
+              "day_return_pct": 5.050505050505061,
+              "cumulative_volume_native": 1850186.0,
+              "cumulative_amount_cny": 1955283961.57
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 10.39,
+              "day_return_pct": 4.949494949494948,
+              "cumulative_volume_native": 1854912.0,
+              "cumulative_amount_cny": 1960186004.59
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 10.55,
+              "day_return_pct": 6.565656565656575,
+              "cumulative_volume_native": 1861769.0,
+              "cumulative_amount_cny": 1967360001.6
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 10.56,
+              "day_return_pct": 6.666666666666665,
+              "cumulative_volume_native": 1872026.0,
+              "cumulative_amount_cny": 1978250947.59
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 10.76,
+              "day_return_pct": 8.686868686868676,
+              "cumulative_volume_native": 1890429.0,
+              "cumulative_amount_cny": 1997889755.56
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 10.72,
+              "day_return_pct": 8.28282828282829,
+              "cumulative_volume_native": 1909237.0,
+              "cumulative_amount_cny": 2018055365.51
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 1.5399422521655382,
+              "post_event_return_pct": 0.09478672985780978,
+              "symmetric_window_return_pct": 1.6361886429258954
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 1.4423076923076872,
+              "post_event_return_pct": 1.9905213270142053,
+              "symmetric_window_return_pct": 3.4615384615384492
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 2.2286821705426396,
+              "post_event_return_pct": 1.611374407582944,
+              "symmetric_window_return_pct": 3.875968992248069
+            }
+          },
+          "close_price": 10.89,
+          "close_return_pct": 10.000000000000009
+        },
+        {
+          "symbol": "sz002242",
+          "name": "九阳股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 21.71,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002242.response",
+          "source_raw_sha256": "f4f7c4962a36382db3618dd7cd805a271a19074a4b905e58e970b65e7cd6b41b",
+          "source_requested_at": "2026-10-23T16:24:07.088850+00:00",
+          "source_received_at": "2026-10-23T16:24:08.957527+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 21.14,
+              "day_return_pct": -2.6255181943804717,
+              "cumulative_volume_native": 924698.0,
+              "cumulative_amount_cny": 1959252463.98
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 21.18,
+              "day_return_pct": -2.441271303546755,
+              "cumulative_volume_native": 929281.0,
+              "cumulative_amount_cny": 1968935436.98
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 21.3,
+              "day_return_pct": -1.888530631045604,
+              "cumulative_volume_native": 939758.0,
+              "cumulative_amount_cny": 1991320544.96
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 21.4,
+              "day_return_pct": -1.4279134039613228,
+              "cumulative_volume_native": 941888.0,
+              "cumulative_amount_cny": 1995858460.16
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 21.6,
+              "day_return_pct": -0.506678949792716,
+              "cumulative_volume_native": 948497.0,
+              "cumulative_amount_cny": 2010094945.22
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 21.45,
+              "day_return_pct": -1.1976047904191711,
+              "cumulative_volume_native": 955140.0,
+              "cumulative_amount_cny": 2024385690.31
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 21.66,
+              "day_return_pct": -0.2303086135421517,
+              "cumulative_volume_native": 965127.0,
+              "cumulative_amount_cny": 2045908367.81
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.46948356807510194,
+              "post_event_return_pct": 0.9345794392523477,
+              "symmetric_window_return_pct": 1.4084507042253502
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 1.0387157695939564,
+              "post_event_return_pct": 0.23364485981309802,
+              "symmetric_window_return_pct": 1.2747875354107707
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 1.229895931882674,
+              "post_event_return_pct": 1.214953271028052,
+              "symmetric_window_return_pct": 2.4597918637653704
+            }
+          },
+          "close_price": 21.53,
+          "close_return_pct": -0.8291110087517262
+        },
+        {
+          "symbol": "sz002696",
+          "name": "百洋股份",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 9.81,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002696.response",
+          "source_raw_sha256": "20bcab135b2f520dc6793c4e9352363a6e95db5fe7e0bd9b4659dbc0113aa9e1",
+          "source_requested_at": "2026-10-23T16:24:07.057352+00:00",
+          "source_received_at": "2026-10-23T16:24:10.325041+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 10.14,
+              "day_return_pct": 3.3639143730886945,
+              "cumulative_volume_native": 1064703.0,
+              "cumulative_amount_cny": 1083195971.75
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 10.09,
+              "day_return_pct": 2.854230377166145,
+              "cumulative_volume_native": 1067292.0,
+              "cumulative_amount_cny": 1085812442.75
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 10.21,
+              "day_return_pct": 4.0774719673802196,
+              "cumulative_volume_native": 1074243.0,
+              "cumulative_amount_cny": 1092900509.75
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 10.21,
+              "day_return_pct": 4.0774719673802196,
+              "cumulative_volume_native": 1075568.0,
+              "cumulative_amount_cny": 1094251972.75
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 10.41,
+              "day_return_pct": 6.116207951070329,
+              "cumulative_volume_native": 1080887.0,
+              "cumulative_amount_cny": 1099749088.1
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 10.31,
+              "day_return_pct": 5.096839959225274,
+              "cumulative_volume_native": 1087213.0,
+              "cumulative_amount_cny": 1106307458.14
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 10.21,
+              "day_return_pct": 4.0774719673802196,
+              "cumulative_volume_native": 1089343.0,
+              "cumulative_amount_cny": 1108497947.14
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.0,
+              "post_event_return_pct": 1.9588638589618013,
+              "symmetric_window_return_pct": 1.9588638589618013
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": 1.189296333002976,
+              "post_event_return_pct": 0.9794319294808895,
+              "symmetric_window_return_pct": 2.1803766105054523
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.6903353057199135,
+              "post_event_return_pct": 0.0,
+              "symmetric_window_return_pct": 0.6903353057199135
+            }
+          },
+          "close_price": 10.25,
+          "close_return_pct": 4.485219164118237
+        },
+        {
+          "symbol": "sz002185",
+          "name": "华天科技",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 15.55,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002185.response",
+          "source_raw_sha256": "ff1bc5e65072e85cbf80f7305f1a3ab0fda5fa2d50c8bf7e8f6836e6226cdbfa",
+          "source_requested_at": "2026-10-23T16:24:07.709654+00:00",
+          "source_received_at": "2026-10-23T16:24:09.315204+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 16.24,
+              "day_return_pct": 4.437299035369757,
+              "cumulative_volume_native": 4171027.0,
+              "cumulative_amount_cny": 6598765859.39
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 16.25,
+              "day_return_pct": 4.5016077170418,
+              "cumulative_volume_native": 4182350.0,
+              "cumulative_amount_cny": 6617151719.42
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 16.23,
+              "day_return_pct": 4.372990353697737,
+              "cumulative_volume_native": 4194100.0,
+              "cumulative_amount_cny": 6636234715.49
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 16.21,
+              "day_return_pct": 4.244372990353695,
+              "cumulative_volume_native": 4201412.0,
+              "cumulative_amount_cny": 6648087516.51
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 16.18,
+              "day_return_pct": 4.051446945337611,
+              "cumulative_volume_native": 4206660.0,
+              "cumulative_amount_cny": 6656584520.52
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 16.2,
+              "day_return_pct": 4.1800643086816525,
+              "cumulative_volume_native": 4218732.0,
+              "cumulative_amount_cny": 6676125875.54
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 16.23,
+              "day_return_pct": 4.372990353697737,
+              "cumulative_volume_native": 4229973.0,
+              "cumulative_amount_cny": 6694350855.57
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": -0.12322858903265343,
+              "post_event_return_pct": -0.18507094386182033,
+              "symmetric_window_return_pct": -0.30807147258163914
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": -0.2461538461538404,
+              "post_event_return_pct": -0.061690314620610476,
+              "symmetric_window_return_pct": -0.3076923076923088
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": -0.1847290640393906,
+              "post_event_return_pct": 0.12338062924119875,
+              "symmetric_window_return_pct": -0.061576354679793166
+            }
+          },
+          "close_price": 16.19,
+          "close_return_pct": 4.115755627009654
+        },
+        {
+          "symbol": "sz002156",
+          "name": "通富微电",
+          "source": "TENCENT_MINUTE_POINTS",
+          "quote_date": "20261023",
+          "previous_close": 47.8,
+          "source_raw_path": "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\sz002156.response",
+          "source_raw_sha256": "97f896b61c4d6f915f664959bb49577796ebe3e687f9bd2431ccf742ae5581ac",
+          "source_requested_at": "2026-10-23T16:24:08.239927+00:00",
+          "source_received_at": "2026-10-23T16:24:11.043939+00:00",
+          "samples": {
+            "-5": {
+              "offset_clock_minutes": -5,
+              "time": "1421",
+              "valid_same_trading_session": true,
+              "raw_price": 48.06,
+              "day_return_pct": 0.5439330543933085,
+              "cumulative_volume_native": 672585.0,
+              "cumulative_amount_cny": 3106910966.42
+            },
+            "-3": {
+              "offset_clock_minutes": -3,
+              "time": "1423",
+              "valid_same_trading_session": true,
+              "raw_price": 48.3,
+              "day_return_pct": 1.0460251046025215,
+              "cumulative_volume_native": 684111.0,
+              "cumulative_amount_cny": 3162517838.8
+            },
+            "-1": {
+              "offset_clock_minutes": -1,
+              "time": "1425",
+              "valid_same_trading_session": true,
+              "raw_price": 48.01,
+              "day_return_pct": 0.4393305439330586,
+              "cumulative_volume_native": 690961.0,
+              "cumulative_amount_cny": 3195500802.01
+            },
+            "0": {
+              "offset_clock_minutes": 0,
+              "time": "1426",
+              "valid_same_trading_session": true,
+              "raw_price": 48.08,
+              "day_return_pct": 0.585774058577404,
+              "cumulative_volume_native": 694052.0,
+              "cumulative_amount_cny": 3210344980.1
+            },
+            "1": {
+              "offset_clock_minutes": 1,
+              "time": "1427",
+              "valid_same_trading_session": true,
+              "raw_price": 48.13,
+              "day_return_pct": 0.6903765690376762,
+              "cumulative_volume_native": 696344.0,
+              "cumulative_amount_cny": 3221374269.16
+            },
+            "3": {
+              "offset_clock_minutes": 3,
+              "time": "1429",
+              "valid_same_trading_session": true,
+              "raw_price": 48.03,
+              "day_return_pct": 0.4811715481171541,
+              "cumulative_volume_native": 700442.0,
+              "cumulative_amount_cny": 3241086935.28
+            },
+            "5": {
+              "offset_clock_minutes": 5,
+              "time": "1431",
+              "valid_same_trading_session": true,
+              "raw_price": 48.16,
+              "day_return_pct": 0.7531380753138084,
+              "cumulative_volume_native": 704808.0,
+              "cumulative_amount_cny": 3262092410.41
+            }
+          },
+          "windows": {
+            "1": {
+              "from_time": "1425",
+              "event_time": "1426",
+              "to_time": "1427",
+              "pre_event_return_pct": 0.1458029577171338,
+              "post_event_return_pct": 0.10399334442596775,
+              "symmetric_window_return_pct": 0.24994792751511508
+            },
+            "3": {
+              "from_time": "1423",
+              "event_time": "1426",
+              "to_time": "1429",
+              "pre_event_return_pct": -0.4554865424430621,
+              "post_event_return_pct": -0.10399334442594554,
+              "symmetric_window_return_pct": -0.5590062111801131
+            },
+            "5": {
+              "from_time": "1421",
+              "event_time": "1426",
+              "to_time": "1431",
+              "pre_event_return_pct": 0.04161464835621409,
+              "post_event_return_pct": 0.16638935108153063,
+              "symmetric_window_return_pct": 0.20807324178109265
+            }
+          },
+          "close_price": 48.32,
+          "close_return_pct": 1.087866108786617
+        }
+      ]
+    }
+  ],
+  "source_receipt_bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\capture_receipt.json": "390230ba1ad1ff0a31c5a7a13ee5b0564ec29cd91430aaf5603b9f7f26c4890e",
+    "D:\\Documents\\ChatGPT\\龙头战法\\results\\daily_review_20261023T1621Z\\minutes\\additional_capture_receipt.json": "a8d2d81f69a8646ae3205d24829b6bbdaca7f7ff393c19c3b017c0a61d87bb92"
+  },
+  "interpretation_limit": "Timed co-movement and counterexamples only; no account-level capital migration or causal attribution",
+  "network_requests": 0,
+  "models_seen_or_loaded": false
+}

@@ -1,0 +1,764 @@
+{
+  "timestamp": "2026-10-29T19:31:06.522061+00:00",
+  "status": "RESEARCH_ONLY_NOT_VALIDATED_FOR_PRODUCTION",
+  "fits": 0,
+  "models_used": [
+    "research/first_board_leader_20261020T114600Z/first_board_leader_bundle.joblib (44-feature legacy height model)",
+    "research/first_second_stage_20261020_run1/first_second_stage_bundle.joblib (S1 promotion model)"
+  ],
+  "qualified_candidates_count": 7254,
+  "trading_days_count": 286,
+  "daily_pool_range": "7 to 72 stocks (median 24)",
+  "benchmark_summary": [
+    {
+      "name": "1. 旧高度模型未筛选 (基准对照)",
+      "config_desc": "未筛选高度排序，日线开盘情景，单笔上限20%权益；无竞价审核或打板成交证据",
+      "top1_1to2_pct": 37.89473684210527,
+      "top1_reach4_pct": 7.2202166064981945,
+      "top3_1to2_pct": 27.719298245614034,
+      "top3_reach4_pct": 6.085918854415275,
+      "top3_reach4_hits": 51,
+      "trades_count": 214,
+      "win_rate_pct": 38.78504672897196,
+      "total_return_pct": -52.70553246299996,
+      "max_drawdown_pct": -53.41751324606293,
+      "profit_factor": 0.5807079189776418,
+      "total_net_pnl_cny": -529977.62136,
+      "blocked_exit_count": 11,
+      "average_win_loss_ratio": 0.9828045977915411
+    },
+    {
+      "name": "2. 原筛选纯高度 (w=0.0)",
+      "config_desc": "仅原筛选，纯高度模型得分",
+      "top1_1to2_pct": 32.280701754385966,
+      "top1_reach4_pct": 6.83453237410072,
+      "top3_1to2_pct": 25.878220140515225,
+      "top3_reach4_pct": 6.563245823389022,
+      "top3_reach4_hits": 55,
+      "trades_count": 226,
+      "win_rate_pct": 37.610619469026545,
+      "total_return_pct": -49.099042044000015,
+      "max_drawdown_pct": -49.099042044000015,
+      "profit_factor": 0.624786410360599,
+      "total_net_pnl_cny": -487122.62492,
+      "blocked_exit_count": 13,
+      "average_win_loss_ratio": 1.116507552562086
+    },
+    {
+      "name": "3. 原筛选纯晋级S1 (w=1.0)",
+      "config_desc": "仅原筛选，纯S1晋级模型得分",
+      "top1_1to2_pct": 37.32394366197183,
+      "top1_reach4_pct": 8.633093525179856,
+      "top3_1to2_pct": 30.633802816901408,
+      "top3_reach4_pct": 6.235011990407674,
+      "top3_reach4_hits": 52,
+      "trades_count": 207,
+      "win_rate_pct": 35.26570048309179,
+      "total_return_pct": -36.84614996400012,
+      "max_drawdown_pct": -45.90072669051064,
+      "profit_factor": 0.7745471751290164,
+      "total_net_pnl_cny": -380631.4812400002,
+      "blocked_exit_count": 8,
+      "average_win_loss_ratio": 1.4155837228373107
+    },
+    {
+      "name": "4. 抓手1：双目标融合 (w=0.5)",
+      "config_desc": "双目标等权融合：0.5*S1 + 0.5*Height",
+      "top1_1to2_pct": 36.140350877192986,
+      "top1_reach4_pct": 7.885304659498208,
+      "top3_1to2_pct": 28.10304449648712,
+      "top3_reach4_pct": 6.451612903225806,
+      "top3_reach4_hits": 54,
+      "trades_count": 212,
+      "win_rate_pct": 34.90566037735849,
+      "total_return_pct": -49.56924302899996,
+      "max_drawdown_pct": -52.87574158471116,
+      "profit_factor": 0.6382639650969641,
+      "total_net_pnl_cny": -497353.43828999985,
+      "blocked_exit_count": 12,
+      "average_win_loss_ratio": 1.2140493751681056
+    },
+    {
+      "name": "5. 抓手1：双目标融合 (w=0.7)",
+      "config_desc": "双目标偏晋级融合：0.7*S1 + 0.3*Height",
+      "top1_1to2_pct": 35.43859649122807,
+      "top1_reach4_pct": 7.553956834532374,
+      "top3_1to2_pct": 29.66002344665885,
+      "top3_reach4_pct": 6.8181818181818175,
+      "top3_reach4_hits": 57,
+      "trades_count": 216,
+      "win_rate_pct": 32.407407407407405,
+      "total_return_pct": -53.457368110999994,
+      "max_drawdown_pct": -56.6210223105436,
+      "profit_factor": 0.6338261052328749,
+      "total_net_pnl_cny": -536081.43521,
+      "blocked_exit_count": 12,
+      "average_win_loss_ratio": 1.310719662952881
+    },
+    {
+      "name": "6. 抓手1+4：双目标(w=0.5)+情绪防守",
+      "config_desc": "双目标融合 + 极端退潮期空仓防守",
+      "top1_1to2_pct": 36.140350877192986,
+      "top1_reach4_pct": 7.885304659498208,
+      "top3_1to2_pct": 28.10304449648712,
+      "top3_reach4_pct": 6.451612903225806,
+      "top3_reach4_hits": 54,
+      "trades_count": 161,
+      "win_rate_pct": 33.54037267080746,
+      "total_return_pct": -46.56373775600001,
+      "max_drawdown_pct": -48.58185854445512,
+      "profit_factor": 0.5379143108854009,
+      "total_net_pnl_cny": -467344.7492599998,
+      "blocked_exit_count": 11,
+      "average_win_loss_ratio": 1.1313664856101575
+    },
+    {
+      "name": "7. 抓手1+4：双目标(w=0.7)+情绪防守",
+      "config_desc": "双目标融合(0.7) + 极端退潮期空仓防守",
+      "top1_1to2_pct": 35.43859649122807,
+      "top1_reach4_pct": 7.553956834532374,
+      "top3_1to2_pct": 29.66002344665885,
+      "top3_reach4_pct": 6.8181818181818175,
+      "top3_reach4_hits": 57,
+      "trades_count": 163,
+      "win_rate_pct": 30.67484662576687,
+      "total_return_pct": -47.87816507499999,
+      "max_drawdown_pct": -49.89080488626383,
+      "profit_factor": 0.5573135564530246,
+      "total_net_pnl_cny": -480492.5631499998,
+      "blocked_exit_count": 11,
+      "average_win_loss_ratio": 1.293818741236459
+    },
+    {
+      "name": "8. 四项规则研究方案 (未通过生产验收)",
+      "config_desc": "融合0.5 + 静态行业代理调整 + 封板规则(历史缺字段) + 防守；研究用",
+      "top1_1to2_pct": 36.49122807017544,
+      "top1_reach4_pct": 6.810035842293908,
+      "top3_1to2_pct": 27.90152403282532,
+      "top3_reach4_pct": 6.578947368421052,
+      "top3_reach4_hits": 55,
+      "trades_count": 161,
+      "win_rate_pct": 32.298136645962735,
+      "total_return_pct": -52.62883760300006,
+      "max_drawdown_pct": -54.34583856081547,
+      "profit_factor": 0.46549590371927135,
+      "total_net_pnl_cny": -527794.3597799998,
+      "blocked_exit_count": 11,
+      "average_win_loss_ratio": 1.073094223733548
+    }
+  ],
+  "dual_accounting_summary": {
+    "total_decisions": 7254,
+    "excluded_by_screen_or_veto": 226,
+    "promoted_from_below": 168,
+    "defended_decisions": 189,
+    "four_dimensional_defense_audit": {
+      "avoided_negative_trades_count": 31,
+      "avoided_loss_cny": 291766.98853,
+      "killed_profitable_trades_count": 21,
+      "killed_profit_cny": 275110.80478,
+      "missed_four_board_dragons": 13,
+      "removed_baseline_trade_net_loss_cny": 16656.183749999967,
+      "no_scenario_record_count": 0,
+      "scenario_status_counts": {
+        "NOT_TOP1_SCENARIO_CANDIDATE": 126,
+        "SCENARIO_CLOSED": 52,
+        "OPEN_AT_UPPER_LIMIT_NO_QUEUE_ASSUMPTION": 8,
+        "ENTRY_LOT_OR_SLIPPAGE_LIMIT_CANCEL": 3
+      },
+      "defended_dates": 63
+    },
+    "ranking_changes_before_defense": {
+      "promoted_into_top3": 226,
+      "displaced_from_top3": 226,
+      "promoted_four_board_paths": 11,
+      "displaced_four_board_paths": 11
+    },
+    "interpretation": "被过滤交易盈亏须来自同一排序关闭防守的对照；金额只描述对照中的仓位，不是开启防守后的组合净贡献。Top3路径与Top1开盘交易情景分别核算。",
+    "paired_portfolio_defense_effect": {
+      "control": "SAME_COMPREHENSIVE_RANKING_DEFENSE_OFF",
+      "off_closed_trades": 213,
+      "on_closed_trades": 161,
+      "off_selected_dates": 286,
+      "on_selected_dates": 223,
+      "off_total_return_pct": -55.52561550700004,
+      "on_total_return_pct": -52.62883760300006,
+      "equity_change_cny": 28967.779039999827,
+      "drawdown_change_pp": 3.6536433644521438,
+      "interpretation": "配对组合期末权益差，包含防守导致的现金与后续仓位变化；不等于过滤交易金额简单加总"
+    }
+  },
+  "method_metrics_with_coverage": {
+    "2. 原筛选纯高度 (w=0.0)": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 92,
+          "known": 285,
+          "unknown": 1,
+          "precision": 0.32280701754385965
+        },
+        "reach4": {
+          "hits": 19,
+          "known": 278,
+          "unknown": 8,
+          "precision": 0.0683453237410072
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 221,
+          "known": 854,
+          "unknown": 4,
+          "precision": 0.25878220140515223
+        },
+        "reach4": {
+          "hits": 55,
+          "known": 838,
+          "unknown": 20,
+          "precision": 0.06563245823389022
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 221,
+          "known": 854,
+          "unknown": 4,
+          "precision": 0.25878220140515223
+        },
+        "reach4": {
+          "hits": 55,
+          "known": 838,
+          "unknown": 20,
+          "precision": 0.06563245823389022
+        }
+      },
+      "abstained_dates": 0,
+      "unfilled_top3_slots": 0,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    },
+    "3. 原筛选纯晋级S1 (w=1.0)": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 106,
+          "known": 284,
+          "unknown": 2,
+          "precision": 0.3732394366197183
+        },
+        "reach4": {
+          "hits": 24,
+          "known": 278,
+          "unknown": 8,
+          "precision": 0.08633093525179857
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 261,
+          "known": 852,
+          "unknown": 6,
+          "precision": 0.30633802816901406
+        },
+        "reach4": {
+          "hits": 52,
+          "known": 834,
+          "unknown": 24,
+          "precision": 0.06235011990407674
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 261,
+          "known": 852,
+          "unknown": 6,
+          "precision": 0.30633802816901406
+        },
+        "reach4": {
+          "hits": 52,
+          "known": 834,
+          "unknown": 24,
+          "precision": 0.06235011990407674
+        }
+      },
+      "abstained_dates": 0,
+      "unfilled_top3_slots": 0,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    },
+    "4. 抓手1：双目标融合 (w=0.5)": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 103,
+          "known": 285,
+          "unknown": 1,
+          "precision": 0.36140350877192984
+        },
+        "reach4": {
+          "hits": 22,
+          "known": 279,
+          "unknown": 7,
+          "precision": 0.07885304659498207
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 240,
+          "known": 854,
+          "unknown": 4,
+          "precision": 0.2810304449648712
+        },
+        "reach4": {
+          "hits": 54,
+          "known": 837,
+          "unknown": 21,
+          "precision": 0.06451612903225806
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 240,
+          "known": 854,
+          "unknown": 4,
+          "precision": 0.2810304449648712
+        },
+        "reach4": {
+          "hits": 54,
+          "known": 837,
+          "unknown": 21,
+          "precision": 0.06451612903225806
+        }
+      },
+      "abstained_dates": 0,
+      "unfilled_top3_slots": 0,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    },
+    "5. 抓手1：双目标融合 (w=0.7)": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 101,
+          "known": 285,
+          "unknown": 1,
+          "precision": 0.3543859649122807
+        },
+        "reach4": {
+          "hits": 21,
+          "known": 278,
+          "unknown": 8,
+          "precision": 0.07553956834532374
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 253,
+          "known": 853,
+          "unknown": 5,
+          "precision": 0.2966002344665885
+        },
+        "reach4": {
+          "hits": 57,
+          "known": 836,
+          "unknown": 22,
+          "precision": 0.06818181818181818
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 253,
+          "known": 853,
+          "unknown": 5,
+          "precision": 0.2966002344665885
+        },
+        "reach4": {
+          "hits": 57,
+          "known": 836,
+          "unknown": 22,
+          "precision": 0.06818181818181818
+        }
+      },
+      "abstained_dates": 0,
+      "unfilled_top3_slots": 0,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    },
+    "6. 抓手1+4：双目标(w=0.5)+情绪防守": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 103,
+          "known": 285,
+          "unknown": 1,
+          "precision": 0.36140350877192984
+        },
+        "reach4": {
+          "hits": 22,
+          "known": 279,
+          "unknown": 7,
+          "precision": 0.07885304659498207
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 240,
+          "known": 854,
+          "unknown": 4,
+          "precision": 0.2810304449648712
+        },
+        "reach4": {
+          "hits": 54,
+          "known": 837,
+          "unknown": 21,
+          "precision": 0.06451612903225806
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 669,
+        "selected_dates": 223,
+        "promotion": {
+          "hits": 185,
+          "known": 665,
+          "unknown": 4,
+          "precision": 0.2781954887218045
+        },
+        "reach4": {
+          "hits": 43,
+          "known": 648,
+          "unknown": 21,
+          "precision": 0.06635802469135803
+        }
+      },
+      "abstained_dates": 63,
+      "unfilled_top3_slots": 189,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    },
+    "7. 抓手1+4：双目标(w=0.7)+情绪防守": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 101,
+          "known": 285,
+          "unknown": 1,
+          "precision": 0.3543859649122807
+        },
+        "reach4": {
+          "hits": 21,
+          "known": 278,
+          "unknown": 8,
+          "precision": 0.07553956834532374
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 253,
+          "known": 853,
+          "unknown": 5,
+          "precision": 0.2966002344665885
+        },
+        "reach4": {
+          "hits": 57,
+          "known": 836,
+          "unknown": 22,
+          "precision": 0.06818181818181818
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 669,
+        "selected_dates": 223,
+        "promotion": {
+          "hits": 197,
+          "known": 665,
+          "unknown": 4,
+          "precision": 0.2962406015037594
+        },
+        "reach4": {
+          "hits": 45,
+          "known": 648,
+          "unknown": 21,
+          "precision": 0.06944444444444445
+        }
+      },
+      "abstained_dates": 63,
+      "unfilled_top3_slots": 189,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    },
+    "8. 四项规则研究方案 (未通过生产验收)": {
+      "all_signal_days": 286,
+      "full_date_top1_ranking": {
+        "selected_count": 286,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 104,
+          "known": 285,
+          "unknown": 1,
+          "precision": 0.3649122807017544
+        },
+        "reach4": {
+          "hits": 19,
+          "known": 279,
+          "unknown": 7,
+          "precision": 0.06810035842293907
+        }
+      },
+      "full_date_top3_ranking": {
+        "selected_count": 858,
+        "selected_dates": 286,
+        "promotion": {
+          "hits": 238,
+          "known": 853,
+          "unknown": 5,
+          "precision": 0.2790152403282532
+        },
+        "reach4": {
+          "hits": 55,
+          "known": 836,
+          "unknown": 22,
+          "precision": 0.06578947368421052
+        }
+      },
+      "post_defense_selected": {
+        "selected_count": 669,
+        "selected_dates": 223,
+        "promotion": {
+          "hits": 181,
+          "known": 664,
+          "unknown": 5,
+          "precision": 0.27259036144578314
+        },
+        "reach4": {
+          "hits": 42,
+          "known": 647,
+          "unknown": 22,
+          "precision": 0.06491499227202473
+        }
+      },
+      "abstained_dates": 63,
+      "unfilled_top3_slots": 189,
+      "seal_first_observed_rows": 0,
+      "vetoed_rows": 0,
+      "exempt_rows": 0
+    }
+  },
+  "scenario_reports": {
+    "2. 原筛选纯高度 (w=0.0)": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 286,
+      "closed_trades": 226,
+      "open_unresolved": 2,
+      "skipped_or_cancelled": 58,
+      "total_return_pct": -49.099042044000015,
+      "max_drawdown_pct": -49.099042044000015,
+      "win_rate_pct": 37.610619469026545,
+      "profit_factor": 0.624786410360599,
+      "average_win_loss_ratio": 1.116507552562086,
+      "total_net_pnl_cny": -487122.62492,
+      "average_trade_pct": -1.36736852785726,
+      "average_win_pct": 7.484871679479335,
+      "average_loss_pct": -6.70382539043606,
+      "worst_trade_pct": -22.222343198975615,
+      "blocked_exit_count": 13
+    },
+    "3. 原筛选纯晋级S1 (w=1.0)": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 286,
+      "closed_trades": 207,
+      "open_unresolved": 1,
+      "skipped_or_cancelled": 78,
+      "total_return_pct": -36.84614996400012,
+      "max_drawdown_pct": -45.90072669051064,
+      "win_rate_pct": 35.26570048309179,
+      "profit_factor": 0.7745471751290164,
+      "average_win_loss_ratio": 1.4155837228373107,
+      "total_net_pnl_cny": -380631.4812400002,
+      "average_trade_pct": -1.0469714773193175,
+      "average_win_pct": 10.005407421450233,
+      "average_loss_pct": -7.068043563962431,
+      "worst_trade_pct": -28.937491710498055,
+      "blocked_exit_count": 8
+    },
+    "4. 抓手1：双目标融合 (w=0.5)": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 286,
+      "closed_trades": 212,
+      "open_unresolved": 2,
+      "skipped_or_cancelled": 72,
+      "total_return_pct": -49.56924302899996,
+      "max_drawdown_pct": -52.87574158471116,
+      "win_rate_pct": 34.90566037735849,
+      "profit_factor": 0.6382639650969641,
+      "average_win_loss_ratio": 1.2140493751681056,
+      "total_net_pnl_cny": -497353.43828999985,
+      "average_trade_pct": -1.5118864973450599,
+      "average_win_pct": 8.079822097936166,
+      "average_loss_pct": -6.6552664687277465,
+      "worst_trade_pct": -22.222343198975615,
+      "blocked_exit_count": 12
+    },
+    "5. 抓手1：双目标融合 (w=0.7)": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 286,
+      "closed_trades": 216,
+      "open_unresolved": 2,
+      "skipped_or_cancelled": 68,
+      "total_return_pct": -53.457368110999994,
+      "max_drawdown_pct": -56.6210223105436,
+      "win_rate_pct": 32.407407407407405,
+      "profit_factor": 0.6338261052328749,
+      "average_win_loss_ratio": 1.310719662952881,
+      "total_net_pnl_cny": -536081.43521,
+      "average_trade_pct": -1.6974127220254474,
+      "average_win_pct": 8.858379653990319,
+      "average_loss_pct": -6.7584090666905405,
+      "worst_trade_pct": -22.222343198975615,
+      "blocked_exit_count": 12
+    },
+    "6. 抓手1+4：双目标(w=0.5)+情绪防守": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 223,
+      "closed_trades": 161,
+      "open_unresolved": 2,
+      "skipped_or_cancelled": 60,
+      "total_return_pct": -46.56373775600001,
+      "max_drawdown_pct": -48.58185854445512,
+      "win_rate_pct": 33.54037267080746,
+      "profit_factor": 0.5379143108854009,
+      "average_win_loss_ratio": 1.1313664856101575,
+      "total_net_pnl_cny": -467344.7492599998,
+      "average_trade_pct": -1.852415694693505,
+      "average_win_pct": 7.350149972655505,
+      "average_loss_pct": -6.49670117167338,
+      "worst_trade_pct": -22.222343198975615,
+      "blocked_exit_count": 11
+    },
+    "7. 抓手1+4：双目标(w=0.7)+情绪防守": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 223,
+      "closed_trades": 163,
+      "open_unresolved": 2,
+      "skipped_or_cancelled": 58,
+      "total_return_pct": -47.87816507499999,
+      "max_drawdown_pct": -49.89080488626383,
+      "win_rate_pct": 30.67484662576687,
+      "profit_factor": 0.5573135564530246,
+      "average_win_loss_ratio": 1.293818741236459,
+      "total_net_pnl_cny": -480492.5631499998,
+      "average_trade_pct": -1.9252671595883497,
+      "average_win_pct": 8.404723519321646,
+      "average_loss_pct": -6.496059495389233,
+      "worst_trade_pct": -22.222343198975615,
+      "blocked_exit_count": 11
+    },
+    "8. 四项规则研究方案 (未通过生产验收)": {
+      "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+      "auction_verified": false,
+      "queue_or_intraday_fills_verified": false,
+      "selected_count": 223,
+      "closed_trades": 161,
+      "open_unresolved": 2,
+      "skipped_or_cancelled": 60,
+      "total_return_pct": -52.62883760300006,
+      "max_drawdown_pct": -54.34583856081547,
+      "win_rate_pct": 32.298136645962735,
+      "profit_factor": 0.46549590371927135,
+      "average_win_loss_ratio": 1.073094223733548,
+      "total_net_pnl_cny": -527794.3597799998,
+      "average_trade_pct": -2.2202522620647374,
+      "average_win_pct": 7.210439982333459,
+      "average_loss_pct": -6.719298103429015,
+      "worst_trade_pct": -22.222343198975615,
+      "blocked_exit_count": 11
+    }
+  },
+  "same_ranking_defense_off_report": {
+    "scenario_type": "DAILY_OPEN_TO_B_PLUS_N_CLOSE_NOT_BOARD_FILL",
+    "auction_verified": false,
+    "queue_or_intraday_fills_verified": false,
+    "selected_count": 286,
+    "closed_trades": 213,
+    "open_unresolved": 2,
+    "skipped_or_cancelled": 71,
+    "total_return_pct": -55.52561550700004,
+    "max_drawdown_pct": -57.99948192526762,
+    "win_rate_pct": 34.27230046948357,
+    "profit_factor": 0.573322158929842,
+    "average_win_loss_ratio": 1.1459116254462878,
+    "total_net_pnl_cny": -556660.5596700002,
+    "average_trade_pct": -1.8083944086523516,
+    "average_win_pct": 7.833248421727842,
+    "average_loss_pct": -6.835822455922025,
+    "worst_trade_pct": -22.222343198975626,
+    "blocked_exit_count": 12
+  },
+  "sector_source": "STATIC_2021_VINTAGE_PROXY_COUNTED_IN_QUALIFIED_FIRST_BOARD_POOL_NOT_CURRENT_THEME_OR_FULL_LADDER",
+  "historical_seal_evidence_available": false,
+  "scenario_type": "DAILY_OPEN_ENTRY_B_PLUS_2_CLOSE_NOT_AUCTION_OR_BOARD_TRIGGER_FILL",
+  "out_of_sample_upgrade_validated": false,
+  "production_changed": false,
+  "source_hashes": {
+    "screen": "83ed8a7f209412a5d648b0b505df4f4224cdb52b57b592eb109996a72142eb91",
+    "height_preds": "b80ec45d3b8a56ee1e9f473a6f18486bccad71cdafc5a4905f2615f0440cd8a5",
+    "s1_preds": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c",
+    "scenario_trades": "c5a38f14e6b27e5b5558323a5c972fbc2fcb6ee817078b2780e1f723473999d4",
+    "calendar": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "engine": "7fbf4d05fbee59fbde79c8e0f5e8e8b718c361c9eab751889374f64a45413990",
+    "benchmark": "64f49625d09441cd9c951933dfa5f83c2805b1c9e237f0e14fda8b20f1c8ecb5",
+    "facts_1028": "84afa81d1c2df764e9a1c1acfe92458492d84b92b2c1fd5928c225636b1b9faf"
+  },
+  "live_1028_cards_generated": 51,
+  "actual_auction_reviews": 0
+}

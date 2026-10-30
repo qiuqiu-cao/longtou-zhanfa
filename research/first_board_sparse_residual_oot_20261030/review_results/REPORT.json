@@ -1,0 +1,1068 @@
+{
+  "protocol": {
+    "created_at": "2026-10-30T11:13:06.139102+00:00",
+    "action": "SAVED_FOUR_DECIMAL_COEFFICIENT_REPLAY_ONLY",
+    "market_fits": 0,
+    "source_hashes": {
+      "research\\first_board_sparse_residual_oot_20261030\\review_source_snapshot\\REPORT.json": "5c3c79e372ef91d8400cb797f6dfa625d0355bfc11402d026379de058525da0f",
+      "research\\first_board_top3_40_20261030\\results\\FULL_POOL_EXISTING_EVIDENCE_NO_LABELS.csv": "d9a91ccfb0f55d06d9a04a1dd115a18c691c57ee457f36a8d2ee51cd60c895ed",
+      "research\\first_board_top3_40_20261030\\results\\OUTCOMES_DIAGNOSTIC_ONLY.csv": "e8f3e9956e3c196fe6872e5b5a0ab6f064bbaea461f487a2b978db110bbe1964",
+      "research\\first_board_sparse_residual_oot_20261030\\residual_core.py": "f25b7e3a260316e43a673fe9a6739349e430cfcddb706208e1a8f880b1a43f49",
+      "research\\first_board_sparse_residual_oot_20261030\\review_residual_arms.py": "9b7da337b1b9e23c67da97975e3a896956d00997c2a672bb1dcde88cb6c4df13",
+      "research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c"
+    },
+    "original_cutoff": "2026-04-30",
+    "evaluation_start": "2026-05-06",
+    "full_precision_weights_available": false,
+    "independent_blind_test": false,
+    "fixes_do_not_remove_original_fit_contamination": true
+  },
+  "results": {
+    "S1_BASELINE": {
+      "NOMINAL_TRAIN": {
+        "dates": 203,
+        "slots": 609,
+        "selected": 609,
+        "known": 608,
+        "unknown": 1,
+        "unfilled_slots": 0,
+        "hits": 190,
+        "known_precision": 0.3125,
+        "confirmed_hits_per_all_slots": 0.31198686371100165,
+        "possible_hits_per_all_slots": 0.3136288998357964,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 54,
+        "extra_hits_for_all_slots_target": 54,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 43,
+        "reach4_known": 603,
+        "by_slot": {
+          "1": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 77
+          },
+          "2": {
+            "selected": 203,
+            "known": 202,
+            "unknown": 1,
+            "hits": 56
+          },
+          "3": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 57
+          }
+        },
+        "non_one_price": {
+          "selected": 524,
+          "known": 523,
+          "hits": 141,
+          "unknown": 1
+        },
+        "one_price": {
+          "selected": 85,
+          "known": 85,
+          "hits": 49,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "dates": 83,
+        "slots": 249,
+        "selected": 249,
+        "known": 244,
+        "unknown": 5,
+        "unfilled_slots": 0,
+        "hits": 71,
+        "known_precision": 0.29098360655737704,
+        "confirmed_hits_per_all_slots": 0.285140562248996,
+        "possible_hits_per_all_slots": 0.30522088353413657,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 27,
+        "extra_hits_for_all_slots_target": 29,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 9,
+        "reach4_known": 231,
+        "by_slot": {
+          "1": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 29
+          },
+          "2": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 24
+          },
+          "3": {
+            "selected": 83,
+            "known": 82,
+            "unknown": 1,
+            "hits": 18
+          }
+        },
+        "non_one_price": {
+          "selected": 206,
+          "known": 201,
+          "hits": 51,
+          "unknown": 5
+        },
+        "one_price": {
+          "selected": 43,
+          "known": 43,
+          "hits": 20,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 852,
+        "unknown": 6,
+        "unfilled_slots": 0,
+        "hits": 261,
+        "known_precision": 0.30633802816901406,
+        "confirmed_hits_per_all_slots": 0.3041958041958042,
+        "possible_hits_per_all_slots": 0.3111888111888112,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 80,
+        "extra_hits_for_all_slots_target": 83,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 52,
+        "reach4_known": 834,
+        "by_slot": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 106
+          },
+          "2": {
+            "selected": 286,
+            "known": 283,
+            "unknown": 3,
+            "hits": 80
+          },
+          "3": {
+            "selected": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 75
+          }
+        },
+        "non_one_price": {
+          "selected": 730,
+          "known": 724,
+          "hits": 192,
+          "unknown": 6
+        },
+        "one_price": {
+          "selected": 128,
+          "known": 128,
+          "hits": 69,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      }
+    },
+    "ARM_A_ORIGINAL_IMPUTATION_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "dates": 203,
+        "slots": 609,
+        "selected": 609,
+        "known": 608,
+        "unknown": 1,
+        "unfilled_slots": 0,
+        "hits": 203,
+        "known_precision": 0.3338815789473684,
+        "confirmed_hits_per_all_slots": 0.3333333333333333,
+        "possible_hits_per_all_slots": 0.33497536945812806,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 41,
+        "extra_hits_for_all_slots_target": 41,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 49,
+        "reach4_known": 603,
+        "by_slot": {
+          "1": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 78
+          },
+          "2": {
+            "selected": 203,
+            "known": 202,
+            "unknown": 1,
+            "hits": 60
+          },
+          "3": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 65
+          }
+        },
+        "non_one_price": {
+          "selected": 517,
+          "known": 516,
+          "hits": 153,
+          "unknown": 1
+        },
+        "one_price": {
+          "selected": 92,
+          "known": 92,
+          "hits": 50,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "dates": 83,
+        "slots": 249,
+        "selected": 249,
+        "known": 243,
+        "unknown": 6,
+        "unfilled_slots": 0,
+        "hits": 70,
+        "known_precision": 0.2880658436213992,
+        "confirmed_hits_per_all_slots": 0.28112449799196787,
+        "possible_hits_per_all_slots": 0.30522088353413657,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 28,
+        "extra_hits_for_all_slots_target": 30,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 9,
+        "reach4_known": 231,
+        "by_slot": {
+          "1": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 29
+          },
+          "2": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 22
+          },
+          "3": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 19
+          }
+        },
+        "non_one_price": {
+          "selected": 202,
+          "known": 196,
+          "hits": 50,
+          "unknown": 6
+        },
+        "one_price": {
+          "selected": 47,
+          "known": 47,
+          "hits": 20,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 851,
+        "unknown": 7,
+        "unfilled_slots": 0,
+        "hits": 273,
+        "known_precision": 0.3207990599294947,
+        "confirmed_hits_per_all_slots": 0.3181818181818182,
+        "possible_hits_per_all_slots": 0.32634032634032634,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 68,
+        "extra_hits_for_all_slots_target": 71,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 58,
+        "reach4_known": 834,
+        "by_slot": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 107
+          },
+          "2": {
+            "selected": 286,
+            "known": 283,
+            "unknown": 3,
+            "hits": 82
+          },
+          "3": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 84
+          }
+        },
+        "non_one_price": {
+          "selected": 719,
+          "known": 712,
+          "hits": 203,
+          "unknown": 7
+        },
+        "one_price": {
+          "selected": 139,
+          "known": 139,
+          "hits": 70,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      }
+    },
+    "ARM_A_NEUTRAL_MISSING_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "dates": 203,
+        "slots": 609,
+        "selected": 609,
+        "known": 608,
+        "unknown": 1,
+        "unfilled_slots": 0,
+        "hits": 203,
+        "known_precision": 0.3338815789473684,
+        "confirmed_hits_per_all_slots": 0.3333333333333333,
+        "possible_hits_per_all_slots": 0.33497536945812806,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 41,
+        "extra_hits_for_all_slots_target": 41,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 49,
+        "reach4_known": 603,
+        "by_slot": {
+          "1": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 78
+          },
+          "2": {
+            "selected": 203,
+            "known": 202,
+            "unknown": 1,
+            "hits": 60
+          },
+          "3": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 65
+          }
+        },
+        "non_one_price": {
+          "selected": 517,
+          "known": 516,
+          "hits": 153,
+          "unknown": 1
+        },
+        "one_price": {
+          "selected": 92,
+          "known": 92,
+          "hits": 50,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "dates": 83,
+        "slots": 249,
+        "selected": 249,
+        "known": 243,
+        "unknown": 6,
+        "unfilled_slots": 0,
+        "hits": 70,
+        "known_precision": 0.2880658436213992,
+        "confirmed_hits_per_all_slots": 0.28112449799196787,
+        "possible_hits_per_all_slots": 0.30522088353413657,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 28,
+        "extra_hits_for_all_slots_target": 30,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 9,
+        "reach4_known": 231,
+        "by_slot": {
+          "1": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 28
+          },
+          "2": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 24
+          },
+          "3": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 18
+          }
+        },
+        "non_one_price": {
+          "selected": 202,
+          "known": 196,
+          "hits": 50,
+          "unknown": 6
+        },
+        "one_price": {
+          "selected": 47,
+          "known": 47,
+          "hits": 20,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 851,
+        "unknown": 7,
+        "unfilled_slots": 0,
+        "hits": 273,
+        "known_precision": 0.3207990599294947,
+        "confirmed_hits_per_all_slots": 0.3181818181818182,
+        "possible_hits_per_all_slots": 0.32634032634032634,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 68,
+        "extra_hits_for_all_slots_target": 71,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 58,
+        "reach4_known": 834,
+        "by_slot": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 106
+          },
+          "2": {
+            "selected": 286,
+            "known": 283,
+            "unknown": 3,
+            "hits": 84
+          },
+          "3": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 83
+          }
+        },
+        "non_one_price": {
+          "selected": 719,
+          "known": 712,
+          "hits": 203,
+          "unknown": 7
+        },
+        "one_price": {
+          "selected": 139,
+          "known": 139,
+          "hits": 70,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      }
+    },
+    "ARM_B_ORIGINAL_IMPUTATION_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "dates": 203,
+        "slots": 609,
+        "selected": 609,
+        "known": 608,
+        "unknown": 1,
+        "unfilled_slots": 0,
+        "hits": 203,
+        "known_precision": 0.3338815789473684,
+        "confirmed_hits_per_all_slots": 0.3333333333333333,
+        "possible_hits_per_all_slots": 0.33497536945812806,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 41,
+        "extra_hits_for_all_slots_target": 41,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 50,
+        "reach4_known": 603,
+        "by_slot": {
+          "1": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 79
+          },
+          "2": {
+            "selected": 203,
+            "known": 202,
+            "unknown": 1,
+            "hits": 59
+          },
+          "3": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 65
+          }
+        },
+        "non_one_price": {
+          "selected": 521,
+          "known": 520,
+          "hits": 156,
+          "unknown": 1
+        },
+        "one_price": {
+          "selected": 88,
+          "known": 88,
+          "hits": 47,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "dates": 83,
+        "slots": 249,
+        "selected": 249,
+        "known": 244,
+        "unknown": 5,
+        "unfilled_slots": 0,
+        "hits": 67,
+        "known_precision": 0.27459016393442626,
+        "confirmed_hits_per_all_slots": 0.26907630522088355,
+        "possible_hits_per_all_slots": 0.2891566265060241,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 31,
+        "extra_hits_for_all_slots_target": 33,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 9,
+        "reach4_known": 232,
+        "by_slot": {
+          "1": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 28
+          },
+          "2": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 25
+          },
+          "3": {
+            "selected": 83,
+            "known": 82,
+            "unknown": 1,
+            "hits": 14
+          }
+        },
+        "non_one_price": {
+          "selected": 205,
+          "known": 200,
+          "hits": 47,
+          "unknown": 5
+        },
+        "one_price": {
+          "selected": 44,
+          "known": 44,
+          "hits": 20,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 852,
+        "unknown": 6,
+        "unfilled_slots": 0,
+        "hits": 270,
+        "known_precision": 0.31690140845070425,
+        "confirmed_hits_per_all_slots": 0.3146853146853147,
+        "possible_hits_per_all_slots": 0.32167832167832167,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 71,
+        "extra_hits_for_all_slots_target": 74,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 59,
+        "reach4_known": 835,
+        "by_slot": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 107
+          },
+          "2": {
+            "selected": 286,
+            "known": 283,
+            "unknown": 3,
+            "hits": 84
+          },
+          "3": {
+            "selected": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 79
+          }
+        },
+        "non_one_price": {
+          "selected": 726,
+          "known": 720,
+          "hits": 203,
+          "unknown": 6
+        },
+        "one_price": {
+          "selected": 132,
+          "known": 132,
+          "hits": 67,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      }
+    },
+    "ARM_B_NEUTRAL_MISSING_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "dates": 203,
+        "slots": 609,
+        "selected": 609,
+        "known": 608,
+        "unknown": 1,
+        "unfilled_slots": 0,
+        "hits": 202,
+        "known_precision": 0.33223684210526316,
+        "confirmed_hits_per_all_slots": 0.33169129720853857,
+        "possible_hits_per_all_slots": 0.3333333333333333,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 42,
+        "extra_hits_for_all_slots_target": 42,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 50,
+        "reach4_known": 603,
+        "by_slot": {
+          "1": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 79
+          },
+          "2": {
+            "selected": 203,
+            "known": 202,
+            "unknown": 1,
+            "hits": 59
+          },
+          "3": {
+            "selected": 203,
+            "known": 203,
+            "unknown": 0,
+            "hits": 64
+          }
+        },
+        "non_one_price": {
+          "selected": 521,
+          "known": 520,
+          "hits": 155,
+          "unknown": 1
+        },
+        "one_price": {
+          "selected": 88,
+          "known": 88,
+          "hits": 47,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "dates": 83,
+        "slots": 249,
+        "selected": 249,
+        "known": 244,
+        "unknown": 5,
+        "unfilled_slots": 0,
+        "hits": 67,
+        "known_precision": 0.27459016393442626,
+        "confirmed_hits_per_all_slots": 0.26907630522088355,
+        "possible_hits_per_all_slots": 0.2891566265060241,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 31,
+        "extra_hits_for_all_slots_target": 33,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 9,
+        "reach4_known": 232,
+        "by_slot": {
+          "1": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 28
+          },
+          "2": {
+            "selected": 83,
+            "known": 81,
+            "unknown": 2,
+            "hits": 26
+          },
+          "3": {
+            "selected": 83,
+            "known": 82,
+            "unknown": 1,
+            "hits": 13
+          }
+        },
+        "non_one_price": {
+          "selected": 205,
+          "known": 200,
+          "hits": 47,
+          "unknown": 5
+        },
+        "one_price": {
+          "selected": 44,
+          "known": 44,
+          "hits": 20,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "dates": 286,
+        "slots": 858,
+        "selected": 858,
+        "known": 852,
+        "unknown": 6,
+        "unfilled_slots": 0,
+        "hits": 269,
+        "known_precision": 0.31572769953051644,
+        "confirmed_hits_per_all_slots": 0.3135198135198135,
+        "possible_hits_per_all_slots": 0.32051282051282054,
+        "complete_daily_top3": true,
+        "extra_hits_for_known_target": 72,
+        "extra_hits_for_all_slots_target": 75,
+        "observed_target_met": false,
+        "all_slots_target_confirmed": false,
+        "predictive_validation_passed": false,
+        "reach4_hits": 59,
+        "reach4_known": 835,
+        "by_slot": {
+          "1": {
+            "selected": 286,
+            "known": 284,
+            "unknown": 2,
+            "hits": 107
+          },
+          "2": {
+            "selected": 286,
+            "known": 283,
+            "unknown": 3,
+            "hits": 85
+          },
+          "3": {
+            "selected": 286,
+            "known": 285,
+            "unknown": 1,
+            "hits": 77
+          }
+        },
+        "non_one_price": {
+          "selected": 726,
+          "known": 720,
+          "hits": 202,
+          "unknown": 6
+        },
+        "one_price": {
+          "selected": 132,
+          "known": 132,
+          "hits": 67,
+          "unknown": 0
+        },
+        "one_price_is_signal_day_status_not_next_day_buyability": true
+      }
+    }
+  },
+  "swaps": {
+    "ARM_A_ORIGINAL_IMPUTATION_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "promoted": {
+          "rows": 85,
+          "hits": 29,
+          "failures": 56,
+          "unknown": 0,
+          "reach4_hits": 8
+        },
+        "removed": {
+          "rows": 85,
+          "hits": 16,
+          "failures": 69,
+          "unknown": 0,
+          "reach4_hits": 2
+        }
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "promoted": {
+          "rows": 39,
+          "hits": 7,
+          "failures": 30,
+          "unknown": 2,
+          "reach4_hits": 0
+        },
+        "removed": {
+          "rows": 39,
+          "hits": 8,
+          "failures": 30,
+          "unknown": 1,
+          "reach4_hits": 0
+        }
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "promoted": {
+          "rows": 124,
+          "hits": 36,
+          "failures": 86,
+          "unknown": 2,
+          "reach4_hits": 8
+        },
+        "removed": {
+          "rows": 124,
+          "hits": 24,
+          "failures": 99,
+          "unknown": 1,
+          "reach4_hits": 2
+        }
+      }
+    },
+    "ARM_A_NEUTRAL_MISSING_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "promoted": {
+          "rows": 84,
+          "hits": 29,
+          "failures": 55,
+          "unknown": 0,
+          "reach4_hits": 8
+        },
+        "removed": {
+          "rows": 84,
+          "hits": 16,
+          "failures": 68,
+          "unknown": 0,
+          "reach4_hits": 2
+        }
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "promoted": {
+          "rows": 39,
+          "hits": 7,
+          "failures": 30,
+          "unknown": 2,
+          "reach4_hits": 0
+        },
+        "removed": {
+          "rows": 39,
+          "hits": 8,
+          "failures": 30,
+          "unknown": 1,
+          "reach4_hits": 0
+        }
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "promoted": {
+          "rows": 123,
+          "hits": 36,
+          "failures": 85,
+          "unknown": 2,
+          "reach4_hits": 8
+        },
+        "removed": {
+          "rows": 123,
+          "hits": 24,
+          "failures": 98,
+          "unknown": 1,
+          "reach4_hits": 2
+        }
+      }
+    },
+    "ARM_B_ORIGINAL_IMPUTATION_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "promoted": {
+          "rows": 92,
+          "hits": 30,
+          "failures": 62,
+          "unknown": 0,
+          "reach4_hits": 10
+        },
+        "removed": {
+          "rows": 92,
+          "hits": 17,
+          "failures": 75,
+          "unknown": 0,
+          "reach4_hits": 3
+        }
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "promoted": {
+          "rows": 40,
+          "hits": 5,
+          "failures": 34,
+          "unknown": 1,
+          "reach4_hits": 0
+        },
+        "removed": {
+          "rows": 40,
+          "hits": 9,
+          "failures": 30,
+          "unknown": 1,
+          "reach4_hits": 0
+        }
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "promoted": {
+          "rows": 132,
+          "hits": 35,
+          "failures": 96,
+          "unknown": 1,
+          "reach4_hits": 10
+        },
+        "removed": {
+          "rows": 132,
+          "hits": 26,
+          "failures": 105,
+          "unknown": 1,
+          "reach4_hits": 3
+        }
+      }
+    },
+    "ARM_B_NEUTRAL_MISSING_ROUNDED_REPLAY": {
+      "NOMINAL_TRAIN": {
+        "promoted": {
+          "rows": 90,
+          "hits": 29,
+          "failures": 61,
+          "unknown": 0,
+          "reach4_hits": 10
+        },
+        "removed": {
+          "rows": 90,
+          "hits": 17,
+          "failures": 73,
+          "unknown": 0,
+          "reach4_hits": 3
+        }
+      },
+      "LATER_83_DAYS_ALREADY_INSPECTED": {
+        "promoted": {
+          "rows": 40,
+          "hits": 5,
+          "failures": 34,
+          "unknown": 1,
+          "reach4_hits": 0
+        },
+        "removed": {
+          "rows": 40,
+          "hits": 9,
+          "failures": 30,
+          "unknown": 1,
+          "reach4_hits": 0
+        }
+      },
+      "FULL_286_DAYS_MIXED_TRAIN_AND_LATER": {
+        "promoted": {
+          "rows": 130,
+          "hits": 34,
+          "failures": 95,
+          "unknown": 1,
+          "reach4_hits": 10
+        },
+        "removed": {
+          "rows": 130,
+          "hits": 26,
+          "failures": 103,
+          "unknown": 1,
+          "reach4_hits": 3
+        }
+      }
+    }
+  },
+  "archived_count_vs_rounded_replay_differences": [],
+  "training_boundary": {
+    "nominal_dates": 203,
+    "nominal_rows": 4682,
+    "mature_dates": 202,
+    "mature_rows": 4651,
+    "purged_dates": 1,
+    "purged_rows": 31,
+    "purged_known_outcomes": 31,
+    "actual_label_end_dates": [
+      "2026-05-06"
+    ],
+    "warning": "Deleting rows for this audit DOES NOT purge already-fitted coefficients"
+  },
+  "original_implementation": {
+    "solver": "DIFFERENTIAL_EVOLUTION",
+    "integer_programming": false,
+    "coefficient_count": 4,
+    "l1_bound": 0.15,
+    "nonzero_coefficients_A": 4,
+    "nonzero_coefficients_B": 4,
+    "enforced_sparsity": false,
+    "neutral_missing_handling": false,
+    "full_precision_weights_saved": false
+  },
+  "repaired_milp_market_fits": 0,
+  "production_changed": false,
+  "predictive_validation_passed": false,
+  "target_40_percent_achieved": false,
+  "protected_files_unchanged": 128,
+  "limitations": [
+    "Later four months already informed previous cascade experiments; not pristine blind history.",
+    "At an April-30 fit cutoff, April-30 outcomes are unavailable until May-6 close.",
+    "An explicit May-6-after-close refit would require its own documented fit clock; none was archived.",
+    "Archived weights are rounded; full-precision original selections cannot be certified.",
+    "Later-retrieved provider seal data do not establish original historical availability.",
+    "S-day one-price status is not a measure of next-day fillability.",
+    "New MILP code is tested on synthetic data only, not an improvement result."
+  ]
+}

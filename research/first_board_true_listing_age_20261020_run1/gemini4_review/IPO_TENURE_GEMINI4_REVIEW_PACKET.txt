@@ -1,0 +1,2089 @@
+审核任务：用户指定 Codex 独立训练、Chrome 的 Gemini 4 只审查。本轮已完成且淘汰；不得让 Gemini 训练、调参或访问账户。用户目标仍为首板收盘时预测次一官方交易日收盘一进二，完整日 Top1 >=60%，已知选择>=200、结果覆盖>=95%、不按结果弃日，2025H2及2026各>=55%；同一股票真晋级后在二板收盘重新评估二进三。
+
+本轮唯一假设：将原62字段估计器中的 listing_age_sessions（原归档日历左截断时钟）替换为 listing_calendar_age_days（信号日减真实IPO日的精确自然日数）；其他61字段、原训练成员、成熟标签、日期权重、HGB超参数、42日Platt校准、市值/薄换手筛选完全不变。原时钟字段在事实表中留存但不进入本估计器。此前删除时钟的61字段挑战已失败；该旧协议全文附入，审查应讨论本批独立IPO新信息与旧批禁止事后替换的边界，不能隐瞒或称原失败重跑成功。新字段无log/上限/分箱或年龄阈值优化。
+
+真实IPO日来自既存官方当前及退市名单，逐代码与原security master唯一日期相符。来源本轮晚取得，不认证原时点HTTP取得。首次资格核查仅当前名单，第二版纳入历史退市；第三版修复将无关name/ST区间source_verified误用于稳定IPO日期的错误；两次修复均在首个fit前，旧源码和产物全留存。最终28503/28503年龄可知，开发10630、验证4724、后期13149，两个前缀检查不变，无冲突。本批没有消除原历史股票池幸存者偏差。
+
+本轮真实结果：完整2025H1验证4724行/117日，4714已知10未知，863正例。固定市值/薄换手筛选后，挑战Top1=48/117(41.03%)，原基准52/117(44.44%)；非一字挑战43/117(36.75%)，原基准48/117(41.03%)。未筛选挑战52/117只作诊断，不可改变主口径。预设门要求主口径严格>52且非一字>=48，故直接淘汰，不进入14个月样本外、不新评二进三。全4724行分数和全部117日双范围配对选择另附CSV，unknown保留、未截获胜例。主配对共胜39/挑战独胜9/基准独胜13/共败56；非一字35/8/13/61。
+
+真实拟合仅1逻辑头：前缀及全窗HGB各1、Platt1。独立verifier拟合0，加载保存模型复算全部4724分数、62字段、旧训练前缀/全窗成员、全部28503原字段/标签及输入/保护哈希一致；原基准和S2重训0。5项针对测试通过（最后运行已完成），正式模型、原预测、定时任务、账本和交易均未改。目标60%未达，历史已被研究过，不称新盲测；分数不能凭本试验当准确的事件概率。
+
+审核范围限制：你收到的是附件内源码/协议/资格收据/完整验证分数及配对CSV。没有向你提供350MB原始价格、joblib模型或私有GitHub权限。你可静态审代码、在实际具备工具时独立计算CSV；请明确哪些由你直接核对、哪些是Codex本地收据声明，不得声称跑过本地训练、读取D盘或验证未提供的原始行情。原始raw report.reviewer=PENDING保留，正式审查另存附页，不回写冻结结果。
+
+请审查：1)有无泄漏或口径/代码实质错误；2)IPO资格的退市补齐和字段级修复是否合理，以及剩余源与幸存者限制；3)完整CSV能否复核48/117、52/117和43/117、48/117；4)是否同意按协议淘汰，不能宣称哪些提升；5)如有真实bug给精确位置和必要修复，不提出重训年龄变换或新参数。没有发现不等于证明无任何泄漏。请用约1000中文字符给明确裁决和审查边界。
+
+
+MANIFEST
+{
+  "at": "2026-10-20T18:48:22.406798+00:00",
+  "destination": "Gemini4 Chrome ec17e48589786054",
+  "trainer": "Codex",
+  "reviewer": "Gemini4 only",
+  "new_files_not_committed": true,
+  "preserved_remote_main": "02fb21632b0d75d133426624a28bbc98a604b35b",
+  "files": [
+    {
+      "path": "first_board_true_listing_age.py",
+      "bytes": 18722,
+      "sha256": "710e4b89cfe9f925f0116c8d3c2ff8570d5d4bd2e015883fa98a3c75a8aa6134"
+    },
+    {
+      "path": "tests/test_first_board_true_listing_age.py",
+      "bytes": 2640,
+      "sha256": "794fb9c044e0f568ef9539cf1164072b331073af21976e2d15e6cfa1409e06c9"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/protocol_BEFORE_ANY_FIT.json",
+      "bytes": 7530,
+      "sha256": "0ca04bc65fc52652aa31a3dafcbc1cb374d3c90fda7a6dbda35a23bb3af98584"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/report.json",
+      "bytes": 3958,
+      "sha256": "d409bbc7a1f4d8f152dc98d8bdb46d650dbc0bd3e90fdc1c826696bb8c41e8c5"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/selection_BEFORE_EVALUATION.json",
+      "bytes": 3336,
+      "sha256": "b23c56c102fa36d1de5f693738848b900ad480495da0beaf8fc6a290b6a9cd11"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/verify_saved_result.py",
+      "bytes": 7708,
+      "sha256": "a8d2ec23cbc92c12c12ffb384cf3db510ac8238a0ccbd480063e9d2e404b5852"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/INDEPENDENT_SAVED_MODEL_VERIFICATION.json",
+      "bytes": 2006,
+      "sha256": "21feafdcafa1211b4da70b741a40995aa326dae21ff45ef010f6386eb379a0b8"
+    },
+    {
+      "path": "research/first_board_listing_date_qualification_20261020_final/protocol_BEFORE_DATA_NO_OUTCOMES.json",
+      "bytes": 2258,
+      "sha256": "d5f1337aa1105eaf090a4646ec9cfb35ba634692a5d170a54642c3c846c7fa07"
+    },
+    {
+      "path": "research/first_board_listing_date_qualification_20261020_final/qualification.json",
+      "bytes": 1418,
+      "sha256": "cd82be71430364099ec9542f14f793a7c138d249e3520d691868c0d160d300d1"
+    },
+    {
+      "path": "research/first_board_listing_date_qualification_20261020/QUALIFICATION_SCOPE_ADJUSTMENT_BEFORE_ANY_FIT.json",
+      "bytes": 422,
+      "sha256": "94b91fbcaa999db2aa26b6d0d8bdcd21d40aef9608e93877a9e7dffdeebfbb5e"
+    },
+    {
+      "path": "research/first_board_listing_date_qualification_20261020_complete/IPO_FIELD_SCOPE_CORRECTION_BEFORE_ANY_FIT.json",
+      "bytes": 615,
+      "sha256": "04d19120fd5afaea78781eac48aa18e3a716a9bb818a5e905dbe3c3d72371b21"
+    },
+    {
+      "path": "research/first_board_drop_clock_20261020_run1/protocol_BEFORE_ANY_FIT.json",
+      "bytes": 6628,
+      "sha256": "f24930a0e2dcf51458d65be80f4830bb5283126c72f1af222b800aac692c7a63"
+    },
+    {
+      "path": "research/first_board_drop_clock_20261020_run1/report.json",
+      "bytes": 3817,
+      "sha256": "3ee7198f83987b439465f736e81756893753101f83f4f5575b39f2430c3a2c45"
+    },
+    {
+      "path": "first_second_stage_model.py",
+      "bytes": 31368,
+      "sha256": "3c785c2190242453b13311e79b753f9fa93a0d0dca773c8b6e65e056f602f012"
+    },
+    {
+      "path": "first_board_capital_risk_model.py",
+      "bytes": 20929,
+      "sha256": "7fddb3fe32738af4067aed8837a5d665fa72f569893f83fcfa0999d1f60f3b20"
+    },
+    {
+      "path": "first_board_drop_clock.py",
+      "bytes": 8030,
+      "sha256": "182b129b61090bee43f4a6a966f2a96a468204e2a413a1d92a2cc56f1f5eebee"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/AUDIT_COMPLETE4724_SCORE_COMPARISON_WITH_UNKNOWN.csv",
+      "bytes": 616235,
+      "sha256": "4ce234365eb63f3b998e55b19c9c2839cebd6c45de9460c0ddfb768b9170d20e"
+    },
+    {
+      "path": "research/first_board_true_listing_age_20261020_run1/INDEPENDENT_ALL117_DAILY_PAIRED_SELECTIONS.csv",
+      "bytes": 10608,
+      "sha256": "304357221f79603b4f1c8d07cfd89af464ad8f3be41de08792887e3f535f238d"
+    }
+  ]
+}
+
+===== FILE: first_board_true_listing_age.py =====
+"""One independent first-close trial of actual IPO tenure; Gemini 4 reviews afterwards."""
+from __future__ import annotations
+
+import argparse
+from datetime import date
+import json
+from pathlib import Path
+import shutil
+import time
+
+import first_board_leader_model as base
+import first_second_stage_model as stage
+import first_board_capital_risk_model as risk
+import first_board_matured_event_model as history
+import first_board_drop_clock as old_ablation
+import numpy as np
+import pandas as pd
+
+QUAL = base.ROOT / "research/first_board_listing_date_qualification_20261020_final"
+REFERENCE = risk.REFERENCE
+SOURCE = REFERENCE / "all_first_and_second_boards_WITH_SEPARATE_LABELS.csv"
+SCREEN = history.SCREEN / "COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv"
+MASTER = base.INPUTS["security_intervals"]
+RAW_LISTS = [
+    base.ROOT / "data/v4/security_evidence/szse_mainboard_list_20260831.csv",
+    base.ROOT / "data/v5/security_evidence/sse_current/sse_current_mainboard.csv",
+    base.ROOT / "data/v7/security_evidence/sse_breadth_gap/sse_current_mainboard.csv",
+    base.ROOT / "data/v49/security_sse_asof_20260904/sse_current_mainboard.csv",
+    base.ROOT / "data/v4/historical_universe/official_delisted_mainboard.csv",
+]
+OLD = "listing_age_sessions"
+NEW = "listing_calendar_age_days"
+ORIGINAL_FIELDS = stage.VARIANTS["STAGE_CYCLE_GENE"].copy()
+FIELDS = [NEW if field == OLD else field for field in ORIGINAL_FIELDS]
+VARIANT = "ACTUAL_IPO_CALENDAR_TENURE_62"
+KEYS = ["signal_date", "code"]
+
+
+def listing_date_supported(date_count, official_source, listing_date, raw_dates):
+    # Verification of name/ST intervals does not determine a separately
+    # corroborated, stable IPO date. In particular, future interval states
+    # cannot withhold a known historical listing date.
+    return bool(date_count == 1 and official_source and len(raw_dates) == 1 and listing_date in raw_dates)
+
+
+def derive_age(keys, identities):
+    if keys.duplicated(KEYS).any() or identities.code.duplicated().any():
+        raise ValueError("Duplicate identity or complete-pool key")
+    out = keys.merge(identities, on="code", how="left", validate="many_to_one", sort=False)
+    listed = pd.to_datetime(out.listing_date, format="%Y-%m-%d", errors="coerce")
+    signal = pd.to_datetime(out.signal_date, format="%Y-%m-%d", errors="raise")
+    valid = out.identity_qualified.fillna(False).astype(bool) & listed.notna() & listed.le(signal)
+    out[NEW] = (signal - listed).dt.days.astype(float).where(valid)
+    # This is calendar tenure. No pre-2023 official-session count is invented.
+    return out
+
+
+def qualify():
+    if QUAL.exists():
+        raise FileExistsError("Preserve the fixed source qualification")
+    QUAL.mkdir(parents=True)
+    paths = [MASTER, SOURCE, *RAW_LISTS]
+    protocol = dict(at=base.now(), task="Outcome-blind qualification of stable actual listing dates for one replacement feature",
+                    hypothesis="A real pre-archive listing date supplies cross-stock tenure absent from the left-censored archive clock; this is not another deletion/cap of the old field",
+                    field=NEW, definition="Signal calendar date minus actual IPO listing calendar date, in days; no log, cap, bins or optimized cutoffs",
+                    source_policy="Existing official-list CSVs must reproduce the master date; missing/conflicting/future listing dates remain NaN. Historical source retrieval clocks are not backdated.",
+                    no_outcome_columns_read=True, no_new_network_requests=True, coverage_gate="At least95% actual-age coverage and100 observed rows in development and2025H1 validation",
+                    bindings={str(p.resolve()): base.sha(p) for p in paths}, source_sha256=base.sha(__file__), fits=0)
+    base.write_json(QUAL / "protocol_BEFORE_DATA_NO_OUTCOMES.json", protocol)
+    master = pd.read_csv(MASTER, dtype=str)
+    identity = []
+    for code, part in master.groupby("code", sort=True):
+        dates = part.listing_date.dropna().unique()
+        official = part.source_type.isin(["szse_official", "sse_official"]).all()
+        declared = part.source_verified.str.lower().isin(["true", "1"]).all()
+        identity.append(dict(code=code, listing_date=dates[0] if len(dates) == 1 else None,
+                             master_date_count=len(dates), master_source_official=bool(official),
+                             all_security_state_intervals_verified=bool(declared),
+                             master_row_pointers="|".join(str(i + 2) for i in part.index),
+                             source_clock_original="|".join(sorted(part.source_timestamp.dropna().unique()))))
+    identities = pd.DataFrame(identity)
+    raw = []
+    for path in RAW_LISTS:
+        frame = pd.read_csv(path, dtype=str)
+        if "A_STOCK_CODE" in frame:
+            codes = frame.A_STOCK_CODE.str.zfill(6)
+            dates = pd.to_datetime(frame.LIST_DATE, format="%Y%m%d", errors="raise").dt.strftime("%Y-%m-%d")
+        else:
+            codes, dates = frame.code.str.zfill(6), frame.listing_date
+        for idx, code, listed in zip(frame.index, codes, dates):
+            raw.append(dict(code=code, raw_listing_date=listed, pointer=f"{path.relative_to(base.ROOT).as_posix()}:csv_record={idx + 2}"))
+    raw_frame = pd.DataFrame(raw)
+    by_code = {code: part for code, part in raw_frame.groupby("code", sort=False)}
+    match, conflicts, pointers = [], [], []
+    for row in identities.itertuples():
+        records = by_code.get(row.code, raw_frame.iloc[:0])
+        dates = set(records.raw_listing_date.dropna())
+        good = listing_date_supported(row.master_date_count, row.master_source_official, row.listing_date, dates)
+        match.append(good)
+        conflicts.append(bool(dates and (len(dates) != 1 or row.listing_date not in dates)))
+        pointers.append("|".join(records.pointer))
+    identities["identity_qualified"] = match
+    identities["raw_date_conflict"] = conflicts
+    identities["raw_row_pointers"] = pointers
+    identities.to_csv(QUAL / "LISTING_DATE_IDENTITIES_WITH_RAW_POINTERS.csv", index=False, encoding="utf-8-sig")
+    keys = pd.read_csv(SOURCE, dtype={"code": str}, usecols=KEYS + ["stage", OLD], float_precision="round_trip")
+    keys = keys[keys.stage.eq(1)].reset_index(drop=True)
+    output = derive_age(keys, identities[["code", "listing_date", "identity_qualified"]])
+    for row in output[output[NEW].notna()].itertuples():
+        assert getattr(row, NEW) == (date.fromisoformat(row.signal_date) - date.fromisoformat(row.listing_date)).days
+    checks = []
+    for cutoff in ("2025-06-30", "2025-12-31"):
+        prefix = derive_age(keys[keys.signal_date.le(cutoff)], identities[["code", "listing_date", "identity_qualified"]])
+        np.testing.assert_allclose(prefix[NEW], output.loc[output.signal_date.le(cutoff), NEW], equal_nan=True, rtol=0, atol=0)
+        checks.append(dict(cutoff=cutoff, rows=len(prefix), exact_equal=True))
+    output.to_csv(QUAL / "COMPLETE_FIRST_BOARD_ACTUAL_AGE_NO_OUTCOMES.csv", index=False, encoding="utf-8-sig")
+    periods = {}
+    for name, mask in [("development", output.signal_date.lt("2025-01-01")), ("validation2025H1", output.signal_date.between("2025-01-01", "2025-06-30")), ("evaluation", output.signal_date.ge("2025-07-01"))]:
+        part = output[mask]
+        groups = part.groupby(["signal_date", OLD])[NEW].nunique()
+        periods[name] = dict(rows=len(part), known=int(part[NEW].notna().sum()), unknown=int(part[NEW].isna().sum()),
+                             coverage=float(part[NEW].notna().mean()), archive_age_groups_with_multiple_actual_tenures=int(groups.gt(1).sum()),
+                             distinct_actual_age_values=int(part[NEW].nunique()))
+    good = all(periods[p]["coverage"] >= .95 and periods[p]["known"] >= 100 for p in ("development", "validation2025H1"))
+    report = dict(at=base.now(), qualified=good, rows=len(output), periods=periods, prefix_checks=checks,
+                  independent_calendar_arithmetic_all_rows=True, raw_conflict_codes=identities.loc[identities.raw_date_conflict, "code"].tolist(),
+                  current_universe_survivorship_unchanged=True, acquisition_late_not_original_pit_capture=True,
+                  publication_clock="Listing event date is a stable historical fact; original pre-signal HTTP acquisition is not certified",
+                  field_is_calendar_days_not_official_sessions=True, no_labels_read=True, fits=0)
+    base.write_json(QUAL / "qualification.json", report)
+    print(json.dumps(base.clean(report), ensure_ascii=True), flush=True)
+    return report
+
+
+def attach_qualified_age(rows, extra):
+    columns = KEYS + [NEW]
+    if rows.duplicated(KEYS).any() or extra.duplicated(KEYS).any():
+        raise ValueError("Duplicate age feature keys")
+    if set(map(tuple, rows[KEYS].to_numpy())) != set(map(tuple, extra[KEYS].to_numpy())):
+        raise ValueError("Incomplete unchanged first-board denominator")
+    out = rows.merge(extra[columns], on=KEYS, validate="one_to_one", sort=False)
+    np.testing.assert_allclose(rows[ORIGINAL_FIELDS + [stage.TARGET]], out[ORIGINAL_FIELDS + [stage.TARGET]], equal_nan=True, rtol=0, atol=0)
+    if out[NEW].dropna().lt(0).any():
+        raise ValueError("Future listing date")
+    return out
+
+
+def run(output):
+    began = time.monotonic()
+    out = Path(output)
+    if out.exists():
+        raise FileExistsError("One fixed comparison, no overwrite or effect-driven retry")
+    assert len(FIELDS) == 62 and len(set(FIELDS)) == 62 and OLD not in FIELDS
+    qualification = json.loads((QUAL / "qualification.json").read_text("utf-8"))
+    assert qualification["qualified"]
+    inputs = [SOURCE, SCREEN, QUAL / "qualification.json", QUAL / "COMPLETE_FIRST_BOARD_ACTUAL_AGE_NO_OUTCOMES.csv", QUAL / "LISTING_DATE_IDENTITIES_WITH_RAW_POINTERS.csv", MASTER, *RAW_LISTS]
+    protected = [Path(base.__file__), Path(stage.__file__), Path(risk.__file__), Path(old_ablation.__file__),
+                 REFERENCE / "report.json", REFERENCE / "S1_ALL_PREDICTIONS.csv", REFERENCE / "S2_ALL_PREDICTIONS.csv"]
+    protocol = dict(at=base.now(), budget_minutes=30, trainer="Codex only", external_reviewer="Gemini4 only after independent training and saved verification",
+                    hypothesis="Replace a left-censored archive-position field with actual historical IPO calendar tenure; supply cross-stock listing information absent from original age clock",
+                    old_failed_drop_clock="Preserved failed61-field deletion; this new62-field comparison uses separately qualified actualIPOdate information, not capping/deleting/refitting the same failed arm",
+                    fields=FIELDS, replacement={"old": OLD, "new": NEW, "definition": "Exact calendar days since qualified listing date; no caps/logs/bins/threshold fitting"},
+                    baseline="Exact saved62-field baseline plus unchanged capital/thin-turnover screen. No baseline or second-stage fit",
+                    training="Identical mature members, equal-day weights, originalHGB160/15/leaf60/lr.06/l2=8/balanced/seed42; unchanged last42-day temporal PlattC1",
+                    validation="Original2025H1 full4724rows/117days; require>52screenedTop1hits,>=48non-one-pricehits,>=95%decision-datecoverage. Baseline wins ties. Save all predictions first.",
+                    evaluation="Onlyifpass:14monthly original252-official-position windows with identical mature members. Preserve unknowns/full pools; same-stock second-stage saved scores reused only after actual promotion.",
+                    acceptance="DailyTop1 next-official-close1to2>=60%,>=200known,>=95%outcome coverage,no abstention dates;2025H2 and2026 each>=55%",
+                    stop="One fixed arm; finish comparison or30-minute checkpoint. No age transformation/cutoff/other feature changes after results",
+                    inputs={str(p.resolve()): base.sha(p) for p in inputs}, protected={str(p.resolve()): base.sha(p) for p in protected},
+                    raw_sources={str(p.resolve()): base.sha(p) for p in base.INPUTS.values()}, source_sha256=base.sha(__file__),
+                    new_forward_results=0, actual_trades=0, production_changes=False, already_studied_history_not_new_blind=True)
+    out.mkdir(parents=True)
+    base.write_json(out / "protocol_BEFORE_ANY_FIT.json", protocol)
+    shutil.copy2(__file__, out / "source_before_fit.py")
+    with (QUAL / "SINGLE_FIXED_COMPARISON_ONCE.json").open("x", encoding="utf-8") as stream:
+        json.dump(dict(at=base.now(), output=str(out.resolve()), protocol_sha256=base.sha(out / "protocol_BEFORE_ANY_FIT.json")), stream, indent=2)
+    rows = pd.read_csv(SOURCE, dtype={"code": str}, float_precision="round_trip")
+    rows = rows[rows.stage.eq(1)].reset_index(drop=True)
+    extra = pd.read_csv(QUAL / "COMPLETE_FIRST_BOARD_ACTUAL_AGE_NO_OUTCOMES.csv", dtype={"code": str}, float_precision="round_trip")
+    rows = attach_qualified_age(rows, extra)
+    screen = pd.read_csv(SCREEN, dtype={"code": str}, float_precision="round_trip")
+    rows = rows.merge(screen[KEYS + ["research_selection_allowed", "exclusion_reason", "threeboard_evidence_status"]], on=KEYS, validate="one_to_one", sort=False)
+    rows.to_csv(out / "COMPLETE_FIRST_BOARD_UNCHANGED_FACTS_LABELS_AND_ACTUAL_AGE.csv", index=False, encoding="utf-8-sig")
+    train = old_ablation.train_members(rows, "2025-01-01")
+    original_members = pd.read_csv(REFERENCE / "models/validation_S1_STAGE_CYCLE_GENE_full_members.csv", dtype={"code": str}, float_precision="round_trip")
+    assert set(map(tuple, train[KEYS + ["label_end", stage.TARGET]].to_numpy())) == set(map(tuple, original_members[KEYS + ["label_end", stage.TARGET]].to_numpy()))
+    val = rows[rows.signal_date.between("2025-01-01", "2025-06-30")]
+    assert len(val) == 4724 and val.signal_date.nunique() == 117
+    frozen = risk.attach_frozen(rows, REFERENCE / "validation_S1_STAGE_CYCLE_GENE_PREDICTIONS.csv")
+    baseline = risk.screen_metric(frozen)
+    baseline_non = risk.screen_metric(frozen[frozen.one_price.eq(0)])
+    assert baseline["hits"] == 52 and baseline_non["hits"] == 48
+    stage.VARIANTS[VARIANT] = FIELDS
+    head = stage.fit_head(train, VARIANT, out, "validation_actual_listing_age")
+    scores = stage.predict(head, val)
+    scores.to_csv(out / "VALIDATION_ALL_PREDICTIONS_BEFORE_METRICS.csv", index=False, encoding="utf-8-sig")
+    primary, non = risk.screen_metric(scores), risk.screen_metric(scores[scores.one_price.eq(0)])
+    passed = bool(primary["hits"] > 52 and non["hits"] >= 48 and primary["decision_date_coverage"] >= .95)
+    decision = dict(at=base.now(), baseline=baseline, baseline_non_one_price=baseline_non, challenger=primary,
+                    challenger_non_one_price=non, unfiltered_challenger=stage.metric(scores), pass_validation=passed)
+    base.write_json(out / "selection_BEFORE_EVALUATION.json", decision)
+    print(json.dumps(base.clean(decision), ensure_ascii=True), flush=True)
+    report = dict(at=None, decision=decision, goal_60_passed=False, trainer="Codex", reviewer="Gemini4_PENDING_REVIEW", production_deployment_allowed=False, actual_trades=0, new_forward_results=0)
+    if passed:
+        sessions = json.loads(base.INPUTS["calendar"].read_text("utf-8"))["sessions"]
+        parts = []
+        for month, part in rows[rows.signal_date.ge("2025-07-01")].groupby(rows.signal_date.str[:7], sort=True):
+            if time.monotonic() - began >= 29 * 60:
+                base.write_json(out / "CHECKPOINT_30MIN.json", dict(at=base.now(), completed_months=len(parts), next_month=month, status="FIXED_PROTOCOL_INCOMPLETE_NO_RETUNING"))
+                return None
+            boundary = month + "-01"
+            position = int(np.searchsorted(sessions, boundary))
+            members = old_ablation.train_members(rows, boundary, position - 252)
+            old = pd.read_csv(REFERENCE / "models" / (month + "_S1_STAGE_CYCLE_GENE_full_members.csv"), dtype={"code": str}, float_precision="round_trip")
+            assert set(map(tuple, members[KEYS + ["label_end", stage.TARGET]].to_numpy())) == set(map(tuple, old[KEYS + ["label_end", stage.TARGET]].to_numpy()))
+            bundle = stage.fit_head(members, VARIANT, out, month + "_actual_listing_age")
+            assert bundle["train_max_label_end"] < part.signal_date.min()
+            predictions = stage.predict(bundle, part)
+            predictions["model_month"] = month
+            predictions.to_csv(out / (month + "_ALL_PREDICTIONS_BEFORE_METRICS.csv"), index=False, encoding="utf-8-sig")
+            parts.append(predictions)
+            print(month + " saved", flush=True)
+        assert len(parts) == 14
+        evaluation = pd.concat(parts, ignore_index=True)
+        evaluation.to_csv(out / "EVALUATION_ALL_PREDICTIONS.csv", index=False, encoding="utf-8-sig")
+        reference = risk.attach_frozen(rows, REFERENCE / "S1_ALL_PREDICTIONS.csv")
+        report["evaluation"] = history.period_metrics(evaluation, reference)
+        allowed = evaluation[evaluation.research_selection_allowed]
+        second = pd.read_csv(REFERENCE / "S2_ALL_PREDICTIONS.csv", dtype={"code": str}, float_precision="round_trip")
+        chain, report["same_stock_second_recheck"] = stage.chain_recheck(allowed, second)
+        chain.to_csv(out / "SAME_STOCK_SECOND_RECHECK.csv", index=False, encoding="utf-8-sig")
+        report["calibration"] = stage.calibration_metrics(allowed)
+        m = report["evaluation"]["all"]["new_screened"]
+        report["goal_60_passed"] = bool(m["hit_rate"] >= .60 and m["known"] >= 200 and m["outcome_coverage"] >= .95 and m["abstention_dates"] == 0
+              and all(report["evaluation"][period]["new_screened"]["hit_rate"] >= .55 for period in ("2025H2", "2026")))
+    for path, digest in {**protocol["inputs"], **protocol["protected"], **protocol["raw_sources"]}.items():
+        assert base.sha(path) == digest
+    report.update(at=base.now(), status="FIXED_MONTHLY_COMPARISON_FINISHED" if passed else "REJECTED_VALIDATION_NO_MONTHLY_FITS",
+                  core_fit_count=len(list((out / "models").glob("*_COMPLETED.json"))), baseline_refits=0, second_stage_refits=0)
+    base.write_json(out / "report.json", report)
+    print(json.dumps(base.clean({key: report[key] for key in ("status", "goal_60_passed", "core_fit_count")}), ensure_ascii=True), flush=True)
+    return report
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("command", choices=["qualify", "train"])
+    parser.add_argument("--output")
+    args = parser.parse_args()
+    if args.command == "qualify":
+        qualify()
+    else:
+        if not args.output:
+            parser.error("train requires --output")
+        run(args.output)
+
+
+===== FILE: tests/test_first_board_true_listing_age.py =====
+import numpy as np
+import pandas as pd
+import pytest
+
+import first_board_true_listing_age as model
+
+
+def test_ipo_date_support_has_no_dependency_on_other_security_state_intervals():
+    assert model.listing_date_supported(1, True, "1999-05-27", {"1999-05-27"})
+    assert not model.listing_date_supported(2, True, "1999-05-27", {"1999-05-27"})
+    assert not model.listing_date_supported(1, False, "1999-05-27", {"1999-05-27"})
+    assert not model.listing_date_supported(1, True, "1999-05-27", {"2000-01-01"})
+
+
+def test_calendar_age_includes_pre_archive_history_and_leap_day():
+    keys = pd.DataFrame({"signal_date": ["2024-03-01", "2024-03-01"], "code": ["000001", "000002"]})
+    identity = pd.DataFrame({"code": ["000001", "000002"], "listing_date": ["1991-04-03", "2024-02-28"], "identity_qualified": [True, True]})
+    result = model.derive_age(keys, identity)
+    assert result.loc[0, model.NEW] > 12000
+    assert result.loc[1, model.NEW] == 2
+    assert model.OLD not in model.FIELDS and len(model.FIELDS) == 62
+    assert set(model.FIELDS) - set(model.ORIGINAL_FIELDS) == {model.NEW}
+
+
+def test_missing_conflicting_or_future_listing_date_remains_unknown():
+    keys = pd.DataFrame({"signal_date": ["2024-01-02"] * 3, "code": ["000001", "000002", "000003"]})
+    identity = pd.DataFrame({"code": ["000001", "000002"], "listing_date": ["2024-01-03", "2000-01-01"], "identity_qualified": [True, False]})
+    assert model.derive_age(keys, identity)[model.NEW].isna().all()
+
+
+def test_duplicate_identity_rejected_and_future_rows_do_not_change_past_age():
+    keys = pd.DataFrame({"signal_date": ["2024-01-02", "2025-01-02"], "code": ["000001", "000001"]})
+    identity = pd.DataFrame({"code": ["000001"], "listing_date": ["2000-01-01"], "identity_qualified": [True]})
+    assert model.derive_age(keys, identity).loc[0, model.NEW] == model.derive_age(keys.iloc[:1], identity).loc[0, model.NEW]
+    with pytest.raises(ValueError, match="Duplicate"):
+        model.derive_age(keys, pd.concat([identity, identity]))
+
+
+def test_old_feature_and_unknown_label_are_not_replaced_in_fact_table():
+    rows = pd.DataFrame({"signal_date": ["2024-01-02"], "code": ["000001"],
+                         **{field: [1.] for field in model.ORIGINAL_FIELDS}, model.stage.TARGET: [np.nan]})
+    extra = pd.DataFrame({"signal_date": ["2024-01-02"], "code": ["000001"], model.NEW: [10000.]})
+    result = model.attach_qualified_age(rows, extra)
+    assert result.loc[0, model.OLD] == 1.
+    assert np.isnan(result.loc[0, model.stage.TARGET])
+    with pytest.raises(ValueError, match="Incomplete"):
+        model.attach_qualified_age(rows, extra.iloc[:0])
+
+
+===== FILE: research/first_board_true_listing_age_20261020_run1/protocol_BEFORE_ANY_FIT.json =====
+{
+  "at": "2026-10-20T18:43:06.097403+00:00",
+  "budget_minutes": 30,
+  "trainer": "Codex only",
+  "external_reviewer": "Gemini4 only after independent training and saved verification",
+  "hypothesis": "Replace a left-censored archive-position field with actual historical IPO calendar tenure; supply cross-stock listing information absent from original age clock",
+  "old_failed_drop_clock": "Preserved failed61-field deletion; this new62-field comparison uses separately qualified actualIPOdate information, not capping/deleting/refitting the same failed arm",
+  "fields": [
+    "log_price",
+    "log_amount",
+    "log_float_cap",
+    "turnover",
+    "amount_cap",
+    "gap",
+    "amplitude",
+    "body",
+    "one_price",
+    "close_to_open",
+    "return_5",
+    "return_10",
+    "return_20",
+    "return_60",
+    "volume_ratio_5",
+    "volume_ratio_20",
+    "amount_ratio_5",
+    "close_ma5",
+    "close_ma20",
+    "close_ma60",
+    "breakout_20",
+    "position_60",
+    "prior_limits_20",
+    "prior_failed_20",
+    "previous_limit_age",
+    "prior_volatility_20",
+    "listing_calendar_age_days",
+    "market_limits",
+    "market_first",
+    "market_relays",
+    "market_failed",
+    "market_failed_rate",
+    "market_max_height",
+    "market_down_limits",
+    "market_positive_fraction",
+    "market_median_return",
+    "previous_first_promotion",
+    "previous_relay_promotion",
+    "previous_top_return",
+    "previous_top_broken",
+    "turnover_rank",
+    "amount_rank",
+    "volume_ratio_rank",
+    "pre_momentum_rank",
+    "gene_max_streak_60",
+    "gene_limits_60",
+    "gene_relay_rate_60",
+    "turnover_ratio_5",
+    "prior_compression_5",
+    "two_session_turnover_sum",
+    "previous_one_price",
+    "opened_after_one_price",
+    "cycle_height_change",
+    "cycle_height_break_20",
+    "cycle_anchor_breaks",
+    "cycle_anchor_collapses",
+    "cycle_high_survival",
+    "cycle_first_expansion_5",
+    "cycle_first_relay_ratio",
+    "cycle_top_one_price_share",
+    "stage_pool_size",
+    "stage_one_price_share"
+  ],
+  "replacement": {
+    "old": "listing_age_sessions",
+    "new": "listing_calendar_age_days",
+    "definition": "Exact calendar days since qualified listing date; no caps/logs/bins/threshold fitting"
+  },
+  "baseline": "Exact saved62-field baseline plus unchanged capital/thin-turnover screen. No baseline or second-stage fit",
+  "training": "Identical mature members, equal-day weights, originalHGB160/15/leaf60/lr.06/l2=8/balanced/seed42; unchanged last42-day temporal PlattC1",
+  "validation": "Original2025H1 full4724rows/117days; require>52screenedTop1hits,>=48non-one-pricehits,>=95%decision-datecoverage. Baseline wins ties. Save all predictions first.",
+  "evaluation": "Onlyifpass:14monthly original252-official-position windows with identical mature members. Preserve unknowns/full pools; same-stock second-stage saved scores reused only after actual promotion.",
+  "acceptance": "DailyTop1 next-official-close1to2>=60%,>=200known,>=95%outcome coverage,no abstention dates;2025H2 and2026 each>=55%",
+  "stop": "One fixed arm; finish comparison or30-minute checkpoint. No age transformation/cutoff/other feature changes after results",
+  "inputs": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_capital_risk_20261020_run1\\COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv": "eb979ae06bbb8324eff9268d0284026b98b859a8b602aa615a11c589f2c276c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_listing_date_qualification_20261020_final\\qualification.json": "cd82be71430364099ec9542f14f793a7c138d249e3520d691868c0d160d300d1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_listing_date_qualification_20261020_final\\COMPLETE_FIRST_BOARD_ACTUAL_AGE_NO_OUTCOMES.csv": "706365d6365f0f2cac3cefd8f58704805d6da14d3624f2e6940ab3f1ff396fb3",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_listing_date_qualification_20261020_final\\LISTING_DATE_IDENTITIES_WITH_RAW_POINTERS.csv": "8feeea48ad28e0335da8a78cfd7eae6b7b33ccde879e5e6631a98d937dec5997",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\security_evidence\\szse_mainboard_list_20260831.csv": "cd8e1012a7474375a8f62581e777bcb7889f3894787ba02fda039b781a0ef0c8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v5\\security_evidence\\sse_current\\sse_current_mainboard.csv": "ce06ef6c945bf156600686912ee2066fb45f645d998b2eea8e643d32f065b32d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v7\\security_evidence\\sse_breadth_gap\\sse_current_mainboard.csv": "1d425f98f6b060e357abe77862cae1e62ce5da1962ac94c44306899aa779247c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\security_sse_asof_20260904\\sse_current_mainboard.csv": "ae93edf01182d646efe5fc32de99fb9d620a2a891bbfb4be88485c08b08a70af",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\historical_universe\\official_delisted_mainboard.csv": "5fbf4bbf498bd87c05cb6ef49bd70373533b99858fe9e3ea8a59910572ea3057"
+  },
+  "protected": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_leader_model.py": "bff6e3d692bd1c46b511399c71ff91b9fdcbeda746cbe6875480652c3f08cdb1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_second_stage_model.py": "3c785c2190242453b13311e79b753f9fa93a0d0dca773c8b6e65e056f602f012",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_capital_risk_model.py": "7fddb3fe32738af4067aed8837a5d665fa72f569893f83fcfa0999d1f60f3b20",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_drop_clock.py": "182b129b61090bee43f4a6a966f2a96a468204e2a413a1d92a2cc56f1f5eebee",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\report.json": "328dbbbaf3d08d7a8b873b87e341317e52beed5adb22bbaf2c5ffad32336ad6a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S2_ALL_PREDICTIONS.csv": "68dd5e13a5609385fd0828cf402bd7c87c13062b1a4dcdec4aff4fee499e9ce6"
+  },
+  "raw_sources": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54"
+  },
+  "source_sha256": "710e4b89cfe9f925f0116c8d3c2ff8570d5d4bd2e015883fa98a3c75a8aa6134",
+  "new_forward_results": 0,
+  "actual_trades": 0,
+  "production_changes": false,
+  "already_studied_history_not_new_blind": true
+}
+
+===== FILE: research/first_board_true_listing_age_20261020_run1/report.json =====
+{
+  "at": "2026-10-20T18:43:15.840947+00:00",
+  "decision": {
+    "at": "2026-10-20T18:43:15.463070+00:00",
+    "baseline": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 52,
+      "hit_rate": 0.4444444444444444,
+      "wilson95": [
+        0.3575972219792095,
+        0.5348238053166497
+      ],
+      "full_positive_recall": 0.06025492468134415,
+      "false_positives": 65,
+      "false_negatives": 811,
+      "positive_pool": 691,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 863,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.4444444444444444,
+      "excluded_rows": 1147,
+      "excluded_known_promoters": 172,
+      "excluded_unknown": 2
+    },
+    "baseline_non_one_price": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 48,
+      "hit_rate": 0.41025641025641024,
+      "wilson95": [
+        0.32536293772432145,
+        0.5008556448305281
+      ],
+      "full_positive_recall": 0.05925925925925926,
+      "false_positives": 69,
+      "false_negatives": 762,
+      "positive_pool": 660,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 810,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.41025641025641024,
+      "excluded_rows": 1092,
+      "excluded_known_promoters": 150,
+      "excluded_unknown": 2
+    },
+    "challenger": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 48,
+      "hit_rate": 0.41025641025641024,
+      "wilson95": [
+        0.32536293772432145,
+        0.5008556448305281
+      ],
+      "full_positive_recall": 0.055619930475086905,
+      "false_positives": 69,
+      "false_negatives": 815,
+      "positive_pool": 691,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 863,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.41025641025641024,
+      "excluded_rows": 1147,
+      "excluded_known_promoters": 172,
+      "excluded_unknown": 2
+    },
+    "challenger_non_one_price": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 43,
+      "hit_rate": 0.36752136752136755,
+      "wilson95": [
+        0.28566809393867315,
+        0.4577974326899144
+      ],
+      "full_positive_recall": 0.05308641975308642,
+      "false_positives": 74,
+      "false_negatives": 767,
+      "positive_pool": 660,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 810,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.36752136752136755,
+      "excluded_rows": 1092,
+      "excluded_known_promoters": 150,
+      "excluded_unknown": 2
+    },
+    "unfiltered_challenger": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 52,
+      "hit_rate": 0.4444444444444444,
+      "wilson95": [
+        0.3575972219792095,
+        0.5348238053166497
+      ],
+      "full_positive_recall": 0.06025492468134415,
+      "false_positives": 65,
+      "false_negatives": 811,
+      "positive_pool": 863,
+      "outcome_coverage": 1.0
+    },
+    "pass_validation": false
+  },
+  "goal_60_passed": false,
+  "trainer": "Codex",
+  "reviewer": "Gemini4_PENDING_REVIEW",
+  "production_deployment_allowed": false,
+  "actual_trades": 0,
+  "new_forward_results": 0,
+  "status": "REJECTED_VALIDATION_NO_MONTHLY_FITS",
+  "core_fit_count": 2,
+  "baseline_refits": 0,
+  "second_stage_refits": 0
+}
+
+===== FILE: research/first_board_true_listing_age_20261020_run1/selection_BEFORE_EVALUATION.json =====
+{
+  "at": "2026-10-20T18:43:15.463070+00:00",
+  "baseline": {
+    "selected": 117,
+    "selected_dates": 117,
+    "known": 117,
+    "unknown": 0,
+    "hits": 52,
+    "hit_rate": 0.4444444444444444,
+    "wilson95": [
+      0.3575972219792095,
+      0.5348238053166497
+    ],
+    "full_positive_recall": 0.06025492468134415,
+    "false_positives": 65,
+    "false_negatives": 811,
+    "positive_pool": 691,
+    "outcome_coverage": 1.0,
+    "full_positive_pool": 863,
+    "full_signal_dates": 117,
+    "abstention_dates": 0,
+    "decision_date_coverage": 1.0,
+    "successful_predictions_per_all_pool_dates": 0.4444444444444444,
+    "excluded_rows": 1147,
+    "excluded_known_promoters": 172,
+    "excluded_unknown": 2
+  },
+  "baseline_non_one_price": {
+    "selected": 117,
+    "selected_dates": 117,
+    "known": 117,
+    "unknown": 0,
+    "hits": 48,
+    "hit_rate": 0.41025641025641024,
+    "wilson95": [
+      0.32536293772432145,
+      0.5008556448305281
+    ],
+    "full_positive_recall": 0.05925925925925926,
+    "false_positives": 69,
+    "false_negatives": 762,
+    "positive_pool": 660,
+    "outcome_coverage": 1.0,
+    "full_positive_pool": 810,
+    "full_signal_dates": 117,
+    "abstention_dates": 0,
+    "decision_date_coverage": 1.0,
+    "successful_predictions_per_all_pool_dates": 0.41025641025641024,
+    "excluded_rows": 1092,
+    "excluded_known_promoters": 150,
+    "excluded_unknown": 2
+  },
+  "challenger": {
+    "selected": 117,
+    "selected_dates": 117,
+    "known": 117,
+    "unknown": 0,
+    "hits": 48,
+    "hit_rate": 0.41025641025641024,
+    "wilson95": [
+      0.32536293772432145,
+      0.5008556448305281
+    ],
+    "full_positive_recall": 0.055619930475086905,
+    "false_positives": 69,
+    "false_negatives": 815,
+    "positive_pool": 691,
+    "outcome_coverage": 1.0,
+    "full_positive_pool": 863,
+    "full_signal_dates": 117,
+    "abstention_dates": 0,
+    "decision_date_coverage": 1.0,
+    "successful_predictions_per_all_pool_dates": 0.41025641025641024,
+    "excluded_rows": 1147,
+    "excluded_known_promoters": 172,
+    "excluded_unknown": 2
+  },
+  "challenger_non_one_price": {
+    "selected": 117,
+    "selected_dates": 117,
+    "known": 117,
+    "unknown": 0,
+    "hits": 43,
+    "hit_rate": 0.36752136752136755,
+    "wilson95": [
+      0.28566809393867315,
+      0.4577974326899144
+    ],
+    "full_positive_recall": 0.05308641975308642,
+    "false_positives": 74,
+    "false_negatives": 767,
+    "positive_pool": 660,
+    "outcome_coverage": 1.0,
+    "full_positive_pool": 810,
+    "full_signal_dates": 117,
+    "abstention_dates": 0,
+    "decision_date_coverage": 1.0,
+    "successful_predictions_per_all_pool_dates": 0.36752136752136755,
+    "excluded_rows": 1092,
+    "excluded_known_promoters": 150,
+    "excluded_unknown": 2
+  },
+  "unfiltered_challenger": {
+    "selected": 117,
+    "selected_dates": 117,
+    "known": 117,
+    "unknown": 0,
+    "hits": 52,
+    "hit_rate": 0.4444444444444444,
+    "wilson95": [
+      0.3575972219792095,
+      0.5348238053166497
+    ],
+    "full_positive_recall": 0.06025492468134415,
+    "false_positives": 65,
+    "false_negatives": 811,
+    "positive_pool": 863,
+    "outcome_coverage": 1.0
+  },
+  "pass_validation": false
+}
+
+===== FILE: research/first_board_true_listing_age_20261020_run1/verify_saved_result.py =====
+"""Independent saved-model replay, whole-pool reconciliation and daily settlement; no fits."""
+from pathlib import Path
+from datetime import datetime, timezone
+import json
+import sys
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+import first_board_true_listing_age as trial
+import first_board_leader_model as base
+import first_second_stage_model as stage
+import joblib
+import numpy as np
+import pandas as pd
+
+OUT = Path(__file__).resolve().parent
+
+
+def selections(frame, non_one=False):
+    mask = frame.research_selection_allowed & (frame.one_price.eq(0) if non_one else True)
+    return frame[mask].sort_values(["signal_date", "model_score", "code"], ascending=[True, False, True]).groupby("signal_date", sort=True).head(1)
+
+
+def main():
+    protocol = json.loads((OUT / "protocol_BEFORE_ANY_FIT.json").read_text("utf-8"))
+    assert base.sha(trial.__file__) == protocol["source_sha256"]
+    for name, digest in {**protocol["inputs"], **protocol["protected"], **protocol["raw_sources"]}.items():
+        assert base.sha(name) == digest
+    rows = pd.read_csv(OUT / "COMPLETE_FIRST_BOARD_UNCHANGED_FACTS_LABELS_AND_ACTUAL_AGE.csv", dtype={"code": str}, float_precision="round_trip")
+    source = pd.read_csv(trial.SOURCE, dtype={"code": str}, float_precision="round_trip")
+    source = source[source.stage.eq(1)].reset_index(drop=True)
+    columns = trial.KEYS + ["stage", "label_end"] + trial.ORIGINAL_FIELDS + [stage.TARGET]
+    pd.testing.assert_frame_equal(rows[columns], source[columns], check_dtype=False, check_exact=True)
+    extra = pd.read_csv(trial.QUAL / "COMPLETE_FIRST_BOARD_ACTUAL_AGE_NO_OUTCOMES.csv", dtype={"code": str}, float_precision="round_trip")
+    expected = rows[trial.KEYS].merge(extra[trial.KEYS + [trial.NEW]], on=trial.KEYS, validate="one_to_one")
+    np.testing.assert_allclose(expected[trial.NEW], rows[trial.NEW], atol=0, rtol=0)
+    scored = pd.read_csv(OUT / "VALIDATION_ALL_PREDICTIONS_BEFORE_METRICS.csv", dtype={"code": str}, float_precision="round_trip")
+    val = rows[rows.signal_date.between("2025-01-01", "2025-06-30")].reset_index(drop=True)
+    pd.testing.assert_frame_equal(scored[val.columns], val, check_dtype=False, check_exact=True)
+    head = joblib.load(OUT / "models/validation_actual_listing_age_bundle.joblib")
+    assert len(head["features"]) == 62 and head["features"] == trial.FIELDS
+    assert trial.OLD not in head["features"] and trial.NEW in head["features"]
+    replay = stage.predict(head, val)
+    for field in ("model_score", "calibrated_score", "train_prior"):
+        np.testing.assert_allclose(replay[field], scored[field], atol=1e-12, rtol=1e-12, equal_nan=True)
+    params_all = {}
+    for suffix in ("calibration_prefix", "full"):
+        stem = "validation_actual_listing_age_" + suffix
+        core = joblib.load(OUT / "models" / (stem + ".joblib"))
+        receipt = json.loads((OUT / "models" / (stem + "_COMPLETED.json")).read_text("utf-8"))
+        assert base.sha(OUT / "models" / (stem + ".joblib")) == receipt["sha256"]
+        params = core.named_steps["hist"].get_params()
+        for key, value in dict(max_iter=160, max_leaf_nodes=15, min_samples_leaf=60, learning_rate=.06, l2_regularization=8., class_weight="balanced", random_state=42, early_stopping=False).items():
+            assert params[key] == value
+        assert receipt["features"] == trial.FIELDS
+        train = pd.read_csv(OUT / "models" / (stem + "_members.csv"), dtype={"code": str}, float_precision="round_trip")
+        old = pd.read_csv(trial.REFERENCE / "models" / ("validation_S1_STAGE_CYCLE_GENE_" + suffix + "_members.csv"), dtype={"code": str}, float_precision="round_trip")
+        order = trial.KEYS + ["stage", "label_end", stage.TARGET]
+        pd.testing.assert_frame_equal(train[order].sort_values(trial.KEYS).reset_index(drop=True), old[order].sort_values(trial.KEYS).reset_index(drop=True), check_dtype=False, check_exact=True)
+        assert train.label_end.lt("2025-01-01").all()
+        params_all[suffix] = {key: params[key] for key in ("max_iter", "max_leaf_nodes", "min_samples_leaf", "learning_rate", "l2_regularization", "class_weight", "random_state", "early_stopping")}
+    baseline = trial.risk.attach_frozen(rows, trial.REFERENCE / "validation_S1_STAGE_CYCLE_GENE_PREDICTIONS.csv")
+    merged = scored[trial.KEYS + ["label_end", stage.TARGET, "one_price", "research_selection_allowed", trial.OLD, trial.NEW, "model_score", "calibrated_score"]].merge(
+        baseline[trial.KEYS + ["model_score", "calibrated_score"]].rename(columns={"model_score": "baseline_raw_score", "calibrated_score": "baseline_calibrated_score"}), on=trial.KEYS, validate="one_to_one")
+    merged.to_csv(OUT / "AUDIT_COMPLETE4724_SCORE_COMPARISON_WITH_UNKNOWN.csv", index=False)
+    pairs, settlement = [], {}
+    for non, scope in [(False, "primary"), (True, "non_one_price")]:
+        a, b = selections(scored, non).set_index("signal_date"), selections(baseline, non).set_index("signal_date")
+        assert a.index.equals(b.index) and len(a) == 117
+        known_a, known_b = a[stage.TARGET].notna(), b[stage.TARGET].notna()
+        ah, bh = a[stage.TARGET].eq(1), b[stage.TARGET].eq(1)
+        settlement[scope] = dict(dates=len(a), challenger_hits=int(ah.sum()), baseline_hits=int(bh.sum()),
+                                challenger_known=int(known_a.sum()), baseline_known=int(known_b.sum()),
+                                common_wins=int((ah & bh).sum()), challenger_only_win=int((ah & ~bh & known_b).sum()),
+                                baseline_only_win=int((~ah & bh & known_a).sum()), common_failures=int((~ah & ~bh & known_a & known_b).sum()))
+        for day in a.index:
+            pairs.append(dict(scope=scope, date=day, challenger_code=a.loc[day, "code"], baseline_code=b.loc[day, "code"],
+                              challenger_outcome=a.loc[day, stage.TARGET], baseline_outcome=b.loc[day, stage.TARGET]))
+    pd.DataFrame(pairs).to_csv(OUT / "INDEPENDENT_ALL117_DAILY_PAIRED_SELECTIONS.csv", index=False)
+    assert settlement["primary"]["challenger_hits"] == 48 and settlement["primary"]["baseline_hits"] == 52
+    assert settlement["non_one_price"]["challenger_hits"] == 43 and settlement["non_one_price"]["baseline_hits"] == 48
+    report = json.loads((OUT / "report.json").read_text("utf-8"))
+    assert report["core_fit_count"] == 2 and not report["decision"]["pass_validation"] and not report["goal_60_passed"]
+    assert not list((OUT / "models").glob("2025-*.joblib")) and not list((OUT / "models").glob("2026-*.joblib"))
+    result = dict(at=datetime.now(timezone.utc).isoformat(), status="PASS", verifier_fits=0, all_raw_source_and_protected_hashes_unchanged=True,
+                  all28503_original_fields_and_labels_unchanged=True, all4724_scores_replayed=True, feature_count=62,
+                  removed_from_estimator_only=trial.OLD, new_feature_only=trial.NEW, actual_age_coverage=len(rows[rows[trial.NEW].notna()]),
+                  validation_rows=len(scored), validation_known=int(scored[stage.TARGET].notna().sum()), validation_unknown=int(scored[stage.TARGET].isna().sum()),
+                  first_unknown=int(rows[stage.TARGET].isna().sum()), original_full_and_prefix_training_members_unchanged=True,
+                  original_parameters=params_all, settlement=settlement, core_fits=2, temporal_calibrator_fits=1, monthly_fits=0, baseline_refits=0, second_stage_refits=0,
+                  interpretation="REJECTED:primary and non-one-price validation both declined;not a60%achievement,no deployment")
+    base.write_json(OUT / "INDEPENDENT_SAVED_MODEL_VERIFICATION.json", result)
+    print(json.dumps(result, ensure_ascii=True))
+
+
+if __name__ == "__main__":
+    main()
+
+
+===== FILE: research/first_board_true_listing_age_20261020_run1/INDEPENDENT_SAVED_MODEL_VERIFICATION.json =====
+{
+  "at": "2026-10-20T18:44:52.543338+00:00",
+  "status": "PASS",
+  "verifier_fits": 0,
+  "all_raw_source_and_protected_hashes_unchanged": true,
+  "all28503_original_fields_and_labels_unchanged": true,
+  "all4724_scores_replayed": true,
+  "feature_count": 62,
+  "removed_from_estimator_only": "listing_age_sessions",
+  "new_feature_only": "listing_calendar_age_days",
+  "actual_age_coverage": 28503,
+  "validation_rows": 4724,
+  "validation_known": 4714,
+  "validation_unknown": 10,
+  "first_unknown": 126,
+  "original_full_and_prefix_training_members_unchanged": true,
+  "original_parameters": {
+    "calibration_prefix": {
+      "max_iter": 160,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 60,
+      "learning_rate": 0.06,
+      "l2_regularization": 8,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "early_stopping": false
+    },
+    "full": {
+      "max_iter": 160,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 60,
+      "learning_rate": 0.06,
+      "l2_regularization": 8,
+      "class_weight": "balanced",
+      "random_state": 42,
+      "early_stopping": false
+    }
+  },
+  "settlement": {
+    "primary": {
+      "dates": 117,
+      "challenger_hits": 48,
+      "baseline_hits": 52,
+      "challenger_known": 117,
+      "baseline_known": 117,
+      "common_wins": 39,
+      "challenger_only_win": 9,
+      "baseline_only_win": 13,
+      "common_failures": 56
+    },
+    "non_one_price": {
+      "dates": 117,
+      "challenger_hits": 43,
+      "baseline_hits": 48,
+      "challenger_known": 117,
+      "baseline_known": 117,
+      "common_wins": 35,
+      "challenger_only_win": 8,
+      "baseline_only_win": 13,
+      "common_failures": 61
+    }
+  },
+  "core_fits": 2,
+  "temporal_calibrator_fits": 1,
+  "monthly_fits": 0,
+  "baseline_refits": 0,
+  "second_stage_refits": 0,
+  "interpretation": "REJECTED:primary and non-one-price validation both declined;not a60%achievement,no deployment"
+}
+
+===== FILE: research/first_board_listing_date_qualification_20261020_final/protocol_BEFORE_DATA_NO_OUTCOMES.json =====
+{
+  "at": "2026-10-20T18:43:02.192116+00:00",
+  "task": "Outcome-blind qualification of stable actual listing dates for one replacement feature",
+  "hypothesis": "A real pre-archive listing date supplies cross-stock tenure absent from the left-censored archive clock; this is not another deletion/cap of the old field",
+  "field": "listing_calendar_age_days",
+  "definition": "Signal calendar date minus actual IPO listing calendar date, in days; no log, cap, bins or optimized cutoffs",
+  "source_policy": "Existing official-list CSVs must reproduce the master date; missing/conflicting/future listing dates remain NaN. Historical source retrieval clocks are not backdated.",
+  "no_outcome_columns_read": true,
+  "no_new_network_requests": true,
+  "coverage_gate": "At least95% actual-age coverage and100 observed rows in development and2025H1 validation",
+  "bindings": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\security_evidence\\szse_mainboard_list_20260831.csv": "cd8e1012a7474375a8f62581e777bcb7889f3894787ba02fda039b781a0ef0c8",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v5\\security_evidence\\sse_current\\sse_current_mainboard.csv": "ce06ef6c945bf156600686912ee2066fb45f645d998b2eea8e643d32f065b32d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v7\\security_evidence\\sse_breadth_gap\\sse_current_mainboard.csv": "1d425f98f6b060e357abe77862cae1e62ce5da1962ac94c44306899aa779247c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v49\\security_sse_asof_20260904\\sse_current_mainboard.csv": "ae93edf01182d646efe5fc32de99fb9d620a2a891bbfb4be88485c08b08a70af",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v4\\historical_universe\\official_delisted_mainboard.csv": "5fbf4bbf498bd87c05cb6ef49bd70373533b99858fe9e3ea8a59910572ea3057"
+  },
+  "source_sha256": "710e4b89cfe9f925f0116c8d3c2ff8570d5d4bd2e015883fa98a3c75a8aa6134",
+  "fits": 0
+}
+
+===== FILE: research/first_board_listing_date_qualification_20261020_final/qualification.json =====
+{
+  "at": "2026-10-20T18:43:04.833115+00:00",
+  "qualified": true,
+  "rows": 28503,
+  "periods": {
+    "development": {
+      "rows": 10630,
+      "known": 10630,
+      "unknown": 0,
+      "coverage": 1.0,
+      "archive_age_groups_with_multiple_actual_tenures": 265,
+      "distinct_actual_age_values": 6240
+    },
+    "validation2025H1": {
+      "rows": 4724,
+      "known": 4724,
+      "unknown": 0,
+      "coverage": 1.0,
+      "archive_age_groups_with_multiple_actual_tenures": 117,
+      "distinct_actual_age_values": 3524
+    },
+    "evaluation": {
+      "rows": 13149,
+      "known": 13149,
+      "unknown": 0,
+      "coverage": 1.0,
+      "archive_age_groups_with_multiple_actual_tenures": 286,
+      "distinct_actual_age_values": 7178
+    }
+  },
+  "prefix_checks": [
+    {
+      "cutoff": "2025-06-30",
+      "rows": 15354,
+      "exact_equal": true
+    },
+    {
+      "cutoff": "2025-12-31",
+      "rows": 20229,
+      "exact_equal": true
+    }
+  ],
+  "independent_calendar_arithmetic_all_rows": true,
+  "raw_conflict_codes": [],
+  "current_universe_survivorship_unchanged": true,
+  "acquisition_late_not_original_pit_capture": true,
+  "publication_clock": "Listing event date is a stable historical fact; original pre-signal HTTP acquisition is not certified",
+  "field_is_calendar_days_not_official_sessions": true,
+  "no_labels_read": true,
+  "fits": 0
+}
+
+===== FILE: research/first_board_listing_date_qualification_20261020/QUALIFICATION_SCOPE_ADJUSTMENT_BEFORE_ANY_FIT.json =====
+{
+  "at": "2026-10-20T18:42:02.410346+00:00",
+  "reason": "Current-list-only raw corroboration omits historical delisted issuers; add existing official delisted listing dates to avoid future-status-dependent missingness",
+  "initial_coverage_gate_passed_not_a_final_leakage_certification": true,
+  "original_qualification_preserved": true,
+  "fits_so_far": 0,
+  "new_feature_definition_or_threshold_change": false
+}
+
+===== FILE: research/first_board_listing_date_qualification_20261020_complete/IPO_FIELD_SCOPE_CORRECTION_BEFORE_ANY_FIT.json =====
+{
+  "at": "2026-10-20T18:42:59.005286+00:00",
+  "issue": "Remaining91missing rows had raw official listing-date corroboration, but code incorrectly required all historical security-state intervals source_verified, including unrelated future/unknown name orST states",
+  "fix": "Separate stable IPO-date corroboration from historical eligibility-state verification; require unique master date, declared official source type and identical official raw listing date. Existing cohort eligibility stays frozen",
+  "new_model_fits": 0,
+  "feature_or_threshold_change": false,
+  "original_outputs_preserved": true
+}
+
+===== FILE: research/first_board_drop_clock_20261020_run1/protocol_BEFORE_ANY_FIT.json =====
+{
+  "formed_at": "2026-10-20T15:09:27.374042+00:00",
+  "budget_minutes": 30,
+  "batch_started_at": "2026-10-20T15:08:53+00:00",
+  "previous_goal_turn": "PROGRESS:outcome-blind62fieldauditverifiedlisting_age_sessionsis archivecalendarposition for99%ofoldstocks and54BASEsplitsusedit;nowonesurgicalablation",
+  "hypothesis": "Removing the left-censored archive-clock input improves first-close transfer beyondfrozen62fieldHGB",
+  "variant": "DROP_ARCHIVE_CLOCK",
+  "fields": [
+    "log_price",
+    "log_amount",
+    "log_float_cap",
+    "turnover",
+    "amount_cap",
+    "gap",
+    "amplitude",
+    "body",
+    "one_price",
+    "close_to_open",
+    "return_5",
+    "return_10",
+    "return_20",
+    "return_60",
+    "volume_ratio_5",
+    "volume_ratio_20",
+    "amount_ratio_5",
+    "close_ma5",
+    "close_ma20",
+    "close_ma60",
+    "breakout_20",
+    "position_60",
+    "prior_limits_20",
+    "prior_failed_20",
+    "previous_limit_age",
+    "prior_volatility_20",
+    "market_limits",
+    "market_first",
+    "market_relays",
+    "market_failed",
+    "market_failed_rate",
+    "market_max_height",
+    "market_down_limits",
+    "market_positive_fraction",
+    "market_median_return",
+    "previous_first_promotion",
+    "previous_relay_promotion",
+    "previous_top_return",
+    "previous_top_broken",
+    "turnover_rank",
+    "amount_rank",
+    "volume_ratio_rank",
+    "pre_momentum_rank",
+    "gene_max_streak_60",
+    "gene_limits_60",
+    "gene_relay_rate_60",
+    "turnover_ratio_5",
+    "prior_compression_5",
+    "two_session_turnover_sum",
+    "previous_one_price",
+    "opened_after_one_price",
+    "cycle_height_change",
+    "cycle_height_break_20",
+    "cycle_anchor_breaks",
+    "cycle_anchor_collapses",
+    "cycle_high_survival",
+    "cycle_first_expansion_5",
+    "cycle_first_relay_ratio",
+    "cycle_top_one_price_share",
+    "stage_pool_size",
+    "stage_one_price_share"
+  ],
+  "removed_only": "listing_age_sessions",
+  "source_semantics": "Original field remains in complete facts as source-truncated tenure,not full listing age;no new age replacement or capping",
+  "baseline": "Exact frozen original62-fieldHGBscores plusunchangedcapital/thinturnover screen;baseline andsecondheadneverrefitted",
+  "training": "Exact samefullknownmaturemembers,label_end<boundary,originalequaldayweights/HGB160trees15leavesleaf60lr.06l2=8balancedseed42;last42datePlattC1 unchanged",
+  "validation": "Completeoriginal2025H1:4724rows/117dates. Need>52Top1hits,>=48non-one-priceTop1hits,>=95%decisiondatecoverage;baselinewinsties",
+  "evaluation": "Onlyifpass:oneheadperoriginal14monthlyprevious252officialsignalpositions,alllabel_end<monthstart;savefullpredictionsbeforemetrics,reportphase/non-one-price/samecodesecondclose",
+  "target60": "DailyTop1next-official-close1to2knownhitrate>=60%,>=200known,>=95%outcomecoverage,noabstentiondates;2025H2and2026each>=55%;firstcloseonly,noauctiondata",
+  "stop": "Singlearmonce;fixedcomparisonor30minutes. No agecap/replacement/otherfeature changes afterresult,no oldfailedschemereruns",
+  "inputs": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\all_first_and_second_boards_WITH_SEPARATE_LABELS.csv": "8695d6ca3f5f73468ff0be22c7df9265e505644fb73aa39b8c43a8fe84e27d0f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_capital_risk_20261020_run1\\COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv": "eb979ae06bbb8324eff9268d0284026b98b859a8b602aa615a11c589f2c276c2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\validation_S1_STAGE_CYCLE_GENE_PREDICTIONS.csv": "9065c1f429fc666cea225df7525151fc115fd51d57df4e2d3c33135d7d11758f",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_input_shift_20261020\\report.json": "c7f8f98531544a0a72ff140fc25bd7ef7ae9781125bbf346b2981dbb6043c129",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_input_shift_20261020\\verification.json": "17348ea04ff956e7b2451505f35173b55a3a000bf8743fd1f0de6c8fd6ec2604",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_input_shift_20261020\\saved_archive_clock_usage_CURRENT_DIAGNOSTIC.json": "f17ac1950c946e15f47d23f728aac751b0af19d7a2c0d573ea79b0d76e067fa0"
+  },
+  "protected": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_leader_model.py": "bff6e3d692bd1c46b511399c71ff91b9fdcbeda746cbe6875480652c3f08cdb1",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_second_stage_model.py": "3c785c2190242453b13311e79b753f9fa93a0d0dca773c8b6e65e056f602f012",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_capital_risk_model.py": "7fddb3fe32738af4067aed8837a5d665fa72f569893f83fcfa0999d1f60f3b20",
+    "D:\\Documents\\ChatGPT\\龙头战法\\first_board_matured_event_model.py": "969f45c054ad8f80d179d4b6d243afd952e8b721fbe5abbca394437c092a955d",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\report.json": "328dbbbaf3d08d7a8b873b87e341317e52beed5adb22bbaf2c5ffad32336ad6a",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S1_ALL_PREDICTIONS.csv": "5778218216feaa9fbc86085204cbd3232e1de10d7f87a9137c548717244f483c",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_second_stage_20261020_run1\\S2_ALL_PREDICTIONS.csv": "68dd5e13a5609385fd0828cf402bd7c87c13062b1a4dcdec4aff4fee499e9ce6",
+    "D:\\Documents\\ChatGPT\\龙头战法\\research\\first_board_capital_risk_20261020_run1\\report.json": "a28981129066b73a763dafa76bb8cd513289b0154505e94bfe6cefb9558b24f9"
+  },
+  "raw_source_hashes": {
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\point_in_time_current_daily_bars.csv": "d281f54027017451d425c0d5ce495b06d69fa4501419ea380b1a8f43f774e459",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v16\\point_in_time_rebuild_cutoff_20260831_v2\\verified_recovered_daily_bars.csv": "d17cacb31cde6fa50148892ee111f8d3c2b6d21e5364ba6250255bc5823752ab",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v279\\exchange_calendar_audit_20261002_v1\\calendar.json": "8d23af2d1333f635baf5599e94bc1b1cb0c2cede146cafebb9236629853639a2",
+    "D:\\Documents\\ChatGPT\\龙头战法\\data\\v11\\security_master_intervals.csv": "ad3f54123c968828ada0126f1bf1283f49d1a25ba7af8590455cff4265183e54"
+  },
+  "source_sha256": "182b129b61090bee43f4a6a966f2a96a468204e2a413a1d92a2cc56f1f5eebee",
+  "historical_replay_not_pristine_blind": true,
+  "production_changes": false,
+  "actual_trades": 0,
+  "new_forward_results": 0
+}
+
+===== FILE: research/first_board_drop_clock_20261020_run1/report.json =====
+{
+  "formed_at": "2026-10-20T15:09:35.471449+00:00",
+  "decision": {
+    "formed_at": "2026-10-20T15:09:35.448771+00:00",
+    "selected": null,
+    "baseline": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 52,
+      "hit_rate": 0.4444444444444444,
+      "wilson95": [
+        0.3575972219792095,
+        0.5348238053166497
+      ],
+      "full_positive_recall": 0.06025492468134415,
+      "false_positives": 65,
+      "false_negatives": 811,
+      "positive_pool": 691,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 863,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.4444444444444444,
+      "excluded_rows": 1147,
+      "excluded_known_promoters": 172,
+      "excluded_unknown": 2
+    },
+    "baseline_non_one_price": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 48,
+      "hit_rate": 0.41025641025641024,
+      "wilson95": [
+        0.32536293772432145,
+        0.5008556448305281
+      ],
+      "full_positive_recall": 0.05925925925925926,
+      "false_positives": 69,
+      "false_negatives": 762,
+      "positive_pool": 660,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 810,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.41025641025641024,
+      "excluded_rows": 1092,
+      "excluded_known_promoters": 150,
+      "excluded_unknown": 2
+    },
+    "primary": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 46,
+      "hit_rate": 0.39316239316239315,
+      "wilson95": [
+        0.309403674424791,
+        0.48371368575955376
+      ],
+      "full_positive_recall": 0.05330243337195829,
+      "false_positives": 71,
+      "false_negatives": 817,
+      "positive_pool": 691,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 863,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.39316239316239315,
+      "excluded_rows": 1147,
+      "excluded_known_promoters": 172,
+      "excluded_unknown": 2
+    },
+    "non_one_price": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 41,
+      "hit_rate": 0.3504273504273504,
+      "wilson95": [
+        0.2699839639664325,
+        0.44038034029165013
+      ],
+      "full_positive_recall": 0.050617283950617285,
+      "false_positives": 76,
+      "false_negatives": 769,
+      "positive_pool": 660,
+      "outcome_coverage": 1.0,
+      "full_positive_pool": 810,
+      "full_signal_dates": 117,
+      "abstention_dates": 0,
+      "decision_date_coverage": 1.0,
+      "successful_predictions_per_all_pool_dates": 0.3504273504273504,
+      "excluded_rows": 1092,
+      "excluded_known_promoters": 150,
+      "excluded_unknown": 2
+    },
+    "unfiltered_diagnostic": {
+      "selected": 117,
+      "selected_dates": 117,
+      "known": 117,
+      "unknown": 0,
+      "hits": 52,
+      "hit_rate": 0.4444444444444444,
+      "wilson95": [
+        0.3575972219792095,
+        0.5348238053166497
+      ],
+      "full_positive_recall": 0.06025492468134415,
+      "false_positives": 65,
+      "false_negatives": 811,
+      "positive_pool": 863,
+      "outcome_coverage": 1.0
+    },
+    "pass_validation": false
+  },
+  "goal_60_passed": false,
+  "new_forward_results": 0,
+  "actual_trades": 0,
+  "core_fit_count": 2,
+  "status": "REJECTED_VALIDATION_NO_MONTHLY_FITS"
+}
+
+===== FILE: first_second_stage_model.py =====
+"""Separate first-to-second and second-to-third EOD research models.
+
+Only adjacent official-session closes define promotion. A second-board recheck
+uses newly available second-board facts and never alters the first-board call.
+"""
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+import json
+import math
+import joblib
+import numpy as np
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import brier_score_loss, precision_recall_fscore_support, roc_auc_score
+from sklearn.pipeline import Pipeline
+
+import first_board_leader_model as base
+
+VERSION="first-second-stage-20261020"
+TARGET="promotion_next_LABEL_ONLY"
+EXTRA=["gene_max_streak_60","gene_limits_60","gene_relay_rate_60",
+       "turnover_ratio_5","prior_compression_5","two_session_turnover_sum",
+       "previous_one_price","opened_after_one_price","cycle_height_change",
+       "cycle_height_break_20","cycle_anchor_breaks","cycle_anchor_collapses",
+       "cycle_high_survival","cycle_first_expansion_5","cycle_first_relay_ratio",
+       "cycle_top_one_price_share","stage_pool_size","stage_one_price_share"]
+VARIANTS={"STAGE_BASE":base.FEATURES,"STAGE_CYCLE_GENE":base.FEATURES+EXTRA}
+MARKET=[x for x in base.FEATURES if x.startswith("market_")]+["previous_first_promotion","previous_relay_promotion","previous_top_return","previous_top_broken"]
+SOURCES=base.ROOT/"research/first_second_stage_20261020_sources"
+
+
+def build_rows(inputs=base.INPUTS,feature_cutoff=None):
+    first,bars,sessions,audit=base.build_dataset(inputs,feature_cutoff=feature_cutoff)
+    g=bars.groupby("code",sort=False)
+    continuous60=bars.p.sub(g.p.shift(60)).eq(60)
+    bars["gene_max_streak_60"]=g.height.transform(lambda x:x.shift().rolling(60,min_periods=60).max()).where(continuous60)
+    bars["gene_limits_60"]=g.limit.transform(lambda x:x.shift().rolling(60,min_periods=60).sum()).where(continuous60)
+    historical_success=bars.limit&bars.previous_limit
+    numerator=historical_success.groupby(bars.code).transform(lambda x:x.shift().rolling(60,min_periods=60).sum())
+    denominator=g.previous_limit.transform(lambda x:x.shift().rolling(60,min_periods=60).sum())
+    bars["gene_relay_rate_60"]=(numerator/denominator.where(denominator.gt(0))).where(continuous60)
+    prior_turnover=g.turnover.transform(lambda x:x.shift().rolling(5,min_periods=5).mean())
+    bars["turnover_ratio_5"]=(bars.turnover/prior_turnover.where(prior_turnover.gt(0))).where(bars.p.sub(g.p.shift(5)).eq(5))
+    hi=g.high.transform(lambda x:x.shift().rolling(5,min_periods=5).max())
+    lo=g.low.transform(lambda x:x.shift().rolling(5,min_periods=5).min())
+    bars["prior_compression_5"]=(hi/lo-1).where(bars.p.sub(g.p.shift(5)).eq(5))
+    adjacent=bars.p.sub(g.p.shift()).eq(1)
+    bars["two_session_turnover_sum"]=(bars.turnover+g.turnover.shift()).where(adjacent)
+    bars["previous_one_price"]=g.one_price.shift().where(adjacent)
+    bars["opened_after_one_price"]=((bars.previous_one_price.eq(1))&bars.one_price.eq(0)).astype(float).where(bars.height.eq(2))
+    # Counts are only complete within the declared archived security universe.
+    eligible=bars[bars.eligible&bars.valid_price]
+    market=eligible.groupby("date").height.max().to_frame("height")
+    market["cycle_height_change"]=market.height.diff()
+    cap=market.height.shift().rolling(20,min_periods=20).max()
+    market["cycle_height_break_20"]=market.height.gt(cap).astype(float).where(cap.notna())
+    anchors=bars.previous_height.ge(4)&bars.previous_limit
+    for col,mask in [("cycle_anchor_breaks",anchors&~bars.limit),("cycle_anchor_collapses",anchors&bars.day_return.le(-.07))]:
+        market[col]=bars[mask].groupby("date").size().reindex(market.index,fill_value=0)
+    denominator=bars[anchors].groupby("date").size()
+    numerator=bars[anchors&bars.limit].groupby("date").size()
+    market["cycle_high_survival"]=numerator.reindex(market.index,fill_value=0)/denominator.reindex(market.index).replace(0,np.nan)
+    first_count=eligible.groupby("date")["first"].sum()
+    relay_count=eligible[eligible.height.ge(2)].groupby("date").size().reindex(market.index,fill_value=0)
+    market["cycle_first_expansion_5"]=first_count/first_count.shift().rolling(5,min_periods=5).mean().replace(0,np.nan)
+    market["cycle_first_relay_ratio"]=first_count/relay_count.replace(0,np.nan)
+    top=eligible[eligible.height.eq(eligible.groupby("date").height.transform("max"))&eligible.height.ge(2)]
+    market["cycle_top_one_price_share"]=top.groupby("date").one_price.mean()
+    second=bars.height.eq(2)&bars.previous_limit&bars.previous_height.eq(1)&g["first"].shift().fillna(False).astype(bool)&adjacent
+    rows=bars[bars["first"]|second].copy().rename(columns={"date":"signal_date"})
+    rows["stage"]=np.where(rows["first"],1,2)
+    rows=rows.merge(first[["signal_date"]+MARKET].drop_duplicates("signal_date"),on="signal_date",how="left",validate="many_to_one")
+    rows=rows.merge(market.drop(columns="height"),left_on="signal_date",right_index=True,how="left",validate="many_to_one")
+    for out,col in [("turnover_rank","turnover"),("amount_rank","amount"),("volume_ratio_rank","volume_ratio_5"),("pre_momentum_rank","return_20")]:
+        rows[out]=rows.groupby(["signal_date","stage"])[col].rank(pct=True)
+    rows["stage_pool_size"]=rows.groupby(["signal_date","stage"]).code.transform("size")
+    rows["stage_one_price_share"]=rows.groupby(["signal_date","stage"]).one_price.transform("mean")
+    lookup=bars.set_index(["p","code"])[["limit","valid_price","regular_price","eligible"]]
+    idx=pd.MultiIndex.from_arrays([rows.p.to_numpy()+1,rows.code.to_numpy()],names=["p","code"])
+    future=lookup.reindex(idx)
+    observed=future.valid_price.fillna(False).to_numpy(dtype=bool)&future.regular_price.fillna(False).to_numpy(dtype=bool)&future.eligible.fillna(False).to_numpy(dtype=bool)
+    rows[TARGET]=np.where(observed,future.limit.fillna(False).to_numpy(dtype=float),np.nan)
+    rows["label_end"]=rows.p.map(lambda p:sessions[p+1] if p+1<len(sessions) else None)
+    rows["baseline_score"]=-rows.turnover
+    fields=VARIANTS["STAGE_CYCLE_GENE"]
+    rows[fields]=rows[fields].replace([np.inf,-np.inf],np.nan)
+    rows=rows.sort_values(["signal_date","stage","code"]).reset_index(drop=True)
+    audit.update(stage_rows=rows.groupby("stage").size().to_dict(),stage_known=rows.groupby("stage")[TARGET].count().to_dict(),
+                 next_session_label="Exactly next official session; next session missing/ineligible/invalid price remains UNKNOWN",extra_features=EXTRA,
+                 stage2_identity="Previous adjacent official session is a verified reconstructed first board, current close is second exact limit")
+    return rows,bars,sessions,audit
+
+
+def metric(rows,score="model_score",k=1):
+    take=base.selected(rows,score,k)
+    known=take[TARGET].notna();hits=int(take[TARGET].eq(1).sum());n=int(known.sum())
+    total_positive=int(rows[TARGET].eq(1).sum())
+    if n:
+        z=1.959963984540054;p=hits/n;den=1+z*z/n
+        center=(p+z*z/(2*n))/den;half=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/den
+        interval=[max(0,center-half),min(1,center+half)]
+    else:interval=[None,None]
+    return dict(selected=len(take),selected_dates=take.signal_date.nunique(),known=n,unknown=int((~known).sum()),hits=hits,
+                hit_rate=hits/n if n else None,wilson95=interval,full_positive_recall=hits/total_positive if total_positive else None,
+                false_positives=int(take[TARGET].eq(0).sum()),false_negatives=total_positive-hits,positive_pool=total_positive,
+                outcome_coverage=n/len(take) if len(take) else None)
+
+
+def calibration_metrics(rows):
+    known=rows[TARGET].notna()&rows.calibrated_score.notna()
+    x=rows[known];y=x[TARGET].astype(int);p=x.calibrated_score
+    if not len(x):return dict(status="UNAVAILABLE",historical_gate_passed=False)
+    groups=pd.cut(p,np.linspace(0,1,11),include_lowest=True)
+    bins=x.assign(bin=groups).groupby("bin",observed=True).agg(n=(TARGET,"size"),mean_probability=("calibrated_score","mean"),observed=(TARGET,"mean"))
+    ece=float((bins.n*(bins.mean_probability-bins.observed).abs()).sum()/len(x))
+    brier=brier_score_loss(y,p);baseline=brier_score_loss(y,x.train_prior)
+    top=base.selected(rows,"model_score",1);top=top[top[TARGET].notna()&top.calibrated_score.notna()]
+    top_error=abs(float(top.calibrated_score.mean()-top[TARGET].mean())) if len(top) else None
+    qualified=bool(len(x)>=500 and len(top)>=200 and brier<baseline and ece<=.08 and top_error<=.10)
+    return dict(status="HISTORICAL_TEMPORAL_CALIBRATION_ONLY",historical_gate_passed=qualified,rows=len(x),brier=brier,prior_brier=baseline,ece=ece,
+                top1_rows=len(top),top1_forecast_mean=float(top.calibrated_score.mean()),top1_observed=float(top[TARGET].mean()),top1_absolute_gap=top_error,
+                bins=[dict(bin=str(idx),**row.to_dict()) for idx,row in bins.iterrows()])
+
+
+def evaluate(rows):
+    known=rows[TARGET].notna()
+    y=rows.loc[known,TARGET].astype(int);score=rows.loc[known,"model_score"]
+    p,r,f,_=precision_recall_fscore_support(y,score.ge(.5),average="binary",zero_division=0)
+    return dict(rows=len(rows),sessions=rows.signal_date.nunique(),known=int(known.sum()),unknown=int((~known).sum()),pool_rate=float(y.mean()),
+                top={str(k):metric(rows,k=k) for k in (1,3,5)},baseline_top={str(k):metric(rows,score="baseline_score",k=k) for k in (1,3,5)},
+                threshold_0_5_uncalibrated=dict(accuracy=float((score.ge(.5).to_numpy()==y.to_numpy()).mean()),precision=p,recall=r,f1=f,auc=roc_auc_score(y,score)),
+                calibration=calibration_metrics(rows))
+
+
+def fit_core(train,fields,out,name):
+    directory=out/"models";directory.mkdir(exist_ok=True)
+    receipt=dict(name=name,started_at=base.now(),rows=len(train),positives=int(train[TARGET].sum()),max_label_end=train.label_end.max(),
+                 min_signal=train.signal_date.min(),max_signal=train.signal_date.max(),features=fields)
+    before=directory/f"{name}_BEFORE_FIT.json"
+    if before.exists():before=directory/f"{name}_BEFORE_FIT_REPAIR.json"
+    observed=[f for f in fields if train[f].notna().any()]
+    receipt["all_missing_columns_dropped_from_estimator_only"]=sorted(set(fields)-set(observed))
+    base.write_json(before,receipt)
+    train[["signal_date","code","stage","label_end",TARGET]].to_csv(directory/f"{name}_members.csv",index=False)
+    # sklearn1.9's histogram binning rejects a completely empty feature.
+    # Learn the no-information column set from this training window only;
+    # retain original NaNs in all fact/feature files and do not invent values.
+    model=Pipeline([("observed_columns",ColumnTransformer([("observed","passthrough",observed)],remainder="drop")),("hist",base.make_model("hist_gradient"))])
+    weights=1/train.groupby("signal_date").code.transform("size");weights=weights/weights.mean()
+    model.fit(train[fields],train[TARGET].astype(int),hist__sample_weight=weights)
+    joblib.dump(model,directory/f"{name}.joblib")
+    receipt.update(completed_at=base.now(),sha256=base.sha(directory/f"{name}.joblib"))
+    base.write_json(directory/f"{name}_COMPLETED.json",receipt)
+    return model
+
+
+def predict(bundle,score):
+    out=score.copy();raw=bundle["model"].predict_proba(out[bundle["features"]])[:,1]
+    out["model_score"]=raw
+    if bundle["calibrator"] is not None:
+        logits=np.log(np.clip(raw,1e-6,1-1e-6)/np.clip(1-raw,1e-6,1-1e-6))
+        out["calibrated_score"]=bundle["calibrator"].predict_proba(logits.reshape(-1,1))[:,1]
+    else:out["calibrated_score"]=np.nan
+    out["train_prior"]=bundle["train_prior"]
+    return out
+
+
+def fit_head(train,variant,out,name):
+    fields=VARIANTS[variant];dates=sorted(train.signal_date.unique())
+    cached=out/"models"/f"{name}_bundle.joblib"
+    if cached.exists():
+        bundle=joblib.load(cached)
+        member=pd.read_csv(out/"models"/f"{name}_full_members.csv",dtype={"code":str})
+        assert set(map(tuple,member[["signal_date","code","stage"]].to_numpy()))==set(map(tuple,train[["signal_date","code","stage"]].to_numpy()))
+        assert bundle["features"]==fields and bundle["train_max_label_end"]==train.label_end.max()
+        receipt=json.loads((out/"models"/f"{name}_full_COMPLETED.json").read_text("utf-8"))
+        assert base.sha(out/"models"/f"{name}_full.joblib")==receipt["sha256"]
+        base.write_json(out/"models"/f"{name}_REUSED_WITHOUT_FIT.json",dict(reused_at=base.now(),bundle_sha256=base.sha(cached),original_completed=receipt["completed_at"]))
+        return bundle
+    if len(dates)<100:raise ValueError("insufficient temporal training sessions")
+    cutoff=dates[-42];inner=train[train.label_end.lt(cutoff)];cal=train[train.signal_date.ge(cutoff)]
+    inner_model=fit_core(inner,fields,out,name+"_calibration_prefix")
+    raw=inner_model.predict_proba(cal[fields])[:,1]
+    logit=np.log(np.clip(raw,1e-6,1-1e-6)/np.clip(1-raw,1e-6,1-1e-6))
+    calibrator=LogisticRegression(C=1.,max_iter=1000,random_state=42).fit(logit.reshape(-1,1),cal[TARGET].astype(int))
+    if calibrator.coef_[0,0]<=0:calibrator=None
+    cal_receipt=dict(name=name,cutoff=cutoff,inner_max_label_end=inner.label_end.max(),calibration_rows=len(cal),calibration_range=[cal.signal_date.min(),cal.signal_date.max()],
+                     positive_slope=calibrator is not None,formed_at=base.now())
+    cal[["signal_date","code","stage","label_end",TARGET]].assign(uncalibrated_oof=raw).to_csv(out/"models"/f"{name}_calibration_rows.csv",index=False)
+    base.write_json(out/"models"/f"{name}_calibration_receipt.json",cal_receipt)
+    model=fit_core(train,fields,out,name+"_full")
+    bundle=dict(version=VERSION,stage=int(train.stage.iloc[0]),model=model,calibrator=calibrator,features=fields,variant=variant,
+                train_prior=float(train[TARGET].mean()),train_max_label_end=train.label_end.max(),max_signal=train.signal_date.max(),
+                calibration_status="HISTORICAL_QUALIFICATION_PENDING",research_only=True)
+    joblib.dump(bundle,out/"models"/f"{name}_bundle.joblib")
+    return bundle
+
+
+def chain_recheck(first_predictions,second_predictions):
+    picked=base.selected(first_predictions,"model_score",1).copy()
+    picked=picked.rename(columns={"signal_date":"first_signal_date",TARGET:"first_promotion_LABEL_ONLY","model_score":"first_model_score","calibrated_score":"first_calibrated_score","label_end":"second_signal_date"})
+    second=second_predictions[["signal_date","code","model_score","calibrated_score",TARGET,"label_end"]].rename(columns={"signal_date":"second_signal_date","model_score":"second_model_score","calibrated_score":"second_calibrated_score",TARGET:"second_promotion_LABEL_ONLY","label_end":"third_target_date"})
+    keep=["first_signal_date","code","name","second_signal_date","first_promotion_LABEL_ONLY","first_model_score","first_calibrated_score"]
+    merged=picked[keep].merge(second,on=["second_signal_date","code"],how="left",validate="one_to_one")
+    # Second-board assessment exists only when the first call actually promoted.
+    fields=["second_model_score","second_calibrated_score","second_promotion_LABEL_ONLY","third_target_date"]
+    merged.loc[~merged.first_promotion_LABEL_ONLY.eq(1),fields]=np.nan
+    matured=merged.first_promotion_LABEL_ONLY.eq(1)&merged.second_promotion_LABEL_ONLY.notna()
+    continued=merged.second_promotion_LABEL_ONLY.eq(1)&merged.first_promotion_LABEL_ONLY.eq(1)
+    qualified=matured&merged.second_calibrated_score.ge(.5)
+    stats=dict(first_selections=len(merged),first_promoted=int(merged.first_promotion_LABEL_ONLY.eq(1).sum()),second_rechecks_available=int(merged.second_model_score.notna().sum()),
+               second_outcomes_known=int(matured.sum()),continued_to_third=int(continued.sum()),
+               conditional_second_to_third=float(continued.sum()/matured.sum()) if matured.any() else None,
+               qualified_rechecks=int(qualified.sum()),qualified_wins=int((qualified&continued).sum()),
+               qualified_hit_rate=float((qualified&continued).sum()/qualified.sum()) if qualified.any() else None,
+               full_first_to_third_rate=float(continued.sum()/merged.first_promotion_LABEL_ONLY.notna().sum()))
+    return merged,stats
+
+
+def preregistration():
+    return dict(version=VERSION,formed_at=base.now(),user_clarification="首板1进2的胜率为百分之60，然后再重新评判该股2进3的胜率",
+        previous_goal_turn="PROGRESS: saved and replay-verified prior first-board-to-four-board model; new clarification authorizes next-board targets, no old result overwritten.",
+        primary="At each archived first-board close rank the entire observed first-board pool; Top1 next official session exact closing second-board hit rate target .60, every candidate day retained.",
+        second_stage="Train independently on complete archived verified second-board pools; recheck the same selected stock only after it becomes second board, using that close's updated inputs; next official session third-board outcome.",
+        hypothesis="Stage-specific next-board learning with causally available stock limit-up genetics and cycle-node context improves durable promotion ranking; forum nodes are unverified mechanisms, not labels.",
+        source_hashes={str(p.resolve()):base.sha(p) for p in base.INPUTS.values()},base_module_sha256=base.sha(base.__file__),
+        source_notes_hash=base.sha(SOURCES/"source_adoption.json"),variants=VARIANTS,
+        parameters=dict(core="Same fixed hist_gradient parameters as prior run: 160 trees,15 leaves,leaf60,lr.06,l2=8,balanced,seed42,no early stopping",weights="Equal total signal-day weight"),
+        validation="Train signals and label ends strictly before 2025-01-01. Compare STAGE_BASE vs STAGE_CYCLE_GENE once per stage on 2025H1 Top1 hits; STAGE_BASE wins ties. Freeze separately before evaluating.",
+        evaluation="2025-07 through 2026-08. Selected variant only per stage, monthly previous252 official signal-date positions; all training label ends strictly before month boundary.",
+        calibration="For each training window, fit fixed prefix model before last42 training signal dates, produce temporal held-out scores, fit positive-slope Platt C=1; final core trained full window. Test probabilities qualified only if >=500 pool rows,>=200 Top1 known, Brier below monthly training-prior baseline,ECE10<=.08,Top1 mean probability error<=.10.",
+        target_60_gate="Top1 first-to-second observed hit rate >=.60, >=200 known selections, outcome coverage>=.95, both 2025H2 and2026 hit rates>=.55. Report confidence interval and unresolved days; none treated as failures or discarded.",
+        baseline="Lowest signal turnover, code ascending ties; original four-board model's saved first-board scores are reference only, not retrained.",
+        budget_minutes=30,stop="One fixed comparison with at most2 variants per stage; no retuning on test. 60% unmet remains an active goal.",
+        historical_replay_not_pristine_blind=True,full_historical_universe_complete=False,production_unchanged=True,actual_order_count=0)
+
+
+def run(output,resume=False):
+    out=Path(output)
+    if out.exists() and not resume:raise FileExistsError("refuse overwrite")
+    if not out.exists():out.mkdir(parents=True)
+    if resume:
+        protocol=json.loads((out/"protocol_BEFORE_ANY_FIT.json").read_text("utf-8"))
+        assert protocol["variants"]==VARIANTS
+        for path,value in protocol["source_hashes"].items():assert base.sha(path)==value
+    else:
+        protocol=preregistration();base.write_json(out/"protocol_BEFORE_ANY_FIT.json",protocol)
+    rows,bars,sessions,audit=build_rows()
+    dataset_path=out/"all_first_and_second_boards_WITH_SEPARATE_LABELS.csv"
+    if resume:
+        prior=pd.read_csv(dataset_path,dtype={"code":str},float_precision="round_trip")
+        assert list(zip(prior.signal_date,prior.code,prior.stage))==list(zip(rows.signal_date,rows.code,rows.stage))
+        np.testing.assert_allclose(prior[VARIANTS["STAGE_CYCLE_GENE"]+[TARGET]],rows[VARIANTS["STAGE_CYCLE_GENE"]+[TARGET]],equal_nan=True,rtol=1e-12,atol=1e-12)
+        base.write_json(out/"technical_repair_RESUMED_NO_EFFECT_TUNING.json",dict(resumed_at=base.now(),failure="Histogram all-missing feature opened_after_one_price for stage1",failed_attempts=1,completed_before_repair=2,handling="training-window-only all-empty columns omitted by saved ColumnTransformer; original NaNs retained",baseline_reused=True,all_input_features_and_labels_unchanged=True))
+    else:
+        rows.to_csv(dataset_path,index=False,encoding="utf-8-sig")
+        base.write_json(out/"data_audit.json",audit)
+    validation={};selection={}
+    for stage in (1,2):
+        pool=rows[rows.stage.eq(stage)];known=pool[pool[TARGET].notna()]
+        train=known[known.signal_date.lt("2025-01-01")&known.label_end.lt("2025-01-01")]
+        val=pool[pool.signal_date.between("2025-01-01","2025-06-30")]
+        validation[stage]={}
+        for variant in VARIANTS:
+            name=f"validation_S{stage}_{variant}"
+            bundle=fit_head(train,variant,out,name)
+            scores=predict(bundle,val)
+            pred_path=out/f"{name}_PREDICTIONS.csv"
+            if pred_path.exists():
+                original=pd.read_csv(pred_path,dtype={"code":str},float_precision="round_trip")
+                np.testing.assert_allclose(original.model_score,scores.model_score,rtol=1e-12,atol=1e-12)
+            else:scores.to_csv(pred_path,index=False)
+            validation[stage][variant]=evaluate(scores)
+        selection[stage]=max(VARIANTS,key=lambda v:validation[stage][v]["top"]["1"]["hits"])
+    base.write_json(out/"selection_BEFORE_EVALUATION.json",dict(formed_at=base.now(),selected=selection,validation=validation))
+    all_predictions={}
+    for stage in (1,2):
+        pool=rows[rows.stage.eq(stage)];known=pool[pool[TARGET].notna()]
+        test=pool[pool.signal_date.ge("2025-07-01")];parts=[]
+        for month,score in test.groupby(test.signal_date.str[:7],sort=True):
+            boundary=month+"-01";p=int(np.searchsorted(sessions,boundary))
+            train=known[known.p.ge(p-252)&known.label_end.lt(boundary)]
+            name=f"{month}_S{stage}_{selection[stage]}"
+            bundle=fit_head(train,selection[stage],out,name)
+            assert bundle["train_max_label_end"]<score.signal_date.min()
+            predictions=predict(bundle,score);predictions["model_month"]=month
+            predictions.to_csv(out/f"{month}_S{stage}_PREDICTIONS_BEFORE_METRICS.csv",index=False)
+            parts.append(predictions)
+        all_predictions[stage]=pd.concat(parts,ignore_index=True)
+        all_predictions[stage].to_csv(out/f"S{stage}_ALL_PREDICTIONS.csv",index=False,encoding="utf-8-sig")
+    comparisons={}
+    for stage,predictions in all_predictions.items():
+        comparisons[stage]={}
+        for period,mask in [("all",pd.Series(True,index=predictions.index)),("2025H2",predictions.signal_date.lt("2026-01-01")),("2026",predictions.signal_date.ge("2026-01-01")),("non_one_price",predictions.one_price.eq(0))]:
+            comparisons[stage][period]=evaluate(predictions[mask])
+    chain,chain_info=chain_recheck(all_predictions[1],all_predictions[2]);chain.to_csv(out/"FIRST_PICK_TO_SECOND_RECHECK_ALL.csv",index=False,encoding="utf-8-sig")
+    first_metric=comparisons[1]["all"]["top"]["1"]
+    gate=bool(first_metric["hit_rate"]>=.60 and first_metric["known"]>=200 and first_metric["outcome_coverage"]>=.95 and all(comparisons[1][p]["top"]["1"]["hit_rate"]>=.55 for p in ("2025H2","2026")))
+    bundles={}
+    cutoff=audit["last_source_session"];p=sessions.index(cutoff)
+    for stage in (1,2):
+        known=rows[rows.stage.eq(stage)&rows[TARGET].notna()]
+        train=known[known.p.ge(p-252)&known.label_end.lt(cutoff)]
+        bundle=fit_head(train,selection[stage],out,f"latest_S{stage}")
+        bundle.update(knowledge_cutoff=cutoff,calibration_status="HISTORICAL_QUALIFIED" if comparisons[stage]["all"]["calibration"]["historical_gate_passed"] else "PROBABILITY_NOT_QUALIFIED")
+        bundles[stage]=bundle
+    joblib.dump(dict(version=VERSION,heads=bundles,knowledge_cutoff=cutoff,goal_60_passed=gate,research_only=True),out/"first_second_stage_bundle.joblib")
+    trades,curve,sim=base.simulation(all_predictions[1],bars,sessions,"model_score")
+    trades.to_csv(out/"S1_COST_SCENARIO_TRADES.csv",index=False,encoding="utf-8-sig");curve.to_csv(out/"S1_COST_SCENARIO_EQUITY.csv",index=False)
+    report=dict(version=VERSION,completed_at=base.now(),selected_variants=selection,data=audit,evaluation=comparisons,chain=chain_info,
+                goal_60_passed=gate,goal_status="TARGET_REACHED_RESEARCH_ONLY" if gate else "ACTIVE_TARGET_NOT_REACHED",scenario=sim,
+                core_fit_count=len(list((out/"models").glob("*_COMPLETED.json"))),actual_trades=0,new_forward_results=0,source_hashes=protocol["source_hashes"],
+                old_model_not_retrained=True,production_deployment_allowed=False,code_sha256=base.sha(__file__),bundle_sha256=base.sha(out/"first_second_stage_bundle.joblib"))
+    for path,value in protocol["source_hashes"].items():assert base.sha(path)==value
+    base.write_json(out/"report.json",report);render_report(out,report)
+    print(json.dumps(base.clean(dict(output=str(out.resolve()),selected=selection,first_top1=first_metric,second_top1=comparisons[2]["all"]["top"]["1"],chain=chain_info,goal_60_passed=gate,core_fits=report["core_fit_count"])),ensure_ascii=False,indent=2))
+    return report
+
+
+def render_report(out,r):
+    def pct(x):return "未知" if x is None else f"{x*100:.2f}%"
+    e=r["evaluation"];e={int(k):v for k,v in e.items()}
+    lines=["# 首板一进二与二板再评估训练回测", "",f"目标：首板收盘后每日首选下一交易日收盘晋级二板的历史命中率60%；已晋级股票在二板收盘后重新评估二进三。完成时间：{r['completed_at']}。", "",
+           "两个阶段独立训练、分别选型。二板收盘信息没有进入原首板预测。全候选、漏报、误报与未知保留；不靠全断板Accuracy或事后减少出选日数达标。", "",
+           "|阶段|范围|首选命中/已知|未知|首选命中率|95%区间|低换手基准|", "|---|---|---:|---:|---:|---|---:|"]
+    for stage in (1,2):
+        for period in ("all","2025H2","2026","non_one_price"):
+            a=e[stage][period]["top"]["1"];b=e[stage][period]["baseline_top"]["1"]
+            lines.append(f"|{stage}进{stage+1}|{period}|{a['hits']}/{a['known']}|{a['unknown']}|{pct(a['hit_rate'])}|{pct(a['wilson95'][0])}—{pct(a['wilson95'][1])}|{pct(b['hit_rate'])}|")
+    c=r["chain"]
+    lines += ["",f"首板首选完整{c['first_selections']}条，其中晋级二板{c['first_promoted']}条；二板重新评分覆盖{c['second_rechecks_available']}条，可核下一日结果{c['second_outcomes_known']}条，继续三板{c['continued_to_third']}条，条件二进三率{pct(c['conditional_second_to_third'])}。完整首板到三板比例{pct(c['full_first_to_third_rate'])}，不能混成一进二胜率。", "",
+              f"60%目标：{'本批历史门达到；仍非实盘验收' if r['goal_60_passed'] else '尚未达到，目标保持进行中'}。", "", "## 概率校准", ""]
+    for stage in (1,2):
+        q=e[stage]["all"]["calibration"]
+        lines.append(f"{stage}进{stage+1}：样本外Brier={q.get('brier')}，训练先验基准={q.get('prior_brier')}，ECE={q.get('ece')}，首选预测均值={pct(q.get('top1_forecast_mean'))}／实际={pct(q.get('top1_observed'))}；历史校准资格={'通过' if q['historical_gate_passed'] else '未通过，概率未验证'}。")
+    lines += ["", "校准只使用每个训练窗尾部42日的时间样本外分数；最终模型使用该月以前的成熟样本。历史归档已被研究看过，不称全新盲测。源码、输入哈希、训练成员、前缀校准、保存权重、逐月完整预测均保留。", "",
+              "## 经验取舍与边界", "", "GitHub及股吧仅启发假设，不提供晋级标签或事后题材标签。学习历史涨停股性、周期高度突破／断板分化、同身位竞争；不照抄作者固定权重，不使用实时估值回填历史，不以名字相同确认补涨，不采纳买入当日止损。缺少历史真实题材、首封时刻、公告/盘口与母池完整性的问题保留，当前市场并未获得预测。", "",
+              "[GitHub一进二筛选器](https://github.com/lpw821/a-stock-1to2)给出多维经验评分；[GitHub观察系统](https://github.com/dongdonglog/a-share-observer)公开指出部分手工延续评分缺乏预测力。股吧的[节点经验](https://www.tgb.cn/a/2vFbPMvPAVQ)和[低位补涨讨论](https://www.tgb.cn/a/2uwf2vKo0AF)只用作待证伪线索，不认证因果、父龙关系或次日结果。", "",
+              f"首选开盘成本情景：组合回报{pct(r['scenario']['total_return'])}、最大回撤{pct(r['scenario']['max_drawdown'])}、情景平仓{r['scenario']['closed_trades']}笔。含涨跌停开盘取消、整手、现金、T+1、延期退出和费用。有效成本价含不利滑点，不是经确认成交报价。实际成交0，生产模型、原冻结与定时任务未改。"]
+    (Path(out)/"首板一进二与二进三_训练回测报告.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
+
+
+def recheck(bundle_path,features_path,output):
+    out=Path(output)
+    if out.exists():raise FileExistsError(out)
+    bundle=joblib.load(bundle_path)
+    rows=pd.read_csv(features_path,dtype={"code":str},float_precision="round_trip")
+    if rows.empty or rows.duplicated(["signal_date","code"]).any():raise ValueError("empty or duplicate candidates")
+    if not rows.signal_date.gt(bundle["knowledge_cutoff"]).all():raise ValueError("signal must be after training cutoff")
+    if not rows.stage.isin([1,2]).all():raise ValueError("stage must be1 or2")
+    parts=[]
+    for stage,part in rows.groupby("stage"):
+        head=bundle["heads"][int(stage)]
+        if set(head["features"])-set(part):raise ValueError("incomplete features")
+        if not base.true_values(part.scope_known).all() or not base.true_values(part.eligible).all():raise ValueError("unverified candidate scope")
+        scored=predict(head,part)
+        scored["probability_status"]=head["calibration_status"]
+        if head["calibration_status"]!="HISTORICAL_QUALIFIED":scored["calibrated_score"]=np.nan
+        parts.append(scored)
+    result=pd.concat(parts,ignore_index=True)
+    result=result[[c for c in result if "LABEL_ONLY" not in c and c!="label_end"]]
+    result.sort_values(["signal_date","stage","model_score","code"],ascending=[True,True,False,True]).to_csv(out,index=False,encoding="utf-8-sig")
+
+
+if __name__=="__main__":
+    p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest="command",required=True)
+    train=sub.add_parser("train");train.add_argument("--output",required=True);train.add_argument("--resume",action="store_true")
+    score=sub.add_parser("recheck");score.add_argument("--bundle",required=True);score.add_argument("--features",required=True);score.add_argument("--output",required=True)
+    args=p.parse_args()
+    if args.command=="train":run(args.output,args.resume)
+    else:recheck(args.bundle,args.features,args.output)
+
+
+===== FILE: first_board_capital_risk_model.py =====
+"""First-close capital and conservative thin-turnover screening experiment.
+
+Risk proxies are not fund identities. All scores, exclusions, lost positives and
+unknowns remain in the complete archived cohort. No later-board observation is
+allowed to revise a first-board prediction.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+import shutil
+from urllib.parse import urlparse
+
+import first_board_leader_model as base
+import first_second_stage_model as stage
+import historical_symbolic_context as symbolic
+import joblib
+import numpy as np
+import pandas as pd
+
+REFERENCE = base.ROOT / "research/first_second_stage_20261020_run1"
+SYMBOLIC = base.ROOT / "research/first_board_symbolic_qualification_20261020"
+SOURCES = base.ROOT / "research/first_board_capital_risk_20261020_sources"
+CAP_FIELDS = ["cap_rank_in_first_pool", "log_cap_to_first_pool_median",
+              "log_cap_excess_development80", "microcap_low_turnover_proxy",
+              "microcap_one_price_proxy", "microcap_volume_compression_proxy"]
+VARIANT = "FIRST_CLOSE_CAPITAL_CONTEXT"
+FIELDS = stage.VARIANTS["STAGE_CYCLE_GENE"] + CAP_FIELDS + symbolic.FIELDS
+RISK_POLICY = dict(microcap_yuan=3_000_000_000, low_turnover_percent=5.,
+                   volume_ratio_max=1., upper_cap_quantile=.8,
+                   upper_cap_training="Pre2025 calibration-prefix signals only, before the final42 development sessions",
+                   provisional_exclusion="Microcap AND turnover<5% AND (current one-price OR current volume<previous5-session mean)",
+                   identity="A conservative daily-bar risk proxy, NOT verified three-board-fund identity",
+                   evidence_clock="Source publication must be no later than signal15:00 Asia/Shanghai; unknown is not false",
+                   restructuring_exception="Only a dated verified pre-close restructuring disclosure; no selected retrospective case bank used for training")
+
+
+def qualified_preclose_evidence(rows, records, strict_acquisition=False):
+    """Bind author-reviewed original evidence, rejecting post-close revelations."""
+    keys = set(zip(rows.signal_date, rows.code))
+    accepted = {}
+    for record in records:
+        key = (record["signal_date"], record["code"])
+        if key not in keys:
+            raise ValueError("Evidence is outside the complete signal cohort")
+        cutoff = pd.Timestamp(key[0] + "T15:00:00+08:00")
+        published = pd.Timestamp(record["published_at"])
+        acquired = pd.Timestamp(record["acquired_at"])
+        if published.tzinfo is None or acquired.tzinfo is None:
+            raise ValueError("Evidence timestamps require explicit timezones")
+        if published > cutoff or (strict_acquisition and acquired > cutoff):
+            raise ValueError("Evidence was not available at the signal close")
+        if acquired < published:
+            raise ValueError("Acquisition cannot precede publication")
+        if record.get("review_status") != "AUTHOR_VERIFIED" or not record.get("rationale"):
+            raise ValueError("Missing independent source review")
+        raw = Path(record["raw_path"])
+        if not raw.is_file() or base.sha(raw) != record["raw_sha256"]:
+            raise ValueError("Raw evidence hash mismatch")
+        kind = record["kind"]
+        if kind == "RESTRUCTURING_DISCLOSURE":
+            domain = (urlparse(record["source_url"]).hostname or "").lower()
+            if not any(domain == d or domain.endswith("." + d) for d in ("cninfo.com.cn", "sse.com.cn", "szse.cn")):
+                raise ValueError("Restructuring exception needs an official disclosure")
+            field = "verified_restructuring_preclose"
+        elif kind == "SUSPECTED_THREEBOARD_STRUCTURE":
+            channels = set(record.get("independently_verified_channels", []))
+            if len(channels & {"minute_abrupt_pull", "coordinated_seats", "repeated_order_cancellations", "verified_weak_sector"}) < 2:
+                raise ValueError("Single-seat or daily-bar pattern cannot establish suspected fund structure")
+            field = "verified_threeboard_risk_preclose"
+        else:
+            raise ValueError("Unsupported evidence kind")
+        accepted.setdefault(key, {})[field] = 1.
+    return accepted
+
+
+def capital_context(rows, upper_cap, evidence=None, strict_acquisition=False):
+    """Only current/past columns and same-date complete cohort enter features."""
+    out = rows.copy()
+    cap = pd.to_numeric(out.float_cap, errors="coerce").where(lambda x: x.gt(0))
+    out["cap_rank_in_first_pool"] = cap.groupby(out.signal_date).rank(pct=True)
+    median = cap.groupby(out.signal_date).transform("median")
+    out["log_cap_to_first_pool_median"] = np.log(cap / median)
+    out["log_cap_excess_development80"] = np.log(cap / upper_cap).clip(lower=0)
+    small = cap.le(RISK_POLICY["microcap_yuan"]).astype(float).where(cap.notna())
+    low = out.turnover.lt(RISK_POLICY["low_turnover_percent"]).astype(float).where(out.turnover.notna())
+    compressed = out.volume_ratio_5.lt(RISK_POLICY["volume_ratio_max"]).astype(float).where(out.volume_ratio_5.notna())
+    out["microcap_low_turnover_proxy"] = small * low
+    out["microcap_one_price_proxy"] = small * out.one_price
+    out["microcap_volume_compression_proxy"] = small * compressed
+    # These unavailable evidence fields remain unknown, never zero-filled.
+    for f in ("verified_restructuring_preclose", "verified_threeboard_risk_preclose",
+              "abrupt_first_pull_verified", "coordinated_seats_verified", "weak_sector_verified"):
+        if f in out and out[f].notna().any():
+            raise ValueError("Evidence flags must come from dated reviewed raw evidence, not feature-file assertions")
+        out[f] = np.nan
+    accepted = qualified_preclose_evidence(out, evidence or [], strict_acquisition)
+    for i, key in zip(out.index, zip(out.signal_date, out.code)):
+        for field, value in accepted.get(key, {}).items():
+            out.loc[i, field] = value
+    out["threeboard_evidence_status"] = np.where(
+        out.verified_threeboard_risk_preclose.eq(1), "SUSPECTED_WITH_DATED_EVIDENCE", "INSUFFICIENT_EVIDENCE")
+    # Proxy-only exclusions are separately named and never relabelled as fund identities.
+    thin = out.microcap_low_turnover_proxy.eq(1) & (out.one_price.eq(1) | compressed.eq(1))
+    large = cap.gt(upper_cap) & ~out.verified_restructuring_preclose.eq(1)
+    confirmed_risk = out.verified_threeboard_risk_preclose.eq(1)
+    out["capital_missing_review"] = cap.isna()
+    out["capital_oversize_review"] = large
+    out["thin_turnover_proxy_excluded"] = thin
+    out["threeboard_evidence_excluded"] = confirmed_risk
+    out["research_selection_allowed"] = ~(cap.isna() | large | thin | confirmed_risk)
+    out["exclusion_reason"] = ["|".join(label for flag, label in zip(flags, (
+        "CAP_MISSING_REVIEW", "ABOVE_DEVELOPMENT_CAP_NO_VERIFIED_EXCEPTION",
+        "CONSERVATIVE_MICROCAP_THIN_TURNOVER_PROXY", "DATED_THREEBOARD_RISK")) if flag)
+        for flags in zip(cap.isna(), large, thin, confirmed_risk)]
+    return out
+
+
+def screen_metric(rows, score="model_score"):
+    allowed = rows[rows.research_selection_allowed]
+    m = stage.metric(allowed, score=score)
+    # Recall uses the original complete positive pool, including excluded winners.
+    total_positive = int(rows[stage.TARGET].eq(1).sum())
+    m.update(full_positive_pool=total_positive,
+             full_positive_recall=m["hits"] / total_positive if total_positive else None,
+             false_negatives=total_positive - m["hits"],
+             full_signal_dates=int(rows.signal_date.nunique()),
+             abstention_dates=int(rows.signal_date.nunique() - allowed.signal_date.nunique()),
+             decision_date_coverage=float(allowed.signal_date.nunique() / rows.signal_date.nunique()),
+             successful_predictions_per_all_pool_dates=float(m["hits"] / rows.signal_date.nunique()),
+             excluded_rows=int((~rows.research_selection_allowed).sum()),
+             excluded_known_promoters=int((~rows.research_selection_allowed & rows[stage.TARGET].eq(1)).sum()),
+             excluded_unknown=int((~rows.research_selection_allowed & rows[stage.TARGET].isna()).sum()))
+    return m
+
+
+def prefix_checks(rows, upper_cap):
+    checks = []
+    expected = capital_context(rows, upper_cap)
+    for cutoff in ("2025-06-30", "2025-12-31"):
+        p = capital_context(rows[rows.signal_date.le(cutoff)].drop(columns=[stage.TARGET, "label_end"]), upper_cap)
+        old = expected[expected.signal_date.le(cutoff)]
+        np.testing.assert_allclose(p[CAP_FIELDS], old[CAP_FIELDS], equal_nan=True, rtol=1e-12, atol=1e-12)
+        assert p.research_selection_allowed.tolist() == old.research_selection_allowed.tolist()
+        checks.append(dict(cutoff=cutoff, rows=len(p), all_six_fields_and_screen_equal=True, targets_absent=True))
+    return checks
+
+
+def load_rows():
+    path = REFERENCE / "all_first_and_second_boards_WITH_SEPARATE_LABELS.csv"
+    rows = pd.read_csv(path, dtype={"code": str}, float_precision="round_trip")
+    rows = rows[rows.stage.eq(1)].copy()
+    names = pd.read_csv(SYMBOLIC / "complete28503_first_board_dated_symbolic_features.csv", dtype={"code": str}, float_precision="round_trip")
+    names = names.rename(columns={"date": "signal_date"})
+    assert set(zip(rows.signal_date, rows.code)) == set(zip(names.signal_date, names.code))
+    rows = rows.merge(names[["signal_date", "code"] + symbolic.FIELDS], on=["signal_date", "code"], validate="one_to_one")
+    development = rows[rows.signal_date.lt("2025-01-01") & rows.label_end.lt("2025-01-01") & rows[stage.TARGET].notna()]
+    cutoff = sorted(development.signal_date.unique())[-42]
+    scale_train = development[development.label_end.lt(cutoff)]
+    upper_cap = float(scale_train.float_cap.where(scale_train.float_cap.gt(0)).quantile(RISK_POLICY["upper_cap_quantile"]))
+    return rows, upper_cap, dict(max_scale_signal=scale_train.signal_date.max(), max_scale_label_end=scale_train.label_end.max(),
+                                 calibration_start=cutoff, rows=len(scale_train), upper_float_cap_yuan=upper_cap)
+
+
+def attach_frozen(rows, file):
+    ref = pd.read_csv(file, dtype={"code": str}, float_precision="round_trip")
+    part = rows[rows.signal_date.isin(ref.signal_date.unique())].copy()
+    assert set(zip(part.signal_date, part.code)) == set(zip(ref.signal_date, ref.code))
+    old = part.set_index(["signal_date", "code"])[stage.TARGET].sort_index()
+    new = ref.set_index(["signal_date", "code"])[stage.TARGET].sort_index()
+    np.testing.assert_allclose(old, new, equal_nan=True, atol=0, rtol=0)
+    return part.merge(ref[["signal_date", "code", "model_score", "calibrated_score", "train_prior"]],
+                      on=["signal_date", "code"], validate="one_to_one")
+
+
+def cap_distribution(rows, out):
+    # Descriptive bins are fixed before any outcome inspection; not new filter candidates.
+    binned = rows.assign(float_cap_bin=pd.cut(rows.float_cap / 1e8, [0, 20, 30, 50, 100, 200, 500, np.inf],
+                    labels=["<20", "20-30", "30-50", "50-100", "100-200", "200-500", ">=500"]))
+    binned["float_cap_bin"] = binned.float_cap_bin.astype(object).fillna("UNKNOWN")
+    binned["period"] = np.select([binned.signal_date.lt("2025-01-01"), binned.signal_date.lt("2025-07-01"), binned.signal_date.lt("2026-01-01")],
+                                  ["development", "validation2025H1", "evaluation2025H2"], default="evaluation2026")
+    result = binned.groupby(["period", "float_cap_bin"], sort=True).agg(rows=("code", "size"), known=(stage.TARGET, "count"), hits=(stage.TARGET, "sum"))
+    result["hit_rate"] = result.hits / result.known
+    result.reset_index().to_csv(out / "fixed_cap_bins_DESCRIPTIVE_NOT_THRESHOLD_SEARCH.csv", index=False)
+    return result.reset_index().to_dict("records")
+
+
+def run(output):
+    out = Path(output)
+    if out.exists():
+        raise FileExistsError("Refuse rerun or overwrite; preserve failures and all prior fits")
+    out.mkdir(parents=True)
+    rows, upper_cap, scale = load_rows()
+    protected = {str(p.resolve()): base.sha(p) for p in [Path(base.__file__), Path(stage.__file__), Path(symbolic.__file__),
+                 REFERENCE / "report.json", REFERENCE / "S1_ALL_PREDICTIONS.csv", REFERENCE / "S2_ALL_PREDICTIONS.csv"]}
+    inputs = {str(p.resolve()): base.sha(p) for p in [REFERENCE / "all_first_and_second_boards_WITH_SEPARATE_LABELS.csv",
+              SYMBOLIC / "complete28503_first_board_dated_symbolic_features.csv", SYMBOLIC / "qualification.json",
+              SOURCES / "source_adoption.json"]}
+    protocol = dict(recorded_at=base.now(), budget_minutes=30, user_constraints=["First-board close only", "First-to-second Top1 target60%", "Review the same stock again at second-board close", "Avoid very large capital absent verified restructuring and suspected three-board-fund patterns"],
+        hypothesis="A fixed capital feasibility screen plus conservative observable thin-turnover avoidance and dated competing-support proxies improve first-close next-board ranking.",
+        baseline="Exact saved62-field STAGE_CYCLE_GENE scores; no baseline or stage2 refit",
+        arms={"SCREEN_FROZEN": "The saved baseline with the new fixed screen; zero fits", "CONTEXT_SCREEN": "Same screen plus one fixed62+6+17=85-field model; no parameter/threshold search"},
+        fields=FIELDS, risk_policy=RISK_POLICY, scale=scale,
+        validation="2025H1, original complete117-date pool. Only an arm with strictly more hits than frozen baseline,>=95% decision-date coverage, no less non-one-price Top1 hits, proceeds. Baseline wins ties. Among passing arms choose most hits then SCREEN_FROZEN tie.",
+        evaluation="Only selected arm across original2025Jul-2026Aug complete pools. If CONTEXT_SCREEN wins,14monthly windows of original252 official positions, mature labels strictly before each boundary; one prefix and one full model each, original parameters/equal-day weights/calibration. Save all predictions before metrics.",
+        second_stage="Unmodified saved second-stage scores, exact same-code next-session rechecks",
+        goal_60="Known selected Top1 rate>=60%,>=200known,>=95% outcome coverage, no abstention days and both2025H2/2026>=55%; full-date success, non-one-price, FP/FN, discarded positives, calibration reported",
+        interpretation="Historical research already studied, not pristine blind or verified identity recognition; current-universe survivorship, source-specific float vs total capital, missing original effective-share raw data remain. No selected forum winner list is a label or blacklist.",
+        end_condition="After this one fixed comparison finish, no test-driven new threshold/variant. Rejected pairwise and old relay-symbolic challenges never rerun.",
+        inputs=inputs, protected=protected, original_raw_hashes={str(p.resolve()): base.sha(p) for p in base.INPUTS.values()},
+        source_sha256=base.sha(__file__), actual_orders=0, production_changes=False)
+    base.write_json(out / "protocol_BEFORE_ANY_FIT.json", protocol)
+    shutil.copy2(__file__, out / "source_before_first_fit.py")
+    rows = capital_context(rows, upper_cap)
+    rows.to_csv(out / "COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv", index=False, encoding="utf-8-sig")
+    base.write_json(out / "prefix_causality_BEFORE_FITS.json", prefix_checks(rows, upper_cap))
+    stage.VARIANTS[VARIANT] = FIELDS
+    known = rows[rows[stage.TARGET].notna()]
+    train = known[known.signal_date.lt("2025-01-01") & known.label_end.lt("2025-01-01")]
+    val = rows[rows.signal_date.between("2025-01-01", "2025-06-30")]
+    reference = attach_frozen(rows, REFERENCE / "validation_S1_STAGE_CYCLE_GENE_PREDICTIONS.csv")
+    bundle = stage.fit_head(train, VARIANT, out, "validation_context")
+    scored = stage.predict(bundle, val)
+    scored.to_csv(out / "validation_CONTEXT_ALL_PREDICTIONS_BEFORE_METRICS.csv", index=False)
+    baseline = stage.metric(reference)
+    checks = {"SCREEN_FROZEN": screen_metric(reference), "CONTEXT_SCREEN": screen_metric(scored)}
+    reference_non = stage.metric(reference[reference.one_price.eq(0)])
+    sources = {"SCREEN_FROZEN": reference, "CONTEXT_SCREEN": scored}
+    passing = [key for key, m in checks.items() if m["hits"] > baseline["hits"] and m["decision_date_coverage"] >= .95
+               and screen_metric(sources[key][sources[key].one_price.eq(0)])["hits"] >= reference_non["hits"]]
+    winner = max(passing, key=lambda key: checks[key]["hits"]) if passing else None
+    decision = dict(formed_at=base.now(), winner=winner, validation=checks, frozen_baseline=baseline,
+                    validation_non_one_price={key: screen_metric(value[value.one_price.eq(0)]) for key, value in sources.items()},
+                    baseline_non_one_price=reference_non, continue_to_evaluation=winner is not None)
+    base.write_json(out / "selection_BEFORE_EVALUATION.json", decision)
+    print(json.dumps(base.clean(dict(validation=checks, baseline=baseline, winner=winner)), ensure_ascii=False), flush=True)
+    report = dict(completed_at=None, protocol=str((out / "protocol_BEFORE_ANY_FIT.json").resolve()), decision=decision,
+                  scale=scale, goal_60_passed=False, identity_recognition_validated=False,
+                  full_historical_restructuring_coverage=False, real_forward_results=0, actual_trades=0,
+                  source_sha256=base.sha(__file__), protected_unchanged=True)
+    if winner:
+        parts = []
+        sessions = json.loads(base.INPUTS["calendar"].read_text("utf-8"))["sessions"]
+        frozen = attach_frozen(rows, REFERENCE / "S1_ALL_PREDICTIONS.csv")
+        for month, part in frozen.groupby(frozen.signal_date.str[:7], sort=True):
+            if winner == "CONTEXT_SCREEN":
+                boundary = month + "-01"
+                position = int(np.searchsorted(sessions, boundary))
+                tr = known[known.p.ge(position-252) & known.label_end.lt(boundary)]
+                head = stage.fit_head(tr, VARIANT, out, month + "_context")
+                assert head["train_max_label_end"] < part.signal_date.min()
+                part = stage.predict(head, part)
+            part["model_month"] = month
+            part.to_csv(out / (month + "_FULL_PREDICTIONS_BEFORE_METRICS.csv"), index=False)
+            parts.append(part)
+            print(month + " saved", flush=True)
+        pred = pd.concat(parts, ignore_index=True)
+        pred.to_csv(out / "EVALUATION_FULL_PREDICTIONS.csv", index=False, encoding="utf-8-sig")
+        report["evaluation"] = {}
+        for period, mask in [("all", pd.Series(True, index=pred.index)), ("2025H2", pred.signal_date.lt("2026-01-01")),
+                             ("2026", pred.signal_date.ge("2026-01-01")), ("non_one_price", pred.one_price.eq(0))]:
+            report["evaluation"][period] = dict(screened=screen_metric(pred[mask]),
+                original_frozen=stage.metric(frozen[frozen.signal_date.isin(pred[mask].signal_date.unique()) & (frozen.one_price.eq(0) if period=="non_one_price" else True)]))
+        allowed = pred[pred.research_selection_allowed]
+        second = pd.read_csv(REFERENCE / "S2_ALL_PREDICTIONS.csv", dtype={"code": str}, float_precision="round_trip")
+        chain, report["same_stock_second_recheck"] = stage.chain_recheck(allowed, second)
+        chain.to_csv(out / "FIRST_SELECTION_TO_SAME_STOCK_SECOND_RECHECK.csv", index=False, encoding="utf-8-sig")
+        report["calibration_on_allowed_pool"] = stage.calibration_metrics(allowed)
+        m = report["evaluation"]["all"]["screened"]
+        report["goal_60_passed"] = bool(m["hit_rate"] >= .60 and m["known"] >= 200 and m["outcome_coverage"] >= .95 and m["abstention_dates"] == 0
+              and all(report["evaluation"][p]["screened"]["hit_rate"] >= .55 for p in ("2025H2", "2026")))
+        picks = base.selected(allowed, "model_score", 1)
+        picks.to_csv(out / "EVALUATION_SELECTED_TOP1.csv", index=False, encoding="utf-8-sig")
+        pred[~pred.research_selection_allowed].to_csv(out / "ALL_EXCLUSIONS_INCLUDING_PROMOTERS.csv", index=False, encoding="utf-8-sig")
+    report["fixed_cap_bins"] = cap_distribution(rows, out)
+    report["core_fit_count"] = len(list((out / "models").glob("*_COMPLETED.json")))
+    report["completed_at"] = base.now()
+    report["status"] = "FIXED_COMPARISON_FINISHED" if winner else "BOTH_ARMS_REJECTED_VALIDATION_NO_TEST_REFIT"
+    for path, digest in protected.items():
+        assert base.sha(path) == digest
+    base.write_json(out / "report.json", report)
+    print(json.dumps(base.clean({key: report.get(key) for key in ("status", "core_fit_count", "evaluation", "same_stock_second_recheck", "goal_60_passed")}), ensure_ascii=False, indent=2))
+    return report
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", required=True)
+    run(parser.parse_args().output)
+
+
+===== FILE: first_board_drop_clock.py =====
+"""One fixed first-close ablation: remove only the archive-clock age field."""
+from __future__ import annotations
+from pathlib import Path
+import argparse
+import json
+import shutil
+import numpy as np
+import pandas as pd
+import first_board_leader_model as base
+import first_second_stage_model as stage
+import first_board_capital_risk_model as risk
+import first_board_matured_event_model as previous
+
+REF=risk.REFERENCE
+SCREEN=previous.SCREEN
+EVIDENCE=base.ROOT/"research/first_board_input_shift_20261020"
+VARIANT="DROP_ARCHIVE_CLOCK"
+REMOVED="listing_age_sessions"
+FIELDS=[field for field in stage.VARIANTS["STAGE_CYCLE_GENE"] if field!=REMOVED]
+
+
+def train_members(rows,boundary,start_p=None):
+    valid=rows.stage.eq(1)&rows[stage.TARGET].notna()&rows.signal_date.lt(boundary)&rows.label_end.lt(boundary)
+    if start_p is not None:valid &= rows.p.ge(start_p)
+    return rows[valid].copy()
+
+
+def run(output):
+    out=Path(output)
+    if out.exists():raise FileExistsError("Fixed ablation exists;refuse retry or overwrite")
+    out.mkdir(parents=True)
+    source=REF/"all_first_and_second_boards_WITH_SEPARATE_LABELS.csv"
+    screen_file=SCREEN/"COMPLETE_FIRST_BOARD_FACTS_FEATURES_LABELS_AND_SCREEN.csv"
+    validation_file=REF/"validation_S1_STAGE_CYCLE_GENE_PREDICTIONS.csv"
+    protected=[Path(base.__file__),Path(stage.__file__),Path(risk.__file__),Path(previous.__file__),REF/"report.json",
+        REF/"S1_ALL_PREDICTIONS.csv",REF/"S2_ALL_PREDICTIONS.csv",SCREEN/"report.json"]
+    inputs=[source,screen_file,validation_file,EVIDENCE/"report.json",EVIDENCE/"verification.json",EVIDENCE/"saved_archive_clock_usage_CURRENT_DIAGNOSTIC.json"]
+    assert len(FIELDS)==61 and set(stage.VARIANTS["STAGE_CYCLE_GENE"])-set(FIELDS)=={REMOVED}
+    protocol=dict(formed_at=base.now(),budget_minutes=30,batch_started_at="2026-10-20T15:08:53+00:00",
+        previous_goal_turn="PROGRESS:outcome-blind62fieldauditverifiedlisting_age_sessionsis archivecalendarposition for99%ofoldstocks and54BASEsplitsusedit;nowonesurgicalablation",
+        hypothesis="Removing the left-censored archive-clock input improves first-close transfer beyondfrozen62fieldHGB",
+        variant=VARIANT,fields=FIELDS,removed_only=REMOVED,
+        source_semantics="Original field remains in complete facts as source-truncated tenure,not full listing age;no new age replacement or capping",
+        baseline="Exact frozen original62-fieldHGBscores plusunchangedcapital/thinturnover screen;baseline andsecondheadneverrefitted",
+        training="Exact samefullknownmaturemembers,label_end<boundary,originalequaldayweights/HGB160trees15leavesleaf60lr.06l2=8balancedseed42;last42datePlattC1 unchanged",
+        validation="Completeoriginal2025H1:4724rows/117dates. Need>52Top1hits,>=48non-one-priceTop1hits,>=95%decisiondatecoverage;baselinewinsties",
+        evaluation="Onlyifpass:oneheadperoriginal14monthlyprevious252officialsignalpositions,alllabel_end<monthstart;savefullpredictionsbeforemetrics,reportphase/non-one-price/samecodesecondclose",
+        target60="DailyTop1next-official-close1to2knownhitrate>=60%,>=200known,>=95%outcomecoverage,noabstentiondates;2025H2and2026each>=55%;firstcloseonly,noauctiondata",
+        stop="Singlearmonce;fixedcomparisonor30minutes. No agecap/replacement/otherfeature changes afterresult,no oldfailedschemereruns",
+        inputs={str(p.resolve()):base.sha(p) for p in inputs},protected={str(p.resolve()):base.sha(p) for p in protected},
+        raw_source_hashes={str(p.resolve()):base.sha(p) for p in base.INPUTS.values()},source_sha256=base.sha(__file__),
+        historical_replay_not_pristine_blind=True,production_changes=False,actual_trades=0,new_forward_results=0)
+    base.write_json(out/"protocol_BEFORE_ANY_FIT.json",protocol);shutil.copy2(__file__,out/"source_before_first_fit.py")
+    rows=pd.read_csv(source,dtype={"code":str},float_precision="round_trip");rows=rows[rows.stage.eq(1)].copy()
+    screen=pd.read_csv(screen_file,dtype={"code":str},float_precision="round_trip")
+    rows=rows.merge(screen[["signal_date","code","research_selection_allowed","exclusion_reason","threeboard_evidence_status"]],on=["signal_date","code"],validate="one_to_one")
+    rows.to_csv(out/"ALL_FIRST_BOARD_UNCHANGED_FACTS_LABELS_AND_SCREEN.csv",index=False,encoding="utf-8-sig")
+    train=train_members(rows,"2025-01-01")
+    baseline_members=pd.read_csv(REF/"models/validation_S1_STAGE_CYCLE_GENE_full_members.csv",dtype={"code":str})
+    assert set(zip(train.signal_date,train.code))==set(zip(baseline_members.signal_date,baseline_members.code))
+    val=rows[rows.signal_date.between("2025-01-01","2025-06-30")]
+    frozen=risk.attach_frozen(rows,validation_file)
+    baseline=risk.screen_metric(frozen);nonbase=risk.screen_metric(frozen[frozen.one_price.eq(0)])
+    assert baseline["hits"]==52 and nonbase["hits"]==48
+    stage.VARIANTS[VARIANT]=FIELDS
+    bundle=stage.fit_head(train,VARIANT,out,"validation_"+VARIANT)
+    predictions=stage.predict(bundle,val)
+    predictions.to_csv(out/"validation_ALL_BEFORE_METRICS.csv",index=False,encoding="utf-8-sig")
+    primary=risk.screen_metric(predictions);non=risk.screen_metric(predictions[predictions.one_price.eq(0)])
+    passed=bool(primary["hits"]>52 and non["hits"]>=48 and primary["decision_date_coverage"]>=.95)
+    decision=dict(formed_at=base.now(),selected=VARIANT if passed else None,baseline=baseline,baseline_non_one_price=nonbase,
+        primary=primary,non_one_price=non,unfiltered_diagnostic=stage.metric(predictions),pass_validation=passed)
+    base.write_json(out/"selection_BEFORE_EVALUATION.json",decision)
+    print(json.dumps(base.clean(dict(validation=decision)),ensure_ascii=True),flush=True)
+    report=dict(formed_at=None,decision=decision,goal_60_passed=False,new_forward_results=0,actual_trades=0)
+    if passed:
+        sessions=json.loads(base.INPUTS["calendar"].read_text("utf-8"))["sessions"];parts=[]
+        for month,part in rows[rows.signal_date.ge("2025-07-01")].groupby(rows.signal_date.str[:7],sort=True):
+            boundary=month+"-01";p=int(np.searchsorted(sessions,boundary))
+            train=train_members(rows,boundary,p-252)
+            bundle=stage.fit_head(train,VARIANT,out,month+"_"+VARIANT)
+            scores=stage.predict(bundle,part);scores["model_month"]=month
+            scores.to_csv(out/(month+"_ALL_BEFORE_METRICS.csv"),index=False);parts.append(scores)
+            print(month+" saved",flush=True)
+        scores=pd.concat(parts,ignore_index=True)
+        scores.to_csv(out/"EVALUATION_ALL_PREDICTIONS.csv",index=False,encoding="utf-8-sig")
+        frozen=risk.attach_frozen(rows,REF/"S1_ALL_PREDICTIONS.csv")
+        report["evaluation"]=previous.period_metrics(scores,frozen)
+        allowed=scores[scores.research_selection_allowed]
+        second=pd.read_csv(REF/"S2_ALL_PREDICTIONS.csv",dtype={"code":str},float_precision="round_trip")
+        chain,report["same_stock_second_recheck"]=stage.chain_recheck(allowed,second)
+        chain.to_csv(out/"SAME_STOCK_SECOND_RECHECK_ALL.csv",index=False,encoding="utf-8-sig")
+        report["historical_calibration_allowed_pool"]=stage.calibration_metrics(allowed)
+        m=report["evaluation"]["all"]["new_screened"]
+        report["goal_60_passed"]=bool(m["hit_rate"]>=.60 and m["known"]>=200 and m["outcome_coverage"]>=.95 and m["abstention_dates"]==0 and all(report["evaluation"][period]["new_screened"]["hit_rate"]>=.55 for period in ("2025H2","2026")))
+    for path,digest in protocol["protected"].items():assert base.sha(path)==digest
+    report.update(formed_at=base.now(),core_fit_count=len(list((out/"models").glob("*_COMPLETED.json"))),
+        status="FIXED_MONTHLY_EVALUATION_FINISHED" if passed else "REJECTED_VALIDATION_NO_MONTHLY_FITS")
+    base.write_json(out/"report.json",report)
+    print(json.dumps(base.clean(report),ensure_ascii=True,indent=2),flush=True)
+    return report
+
+if __name__=="__main__":
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("--output",required=True)
+    run(parser.parse_args().output)

@@ -1,0 +1,1054 @@
+{
+  "at": "2026-10-21T11:47:04.996053+00:00",
+  "fits": 0,
+  "http_requests": 0,
+  "candidate_scope": "EXISTING_ARCHIVED_MAINBOARD_RELAY_COHORT_NOT_NEW_FIRST_BOARD_RESEARCH",
+  "sources": {
+    "research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\dataset.joblib": "d4b462f0e86873b571371034c81c405f1d5c61656d7bf7b2cc23b5b313cd3383",
+    "research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\scope_correction\\dataset.joblib": "10ada96a0af3ffc07bc078b6b84d59a859e95ee643c5e9b8222fbca0f99f4615",
+    "research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\historical_final\\dataset.joblib": "6ef4a7b70e7b9fa35c1394a2f1a9b2fd21f352e46606a8f5e567180ee29f42e9",
+    "research\\model_upgrade_validation\\short_term_thinking_20261015T071000Z\\protocol_BEFORE_ANY_FIT.json": "8307a12bcf70e493257dbee7c4d14f624a167f575263ea5940daf4cfed27ac92",
+    "research\\model_upgrade_validation\\fixed_20261007T112017Z\\relay_history\\predictions.csv": "8fa7f72a0b59c6d736678ee1a93d09644813fb959b4af526ced499cd40246d33",
+    "research\\model_upgrade_validation\\recency_walkforward_20261013T134351Z\\full_candidate_predictions.csv": "c6614bc36c32687df4d1f0f2b4f4824f13f54b73b0bae61eabf7bbd4b1be5314"
+  },
+  "scope_correction_features_equal_actual_executed_historical_final": true,
+  "original_and_scope_correction_9245_features_equal": false,
+  "original_vs_scope_correction_changed_fields": {
+    "primary_role": 33,
+    "roles": 45,
+    "parent_anchor_state": 17,
+    "parent_anchor_code": 32,
+    "is_divergence_survivor": 2,
+    "parent_accelerating_count": 502,
+    "parent_heavy_count": 316,
+    "parent_unobserved_count": 121,
+    "launch_lag_days": 23,
+    "supplement_coupling_score": 6,
+    "relation_channel_match": 8,
+    "same_height_failed_count": 454,
+    "same_height_elimination_rate": 454,
+    "role_SUPPLEMENT_DRAGON": 43,
+    "role_USURP_DRAGON": 2
+  },
+  "selected_feature_bundle": "scope_correction/dataset.joblib; bind against actual executed training bundle before freeze",
+  "rows": 9245,
+  "signal_dates": 684,
+  "known_targets": 9178,
+  "unknown_targets": 67,
+  "boards": {
+    "2": 5528,
+    "3": 1892,
+    "4": 904,
+    "5": 431,
+    "6": 223,
+    "7": 119,
+    "8": 62,
+    "9": 37,
+    "10": 21,
+    "11": 12,
+    "12": 9,
+    "13": 5,
+    "14": 2
+  },
+  "feature_coverage": {
+    "industry": {
+      "known": 0,
+      "unknown": 9245
+    },
+    "theme": {
+      "known": 0,
+      "unknown": 9245
+    },
+    "first_seal_minute": {
+      "known": 2113,
+      "unknown": 7132
+    },
+    "last_seal_minute": {
+      "known": 2113,
+      "unknown": 7132
+    },
+    "bomb_count": {
+      "known": 2113,
+      "unknown": 7132
+    },
+    "turnover": {
+      "known": 9102,
+      "unknown": 143
+    },
+    "signal_amount": {
+      "known": 9102,
+      "unknown": 143
+    }
+  },
+  "coverage_is_not_source_or_time_qualification": true,
+  "stored_baselines": {
+    "BASE": {
+      "rows": 3707,
+      "dates": 302,
+      "start": "2025-07-01",
+      "end": "2026-09-30",
+      "known": 3640,
+      "unknown": 67,
+      "target_values_exactly_match_current_dataset": true,
+      "full_top1": {
+        "selected": 302,
+        "selected_dates": 302,
+        "known": 298,
+        "unknown": 4,
+        "hits": 209,
+        "full_date_slot_hit_rate": 0.6920529801324503,
+        "hits_per_date_count": 0.6920529801324503,
+        "dates_with_any_hit_rate": 0.6920529801324503,
+        "known_precision": 0.7013422818791947,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "full_top2": {
+        "selected": 604,
+        "selected_dates": 302,
+        "known": 596,
+        "unknown": 8,
+        "hits": 376,
+        "full_date_slot_hit_rate": 0.6225165562913907,
+        "hits_per_date_count": 1.2450331125827814,
+        "dates_with_any_hit_rate": 0.8278145695364238,
+        "known_precision": 0.6308724832214765,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "non_one_price_top1": {
+        "selected": 302,
+        "selected_dates": 302,
+        "known": 298,
+        "unknown": 4,
+        "hits": 128,
+        "full_date_slot_hit_rate": 0.423841059602649,
+        "hits_per_date_count": 0.423841059602649,
+        "dates_with_any_hit_rate": 0.423841059602649,
+        "known_precision": 0.42953020134228187,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "non_one_price_top2": {
+        "selected": 604,
+        "selected_dates": 302,
+        "known": 596,
+        "unknown": 8,
+        "hits": 246,
+        "full_date_slot_hit_rate": 0.40728476821192056,
+        "hits_per_date_count": 0.8145695364238411,
+        "dates_with_any_hit_rate": 0.609271523178808,
+        "known_precision": 0.412751677852349,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "per_month": {
+        "2025-07": {
+          "full_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.5217391304347826,
+            "hits_per_date_count": 0.5217391304347826,
+            "dates_with_any_hit_rate": 0.5217391304347826,
+            "known_precision": 0.5217391304347826,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 11,
+            "full_date_slot_hit_rate": 0.4782608695652174,
+            "hits_per_date_count": 0.4782608695652174,
+            "dates_with_any_hit_rate": 0.4782608695652174,
+            "known_precision": 0.4782608695652174,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-08": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 17,
+            "full_date_slot_hit_rate": 0.8095238095238095,
+            "hits_per_date_count": 0.8095238095238095,
+            "dates_with_any_hit_rate": 0.8095238095238095,
+            "known_precision": 0.8095238095238095,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.47619047619047616,
+            "hits_per_date_count": 0.47619047619047616,
+            "dates_with_any_hit_rate": 0.47619047619047616,
+            "known_precision": 0.47619047619047616,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-09": {
+          "full_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 14,
+            "full_date_slot_hit_rate": 0.6363636363636364,
+            "hits_per_date_count": 0.6363636363636364,
+            "dates_with_any_hit_rate": 0.6363636363636364,
+            "known_precision": 0.6363636363636364,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 13,
+            "full_date_slot_hit_rate": 0.5909090909090909,
+            "hits_per_date_count": 0.5909090909090909,
+            "dates_with_any_hit_rate": 0.5909090909090909,
+            "known_precision": 0.5909090909090909,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-10": {
+          "full_top1": {
+            "selected": 17,
+            "selected_dates": 17,
+            "known": 17,
+            "unknown": 0,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.7058823529411765,
+            "hits_per_date_count": 0.7058823529411765,
+            "dates_with_any_hit_rate": 0.7058823529411765,
+            "known_precision": 0.7058823529411765,
+            "all_dates": 17,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 17,
+            "selected_dates": 17,
+            "known": 17,
+            "unknown": 0,
+            "hits": 9,
+            "full_date_slot_hit_rate": 0.5294117647058824,
+            "hits_per_date_count": 0.5294117647058824,
+            "dates_with_any_hit_rate": 0.5294117647058824,
+            "known_precision": 0.5294117647058824,
+            "all_dates": 17,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-11": {
+          "full_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 15,
+            "full_date_slot_hit_rate": 0.75,
+            "hits_per_date_count": 0.75,
+            "dates_with_any_hit_rate": 0.75,
+            "known_precision": 0.75,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.5,
+            "hits_per_date_count": 0.5,
+            "dates_with_any_hit_rate": 0.5,
+            "known_precision": 0.5,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-12": {
+          "full_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 19,
+            "full_date_slot_hit_rate": 0.8260869565217391,
+            "hits_per_date_count": 0.8260869565217391,
+            "dates_with_any_hit_rate": 0.8260869565217391,
+            "known_precision": 0.8260869565217391,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.5217391304347826,
+            "hits_per_date_count": 0.5217391304347826,
+            "dates_with_any_hit_rate": 0.5217391304347826,
+            "known_precision": 0.5217391304347826,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-01": {
+          "full_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.8,
+            "hits_per_date_count": 0.8,
+            "dates_with_any_hit_rate": 0.8,
+            "known_precision": 0.8,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 8,
+            "full_date_slot_hit_rate": 0.4,
+            "hits_per_date_count": 0.4,
+            "dates_with_any_hit_rate": 0.4,
+            "known_precision": 0.4,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-02": {
+          "full_top1": {
+            "selected": 14,
+            "selected_dates": 14,
+            "known": 14,
+            "unknown": 0,
+            "hits": 9,
+            "full_date_slot_hit_rate": 0.6428571428571429,
+            "hits_per_date_count": 0.6428571428571429,
+            "dates_with_any_hit_rate": 0.6428571428571429,
+            "known_precision": 0.6428571428571429,
+            "all_dates": 14,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 14,
+            "selected_dates": 14,
+            "known": 14,
+            "unknown": 0,
+            "hits": 6,
+            "full_date_slot_hit_rate": 0.42857142857142855,
+            "hits_per_date_count": 0.42857142857142855,
+            "dates_with_any_hit_rate": 0.42857142857142855,
+            "known_precision": 0.42857142857142855,
+            "all_dates": 14,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-03": {
+          "full_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.7272727272727273,
+            "hits_per_date_count": 0.7272727272727273,
+            "dates_with_any_hit_rate": 0.7272727272727273,
+            "known_precision": 0.7272727272727273,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 5,
+            "full_date_slot_hit_rate": 0.22727272727272727,
+            "hits_per_date_count": 0.22727272727272727,
+            "dates_with_any_hit_rate": 0.22727272727272727,
+            "known_precision": 0.22727272727272727,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-04": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 18,
+            "full_date_slot_hit_rate": 0.8571428571428571,
+            "hits_per_date_count": 0.8571428571428571,
+            "dates_with_any_hit_rate": 0.8571428571428571,
+            "known_precision": 0.8571428571428571,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.47619047619047616,
+            "hits_per_date_count": 0.47619047619047616,
+            "dates_with_any_hit_rate": 0.47619047619047616,
+            "known_precision": 0.47619047619047616,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-05": {
+          "full_top1": {
+            "selected": 18,
+            "selected_dates": 18,
+            "known": 18,
+            "unknown": 0,
+            "hits": 9,
+            "full_date_slot_hit_rate": 0.5,
+            "hits_per_date_count": 0.5,
+            "dates_with_any_hit_rate": 0.5,
+            "known_precision": 0.5,
+            "all_dates": 18,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 18,
+            "selected_dates": 18,
+            "known": 18,
+            "unknown": 0,
+            "hits": 3,
+            "full_date_slot_hit_rate": 0.16666666666666666,
+            "hits_per_date_count": 0.16666666666666666,
+            "dates_with_any_hit_rate": 0.16666666666666666,
+            "known_precision": 0.16666666666666666,
+            "all_dates": 18,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-06": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.5714285714285714,
+            "hits_per_date_count": 0.5714285714285714,
+            "dates_with_any_hit_rate": 0.5714285714285714,
+            "known_precision": 0.5714285714285714,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 6,
+            "full_date_slot_hit_rate": 0.2857142857142857,
+            "hits_per_date_count": 0.2857142857142857,
+            "dates_with_any_hit_rate": 0.2857142857142857,
+            "known_precision": 0.2857142857142857,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-07": {
+          "full_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 15,
+            "full_date_slot_hit_rate": 0.6521739130434783,
+            "hits_per_date_count": 0.6521739130434783,
+            "dates_with_any_hit_rate": 0.6521739130434783,
+            "known_precision": 0.6521739130434783,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 7,
+            "full_date_slot_hit_rate": 0.30434782608695654,
+            "hits_per_date_count": 0.30434782608695654,
+            "dates_with_any_hit_rate": 0.30434782608695654,
+            "known_precision": 0.30434782608695654,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-08": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 20,
+            "unknown": 1,
+            "hits": 15,
+            "full_date_slot_hit_rate": 0.7142857142857143,
+            "hits_per_date_count": 0.7142857142857143,
+            "dates_with_any_hit_rate": 0.7142857142857143,
+            "known_precision": 0.75,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 20,
+            "unknown": 1,
+            "hits": 11,
+            "full_date_slot_hit_rate": 0.5238095238095238,
+            "hits_per_date_count": 0.5238095238095238,
+            "dates_with_any_hit_rate": 0.5238095238095238,
+            "known_precision": 0.55,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-09": {
+          "full_top1": {
+            "selected": 16,
+            "selected_dates": 16,
+            "known": 13,
+            "unknown": 3,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.625,
+            "hits_per_date_count": 0.625,
+            "dates_with_any_hit_rate": 0.625,
+            "known_precision": 0.7692307692307693,
+            "all_dates": 16,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 16,
+            "selected_dates": 16,
+            "known": 13,
+            "unknown": 3,
+            "hits": 7,
+            "full_date_slot_hit_rate": 0.4375,
+            "hits_per_date_count": 0.4375,
+            "dates_with_any_hit_rate": 0.4375,
+            "known_precision": 0.5384615384615384,
+            "all_dates": 16,
+            "selection_date_coverage": 1.0
+          }
+        }
+      }
+    },
+    "ROLL252": {
+      "rows": 3707,
+      "dates": 302,
+      "start": "2025-07-01",
+      "end": "2026-09-30",
+      "known": 3640,
+      "unknown": 67,
+      "target_values_exactly_match_current_dataset": true,
+      "full_top1": {
+        "selected": 302,
+        "selected_dates": 302,
+        "known": 298,
+        "unknown": 4,
+        "hits": 213,
+        "full_date_slot_hit_rate": 0.7052980132450332,
+        "hits_per_date_count": 0.7052980132450332,
+        "dates_with_any_hit_rate": 0.7052980132450332,
+        "known_precision": 0.714765100671141,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "full_top2": {
+        "selected": 604,
+        "selected_dates": 302,
+        "known": 596,
+        "unknown": 8,
+        "hits": 380,
+        "full_date_slot_hit_rate": 0.6291390728476821,
+        "hits_per_date_count": 1.2582781456953642,
+        "dates_with_any_hit_rate": 0.8410596026490066,
+        "known_precision": 0.6375838926174496,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "non_one_price_top1": {
+        "selected": 302,
+        "selected_dates": 302,
+        "known": 298,
+        "unknown": 4,
+        "hits": 134,
+        "full_date_slot_hit_rate": 0.44370860927152317,
+        "hits_per_date_count": 0.44370860927152317,
+        "dates_with_any_hit_rate": 0.44370860927152317,
+        "known_precision": 0.44966442953020136,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "non_one_price_top2": {
+        "selected": 604,
+        "selected_dates": 302,
+        "known": 596,
+        "unknown": 8,
+        "hits": 252,
+        "full_date_slot_hit_rate": 0.41721854304635764,
+        "hits_per_date_count": 0.8344370860927153,
+        "dates_with_any_hit_rate": 0.6423841059602649,
+        "known_precision": 0.4228187919463087,
+        "all_dates": 302,
+        "selection_date_coverage": 1.0
+      },
+      "per_month": {
+        "2025-07": {
+          "full_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.5217391304347826,
+            "hits_per_date_count": 0.5217391304347826,
+            "dates_with_any_hit_rate": 0.5217391304347826,
+            "known_precision": 0.5217391304347826,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 11,
+            "full_date_slot_hit_rate": 0.4782608695652174,
+            "hits_per_date_count": 0.4782608695652174,
+            "dates_with_any_hit_rate": 0.4782608695652174,
+            "known_precision": 0.4782608695652174,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-08": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.7619047619047619,
+            "hits_per_date_count": 0.7619047619047619,
+            "dates_with_any_hit_rate": 0.7619047619047619,
+            "known_precision": 0.7619047619047619,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 8,
+            "full_date_slot_hit_rate": 0.38095238095238093,
+            "hits_per_date_count": 0.38095238095238093,
+            "dates_with_any_hit_rate": 0.38095238095238093,
+            "known_precision": 0.38095238095238093,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-09": {
+          "full_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 14,
+            "full_date_slot_hit_rate": 0.6363636363636364,
+            "hits_per_date_count": 0.6363636363636364,
+            "dates_with_any_hit_rate": 0.6363636363636364,
+            "known_precision": 0.6363636363636364,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 11,
+            "full_date_slot_hit_rate": 0.5,
+            "hits_per_date_count": 0.5,
+            "dates_with_any_hit_rate": 0.5,
+            "known_precision": 0.5,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-10": {
+          "full_top1": {
+            "selected": 17,
+            "selected_dates": 17,
+            "known": 17,
+            "unknown": 0,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.7058823529411765,
+            "hits_per_date_count": 0.7058823529411765,
+            "dates_with_any_hit_rate": 0.7058823529411765,
+            "known_precision": 0.7058823529411765,
+            "all_dates": 17,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 17,
+            "selected_dates": 17,
+            "known": 17,
+            "unknown": 0,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.5882352941176471,
+            "hits_per_date_count": 0.5882352941176471,
+            "dates_with_any_hit_rate": 0.5882352941176471,
+            "known_precision": 0.5882352941176471,
+            "all_dates": 17,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-11": {
+          "full_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.8,
+            "hits_per_date_count": 0.8,
+            "dates_with_any_hit_rate": 0.8,
+            "known_precision": 0.8,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 13,
+            "full_date_slot_hit_rate": 0.65,
+            "hits_per_date_count": 0.65,
+            "dates_with_any_hit_rate": 0.65,
+            "known_precision": 0.65,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2025-12": {
+          "full_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 21,
+            "full_date_slot_hit_rate": 0.9130434782608695,
+            "hits_per_date_count": 0.9130434782608695,
+            "dates_with_any_hit_rate": 0.9130434782608695,
+            "known_precision": 0.9130434782608695,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 13,
+            "full_date_slot_hit_rate": 0.5652173913043478,
+            "hits_per_date_count": 0.5652173913043478,
+            "dates_with_any_hit_rate": 0.5652173913043478,
+            "known_precision": 0.5652173913043478,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-01": {
+          "full_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.8,
+            "hits_per_date_count": 0.8,
+            "dates_with_any_hit_rate": 0.8,
+            "known_precision": 0.8,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 20,
+            "selected_dates": 20,
+            "known": 20,
+            "unknown": 0,
+            "hits": 8,
+            "full_date_slot_hit_rate": 0.4,
+            "hits_per_date_count": 0.4,
+            "dates_with_any_hit_rate": 0.4,
+            "known_precision": 0.4,
+            "all_dates": 20,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-02": {
+          "full_top1": {
+            "selected": 14,
+            "selected_dates": 14,
+            "known": 14,
+            "unknown": 0,
+            "hits": 9,
+            "full_date_slot_hit_rate": 0.6428571428571429,
+            "hits_per_date_count": 0.6428571428571429,
+            "dates_with_any_hit_rate": 0.6428571428571429,
+            "known_precision": 0.6428571428571429,
+            "all_dates": 14,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 14,
+            "selected_dates": 14,
+            "known": 14,
+            "unknown": 0,
+            "hits": 5,
+            "full_date_slot_hit_rate": 0.35714285714285715,
+            "hits_per_date_count": 0.35714285714285715,
+            "dates_with_any_hit_rate": 0.35714285714285715,
+            "known_precision": 0.35714285714285715,
+            "all_dates": 14,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-03": {
+          "full_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.7272727272727273,
+            "hits_per_date_count": 0.7272727272727273,
+            "dates_with_any_hit_rate": 0.7272727272727273,
+            "known_precision": 0.7272727272727273,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 22,
+            "selected_dates": 22,
+            "known": 22,
+            "unknown": 0,
+            "hits": 6,
+            "full_date_slot_hit_rate": 0.2727272727272727,
+            "hits_per_date_count": 0.2727272727272727,
+            "dates_with_any_hit_rate": 0.2727272727272727,
+            "known_precision": 0.2727272727272727,
+            "all_dates": 22,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-04": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 18,
+            "full_date_slot_hit_rate": 0.8571428571428571,
+            "hits_per_date_count": 0.8571428571428571,
+            "dates_with_any_hit_rate": 0.8571428571428571,
+            "known_precision": 0.8571428571428571,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 9,
+            "full_date_slot_hit_rate": 0.42857142857142855,
+            "hits_per_date_count": 0.42857142857142855,
+            "dates_with_any_hit_rate": 0.42857142857142855,
+            "known_precision": 0.42857142857142855,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-05": {
+          "full_top1": {
+            "selected": 18,
+            "selected_dates": 18,
+            "known": 18,
+            "unknown": 0,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.5555555555555556,
+            "hits_per_date_count": 0.5555555555555556,
+            "dates_with_any_hit_rate": 0.5555555555555556,
+            "known_precision": 0.5555555555555556,
+            "all_dates": 18,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 18,
+            "selected_dates": 18,
+            "known": 18,
+            "unknown": 0,
+            "hits": 3,
+            "full_date_slot_hit_rate": 0.16666666666666666,
+            "hits_per_date_count": 0.16666666666666666,
+            "dates_with_any_hit_rate": 0.16666666666666666,
+            "known_precision": 0.16666666666666666,
+            "all_dates": 18,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-06": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 13,
+            "full_date_slot_hit_rate": 0.6190476190476191,
+            "hits_per_date_count": 0.6190476190476191,
+            "dates_with_any_hit_rate": 0.6190476190476191,
+            "known_precision": 0.6190476190476191,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 21,
+            "unknown": 0,
+            "hits": 7,
+            "full_date_slot_hit_rate": 0.3333333333333333,
+            "hits_per_date_count": 0.3333333333333333,
+            "dates_with_any_hit_rate": 0.3333333333333333,
+            "known_precision": 0.3333333333333333,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-07": {
+          "full_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 16,
+            "full_date_slot_hit_rate": 0.6956521739130435,
+            "hits_per_date_count": 0.6956521739130435,
+            "dates_with_any_hit_rate": 0.6956521739130435,
+            "known_precision": 0.6956521739130435,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 23,
+            "selected_dates": 23,
+            "known": 23,
+            "unknown": 0,
+            "hits": 11,
+            "full_date_slot_hit_rate": 0.4782608695652174,
+            "hits_per_date_count": 0.4782608695652174,
+            "dates_with_any_hit_rate": 0.4782608695652174,
+            "known_precision": 0.4782608695652174,
+            "all_dates": 23,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-08": {
+          "full_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 20,
+            "unknown": 1,
+            "hits": 14,
+            "full_date_slot_hit_rate": 0.6666666666666666,
+            "hits_per_date_count": 0.6666666666666666,
+            "dates_with_any_hit_rate": 0.6666666666666666,
+            "known_precision": 0.7,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 21,
+            "selected_dates": 21,
+            "known": 20,
+            "unknown": 1,
+            "hits": 12,
+            "full_date_slot_hit_rate": 0.5714285714285714,
+            "hits_per_date_count": 0.5714285714285714,
+            "dates_with_any_hit_rate": 0.5714285714285714,
+            "known_precision": 0.6,
+            "all_dates": 21,
+            "selection_date_coverage": 1.0
+          }
+        },
+        "2026-09": {
+          "full_top1": {
+            "selected": 16,
+            "selected_dates": 16,
+            "known": 13,
+            "unknown": 3,
+            "hits": 10,
+            "full_date_slot_hit_rate": 0.625,
+            "hits_per_date_count": 0.625,
+            "dates_with_any_hit_rate": 0.625,
+            "known_precision": 0.7692307692307693,
+            "all_dates": 16,
+            "selection_date_coverage": 1.0
+          },
+          "non_one_price_top1": {
+            "selected": 16,
+            "selected_dates": 16,
+            "known": 13,
+            "unknown": 3,
+            "hits": 7,
+            "full_date_slot_hit_rate": 0.4375,
+            "hits_per_date_count": 0.4375,
+            "dates_with_any_hit_rate": 0.4375,
+            "known_precision": 0.5384615384615384,
+            "all_dates": 16,
+            "selection_date_coverage": 1.0
+          }
+        }
+      }
+    }
+  },
+  "time_policy": "Historical causal reconstruction authorized; no invented original acquisition times or independent role ground truth.",
+  "baseline_policy": "BASE and ROLL252 stay separate; original first-board BASE62/52-of-117 is not a relay baseline."
+}

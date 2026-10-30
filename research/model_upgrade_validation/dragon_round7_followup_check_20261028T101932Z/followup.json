@@ -1,0 +1,653 @@
+{
+  "formed_at_utc": "2026-10-28T10:22:43.784810+00:00",
+  "fits_performed": 0,
+  "new_forward_predictions": 0,
+  "orders": 0,
+  "changed_since_prior_review": [
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\audit_three_board_traps.py",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\evaluate_round7_capacity.py",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\feature_medians.json",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\oof_round7_predictions.csv",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_all_fold_models.joblib",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\ROUND7_CAPACITY_DRAGON_DELIVERY_REPORT.md",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_comprehensive_evaluation.json",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_manifest.json",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\train_and_evaluate_round7_capacity.py",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\verify_round7_model_load_and_predict.py",
+    "audit_three_board_traps.py"
+  ],
+  "source_sha256": {
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\audit_three_board_traps.py": "8fa9bc7fc9e51a6bd76a4962845d9b19d47ab7cc5dcda276d9b39973760e04fa",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\evaluate_round7_capacity.py": "904d4623ecf2b0f4543d5fd172b937c3d18917c461e69a74887340421b707ef9",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\feature_medians.json": "d2b0ac66c925b64ffb9cb50f215ed24b810bf8b077cd9ca8457db378eee8ff54",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\feature_order.json": "bc744cf3d216f0fd163882dc03ceb232ff593c6179f7364e0d2c6cee0f88cc64",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\oof_round7_predictions.csv": "bc2cc84c20e6a2902727500b2a46b4f89f41ab433496a3a01be6bd62d64c0590",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_all_fold_models.joblib": "d2847ebf6fa974e0e0a3cdf6107cef5c8300ec993324777e03f779fd1968f6e8",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\ROUND7_CAPACITY_DRAGON_DELIVERY_REPORT.md": "04a91aade326c720ac53cb6fb1c0a1da81ac930351de79a3ba78a376c556279d",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_comprehensive_evaluation.json": "037709a0afdf610d63900feed3c25590b0701be647eaae31ac3fa3f370f83aa5",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_dataset.csv": "6b4629923f6cc1bdd2b93600659fbd85f53bacff0346239de6b8ee3f20cbb994",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_manifest.json": "51a743da611ba3986953da4e9183e206e7e8037f257a6027f0284e5296df0db6",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\round7_regime_gate.csv": "413e99a0e9992c3f47b01e38751d03cb0a71333ce00c3ee96077f6915f2556db",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\train_and_evaluate_round7_capacity.py": "2de81152bfd788d04bd00d5ad997b1f93bbb6d90c051eba94e64931fa658f5fb",
+    "research\\model_upgrade_validation\\dragon_round7_capacity_dragon_20261028T094500Z\\verify_round7_model_load_and_predict.py": "8e32568f38e3272cc8f12b2b34e260aaf4caf0dc093e6528683c5edbfbbdc7c4",
+    "results\\daily_review_20261027T0928Z\\minutes\\sz000678.response": "d4731fd34088491eb96051fb3df5a9942405d3cf0847131082684e52b03faf2c",
+    "results\\daily_review_20261027T0928Z\\minutes\\sh603528.response": "51cc02bbb00169f02a89a7657c278e87bcc99b7811c147ee54ad3ab670ba5581",
+    "results\\daily_review_20261027T0928Z\\minutes\\sh603028.response": "9ba084f4fefe3395f9de87ef2bfe542eb0d9a4fc05243efd7be297b0bae29c8d",
+    "audit_three_board_traps.py": "8fa9bc7fc9e51a6bd76a4962845d9b19d47ab7cc5dcda276d9b39973760e04fa",
+    "relay_review_workbench.py": "945c10d08f2c574ae3bbee9612cd15bcbdebf33cf17740a383397f286994913e",
+    "AGENTS.md": "e05b4129c1e5fe783371660b3182973ccc3398f15504ed67a64c4a5607f6045c"
+  },
+  "manifest_checks": {
+    "round7_all_fold_models.joblib": {
+      "declared": "d2847ebf6fa974e0e0a3cdf6107cef5c8300ec993324777e03f779fd1968f6e8",
+      "observed": "d2847ebf6fa974e0e0a3cdf6107cef5c8300ec993324777e03f779fd1968f6e8",
+      "match": true
+    },
+    "oof_round7_predictions.csv": {
+      "declared": "a931296624b6a0470d221b541f16633c0ef5620805e93042bcce33bfcb715d9b",
+      "observed": "bc2cc84c20e6a2902727500b2a46b4f89f41ab433496a3a01be6bd62d64c0590",
+      "match": false
+    }
+  },
+  "all20_replay": [
+    {
+      "fold": 1,
+      "head": "3to4",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.6757478632478632,
+      "training_medians_match": true
+    },
+    {
+      "fold": 1,
+      "head": "space",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.526801476488525,
+      "training_medians_match": true
+    },
+    {
+      "fold": 1,
+      "head": "5b",
+      "max_difference": 8.326672684688674e-17,
+      "auc": 0.5939356634373494,
+      "training_medians_match": true
+    },
+    {
+      "fold": 1,
+      "head": "gain46",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.528628201354136,
+      "training_medians_match": true
+    },
+    {
+      "fold": 1,
+      "head": "reb18",
+      "max_difference": 8.326672684688674e-17,
+      "auc": 0.5170278637770898,
+      "training_medians_match": true
+    },
+    {
+      "fold": 2,
+      "head": "3to4",
+      "max_difference": 8.326672684688674e-17,
+      "auc": 0.6352922690131992,
+      "training_medians_match": true
+    },
+    {
+      "fold": 2,
+      "head": "space",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.6688927186557518,
+      "training_medians_match": true
+    },
+    {
+      "fold": 2,
+      "head": "5b",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.5933297829849554,
+      "training_medians_match": true
+    },
+    {
+      "fold": 2,
+      "head": "gain46",
+      "max_difference": 9.020562075079397e-17,
+      "auc": 0.5360582306830907,
+      "training_medians_match": true
+    },
+    {
+      "fold": 2,
+      "head": "reb18",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.5640666666666666,
+      "training_medians_match": true
+    },
+    {
+      "fold": 3,
+      "head": "3to4",
+      "max_difference": 8.326672684688674e-17,
+      "auc": 0.6519963702359346,
+      "training_medians_match": true
+    },
+    {
+      "fold": 3,
+      "head": "space",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.623050301047741,
+      "training_medians_match": true
+    },
+    {
+      "fold": 3,
+      "head": "5b",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.6769820218096081,
+      "training_medians_match": true
+    },
+    {
+      "fold": 3,
+      "head": "gain46",
+      "max_difference": 9.020562075079397e-17,
+      "auc": 0.47587791270101737,
+      "training_medians_match": true
+    },
+    {
+      "fold": 3,
+      "head": "reb18",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.5456162758872366,
+      "training_medians_match": true
+    },
+    {
+      "fold": 4,
+      "head": "3to4",
+      "max_difference": 8.326672684688674e-17,
+      "auc": 0.67125,
+      "training_medians_match": true
+    },
+    {
+      "fold": 4,
+      "head": "space",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.7231316137566137,
+      "training_medians_match": true
+    },
+    {
+      "fold": 4,
+      "head": "5b",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.6683649503161698,
+      "training_medians_match": true
+    },
+    {
+      "fold": 4,
+      "head": "gain46",
+      "max_difference": 9.71445146547012e-17,
+      "auc": 0.592232560292552,
+      "training_medians_match": true
+    },
+    {
+      "fold": 4,
+      "head": "reb18",
+      "max_difference": 8.326672684688674e-17,
+      "auc": 0.6080028666985189,
+      "training_medians_match": true
+    }
+  ],
+  "rule_boundary_probes": {
+    "missing_early_and_tail": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": null,
+      "late_order_action": null,
+      "tags": [],
+      "veto": true,
+      "veto_reasons": [
+        "BASE 量化模型打分仅 27.7 分（<50分，明确判定偏不晋级），且未满足全部真龙特赦证据（需早封+大成交+尾盘加单），严禁人为主观调高，一票否决。"
+      ],
+      "decision": "【一票否决-严禁接力】",
+      "is_turnover_dragon_exempted": false,
+      "execution_warning": "已触发一票否决，不设次日买入预案。"
+    },
+    "leader_without_late_add": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": null,
+      "late_order_action": null,
+      "tags": [],
+      "veto": true,
+      "veto_reasons": [
+        "BASE 量化模型打分仅 27.7 分（<50分，明确判定偏不晋级），且未满足全部真龙特赦证据（需早封+大成交+尾盘加单），严禁人为主观调高，一票否决。"
+      ],
+      "decision": "【一票否决-严禁接力】",
+      "is_turnover_dragon_exempted": false,
+      "execution_warning": "已触发一票否决，不设次日买入预案。"
+    },
+    "valid_numeric_add_and_four_board": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": 1.3,
+      "late_order_action": "ADD",
+      "tags": [
+        "【尾盘加单-真龙锁仓】",
+        "【四板-换手核心真龙】"
+      ],
+      "veto": false,
+      "veto_reasons": [
+        "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+      ],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": true,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "plain_ADD_without_numbers": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": null,
+      "late_order_action": "ADD",
+      "tags": [
+        "【尾盘加单-真龙锁仓】",
+        "【四板-换手核心真龙】"
+      ],
+      "veto": false,
+      "veto_reasons": [
+        "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+      ],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": true,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "zero_denominator_plus_plain_ADD": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": null,
+      "late_order_action": "ADD",
+      "tags": [
+        "【尾盘加单-真龙锁仓】",
+        "【四板-换手核心真龙】"
+      ],
+      "veto": false,
+      "veto_reasons": [
+        "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+      ],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": true,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "infinite_delta": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": "inf",
+      "late_order_action": "ADD",
+      "tags": [
+        "【尾盘加单-真龙锁仓】",
+        "【四板-换手核心真龙】"
+      ],
+      "veto": false,
+      "veto_reasons": [
+        "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+      ],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": true,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "blank_first_time": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": 1.3,
+      "late_order_action": "ADD",
+      "tags": [
+        "【尾盘加单-真龙锁仓】",
+        "【四板-换手核心真龙】"
+      ],
+      "veto": false,
+      "veto_reasons": [
+        "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+      ],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": true,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "prior_limitdown_flag_max6": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": 1.3,
+      "late_order_action": "ADD",
+      "tags": [
+        "【尾盘加单-真龙锁仓】",
+        "【四板-换手核心真龙】"
+      ],
+      "veto": false,
+      "veto_reasons": [
+        "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+      ],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": true,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "high_BASE_unknown_timing": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": null,
+      "late_order_action": null,
+      "tags": [
+        "【四板-题材候选观察】"
+      ],
+      "veto": false,
+      "veto_reasons": [],
+      "decision": "【准予列入4进5换手真龙主选】",
+      "is_turnover_dragon_exempted": false,
+      "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+    },
+    "numeric_cancel": {
+      "code": "SYNTHETIC",
+      "name": "合成边界样本",
+      "board_count": 4,
+      "applicable": true,
+      "seal_delta": 0.6,
+      "late_order_action": "CANCEL",
+      "tags": [
+        "【尾盘撤单-心虚出逃】"
+      ],
+      "veto": true,
+      "veto_reasons": [
+        "14:30后主力大额撤单缩水超过30%（Seal_Delta=0.60 < 0.7），准备次日竞价抢跑出逃，触发一票否决！"
+      ],
+      "decision": "【一票否决-严禁接力】",
+      "is_turnover_dragon_exempted": false,
+      "execution_warning": "已触发一票否决，不设次日买入预案。"
+    }
+  },
+  "hardcoded_case_demonstrations": [
+    {
+      "inputs": {
+        "code": "000678",
+        "name": "襄阳轴承",
+        "board_count": 4,
+        "is_theme_leader": true,
+        "first_seal_time": "09:36",
+        "last_seal_time": "09:36",
+        "has_afternoon_drop": false,
+        "turnover_rate": 20.57,
+        "amount": 1490000000.0,
+        "historical_board_max": 6,
+        "history_had_limit_down_after_top": false,
+        "base_score": 27.7,
+        "has_risk_announcement": false,
+        "cohort_3board_size": 3,
+        "seal_order_1430": 95000000,
+        "seal_order_1500": 128000000
+      },
+      "output": {
+        "code": "000678",
+        "name": "襄阳轴承",
+        "board_count": 4,
+        "applicable": true,
+        "seal_delta": 1.347,
+        "late_order_action": "ADD",
+        "tags": [
+          "【尾盘加单-真龙锁仓】",
+          "【四板-换手核心真龙】"
+        ],
+        "veto": false,
+        "veto_reasons": [
+          "BASE 量化模型打分 27.7 分（<50分），但命中断然齐备的【大容量换手真龙特赦豁免】：早盘进攻封死(<=10:30)+成交额/换手充沛+尾盘主力加单顶封(Seal_Delta>=1.2)，豁免机械低分偏见，准予列为主选！"
+        ],
+        "decision": "【准予列入4进5换手真龙主选】",
+        "is_turnover_dragon_exempted": true,
+        "execution_warning": "次日 09:25 竞价若低开（开绿盘），买入条件单立即永久注销，严禁抄底！"
+      },
+      "source_qualification": "Literal example arguments; no raw snapshot path, source hash, acquisition time or outcome label bound."
+    },
+    {
+      "inputs": {
+        "code": "603528",
+        "name": "多伦科技",
+        "board_count": 4,
+        "is_theme_leader": false,
+        "first_seal_time": "09:25",
+        "last_seal_time": "14:49",
+        "has_afternoon_drop": true,
+        "turnover_rate": 11.65,
+        "amount": 810000000.0,
+        "historical_board_max": 5,
+        "history_had_limit_down_after_top": false,
+        "base_score": 42.0,
+        "has_risk_announcement": false,
+        "cohort_3board_size": 3,
+        "seal_order_1430": 150000000,
+        "seal_order_1500": 45000000
+      },
+      "output": {
+        "code": "603528",
+        "name": "多伦科技",
+        "board_count": 4,
+        "applicable": true,
+        "seal_delta": 0.3,
+        "late_order_action": "CANCEL",
+        "tags": [
+          "【尾盘撤单-心虚出逃】",
+          "【四板-尾盘偷袭诱多】"
+        ],
+        "veto": true,
+        "veto_reasons": [
+          "14:30后主力大额撤单缩水超过30%（Seal_Delta=0.30 < 0.7），准备次日竞价抢跑出逃，触发一票否决！",
+          "14:00后发生严重炸板跳水或尾盘勉强回封，主力高位倒筹码、散户接盘迹象明显。",
+          "BASE 量化模型打分仅 42.0 分（<50分，明确判定偏不晋级），且未满足全部真龙特赦证据（需早封+大成交+尾盘加单），严禁人为主观调高，一票否决。"
+        ],
+        "decision": "【一票否决-严禁接力】",
+        "is_turnover_dragon_exempted": false,
+        "execution_warning": "已触发一票否决，不设次日买入预案。"
+      },
+      "source_qualification": "Literal example arguments; no raw snapshot path, source hash, acquisition time or outcome label bound."
+    },
+    {
+      "inputs": {
+        "code": "603028",
+        "name": "赛福天",
+        "board_count": 4,
+        "is_theme_leader": false,
+        "first_seal_time": "09:25",
+        "last_seal_time": "15:00",
+        "has_afternoon_drop": false,
+        "turnover_rate": 10.31,
+        "amount": 300000000.0,
+        "historical_board_max": 4,
+        "history_had_limit_down_after_top": false,
+        "base_score": 38.5,
+        "has_risk_announcement": false,
+        "cohort_3board_size": 3,
+        "seal_order_1430": 50000000,
+        "seal_order_1500": 24800000
+      },
+      "output": {
+        "code": "603028",
+        "name": "赛福天",
+        "board_count": 4,
+        "applicable": true,
+        "seal_delta": 0.496,
+        "late_order_action": "CANCEL",
+        "tags": [
+          "【尾盘撤单-心虚出逃】"
+        ],
+        "veto": true,
+        "veto_reasons": [
+          "14:30后主力大额撤单缩水超过30%（Seal_Delta=0.50 < 0.7），准备次日竞价抢跑出逃，触发一票否决！",
+          "BASE 量化模型打分仅 38.5 分（<50分，明确判定偏不晋级），且未满足全部真龙特赦证据（需早封+大成交+尾盘加单），严禁人为主观调高，一票否决。"
+        ],
+        "decision": "【一票否决-严禁接力】",
+        "is_turnover_dragon_exempted": false,
+        "execution_warning": "已触发一票否决，不设次日买入预案。"
+      },
+      "source_qualification": "Literal example arguments; no raw snapshot path, source hash, acquisition time or outcome label bound."
+    },
+    {
+      "inputs": {
+        "code": "603089",
+        "name": "正裕工业",
+        "board_count": 3,
+        "is_theme_leader": false,
+        "first_seal_time": "09:25",
+        "last_seal_time": "14:55",
+        "has_afternoon_drop": true,
+        "turnover_rate": 10.44,
+        "amount": 230000000.0,
+        "historical_board_max": 3,
+        "history_had_limit_down_after_top": true,
+        "base_score": 31.2,
+        "has_risk_announcement": true,
+        "cohort_3board_size": 5,
+        "seal_order_delta": 0.4
+      },
+      "output": {
+        "code": "603089",
+        "name": "正裕工业",
+        "board_count": 3,
+        "applicable": true,
+        "seal_delta": 0.4,
+        "late_order_action": "CANCEL",
+        "tags": [
+          "【尾盘撤单-心虚出逃】",
+          "【三板-历史天花板恶庄】",
+          "【三板-尾盘偷袭诱多】",
+          "【三板-虚假概念套现】",
+          "【三板-同位跟风陪跑】"
+        ],
+        "veto": true,
+        "veto_reasons": [
+          "14:30后主力大额撤单缩水超过30%（Seal_Delta=0.40 < 0.7），准备次日竞价抢跑出逃，触发一票否决！",
+          "近1年历史最高连板为3板，且曾发生见顶即核按钮一字跌停的前科（逢顶必核）。",
+          "14:00后发生严重炸板跳水或尾盘勉强回封，主力高位倒筹码、散户接盘迹象明显。",
+          "盘后发布异动风险提示澄清概念无收入或严重亏损，缺乏顶监管的基本面支撑。",
+          "当日3板梯队拥挤（共5只>3只），本股非题材身位第一，属于中后排跟风。",
+          "BASE 量化模型打分仅 31.2 分（<50分，明确判定偏不晋级），且未满足全部真龙特赦证据（需早封+大成交+尾盘加单），严禁人为主观调高，一票否决。"
+        ],
+        "decision": "【一票否决-严禁接力】",
+        "is_turnover_dragon_exempted": false,
+        "execution_warning": "已触发一票否决，不设次日买入预案。"
+      },
+      "source_qualification": "Literal example arguments; no raw snapshot path, source hash, acquisition time or outcome label bound."
+    }
+  ],
+  "available_minute_source_qualification": [
+    {
+      "source_file": "results/daily_review_20261027T0928Z/minutes/sz000678.response",
+      "sha256": "d4731fd34088491eb96051fb3df5a9942405d3cf0847131082684e52b03faf2c",
+      "code": "sz000678",
+      "records_1430_1500": [
+        "1430 16.01 739495 1162080059.95",
+        "1500 16.01 945487 1491866267.23"
+      ],
+      "schema": "minute, price, cumulative volume, cumulative amount; no historical bid queue per minute",
+      "quote_time": "20261027161430",
+      "quote_bid1_price": "16.01",
+      "quote_bid1_lots": "80039",
+      "quote_bid1_amount_if_100shares_per_lot": 128142439.00000001
+    },
+    {
+      "source_file": "results/daily_review_20261027T0928Z/minutes/sh603528.response",
+      "sha256": "51cc02bbb00169f02a89a7657c278e87bcc99b7811c147ee54ad3ab670ba5581",
+      "code": "sh603528",
+      "records_1430_1500": [
+        "1430 9.85 248587 244858194.80",
+        "1500 9.85 822586 809980374.39"
+      ],
+      "schema": "minute, price, cumulative volume, cumulative amount; no historical bid queue per minute",
+      "quote_time": "20261027161452",
+      "quote_bid1_price": "9.85",
+      "quote_bid1_lots": "116565",
+      "quote_bid1_amount_if_100shares_per_lot": 114816525.0
+    },
+    {
+      "source_file": "results/daily_review_20261027T0928Z/minutes/sh603028.response",
+      "sha256": "9ba084f4fefe3395f9de87ef2bfe542eb0d9a4fc05243efd7be297b0bae29c8d",
+      "code": "sh603028",
+      "records_1430_1500": [
+        "1430 10.33 62229 64282557.41",
+        "1500 10.33 292322 301968626.16"
+      ],
+      "schema": "minute, price, cumulative volume, cumulative amount; no historical bid queue per minute",
+      "quote_time": "20261027161448",
+      "quote_bid1_price": "10.33",
+      "quote_bid1_lots": "24033",
+      "quote_bid1_amount_if_100shares_per_lot": 24826089.0
+    }
+  ],
+  "R7_arm3_funnel": [
+    {
+      "n": 449,
+      "3to4_hits": 258,
+      "space_hits": 123,
+      "five_hits": 130
+    },
+    {
+      "n": 77,
+      "3to4_hits": 34,
+      "space_hits": 22,
+      "five_hits": 19
+    },
+    {
+      "n": 54,
+      "3to4_hits": 30,
+      "space_hits": 22,
+      "five_hits": 19
+    },
+    {
+      "n": 44,
+      "3to4_hits": 20,
+      "space_hits": 13,
+      "five_hits": 12
+    },
+    {
+      "n": 33,
+      "3to4_hits": 20,
+      "space_hits": 13,
+      "five_hits": 12
+    }
+  ],
+  "competitive100": {
+    "R7": {
+      "n": 100,
+      "3to4_hits": 39
+    },
+    "BASE": {
+      "n": 100,
+      "3to4_hits": 38
+    }
+  },
+  "evidence_and_integration_notes": {
+    "historical_rows": 1480,
+    "all_three_board": true,
+    "first_seal_placeholder_zero_mapped_to0930": 428,
+    "first_seal_missing": 1052,
+    "bomb_count_positive": 0,
+    "bomb_count_missing": 1052,
+    "saved_late_add_tags": 0,
+    "saved_late_cancel_tags": 0,
+    "saved_exemptions_from_reasons": 0,
+    "eval_still_passes_late_action_none": true,
+    "capacity_rank_misused_turnover_field_removed": true,
+    "production_workbench_no_new_rule_calls": true
+  },
+  "limitations": [
+    "Handwritten cases test rule behavior but do not establish historical capture, correct values or prospective success.",
+    "A queue decrease alone does not distinguish executions from cancellations; a net increase does not identify the account or guarantee locking.",
+    "A ratio using 15:00 data cannot be evaluated as an observed 14:55 input.",
+    "Snapshot and prediction replay validate file/compute consistency, not trading effectiveness."
+  ]
+}
