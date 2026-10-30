@@ -18,6 +18,7 @@ import stock_judgement_review as original
 import supplement_identity_discovery as identity
 import short_term_thinking_workbench as thinking
 import historical_symbolic_context as symbolic
+import leader_emotion_engine as emotion_engine
 
 VERSION = "relay-review-workbench-1"
 # Only author-written prose can be replaced by a reference. Enum decisions,
@@ -89,6 +90,26 @@ def attach(facts_path, output_dir, draft_path=None):
     result = forum.attach(facts_path, out / "pipeline", draft_path)
     render(out / "pipeline" / "facts_with_forum_reasoning.json", out / "review")
     return result
+
+
+def emotion(facts_path, prior_feedback_path, output_dir, draft_path=None):
+    """Attach computable multi-tier emotion context and render full-pool workbench view."""
+    out = Path(output_dir)
+    if out.exists():
+        raise FileExistsError("new immutable workbench directory required")
+    out.mkdir(parents=True)
+    facts_with_emotion = out / "facts_with_emotion.json"
+    emotion_bundle = emotion_engine.attach_emotion_to_facts(facts_path, prior_feedback_path, facts_with_emotion)
+    render(facts_with_emotion, out / "review", draft_path)
+    _receipt(out / "receipt.json", "EMOTION_CONTEXT_ATTACHED_AND_RENDERED",
+             facts_path=str(Path(facts_path).resolve()),
+             prior_feedback_path=str(Path(prior_feedback_path).resolve()),
+             pool_size=emotion_bundle["current_pool_size"],
+             prior_cohort_size=emotion_bundle["prior_cohort_size"],
+             source_bindings=original.bind(__file__) | original.bind(facts_path) | original.bind(prior_feedback_path))
+    return {"status": "EMOTION_CONTEXT_ATTACHED_AND_RENDERED",
+            "pool_size": emotion_bundle["current_pool_size"],
+            "prior_cohort_size": emotion_bundle["prior_cohort_size"]}
 
 
 def freeze(facts_path, judgements_path, output):
@@ -313,6 +334,8 @@ def review_projection(facts, draft=None):
     sc = symbolic.checked_review(facts)
     symbolic_rows = original.unique_rows(sc["rows"]) if sc else {}
     discovered = original.unique_rows(original.read(facts["identity_discovery_context_path"])["rows"]) if facts.get("identity_discovery_required") else {}
+    emotion_context = facts.get("leader_emotion_context")
+    emotion_cards = emotion_context.get("candidate_emotion_cards", {}) if emotion_context else {}
     def peers(codes):
         return [{"code": c, "name": candidates[c]["name"] if c in candidates else "池外锚/待核"} for c in codes]
     reviewed = original.unique_rows(draft["rows"]) if draft else {}
@@ -333,7 +356,8 @@ def review_projection(facts, draft=None):
             "narrative_type_assessment", "short_term_assessment", "pairwise_competition_assessment",
             "forum_preread_assessment", "supplement_assessment", "forum_reasoning_assessment", "identity_discovery_assessment"}
         actual_review = reviewed.get(row["code"], {})
-        cards.append({"code": row["code"], "name": row["name"], "boards": row["boards"],
+        cards.append({"code": row["code"], "name": row["name"], "boards": row.get("boards"),
+            "kind": row.get("kind", "limit_up"),
             "same_height_peers": peers(row.get("same_height_peers", [])),
             "same_anchor_candidate_peers": peers(rc.get("same_anchor_candidate_peers", [])),
             "daily_price_volume": deepcopy(row.get("daily_price_volume", {})),
@@ -345,9 +369,11 @@ def review_projection(facts, draft=None):
             "identity_discovery": deepcopy(discovered.get(row["code"])),
             "causal_thinking": deepcopy(causal.get(row["code"])),
             "symbolic_context": deepcopy(symbolic_rows.get(row["code"])),
+            "emotion_context": deepcopy(emotion_cards.get(row["code"])),
             "independent_review": {k: deepcopy(v) for k, v in actual_review.items() if k in author_fields} if draft else None})
     return {"version": VERSION, "signal_date": facts["signal_date"], "target_date": facts["target_date"],
         "pool_size": len(cards), "cards": cards,
+        "market_ladder_emotion": deepcopy(emotion_context.get("market_ladder_emotion")) if emotion_context else None,
         "diagnostic_only": facts.get("supplement_context_diagnostic_only", False),
         "model_exposure": facts.get("supplement_model_exposure", "UNKNOWN"),
         "legacy_model_score_semantics": "UNCALIBRATED_MODEL_SCORE_NOT_PROMOTION_PROBABILITY_OR_CONFIRMED_WIN_RATE",
@@ -368,14 +394,33 @@ def markdown(report):
         f"信号日 {report['signal_date']} → {report['target_date']}；完整 {report['pool_size']} 只。",
         f"诊断附页：{report['diagnostic_only']}；真实模型暴露：{report['model_exposure']}。",
         "页面隐藏全部模型分数与原模型方向；作者审阅与未知均须实际填写。",
-        "原BASE分数未经校准；后续显示原分数时不能解释为晋级概率或可信胜率，不变换旧数值。", "",
-        "| 个股 | 板位 | 同位 | 讨论覆盖 | 父锚 |", "|---|---:|---|---|---|"]
+        "原BASE分数未经校准；后续显示原分数时不能解释为晋级概率或可信胜率，不变换旧数值。", ""]
+
+    if report.get("market_ladder_emotion"):
+        lines += [
+            "### 全市场梯队情绪反馈（昨日主板完整样本）", "",
+            "| 梯队 | 样本数 | 晋级数 | 晋级率 | 均值回报 | 中位数回报 | 正收盘占比 | 严重亏损(≤-7%) | 冲高回落/假阳 |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        ]
+        for k, v in sorted(report["market_ladder_emotion"].items()):
+            rd = v.get("return_distribution", {})
+            pp = v.get("intraday_price_path", {})
+            lines.append(f"| {v.get('target_ladder', k)} | {v.get('denominator', 0)} | {v.get('promoted_count', 0)} | "
+                         f"{v.get('promotion_rate', 0):.2%} | {rd.get('mean_pct', '未知')}% | {rd.get('median_pct', '未知')}% | "
+                         f"{rd.get('positive_close_rate', 0):.2%} | {pp.get('severe_loss_count', 0)}只 | {pp.get('gap_and_dump_count', 0)}只 |")
+        lines += [
+            "", "> [!NOTE]",
+            "> 市场梯队统计为群体分层反馈，不代表个股独立胜率。未晋级不等于崩盘亏损，收红亦不等于追入盈利；区分收盘回报与开盘后持仓体验。", ""
+        ]
+
+    lines += ["| 个股 | 板位 | 同位 | 讨论覆盖 | 父锚 |", "|---|---:|---|---|---|"]
     for c in report["cards"]:
         names = lambda items: "、".join(p["name"] + " " + p["code"] for p in items) or "无"
         anchors = "、".join((r["anchor_name"] or "父锚未知") + "：" + str(r["recognition_state"]) for r in c["relations"]) or "未知"
-        lines.append(f"| {c['name']} {c['code']} | {c['boards']} | {_md(names(c['same_height_peers']))} | {c['discussion_coverage']} | {_md(anchors)} |")
+        lines.append(f"| {c['name']} {c['code']} | {c.get('boards')} | {_md(names(c['same_height_peers']))} | {c['discussion_coverage']} | {_md(anchors)} |")
     for c in report["cards"]:
-        lines += ["", f"## {c['name']} {c['code']}（{c['boards']}板）", "",
+        names = lambda items: "、".join(p["name"] + " " + p["code"] for p in items) or "无"
+        lines += ["", f"## {c['name']} {c['code']}（{c.get('boards')}板）", "",
             "同位：" + names(c["same_height_peers"]), "同父锚候选：" + names(c["same_anchor_candidate_peers"]),
             "日线价量：" + _md(json.dumps(c["daily_price_volume"], ensure_ascii=False)),
             "真实一字身份：" + str(c["actual_one_word_daily"])]
@@ -399,6 +444,43 @@ def markdown(report):
             lines += ["历史名称／字辈扩散代理：" + _md(s["historical_name"]) + "／" + _md(s["primary_symbolic_token"]),
                 "扩展规则角色：" + _md(s["extended_primary_role"]) + "；首板支持：" + _md(s["symbolic_primary_first_support"]),
                 "该层为名称共现代理，未认证公司行业、活跃题材、资金带动或可成交。"]
+        if c.get("emotion_context"):
+            em = c["emotion_context"]
+            lines += ["", "### 计算式情绪上下文（三层分解）"]
+            ml = em.get("market_ladder_feedback")
+            if ml:
+                rd = ml.get("return_distribution", {})
+                pp = ml.get("intraday_price_path", {})
+                lines += [
+                    f"- **板位梯队情绪（{ml.get('target_ladder', '未知')}）**：样本分母 {ml.get('denominator', 0)} 只，晋级 {ml.get('promoted_count', 0)} 只（晋级率 {ml.get('promotion_rate', 0):.2%}），"
+                    f"均值回报 {rd.get('mean_pct', '未知')}%，正收盘率 {rd.get('positive_close_rate', 0):.2%}；"
+                    f"严重亏损(≤-7%) {pp.get('severe_loss_count', 0)} 只，冲高回落 {pp.get('gap_and_dump_count', 0)} 只。"
+                ]
+            else:
+                lines += [f"- **板位梯队情绪**：本股板位/状态为 {c.get('boards')}板（{em.get('kind', '未知')}），无直接昨日梯队晋级样本。"]
+
+            tp = em.get("theme_name_proxy", {})
+            if tp.get("has_name_proxy"):
+                anchors_str = "、".join(a["name"] + " " + a["code"] + f"({a.get('boards')}板)" for a in tp.get("active_external_anchors", [])) or "无"
+                diff_str = "、".join(d["name"] + " " + d["code"] + f"({d.get('boards')}板)" for d in tp.get("low_tier_diffusion", [])) or "无"
+                dam_str = "、".join(x["name"] + " " + x["code"] + f"({x.get('kind', '炸板/跌停')})" for x in tp.get("damaged_peers", [])) or "无"
+                lines += [
+                    f"- **题材/名称代理情绪**：匹配字辈/同音词元 `{tp.get('tokens', [])}`；"
+                    f"活跃高标父锚（≥3板）：{anchors_str}；低位扩散（1-2板）：{diff_str}；受损负反馈（炸板/跌停）：{dam_str}。",
+                    f"  *说明：{tp.get('proxy_disclaimer', '字辈代理非经审计题材，不自动加分')}*"
+                ]
+            else:
+                lines += ["- **题材/名称代理情绪**：无明显字辈/同音代理词元。"]
+
+            sc_info = em.get("stock_competition", {})
+            seal_f = sc_info.get("seal_first")
+            seal_f_str = f"{seal_f//10000:02d}:{(seal_f%10000)//100:02d}:{seal_f%100:02d}" if isinstance(seal_f, int) else "未知"
+            lines += [
+                f"- **个股组内相对竞争（{sc_info.get('tier_label', str(c.get('boards'))+'板组')}）**：同位竞争者 {sc_info.get('same_height_peer_count', 0)} 只；"
+                f"首封时间 {seal_f_str}，组内首封归一化分位数 {sc_info.get('seal_first_rank_in_tier')}，最早封板标志 {sc_info.get('is_earliest_in_tier')}；"
+                f"开板次数 {str(sc_info.get('reported_open_count', 0)).replace('次', '')} 次，换手率 {sc_info.get('turnover_pct')}%，量比 {sc_info.get('volume_ratio_previous_official')}，一字板：{sc_info.get('one_price')}。",
+                f"  *说明：{sc_info.get('cautions', '首封早与换手增减仅供独立审阅')}*"
+            ]
         if c["feature_semantics"]:
             lines += ["字段语义：" + _md(json.dumps(c["feature_semantics"], ensure_ascii=False))]
         for r in c["relations"]:
@@ -446,6 +528,54 @@ def html_page(report):
             if assessment.get(key):panel+=paragraph(label,assessment[key])
         panel+='<details><summary>日线、逐个父锚取舍与来源详情</summary>'+paragraph('日线事实',context['daily_price_path'])+paragraph('作者父锚取舍',assessment)+paragraph('全部结构与竞争证据',context)+'</details>'
         return panel
+    def emotion_panel(card):
+        em = card.get('emotion_context')
+        if not em:
+            return '<p class="muted">未计算情绪上下文</p>'
+        ml = em.get('market_ladder_feedback')
+        ladder_html = ''
+        if ml:
+            rd = ml.get('return_distribution', {})
+            pp = ml.get('intraday_price_path', {})
+            ladder_html = (
+                f"<div class='emotion-tier'><h4>板位梯队情绪（{_escape(ml.get('target_ladder'))}）</h4>"
+                f"<p>昨日分母 {_escape(ml.get('denominator'))} 只，晋级 {_escape(ml.get('promoted_count'))} 只（晋级率 {_escape(ml.get('promotion_rate'))}），"
+                f"均值回报 {_escape(rd.get('mean_pct'))}%，正收盘率 {_escape(rd.get('positive_close_rate'))}；"
+                f"严重亏损(≤-7%) {_escape(pp.get('severe_loss_count'))} 只，冲高回落 {_escape(pp.get('gap_and_dump_count'))} 只。</p>"
+                f"<p class='muted'><em>{_escape(ml.get('interpretation_caution'))}</em></p></div>"
+            )
+        else:
+            ladder_html = f"<div class='emotion-tier'><p class='muted'>板位/类别为 {_escape(card.get('boards'))}板（{_escape(em.get('kind'))}），无直接昨日晋级梯队反馈。</p></div>"
+
+        tp = em.get('theme_name_proxy', {})
+        tp_html = ''
+        if tp.get('has_name_proxy'):
+            anchors = '、'.join(a['name'] + ' ' + a['code'] + f"({a.get('boards')}板)" for a in tp.get('active_external_anchors', [])) or '无'
+            diff = '、'.join(d['name'] + ' ' + d['code'] + f"({d.get('boards')}板)" for d in tp.get('low_tier_diffusion', [])) or '无'
+            dam = '、'.join(x['name'] + ' ' + x['code'] + f"({x.get('kind', '炸板/跌停')})" for x in tp.get('damaged_peers', [])) or '无'
+            tp_html = (
+                f"<div class='emotion-tier'><h4>题材/名称代理情绪</h4>"
+                f"<p>匹配词元：<code>{_escape(tp.get('tokens'))}</code></p>"
+                f"<p>活跃高标父锚（≥3板）：{_escape(anchors)}</p>"
+                f"<p>低位扩散（1-2板）：{_escape(diff)}</p>"
+                f"<p>受损负反馈（炸板/跌停）：{_escape(dam)}</p>"
+                f"<p class='muted'><em>{_escape(tp.get('proxy_disclaimer'))}</em></p></div>"
+            )
+        else:
+            tp_html = "<div class='emotion-tier'><p class='muted'>无字辈/同音代理词元。</p></div>"
+
+        sc_info = em.get('stock_competition', {})
+        seal_f = sc_info.get('seal_first')
+        seal_f_str = f"{seal_f//10000:02d}:{(seal_f%10000)//100:02d}:{seal_f%100:02d}" if isinstance(seal_f, int) else "未知"
+        sc_html = (
+            f"<div class='emotion-tier'><h4>个股相对竞争（{_escape(sc_info.get('tier_label'))}）</h4>"
+            f"<p>同位竞争者 {_escape(sc_info.get('same_height_peer_count'))} 只；首封时间 {seal_f_str}，"
+            f"组内首封归一化分位数 {_escape(sc_info.get('seal_first_rank_in_tier'))}，最早封板标志 {_escape(sc_info.get('is_earliest_in_tier'))}；"
+            f"开板 {_escape(str(sc_info.get('reported_open_count', 0)).replace('次', ''))} 次，换手率 {_escape(sc_info.get('turnover_pct'))}%，"
+            f"量比 {_escape(sc_info.get('volume_ratio_previous_official'))}，一字板：{_escape(sc_info.get('one_price'))}。</p>"
+            f"<p class='muted'><em>{_escape(sc_info.get('cautions'))}</em></p></div>"
+        )
+        return ladder_html + tp_html + sc_html
     cards = []
     nav = []
     for card in report["cards"]:
@@ -490,27 +620,50 @@ def html_page(report):
             '<section><h3>自主父锚与身份区分</h3>' + identity_panel(card) + '</section>' +
             ('<section><h3>因果短线角色（规则候选）</h3>' + paragraph('角色、周期、父锚及同位状态', card['causal_thinking']) + '<p>规则标签非独立身份真值；保持原判断与可成交核验。</p></section>' if card.get('causal_thinking') else '') +
             ('<section><h3>名称字辈扩散代理</h3>' + paragraph('历史名称、首板支持与候选角色', card['symbolic_context']) + '<p>名称共现不认证行业、活跃题材或资金因果。</p></section>' if card.get('symbolic_context') else '') +
+            ('<section><h3>计算式情绪上下文</h3>' + emotion_panel(card) + '</section>' if card.get('emotion_context') else '') +
             '<section><h3>股吧命题与独立分析</h3>' + (''.join(opinions) or '<p class="muted">限定来源未覆盖；不自动看空或转正。</p>') + '</section>' +
             '<section class="review"><h3>实际审阅与预期</h3>' + review_panel + '</section></article>')
+    market_ladder_table = ''
+    if report.get("market_ladder_emotion"):
+        rows_html = []
+        for k, v in sorted(report["market_ladder_emotion"].items()):
+            rd = v.get("return_distribution", {})
+            pp = v.get("intraday_price_path", {})
+            rows_html.append(
+                f"<tr><td style='text-align:left'>{_escape(v.get('target_ladder', k))}</td><td>{v.get('denominator', 0)}</td>"
+                f"<td>{v.get('promoted_count', 0)}</td><td>{v.get('promotion_rate', 0):.2%}</td>"
+                f"<td>{_escape(rd.get('mean_pct'))}%</td><td>{_escape(rd.get('median_pct'))}%</td>"
+                f"<td>{v.get('return_distribution', {}).get('positive_close_rate', 0):.2%}</td>"
+                f"<td>{pp.get('severe_loss_count', 0)}只</td><td>{pp.get('gap_and_dump_count', 0)}只</td></tr>"
+            )
+        market_ladder_table = (
+            '<div class="status"><h3>全市场梯队情绪反馈（昨日主板完整样本）</h3>'
+            '<table style="width:100%;text-align:right;border-collapse:collapse;margin:10px 0">'
+            '<thead><tr style="border-bottom:1px solid #ccd8dd"><th style="text-align:left">梯队</th><th>样本数</th><th>晋级数</th><th>晋级率</th><th>均值回报</th><th>中位数回报</th><th>正收盘占比</th><th>严重亏损(≤-7%)</th><th>冲高回落/假阳</th></tr></thead>'
+            '<tbody>' + ''.join(rows_html) + '</tbody></table>'
+            '<p class="muted">市场梯队统计为群体分层反馈，不代表个股独立胜率。未晋级不等于崩盘亏损，收红亦不等于追入盈利；区分收盘回报与开盘后持仓体验。</p></div>'
+        )
     return ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>完整个股审阅工作台</title><style>body{font:15px/1.65 system-ui;margin:24px auto;padding:0 18px;max-width:1200px;color:#17313c;background:#f3f6f8}'
         'h1,h2,h3,h4{line-height:1.3}h4{margin-bottom:8px}article{background:white;border:1px solid #ccd8dd;border-radius:12px;padding:22px;margin:22px 0;scroll-margin-top:100px}'
         'header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dde5e9}section{overflow-wrap:anywhere;margin:12px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}'
         'pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}input{font:inherit;padding:8px;width:300px;max-width:90%;border:1px solid #9fb2bd;border-radius:8px}.status,.review{padding:16px;background:#e2eef3;border-radius:8px}'
         '.toolbar{position:sticky;top:0;background:#f3f6f8;padding:12px 0;z-index:1}nav{display:flex;flex-wrap:wrap;gap:8px}nav a,.tag,.board{background:#eaf0f3;padding:3px 8px;border-radius:5px}.board{font-size:20px;font-weight:700;background:#d7e9e5}'
-        'a{color:#126a7a;text-decoration:none}a:hover{text-decoration:underline}.muted,.pending{color:#607880}.relation,.opinion{border-left:3px solid #8db6b2;padding:4px 14px;margin:14px 0}'
+        'a{color:#126a7a;text-decoration:none}a:hover{text-decoration:underline}.muted,.pending{color:#607880}.relation,.opinion{border-left:3px solid #8db6b2;padding:4px 14px;margin:14px 0}.emotion-tier{border-left:3px solid #6b9ac4;padding:4px 14px;margin:12px 0;background:#f9fbfd}'
         'blockquote{margin:10px 0;background:#f6f8fa;padding:12px;border-radius:6px}.argument{background:#f7faf9;padding:10px;margin-top:12px}details{margin:12px 0}summary{cursor:pointer;color:#126a7a}p{margin:7px 0}ul{padding-left:22px}@media(max-width:750px){.grid{grid-template-columns:1fr;gap:0}article{padding:15px}}</style></head><body>'
         '<h1>完整个股审阅工作台</h1><p>' + _escape(report["signal_date"] + " → " + report["target_date"]) +
         '；完整 ' + str(report["pool_size"]) + ' 只</p><p class="status">诊断附页：' + str(report["diagnostic_only"]) +
-        '；真实模型暴露：' + _escape(report["model_exposure"]) + '。模型分数与原方向隐藏。原BASE分数未经校准，不能解释为晋级概率或可信胜率。此页不登记预测。</p><nav>' + ''.join(nav) + '</nav>'
+        '；真实模型暴露：' + _escape(report["model_exposure"]) + '。模型分数与原方向隐藏。原BASE分数未经校准，不能解释为晋级概率或可信胜率。此页不登记预测。</p>' + market_ladder_table + '<nav>' + ''.join(nav) + '</nav>'
         '<div class="toolbar"><label>查找股票 <input id="query" placeholder="名称或代码"></label><span id="count"></span></div>' + ''.join(cards) +
         '<script>const q=document.getElementById("query"),a=[...document.querySelectorAll("article")];function filter(){let n=0;for(const e of a){e.hidden=!e.dataset.search.includes(q.value.trim());if(!e.hidden)n++}document.getElementById("count").textContent=" 显示 "+n+" / "+a.length}q.addEventListener("input",filter);filter()</script></body></html>')
 
 
 def render(facts_path, output_dir, review_path=None):
     facts = original.read(facts_path)
-    forum.checked(facts)
-    identity.checked(facts)
+    if facts.get("forum_reasoning_required"):
+        forum.checked(facts)
+    if facts.get("identity_discovery_required"):
+        identity.checked(facts)
     draft = None
     if review_path:
         draft = original.read(review_path)
@@ -587,6 +740,10 @@ def parser():
     a.add_argument("--compact", required=True); a.add_argument("--output", required=True)
     a = s.add_parser("render")
     a.add_argument("--facts", required=True); a.add_argument("--output-dir", required=True); a.add_argument("--review")
+    a = s.add_parser("emotion")
+    for field in ("facts", "prior-feedback", "output-dir"):
+        a.add_argument("--" + field, required=True)
+    a.add_argument("--draft")
     return p
 
 
@@ -598,6 +755,8 @@ def main(argv=None):
             pool=a.pool, relation_bank=a.relation_bank, exposure=a.model_exposure, role_evidence=a.role_evidence,
             history_datasets=a.history_dataset, mainline_history=a.mainline_history, narrative_reviews=a.narrative_reviews,
             identity_evidence=a.identity_evidence, thinking_bundle=a.thinking_bundle, symbolic_context=a.symbolic_context)
+    elif a.command == "emotion":
+        result = emotion(a.facts, a.prior_feedback, a.output_dir, a.draft)
     elif a.command == "symbolic":
         result = symbolic.attach_review(a.facts, a.features, a.artifact, a.output_dir, a.draft)
         render(Path(a.output_dir) / "facts_with_symbolic_context.json", Path(a.output_dir) / "review")
